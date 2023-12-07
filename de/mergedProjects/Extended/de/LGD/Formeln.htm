@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Formeln</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Formeln">
+        <span>Formeln</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Formeln</h1>
+<h3 data-condition="Others:Deutsch"><a id="Überblick"></a>Überblick</h3>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Formeln 
+ sind ein hilfreiches Tool für flexible Berechnungen. Sie sind sehr ähnlich 
+ zu den Formeln in Excel. Die Anwendung basiert auf der Open Source Bibliothek 
+ <i>formula.js.</i> Das macht die Verwendung der Formeln in Binding-Ausdrücken 
+ sehr intuitiv und sollte alle Nutzern, die bereits mit Formeln in Excel 
+ gearbeitet haben, vertraut sein. Eine detaillierte Erklärung, wie Formeln 
+ erstellt werden können, sollte hier also nicht nötig sein – die umfangreiche 
+ Wissensgrundlage im Internet ist in diesem Fall viel hilfreicher!</span></p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Ein Überblick 
+ über alle unterstützten Funktionen kann auf der formula.js Website</span> 
+ <a href="https://formulajs.info/functions/">Functions | Formula.js</a> 
+ <span style="mso-no-proof: yes;">gefunden werden:</span></p>
+<p class="MsoBodyText" style="mso-no-proof: yes;" data-condition="Others:Deutsch"><img src="../../Bilder/functions_formula_js_binding.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Bindings_mit_Formeln"></a>Bindings mit Formeln</h3>
+<p class="MsoBodyText" style="mso-no-proof: yes;" data-condition="Others:Deutsch">Formeln können als Datenobjekte 
+ definiert werden. Das Referenzieren von anderen Datenobjekten funktioniert, 
+ indem einfach der Name der Datenobjekte verwendet wird. Das folgende Beispiel 
+ hat die gleiche Funktionalität wie das zuvor für Berechnungen gezeigte.</p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;">{</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n1&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n2&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n2&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;sum&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;formula&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;formula&quot;: 
+ &quot;SUM(n1, n2)&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: 
+ &quot;sum&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoBodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Formeln können 
+ verschachteln sein (like in Excel), z. B.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span style="mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">I</span></span>F(SUM(n1, 
+ n2) &gt; 12, &#39;More than twelve!&#39;, &#39;Too less...&#39;)</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">Auf Eigenschaften eines Datenobjekts mit einem Objekt 
+ als Wert kann zugegriffen werden, indem die Eigenschaften in der Formel 
+ spezifiziert werden, z. B. <span style="color: #008000;">nodestate.text</span></p>
+<p data-condition="Others:Deutsch"> </p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">TIPP:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Eine hexadezimale Notation von Werten ist, 
+ im Vergleich zu Dezimalzahlen, einfacher zu lesen, vor allem wenn man 
+ mit Bitmasken etc. arbeitet. Hexadezimale Werte brauchen das Präfix 0x, 
+ z. B. könnte die Bitmaske 1111 0000 0001 0010 als 0xF012 geschrieben werden, 
+ was leichter zu lesen ist als das Pendant in Dezimalform 61458:</p>
+<p class="TextkörperHinweis" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../Bilder/rechner_binding.png" alt="" style="border: none;" border="0"/></span></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;">W</span>enn 
+ man dies verwendet, könnte eine Formel zur Maskierung eines Datenobjekts 
+ wie folgt aussehen: <span style="mso-ansi-language: EN-US; mso-fareast-language: DE; 
+							 font-family: &#39;Courier New&#39;, monospace; color: #008000;">BITAND(val, 
+ 0xF012</span>.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<h3 class="BodyText" data-condition="Others:Deutsch">Besondere Funktionen</h3>
+<p data-condition="Others:Deutsch">Es werden noch einige weitere Funktionen als die integrierten, die Sie 
+ auf der formula.js-Webseite zu finden sind, unterstützt.<a href="https://formulajs.info/functions/">https://formulajs.info/functions/</a></p>
+<p data-condition="Others:Deutsch">Die ersten (Stand: Juni 2022) sind:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="TextCode">ISBITSET</p></li>
+	<li><p class="TextCode">BITMAP</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Mit diesen Funktionen ist es möglich, mit einem kompakten Ausdruck zu 
+ prüfen, ob bestimmte Bits in einer Variablen gesetzt sind.</p>
+<p data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"><span style="font-family: &#39;Courier New&#39;, monospace;">ISBITSET</span> 
+ und <span style="font-family: &#39;Courier New&#39;, monospace;">BITMAP</span> 
+ funktionieren nur mit 0 bis 31 Bits (nur für 32-Bit-Werte).</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<table style="border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 50%;"/>
+	<col style="width: 50%;"/>
+	</colgroup><tbody><tr style="height: 0px;">
+		<td><p class="BodyText" style="font-size: 14px; font-variant-ligatures: normal; 
+				 font-variant-caps: normal; background-color: #ffffff; 
+				 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+				 color: #000000; text-decoration-thickness: initial; text-decoration-style: initial; 
+				 text-decoration-color: initial; font-weight: bold;"><span style="font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif;"><tt>ISBITSET(value, 
+		 bit, trueVal, falseVal)</tt></span></p>
+		<p class="BodyText" style="font-size: 14px; font-variant-ligatures: normal; 
+			 font-variant-caps: normal; background-color: #ffffff; orphans: 2; 
+			 widows: 2; -webkit-text-stroke-width: 0px; color: #000000;"> </p>
+		<ul style="margin: 10px 0px 0px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; 
+				 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+				 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+				 orphans: 2; text-align: left; text-indent: 0px; text-transform: none; 
+				 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; text-decoration-thickness: initial; 
+				 text-decoration-style: initial; text-decoration-color: initial;">
+			<li><p class="BodyText" style="color: #000000;"><tt>value</tt> - 
+			 value to test</p></li>
+			<li><p class="BodyText" style="color: #000000;"><tt>bit</tt> - 
+			 bit to test(starting from 0)</p></li>
+			<li><p class="BodyText" style="color: #000000;"><tt>trueVal</tt> - 
+			 value returned if specified bit is set (optional, default 
+			 = true)</p></li>
+			<li><p class="BodyText" style="color: #000000;"><tt>falseVal</tt> - 
+			 value returned if specified bit is not set (optional, default 
+			 = false)</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 14px; font-variant-ligatures: normal; 
+				 font-variant-caps: normal; background-color: #ffffff; 
+				 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+				 color: #000000; text-decoration-thickness: initial; text-decoration-style: initial; 
+				 text-decoration-color: initial; font-weight: bold;"><span style="font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif;"><tt>BITMAP(value, 
+		 defaultResult, bit, value, bit, value ...)</tt></span></p>
+		<p class="BodyText" style="font-size: 14px; font-variant-ligatures: normal; 
+			 font-variant-caps: normal; background-color: #ffffff; orphans: 2; 
+			 widows: 2; -webkit-text-stroke-width: 0px; color: #000000;"> </p>
+		<ul style="margin: 10px 0px 0px; font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; 
+				 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+				 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+				 orphans: 2; text-align: left; text-indent: 0px; text-transform: none; 
+				 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; text-decoration-thickness: initial; 
+				 text-decoration-style: initial; text-decoration-color: initial; 
+				 color: #000000;">
+			<li style="color: #000000;"><p class="BodyText"><tt>value</tt> - 
+			 value to test</p></li>
+			<li style="color: #000000;"><p class="BodyText"><tt>defaultResult</tt> - 
+			 value returned if non of specified bit is set</p></li>
+			<li style="color: #000000;"><p class="BodyText"><tt>bit</tt>, <tt>value</tt> - 
+			 one or more pairs: </p>
+			<ul style="margin: 10px 0px 0px; color: #000000;">
+				<li style="color: #000000;"><p class="BodyText"><tt>bit</tt> - 
+				 bit to test</p></li>
+				<li style="color: #000000;"><p class="BodyText"><tt>value</tt> - 
+				 value returned if corresponding bit is set</p></li>
+			</ul></li>
+		</ul></td>
+	</tr>
+	<tr style="height: 0px;">
+		<td><p class="BodyText">Beispiel</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">{</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    &quot;datasources&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;value&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;source&quot;: 
+		 &quot;localvar&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;sym&quot;: 
+		 &quot;xxx&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;bit&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;source&quot;: 
+		 &quot;formula&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;formula&quot;: 
+		 &quot;ISBITSET(value,0)&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    &quot;bindings&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;text&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;value&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;source&quot;: 
+		 &quot;dataref&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                    &quot;ref&quot;: 
+		 &quot;bit&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;defaultValue&quot;: 
+		 &quot;---&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">}</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p></td>
+		<td><p class="BodyText">Beispiel</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">{</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    &quot;datasources&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;value&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;source&quot;: 
+		 &quot;localvar&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;sym&quot;: 
+		 &quot;xxx&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;bit&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;source&quot;: 
+		 &quot;formula&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;formula&quot;: 
+		 &quot;BITMAP(value,&#39;#FFFFFF&#39;,  1, &#39;#00FF00&#39;, 0, &#39;#FF0000&#39;, 
+		 2, &#39;#0000FF&#39;)&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    &quot;bindings&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;text&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;value&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;source&quot;: 
+		 &quot;dataref&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                    &quot;ref&quot;: 
+		 &quot;bit&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;defaultValue&quot;: 
+		 &quot;---&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        &quot;fillColor&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            &quot;value&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;source&quot;: 
+		 &quot;dataref&quot;,</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;params&quot;: 
+		 {</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                    &quot;ref&quot;: 
+		 &quot;bit&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                },</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">                &quot;defaultValue&quot;: 
+		 &quot;rgb(0,FF,FF)&quot;</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">            }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">        }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">    }</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;">}</p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;"> </p>
+		<p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; 
+			 color: #008000;"> </p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

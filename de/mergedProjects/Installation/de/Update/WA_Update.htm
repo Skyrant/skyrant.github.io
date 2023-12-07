@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "2.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="System_Update_Legato_de.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Update WebApplikation</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+<meta name="rh-index-keywords" content="Update,WA,WebApp" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Update WebApplikation">
+        <span>Update WebApplikation</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Update WebApplikation</h1>
+<h2 data-condition="Others:Deutsch"><a name="Vorbereitungen" id="Vorbereitungen"></a>Vorbereitungen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">WebApplikation Server stoppen.</p>
+<h2 data-condition="Others:Deutsch"><a id="Glassfish" data-indexterm="Glassfish"></a><a id="Tomcat" data-indexterm="Tomcat"></a><a name="Update" id="Update"></a>Update</h2>
+<h3 data-condition="Others:Deutsch">Tomcat</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Löschen aller Log-Dateien (.log) der WA im Pfad &quot;C:\LegatoAppData\logs\webapp\&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Den Ordner der bestehenden WA umbenennen (z.B. Ordner &quot;Legato&quot; unter &quot;C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\&quot; umbenennen in &quot;old_LegatoVxxx&quot;) und als Sicherung in ein temporäres Verzeichnis verschieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das war-file der neuen Webapplikation (z.B. Legato_vxxx.war) in ein temporäres Verzeichnis kopieren und entpacken. Dazu die Dateiendung &quot;.war&quot; in &quot;.zip&quot; umbenennen und den ZIP-Ordner entpacken.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Den entpackten Ordner als neue WA-Version in den regulären Ordner der WebApps des Applikationsservers kopieren (z.B. &quot;C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\&quot;) und den Verzeichnisnamen der neuen WebApp in den offiziellen Verzeichnisnamen der Vorgängerversion umbenennen (z.B. &quot;Legato&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Evtl. nachträglich durchgeführte projektspezifischen Erweiterungen (z.B. themes) aus dem Sicherungsverzeichnis der alten WebApp (z.B. &quot;old_LegatoVxxx&quot;) in das entsprechende Verzeichnis der neuen WebApp kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Daten im &quot;work&quot;-Verzeichnis des Applikationsservers (z.B. &quot;C:\Program Files\Apache Software Foundation\Tomcat 7.0\work\&quot;) löschen. Dort befinden sich u.a. die kompilierten Java .class Dateien vor dem Update (Zugriff auf alte Versionen vermeiden!)</p>
+<h3 data-condition="Others:Deutsch">Unter Glassfish</h3>
+<h4 data-condition="Others:Deutsch">Über .tar-Datei</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Auf einem neuen Glassfish-Server existiert das Deploy-Skript noch nicht. Entpacken Sie es manuell aus dem Tar-Archiv.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Instanzen stoppen (auf allen Maschinen)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Deploy-Skript ausführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ggf. Applikationsserver auf weiteren Maschinen starten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Neue .war-Datei in den Ordner /config kopieren. In diesem Verzeichnis darf nur genau eine .war-Datei liegen; ggf. löschen Sie die alte.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern eine angepasste web.xml genutzt werden soll, kopieren Sie diese ins Verzeichnis &quot;/project-data/web.xml&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erstellen Sie eine .tar-Datei</p>
+<h4 data-condition="Others:Deutsch">Manuelles Deployment</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Instanzen stoppen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">NUR, wenn neue .tar-Datei deployed wird: alle alten Konfigurations-Verzeichnisse löschen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">rm –r config/*</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Alte Konfigurations-Verzeichnisse löschen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">rm –fr logs/*</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Tar-Archiv entpacken.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alte Domänen-Dateien entfernen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">rm –r nodes clusterDomain</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Domäne wiederherstellen (dauert ca. 5 Minuten)</p>
+<p class="TextCode" data-condition="Others:Deutsch">./GFserver3 restore</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Postchange-Skript ausführen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">./GFserver3 exec –f config/hooks/postchange</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Applikationsserver starten (Befehl auf jeder Maschine des Clusters ausführen, beginnend mit dem Admin-Server):</p>
+<p class="TextCode" data-condition="Others:Deutsch">./GFserver3 start --all</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Instanzen stoppen (auf allen Maschinen):</p>
+<p class="TextCode" data-condition="Others:Deutsch">./GFserver3 stop --all</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Nacharbeiten" id="Nacharbeiten"></a>Nacharbeiten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">WebApplikation Server starten.</p>
+
+
+</body></html>

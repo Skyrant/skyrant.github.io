@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.8.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Analyse der Zykluszeiten</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Analyse der Zykluszeiten">
+        <span>Analyse der Zykluszeiten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Analyse der Zykluszeiten mit dem Cycle Time Analyzer (CTA)</h1>
+<p class="BodyText">Mit dem CTA Zykluszeiten Standard-Dashboard ist Folgendes 
+ möglich:</p>
+<ul style="list-style: disc;">
+	<li><p class="BodyText">Das CTA Zykluszeiten Dashboard gibt einen Überblick 
+	 über die Taktzeiten einer Anlage. </p></li>
+	<li><p class="BodyText">Durch das Standarddashboard ist es möglich, 
+	 den Verlauf der verfügbaren Zykluszeiten, d.h. z.B. aller Prozessgeräte, 
+	 über eine ausgewählte Zeitspanne zu sehen. </p></li>
+	<li><p class="BodyText">Man kann nicht relevante Zykluszeitvariablen 
+	 ausblenden, damit nur die persönlich-relevanten Zykluszeiten analysiert 
+	 werden.</p></li>
+	<li><p class="BodyText">Neben dem Liniendiagramm gibt es einen Reiter 
+	 Cycle Time Histogram, in dem die Daten in einem Histogram ausgewertet 
+	 werden.</p></li>
+	<li><p class="BodyText">Um einen Eindruck über mögliche Ursachen für 
+	 zu hohe Zykluszeiten zu bekommen, ist ein direkter Zugriff auf die 
+	 entsprechenden Alarme (im Reiter <span style="font-weight: bold;">Archived 
+	 Alarms</span>) für die gleichen Zeitspanne abrufbar.</p></li>
+</ul>
+<p class="BodyText"> </p>
+<p class="BodyText">In der unten stehenden Abbildung werden die verschiedenen 
+ Reiter angezeigt: <span style="font-weight: bold; color: #ff0000;">(1)</span> 
+ <span style="font-weight: bold;">Taktzeiten-Diagramm, Taktzeiten-Histogramm 
+ </span>und<span style="font-weight: bold;"> Archivierte Meldungen.</span>.</p>
+<p class="BodyText">Um Daten zur Anzeige der <span style="font-weight: bold; 
+													 color: #ff0000;">(2)</span> 
+ <span style="font-weight: bold;">Taktzeiten-Diagramm </span>(Liniendiagramm) 
+ zu erhalten, muss eine bestimmten Zeitspanne über die <span style="font-weight: bold; 
+															 color: #ff0000;">(3)</span> 
+ <span style="font-weight: bold;">Filter</span> ausgewählt werden. Dies 
+ gilt auch für den im 2. Reiter dargestellte <span style="font-weight: bold;">Taktzeiten-Histogram</span>.</p>
+<p class="BodyText"> </p>
+<p class="BodyText"><span style="font-weight: bold; color: #ff0000;">(4)</span> 
+ Die einzelnen Variablen zur Darstellung der Zyklen werden in der Legende 
+ dargestellt.</p>
+<p class="BodyText"> </p>
+<p class="BodyText"><img src="../../../Bilder/CTA_1.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText"> </p>
+<p class="BodyText">Mit der Maus können einzelne Abschnitte ausgewählt 
+ werden. </p>
+<p class="BodyText"><img src="../../../Bilder/CTA_3.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText"> </p>
+<p class="BodyText">Im Reiter <span style="font-weight: bold;">Taktzeiten-Histogramm 
+ </span>werden die gleichen Daten als Quelldaten verwendet, jedoch als 
+ Histogramm dargestellt. In der Tabelle unterhalb des Histogramms werden 
+ z.B. verschiedene Angaben aufgezählt, die auch analysiert wurden:</p>
+<p class="BodyText"> </p>
+<ul style="list-style: disc;">
+	<li><p class="BodyText">Anzahl der Zyklen ohne Alarm</p></li>
+	<li><p class="BodyText">Anzahl der Zyklus mit Alarm</p></li>
+	<li><p class="BodyText">Ziel-Zyklus-Zeit (basiert auf &quot;value_setpoint&quot; 
+	 aus der Tabelle &quot;p_values_config&quot;)</p></li>
+	<li><p class="BodyText">Standardabweichung</p></li>
+	<li><p class="BodyText">Prozess-Capability Prozess Index cp</p></li>
+	<li><p class="BodyText">Prozess Capability index cpk</p></li>
+</ul>
+<p class="BodyText"> </p>
+<p class="BodyText"> </p>
+<p class="BodyText"><img src="../../../Bilder/CTA_4.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText"> </p>
+<p class="BodyText">Im Reiter <span style="font-weight: bold;">Archivierte</span> 
+ <span style="font-weight: bold;">Alarme</span> werden die verschiedenen 
+ Alarme mit verschiedenen Parametern dargestellt:</p>
+<p class="BodyText"><img src="../../../Bilder/CTA_5.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText"> </p>
+
+
+</body></html>

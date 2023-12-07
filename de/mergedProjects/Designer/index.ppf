@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="Designer" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\General\SysDoc.htm">
+    
+    <topic>
+      de\General\01_Legato_SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\General\02_Change_History.htm
+    </topic>
+    
+    <topic>
+      de\Gen\Introduction.htm
+    </topic>
+    
+    <topic>
+      de\Gen\Context.htm
+    </topic>
+    
+    <topic>
+      de\Gen\Format.htm
+    </topic>
+    
+    <topic>
+      de\Gen\License.htm
+    </topic>
+    
+    <topic>
+      de\Canvas\General.htm
+    </topic>
+    
+    <topic>
+      de\Canvas\Designer.htm
+    </topic>
+    
+    <topic>
+      de\Canvas\Script.htm
+    </topic>
+    
+    <topic>
+      de\Canvas\SVG_Source.htm
+    </topic>
+    
+    <topic>
+      de\Menu\File.htm
+    </topic>
+    
+    <topic>
+      de\Menu\Edit.htm
+    </topic>
+    
+    <topic>
+      de\Menu\Draw.htm
+    </topic>
+    
+    <topic>
+      de\Menu\Window.htm
+    </topic>
+    
+    <topic>
+      de\Menu\Options.htm
+    </topic>
+    
+    <topic>
+      de\Menu\Help.htm
+    </topic>
+    
+    <topic>
+      de\Menu\Bars.htm
+    </topic>
+    
+    <topic>
+      de\Windows\Inspector_Props.htm
+    </topic>
+    
+    <topic>
+      de\Windows\DOM.htm
+    </topic>
+    
+    <topic>
+      de\Windows\Preview.htm
+    </topic>
+    
+    <topic>
+      de\Windows\Layer_Manager.htm
+    </topic>
+    
+    <topic>
+      de\Windows\Library.htm
+    </topic>
+    
+    <topic>
+      de\Dynamics\General.htm
+    </topic>
+    
+    <topic>
+      de\Dynamics\Config.htm
+    </topic>
+    
+    <topic>
+      de\Dynamics\Functions.htm
+    </topic>
+    
+    <topic>
+      de\Dynamics\Dialogs.htm
+    </topic>
+    
+    <topic>
+      de\Events\General.htm
+    </topic>
+    
+    <topic>
+      de\Events\SvgOpenWindow.htm
+    </topic>
+    
+    <topic>
+      de\Events\SvgShowDialog.htm
+    </topic>
+    
+    <topic>
+      de\General\SysDoc.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

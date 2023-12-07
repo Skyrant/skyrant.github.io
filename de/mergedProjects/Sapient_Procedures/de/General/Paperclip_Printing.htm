@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.6_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Paperclip Printing Timeout</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Paperclip Printing Timeout">
+        <span>Paperclip Printing Timeout</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Paperclip Printing Timeout</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Das http-Timeout für das Paperclip Printing ist einstellbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie hierzu folgendes Szenario:</p>
+<ul style="list-style: disc; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Ein 
+	 Benutzer möchte ein umfassendes Dashboard ausdrucken.</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Ein 
+	 Benutzer klickt auf einen Druckbutton auf der UI (z.B. Adhoc-Druck).</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Die 
+	 Druckanforderung wird an die Sapient Engine gesendet.</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Die 
+	 Sapient Engine ruft anschließend den Paperclip Printing Service auf. 
+	 Durch diesen Aufruf ist der Dashboard-Druck erst möglich.</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Das 
+	 Dashboard wird dann als Ergebnis des Paperclip-Services als PDF gedruckt.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch">Ohne die Einstellmöglichkeit des http-Timeouts für 
+ den Paperclip-Druck kann es sein, dass PDF-Ausdrucke unterbrochen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dem einstellbaren http-Timeout für das Paperclip 
+ Printing ist es möglich, das Timeout auf eine beliebige Zeitspanne einzustellen.</p>
+<p style="font-family: &#39;Book Antiqua&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p style="font-family: &#39;Book Antiqua&#39;, serif;" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Die Standardzeitüberschreitung beträgt 10 
+ Minuten. D.h., wenn der Kunde keine Änderungen in der Zelle vornimmt, 
+ beträgt das Timeout 10 Minuten.</p>
+<p style="font-family: &#39;Book Antiqua&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch">Beispiel</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Das 
+	 http-Timeout ist auf 6 Minuten eingestellt: Wenn ein Dashboard-PDF-Druck 
+	 länger als 6 Minuten benötigt, wird der Druckauftrag abgebrochen. 
+	 </p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Wenn 
+	 das http-Timeout für den Druck verlängert wird, bedeutet dies, dass 
+	 Dashboard-PDF-Ausdrucke nicht abbrechen.</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Die 
+	 http-Zeitüberschreitung kann z. B. auf 30 Minuten eingestellt werden, 
+	 und der Druck kann garantiert werden.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch">LC2</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Im 
+	 LC2 können Sie das Zeitlimit für das Paperclip Printing unter <span style="font-weight: bold;">System-Administration</span> &gt; <span style="font-weight: bold;">SE</span> <span style="font-weight: bold;">Aufträge</span> 
+	 &gt; <span style="font-weight: bold;">Aufgaben </span>festlegen.</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Wählen 
+	 Sie die richtige Instanz (SE-Instanz).</p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText">Paperclip 
+	 Printing Timeout kann abschließend im Task type <span style="font-weight: bold;">print</span> 
+	 eingestellt werden.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../assets/images/paperclip_printing_edit.png" alt="" style="border: none;" border="0"/></p>
+
+
+</body></html>

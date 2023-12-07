@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "2.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Menü Profile</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Profil" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Menü Profile">
+        <span>Menü Profile</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch"><a id="ProfilesMenu"></a>Menü Profile</h1>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/display_profiles_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">In diesem Hilfe-Thema:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><a href="#General">Allgemeine Informationen 
+	 über Profile</a></p></li>
+	<li><p class="ListBulletL1"><a href="Profiles.htm#LoadingProfilesScenarios">Profile 
+	 in unterschiedlichen Szenarien laden</a></p></li>
+	<li><p class="ListBulletL1"><a href="#ContentsOfProfiles">Inhalte von 
+	 Profilen</a></p></li>
+	<li><p class="ListBulletL1"><a href="#UsingProfiles">Profile nutzen</a></p></li>
+</ul>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><a href="Profiles.htm#UsingProfilesReporting">Profile 
+	 fürs Reporting nutzen</a></p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="General"></a>Allgemein <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">In Profilen werden Einstellungen gespeichert, die über 
+ die Filterkriterien gemacht wurden, und zwar ohne den Bearbeitungsmodus. 
+ Durch das erstmalige Öffnen eines Dashboards mit einem Benutzer wird automatisch 
+ ein Standardprofil für diesen Benutzer angelegt. In diesem Standardprofil 
+ namens <span class="Bold">Default (Persönlich)</span> sind die Standardeinstellungen 
+ des Dashboards hinterlegt (so, wie sie der Ersteller des Dashboards vorgesehen 
+ hat). </p>
+<p class="BodyText" data-condition="Others:Deutsch">Für jedes Dashboard wird automatisch ein Standardprofil 
+ angelegt. Dieses Standardprofil kann nicht mit anderen Usern geteilt und 
+ nicht gelöscht werden. Neben den automatisch angelegten Standardprofilen 
+ können Sie benannte Profile für verschiedene Dateninhalte zu einem Dashboard 
+ anlegen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/default_plus_named_profiles_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Profil beinhaltet für jedes Boardlet:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">die <a href="Profiles.htm#ProfilesFilters">Filtereinstellungen</a></p></li>
+	<li><p class="ListBulletL1">die <a href="Profiles.htm#ProfilesFieldSettingsTables">Feldeinstellungen 
+	 von Tabellen</a> (Feldauswahl, Feldreihenfolge und Feldbreite)</p></li>
+	<li><p class="ListBulletL1">die <a href="Profiles.htm#ProfilesSelectedNodes">Knotenauswahl</a> 
+	 und </p></li>
+	<li><p class="ListBulletL1">den ausgewählten <a href="Profiles.htm#ProfilesSelectedTimeframe">Zeitrahmen</a> 
+	 für alle Boardlets zu einem spezifischen Dashboard</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Profil kann beliebig oft zurückgesetzt (alle gespeicherten 
+ Einstellungen werden gelöscht) und mit den aktuell getroffenen Einstellungen 
+ gespeichert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Profil kann einem spezifischen User (persönliches 
+ Profil für den aktuell eingeloggten User) oder allen Usern (geteiltes 
+ Profil) zugewiesen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="LoadingProfilesScenarios"></a>Profile in unterschiedlichen 
+ Szenarien laden <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Wir unterscheiden zwischen drei Szenarien, in denen 
+ Profile geladen werden. Die für ein Profil geladenen Einstellungen sind 
+ in den Szenarien unterschiedlich, wie in der Abbildung gezeigt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/profiles_scenarios_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="ContentsOfProfiles"></a><a id="ProfilesFilters"></a>Inhalte 
+ von Profilen - Filtereinstellungen <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Filter auf die Daten von Boardlets können im Zuge der 
+ Dashboard-Erstellung (Filtereinstellungen im Boardlet) oder zur Laufzeit 
+ im Dashboard gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind Filtereinstellungen im geladenen Profil gespeichert, 
+ werden ausschließlich diese Filter (nicht die ursprünglichen Einstellungen 
+ aus dem Dashboard) angewendet.</p>
+<table class="SeeAlsoTab" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="sah-SeeAlsoHeading"><span data-keyref="SeeAlso_DE">Verwandte Themen:</span></p></td>
+		<td> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><ul class="SeeAlsoListEntry">
+			<li class="SeeAlsoListEntry"><a href="Menus/UserMenu.htm#AutoSaveFilterSettingsInDefaultProfile">Filter 
+			 automatisch im Standardprofil speichern</a></li>
+		</ul></td>
+		<td> </td>
+		<td> </td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="ProfilesFieldSettingsTables"></a>Inhalte von Profilen - Feldeinstellungen 
+ von Tabellen <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Feldauswahl (Sichtbarkeit von Tabellenspalten) 
+ kann in den Boardlet-Einstellungen ausschließlich beim Bearbeiten eines 
+ Dashboards festgelegt werden. Diese Feldauswahl wird beim Setzen eines 
+ Profils übernommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern die Feldauswahl nach Festlegung der Profile 
+ geändert wird, müssen diese Profile zurückgesetzt und erneut gespeichert 
+ werden, um die geänderte Auswahl zu zeigen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Feldreihenfolge kann zur Laufzeit in den Boardlets 
+ geändert werden (Drag &amp; Drop) und wird im Profil gespeichert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Feldbreiten können zur Laufzeit in den Boardlets 
+ geändert werden und werden im Profil gespeichert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="ProfilesSelectedNodes"></a>Inhalte von Profilen - Ausgewählte 
+ Knoten <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die im Knotenbaum des Dashboard getroffene Knotenauswahl 
+ (ein Knoten oder mehrere Knoten) wird beim Speichern eines Profils übernommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Knotenauswahl wird beim Laden des Profils für 
+ die Boardlets im Dashboard angewendet, sofern die Einstellungen des Boardlets 
+ das erlauben: Die Einstellung für Knoten muss auf <span class="Bold">in</span> 
+ oder <span class="Bold">in/out</span> stehen), wie im Folgenden gezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dashboard <a href="../de/Edit_Mode/General.htm">Bearbeitungsmodus</a> 
+ <img src="../assets/images/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> 
+ Klicken Sie auf das gewünschte Boardlet <img src="../assets/images/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Wählen Sie 
+ den Reiter <span class="Bold">Filter</span> <img src="../Bilder/Icons/filter_list_gray.png" alt="" style="border: none;" border="0"/>:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/node_setting_in_inout_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="ProfilesSelectedTimeframe"></a>Inhalte von Profilen - Ausgewählter 
+ Zeitrahmen <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Filter auf den selektierten Zeitbereich können für 
+ manche Boardlets im Zuge der Dashboard-Erstellung relativ oder absolut 
+ (z.B. &quot;gestern&quot; oder &quot;12.06.20&quot;) oder zur Laufzeit 
+ im Boardlet (z.B. &quot;letzte Woche&quot; oder KW21) gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist ein relativer oder absoluter Zeitbereich im geladenen 
+ Profil gespeichert, wird ausschließlich dieser Zeitbereich (nicht die 
+ ursprünglichen Einstellungen aus dem Dashboard) selektiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für Reports, die auf Dashboards basieren, empfiehlt 
+ sich die Angabe eines relativen Zeitbereichs im Profil (z.B. &quot;Tagesreport 
+ gestern&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h1 data-condition="Others:Deutsch"><a id="UsingProfiles"></a>Profile nutzen <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h1>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Im Menü <span class="Bold">Profile</span> 
+		 können Sie folgende <span class="Bold">Aktionen</span> ausführen:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1"><a href="#SelectingProfile">Profile 
+			 anzeigen und auswählen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#CreateProfile">Profil 
+			 erstellen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#SavingProfile">Einstellungen 
+			 im Profil speichern</a></p></li>
+			<li><p class="ListBulletL1"><a href="#RenameProfile">Profil 
+			 umbenennen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#ResetProfile">Profil 
+			 zurücksetzen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#ShareProfile">Profil 
+			 teilen / nicht mehr teilen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#DeleteProfile">Profil 
+			 löschen</a></p></li>
+			<li><p class="ListBulletL1">Um das Menü <span class="Bold">Profil</span> 
+			 zu schließen, klicken Sie auf:<br/>
+			<img src="../Bilder/Icons/close_profiles.png" alt="" style="border: none;" border="0"/></p></li>
+		</ul></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../Bilder/Profile-Actions_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="SelectingProfile"></a>Profile anzeigen und auswählen <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf <img src="../Bilder/Icons/library_books_white_18dp.png" alt="" style="border: none;" border="0"/> 
+ in der Kopfzeile können die Profile des angemeldeten Benutzers für das 
+ gewählte Dashboard geöffnet werden. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/display_select_profile_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Dropdown-Liste können bereits gespeicherte Profile 
+ ausgewählt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="CreateProfile"></a>Profil erstellen <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Erstellen</span> legt ein neues 
+ Profil mit einem frei wählbaren Namen und den aktuell aktiven Einstellungen 
+ an. Die Einstellungen werden je Benutzer mit Dashboard-Bezug gespeichert. 
+ </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/create_profile_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="SavingProfile"></a>Einstellungen im Profil speichern <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf <img src="../Bilder/Icons/save_green_30dp.png" alt="" style="border: none;" border="0"/> 
+ werden die Einstellungen in das gerade gewählte Profil geschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="RenameProfile"></a>Profil umbenennen <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Mit <span class="Bold">Umbenennen </span>können Sie 
+ dem aktuell ausgewählten Profil einen neuen, aussagekräftigeren Namen 
+ geben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="ResetProfile"></a>Profil zurücksetzen <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Zurücksetzen</span> setzt alle Einstellungen 
+ auf die Standardeinstellungen des Dashboards zurück. Diese Standardeinstellungen 
+ können durchaus bereits Filter- und Layout-Einstellungen beinhalten, z.B. 
+ Zeitfilter und Variablenauswahl. Diese Einstellungen wurden jedoch direkt 
+ beim Dashboard und ohne Benutzerbezug gespeichert.</p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Wurden benutzerspezifische Einstellungen in das Standardprofil 
+ gespeichert, so gehen diese durch <span class="Bold">Zurücksetzen</span> 
+ verloren!</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="ShareProfile"></a>Profil teilen / nicht mehr teilen <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Mit <span class="Bold">Teilen</span> können Sie anderen 
+ Nutzern das aktuell ausgewählte Profil mit seinen Einstellungen zugänglich 
+ machen. Ein solches Profil ist nach dem Profilnamen nicht mehr mit &quot;(Persönlich)&quot;, 
+ sondern mit &quot;(Geteilt)&quot; gekennzeichnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/shared_profile_de.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit <span class="Bold">Nicht mehr teilen</span> wandeln 
+ Sie das geteilte Profil wieder in ein persönliches Profil um. Es steht 
+ anderen Nutzern nun nicht mehr zur Verfügung.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="DeleteProfile"></a>Profil löschen <a href="#UsingProfiles" title="Zurück zu Profile nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Löschen</span> löscht das aktuell 
+ ausgewählte Profil.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h1 data-condition="Others:Deutsch"><a id="UsingProfilesReporting"></a>Profile fürs Reporting nutzen 
+ <a href="#ProfilesMenu" title="Zurück zu Menü Profile"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h1>
+<p class="Textkörperfett" data-condition="Others:Deutsch">In diesem Hilfe-Thema:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Use Case: <a href="Profiles.htm#CreateReportLink">&quot;Link 
+	 Reporting&quot;</a>:</p></li>
+</ul>
+<p class="ListBulletL1_Contd" data-condition="Others:Deutsch">Eine aktuelle Situation wird von <span class="Bold">User 
+ A</span> in einem Dashboard abgebildet und zur Information per Link an 
+ <span class="Bold">User B</span> gesendet. D.h., der von <span class="Bold">User 
+ B</span> geöffnete Link muss dasselbe Dashboard mit den identischen Daten 
+ öffnen.</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Use Case: <a href="Profiles.htm#AutomatedReportViaScheduler">&quot;Automatischer 
+	 Report via Druck-Zeitplan&quot;</a>:</p></li>
+</ul>
+<p class="ListBulletL1_Contd" data-condition="Others:Deutsch">Über einen konfigurierbaren Zeitplan wird 
+ ein Dashboard mit einem vorkonfigurierten Profil geöffnet. Dieses Dashboard 
+ mit den selektierten Daten wird dann als PDF-Report gespeichert. </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 class="BodyText" data-condition="Others:Deutsch"><a id="CreateReportLink"></a>Report-Link erstellen 
+ <a href="#UsingProfilesReporting" title="Zurück zu Profile fürs Reporting nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<table class="ProcedureTab" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td colspan="2"><p class="ph-ProcedureHeading">Workflow zur Erstellung 
+		 eines Report-Links:</p></td>
+		
+	</tr>
+	<tr>
+		<td id="StepNumSpacer"><p class="psn-ProcedureStepNum">1</p></td>
+		<td><p class="ps-ProcedureStep">User A: Das gewünschte Dashboard 
+		 konfigurieren.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">2</p></td>
+		<td><p class="ps-ProcedureStep">User A: Anlegen eines Profils, 
+		 z.B. &quot;Link_Line_A_200615&quot; </p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">4</p></td>
+		<td><p class="ps-ProcedureStep">User A: Speichern des Profils.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">5</p></td>
+		<td><p class="ps-ProcedureStep">User A: Teilen des Profils.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">6</p></td>
+		<td><p class="ps-ProcedureStep">User A: Versenden des Links aus 
+		 der Adresszeile des Browsers, z.B. per E-Mail.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">7</p></td>
+		<td><p class="ps-ProcedureStep">User B: Kopieren und einfügen des 
+		 Links in die Adresszeile des Browsers.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">8</p></td>
+		<td><p class="ps-ProcedureStep">User B: Öffnen des Links.</p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="AutomatedReportViaScheduler"></a>Automatischer Report via 
+ Druck-Zeitplan <a href="#UsingProfilesReporting" title="Zurück zu Profile fürs Reporting nutzen"><img src="../Bilder/Icons/back.png" alt="" style="border: none;" border="0"/></a></h2>
+<table class="ProcedureTab" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td colspan="2"><p class="ph-ProcedureHeading">Workflow zur Erstellung 
+		 eines automatischen Reports via Druck-Zeitplan für Dashboards:</p></td>
+		
+	</tr>
+	<tr>
+		<td id="StepNumSpacer"><p class="psn-ProcedureStepNum">1</p></td>
+		<td><p class="ps-ProcedureStep">Key User: Dashboard für zyklischen 
+		 Report konfigurieren, z.B. &quot;Production Overview&quot;.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">2</p></td>
+		<td><p class="ps-ProcedureStep">Key User: Anlegen eines Profils 
+		 zum Report z.B. &quot;Report_Line_A_weekly&quot;.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">4</p></td>
+		<td><p class="ps-ProcedureStep">Key User: Speichern des Profils.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">5</p></td>
+		<td><p class="ps-ProcedureStep">Key User: Teilen des Profils.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">6</p></td>
+		<td><p class="ps-ProcedureStep">Key User: Anlegen eines Druck-Zeitplans 
+		 mit Angabe von Dashboard und Profil, z.B. &quot;Production Overview&quot; 
+		 + &quot;Report_Line_A_weekly&quot;.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">7</p></td>
+		<td><p class="ps-ProcedureStep">Key User - optional: E-Mailversand 
+		 für den Report konfigurieren.</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">8</p></td>
+		<td><p class="ps-ProcedureStep">User X: Report aus dem Standardverzeichnis 
+		 bzw. aus dem Anhang der E-Mail öffnen.</p></td>
+	</tr>
+</tbody></table>
+<hr id="SeeAlsoSpacer" align="center" data-condition="Others:Deutsch"/>
+<table class="SeeAlsoTab" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="sah-SeeAlsoHeading"><span data-keyref="SeeAlso_DE">Verwandte Themen:</span></p></td>
+		<td> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><ul class="SeeAlsoListEntry">
+			<li class="SeeAlsoListEntry"><a href="Menus/UserMenu.htm#Druck-Zeitplan">Druck-Zeitpläne 
+			 für Dashboards</a></li>
+		</ul></td>
+		<td> </td>
+		<td> </td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

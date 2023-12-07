@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Hinweise für Updates, Patches, Hotfixes</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Hinweise für Updates, Patches, Hotfixes</h2>
+<h3><a name="Allgemein"></a>Allgemein</h3>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Vor einem Update der Datenbank muss sichergestellt 
+ werden, dass keine User auf die Datenbank zugreifen.</p>
+<h3><a name="Stoppen_von_Oracle-Jobs_vor_Update"></a>Stoppen von Oracle-Jobs 
+ vor Update</h3>
+<p class="BodyText">Zunächst müssen die User Jobs gestoppt werden. Dies 
+ kann erreicht werden, indem man folgendes Skript mit SQL plus auf der 
+ Datenbank ausführt (sofern es sich um eine 2-DB-Installation handelt, 
+ muss das Skript auf beiden Datenbanken ausgeführt werden).</p>
+<p class="TextCode">BEGIN</p>
+<p class="TextCode">&#160;&#160;&#160;FOR job_rec IN (SELECT job FROM user_jobs)</p>
+<p class="TextCode">&#160;&#160;&#160;LOOP</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;DBMS_JOB.BROKEN(job_rec.job, 
+ TRUE);</p>
+<p class="TextCode">&#160;&#160;&#160;END LOOP;</p>
+<p class="TextCode">END;</p>
+<p class="TextCode">/</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Nachdem das Skript ausgeführt wurde, stellen Sie sicher, 
+ dass auch wirklich alle Jobs geschlossen sind. Machen Sie dazu eine Abfrage 
+ auf user_jobs. Für alle Einträge muss unter &quot;next_date&quot; 4000 
+ eingetragen sein. Ist dies nicht der Fall, lassen Sie das Skript erneut 
+ laufen.</p>
+<p class="BodyText">Außerdem muss geprüft werden, dass kein User Job mehr 
+ läuft, der bereits vor dem Schließen der User Jobs gestartet wurde. Verwenden 
+ Sie dazu folgenden Befehl:</p>
+<p class="TextCode">SELECT * FROM USER_JOBS WHERE THIS_DATE IS NOT NULL</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Liefert diese Abfrage Ergebnisse, so müssen weitere 
+ DB Jobs durch Oracle Service gestoppt werden. Häufig sind dies der Job 
+ SYS_REBUILD_AND_ANALYZE.</p>
+<h3><a name="Freigeben_von_Oracle-Jobs_nach_Update"></a>Freigeben von Oracle-Jobs 
+ nach Update</h3>
+<p class="BodyText">Nach dem Update der Datenbank müssen die User Jobs 
+ wieder freigegeben werden. Dies wird mit folgendem Skript erreicht:</p>
+<p class="TextCode">BEGIN</p>
+<p class="TextCode">&#160;&#160;&#160;FOR job_rec IN (SELECT job FROM user_jobs)</p>
+<p class="TextCode">&#160;&#160;&#160;LOOP</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;DBMS_JOB.BROKEN(job_rec.job, 
+ FALSE);</p>
+<p class="TextCode">&#160;&#160;&#160;END LOOP;</p>
+<p class="TextCode">END;</p>
+<p class="TextCode">/</p>
+<h3><a name="Stoppen_des_Gateways_vor_Update"></a>Stoppen des Gateways 
+ vor Update</h3>
+<p class="BodyText">Vor dem Update der Datenbank muss sichergestellt werden, 
+ dass kein Gateway-User auf die Datenbank zugreift. Dies ist kundenspezifisch 
+ umzusetzen.</p>
+<h3><a name="Neustart_des_Gateways_nach_Update"></a>Neustart des Gateways 
+ nach Update</h3>
+<p class="BodyText">Nach dem Datenbank-Update kann das Gateway wieder gestartet 
+ werden bzw. den Gateway-Usern der Zugriff auf die Datenbank wieder erlaubt 
+ werden.</p>
+<h3><a name="Stoppen_der_ApplicationEngine_vor_Update"></a>Stoppen der 
+ ApplicationEngine vor Update</h3>
+<p class="BodyText">Vor dem Update der Datenbank muss sichergestellt werden, 
+ dass kein ApplicationEngine-User auf die Datenbank zugreift. Dies ist 
+ kundenspezifisch umzusetzen.</p>
+<h3><a name="Neustart_der_ApplicationEngine_nach_Update"></a>Neustart der 
+ ApplicationEngine nach Update</h3>
+<p class="BodyText">Nach dem Datenbank-Update kann die ApplicationEngine 
+ wieder gestartet werden bzw. den AE-Usern der Zugriff auf die Datenbank 
+ wieder erlaubt werden.</p>
+<h3><a name="Stoppen_der_WebApplikation_vor_Update"></a>Stoppen der WebApplikation 
+ vor Update</h3>
+<p class="BodyText">Vor dem Datenbank-Update muss die WebApplikation gestoppt 
+ werden. Nach jeder Änderung an System-, Context- oder Init-Parametern 
+ muss die WebApplikation neu gestartet werden, um die Änderungen aktiv 
+ zu setzen. Da die Systemparameter in der Datenbank gespeichert werden, 
+ muss die WebApplikation auch nach jedem Update der Datenbank bzw. nach 
+ der Installation eines DB-Patches oder DB-Hotfixes neu gestartet werden.</p>
+<h3><a name="Neustart_der_WebApplikation_nach_Update"></a>Neustart der 
+ WebApplikation nach Update</h3>
+<p class="BodyText">Nach dem Datenbank-Update kann die WebApplikation wieder 
+ gestartet werden.</p>
+</body>
+</html>

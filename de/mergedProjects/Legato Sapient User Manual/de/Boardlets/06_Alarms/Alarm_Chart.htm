@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.6.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="topic-check-list" content="First Draft" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Meldungsdiagramm</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Meldungsdiagramm">
+        <span>Meldungsdiagramm</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch"><a id="BoardletAlarmChart"></a>Meldungsdiagramm</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Meldungsdiagramm</span> 
+ zeigt zu einem selektierten Knoten die Anzahl oder die summierte Nettodauer 
+ aller Meldungen (archiviert und aktuell oder nur archiviert) im selektierten 
+ Zeitraum.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Count_Als.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Mouseover über einen Balken werden die Meldeklasse 
+ / Meldeart und die Anzahl aufgetretener Meldungen eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf den Namen einer Meldeklasse / Meldeart 
+ unten in der Legende werden Meldungen dieser Klasse / Art aus- bzw. wieder 
+ eingeblendet werden. Ausgeblendete Werte werden in der Legende  hellgrau 
+ dargestellt.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Meldungsdiagramm 
+ </span>stehen außerdem folgende Einstellungen zur Verfügung. </p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Layout"></a>Reiter Layout</h4>
+<div data-conref="../../../assets/snippets/Layout/de_Chart_type.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Diagrammtyp:</p>
+<p class="GUIControlDescr">Aus der Dropdown-Liste kann der Diagrammtyp 
+ gewählt werden. Zur Verfügung stehen Liniendiagramm, Balkendiagramm, Flächendiagramm 
+ und gestapeltes Balkendiagramm.</p>
+
+
+</div>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<div data-conref="../../../assets/snippets/Filter/de_Al_Classes_Filter.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Meldeklassen:</p>
+<p class="GUIControlDescr">Filter auf Meldeklassen. Es werden alle Meldungen 
+ der hier eingegebenen Klassen für die selektierten Knoten angezeigt. Die 
+ Meldeklassen können aus einer Dropdown-Liste gewählt werden. Leer = kein 
+ Filter, alle Meldeklassen werden angezeigt.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/Filter/de_Al_Types_Filter.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Meldearten:</p>
+<p class="GUIControlDescr">Filter auf Meldearten. Es werden alle Meldungen 
+ der hier eingegebenen Arten für die selektierten Knoten angezeigt. Die 
+ Meldearten können aus einer Dropdown-Liste gewählt werden. Leer = kein 
+ Filter, alle Meldearten werden angezeigt.</p>
+
+
+</div>
+<p class="GUIControl" data-condition="Others:Deutsch">Gruppieren nach:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann über eine Dropdown-Liste ausgewählt 
+ werden, wonach gruppiert werden soll: Meldeklasse, Meldeart oder beides.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zählen nach:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann über eine Dropdown-Liste ausgewählt 
+ werden, was gezählt werden soll: Anzahl der Meldungen oder Summe der Nettodauern.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Nur Archivierte...:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Mit diesem Schieberegler wird definiert, ob 
+ nur archivierte Meldungen angezeigt werden sollen oder auch aktive.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Es wird keine gesonderte Parametrierung im LC2 benötigt.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">chartType</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">legendLabelOptons</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">grouping</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">alarmClasses</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">alarmTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">onlyGone</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

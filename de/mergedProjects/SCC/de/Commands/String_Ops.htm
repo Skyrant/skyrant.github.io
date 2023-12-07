@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Stringoperationen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Stringoperationen">
+        <span>Stringoperationen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Stringoperationen</h2>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="CutStr"></a>CutStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string CutStr(string s, string c, long 
+ n, bool back)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht in dem angegebenen String <span style="font-weight: bold;">s</span> 
+ nach dem <span style="font-weight: bold;">n</span>-ten Vorkommen des Zeichens 
+ <span style="font-weight: bold;">c</span> und löscht die Zeichen bis zu 
+ dieser Stelle. <span style="font-weight: bold;">Back</span> gibt dabei 
+ die Richtung an: bei true wird von rechts gezählt und gelöscht, bei false 
+ von links.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">String   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := CutStr(&#39;c:\\projekte\\legato\\Cloud Connector\\projekt1.lpr&#39;, 
+ &#39;\\&#39;, 1, true) </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetCol" id="GetCol"></a>GetCol</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string GetCol(string s, long r, long 
+ c)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert der Spalte <b>c</b> der Zeile <b>r</b> 
+ des angegebenen Strings <b>s</b> (Format s: CSV).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">String   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetCol(&#39;&quot;Field_1_1&quot;, &quot;Field_1_2&quot;&#39; 
+ + &#39;\n&#39; +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            &#39;&quot;Field_2_1&quot;, 
+ &quot;Field_2_2&quot;&#39; + &#39;\n&#39;, 2, 1)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetColByName" id="GetColByName"></a>GetColByName</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string GetColByName(string s, long 
+ r, string c)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert der Spalte <b>c</b> der Zeile <b>r</b> 
+ des angegebenen Strings <b>s</b> (Format s: CSV). In der ersten Zeile 
+ müssen alle Spaltennamen stehen!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">String   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetCol(&#39;&quot;Col_1&quot; + &quot;Col_2&quot;&#39; 
+ + &#39;\n&#39; +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            &#39;&quot;Field_1_1&quot; 
+ + &quot;Field_1_2&quot;&#39; + &#39;\n&#39; +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            &#39;&quot;Field_2_1&quot; 
+ + &quot;Field_2_2&quot;&#39; + &#39;\n&#39;,  2, 1)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetColCnt" id="GetColCnt"></a>GetColCnt</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long <code>GetColCnt</code>(string 
+ s)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Anzahl der Spalten des angegebenen Strings 
+ <b>s</b> (Format s: CSV).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     c</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">c := GetColCnt(&#39;&quot;Col_1&quot;, &quot;Col_2&quot;&#39; 
+ + &#39;\n&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetRow" id="GetRow"></a>GetRow</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string GetRow(string s, long r)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Zeile <b>r</b> des angegebenen Strings 
+ <b>s</b> (Format s: CSV).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">String   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetRow(&#39;&quot;Row_1&quot;&#39; + &#39;\n&#39; + &#39;&quot;Row_2&quot;&#39; 
+ + &#39;\n&#39;, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetRowCnt" id="GetRowCnt"></a>GetRowCnt</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long <code>GetRowCount</code>(string 
+ s)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Anzahl der Zeilen des angegebenen Strings 
+ <b>s</b> (Format s: CSV).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     r</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">r := GetRowCnt(&#39;&quot;Row_1&quot;&#39; + &#39;\n&#39; + &#39;&quot;Row_2&quot;&#39; 
+ + &#39;\n&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetVarStr" id="GetVarStr"></a>GetVarStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string GetVarStr(pointer addr, long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest einen String aus dem Variablenbereich des Scripts, 
+ der mit der Adresse <b>addr</b> beginnt. <b>size</b> bezeichnet dabei 
+ die Anzahl der Bytes, die gelesen werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">struct   b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">begin</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  long l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  char c[80]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b.l := 26</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetVarStr(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;, &amp;b.c, 
+ 26)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetVarStr(&amp;b.c, 10)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetVarStr" id="SetVarStr"></a>SetVarStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetVarStr(string x, pointer addr, long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>x</b> in den Variablenbereich 
+ des Scripts, der mit der Adresse <b>addr</b> beginnt. <b>size</b> bezeichnet 
+ dabei die Anzahl der Bytes, die geschrieben werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">struct   b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">begin</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  long l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  char c[80]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b.l := 26</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetVarStr(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;, &amp;b.c, 
+ 26)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrDel" id="StrDel"></a>StrDel</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrDel(string source, long pos, 
+ long len)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht aus dem String <b>source</b> ab der Position 
+ <b>pos</b> <b>len</b> Bytes und liefert das Ergebnis. <b>source</b> wird 
+ dabei nicht verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;ABCDxxxEFGH&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrDel(s, 4, 3))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrIns" id="StrIns"></a>StrIns</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrIns(string source,<br/>
+                           string 
+ ins, long pos)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt den String <b>ins</b> in den String <b>source</b> 
+ ab der Position <b>pos</b> ein und liefert das Ergebnis. <b>source</b> 
+ wird dabei nicht verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;ABCFGH&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrIns(s, &#39;DE&#39;, 3))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrLen" id="StrLen"></a>StrLen</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long StrLen(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Länge des Strings <b>source</b> ohne das 
+ abschließende Nullzeichen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := Value.String1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while StrLen(s) &lt; 20 do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  s := s + &#39;x&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrLower" id="StrLower"></a>StrLower</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrLower(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert sämtliche Großbuchstaben des Strings <b>source</b> 
+ in Kleinbuchstaben und liefert das Ergebnis. <b>source</b> wird dabei 
+ nicht verändert. Es werden die Buchstaben A - Z konvertiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string    s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;ABcDEfGH&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrLower(s))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrLTrim"></a>StrLTrim</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrLTrim(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht alle führenden Leerzeichen (beginnend von links) 
+ aus dem String source und liefert das Ergebnis. source wird dabei nicht 
+ verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;  ABC DE  FGH  &#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrLTrim(s))      // 
+ liefert &#39;ABC DE  FGH  &#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrPos" id="StrPos"></a>StrPos</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long StrPos(string source,<br/>
+                         string 
+ find)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht den String <b>source</b> nach dem ersten Vorkommen 
+ des Strings <b>find</b> ab. Wurde ein Vorkommen gefunden, wird die Position 
+ zurückgeliefert, ansonsten -1.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;ABCDEFGH&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if StrPos(s, &#39;DE&#39;) &gt;= 0 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;DE is part of the string&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrRead"></a>StrRead</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrRead(string path)</p>
+<p data-condition="Others:Deutsch">Liest die durch path festgelegte Textdatei und liefert den Inhalt als 
+ Ergebnis.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := StrRead(&#39;c:\\projects\\recipe.txt&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrReplace"></a>StrReplace</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrReplace(string source,<br/>
+                         string 
+ find, string replace)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht den String <b>source</b> nach allen Vorkommen 
+ des Teilstrings <b>find</b> ab und ersetzt diese durch <span style="font-weight: bold;">replace</span>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   src, res</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"> </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">src := &#39;Der Wert xxxx ist gleich xxxx&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">res := strreplace(scr, &#39;xxxx&#39;, &#39;1234&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrRTrim"></a>StrRTrim</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrRTrim(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht alle abschließenden Leerzeichen (beginnend von 
+ rechts) aus dem String source und liefert das Ergebnis. source wird dabei 
+ nicht verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;  ABC DE  FGH  &#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrRTrim(s))      // 
+ liefert &#39;  ABC DE  FGH&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrToJson"></a>StrToJson</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrToJson(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Formatiert den übergegeben String source so, dass er 
+ als Stringwert in einem JSON Objekt verwendet werden kann, und liefert 
+ das Ergebnis. source wird dabei nicht verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;&quot;This is the source&quot;&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrToJson(s))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrToken" id="StrToken"></a>StrToken</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrToken(string source,<br/>
+                             string 
+ delim, long n)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest aus dem String <b>source</b> das <b>n</b>-te 
+ Wort. Jedes einzelne Zeichen, das im String <b>delim</b> vorkommt, wird 
+ als Trennzeichen verwendet.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Als Trennzeichen dürfen keine Escape-Sequenzen 
+ angegeben werden, z.B. Zeilenumbruchsteuerung mit \n\r. Die ordnungsgemäße 
+ Ausführung des Befehls ist dabei nicht gewährleistet!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;one,two,THREE,four,five&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;01: &#39; + StrToken(s, &#39;,&#39;, 3))  <span class="CommentChr">// Ausgabe des 3. Worts &#39;THREE&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;one,two,three,four,FIVE&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;02: &#39; + StrToken(s, &#39;,&#39;, 10)) <span class="CommentChr">// 
+ Ausgabe des letzten Worts, wenn Anzahl</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// Worte nicht ausreichend ist</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;,one,TWO,three,four,five&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;03: &#39; + StrToken(s, &#39;,&#39;, 3))  <span class="CommentChr">// String beginnt mit Delimiter: 1. Wort ist</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// leer</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;one,two,three,four,five,&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;04: &#39; + StrToken(s, &#39;,&#39;, 10)) <span class="CommentChr">// 
+ Ausgabe von Leerstring, wenn Anzahl Worte</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// nicht ausreicht und letztes Zeichen</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// Trennzeichen ist</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;one,two,,,FIVE,&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;05: &#39; + StrToken(s, &#39;,&#39;, 5))  <span class="CommentChr">// Unmittelbar aufeinanderfolgende Delimiter</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// werden als leeres Wort gezählt</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;ONE,TWO,THREE,FOUR,FIVE,&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;06: &#39; + StrToken(s, &#39;_&#39;, 3))  <span class="CommentChr">// Kommt der Delimiter im String nicht vor,</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// wird der gesamte String ausgegeben</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;one,two,three_FOUR,five&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;07: &#39; + StrToken(s, &#39;,_&#39;, 4)) <span class="CommentChr">// 
+ Jedes angegebene Zeichen im delim wird</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                     <span class="CommentChr">// als eigener Delimiter verwendet</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrTokenCnt"></a>StrTokenCnt</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: long StrTokenCnt(string source, string token)</p>
+<p data-condition="Others:Deutsch">Ermittelt die Anzahl, wie oft der Teilstring <span style="font-weight: bold;">token</span> 
+ in dem <span style="font-weight: bold;">source</span> vorkommt.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">string   s</p>
+<p data-condition="Others:Deutsch">s := &#39;one,two,red, three,red,four,five,six,seven,red&#39;</p>
+<p data-condition="Others:Deutsch">debug(&#39;cnt: &#39; + LToStr(StrTokenCnt(s, &#39;red&#39;),10)  // Ausgabe der 
+ Anzahl von &#39;red&#39; in s</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrTrim" id="StrTrim"></a>StrTrim</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrTrim(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht alle Leerzeichen aus dem String <b>source</b> 
+ und liefert das Ergebnis. <b>source</b> wird dabei nicht verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39; ABC DE  FGH &#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrTrim(s))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrUpper" id="StrUpper"></a>StrUpper</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrUpper(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert sämtliche Kleinbuchstaben des String <b>source</b> 
+ in Großbuchstaben und liefert das Ergebnis. <b>source</b> wird dabei nicht 
+ verändert. Es werden die Buchstaben A - Z konvertiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;ABcDEfGH&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(StrUpper(s))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="StrWrite"></a>StrWrite</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: StrWrite(string path, string content)</p>
+<p data-condition="Others:Deutsch">Schreibt den String content in die durch path festgelegte Textdatei. 
+ Die Datei wird neu erzeugt bzw. vollständig überschrieben, falls sie bereits 
+ existiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;This is the content&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">StrWrite(&#39;c:\\projects\\recipe.txt&#39;, s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 class="TextCodeGray" data-condition="Others:Deutsch"><a name="SubStr" id="SubStr"></a>SubStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string SubStr(string source, long pos,<br/>
+                           long 
+ len)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert aus dem String <b>source</b> ab der Position 
+ <b>pos</b> <b>len</b> Bytes. <b>source</b> wird dabei nicht verändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach dem Aufruf von Prozeduren wird der Status vom 
+ Interpreter zurückgesetzt, um sicherzustellen, dass Operatoren wie Minus 
+ richtig erkannt werden. Bei Return-Werten wird der Status ebenfalls gezielt 
+ gesetzt, so dass auch negative Werte übergeben werden können. Der Returnwert 
+ muss dabei ohne Leerzeichen nach dem Minus übergeben werden, z.B. &quot;return 
+ -3&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;AAABBBCCC&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(The first three digits: &#39; + SubStr(s, 0, 
+ 3))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

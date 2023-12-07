@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Details"]],"1":[["Ansicht Details"]],"2":[["\n\n"],["\n","Diese Ansicht bietet eine Detailansicht des in der \n Tabelle ausgewählten Datensatzes. Dieser kann hier editiert werden. In \n der Detailansicht werden immer alle Spalten angezeigt, unabhängig von \n den Einstellungen in der Dokumentenansicht.","\n\n\n"]],"3":[["Details"]],"id":"17"})

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Locale Language Config</title>
+<link rel="StyleSheet" href="..\..\..\Legato_Systemdokumentation.css" type="text/css" />
+</head>
+
+<body>
+<h1>Locale Language Configuration</h1>
+<p class="BodyText">Es gibt die Möglichkeit, verschiedene Sprachen zu konfigurieren. 
+ Hierfür ist eine spezielle&#160;Umgebung verfügbar, die Locals für die 
+ Applikation spezifiziert. Es kann jedoch keine allgemein gültige Aussage 
+ zur Konfiguration gemacht werden. Die jeweilige Konfiguration ist immer 
+ kundenabhängig.</p>
+<p>&#160;</p>
+<p>Übersetzungen müssen in das folgende Verzeichnis kopiert werden:</p>
+<p class="TextCode">custom-translations/</p>
+<p>Beispiel:</p>
+<p class="TextCode">custom-translations/pt-br.json</p>
+<p>&#160;</p>
+<p>Standard-Übersetzungen für andere Sprachen können im Sapient-Translations-Repository 
+ gefunden und die gewünschten Locales können als Umgebungsvariable (SAPIENT_LOCALE 
+ in einer *.env-Datei) spezifiziert werden:</p>
+<p class="TextCode">SAPIENT_LOCALE=pl-pl;pt-br</p>
+<p>&#160;</p>
+<p><img src="../../../02_Hinweis_de.jpg" alt="" style="border: none;" border="0" /></p>
+<p>Um Übersetzungen zu überschreiben, muss die Datei einen Namen mit dem 
+ dem gleichen Format haben wie &quot;de-de.json&quot; oder &quot;pl-pl.json&quot;. 
+ In diesem Beispiel sind &quot;de&quot; und &quot;pl&quot; Ländercodes. 
+ Es muss sich also um ein einheitliches Format für das Gebietsschema handeln.</p>
+<p>Beispielpfad, um Übersetzungen zu überschreiben:</p>
+<p class="TextCode">lib/custom/translations</p>
+<p class="TextCode">&#160;</p>
+</body>
+</html>

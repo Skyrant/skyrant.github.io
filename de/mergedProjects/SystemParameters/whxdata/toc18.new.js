@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SysParam -170: Anz. Tage um Meldungen zu ändern","type":"item","tilePath":"","description":"","url":"de/06_WA/MM3/SysParam-170.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

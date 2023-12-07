@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Benutzerverwaltung</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="rh-index-keywords" content="Benutzer" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Benutzerverwaltung">
+        <span>Benutzerverwaltung</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Benutzerverwaltung</h2>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Begriffserklärung"></a>Begriffserklärung</h3>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col style="width: 7.251%;"/>
+	<col style="width: 37.142%;"/>
+	<col style="width: 55.607%;"/>
+	</colgroup><tbody><tr>
+		<td bgcolor="#C0C0C0"><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Begriff</span></p></td>
+		<td bgcolor="#C0C0C0"><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Definition</span></p></td>
+		<td bgcolor="#C0C0C0"><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Sinnvolle 
+		 Aktionen</span></p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText"><span style="font-weight: bold; font-family: &#39;Palatino Linotype&#39;, serif;">Person</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;"> </span></p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Personen haben einen Vornamen, Nachnamen 
+			 und weitere persönliche Daten. </p></li>
+			<li><p class="BodyText">Eine Person ist jemand, die im System 
+			 angelegt ist. Diese Person entspricht einer natürlichen Person.</p></li>
+			<li><p class="BodyText"><span>Es muss nicht notwendig sein, 
+			 dass sich jede Person am System anmelden kann.</span></p></li>
+		</ul></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Personen können deaktiviert werden.</p></li>
+			<li><p class="BodyText">Durch das Deaktivieren von Personen 
+			 werden alle persönlichen Daten gesichert, gleichzeitig jedoch 
+			 auch anonymisiert.</p></li>
+			<li><p class="BodyText">Durch das Deaktivieren von Personen 
+			 werden alle Benutzer/User dieser Person werden gesperrt.</p></li>
+			<li><p class="BodyText">Durch das Deaktivieren von Personen 
+			 wird der Loginname jedoch auch gesichert und durch eine bedeutungslose 
+			 Kennung ersetzt.</p></li>
+			<li><p class="BodyText">Personen können auch wieder reaktiviert 
+			 werden. In diesem Falle werden die gesicherten Daten wieder 
+			 hergestellt. </p></li>
+			<li><p class="BodyText">Zusätzlich kann man auch den Zeitpunkt 
+			 planen, an dem die Person deaktiviert werden soll. Für diesen 
+			 Zeitplan wird der Systemparameter -270 verwendet.</p></li>
+			<li><p class="BodyText">Personen können auch gelöscht werden. 
+			 Dies ist sowohl für eine inaktive oder aktive Person möglich. 
+			 Hierbei werden die Daten ohne Möglichkeit der Wiederherstellung 
+			 gelöscht.</p></li>
+			<li><p class="BodyText">Beim Löschen von Personen werden auch 
+			 alle sonstigen Verweise, z.B. Audit Logs von Aktionen eines 
+			 Benutzers/Users auf eine Systemperson übertragen.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">B<span style="font-weight: bold;">enutzer/User</span></p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Benutzer und User können synonym verwendet 
+			 werden. </p></li>
+			<li><p class="BodyText">Benutzer/User haben Login-Accounts 
+			 (Benutzername, Kennwort, Berechtigungen) und können sich am 
+			 System anmelden.</p></li>
+			<li><p class="BodyText">Benutzer/User werden Benutzergruppen 
+			 zugeordnet, um Rechte in der Applikation zu erlangen.</p></li>
+		</ul></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Benutzer/User können gesperrt werden. 
+			 </p></li>
+			<li><p class="BodyText">Die Sperrung ist entweder zum aktuellen 
+			 Zeitpunkt möglich und tritt sofort in Kraft oder die Sperrung 
+			 kann für die Zukunft geplant werden (Setzen eines Ablaufdatum 
+			 des Benutzers/Users). </p></li>
+			<li><p class="BodyText">Eine geplante zukünftige Sperrung eines 
+			 Benutzers/Users ist z.B. für Saisonarbeiter geeignet. </p></li>
+		</ul></td>
+	</tr>
+</tbody></table>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Benutzer_anlegen" id="Benutzer_anlegen"></a>Benutzer anlegen</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Das Anlegen von Benutzeraccounts erfolgt über die Tabelle 
+ &quot;Personen&quot; unter &quot;Stammdatenverwaltung&quot;. Jeder Benutzer 
+ ist also einer Person zugewiesen. Natürlich kann es auch Personen geben, 
+ für die kein Benutzeraccount existiert, z.B. Lieferanten.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Legen Sie also eine Person an und geben Sie die nötigen 
+ Informationen ein:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/01_Users/both/Person.png" alt="" style="border: none;" width="600" height="249" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Dann rufen Sie das Kontextmenü auf, durch Rechtsklick 
+ auf den gewünschten Eintrag entweder in der Tabelle oder im Navigationsbaum.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/01_Users/both/Person_Context.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Wählen Sie den Eintrag &quot;Account: Einstellungen 
+ bearbeiten...&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Da noch kein Account existiert, erfolgt eine Abfrage, 
+ ob Sie einen erstellen möchten. Nach Bestätigung erscheint folgender Dialog:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/04_Master_Data/both/Person_PW.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Geben Sie den gewünschten Benutzernamen ein sowie ein 
+ Passwort. Nach Klick auf OK wird der Benutzeraccount angelegt.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Benutzereinstellungen_bearbeiten" id="Benutzereinstellungen_bearbeiten"></a>Benutzereinstellungen 
+ bearbeiten</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Auf Wunsch können Sie jetzt noch weitere Einstellungen 
+ für den Account vornehmen, z.B. ein Ablaufdatum vorgeben oder festlegen, 
+ ob der Benutzer auch in ERP bekannt ist. Dazu selektieren Sie im Kontextmenü 
+ erneut den Eintrag &quot;Account: Einstellungen bearbeiten...&quot; Nun 
+ sieht der Dialog folgendermaßen aus:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/04_Master_Data/both/Person_Settings.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der Benutzer kann sich jetzt an Sapient anmelden, hat 
+ aber noch keine Rechte.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Benutzergruppe_erstellen_und_Benutzer_zuordnen" id="Benutzergruppe_erstellen_und_Benutzer_zuordnen"></a>Benutzergruppe 
+ erstellen und Benutzer zuordnen</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Berechtigungen werden auf Gruppenebene zugewiesen. 
+ Der Benutzer muss also Mitglied mindestens einer Gruppe sein, um Berechtigungen 
+ erhalten zu können.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Wechseln Sie dazu im Navigationsbaum zu System-Administration 
+ - Benutzer - Benutzergruppen und legen Sie die gewünschte Gruppe an:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/01_Users/both/Sapi_Groups.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Darunter können Sie der Gruppe Benutzer zuordnen:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/01_Users/both/Group_User.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Berechtigungen_vergeben" id="Berechtigungen_vergeben"></a>Berechtigungen 
+ vergeben</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nun müssen für die Gruppe die gewünschten Berechtigungen 
+ vergeben werden. Informationen hierzu finden Sie im separaten Kapitel 
+ &quot;<a href="Ass_Perms.htm">Zuordnung von Rechten im LC2</a>&quot;.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Passwort_ändern"></a>Passwort ändern</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Selektieren Sie entweder unter Stammdatenverwaltung 
+ - Personen oder unter System-Administration - Benutzer den gewünschten 
+ Account und öffnen Sie über das Kontextmenü den Dialog &quot;Account: 
+ Passwort setzen&quot;. Nun können Sie ein neues Passwort für den Benutzer 
+ vergeben.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><a id="Person_deaktivieren"></a>Person deaktivieren</h3>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Wählen Sie zum Deaktivieren einer Person unter <span style="font-weight: bold;">Stammdatenverwaltung</span> 
+ - <span style="font-weight: bold;">Personen</span> den gewünschten Account 
+ und tragen das heutige Datum in die Spalte <strong>Ablaufdatum</strong> ein. 
+ Die Person ist ab sofort gesperrt und somit deaktiviert (<span class="misspell-word">expired_day</span> 
+ &lt; heute). </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Selbstverständlich können Sie auch ein anderes Datum 
+ in der Zukunft eintragen, ab dem die Person inaktiv und somit deaktiviert 
+ sein soll.</p>
+<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; " data-condition="Others:Deutsch;Others:Sapient_only">Die 
+ verknüpfte Benutzer werden deaktiviert und können sich nicht mehr einloggen. 
+ Durch das Deaktivieren von Personen werden alle persönlichen Daten gesichert, 
+ gleichzeitig jedoch auch anonymisiert.</p>
+<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; " data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; " data-condition="Others:Deutsch;Others:Sapient_only">Außerdem 
+ können Personen durch das Kontextmenü deaktiviert werden:</p>
+<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; " data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; "><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; ">Wählen 
+	 Sie in der Tabelle Personen die Person, die Sie vorübergehend deaktivieren 
+	 möchten, indem Sie mit der rechten Maustaste ganz am Anfang der Tabelle 
+	 klicken.<br/>
+	<br/>
+	<img src="../../../assets/images/context_menu_GDPR.png" alt="" style="border: none;" border="0"/></p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; "><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; ">Im 
+	 Kontextmenü haben Sie die Möglichkeit, die Person zu deaktivieren, 
+	 indem Sie auf den Eintrag <span style="font-weight: bold;">Person 
+	 deaktivieren</span> klicken.<br/>
+	<img src="../../../assets/images/context_menu_GDPR_deactivate.png" alt="" style="border: none;" border="0"/></p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; "><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; ">Klicken 
+	 Sie auf die Schaltfläche <span style="font-weight: bold;">Aktualisieren</span>, 
+	 um die Änderungen zu sehen.<img src="../../../assets/images/Deactivate_User_10_refresh_button.png" alt="" style="border: none;" border="0"/></p></li>
+</ol>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" style="font-weight: normal;" data-condition="Others:Deutsch;Others:Sapient_only">Stellen Sie sicher, 
+ dass Sie nach den Änderungen immer auf die Schaltfläche Aktualisieren 
+ klicken. Andernfalls können Sie die Änderungen nicht sehen.</p>
+<p class="TextkörperHinweis" style="font-weight: normal;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<ol start="4" style="list-style: decimal;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Jetzt wird die ausgewählte Person deaktiviert. 
+	 Informationen wie Vorname, Nachname oder vollständiger Name werden 
+	 nun geändert:</p></li>
+</ol>
+<p class="TextkörperHinweis" style="text-align: left;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="27.382%" border="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col style="width: 24.613%;"/>
+	<col style="width: 75.387%;"/>
+	</colgroup><tbody><tr>
+		<td><p>Vorname</p></td>
+		<td><p>Anonymous</p></td>
+	</tr>
+	<tr>
+		<td><p>Nachname</p></td>
+		<td><p>Person</p></td>
+	</tr>
+	<tr>
+		<td><p>Ganzer Name</p></td>
+		<td><p>Anonymous Person</p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_5.png" alt="" style="border: none;" border="0"/></p>
+<ol start="5" style="list-style: decimal;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Auch in der Spalte <span style="font-weight: bold;">Deaktiviert 
+	 ID</span> gibt es eine Änderung:</p></li>
+</ol>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_6.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; text-decoration: none; " data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Damit diese Funktionalität verwendet werden 
+ kann, muss für die gewünschte Benutzergruppe die Berechtigung &quot;<span style="font-weight: bold;">APP:Lock/unlock persons</span>&quot; aktiviert 
+ sein.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">1. Navigieren Sie zum Bereich System-Administration 
+ und klicken Sie auf Benutzer &gt; Module Functions &gt; APP: Lock/unlock 
+ persons&quot;.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">2. Aktivieren Sie die Berechtigung, indem 
+ Sie die gewünschte(n) Gruppe(n) auswählen.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_12.png" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Beachten Sie <a href="Module_Function.htm">dieses Kapitel</a>, um grundlegende 
+ Informationen über Modul-Funktionen zu erhalten.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Weitere_Informationen_für_Entwickler"></a>Weitere Informationen 
+ für Entwickler</h4>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Function paths:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">de/gefasoft/sapient/db/basics/Person/deactivate</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">de/gefasoft/sapient/db/basics/Person/reactivate</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Parameter:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">{</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> &quot;PERSON_ID&quot;: 1337</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">}</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Permission for action:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">gp_r_module_functions [ID: 0930f8c7-ea94-44cf-9513-b906b6b6dba4]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">APP: Lock/unlock persons</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Person_reaktivieren"></a>Person reaktivieren</h3>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only">Neben dem Deaktivieren 
+ einer Person ist auch eine Reaktivierung möglich. Die Deaktivierung (inkl. 
+ temporäre Anonymisierung) wird hierdurch rückgängig gemacht.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Führen Sie folgende Schritte aus, um die Person wieder zu reaktivieren:<br/>
+</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">1. Öffnen Sie den LC2.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">2. Navigieren Sie zum Abschnitt <span style="font-weight: bold;">Stammdatenverwaltung</span> 
+ und klicken Sie auf die Tabelle <span style="font-weight: bold;">Personen</span>.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_1.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">2.1 Deaktivierte Personen lassen sich anhand des Namens (z.B. Vorname, 
+ Nachname) nicht unterscheiden. Für das Reaktivieren ist es jedoch notwendig, 
+ zwischen den deaktivierten Personen zu unterscheiden, damit die richtige 
+ Person reaktiviert werden kann.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Beachten Sie hierzu die Spalte <span style="font-weight: bold;">Deaktivierte 
+ Person. </span>In dieser Spalte werden die deaktivierten Personen anhand 
+ der früheren Nutzerkennung der anonymisierten Person angezeigt.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivated_Person_Table_Personas.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">3. Wählen Sie in der Tabelle <span style="font-weight: bold;">Personen</span> 
+ die Person aus, die Sie reaktivieren möchten, indem Sie mit der rechten 
+ Maustaste am Anfang der Tabelle klicken.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/context_menu_GDPR.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">4. Im Kontextmenü haben Sie die Möglichkeit, die Person zu reaktivieren, 
+ indem Sie auf den Eintrag <span style="font-weight: bold;">Person reaktivieren</span> 
+ klicken.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/context_menu_GDPR_updated.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">5. Klicken Sie auf die Schaltfläche <span style="font-weight: bold;">Aktualisieren</span>, 
+ um die Änderungen zu sehen.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_10_refresh_button.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">6. Die Person wird wieder aktiviert.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_8.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">7. In der Spalte <span style="font-weight: bold;">Deaktiviert ID</span> 
+ erscheint wieder der Eintrag NULL.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Deactivate_User_9.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Person_löschen__GDPR_"></a>Person löschen (GDPR)</h3>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only">Die Person wird aus 
+ dem System entfernt und die personenbezogenen Daten werden irreversibel 
+ anonymisiert.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/delete_person_GDPR.png" alt="" style="border: none;" border="0"/></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only">Beachten Sie außerdem:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Die zugeordneten 
+	 Benutzer werden ebenfalls gelöscht.</p></li>
+	<li><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Das Löschen 
+	 von Personen (Delte Person (GDPR)) ist für aktive und inaktive 
+	 Personen möglich. Es besteht keine Möglichkeit, die Daten wieder herzustellen.</p></li>
+	<li><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn Personen 
+	 gelöscht werden, werden zusätzlich weitere Verweise (z.B. Audit Logs 
+	 von Aktionen eines Benutzers/Users) auf eine Systemperson übertragen.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Login_sperren"></a>Login sperren</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beim Sperren des Logins eines Benutzers/Users gilt 
+ Folgendes:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Durch das Sperren eines Logins werden <span style="font-weight: bold;">keine</span> Daten gelöscht, d.h. die Datensicherheit 
+	 des Logins ist weiterhin gewährleistet.</p></li>
+	<li><p class="BodyText">Der Benutzer/User kann sich nicht mehr am System 
+	 anmelden.</p></li>
+	<li><p class="BodyText">Es kann nach dem Benutzer/User des gesperrten 
+	 Logins gefiltert werden.</p></li>
+	<li><p class="BodyText">Dem Benutzer/User können Aufgaben für die Zukunft 
+	 zugeordnet werden.</p></li>
+</ul>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><a id="Anwendungsfall_Rezeptmanagement"></a>Anwendungsfall 
+ Rezeptmanagement</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Um das Anonymisieren zu verdeutlichen, beachten Sie 
+ das Beispiel für den Anwendungsfall <span class="misspell-word"><strong>Rezeptmanagement</strong></span>:</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Ein Mitarbeiter hat beispielsweise das Unternehmen verlassen. Alle 
+ Änderungen beim <span class="misspell-word">Rezeptmanagement</span> sollen 
+ gemäß der <span class="misspell-word">DSGVO</span> konform sein:</p>
+<ul class="Disc" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p><span class="misspell-word">In</span><span style="font-family: &#39;Palatino Linotype&#39;;"> 
+	 der Navigation wird unter </span><strong><span class="misspell-word">Stammdatenverwaltung</span></strong><span style="font-family: &#39;Palatino Linotype&#39;;"> &gt; <strong>Personen </strong>der 
+	 deaktivierte und anonymisierte Benutzer weiterhin mit seiner <strong>Benutzerkennung 
+	 (1) </strong>aufgeführt, um eine </span><span class="misspell-word">Nachverfolgbarkeit</span><span style="font-family: &#39;Palatino Linotype&#39;;"> zu gewährleisten. Jedoch 
+	 kann dies nur </span><span class="misspell-word">d</span><span style="font-family: &#39;Palatino Linotype&#39;;">er 
+	 Administrator des LC2 einsehen. Jeder deaktivierte und anonymisierte 
+	 Benutzer wird der Person </span><strong><span class="misspell-word">anonymous</span><span style="font-family: &#39;Palatino Linotype&#39;;"> (2) </span></strong><span style="font-family: &#39;Palatino Linotype&#39;;">zugeordnet. <br/>
+	<br/>
+	</span><span style="font-style: italic;">In der nachfolgenden Abbildung 
+	 ist im Bereich </span><span class="misspell-word">Stammdatenverwaltung</span><span style="font-family: &#39;Palatino Linotype&#39;; font-style: italic;"> die 
+	 Benutzerkennung (1) des deaktivierten und anonymisierten Benutzers 
+	 unkenntlich gemacht.</span><span style="font-family: &#39;Palatino Linotype&#39;;"> 
+	 <br/>
+	<br/>
+	<img src="../../../assets/images/Stammdatenverwaltung_Verknüpfung_Person_anonymous_DE.png" alt="" style="border: none;" border="0"/><br/>
+	Mit Hilfe der </span><strong><span class="misspell-word">ID</span><span style="font-family: &#39;Palatino Linotype&#39;;"> (4)</span></strong><span style="font-family: &#39;Palatino Linotype&#39;;"> wird zwischen dem LC2 und 
+	 der </span><span class="misspell-word">WebApp</span><span style="font-family: &#39;Palatino Linotype&#39;;"> eine 
+	 eindeutige Verbindung für den Benutzer hergestellt. Anstatt den Namen 
+	 der Person zu verwenden wird<strong> </strong></span><strong><span class="misspell-word">anonymous</span><span style="font-family: &#39;Palatino Linotype&#39;;"> (3)</span></strong><span style="font-family: &#39;Palatino Linotype&#39;;"> verwendet.</span></p></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;;">Im <span class="misspell-word">Rezeptmanagement</span> wird 
+	 anstelle des bisherigen Benutzernamens <strong><span class="misspell-word">anonymous</span> </strong>angezeigt.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;;">Im </span><span class="misspell-word">Boardlet</span><span style="font-family: &#39;Palatino Linotype&#39;;"> 
+	 der </span><span class="misspell-word">WebApp</span><span style="font-family: &#39;Palatino Linotype&#39;;"> 
+	 <strong>Recipe History</strong> erschien bisher der Benutzername unter 
+	 </span><strong><span class="misspell-word">Changed</span><span style="font-family: &#39;Palatino Linotype&#39;;"> 
+	 by</span></strong>. Nach der <span class="misspell-word">Anonymisierung</span><span style="font-family: &#39;Palatino Linotype&#39;;"> erscheint nur noch </span><span class="misspell-word"><strong>anonymous</strong></span><span style="font-family: &#39;Palatino Linotype&#39;;">.<br/>
+	<br/>
+	<img src="../../../assets/images/Recipe_History_anonymous_EN.png" alt="" style="border: none;" border="0"/><br/>
+	</span></li>
+</ul>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" border="0"/></p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Wenn ein Benutzer anonymisiert wird, wird im gesamten <span class="misspell-word">Sapient</span> 
+ dessen Benutzername durch <strong><span class="misspell-word">anynomous</span></strong> 
+ ersetzt.</p>
+
+
+</body></html>

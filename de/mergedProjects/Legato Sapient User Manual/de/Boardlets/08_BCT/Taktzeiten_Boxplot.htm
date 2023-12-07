@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.8.1_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Taktzeiten Boxplot</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Taktzeiten Boxplot">
+        <span>Taktzeiten Boxplot</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Taktzeiten Boxplot</h1>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Das Boardlet <span style="font-weight: bold;">Taktzeiten 
+ Boxplot</span> kann die Ableitung der Zykluszeiten eines ausgewählten 
+ Knotens analysieren.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Ein Boxplot (Kastengrafik) ist ein Diagramm, das die 
+ übersichtliche Darstellung der wichtigsten robusten Lage- und Streuungsmaße 
+ ermöglicht. Es werden das <span style="font-weight: bold;">Minimum</span>, 
+ das untere <span style="font-weight: bold;">Quartil</span>, der <span style="font-weight: bold;">Median</span>, das obere <span style="font-weight: bold;">Quartil</span> 
+ und das <span style="font-weight: bold;">Maximum</span> abgebildet.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Weitere Informationen zu einem Boxplot und dessen 
+ Bestandteile finden Sie <a href="https://de.wikipedia.org/wiki/Box-Plot">hier</a>.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Anwendungszweck"></a>Anwendungszweck</h6>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Ein Boxplot analysiert und zeigt an, wie die unterschiedlichen 
+ Taktzeiten statistisch verteilt sind.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Es werden beispielsweise die Taktzeiten der heutigen 
+ Schicht ausgewertet und das Minimum, die Quartile, der Median und besondere 
+ Diskrepanzen angezeigt.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"> </p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"><img src="../../../assets/images/boxplot_update.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch">Beachten Sie Folgendes:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p>Im Boardlet werden die Boxplot pro Zykluszeitvariable des/der 
+	 ausgewählten Knotens/Knoten angezeigt.</p></li>
+	<li><p>Die Boxen werden nach Sortiernummer sortiert.</p></li>
+	<li><p>Es ist ein filtern nach Knoten und Zeitspanne möglich.</p></li>
+	<li><p>Werte außerhalb der Whisker (bis zu 3 x interquartile range 
+	 oder IQR der Quartile) werden in Streudiagrammreihen angezeigt.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beachten Sie die zusätzlichen Informationen für den Interquartilsbereich 
+ (IQR):</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/interquartile_range.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Minimum (höchste dieser beiden Werte):</p>
+<p data-condition="Others:Deutsch">(Q1 - 1.5 * IQR) oder Mindestwert aus einer Reihe von Punkten</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Maximum (niedrigste der beiden):</p>
+<p data-condition="Others:Deutsch">(Q3 + 1.5 * IQR) oder Höchstwert aus einer Reihe von Punkten</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Wenn es auf der linken Seite Ausreißer gibt, wird das Minimum aus (Q1-1.5*IQR) 
+ verwendet, aber wenn es keine Ausreißer gibt, wird der niedrigste Punkt 
+ der Reihe verwendet.</p>
+
+
+</body></html>

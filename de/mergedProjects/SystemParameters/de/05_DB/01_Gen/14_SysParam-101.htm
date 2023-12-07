@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_System_Parameters_de.docx" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">SysParam -101: Methode für Statistik-Bildung</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SysParam -101: Methode für Statistik-Bildung">
+        <span>SysParam -101: Methode für Statistik-Bildung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Sapient_only">Methode für Statistik-Bildung</h3>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="123"><p class="TextkörperTable">Typ:</p></td>
+		<td style="vertical-align: top;" width="481"><p class="TextkörperTable">Systemparameter</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="123"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;" width="481"><p class="TextkörperTable">Methode 
+		 für den Index Rebuild</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="123"><p class="TextkörperTable">ID:</p></td>
+		<td style="vertical-align: top;" width="481"><p class="TextkörperTable">-101</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="123"><p class="TextkörperTable">Default:</p></td>
+		<td style="vertical-align: top;" width="481"><p class="TextkörperTable">Oracle</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="123"><p class="TextkörperTable">Format:</p></td>
+		<td style="vertical-align: top;" width="481"><p class="TextkörperTable">String</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="123"><p class="TextkörperTable">Beschreibung:</p></td>
+		<td style="vertical-align: top;" width="481"><p class="TextkörperTable">Dieser 
+		 Parameter definiert die Methode zur Statistikerstellung. Die von 
+		 GEFASOFT empfohlene Methode ist &quot;Oracle&quot;.</p>
+		<p class="TextkörperTable">Folgende Einträge sind möglich:</p>
+		<p class="TextkörperTablefett"><b>Oracle</b></p>
+		<p class="TextkörperTable">Die Neuerstellung der Statistiken mit 
+		 der Oracle-Methode geschieht vollautomatisch und für das gesamte 
+		 Schema. Es wird eine automatisierte Berechnung mit dem Oracle-Package 
+		 DBMS_STATS und dem Aufruf der Prozedur DBMS_STATS.GATHER_SCHEMA_STATS(ownname 
+		 =&gt; null, options =&gt; &#39;GATHER AUTO&#39;) durchgeführt.</p>
+		<p class="TextkörperTablefett"><b>LEGATO</b></p>
+		<p class="TextkörperTable">Erstellung von Statistiken mithilfe 
+		 des Befehls &quot;ANALYZE TABLE…&quot;, die die in der System-Tabelle 
+		 SYS_TABLES_TO_ANALYZE aufgelisteten Tabellen untersucht.</p>
+		<p class="TextkörperTablefett"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" border="0"/>:</p>
+		<p class="TextkörperTableEinrück">Andere Begriffe in der Spalte 
+		 VALUE_STR können nicht ausgewertet werden und führen zu einer 
+		 entsprechenden Fehlermeldung in der Protokolltabelle SYS_EVENT_PROTOCOL 
+		 und zum Abbruch der Statistik-Berechnungen.</p>
+		<p class="TextkörperTable">Ist das Feld VALUE_STR leer, dann wird 
+		 die Default-Einstellung &quot;Oracle&quot; verwendet.</p>
+		<p class="TextkörperTablefett"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" border="0"/>:</p>
+		<p class="TextkörperTableEinrück">Die regelmäßige Neuberechnung 
+		 der Statistiken mithilfe einer der beiden Varianten wird dringend 
+		 empfohlen, um eine gute Performance der Anwendung LEGATO zu gewährleisten. 
+		 Es ist deshalb darauf zu achten, dass der Systemparameter 187 
+		 korrekt gesetzt wird.</p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

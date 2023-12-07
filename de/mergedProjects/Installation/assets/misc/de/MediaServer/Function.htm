@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Software_Documentation_MediaServer_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Funktion</title>
+<link rel="stylesheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Funktion</h1>
+<h2><a name="Rückmeldung_an_Datenbank"></a>Rückmeldung an Datenbank</h2>
+<p class="BodyText">Das Programm ruft zyklisch (10 Sekunden Raster) die Datenbankprozedur P_SYNC_SYSMODULE als Lifemeldung auf. Wenn diese Lifemeldung ausbleibt, verbucht die Datenbank eine Modulverbindungsstörung.</p>
+<h2><a name="Verbindungsüberwachung"></a>Verbindungsüberwachung</h2>
+<p class="BodyText">Das Programm überwacht das zyklische Eintreffen von Lebenstelegrammen der parametrierten Anzeigen (Anzeigen werden als Verbindungen vom Typ -2 unter dem Modul MediaServer parametriert). Bleibt das Lebenstelegramm einer Anzeige für mehr als 120 Sekunden aus wird für die Anzeige Verbindungsfehler in der Datenbank verbucht.</p>
+<h2><a name="Selektion_der_Reißleinenmeldungen"></a>Selektion der Reißleinenmeldungen</h2>
+<p class="BodyText">Die Reißleinenmeldungen werden zyklisch (1 Sekunden Raster) mit dem konfigurierten SQL Statement (Server.cfg) selektiert, das beispielsweise folgendermaßen lautetet:</p>
+<p class="TextCode">select a.ID, a.TIME_START, a.AL_TYPE, m.NODE, m.SYMBOL_1 as SYMBOL,</p>
+<p class="TextCode">l.NAME_0 as NODENAME from</p>
+<p class="TextCode">AL_PENDING a, AL_MESSAGE_ARCHIVE m, L_NODES l</p>
+<p class="TextCode">where</p>
+<p class="TextCode">a.TIME_END is NULL and</p>
+<p class="TextCode">a.AL_TYPE in(11, 12) and</p>
+<p class="TextCode">m.ID = a.MESSAGE and</p>
+<p class="TextCode">l.ID = m.NODE</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Der Select muss folgende Spalten liefern:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">ID</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">TIME_START</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">AL_TYPE</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">NODE</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">SYMBOL</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">NODENAME</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Sofern eine "neue" Meldung gekommen wird, wird an alle Clients für die die Gruppe der Meldung parametriert ist, ein Telegramm zum Abspielen einer WAV-Datei gesendet.</p>
+<p class="BodyText">Bei Änderung am Meldungsstatus (Meldung kommt / geht) werden die zugehörigen Statusvariablen in der Datenbank aktualisiert. Dies erfolgt durch Aufrufe der Datenbankprozeduren gw_val_num_in bzw. gw_val_str_in.</p>
+<h2><a name="Selektion_von_Schaltbefehlen" id="Selektion_von_Schaltbefehlen"></a>Selektion von Schaltbefehlen</h2>
+<p class="BodyText">Um beispielsweise Anzeigen einer Montagelinie automatisch starten und herunterfahren zu können werden Schaltbefehle der Tabelle P_OUT_VALUES zyklisch (10 Sekunden Raster) mit folgendem SQL Statement selektiert:</p>
+<p class="TextCode">select ID, VALUE_SYMBOL, VALUE_BOOL from</p>
+<p class="TextCode">P_OUT_VALUES</p>
+<p class="TextCode">where</p>
+<p class="TextCode">PROJECT_ID = <b>&lt;PID&gt;</b> and</p>
+<p class="TextCode">VALUE_FORMAT = 2 and</p>
+<p class="TextCode">TIME_STARTED &gt;= TO_DATE('<b>&lt;TS&gt;</b>', 'DD.MM.YYYY HH24:MI:SS') and</p>
+<p class="TextCode">TIME_STARTED &lt;= SYSDATE and</p>
+<p class="TextCode">VALUE_SYMBOL like '%.PRODSTATUS'</p>
+<p class="TextCode">order by TIME_STARTED</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Der Platzhalter &lt;PID&gt; wird durch die parametrierte ProjectId ersetzt.</p>
+<p class="BodyText">Der Platzhalter &lt;TS&gt; wird durch die Zeit des Programmstarts ersetzt.</p>
+<p class="BodyText">Sofern die Abfrage einen oder mehrere Datensätze liefert und der erste Teil des jeweiligen Variablensymbols mit dem Namen einer Montagelinie übereinstimmt, wird das entsprechende Skript zum Starten (VALUE_BOOL = 1) bzw. zum Herunterfahren (VALUE_BOOL = 0) der Anzeigen aufgerufen. Anschließend wird für jeden Datensatz die Datenbankprozedur gw_val_transmitted aufgerufen.</p>
+</body>
+</html>

@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+  <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+  <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+  <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+  <title data-condition="Others:Deutsch">Bindings</title>
+  <link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bindings">
+        <span>Bindings</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Others:Deutsch">Referenz: Datasources, Bindings und Actions</h1>
+  <h2 data-condition="Others:Deutsch">Bindings</h2>
+  <h2 data-condition="Others:Deutsch"><a id="Datasources"></a>Datasources</h2>
+  <h4 data-condition="Others:Deutsch"><a id="Variable"></a>Variable</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert und zusätzliche Attribute einer Legato-Variablen auf Serverseite.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">&quot;</span>var&quot;: {</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">&quot;source&quot;: &quot;var&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">&quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">&quot;sym&quot;: &quot;varSym&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Durch Referenzieren eines Datenobjekts wird der Wert der Variablen zurückgegeben. Das Ergebnisobjekt enthält außerdem den Zeitpunkt des letzten Updates der Variablen, zugänglich gemacht durch Referenzieren der Eigenschaft lastUpdate über die Datenreferenz.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Beispiel:</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;someVar&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: &quot;var&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: &quot;examples.n1&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;path&quot;: &quot;lastUpdate&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;format&quot;:&quot;datems YYYY-MM-DD HH:mm:ss&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p data-condition="Others:Deutsch">Für fortgeschrittenere Anwendungsfälle (z. B. Kalkulation der Zeitspanne seit der letzten Änderung an der Variable) ermöglicht die Eigenschaft <span style="font-style: italic;">updateTime</span> den Zugriff auf ein Datums-/Zeitobjekt, das die Eigenschaften unterstützt.</p>
+  <p data-condition="Others:Deutsch">• <span style="font-style: italic;">unix</span>: Sekunden seit 1970</p>
+  <p data-condition="Others:Deutsch">• <span style="font-style: italic;">milliseconds</span>: Millisekunden seit 1970</p>
+  <p data-condition="Others:Deutsch">• <span style="font-style: italic;">dateTime</span>: Datum-/Zeitstring, der die aktuelle Einstellung verwendet</p>
+  <p data-condition="Others:Deutsch">• <span style="font-style: italic;">date</span>: Datumstring, der die aktuelle Einstellung verwendet</p>
+  <p data-condition="Others:Deutsch">• <span style="font-style: italic;">time</span>: Zeitstring</p>
+  <p data-condition="Others:Deutsch">• <span style="font-style: italic;">timeMs</span>: Zeitstring einschließlich Millisekunden</p>
+  <p data-condition="Others:Deutsch">Beispiel (Zeitstempel des letzten Updates in Sekunden seit 1970 erhalten):</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;someVar&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: &quot;var&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: &quot;ADTest1.num&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;path&quot;: &quot;updateTime.unix&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="Code" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Sitzungsvariable"></a>Sitzungsvariable</h4>
+  <p class="Code" data-condition="Others:Deutsch">Auf eine Sitzungsvariable, mit Anwendungsbereich – eine Instanz einer Sitzungsvariable, kann in allen Zeichnungen innerhalb einer Anwendung zugegriffen werden.</p>
+  <p class="Code" data-condition="Others:Deutsch">Session var: Eine Variable auf die überall in einer App zugegriffen werden kann (da er zwischen allen Zeichnungen in der App ausgetauscht werden kann, wird der Wert während der Sitzung beibehalten).</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">sessionvar</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;sym&quot;: &quot;xyz&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Lokale_Variable"></a>Lokale Variable</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Ähnlich zu einer Sitzungsvariable, aber mit dem Umfang einer Zeichnung.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">localvar</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;sym&quot;: &quot;xxx&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Attribute"></a>Attribute</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Referenziert ein Symbolattribut.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">attribute</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;sym&quot;: &quot;xyz&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Alarm"></a>Alarm</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Alarm: Alarmzustand.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">alarm</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;conSym&quot;: &quot;con&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;extCode&quot;: -6</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Knotenstatus"></a>Knotenstatus</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Stellt den wichtigsten, aktiven Alarm eines Knotens zur Verfügung.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;nodestate&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;node&quot;: 116</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Das Ergebnis ist ein Objekt mit den folgenden Eigenschaften, die den Alarm beschreiben:</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• text</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• class</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• type</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• timestart</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• prio</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• alarmNode</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• state</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• color</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• fontColor</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• backgroundColor</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• timestartFormatted</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Berechtigung"></a>Berechtigung</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Ermöglicht den Zugriff auf Berechtigungen und gibt einen boolischen Wert true zurück, wenn der aktuelle Nutzer die Berechtigung zur Durchführung mindestens einer bestimmten Aktion hat.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">permission</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;actions&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      &quot;PV_SET_VALUE&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="TextCode" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"><img alt="" border="0" src="../../assets/images/02_Hinweis_de.jpg" style="border: none;"/></p>
+  <p class="TextkörperHinweis" data-condition="Others:Deutsch">Es können ausschließlich knotenbezogene Aktionen genutzt werden. Die Berechtigungen werden auf den logischen Strukturknoten geprüft, zu dem das HMI-Projekt gehört.</p>
+  <p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Client"></a>Client</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Stellt die bestimmte Eigenschaft des aktuellen HMI-Klienten zur Verfügung (Stationinformation).</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">client</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;property&quot;: &quot;host_name&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"><img alt="" border="0" src="../../assets/images/02_Hinweis_de.jpg" style="border: none;"/></p>
+  <p class="TextkörperHinweis" data-condition="Others:Deutsch">Klienteninformation ist nur verfügbar, wenn die HMI-Anwendung als zugeordnete Station gestartet wird.</p>
+  <p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Calculation_Function"></a>Calculation/Function</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Stellt einen Wert zur Verfügung, der von einer bestimmten Funktion berechnet wird.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;name&quot;: &quot;<span style="font-weight: bold;">sum</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="TextCode" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Formel"></a>Formel</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Formel: Der Wert wird durch eine Formel berechnet.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;source&quot;: &quot;<span style="font-weight: bold;">formula</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;formula&quot;: &quot;SUM(1,1)&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Skript"></a>Skript</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Stellt das Ergebnis eines serverseitigen Skripts zu Verfügung.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;<span style="font-weight: bold;">script</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;con_config&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;scriptParams&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;connectionSymbol&quot;: &quot;AD_Test1&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;interval&quot;: 30</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Diese Skripte müssen als Nutzerskripte in Sapient Engine implementiert werden (Pfad customscripts/visu). Indem der Name und die Parameter des Skripts festgelegt werden, kann das vorgegebene Skript während der Laufzeit im gewünschten Abfrageintervall zyklisch abgerufen werden. Der Standardwert für das Intervall ist 10 Sekunden und ist auch auf 10 Sekunden beschränkt – schnellere Aufrufe sind nicht möglich, um zu kurze Abfrageintervalle zu vermeiden, die die Leistung des Systems beeinträchtigen könnten. Wenn sich ein Eingabeparameter ändert, wird das Skript umgehend ausgeführt.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Dataref"></a>Dataref</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Um ein beliebiges Datenobjekt zu referenzieren, kann ein Dataref-Objekt verwendet werden. Die Struktur ist ähnlich zu der eines Datenobjekts:</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;<span style="font-weight: bold;">dataref</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;ref&quot;: &quot;lv&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;format&quot;: &quot;d0.##&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Datarefs unterstützen das optionale Eigenschaftsformat, das ein numerisches Format festlegt, um z. B. eine bestimmte Anzahl von Dezimalstellen für Fließwerte anzuzeigen. Eine Beschreibung von Datenformaten kann in der Sapient Systemhilfe gefunden werden, unter dem Suchbegriff „Display Formats“. Zusätzlich zu diesen Standardformaten können spezielle Formatstrings verwendet werden, um einen unix Zeitstempel in einem speziellen Datum-Zeit Format anzuzeigen (entweder Sekunden oder Millisekunden seit 1970).</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Beispiele:</p>
+  <p class="TextCode" data-condition="Others:Deutsch">• <span style="color: #008000;">&quot;datems YYYY-MM-DD HH:mm:ss&quot;</span></p>
+  <p class="BodyText" data-condition="Others:Deutsch">--&gt; z. B. 2021-11-29 17:23:55 (erwartet ms seit 1970)</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" data-condition="Others:Deutsch">• <span style="color: #008000;">&quot;date YYYY-MM-DD HH:mm:ss&quot;</span></p>
+  <p class="BodyText" data-condition="Others:Deutsch">--&gt; z. B. 2021-11-29 17:23:55 (erwartet sek seit 1970)</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" data-condition="Others:Deutsch">• <span style="color: #008000;">&quot;time&quot;</span></p>
+  <p class="BodyText" data-condition="Others:Deutsch">--&gt; z. B. 27:45:34 um eine Zeitspanne in Sekunden als einen Zeitstring anzuzeigen</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" data-condition="Others:Deutsch">• <span style="color: #008000;">&quot;timems&quot;</span></p>
+  <p class="BodyText" data-condition="Others:Deutsch">--&gt; ähnlich wie “time”, aber erwartet eine Zeitspanne in Millisekunden</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Tipp: Formatierung kann entweder verwendet werden, um ein Datenobjekt an die Eigenschaft eines Textes zu knüpfen, oder sie kann als Berechnungsparameter verwendet werden.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Wenn Datenobjekte mit einem Objektwert aufgerufen werden, kann auf einzelne Eigenschaften innerhalb des Objekt zugegriffen werden, indem eine Pfadeigenschaft festgelegt wird. Ein typischer Anwendungsfall sind Knotenzustände, die den aktuell wichtigsten Alarm eines logischen Strukturknotens darstellen.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;nodestate&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: &quot;nodestate&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;node&quot;: 5</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;nodestate&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;path&quot;: &quot;text&quot;  access the property text of the node state object</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;defaultValue&quot;: &quot;&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="Berechnungen"></a>Berechnungen</h4>
+  <h5 data-condition="Others:Deutsch">Math</h5>
+  <h5 data-condition="Others:Deutsch">Add/Sum</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Addiert Werte.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">sum</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Substract</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Substrahiert Werte.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">sub</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Multiply</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Multipliziert Werte.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">mul</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Divide</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Dividiert Werte.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">div</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Truncate</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Kürzt einen Wert (entfernt die Dezimalstellen).</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;function&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"> &quot;name&quot;: &quot;<b style="mso-bidi-font-weight: normal;">trunc</b>&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;input&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;dataref&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;" xml:lang="EN-US">                   </span> &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">               </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">           </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">       </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">   </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="Code" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Round</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Rundet einen Wert auf eine bestimmte Genauigkeit.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">round</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;digits&quot;: 2,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;input&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Map</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Map</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Ordnet Werte den entsprechenden Ausgangswerten zu.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;defaultValue&quot;: &quot;blue&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;function&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"> &quot;name&quot;: &quot;<b style="mso-bidi-font-weight: normal;">map</b>&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;input&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">        </span><span lang="EN-US" xml:lang="EN-US"> </span><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US">&quot;source&quot;: &quot;dataref&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;ref&quot;: &quot;someVar&quot;</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;map&quot;: [</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> [</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> 2,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;red&quot;</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;" xml:lang="EN-US">               </span> ],</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">               </span> [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">                   </span> 4,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">                   </span> &quot;green&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">               </span> ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">           </span> ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">       </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">   </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p data-condition="Others:Deutsch">ְ  </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Ausgaben</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText"><span style="font-weight: bold; color: #ff0000;">rot</span>, wenn der Wert gleich 1 it</p>
+    </li>
+    <li>
+      <p class="BodyText"><span style="font-weight: bold; color: #008000;">grün</span>, wenn der Wert gleich 4 ist</p>
+    </li>
+    <li>
+      <p class="BodyText">der Standardwert <span style="font-weight: bold; 
+													 color: #0000ff;">blau</span> für jeden anderen Wert.</p>
+    </li>
+  </ul>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Rangemap</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Ordnet einem Ausgangswert einen Werteereich zu.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;defaultValue&quot;: &quot;blue&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">rangemap</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;input&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;map&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    20,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;green&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                ],</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    180,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;yellow&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                ],</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    500,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;red&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Ausgaben</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><i style="mso-bidi-font-style: normal;"><span style="mso-fareast-language: DE; font-style: normal; font-weight: bold; 
+	 color: #008000;">grün</span></i> <span style="mso-fareast-language: DE;">für Werte bis einschließlich 20</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><i style="mso-bidi-font-style: normal;"><span style="mso-fareast-language: DE; font-weight: bold; font-style: normal; 
+	 background-color: #eaea00;">gelb</span></i> <span style="mso-fareast-language: DE;">für Werte bis 180</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; mso-list: l0 level1 lfo1; 
+			 text-indent: -18.0pt;"><i style="mso-bidi-font-style: normal;"><span style="mso-fareast-language: DE; font-weight: bold; font-style: normal; 
+	 color: #ff0000;">rot</span></i> <span style="mso-fareast-language: DE;">für Werte bis 500</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span style="mso-fareast-language: DE;">der Standardwert <i style="mso-bidi-font-style: normal; color: #0000ff; 
+					 font-weight: bold; font-style: normal;">blau</i> für Werte über 500</span></p>
+    </li>
+  </ul>
+  <h5 data-condition="Others:Deutsch">Bitmap</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Ordnet einzelne Bits des Eingabewerts den jeweiligen Ausgabewerten zu. Die Zählung einzelner Bits beginnt bei 0.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;defaultValue&quot;: &quot;blue&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">bitmap</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;input&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;map&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    0,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;green&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                ],</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;red&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Ausgaben</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><i style="mso-bidi-font-style: normal;"><span style="mso-fareast-language: DE; font-style: normal; color: #008000; 
+	 font-weight: bold;">grün</span></i> <span style="mso-fareast-language: DE;">wenn das erste Bit des Eingabewerts gesetzt ist (z. B. Wert 1)</span></p>
+    </li>
+    <li style="font-style: normal;">
+      <p class="MsoBodyText" style="margin-left: 36.0pt; 
+										 text-indent: -18.0pt; mso-list: l0 level1 lfo1; 
+										 font-style: normal;"><i style="mso-bidi-font-style: normal;"><span style="mso-fareast-language: DE; font-style: normal; color: #ff0000; 
+	 font-weight: bold;">rot</span></i> <span style="mso-fareast-language: DE;">wenn das zweite Bit des Eingabewerts gesetzt ist (z. B. Wert 2)</span></p>
+    </li>
+    <li style="font-style: normal;">
+      <p class="MsoBodyText" style="margin-left: 36.0pt; 
+										 text-indent: -18.0pt; mso-list: l0 level1 lfo1; 
+										 font-style: normal;"><i style="mso-bidi-font-style: normal;"><span style="mso-fareast-language: DE; font-style: normal; color: #008000; 
+	 font-weight: bold;">grün</span></i> <span style="mso-fareast-language: DE;">für den Wert 3 – sowohl Bit 0 als auch 1 sind gesetzt, sodass der erste Treffer der Map gewinnt</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span style="mso-fareast-language: DE;">der Standardwert <i style="mso-bidi-font-style: normal; color: #0000ff; 
+					 font-style: normal; font-weight: bold;">blue</i>, wenn die Bits 0 und 1 nicht gesetzt sind (z. B. der Wert 4)</span></p>
+    </li>
+  </ul>
+  <h5 data-condition="Others:Deutsch">Strings</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Format</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Ersetzt den Platzhalter-Wert ${value} durch den Eingabewert.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">format</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;format&quot;: &quot;Here --&gt; ${value} the value gets inserted&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Includes</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Gibt <span style="font-weight: bold;">wahr</span> zurück, wenn der Eingabewert den Suchstring enthält. Die Eigenschaft ignoreCase definiert ob die Suche zwischen Groß- und Kleinschreibung unterscheidet oder nicht.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">strIncludes</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;searchString&quot;: &quot;abc&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;ignoreCase&quot;: false</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">StartsWith</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Gibt <span style="font-weight: bold;">wahr</span> zurück, wenn der Wert mit dem searchString beginnt. Die Eigenschaft ignoreCase definiert ob die Suche zwischen Groß- und Kleinschreibung unterscheidet oder nicht.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">strStartsWith</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;searchString&quot;: &quot;abc&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;ignoreCase&quot;: false</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">EndsWith</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Gibt wahr zurück, wenn der Wert mit dem searchString endet. Die Eigenschaft ignoreCase definiert ob die Suche zwischen Groß- und Kleinschreibung unterscheidet oder nicht.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">strEndsWith</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;searchString&quot;: &quot;abc&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;ignoreCase&quot;: false</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Concat</h5>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;concat&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;AAA&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;BBB&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Reihe</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Die Reihenfunktionen prüfen ob some / any / every / not every der Eingabevariablen logisch wahr sind. Eingabewerte können Zahlen sein – Werte über 0 werden als logisch wahr interpretiert. Die Funktion gibt ein boolisches Ergebnis zurück. Es können optional ein Ergebnis und ein Standardwert festgelegt werden, die dann für „wahr“ oder „falsch“ Fälle zurückgegeben werden.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Das Binding sieht genau gleich aus, ändern Sie nur den Funktionsnamen in</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• <span style="font-weight: bold;">some</span>: Einige Eingabewerte sind logisch wahr.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• <span style="font-weight: bold;">any</span>: Jeder beliebige Eingabewert ist logisch wahr.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• <span style="font-weight: bold;">Every</span>: Jeder Eingabewert ist logisch wahr.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">• <span style="font-weight: bold;">not</span> <span style="font-weight: bold;">every</span>: Nicht jeder Eingabewert ist logisch wahr.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;some&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;v1&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;v2&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;v3&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ],</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;result&quot;: &quot;some&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;defaultValue&quot;: &quot;none&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Logisch</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Wechsel</p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Gibt einen speziellen Wert zurück für die erste konditionelle Variable einer Liste, die logisch wahr ist (boolisch oder eine Zahl über 0).</p>
+  <p class="TextCode" style="mso-fareast-language: DE; color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;switch&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;result&quot;: &quot;#FFFF00&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;cases&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;input&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;ref&quot;: &quot;someVar1&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;result&quot;: &quot;#FF0000&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;input&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;ref&quot;: &quot;someVar2&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;result&quot;: &quot;#FFFF00&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;input&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;ref&quot;: &quot;someVar3&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;result&quot;: &quot;#FFFF00&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;defaultValue&quot;: &quot;#DAE8FC&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Bitwise Or, And, XOR, NOT</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Für bitweise Verfahren (or, and, xor, not) ist die Binding-Syntax äquivalent (ändern Sie einfach den Namen der jeweiligen Funktion). Der optionale Parameter kann verwendet werden, um die Anwendung „signed“ auszuführen (interpretieren sie das Bitfeld als vorzeichenbehaftet – wenn das höchste Bit gesetzt ist (Bit 31), würde das in einem negativen Wert resultieren.)</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">bitor</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                4,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                8,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                16,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                32,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                64</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            ],</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;signed&quot;: false</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Bitweise Verschiebung links und rechts</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Die Funktionen <span style="font-weight: bold;">bitShiftL</span> und <span style="font-weight: bold;">bitShiftR</span> ermöglichen es, alle Bits nach links oder rechts zu schieben. Die optionale Eigenschaft <span style="font-weight: bold;">signed</span> spezifiziert, ob das Ergebnis mit oder ohne Vorzeichen interpretiert wird.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;<span style="font-weight: bold;">bitshiftl</span>&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;count&quot;: 1,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;signed&quot;: true</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Datum</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Numerischer Zeitstempel</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Gibt den aktuellen Zeitstempel als eine Zahl zurück. Setzt die Einheit der Eigenschaft auf ms oder s um zu spezifizieren, ob der Zeitstempel als Wert in Millisekunden oder Sekunden zurückgegeben wird. Der Wert repräsentiert die Millisekunden oder Sekunden zwischen 1. Januar 1970 00:00:00 UTC und dem aktuellen Datum.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;function&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"> &quot;name&quot;: &quot;<b style="mso-bidi-font-weight: normal;">currentDate</b>&quot;,</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;" xml:lang="EN-US">       </span> &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">           </span> &quot;unit&quot;: &quot;ms&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">       </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="mso-spacerun: yes;">   </span> }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Tipp: Die Formateigenschaft eines Textbindings kann verwendet werden, um Zeitstempel in einen Datum-Zeit-String zu formatieren.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Umschalten</h5>
+  <p class="BodyText" data-condition="Others:Deutsch">Das Ergebnis der Umschaltfunktion schaltet im 1-Sekunden-Intervall dynamisch zwischen zwei oder mehreren Werten um. Wenn der Auslösewert logisch wahr ist, ändert sich das Ergebnis dynamisch, ansonsten wird der defaultValue zurückgegeben – falsch falls nicht explizit spezifiziert. Die Funktion kann verwendet werden, um Elemente blinken zu lassen, indem das Ergebnis an die Sichtbarkeit eines Elements gebunden wird, oder um einen Stil wie die Füllfarbe dynamisch zu ändern.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Schalten Sie einfach zwischen falsch --&gt; wahr --&gt; falsch --&gt; wahr … um.</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;name&quot;: &quot;toggle&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;trigger&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Zwischen mehreren Werten wechseln …</p>
+  <p class="TextCode" style="mso-fareast-language: DE; color: #008000;" data-condition="Others:Deutsch">{</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;source&quot;: &quot;function&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;name&quot;: &quot;toggle&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;trigger&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: &quot;state&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;values&quot;: [</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;#FFFF00&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;#00FFFF&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;#FF00FF&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                ]</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;defaultValue&quot;: &quot;none&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+  <h5 data-condition="Others:Deutsch">Zusätzliche Parameter</h5>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Es gibt zusätzliche Parameter, um eine individuelle Zeitspanne zu definieren:</p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; mso-fareast-language: DE; font-weight: bold;">XL (Default) - 1 Sekunde</span></p>
+  <p style="font-weight: bold;" data-condition="Others:Deutsch">L - 0.5 Sekunden</p>
+  <p style="font-weight: bold;" data-condition="Others:Deutsch">M - 0.2 Sekunden</p>
+  <p style="font-weight: bold;" data-condition="Others:Deutsch">S - 0.1 Sekunden</p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Beispiel (3 von 4 möglichen Parametern):</p>
+  <p class="BodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" style="mso-fareast-language: DE; mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><img alt="" border="0" src="../../assets/images/Cyclic_Execution_actions_designer.png" style="border: none;"/></p>
+  <p class="BodyText" style="mso-fareast-language: DE; mso-ansi-language: EN-US;" data-condition="Others:Deutsch"> </p>
+  <table border="1" cellspacing="0" style="border-collapse: separate; border-collapse: separate;" width="100%" data-condition="Others:Deutsch">
+    <colgroup>
+      <col style="width: 33.333%;"/>
+      <col style="width: 33.333%;"/>
+      <col style="width: 33.333%;"/>
+    </colgroup>
+    <tbody>
+      <tr style="height: 0px;">
+        <td>
+          <ul style="margin: 10px 0px 0px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; 
+				 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+				 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+				 orphans: 2; text-align: left; text-indent: 0px; text-transform: none; 
+				 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; text-decoration-thickness: initial; 
+				 text-decoration-style: initial; text-decoration-color: initial;">
+            <li>
+              <p style="font-weight: bold;">Example</p>
+            </li>
+            <li>
+              <p style="font-weight: bold;">S - 0.1 second</p>
+            </li>
+          </ul>
+          <p style="font-weight: bold;"> </p>
+          <p style="font-weight: bold;"> </p>
+          <p class="TextCode" style="font-size: 14px; font-variant-ligatures: normal; 
+			 font-variant-caps: normal; font-weight: bold; background-color: #ffffff; 
+			 color: #008000;"><span style="font-size: 14px; font-variant-ligatures: normal; 
+									 font-variant-caps: normal; font-weight: bold; 
+									 color: #008000; background-color: #ffffff;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+		 text-decoration-thickness: initial; text-decoration-style: initial; 
+		 text-decoration-color: initial;">{</span></span></p>
+          <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Wert&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;var&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;ADTest1.bool&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        },</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Wert2&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;var&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;ADTest1.num&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        },</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Color&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;name&quot;: &quot;bitmap&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;input&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;ref&quot;: &quot;Wert2&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        }</p>
+          <p class="TextCode" style="color: #008000;">                    },</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;map&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            0,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            1,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            4,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            5,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            6,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            7,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ]</p>
+          <p class="TextCode" style="color: #008000;">                    ]</p>
+          <p class="TextCode" style="color: #008000;">                }</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        }</p>
+          <p class="TextCode" style="color: #008000;">    },</p>
+          <p class="TextCode" style="color: #008000;">    &quot;bindings&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">        &quot;text&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;value&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;name&quot;: &quot;toggle&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;trigger&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;name&quot;: &quot;bitmap&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;input&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                        &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                        &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                            &quot;ref&quot;: &quot;Wert&quot;</p>
+          <p class="TextCode" style="color: #008000;">                                        }</p>
+          <p class="TextCode" style="color: #008000;">                                    },</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;map&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            0,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ],</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            1,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ],</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            4,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ],</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            5,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ],</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            6,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ],</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            7,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ]</p>
+          <p class="TextCode" style="color: #008000;">                                    ]</p>
+          <p class="TextCode" style="color: #008000;">                                }</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        },</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;values&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;#3C3C3C&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;ref&quot;: &quot;Color&quot;</p>
+          <p class="TextCode" style="color: #008000;">                                }</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;interval&quot;: &quot;S&quot;</p>
+          <p class="TextCode" style="color: #008000;">                    }</p>
+          <p class="TextCode" style="color: #008000;">                },</p>
+          <p class="TextCode" style="color: #008000;">                &quot;defaultValue&quot;: &quot;#00ff00&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        }</p>
+          <p class="TextCode" style="color: #008000;">    }</p>
+          <p class="TextCode" style="color: #008000;">}</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;">Example</p>
+          <ul style="margin: 10px 0px 0px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; 
+				 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+				 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; text-decoration-thickness: initial; 
+				 text-decoration-style: initial; text-decoration-color: initial;">
+            <li>
+              <p style="font-weight: bold;"><span style="font-weight: bold;">L - 0.5 second</span></p>
+            </li>
+            <li>
+              <p> </p>
+            </li>
+          </ul>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"><span style="color: #008000;">{</span></p>
+          <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Wert&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;var&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;ADTest1.bool&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        },</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Color&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;name&quot;: &quot;bitmap&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;input&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;ref&quot;: &quot;Wert&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        }</p>
+          <p class="TextCode" style="color: #008000;">                    },</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;map&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            0,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(0,153,204)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            1,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,255,255)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ]</p>
+          <p class="TextCode" style="color: #008000;">                    ]</p>
+          <p class="TextCode" style="color: #008000;">                }</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        }</p>
+          <p class="TextCode" style="color: #008000;">    },</p>
+          <p class="TextCode" style="color: #008000;">    &quot;bindings&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">        &quot;text&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;value&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;name&quot;: &quot;toggle&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;trigger&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;name&quot;: &quot;bitmap&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;input&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                        &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                        &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                            &quot;ref&quot;: &quot;Wert&quot;</p>
+          <p class="TextCode" style="color: #008000;">                                        }</p>
+          <p class="TextCode" style="color: #008000;">                                    },</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;map&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            0,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ],</p>
+          <p class="TextCode" style="color: #008000;">                                        [</p>
+          <p class="TextCode" style="color: #008000;">                                            1,</p>
+          <p class="TextCode" style="color: #008000;">                                            1</p>
+          <p class="TextCode" style="color: #008000;">                                        ]</p>
+          <p class="TextCode" style="color: #008000;">                                    ]</p>
+          <p class="TextCode" style="color: #008000;">                                }</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        },</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;values&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;#3C3C3C&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;ref&quot;: &quot;Color&quot;</p>
+          <p class="TextCode" style="color: #008000;">                                }</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;interval&quot;: &quot;L&quot;</p>
+          <p class="TextCode" style="color: #008000;">                    }</p>
+          <p class="TextCode" style="color: #008000;">                },</p>
+          <p class="TextCode" style="color: #008000;">                &quot;defaultValue&quot;: &quot;#00ff00&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        }</p>
+          <p class="TextCode" style="color: #008000;">    }</p>
+          <p class="TextCode" style="color: #008000;">}</p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+        </td>
+        <td>
+          <p style="font-weight: bold;">Example</p>
+          <ul style="margin: 10px 0px 0px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; 
+				 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+				 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; text-decoration-thickness: initial; 
+				 text-decoration-style: initial; text-decoration-color: initial;">
+            <li>
+              <p style="font-weight: bold;">XL (Default) - 1 second</p>
+            </li>
+            <li>
+              <p> </p>
+            </li>
+          </ul>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"><span style="color: #008000;">{</span></p>
+          <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Wert&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;var&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;K7U1G13-----BS1---KFU1.STATUS018&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        },</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Wert2&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;var&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;K7U1G13-----BS1---KFU1.STATUS018&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        },</p>
+          <p class="TextCode" style="color: #008000;">        &quot;Color&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;name&quot;: &quot;bitmap&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;input&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;name&quot;: &quot;sum&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;values&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                                    1,</p>
+          <p class="TextCode" style="color: #008000;">                                    0</p>
+          <p class="TextCode" style="color: #008000;">                                ]</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        }</p>
+          <p class="TextCode" style="color: #008000;">                    },</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;map&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            0,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,255,255)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ],</p>
+          <p class="TextCode" style="color: #008000;">                        [</p>
+          <p class="TextCode" style="color: #008000;">                            1,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;rgb(255,255,255)&quot;</p>
+          <p class="TextCode" style="color: #008000;">                        ]</p>
+          <p class="TextCode" style="color: #008000;">                    ]</p>
+          <p class="TextCode" style="color: #008000;">                }</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        }</p>
+          <p class="TextCode" style="color: #008000;">    },</p>
+          <p class="TextCode" style="color: #008000;">    &quot;bindings&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">        &quot;text&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">            &quot;value&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;name&quot;: &quot;toggle&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                    &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;trigger&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;source&quot;: &quot;function&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;name&quot;: &quot;sum&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;values&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                                        1,</p>
+          <p class="TextCode" style="color: #008000;">                                        0</p>
+          <p class="TextCode" style="color: #008000;">                                    ]</p>
+          <p class="TextCode" style="color: #008000;">                                }</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        },</p>
+          <p class="TextCode" style="color: #008000;">                        &quot;values&quot;: [</p>
+          <p class="TextCode" style="color: #008000;">                            &quot;#3C3C3C&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                            {</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;source&quot;: &quot;dataref&quot;,</p>
+          <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+          <p class="TextCode" style="color: #008000;">                                    &quot;ref&quot;: &quot;Color&quot;</p>
+          <p class="TextCode" style="color: #008000;">                                }</p>
+          <p class="TextCode" style="color: #008000;">                            }</p>
+          <p class="TextCode" style="color: #008000;">                        ]</p>
+          <p class="TextCode" style="color: #008000;">                    }</p>
+          <p class="TextCode" style="color: #008000;">                },</p>
+          <p class="TextCode" style="color: #008000;">                &quot;defaultValue&quot;: &quot;Should not happen&quot;</p>
+          <p class="TextCode" style="color: #008000;">            }</p>
+          <p class="TextCode" style="color: #008000;">        }</p>
+          <p class="TextCode" style="color: #008000;">    }</p>
+          <p class="TextCode" style="color: #008000;">}</p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+          <p class="TextCode" style="color: #008000;"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+  <h4 data-condition="Others:Deutsch"><a id="HTTP_Post_an_lokalen_Server"></a>HTTP Post an lokalen Server</h4>
+  <p class="BodyText" data-condition="Others:Deutsch">Mit <span style="font-weight: bold;">HTTP Post </span> an einen lokalen Server ist der Aufruf eines externen Programms möglich.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Die URL hierzu ist</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" style="font-size: 12pt;" data-condition="Others:Deutsch">https://localhost:4748/run/ ...... { &quot;ExeFileLocation&quot;: &quot;C: Program Files\\XYZ app.exe&quot;, &quot;RunAsAdmin&quot;: &quot;0&quot; }</p>
+  <p class="BodyText" style="font-weight: bold;" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Der Aufruf eines externen Programms ist nur lokal (-&gt; localhost) möglich.</p>
+  <p class="BodyText" style="font-weight: normal;" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" style="font-weight: normal;" data-condition="Others:Deutsch">Beachten Sie:</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">Die Ergebnisse des Aufrufs durch das externe Programm müssen nicht an die HMI-Schnittstelle zurückgesendet werden.</p>
+    </li>
+    <li>
+      <p class="BodyText">Das Aktivieren/Deaktivieren von Aufrufen ist möglich (z. B. über Berechtigungen, die als &quot;als dedizierte Station ausgeführt&quot; werden).</p>
+    </li>
+    <li>
+      <p class="BodyText">Es wird sichergestellt, dass immer nur ein Post ausgeführt wird.</p>
+    </li>
+    <li>
+      <p class="BodyText">Der Option Post Body wird als Json oder Form/Url kodiert.</p>
+    </li>
+  </ul>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Es gibt zwei Visualisierungsaktionen hierzu: <a href="Event_Bindings.htm#httpPost">httpPost</a> und <a href="Event_Bindings.htm#cancelCurrenHttpRequest">cancelCurrenHttpRequest</a><span style="font-weight: bold;">.</span></p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+</body></html>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Tomcat JAVA_OPTS Parameter List</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tomcat JAVA_OPTS Parameter List">
+        <span>Tomcat JAVA_OPTS Parameter List</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Tomcat JAVA_OPTS Parameter List</h1>
+<h2 data-condition="Others:Englisch"><a id="General"></a>General</h2>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">This page focuses on Tomcat running on a RHEL 
+ OS, 64-bit, Version 6.4 for single user and for single instance of Web 
+ application running under Tomcat. How and where the various options are 
+ configured will depend on your operating setup such as the network configuration 
+ and hardware platform characteristics, the operating system settings, 
+ Java virtual machine parameters, database tuning parameters, and finally 
+ the architecture of the Web application itself. The following are reasonable 
+ numbers to start with but if you have more memory increase these numbers.</p>
+<p class="BodyText" data-condition="Others:Englisch">You can set JAVA_OPTS in the already created /etc/init.d/tomcat 
+ file.</p>
+<h2 data-condition="Others:Englisch"><a id="Memory_Available_to_the_Java_JVM"></a>Memory Available to 
+ the Java JVM</h2>
+<p class="BodyText" data-condition="Others:Englisch">Increasing the memory available to the Java JVM can 
+ help TDS performance. Try to give your server as much memory as you can.</p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_OPTS=&quot;-Xmx 4096 m –Xms256m&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">export JAVA_OPTS</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">What the options mean:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">-Xmx sets the maximum amount of memory that can 
+ be allocated to the JVM heap; here it is being set to 4096 megabytes.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">-Xms sets the initial amount of memory allocated 
+ to the JVM heap; here it is being set to 256 megabytes.</p>
+<h2 data-condition="Others:Englisch"><a id="PermGen_Memory"></a>PermGen Memory</h2>
+<p class="BodyText" data-condition="Others:Englisch">If you start getting java.lang.OutOfMemoryError: PermGen 
+ space error messages. You may want to include a &quot;-XX:MaxPermSize&quot; 
+ option in your JAVA_OPTS.</p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_OPTS=&quot;-Xmx4096m -Xms256m -XX:MaxPermSize=512m&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">export JAVA_OPTS</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">What the option means:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">-XX:MaxPermSize set the maximum amount of memory 
+ that can be used for PermGen.</p>
+<h2 data-condition="Others:Englisch"><a id="If_Using_WMS__Tell_Graphics_Engine_There_is_No_Console"></a>If 
+ Using WMS, Tell Graphics Engine There is No Console</h2>
+<p class="BodyText" data-condition="Others:Englisch">An obscure bug concerning X servers and graphics rendering 
+ code such as SVG’s can cause WMS requests to fail or, in certain situations, 
+ cause Tomcat to crash. You may see error messages like the following:</p>
+<p class="TextCode" data-condition="Others:Englisch">&quot;java.lang.NoClassDefFoundError: Could not initialize 
+ class sun.awt.X11GraphicsEnvironment&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">To avoid this situation, the graphics code needs to 
+ be told that there is no graphics console available. This can be done 
+ by setting the java.awt.headless system property to true which can be 
+ done using JAVA_OPTS:</p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_OPTS=&quot;-Xmx1024m –Xms256m -XX:MaxPermSize=512m 
+ -Djava.awt.headless=true&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">export JAVA_OPTS</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">What the option means:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">-Djava.awt.headless=true sets the value of the 
+ java.awt.headless system property to true. Setting this system property 
+ to true prevent graphics rendering code from assuming that a graphics 
+ console exists.</p>
+<h2 data-condition="Others:Englisch"><a id="Concurrent_Low_Pause_Collector"></a>Concurrent Low Pause Collector</h2>
+<p class="BodyText" data-condition="Others:Englisch">The concurrent collector is used to <span class="ilad">collect</span> 
+ the tenured generation and does most of the collection concurrently with 
+ the execution of the application. The application is paused for short 
+ periods during the collection.</p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_OPTS=&quot;-XX:+UseConcMarkSweepGC&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">Export JAVA_OPTS</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">Finally the /etc/init.d/tomcat file should look like 
+ this:</p>
+<p class="TextCode" data-condition="Others:Englisch">#!/bin/bash  </p>
+<p class="TextCode" data-condition="Others:Englisch"># description: Tomcat Start Stop Restart  </p>
+<p class="TextCode" data-condition="Others:Englisch"># processname: tomcat  </p>
+<p class="TextCode" data-condition="Others:Englisch"># chkconfig: 234 20 80  </p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_HOME=/usr/java/jdk1.7.0_45  </p>
+<p class="TextCode" data-condition="Others:Englisch">export JAVA_HOME  </p>
+<p class="TextCode" data-condition="Others:Englisch">PATH=$JAVA_HOME/bin:$PATH  </p>
+<p class="TextCode" data-condition="Others:Englisch">export PATH  </p>
+<p class="TextCode" data-condition="Others:Englisch">CATALINA_HOME=/usr/share/apache-tomcat-7.0.42/  </p>
+<p class="TextCode" data-condition="Others:Englisch">  </p>
+<p class="TextCode" data-condition="Others:Englisch">case $1 in  </p>
+<p class="TextCode" data-condition="Others:Englisch">start)  </p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/startup.sh  </p>
+<p class="TextCode" data-condition="Others:Englisch">;;   </p>
+<p class="TextCode" data-condition="Others:Englisch">stop)     </p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/shutdown.sh  </p>
+<p class="TextCode" data-condition="Others:Englisch">;;   </p>
+<p class="TextCode" data-condition="Others:Englisch">restart)  </p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/shutdown.sh  </p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/startup.sh  </p>
+<p class="TextCode" data-condition="Others:Englisch">;;   </p>
+<p class="TextCode" data-condition="Others:Englisch">esac      </p>
+<p class="TextCode" data-condition="Others:Englisch">exit 0  </p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_OPTS=&quot;–Xmx1024m –Xms256m -XX:MaxPermSize=512m 
+ -Djava.awt.headless=true&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_OPTS=&quot;${JAVA_OPTS} -XX:+UseConcMarkSweepGC&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">export JAVA_OPTS</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+
+
+</body></html>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "4.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Dashboard des EpiK Reports</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dashboard des EpiK Reports">
+        <span>Dashboard des EpiK Reports</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Das Dashboard des EpiK Reports</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Auf dem Dashboard ist die Hauptseite des EpiK-Berichts. 
+ Für jede Berichtsseite gibt es ein eigenes Dashboard.</p>
+<h2 data-condition="Others:Deutsch">Production Flow Boardlet</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span style="font-weight: bold;">Production</span> 
+ <span style="font-weight: bold;">Flow</span> <span style="font-weight: bold;">Boardlet</span> 
+ (<span style="font-weight: bold;">Produktionsfluss</span>) zeigt die Knoten 
+ der Produktionslinie und ihre Puffer (eingehend und ausgehend) an.  Hierbei 
+ zeigen Puffer Informationen über die Zeit an, in der diese sich unter 
+ dem eingestellten Schwellenwert befanden (d.h. leer waren). Der Leerstand 
+ von Puffern wird für Schichten angezeigt, die in den ausgewählten Zeitrahmen 
+ für die jeweiligen Knoten fallen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Das<span style="font-weight: bold;"> Production Flow</span> 
+ Boardlet zeigt Folgendes an:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Eine &quot;Karte&quot; für jeden Knoten, der 
+	 als Knoten der Hauptleitung festgelegt ist und ein Unterknoten des 
+	 ausgewählten/gefilterten Knotens auf der Karte ist für max. 6 Pufferknoten, 
+	 der diesen Knoten von einer Nebenleitung speist.</p></li>
+	<li><p class="BodyText">Den Namen des Pufferknotens, den eingestellten 
+	 &quot;Leer&quot;-Schwellenwert und die Leerzeit dieses Puffers.</p></li>
+	<li><p class="BodyText">Ein Balkendiagramm, das zusätzlich eine grafische 
+	 Darstellung des Wertes der Leerzeit zeigt, um eine schnellere visuelle 
+	 Auswertung zu ermöglichen, wenn es keinen Pufferknoten zwischen dem 
+	 Knoten der Hauptleitung und dem Knoten der Nebenleitung gibt. </p></li>
+	<li><p class="BodyText">Den Knotennamen des Knotens der Hauptleitung.</p></li>
+	<li><p class="BodyText">Falls vorhanden, wird der Name für den Pufferknoten, 
+	 über den Teile von diesem Hauptlinienknoten zum nächsten Hauptlinienknoten 
+	 geleitet werden angezeigt.</p></li>
+	<li><p class="BodyText">Den Namen des Pufferknotens, den eingestellten 
+	 &quot;Leer&quot;-Schwellenwert und die Leerzeit dieses Puffers.<br/>
+	Falls dies nicht angezeigt werden kann, wird die Information angezeigt, 
+	 dass es keine Daten auf &quot;Pufferknotenebene&quot; gibt.</p></li>
+	<li><p class="BodyText">Den Pufferknoten der Nebenlinien mit der höchsten 
+	 &quot;Leerzeit&quot; sollte eine rote Hintergrundfarbe haben, um anzuzeigen, 
+	 dass er der schlechteste ist (größter Engpass).</p></li>
+	<li><p class="BodyText">Die Karten sind nach den zwischen diesen Knoten 
+	 modellierten Workflow-Beziehungen geordnet.</p></li>
+	<li><p class="BodyText">Die Leerzeiten der Puffer sollten entweder 
+	 für die ausgewählten Schichten angezeigt werden (z.B. realisiert durch 
+	 das Schichtpicker-Boardlet), oder wenn es eine Zeitrahmenauswahl für 
+	 alle produktiven Schichten gibt, die in den ausgewählten Zeitrahmen 
+	 fallen.</p></li>
+	<li><p class="BodyText">Falls es mehrere Schichten im Zeitrahmen gibt, 
+	 werden die leeren Zeiten addiert und ein Tooltip zeigt an, dass es 
+	 mehrere Schichten gibt, die in den Wert eingerechnet werden. Wenn 
+	 der ausgewählte Zeitrahmen keine ganze Schicht des betreffenden Knotens 
+	 abdeckt, wird eine Fehlermeldung und beim Hovern ein Tooltip angezeigt 
+	 , um die Situation zu erklären.</p></li>
+	<li><p class="BodyText">Die Balkendiagramme aller leeren Zeiten sollten 
+	 zueinander skaliert werden.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/Production_Flow.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Parameterisierungsinformationen:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Für Produktionslinienknoten sollte die erweiterte 
+	 Eigenschaft &quot;prod_line_symbol&quot; festgelegt sein.</p></li>
+	<li><p class="BodyText">Für Pufferknoten sollte die erweiterte Eigenschaft 
+	 &quot;buffer_type&quot; festgelegt sein.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch">Line Chart Boardlet</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das <span style="font-weight: bold;">Line Chart Boardlet</span> 
+ liefert einen Bericht, der die Knoten in der Hauptlinie einer Autolackiererei, 
+ die Puffer zwischen ihnen und die Zeit anzeigt, in der der Füllstand dieser 
+ Puffer unter einem bestimmten Schwellenwert lag (d.h. als leer angesehen 
+ wurde). Hierdurch lassen sich Engpässe in der Produktion leichter erkennen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Line Chart Boardlet gilt:<br/>
+<br/>
+</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Das Line Chart Boardlet besteht aus gemischten 
+	 Balken-/Liniendiagrammen. In diesem Boardlet gibt es einen Eintrag 
+	 für jeden der Knoten der Hauptlinie auf der x-Achse.</p></li>
+	<li><p class="BodyText">Die Daten, die für jeden Eintrag angezeigt 
+	 werden, stammen von dem jeweiligen Futterpufferknoten mit der höchsten 
+	 Leerzeit.</p></li>
+	<li><p class="BodyText">Das Liniendiagramm zeigt die Zeit an.</p></li>
+	<li><p class="BodyText">Das Balkendiagramm zeigt den Kopplungsfaktor 
+	 an.</p></li>
+	<li><p class="BodyText">Der Kopplungsfaktor wird wie folgt berechnet: 
+	 <br/>
+	1. Von der Leerzeit des Vorgängers wird die Leerzeit des Knotens abgezogen.<br/>
+	2. Falls dieser positiv ist, erscheint der Balken grün. Wenn dieser 
+	 negativ ist, erscheint der Balken rot.<br/>
+	3. Die Einträge sind mit dem Namen des Hauptknotens und dem entsprechenden 
+	 Knoten der Nebenleitung (Puffer) beschriftet.<br/>
+	<br/>
+	</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/Line_Chart_Boardlet.png" alt="" style="border: none;" border="0"/></p>
+
+
+</body></html>

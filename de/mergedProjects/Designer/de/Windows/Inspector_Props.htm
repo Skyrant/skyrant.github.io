@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "4.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Inspector / Properties</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+ <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Inspector / Properties" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inspector / Properties">
+        <span>Inspector / Properties</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Inspector / Properties</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Fenster Properties bietet eine Möglichkeit, für 
+ das aktuell selektierte Objekt Einstellungen vorzunehmen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist kein Objekt selektiert, werden die Properties der 
+ Grafik angezeigt und können geändert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind mehrere Objekte selektiert, werden nur gemeinsam 
+ genutzte Attribute in den Properties angezeigt. Attribute, die nur von 
+ einem Element genutzt werden können, sind in dieser Liste nicht aufgeführt. 
+ Vorgenommene Änderungen werden an alle selektierten Objekte weitergereicht.</p>
+<h3 data-condition="Others:Deutsch"><a id="Property" data-indexterm="Property"></a><a id="Properties"></a>Properties</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Karteireiter listet die für ein Element verfügbaren 
+ Attribute auf. Diese können direkt in der Liste bearbeitet werden. Der 
+ Name der Attribute richtet sich nach der w3c-Spezifikation von SVG und 
+ Einträge sind entsprechend den Wertvorgaben zu treffen. Eine Beschreibung 
+ der Attribute ist unter &quot;Allgemein/Das SVG-Format/Attribute&quot; ersichtlich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">IDs werden beim Zeichnen von Elementen automatisch 
+ generiert. Diese Bezeichnung kann jedoch manuell beeinflusst werden. Dabei 
+ ist zu beachten, dass eine ID nur einmal in einem SVG-Dokument vorkommen 
+ darf. Das Programm vermeidet doppelte Einträge automatisch durch Anhängen 
+ von&quot;_1&quot;. Ist die Option &quot;Ensure element IDs conforming to the XML 
+ standard&quot; in den &quot;Preferences&quot; aktiviert, so wird die ID 
+ entsprechend geändert, wenn ein ungültiges Zeichen eingegeben wird (z.B. 
+ Prüfung <span style="font-family: Wingdings;">à</span> Pr_fung). Es erscheint 
+ ein Logeintrag mit einem entsprechenden Hinweis. Erlaubt sind &#39;A&#39;..&#39;Z&#39;, 
+ &#39;a&#39;..&#39;z&#39;, &#39;0&#39;..&#39;9&#39;, &#39;_&#39;, &#39;-&#39;, &#39;.&#39;. Nicht erlaubt sind Umlaute, Sonderzeichen, 
+ Leerzeichen. Außerdem darf die ID nicht mit einer Zahl beginnen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Attribut &quot;Display&quot; steuert die Sichtbarkeit eines 
+ Elementes im späteren Dokument. Im Designer bleiben Elemente, die auf 
+ nicht sichtbar geschaltet wurden, weiterhin sichtbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Farbattribute wie &quot;Fill&quot; und &quot;Stroke&quot; werden standardmäßig 
+ in RGB geschrieben. Es ist ebenfalls möglich, für eine Farbe das entsprechende 
+ Farbwort bzw. den hexadezimalen Wert einzugeben. Der GefasoftDesigner 
+ setzt, sofern vorhanden, diesen Wert in das RGB-Format um.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Da nicht alle möglichen Attribute des SVG Standards 
+ unterstützt werden, gibt es zu jedem Objekt das Style-Attribut. Dort können 
+ dem GefasoftDesigner unbekannte Attribute geschrieben werden. Diese werden 
+ im Designer ignoriert, in der Preview bzw. IE aber umgesetzt. Attribute, 
+ die interpretiert werden können (z.B. fill) werden automatisch umgesetzt 
+ und aus dem Style entfernt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es können auch Style-Attribute für das Root-Element 
+ definiert werden. Wird hier eine Hintergrundfarbe festgelegt (background: 
+ rgb(00,128,00)), so wird der Hintergrund der Zeichenfläche entsprechend 
+ eingefärbt. Es werden hierfür nur Farbangaben in der Form &quot;rgb(00,128,00)&quot; 
+ berücksichtigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Sonderfall ist mit S<i>trokeDashArray</i> implementiert. 
+ Dieses Attribut ermöglicht eine Strichelung von Linien. Diese Eigenschaft 
+ wird als Standardattribut angeführt, kann jedoch vom Designer nicht korrekt 
+ interpretiert werden. Der Designer stellt bei einer Eingabe eine Linie 
+ gestrichelt dar, wobei diese Strichelung nicht der tatsächlichen Darstellung 
+ in SVG entspricht, sondern nur zur Informationen dient.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Attribut &quot;Transform&quot; sind zurzeit nur Matrix-Transformationen 
+ erlaubt. Sind andere Transformationen gewünscht, müssen diese direkt im 
+ Sourcecode eingegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Elemente Line und Polyline werden unter &quot;Other&quot; 
+ zusätzlich die Attribute MarkerEnd und MarkerStart angeboten. Hier kann 
+ aus einer Dropdown-Liste ein Kreis (url(#markerCircle)) oder ein Pfeil 
+ (url(#markerArrow)) selektiert werden. Dieses Element wird dann als End- 
+ oder Startpunkt der Linie angezeigt. Dieser Marker wird in der Zeichenoberfläche 
+ nicht angezeigt, sondern nur in der Vorschau und natürlich im Browser.</p>
+<h4 data-condition="Others:Deutsch">Text Attribute</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Der Eintrag &quot;Text&quot; ermöglicht es, den eingegebenen 
+ Text zu ändern.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den &quot;TextAnchor&quot; wird festgelegt, wo der Text 
+ aufgehängt wird.</p>
+<h4 data-condition="Others:Deutsch">Pie Attribute</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Pie wird durch Nutzung des Path Elements realisiert. 
+ Jedoch wird die volle Komplexität nicht durch den Designer unterstützt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="82"><p class="TabellenÜberschrift">Attribut</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">CX</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">X-Position 
+		 des Mittelpunktes des Kreissegments.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">CY</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">Y-Position 
+		 des Mittelpunktes des Kreissegments.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">RX</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">X 
+		 Radius.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">RY</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">Y-Radius.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">Path</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">Read-only 
+		 Feld, das den späteren Path darstellt, der sich aus den Angaben 
+		 errechnet.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">RotateAngle</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">Drehung 
+		 des Kreises um den Mittelpunkt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="82"><p class="TabellenInhalt">SegmentAngle</p></td>
+		<td style="vertical-align: top;" width="374"><p class="TabellenInhalt">Öffnungswinkel 
+		 des Kreissegments.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Dynamic" data-indexterm="Dynamic"></a><a id="Dynamics"></a>Dynamics</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Reiter können dem selektierten Objekt Dynamiken 
+ für das Legato-System zugeordnet werden. Dieser Punkt ist unter dem Hauptkapitel 
+ Dynamics erläutert.</p>
+<h3 data-condition="Others:Deutsch"><a id="Event" data-indexterm="Event"></a><a id="Events"></a>Events</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Liste stellt mögliche JavaScript-Events dar. Zu 
+ jedem Event können JavaScript-Funktionen eingegeben werden, die ausgeführt 
+ werden, wenn das Event eintrifft. Beispiele hierzu sind im Hauptkapitel 
+ Events aufgeführt.</p>
+<div style="border: none; border-top: solid #000000 1.0pt; padding: 1.0pt 0cm 0cm 0cm;" data-condition="Others:Deutsch">
+	<p> </p>
+</div>
+
+
+</body></html>

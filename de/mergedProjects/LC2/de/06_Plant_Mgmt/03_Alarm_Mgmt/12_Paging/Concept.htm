@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "7.2.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Funkruf-Konzept</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funkruf-Konzept">
+        <span>Funkruf-Konzept</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Funkruf-Konzept</h2>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar"><a id="Benötigte_Angaben"></a>Benötigte Angaben</span></h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Zur Weitergabe einer Meldung 
+ werden folgende Angaben benötigt.</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Weiterleitungsart</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Empfänger</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Funkruf-Priorität</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Erstwertebene</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Kommend-Ereignis verzögern</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only"><span class="TextChar">Gehend-Ereignis verzögern</span></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only"><a id="Parametrierung"></a>Parametrierung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Informationen können an fünf Stellen in Sapient 
+ parametriert (bzw. von dort abgefragt) werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">1. Direkt an der Meldung</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der Tabelle AL_ARCHIVE. Folgende Infos können dabei 
+ gespeichert werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Funkrufempfänger - in der Spalte AL_ARCHIVE.M_RECIPIENT, 
+ Foreign Key auf Tabelle M_RECIPIENTS</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Information wird durch das Gateway-Telegramm 
+ gesetzt und hat bei der Funkrufweiterleitung die erste Vorrangstelle.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">2. An der Meldungsdefinition</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der Tabelle AL_MESSAGES. Folgende Infos können dabei 
+ gespeichert werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Priorität der Erstwerterkennung für den Funkruf 
+ - in der Spalte AL_MESSAGES.M_PRIO</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Funkrufempfänger - in der Spalte AL_MESSAGES.M_RECIPIENT, 
+ Foreign Key auf Tabelle M_RECIPIENTS</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Art der Funkrufweiterleitung - in der Spalte AL_MESSAGES.M_MESSAGING_TYPE, 
+ Foreign Key auf die Tabelle M_MESSAGING_TYPES</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Informationen können direkt im LC2 bei den <a href="../../../05_ASS/02_Data_Exchange/05_Alarm_Defs/01_Alarm_Defs.htm">Meldungsdefinitionen</a> 
+ unter der jeweiligen Verbindung gepflegt werden, oder sie werden per ZULI-Import 
+ importiert. Sie haben bei der Funkrufweiterleitung die zweite Vorrangstelle. 
+ </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">3. Pro Knoten pro Meldeklasse</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der Tabelle M_NODE_CLASS_CONFIG. Folgende Infos 
+ können dabei gespeichert werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Priorität der Erstwerterkennung für den Funkruf 
+ - in der Spalte M_NODE_CLASS_CONFIG.M_PRIO</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Funkrufempfänger - in der Spalte M_NODE_CLASS_CONFIG.M_RECIPIENT, 
+ Foreign Key auf Tabelle M_RECIPIENTS</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Art der Funkrufweiterleitung - in der Spalte M_NODE_CLASS_CONFIG.M_MESSAGING_TYPE, 
+ Foreign Key auf die Tabelle M_MESSAGING_TYPES</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Informationen werden im LC2 in den <a href="../../../05_ASS/03_Log_Struct/Paging.htm">Funkrufeinstellungen 
+ Knoten/Klasse</a> unter dem jeweiligen Knoten parametriert und haben bei 
+ der Funkrufweiterleitung die dritte Vorrangstelle.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">4. Pro Knoten</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der Tabelle L_NODES. Folgende Infos können dabei 
+ gespeichert werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Funkrufempfänger - in der Spalte L_NODES.M_RECIPIENT, 
+ Foreign Key auf Tabelle M_RECIPIENTS</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Verzögerung der Funkrufweiterleitung (in Sekunden) 
+ - in der Spalte L_NODES.M_S_DELAY. Falls nichts angegeben ist, wird der 
+ Wert aus dem Systemparameter -58 verwendet (Defaultwert: 3 Sekunden).</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Nachlauf der Funkrufweiterleitung (in Sekunden) 
+ - in der Spalte L_NODES.M_R_DELAY</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Erstwertlevel - Knotenlevel, ab dem die Erstwerterkennung 
+ für den Funkruf beginnt in der Spalte L_NODES.M_IA_LEVEL.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Informationen werden im LC2 beim jeweiligen <a href="../../../05_ASS/03_Log_Struct/02_Nodes/01_Nodes.htm">Knoten</a> 
+ parametriert und haben bei der Funkrufweiterleitung die vierte Vorrangstelle.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">5. An der Meldeklasse</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der Tabelle AL_CLASSES. Folgende Infos können dabei 
+ gespeichert werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Art der Funkrufweiterleitung - in der Spalte AL_CLASSES.M_MESSAGING_TYPE, 
+ Foreign Key auf die Tabelle M_MESSAGING_TYPES</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Information wird im LC2 bei den <a href="../02_Al_Classes.htm">Meldeklassen</a> 
+ parametriert und hat bei der Funkrufweiterleitung die fünfte Vorrangstelle.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Weitere Empfängereinstellungen wie z.B. das Medium 
+ (Pager, SMS, E-Mail, Fax …) sind abhängig vom Rufsystem und werden ausschließlich 
+ dort parametriert.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only"><a id="Systemparameter"></a>Systemparameter</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die folgenden Systemparameter sind für den Funkruf 
+ relevant und können unter System-Administration - Systemeinstellungen 
+ - Systemparameter im LC2 gesetzt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-50: Funk Erstwert-Knotenlevel</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-51: Funk Meld Prüfzeit</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-52: Funk Meld MaxAnz</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-53: Funk SPS Prüfzeit</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-54: Funk SPS MaxAnz</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-55: Funk Empf Prüfzeit</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-56: Funk Empf MaxAnz</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-57: Funk Ignoreshift</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">-58: Funk-Verzögerung</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+
+
+</body></html>

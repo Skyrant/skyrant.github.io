@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Unterstützte SPS-Datentypen</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Unterstützte SPS-Datentypen">
+        <span>Unterstützte SPS-Datentypen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Unterstützte SPS-Datentypen</h1>
+<h2 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgende Liste mit den Simatic-Steuerungen ist 
+ beispielhaft. Die Datentypen von anderen Steuerungssystemen werden unterstützt, 
+ sofern diese einen der in der Liste aufgeführten Datentypen unterstützen. 
+ Ab SCC Version 3.1 werden Datentypen mit 32- und 64-Bit unterstützt. In 
+ den Versionen davor gibt es nur eine 32-Bit-Unterstützung. Erfolgt die 
+ Kommunikation zwischen SCC und Nicht-Siemens-Steuerung über OPC-DA, so 
+ muss sichergestellt sein, dass die Datentypen dem OPC-DA-Standard entsprechen. 
+ Im Zweifelsfalle müssen bei Nicht-Siemens-Steuerungen je Datentyp entsprechende 
+ Tests erfolgen. Komplexe Datentypen wie z.B. Strukturen, Arrays oder Ähnliches 
+ werden grundsätzlich nicht unterstützt. Die Unterstützung von 64-Bit-Datentypen 
+ bei Simatic-Steuerungen ist für die nähere Zukunft geplant.</p>
+<h2 data-condition="Others:Deutsch"><a id="Unterstützte_Datentypen_bei_Siemens_Simatic_S7-Steuerungen"></a>Unterstützte 
+ Datentypen bei Siemens Simatic S7-Steuerungen</h2>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="mso-width-source: userset; mso-width-alt: 2925;" width="80"/>
+	<col style="mso-width-source: userset; mso-width-alt: 3364;" width="92"/>
+	<col style="mso-width-source: userset; mso-width-alt: 2304;" width="63"/>
+	<col span="2" style="mso-width-source: userset; mso-width-alt: 1718;" width="47"/>
+	<col span="2" style="mso-width-source: userset; mso-width-alt: 1974;" width="55"/>
+	<col style="mso-width-source: userset; mso-width-alt: 5485;" width="56"/>
+	<col width="58"/>
+	<col width="168"/>
+	</colgroup><tbody><tr class="t1Row" style="height: 15.0pt;">
+		<td height="20" width="80"><p class="TabellenÜberschrift">Datentyp</p></td>
+		<td style="border-left: none;" width="92"><p class="TabellenÜberschrift">Datenart</p></td>
+		<td style="border-left: none;" width="63"><p class="TabellenÜberschrift">Bitanzahl</p></td>
+		<td style="border-left: none;" width="47"><p class="TabellenÜberschrift">S7-300</p></td>
+		<td style="border-left: none;" width="47"><p class="TabellenÜberschrift">S7-400</p></td>
+		<td style="border-left: none;"><p class="TabellenÜberschrift">S7-1200</p></td>
+		<td style="border-left: none;"><p class="TabellenÜberschrift">S7-1500</p></td>
+		<td style="border-left: none;"><p class="TabellenÜberschrift">Sapient 
+		 Cloud Connector</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">BOOL</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Binärzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">1 
+		 (8)</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">BYTE</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Binärzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">8</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">WORD</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Binärzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">16</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">DWORD</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Binärzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">32</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">LWORD</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Binärzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">SINT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">8</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">INT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">16</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">DINT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">32</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">USINT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">8</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">UINT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">16</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">LINT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">ULINT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">REAL</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Fließkomma</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">32</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">LREAL</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Fließkomma</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">S5TIME</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeitformat</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">16</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">TIME</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeitformat</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">32</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">LTIME</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeitformat</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">CHAR</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeichenkette</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">8</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">WCHAR</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeichenkette</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">16</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">STRING</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeichenkette</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">n+2 
+		 Byte</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">WSTRING</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeichenkette</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">n+2 
+		 Word</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">ja</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">DATE</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Datum/Uhrzeit</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">16</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">TOD</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Datum/Uhrzeit</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">32</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">LTOD</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Datum/Uhrzeit</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">DT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Datum/Uhrzeit</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">LDT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Datum/Uhrzeit</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">64</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">DTL</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Datum/Uhrzeit</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">96</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">POINTER</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeiger</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">48</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">ANY</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeiger</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">80</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">VARIANT</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Zeiger</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">0</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt"> </p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 15.0pt;">
+		<td style="border-top: none;" height="20"><p class="TabellenInhalt">ARRAY</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">Array</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">n 
+		 Byte</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">x</p></td>
+		<td style="border-top: none; border-left: none;"><p class="TabellenInhalt">nein</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 15.0pt;">
+		<td height="20"><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

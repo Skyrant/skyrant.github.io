@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+ <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Standardwerte</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Standardwerte">
+        <span>Standardwerte</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Standardwerte</h1>
+<p data-condition="Others:Deutsch">Alle Datenobjekte (und Datenreferenzen) unterstützen die Eigenschaft 
+ defaultValue. Solange das Objekt während des Ladens der Zeichnung noch 
+ nicht initialisiert ist, wird der Standardwert verwendet.</p>
+<p data-condition="Others:Deutsch">Beispiel:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;someVar&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;ADTest1.V1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;defaultValue&quot;: 
+ &quot;***&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: 
+ &quot;someVar&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;defaultValue&quot;: 
+ &quot;###&quot; &lt;-- ignored in this example!!</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Das exemplarische Binding hat einen Standardwert, der für das Variablenobjekt 
+ definiert ist, um eine Variable auf Serverseite zu lesen – der Standardwert 
+ wird zurückgegeben, überall dort wo auf das Objekt zugegriffen wird, vor 
+ allem in Formeln und in Datenreferenzen. Das bedeutet, dass der für die 
+ Referenz definierte Standardwert in diesem Fall nutzlos ist, da das Datenobjekt 
+ immer einen Wert zurückgeben wird – entweder den tatsächlichen Variablenwert 
+ oder den Standardwert, wenn die Variable noch nicht initialisiert wurde.</p>
+<p data-condition="Others:Deutsch">Um ein Objekt für verschiedenen Bindings zu nutzen, könnte es nötig 
+ sein, verschiedene Standardwerte zu benutzen – in diesem Fall sollte kein 
+ Standardwert für das Objekt selbst definiert werden, aber für jede individuelle 
+ Referenz.</p>
+
+
+</body></html>

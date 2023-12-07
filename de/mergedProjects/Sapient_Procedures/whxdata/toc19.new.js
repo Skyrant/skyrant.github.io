@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Job 'AggrPoller'","type":"item","tilePath":"","description":"","url":"de/CompressedVal/AggrPoller.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

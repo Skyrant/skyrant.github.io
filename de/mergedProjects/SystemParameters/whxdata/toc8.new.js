@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SysParam -1: Zuordnungsdateien","type":"item","tilePath":"","description":"","url":"de/04_AE/03_Al_System/02_SysParam-1.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only;Others:Job" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Lösch-Jobs</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Löschen" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Lösch-Jobs">
+        <span>Lösch-Jobs</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Lösch-Jobs</h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">System-Administration | Lösch-Jobs</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die Datenmenge in den einzelnen Tabellen kann stark 
+ anwachsen, beispielsweise in den Messwert- oder Alarm-Tabellen. Daher 
+ ist es nötig, in regelmäßigen Abständen veraltete Daten zu löschen, um 
+ ein Überlaufen des Speichers zu verhindern.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Dies wird durch Jobs erreicht, die von der Sapient 
+ Engine ausgeführt werden. Üblicherweise ist dies der Job &quot;TABLE_DELETE&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Bei Bedarf können die verfügbaren Löschoptionen durch 
+ einen Eintrag in die Spalte &quot;Lösch-Funktion&quot; erweitert werden. 
+ Hierüber kann eine beliebige Funktion aufgerufen werden, die komplexe 
+ Löschvorgänge ausführt, die sich nicht rein mit Haltedauern abbilden lassen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Tabellenname</p></td>
+		<td><p class="TabellenInhalt">Name der Tabelle, aus der Daten gelöscht 
+		 werden sollen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Filter-Spalte</p></td>
+		<td><p class="TabellenInhalt">Name der Spalte, nach der die Daten 
+		 gefiltert werden sollen (Timestamp).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Priorität</p></td>
+		<td><p class="TabellenInhalt">Priorität des Jobs (Wert zwischen 
+		 0 - niedrig und 100 - hoch).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SE-Job</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl des SE-Jobs, 
+		 der ausgeführt werden soll. Defaultmäßig ist hier der Job &quot;TABLE_DELETE&quot; 
+		 eingetragen. Das Feld ist schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Intervall</p></td>
+		<td><p class="TabellenInhalt">In welchem Intervall soll der Job 
+		 ausgeführt werden (in Minuten)? Gültige Werte: zwischen 10 und 
+		 1440.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td>Haltedauer</td>
+		<td>Haltedauer der Datensätze in Stunden (Standard: 720 h = 30 
+		 Tage).</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Prozent löschen</td>
+		<td><p>Angabe der Löschgröße in Prozent, d.h. wieviele Datensätze 
+		 sollen pro Durchlauf gelöscht werden?</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td>Lösch-Funktion (optional)</td>
+		<td>Pfad zur Funktion (Script oder Java), die aufgerufen werden 
+		 soll (<a href="Del_Jobs_Sample.htm">Beispiel</a>).</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Parameter (optional)</td>
+		<td>Parameter der Funktion im JSON-Format. Wird bei Standard-Jobs 
+		 nicht berücksichtigt.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Optionen (optional)</td>
+		<td>Optionen als Bit-Flags (mögliche Einträge, siehe bitte unter 
+		 <a href="Del_Jobs.htm#BAS_STATUS_OPTIONS">BAS_STATUS_OPTIONS</a>).</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Beschr. intern (optional)</td>
+		<td>Interne Beschreibung als Hinweis für Projekt-Mitarbeiter (in 
+		 Englisch).</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Letzter Start</td>
+		<td>Zeitstempel des letzten Starts. Nur zur Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Letzter Erfolg</td>
+		<td>Zeitstempel des letzten erfolgreichen Durchlaufs. Nur zur Information; 
+		 schreibgeschützt.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Fehler</td>
+		<td>Anzahl aufgetretener Fehler. Nur zur Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Letzte Fehlermeldung</td>
+		<td>Fehlermeldung, wenn letzte Ausführung fehlschlug. Nur zur Information; 
+		 schreibgeschützt.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Gelöschte Zeilen</td>
+		<td>Anzahl der Datensätze, die beim letzten Durchlauf gelöscht 
+		 wurden. Nur zur Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Berechnete Zeilen</td>
+		<td>Berechnete Anzahl der zu löschenden Datensätze (Ermittlung 
+		 täglich). Nur zur Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Dauer letztes Löschen</td>
+		<td>Wie lange dauerte das letzte Löschen (in Sekunden)? Nur zur 
+		 Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Niedrig</td>
+		<td>Wie oft hintereinander löschte der Job keine oder sehr wenig 
+		 Daten? Nur zur Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Max</td>
+		<td>Wie oft hintereinander löschte der Job die maximale Datenmenge 
+		 (berechnete Zeilen)? Nur zur Information; schreibgeschützt.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Dauer</td>
+		<td>Wie lange dauerte das Löschen von &quot;Niedrig&quot; oder 
+		 &quot;Max&quot; (in Sekunden)? Nur zur Information; schreibgeschützt.</td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a name="Selbstverwaltung___automatische_Anpassungen1" id="Selbstverwaltung___automatische_Anpassungen1"></a>Selbstverwaltung 
+ / automatische Anpassungen</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die Anzahl der gelöschten Daten soll sich sofern möglich 
+ automatisch anpassen, sodass immer genug Datensätze gelöscht werden. Es 
+ werden folgende Fälle berücksichtigt:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Neuinstallation:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Voraussetzung: Der Wert in der Spalte &quot;Max&quot; 
+ ist -1 oder null. Dann wird geprüft, ob die Tabelle mehr als 1000 Datensätze 
+ enthält. Falls ja, wird der älteste Datensatz gesucht und geprüft, ob 
+ dieser älter als &quot;Haltedauer&quot; ist. Falls ja, werden die Werte 
+ von &quot;Niedrig&quot; und &quot;Max&quot; auf 0 gesetzt und die Datensätze 
+ älter als &quot;Haltedauer&quot; gelöscht.</p>
+
+
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mehr Daten als erwartet:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Voraussetzung: Der Wert in der Spalte &quot;Max&quot; 
+ ist 10, d.h., der Job hat 10 mal in Folge die maximale Anzahl Zeilen gelöscht. 
+ Dann wird das Intervall halbiert, bis das Minimum (10 Min) erreicht ist. 
+ Außerdem wird der Wert in &quot;Prozent löschen&quot; verdoppelt, bis 
+ das Maximum (50%) erreicht ist.</p>
+
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Standard-Lösch-Jobs"></a>Standard-Lösch-Jobs</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Standardmäßig sind für folgende Tabellen Löschjobs 
+ eingetragen:</p>
+<table class="SimpleGridBlack" style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="85.128%" border="1" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	<col/>
+	<col/>
+	<col width="49"/>
+	<col width="378"/>
+	<col width="82"/>
+	<col width="724"/>
+	<col width="724"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">Tabellenname</p></td>
+		<td><p class="TabellenÜberschrift">Filterspalte</p></td>
+		<td><p class="TabellenÜberschrift">Intervall</p></td>
+		<td><p class="TabellenÜberschrift">Haltedauer</p></td>
+		<td><p class="TabellenÜberschrift">Prozent löschen</p></td>
+		<td><p class="TabellenÜberschrift">Lösch-Funktion</p></td>
+		<td><p class="TabellenÜberschrift">Optionen</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+		<td><p class="TabellenÜberschrift">Detaillierte Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-1</p></td>
+		<td><p class="TabellenInhalt">P_VALUE_ARCHIVE</p></td>
+		<td><p class="TabellenInhalt">EXPIRE_DATE</p></td>
+		<td>60</td>
+		<td><p class="TabellenInhalt">2400</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of archived values (default: 
+		 100 days)</p></td>
+		<td><p class="TabellenInhalt">In der Tabelle P_VALUE_ARCHIVE befinden 
+		 sich archivierte Messwerte. Für diese Messwerte gilt die für diesen 
+		 Löschjob eingetragene Haltedauer.</p>
+		<p class="TabellenInhalt">Für Messwerte, die mit Bauteilen (Production 
+		 Units) verknüpft sind, kann eine längere Haltedauer des Bauteils 
+		 gültig sein. Um den unterschiedlichen Haltedauern Rechnung zu 
+		 tragen, wird der Löschzeitpunkt für jeden Messwert berechnet und 
+		 in die Spalte EXPIRE_DATE eingetragen. Diese Spalte ist daher 
+		 für das Löschen am besten geeignet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-2</p></td>
+		<td><p class="TabellenInhalt">AL_ARCHIVE</p></td>
+		<td><p class="TabellenInhalt">EXPIRE_DATE</p></td>
+		<td>60</td>
+		<td><p class="TabellenInhalt">8760</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of archived alarms (default: 
+		 365 days)</p></td>
+		<td><p class="TabellenInhalt">In der Tabelle AL_ARCHIVE befinden 
+		 sich archivierte Meldungen. Für diese Meldungen gilt die für diesen 
+		 Löschjob eingetragene Haltedauer.</p>
+		<p class="TabellenInhalt">Für Meldungen, die mit Bauteilen (Production 
+		 Units) verknüpft sind, kann eine längere Haltedauer des Bauteils 
+		 gültig sein. Um den unterschiedlichen Haltedauern Rechnung zu 
+		 tragen, wird der Löschzeitpunkt für jede Meldung berechnet und 
+		 in die Spalte EXPIRE_DATE eingetragen. Diese Spalte ist daher 
+		 für das Löschen am besten geeignet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-3</p></td>
+		<td><p class="TabellenInhalt">T_EVENTS</p></td>
+		<td><p class="TabellenInhalt">TIME_START</p></td>
+		<td>60</td>
+		<td><p class="TabellenInhalt">336</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of events (default: 14 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle T_EVENTS enthält Ereignisse 
+		 (Schichtanfang, Schichtende, Pausenanfang, Pausenende und andere), 
+		 die vom System verwendet werden, um Aktionen auszulösen. Diese 
+		 Ereignisse werden nach ihrer Verarbeitung nicht mehr benötigt, 
+		 sie können dann gelöscht werden. Der Zeitstempel des Ereignisses 
+		 ist in der Spalte TIME_START zu finden, sie wird daher für das 
+		 Löschen verwendet. Für eventuelle Fehlersuchen werden auch diese 
+		 Daten ein paar Tage aufbewahrt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-4</p></td>
+		<td><p class="TabellenInhalt">U_PERMISSIONS_PROXY</p></td>
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td>1440</td>
+		<td><p class="TabellenInhalt">0</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">/de/gefasoft/sapient/db/users/Right/clearNotRefPermissions/</p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of not referenced permissions/&quot;dead 
+		 permissions&quot;</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle U_PERMISSIONS_PROXY enthält 
+		 Daten für die Rechteverwaltung. Dieser Löschjob löscht ungenutzte 
+		 Einträge.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-5</p></td>
+		<td><p class="TabellenInhalt">SYS_CHANGE_LOG</p></td>
+		<td><p class="TabellenInhalt">ACTION_TSTAMP</p></td>
+		<td>1440</td>
+		<td><p class="TabellenInhalt">4320</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of system change log (default: 
+		 180 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle SYS_CHANGE_LOG protokolliert 
+		 Änderungen an den Konfigurationsdaten. Diese Information wird 
+		 auch von internen Prozessen verwendet, um auf diese Änderungen 
+		 zu reagieren. Der Zeitstempel der Änderung steht in der Spalte 
+		 ACTION_TSTAMP, sie wir für das Löschen verwendet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-7</p></td>
+		<td><p class="TabellenInhalt">U_USER_LOGONS</p></td>
+		<td>TIME_STAMP</td>
+		<td>60</td>
+		<td><p class="TabellenInhalt">336</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of user login history (default: 
+		 14 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle U_USER_LOGONS protokolliert 
+		 Benutzeranmeldungen an der Webapp. Der Zeitstempel der Anmeldung 
+		 steht in der Spalte TIME_STAMP, sie wird zum Löschen verwendet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-8</p></td>
+		<td><p class="TabellenInhalt">CT_EXECUTIONS</p></td>
+		<td><p>TIME_FINISHED</p>
+		<p> </p></td>
+		<td>60</td>
+		<td><p class="TabellenInhalt">4320</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of executed template commands 
+		 history (default: 180 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle CT_EXECUTIONS protokolliert 
+		 die Ausführung von Projektierungsvorlagen. Beginn und Ende der 
+		 Ausführung sind in den Spalten TIME_STARTED und TIME_FINISHED 
+		 zu finden. Für das Löschen wird hier TIME_FINISHED verwendet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-9</p></td>
+		<td><p class="TabellenInhalt">SYS_SHIFT_CHANGES</p></td>
+		<td><p class="TabellenInhalt">END_TS</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">6</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of shift changes (default: 
+		 6 hours)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle SYS_SHIFT_CHANGES protokolliert 
+		 Änderungen an den Schichtdaten. Diese Information wird zeitnah 
+		 intern weiterverarbeitet, sie wird daher nur kurz benötigt. Die 
+		 Schichtzeiten sind in den Spalten START_TS und END_TS zu finden, 
+		 für das Löschen wird END_TS verwendet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-10</p></td>
+		<td><p class="TabellenInhalt">SYS_VALUE_LOG</p></td>
+		<td><p class="TabellenInhalt">CHANGE_TIMESTAMP</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">30</p></td>
+		<td><p class="TabellenInhalt">2160</p></td>
+		<td><p class="TabellenInhalt">50</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td>Deletion of value log (default: 90 days)</td>
+		<td><p class="TabellenInhalt">Die Tabelle SYS_VALUE_LOG protokolliert 
+		 Änderungen an Variablenwerten durch den Job SCHEDULED_VALUE_SETTINGS, 
+		 durch Schaltbefehle oder durch einen Anwender der Webapplikation. 
+		 Der Job SCHEDULED_VALUE_SETTINGS selbst liest aus diesem Protokoll 
+		 auch den vorhergehenden Wert, wenn er wieder gesetzt werden soll. 
+		 Zum Löschen wird der Zeitpunkt der Wertänderung in der Spalte 
+		 CHANGE_TIMESTAMP verwendet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-11</p></td>
+		<td><p class="TabellenInhalt">PU_PRODUCTION_UNITS</p></td>
+		<td><p class="TabellenInhalt">EXPIRE_DATE</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">-1</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of production units (default: 
+		 10 years)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle PU_PRODUCTION_UNITS enthält 
+		 die produzierten Bauteile (Production Units). Die Haltedauer dieser 
+		 Bauteile wird nicht pauschal festgelegt, sondern für jeden PU-Zustand 
+		 separat, siehe dort. Mit dem Löschen eines Bauteils werden auch 
+		 zugehörige Daten in anderen Tabellen gelöscht.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-12</p></td>
+		<td><p class="TabellenInhalt">AL_QUITTINGS</p></td>
+		<td><p class="TabellenInhalt">TIME_STAMP</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">8760</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of quittings (default: 365 
+		 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle AL_QUITTINGS enthält 
+		 Information zur Quittierung von Meldungen. Der Zeitstempel der 
+		 Quittierung in der Spalte TIME_STAMP wird zum Löschen verwendet. 
+		 Anmerkung: Die Quittierinformation kann nur gelöscht werden, wenn 
+		 die zugehörige Meldung bereits gelöscht ist. </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-13</p></td>
+		<td><p class="TabellenInhalt">AL_REASON_ARCHIVE</p></td>
+		<td><p class="TabellenInhalt">TIME_STAMP</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">8760</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of archived reasons (default: 
+		 365 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle AL_REASON_ARCHIVE enthält 
+		 Begründungen für Meldungen. Der Zeitstempel der Begründung in 
+		 der Spalte TIME_STAMP wird zum Löschen verwendet. Anmerkung: Die 
+		 Begründung kann nur gelöscht werden, wenn die zugehörige Meldung 
+		 bereits gelöscht ist. </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-14</p></td>
+		<td><p class="TabellenInhalt">P_OUT_VALUES</p></td>
+		<td><p class="TabellenInhalt">TIME_STARTED</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">336</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of out values for SCC (default: 
+		 14 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle P_OUT_VALUES enthält 
+		 Information, die zu den SPSen übertragen wird (Sollwerte, Schaltbefehle, 
+		 Schichtkalender). Diese Information wird nach dem Erreichen des 
+		 Ereigniszeitpunktes in der Spalte TIME_STARTED nicht mehr benötigt, 
+		 kann daher kurzfristig gelöscht werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-15</p></td>
+		<td><p class="TabellenInhalt">P_VALUE_COMP_ARCHIVE</p></td>
+		<td><p class="TabellenInhalt">TS_FROM</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">336</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of out values for SCC (default: 
+		 14 days)</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle P_VALUE_COMP_ARCHIVE 
+		 enthält aggregierte Messwerte. Der Zeitraum der Aggregation ist 
+		 in den Spalten TS_FROM und TS_UNTIL zu finden, zum Löschen wird 
+		 TS_FROM verwendet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-16</p></td>
+		<td><p class="TabellenInhalt">CAP_EMPTY_CARRIER_TRACKING</p></td>
+		<td><p class="TabellenInhalt">IDENT_TIME</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">1440</p></td>
+		<td><p class="TabellenInhalt">87600</p></td>
+		<td><p class="TabellenInhalt">0,1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of empty carrier tracking</p></td>
+		<td><p class="TabellenInhalt">Die View CAP_EMPTY_CARRIER_TRACKING 
+		 enthält die Tracking-Information für leere Bauteilträger (Carrier). 
+		 Der Zeitpunkt der Identifizierung des Carriers in der Spalte IDENT_TIME 
+		 wird für das Löschen verwendet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-17</p></td>
+		<td><p class="TabellenInhalt">SYS_VISUALIZATION_METRICS</p></td>
+		<td><p class="TabellenInhalt">TIME_STAMP</p>
+		<p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">60</p></td>
+		<td><p class="TabellenInhalt">2400</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Deletion of table SYS_VISUALIZATION_METRICS</p></td>
+		<td><p class="TabellenInhalt">Die Tabelle SYS_VISUALIZATION_METRICS 
+		 protokolliert Informationen zu verwendeten Browsern. Diese Information 
+		 wird nur für Analysen benötigt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a name="BAS_STATUS_OPTIONS" id="BAS_STATUS_OPTIONS"></a>BAS_STATUS_OPTIONS</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">In dieser Tabelle werden alle möglichen Optionen aufgeführt. 
+ Für die Lösch-Jobs (Tabelle SYS_TABLE_DEL) stehen folgende Optionen zur 
+ Verfügung:</p>
+<table class="SimpleGridBlack" style="border-collapse: separate; border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Tabellenname</p></td>
+		<td><p class="TabellenÜberschrift">Filterspalte</p></td>
+		<td><p class="TabellenÜberschrift">Option</p></td>
+		<td><p class="TabellenÜberschrift">Name DE</p></td>
+		<td><p class="TabellenÜberschrift">Name EN</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SYS_TABLE_DEL</p></td>
+		<td><p class="TabellenInhalt">OPTIONS</p></td>
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">Inaktiv</p></td>
+		<td><p class="TabellenInhalt">Inactive</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SYS_TABLE_DEL</p></td>
+		<td><p class="TabellenInhalt">OPTIONS</p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Keine Selbstverwaltung</p></td>
+		<td><p class="TabellenInhalt">Auto management off</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Diese Status können in die Spalte &quot;Optionen&quot; 
+ eingetragen werden. Dabei können mehrere Werte als Bits in dem Feld gespeichert 
+ werden. Die Kombinationen bedeuten dementsprechend folgendes:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">null: kein Status (1, 2) ist aktiviert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">1: Der Jobs ist inaktiv (Status 1 ist aktiviert).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">2: Es findet keine Selbstverwaltung statt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">12: Der Job ist inaktiv und es findet keine Selbstverwaltung 
+ statt.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Deaktivierung_von_einzelnen_Lösch-Jobs"></a>Deaktivierung 
+ von einzelnen Lösch-Jobs</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Deaktivierung von einzelnen Lösch-Jobs kann auf folgende 
+ Arten geschehen:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">In die Spalte &quot;Optionen&quot; wird 1 = inaktiv 
+ eingetragen (empfohlen)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die Spalte &quot;Intervall&quot; wird auf negativ 
+ (z.B. -30) gestellt</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die Spalte &quot;SE Job&quot; verweist auf einen 
+ nicht verwendeten SE-Job (kann nur direkt in der DB erfolgen, nicht im 
+ LC2)</p>
+
+
+</body></html>

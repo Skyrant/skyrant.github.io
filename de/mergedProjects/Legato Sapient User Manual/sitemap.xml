@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/Welcome.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Overview.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Param.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menus/DashboardMenu.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menus/FavMenu.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Profiles.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menus/Print.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menus/UserMenu.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menus/Custom_Bar.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Search.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Create_Dashboard.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Edit_Mode/EnterEditMode.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/New_Dashboard_Folder.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Settings/Standard_Dashboards_Überblick.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Hauptseite_des_EpiK_Reports.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zweite_Seite_des_EpiK_Reports.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Knoten_und_KPIs_in_Sapient_konfigurieren.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Raw_Daten-Seite_des_EpiK_Reports.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Edit_Mode/General.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Edit_Mode/Empfehlungen_für_die_Größe_von_Boardlets.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Edit_Mode/Boardlet_Library.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Edit_Mode/Size_and_Pos.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Edit_Mode/Edit_menu.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Settings/Dashboard_Settings.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Settings/Boardlet_Settings.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Settings/Table_Settings.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Settings/Boardlet_Menu_Bar.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/Detailinfo.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/01_Framework/Bookmarks.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/01_Framework/Connection_Overview.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/01_Framework/Individuelles_Änderungsprotokoll.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/01_Framework/Container.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/01_Framework/Top_Dashboards.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Link.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Navigation/Layout/Layout.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Navigation/Layout/Edit.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Navigation/Layout/Settings.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Navigation/Layout/Samples_Details.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Navigation/Node_Tree.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Time_Selection.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/LGD.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Geplante_Werteinstellung.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Barchart.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Piechart.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Generic_Table.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Graphic.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/iFrame.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Current_Vals.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Multiple_Nodes.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Node_Info.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Node_State.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Prod_Change_Matrix.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Prod_Change_Table.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/03_Visualization/Energieverbräuche.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/04_CIP/Measure_Actions.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/04_CIP/Measures.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/05_Shift_Cal/Shift_Calendar.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/05_Shift_Cal/Shift_Exceptions.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/05_Shift_Cal/Target_Values.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/05_Shift_Cal/Shift_Plan.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/05_Shift_Cal/Shift_Calendar_Overview.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/05_Shift_Cal/Zielwerte_in_aktueller_Schicht.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Alarm_Cross_Table.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Alarm_Chart.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Alarm_Gantt.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Alarm_Timeline.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Archived_Alarms.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Current_Alarms.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Proc_Shortcut.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Top_Alarms.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/06_Alarms/Meldungsdefinitionen.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/07_KPIs/KPI_Chart.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/07_KPIs/KPI_Data.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/07_KPIs/Shift_End_Vals.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/07_KPIs/KPI_Versand.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/08_BCT/Histogram.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/08_BCT/CTA_-_Zykluszeiten.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/08_BCT/Taktzeiten_Boxplot.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/08_BCT/Histogramm_der_Zykluszeiten.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/09_TPM/Comp_Archive.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/09_TPM/TPM_Plans.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/09_TPM/TPM_Orders.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/09_TPM/TPM_Analysis.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Attributes.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Produktdatenreport.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Produktdatendiagramm.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Konfiguration_in_LC2_für_Produktdaten.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/ID_View.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Lesestellen_Sequenzvergleich.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/PU_View.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Produktionseinheitenübersicht.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Produktionseinheiten_Verfolgung.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/PU_Q_Supervisor.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Split_History.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/10_TT/Assembly_History.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Allgemeines_(Spezifikation)/Allgemeines.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Allgemeines_(Spezifikation)/Rezepte/Rezept.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Web_App/User_Interface_der_WebApp.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Web_App/User_Interface_der_WebApp/Recipe_History.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Web_App/Recipe_List.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Web_App/User_Interface_der_WebApp/Recipe_Details.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Web_App/User_Interface_der_WebApp/Rezeptliste.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/LC2/Datenmodell.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Allgemeines_(Spezifikation)/Rezepte/Rechte.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Parameterstruktur/Rezeptparameter.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/LC2/Rezeptvorlage.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Allgemeines_(Spezifikation)/Rezepte/Rezepte/Datenstruktur_der_Rezepte.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/Rezeptprozeduren/Rezeptprozeduren.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/11_RecipeManagement/LC2/Standardwerte_für_neue_Rezepte.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/12_Personalzeiterfassung/Boardlets_der_Personalzeiterfassung.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Time.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Flexi_Val.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Werteerfassung_eSFM_v2.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/02_Basis/Werterfassung_Chart_eSFM_v2.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Accident_free.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Al_Units_Lost.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Attendance.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Att_Report.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Logistics_Rep.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Node_News.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Occ_Safety.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Quality_Rep.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/SFM_Analysis.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/SFM_Karma.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/SFM_Report.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/15_SFM/Task_Management.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/16_Project/Availability_Card.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/16_Project/Piece_Counter.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/17_Customer/KPI-Table.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/Preview/Super-Generic-Table.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Boardlets/Preview/Boardlet_Datasources.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/View_Modes.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Parameters.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Placeholders.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Filter_Strings.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Example_Specials.htm</loc>
+      <lastmod>2023-09-26</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

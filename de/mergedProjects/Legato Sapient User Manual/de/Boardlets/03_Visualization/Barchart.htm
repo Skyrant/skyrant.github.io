@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="topic-check-list" content="First Draft" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Chart - Balken-/Liniendiagramm</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Teilwert" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Chart - Balken-/Liniendiagramm">
+        <span>Chart - Balken-/Liniendiagramm</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Chart - Balken-/Liniendiagramm</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Balken-/Liniendiagramm</span> 
+ zeigt definierte Messwerte für den im Layout selektierten Knoten in einem 
+ über den Zeitfilter definierten Zeitraum an. Pro Einheit wird eine eigene 
+ Achse angezeigt; für Werte ohne Einheit wird eine weitere Achse angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Barchart.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf <img src="../../../Bilder/Icons/legend_black_18dp.png" alt="" style="border: none;" border="0"/> 
+ kann die Legende ein- oder ausgeblendet werden. Durch Klick auf <img src="../../../Bilder/Icons/swap-horizontal_black_18dp.png" alt="" style="border: none;" border="0"/> wird die Anzeige der Legende 
+ zwischen unten und rechts umgeschaltet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich können die definierten Warn- und Alarmgrenzen 
+ sowie die Sollwert-Vorgabe für die Messwerte eingeblendet werden. Das 
+ Diagramm sieht dann so aus:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Barchart2.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Warngrenzen werden als gelbes Band dargestellt, 
+ die Alarmgrenzen als rotes Band. Gibt es für mehr als einen Wert Einträge, 
+ so werden die Bänder gegebenenfalls überlagernd angezeigt. Die Sollwert-Vorgabe 
+ wird in der selben Farbe wie der zugehörige Messwert eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Mouseover über eine Linie oder einen Balken werden 
+ der Zeitstempel und der Wert zu diesem Zeitpunkt eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Mouseover über einen gelben oder roten Punkt links 
+ oder rechts am Rand werden Details zu den Zusatz-Linien (Warn-, Alarmgrenzen, 
+ Sollwert-Vorgabe) eingeblendet.</p>
+<div data-conref="../../../assets/snippets/de_Hide-value.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Durch Klick auf den Namen eines Wertes unten in der 
+ Legende kann dieser aus- bzw. wieder eingeblendet werden. Ausgeblendete 
+ Werte werden in der Legende hellgrau dargestellt.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Doppelklick auf einen Eintrag in der Legende 
+ werden alle Werte außer diesem ausgeblendet. Ist nur ein Eintrag selektiert, 
+ werden bei Doppelklick alle Werte außer diesem sichtbar geschaltet. Zugehörige 
+ Warn- und Alarmgrenzen sowie Sollwert-Vorgaben werden zusammen mit dem 
+ Wert aus- bzw. eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hinter dem jeweiligen Wert wird dessen Einheit in eckigen 
+ Klammern eingeblendet. Sofern mehrere Knoten selektiert sind, wird zusätzlich 
+ der Name des Knotens, dem die Variable zugeordnet ist, in runden Klammern 
+ dahinter angezeigt.</p>
+<div data-conref="../../../assets/snippets/de_Zoom.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Durch Klicken und Ziehen mit gedrückter linker Maustaste 
+ kann in den Zeitbereich hineingezoomt werden. Es wird dann ein Button 
+ eingeblendet, über den der Zoom wieder zurückgesetzt werden kann.</p>
+
+
+</div>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Es werden nur die ersten 5000 Werte geladen. Das kann 
+ dazu führen, dass Variablen gar nicht angezeigt werden, z.B. wenn die 
+ erste geladene Variable mehr als 5000 Werte im eingegebenen Zeitraum hat. 
+ In diesem Fall wird eine entsprechende Meldung angezeigt. Verwenden Sie 
+ gegebenenfalls die Einstellung &quot;Punktereduktion&quot; oder passen 
+ Sie den Zeitraum an.</p>
+<h3 data-condition="Others:Deutsch"><a id="Unteransicht_Drill-Down_Teilwerte"></a>Unteransicht Drill-Down 
+ Teilwerte</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Sind für den selektierten Knoten Teilwerte parametriert 
+ (Spalte Parent != Null), können diese durch das Drilldown-Menü in einer 
+ Unteransicht als gestapeltes Balkendiagramm visualisiert werden. Dazu 
+ muss zuerst der Parent-Wert im Bar Chart durch Klick auf den Namen in 
+ der Legende selektiert werden. Danach kann über das <span class="Bold">Quick-Edit</span> 
+ Menü [<img src="../../../Bilder/Icons/menu_dots.png" alt="" style="border: none;" border="0"/>] unter Drilldown der Punkt &quot;Teilwerte&quot; 
+ ausgewählt werden. In der Seitenleiste öffnet sich folgende Unteransicht:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Barchart_Sub.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier werden die einzelnen Teilwerte des selektieren 
+ Parents als gestapeltes Balkendiagramm im selektierten Zeitraum angezeigt.</p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Dafür müssen die Teilwerte alle denselben Zeitstempel 
+ haben. Daher muss die Buchung mittels der Prozedur Subvalues_in ausgeführt 
+ werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für ein Balken-/Liniendiagramm stehen außerdem folgende 
+ Einstellungen zur Verfügung. </p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Settings"></a>Reiter Settings</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Aktualisierungs-Intervall (Sek.):</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Intervall in Sekunden, in denen die Ansicht 
+ automatisch aktualisiert wird. Minimum ist 9 Sekunden.</p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Ein zu niedriger Wert kann die Performance negativ 
+ beeinflussen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Hilfslinie:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann eine vertikale 
+ Hilfslinie eingeblendet werden. Diese zeigt dann den exakten Zeitpunkt 
+ und alle zugehörigen Werte an.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Aggregierte Werte verwenden:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird festgelegt, ob 
+ aggregierte Werte oder Rohdaten im Bar Chart angezeigt werden sollen. 
+ Wird der Regler aktiviert, kann im Reiter Filter der Aggregationstyp eingestellt 
+ werden. Standard ist -1 = Stunde.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Punktereduktion nutzen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ die dargestellten Punkte reduziert werden sollen. Falls aktiv, werden 
+ alle Punkte einer Geraden ausgeblendet.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">In Abhängigkeit von der Anzahl der Ausgangspunkte 
+ wird die folgende Punktemenge zurückgeliefert:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">wenn es weniger als 1.000 Punkte in der 
+	 Ausgangsmenge gibt: alle Punkte der Ausgangsmenge</p></li>
+	<li><p class="ListBulletL1">wenn das Ergebnis der Punkteelemination 
+	 mit dem RDP-Algorithmus etwa 1.000 Punkte hat, dieses Ergebnis</p></li>
+	<li><p class="ListBulletL1">sonst nur die Punktemenge aus den lokalen 
+	 Maxima und Minima, wenn es insgesamt etwa 1.000 Punkte oder weniger 
+	 sind</p></li>
+	<li><p class="ListBulletL1">in allen anderen Fällen: für 1.000 Zeitabschnitte 
+	 jeweils der Durchschnittswert in x- und y-Richtung </p></li>
+</ul>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Layout"></a>Reiter Layout</h4>
+<div data-conref="../../../assets/snippets/Layout/de_Chart_type.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Diagrammtyp:</p>
+<p class="GUIControlDescr">Aus der Dropdown-Liste kann der Diagrammtyp 
+ gewählt werden. Zur Verfügung stehen Liniendiagramm, Balkendiagramm, Flächendiagramm 
+ und gestapeltes Balkendiagramm.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/Layout/de_Show_target.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Sollwert anzeigen:</p>
+<p class="GUIControlDescr">Über den Schieberegler wird definiert, ob die 
+ Sollwerte als Linie eingeblendet werden sollen. Im Reiter Filter kann 
+ dann festgelegt werden, welche Variablenart als Sollwert verwendet werden 
+ soll.</p>
+
+
+</div>
+<p class="GUIControl" data-condition="Others:Deutsch">Verfügbarkeitsabschnitte einblenden:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über den Schieberegler wird definiert, ob zusätzlich 
+ Verfügbarkeitsabschnitte wie beispielsweise &quot;geplante Pausen&quot; 
+ im Diagramm eingeblendet werden sollen. Die Darstellungsfarbe wird im 
+ LC2 definiert. Welche Verfügbarkeitsabschnitte angezeigt werden sollen, 
+ kann im Tab Filter festgelegt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Warngrenzen anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ Warngrenzen visualisiert werden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Alarmgrenzen anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ Alarmgrenzen visualisiert werden sollen.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<div data-conref="../../../assets/snippets/Filter/de_Value_Types.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Variablenarten:</p>
+<p class="GUIControlDescr">Filter auf Variablenarten. Für alle Variablen 
+ der hier definierten Variablenarten, die dem oben selektierten Knoten 
+ zugeordnet sind, werden die Werte im Diagramm angezeigt. Die Variablenarten 
+ können aus einer Dropdown-Liste ausgewählt werden. Leer = kein Filter, 
+ alle Variablenarten werden angezeigt.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/Filter/de_TV_type.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Variablenart Sollwert:</p>
+<p class="GUIControlDescr">Variablenart, die als Sollwert-Linie angezeigt 
+ werden soll.</p>
+
+
+</div>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Wird nur eingeblendet, wenn im Reiter Layout 
+ der Regler &quot;Sollwert anzeigen&quot; aktiviert ist.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Variablen-ID:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Standardmäßig -1 = deaktiviert. Dieser Parameter 
+ ist relevant, wenn in diesem Balken-/Liniendiagramm die Historie einer 
+ Variablen via das <a href="Current_Vals.htm">Aktuelle Werte Boardlet</a> 
+ angezeigt werden soll. ID der Variable, deren Historie angezeigt wird. 
+ Der Parametertyp muss auf &quot;In&quot; oder &quot;InOut&quot; stehen, 
+ um den Wert vom Aktuelle Werte Boardlet zu empfangen.</p>
+<div data-conref="../../../assets/snippets/Filter/de_TS_types.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Verfügbarkeits-Arten:</p>
+<p class="GUIControlDescr">IDs der Verfügbarkeitsabschnittsarten, die im 
+ Diagramm eingeblendet werden sollen.</p>
+
+
+</div>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Wird nur eingeblendet, wenn im Reiter Layout 
+ der Regler &quot;Verfügbarkeitsabschnitte einblenden&quot; aktiviert ist.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Aggregationsart:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl der Aggregationsart. 
+ Wird nur eingeblendet, wenn im Reiter Settings der Regler &quot;Aggregierte 
+ Werte verwenden&quot; aktiviert ist.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Teilwerte:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ Parent-Werte oder Teilwerte visualisiert werden sollen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_types.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablenarten werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Grundkonfiguration</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Allgemeine Anwendungen</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Variablenarten</span> parametriert.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/LC2/de_s_timeslice_types.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Verfügbarkeitsabschnittsarten (Time slices) werden 
+ im <span class="Bold">LC2</span> unter <span class="Bold">Grundkonfiguration</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Verfügbarkeitsabschnittsarten</span> 
+ parametriert. Hier wird auch die Farbe festgelegt, in der die Balken eingefärbt 
+ werden sollen.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/LC2/de_p_values_config.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablen werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Anwendungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Datenaustausch</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Modul] 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ [Verbindung] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Variablen</span> 
+ gepflegt. Hier wird auch die Einheit festgelegt.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Hier muss das Flag &quot;Archivieren&quot; auf 1 gesetzt 
+ sein, damit die Werte der Variable im Archiv gespeichert werden. Hier 
+ können auch die Warn- und Alarmgrenzen sowie die Sollwert-Vorgabe für 
+ die Variablen definiert werden.</p>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_relations.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Knoten] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Variablenzuordnungen</span> werden die Variablen dem 
+ Knoten zugeordnet, für den sie angezeigt werden sollen. Hier muss das 
+ Flag &quot;Anzeigen&quot; auf 1 gesetzt sein, damit die Variable angezeigt 
+ wird. Die Sortiernummer legt fest, in welcher Reihenfolge die Variablen 
+ angezeigt werden.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">refreshInterval</p></td>
+		<td><p class="TabellenInhalt">Number</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">verticalLine</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">aggregatedValues</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">pointEliminationMaxNumberPoints</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">chartType</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">showTargetValue</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">showTimeslices</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">showWarningLimits</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">showAlarmLimits</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">targetValueType</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueId</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">timesliceTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">aggType</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">showSubValues</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedDrilldownId</p></td>
+		<td><p class="TabellenInhalt">Number</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

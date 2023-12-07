@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Einleitung"]],"1":[["\n"],["\n","Die Sapient Engine bietet JSON-RPC-Methoden, um Feldlisten \n und Inhalte von Datenbank-Tabellen aus dem Sapient Repository sowie geskriptete \n Datenquellen abzufragen.","\n\n\n"]],"6":[["Einleitung"]],"id":"9"})

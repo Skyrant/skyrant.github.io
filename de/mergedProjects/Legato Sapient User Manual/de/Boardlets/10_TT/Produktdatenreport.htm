@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.10.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-check-list" content="First Draft" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Produktdatenreport</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Produktdatenreport">
+        <span>Produktdatenreport</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Produktdatenreport</h1>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dem Boardlet <span style="font-weight: bold;">Produktdatenreport</span> 
+ können Produktionsanwender Produktdaten, die in Legato Sapient gespeichert 
+ sind, im Rahmen von Track and Trace (T&amp;T) analysieren und auswerten. 
+ Mit dem Produktdatenreport erhält man z.B. Informationen, ob und welche 
+ Engpässe es in einer Produktionslinie gibt. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die gewonnen Daten dieser Datenanalyse-Funktion können 
+ im Boardlet Produktdatendiagramm grafisch dargestellt werden. Eine grafische 
+ Darstellung ist in Kreisdiagrammen, Balkendiagrammen und gestapelten Balkendiagrammen 
+ möglich. Siehe <a href="Produktdatendiagramm.htm">Produktdatendiagramm</a> 
+ für mehr Informationen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie folgende Informationen zum Produktdatenreport:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Neben der Analyse der produktbezogenen Daten 
+	 können über die WebApp durch die PDF-Funktion die Analysedaten als 
+	 Bericht ausgegeben werden. </p></li>
+	<li><p class="BodyText">Die Einstellungen im Boardlet können verschiedene 
+	 Datentypen (bool, string, numerisch) haben.</p></li>
+	<li><p class="BodyText">Es können alle relevanten Produkteigenschaften, 
+	 die mit Hilfe der T&amp;T-Funktionalität erfasst und gespeichert wurden, 
+	 und die spezifischen Vorkommen (Anzahl und Prozentsatz) dieser Eigenschaften 
+	 innerhalb eines Zeitraums abgerufen werden. Beachten Sie hierzu im 
+	 Boardlet die <span style="font-weight: bold;">Zeitbereich</span>-Filter 
+	 für die Datenanalyse. Beispiele dieser Zeitbereich-Filter sind Individueller 
+	 Zeitraum, Relative Zeit (z.B. &quot;letzte Woche&quot;), Absolute 
+	 Zeit oder Klicken zum Wählen.<br/>
+	<br/>
+	<img src="../../../Bilder/Boardlet_Filters_Time_Range_EN.png" alt="" style="border: none;" border="0"/></p></li>
+	<li><p class="BodyText">Für num-Werte gibt es die Aggregation in Klassen 
+	 (Buckets) mit einem vorkonfigurierten Zahlen- und Wertebereich. Bei 
+	 Klassen (Buckets) handelt es sich um Intervallbreiten mit einer bestimmten 
+	 Anzahl und einem bestimmten Messwert. Die &quot;Klassen andere&quot; 
+	 (&quot;Buckets other&quot;) sind Bereiche außerhalb der Intervalle.</p></li>
+	<li><p class="BodyText">Die dargestellten Inhalte des Boardlets sind 
+	 abhängig von den ausgewählten Filtern, jedoch unabhängig von den gewählten 
+	 Knoten.</p></li>
+	<li><p class="BodyText">Alle Produkteigenschaften werden für Produktionsschichten 
+	 für jeden konfigurierten Berichtsbereich aggregiert, d.h. Daten werden 
+	 gesammelt und in einer zusammengefassten Form ausgedrückt. Außerdem 
+	 werden alle Produkteigenschaften mittels eines zyklisch getriggerten 
+	 Verfahrens nach Produkten gruppiert.</p></li>
+	<li><p class="BodyText">Es können für die ausgewählten Daten Gruppen 
+	 bei der Auswahl gebildet werden (für Eigenschaften und auch für Zeitbereiche, 
+	 z.B. Schicht, Tag, Woche, Monat).</p></li>
+	<li><p class="BodyText">Es können die ausgewählten (und auch gruppierten) 
+	 Daten in einem flexiblen Datengitter dargestellt werden. <br/>
+	</p></li>
+	<li><p class="BodyText">Das Boardlet Produktdatenreport hat folgende 
+	 Inhalte:<br/>
+	<span style="font-weight: bold; color: #ff0000;">(1)</span> <span style="font-weight: bold;">Product</span> 
+	 / <span style="font-weight: bold;">Produkt</span>: Festgelegter Produktname<br/>
+	<span style="font-weight: bold; color: #ff0000;">(2)</span> <span style="font-weight: bold;">Attribute</span> 
+	 / <span style="font-weight: bold;">Attribut</span>: Eigenschaft, die 
+	 durch Filtereinstellungen ausgewählt werden, wie z.B. Farbe oder Zeiteinheit<br/>
+	<span style="font-weight: bold; color: #ff0000;">(3)</span> <span style="font-weight: bold;">Value 
+	 (from</span>) / <span style="font-weight: bold;">Wert (von)</span>: 
+	 Grenzbeginn des Attributwertes einer Klasse (Bucket)<br/>
+	<span style="font-weight: bold; color: #ff0000;">(4)</span> <span style="font-weight: bold;">Value 
+	 (up to)</span> / <span style="font-weight: bold;">Wert (bis zu)</span>: 
+	 Grenzende des Attributwertes eines Buckets<br/>
+	Zu <span style="font-weight: bold; color: #ff0000;">(3)</span> und 
+	 <span style="font-weight: bold; color: #ff0000;">(4)</span>: Innerhalb 
+	 der Grenzen [Value from - Value up] wird der Attributwert einer jeweiligen 
+	 Klasse (Bucket) hinzugezählt, d.h. wenn Value (from) = 200, dann wird 
+	 der Wert 200 eingeschlossen. Wenn Value (up to) = 4199, dann wird 
+	 Wert 4199 inkludiert, aber der Wert 4200 exkludiert). <br/>
+	<span style="font-weight: bold; color: #ff0000;">(5)</span> <span style="font-weight: bold;">Count</span> 
+	 / <span style="font-weight: bold;">Anzahl</span>: Anzahl der Produkte, 
+	 die in der Klasse (Bucket) gezählt werden <span style="font-weight: bold;">(Beachten 
+	 Sie jedoch den Hinweis hierzu unterhalb der Abbildung, da es Produktionseinheiten 
+	 (Production Unit, PUs) gibt, die keine Attribute haben)</span><br/>
+	<span style="font-weight: bold; color: #ff0000;">(6)</span><span style="font-weight: bold;"> 
+	 %</span>: Prozentualer Anteil des Produktes an der Klasse (Bucket), 
+	 gemessen am gesamten Vorkommen<br/>
+	<br/>
+	<img src="../../../Bilder/Product_Data_Report_EN.png" alt="" style="border: none;" border="0"/><br/>
+	</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Bei <span style="font-weight: bold; color: #ff0000;">(5)</span> 
+ <span style="font-weight: bold;">Count</span> / <span style="font-weight: bold;">Anzahl 
+ </span>gilt: Wenn eine PU, wie z.B. eine Autokarosserie, zugewiesene Attribute 
+ (bspw. Farben/Colors) hat, dann werden diese Attribute für das Produktdatenreport-Boardlet 
+ aggregiert. Selbst wenn die PU das Attribut (hier: Farbe/Color) hat, aber 
+ der Wert leer (EMPTY) oder NULL ist, findet auch eine Aggregation statt.<br/>
+D.h., in der Spalte <span style="font-weight: bold;">Value (from)</span> 
+ <span style="font-weight: bold; color: #ff0000;">(3)</span> wird für ein 
+ solches Attribut an der betreffenden Stelle eine leere Zelle dargestellt. 
+ Wenn aber einer PU keine Attribute (z.B. Farben/Colors) zugewiesen sind, 
+ dann wird diese PU nicht gezählt. Wenn die PU zugewiesene Attribute hat, 
+ aber der Attributwert leer (EMPTY) oder NULL ist, wird dies nicht aggregiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Konfiguration_und_benötigte_Parametrierung_im_LC2"></a>Konfiguration 
+ und benötigte Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die Konfiguration des Produktdatenreports findet im 
+ LC2 statt. Eine entsprechende Konfiguration im LC2 ist notwendig, da festgelegt 
+ werden muss, von welcher Lesestelle Daten gesammelt werden. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Verschiedene Bereiche werden über Lesestellen identifiziert. 
+ Es können mehrere Lesestellen angegeben werden. Die zusätzlich angegebenen 
+ Lesestellen gehören alle zu einem definierten Bereich. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Grundlegend muss </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">die jeweilige Lesestelle,</p></li>
+	<li><p class="BodyText">der Namen der Lesestelle und</p></li>
+	<li><p class="BodyText">die Gruppierung </p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch">festgelegt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Beim Aggregieren von Daten werden eine Vielzahl an 
+ einzelnen Werten zu einem einzigen Wert zusammengefasst. <br/>
+Die Datenaggregation erstellt die komplette Datenquelle für den Produktdatenreport 
+ und das Produktdatendiagramm.</p>
+<p class="NoteText" data-condition="Others:Deutsch">Die Datenaggregation muss korrekt eingerichtet sein, 
+ andernfalls werden im Boardlet Produktdatenreport keine Daten angezeigt.<br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="NoteText" data-condition="Others:Deutsch">Beachten Sie hierzu die <a href="Konfiguration_in_LC2_für_Produktdaten.htm">Konfiguration 
+ der Aggregierung für Produktdatenreport und Produktdatendiagramm</a>, 
+ um mehr Informationen für die Konfiguration für die Boardlets Produktdatenreport 
+ und <a href="Produktdatendiagramm.htm">Produktdatendiagramm</a> zu erhalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Gehen Sie wie folgt vor, um die T&amp;T-Funktionalität 
+ im LC2 aufzurufen und notwendige Einstellungen für den Produktdatenreport 
+ festzulegen:</p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Öffnen Sie den LC2 und navigieren Sie in der 
+	 <span style="font-weight: bold;">Navigation</span> <span style="font-weight: bold; 
+	 color: #ff0000;">(1)</span> auf <span style="font-weight: bold;">Production</span> 
+	 <span style="font-weight: bold;">Management /</span><span style="font-weight: bold;"> 
+	 Produktionsmanagement </span><span style="color: #ff0000; font-weight: bold;">(2)</span> 
+	 und <span style="font-weight: bold;">Tracking &amp; Tracing</span> 
+	 <span style="font-weight: bold; color: #ff0000;">(3)</span>.</p></li>
+	<li><p class="BodyText">Navigieren Sie zu <span style="font-weight: bold;">Reporting</span> 
+	 <span style="font-weight: bold;">Area</span> <span style="font-weight: bold;">Groups</span> 
+	 / <span style="font-weight: bold;">Report-Bereichsgruppen</span> <span style="font-weight: bold; color: #ff0000;">(4)</span><span style="font-weight: bold;">.</span><br/>
+	<br/>
+	<img src="../../../Bilder/LC2_Navigation_Track_and_Trace_EN.png" alt="" style="border: none;" border="0"/><br/>
+	</p></li>
+	<li><p class="BodyText">Ordnen Sie die Tabelle mit dem Befehl <span style="font-weight: bold;">Best Fit (all columns) / Optimale Breite 
+	 (alle Spalten)</span> <span style="font-weight: bold; color: #ff0000;">(5)</span> 
+	 über das Kontextmenü der <span style="font-weight: bold;">Reporting 
+	 Area Groups</span>-Tabelle / <span style="font-weight: bold;">Report-Bereichsgruppen</span>-Tabelle.<br/>
+	<br/>
+	<img src="../../../Bilder/LC2_Kontextmenü_Best_Fit_all_Column_EN.png" alt="" style="border: none;" border="0"/></p></li>
+	<li><p class="BodyText">Legen Sie in der Tabelle <span style="font-weight: bold;">Reporting 
+	 Areas</span> / <span style="font-weight: bold;">Report-Bereiche</span> 
+	 Report-Bereiche fest. <br/>
+	Falls mehr als 50 Auswertungen (= Reporting Areas) angelegt werden, 
+	 ist das Anlegen von Report-Bereichen empfehlenswert, damit bei diesen 
+	 Auswertungen noch zusätzliche Gruppierungsbewertungen angegeben werden 
+	 können. Eine Gruppierung ist hier hilfreich, um eine gezielte Auswertung 
+	 zu ermöglichen. In der Tabelle <span style="font-weight: bold;">Reporting 
+	 Areas</span> / <span style="font-weight: bold;">Report Bereiche</span> 
+	 kann dies in der Spalte <span style="font-weight: bold;">Group</span> 
+	 / <span style="font-weight: bold;">Gruppe</span> gemacht werden.</p></li>
+	<li><p class="BodyText">Durch Klicken auf das <span style="font-weight: bold;">Plus</span>-Symbol 
+	 können Sie im LC2 eine neue <span style="font-weight: bold;">Reporting 
+	 Area Group</span> / <span style="font-weight: bold;">Report-Bereichsgruppen</span> 
+	 anlegen.<br/>
+	Vergeben Sie einen Namen für die neue <span style="font-weight: bold;">Reporting</span> 
+	 <span style="font-weight: bold;">Area</span> <span style="font-weight: bold;">Group</span> 
+	 / <span style="font-weight: bold;">Report</span>-<span style="font-weight: bold;">Bereichsgruppe</span>.<br/>
+	<br/>
+	<img src="../../../Bilder/Reporting_Areas_Groups_new_group_EN.png" alt="" style="border: none;" border="0"/></p>
+	<div style="display: none;">
+		<p>EN screenshot</p>
+	</div></li>
+	<li><p class="BodyText"> Anschließend können Sie unter <span style="font-weight: bold;">Reporting 
+	 Areas</span>/<span style="font-weight: bold;">Report Bereiche</span> 
+	 die soeben erstellte Gruppe zuordnen. In der WebApp können Sie diese 
+	 Gruppen ebenfalls sehen und abrufen.<br/>
+	<br/>
+	<img src="../../../Bilder/Assign_Group_Reporting_Area_EN.png" alt="" style="border: none;" border="0"/><br/>
+	</p></li>
+	<li><p class="BodyText">Wählen Sie im nächsten Schritt in der <span style="font-weight: bold;">Reporting Area</span>-Tabelle / <span style="font-weight: bold;">Report-Bereiche</span>-Tabelle 
+	 eine Reporting Area aus, oder erstellen eine neue <span style="font-weight: bold;">Reporting 
+	 Area</span> / <span style="font-weight: bold;">Report-Bereich </span>durch 
+	 Klicken auf das <span style="font-weight: bold;">Plus</span>-Symbol). 
+	 Beim Erstellen einer neuen <span style="font-weight: bold;">Reporting 
+	 Area</span> / <span style="font-weight: bold;">Report Bereich</span> 
+	 vergeben Sie anschließend weitere Werte, wie z.B. den Namen und wählen 
+	 Sie den entsprechenden Knoten aus. Für diesen Knoten gilt anschließend 
+	 die ausgewählte Reporting Area.<br/>
+	<br/>
+	<img src="../../../Bilder/Reporting_Areas_Select_Nodes_EN.png" alt="" style="border: none;" border="0"/><br/>
+	</p></li>
+	<li><p class="BodyText">Vergeben Sie im rechten Bereich im Hauptfenster 
+	 unter Details die Klassenwerte (<span style="font-weight: bold;">Bucketwerte)</span>.<br/>
+	<br/>
+	<img src="../../../Bilder/Reporting_Areas_Buckets_EN.png" alt="" style="border: none;" border="0"/></p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Beachten Sie, dass für flexible Analysen können 
+	 dynamische Gruppen dieser Eigenschaften im LC2 gebildet werden.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Wie bei anderen T&amp;T-Funktionen wird eine 
+	 Durchlaufzeit zwischen zwei Lesestellen oder auch Identifikationspunkten 
+	 (Identpoints) gemessen. Die Einstellungen hierfür können unter <span style="font-weight: bold;">Reporting</span> <span style="font-weight: bold;">Areas</span> 
+	 / <span style="font-weight: bold;">Report</span>-<span style="font-weight: bold;">Bereiche</span> 
+	 <span style="font-weight: bold; color: #ff0000;">(1)</span> und <span style="font-weight: bold;">Area</span>-<span style="font-weight: bold;">Identpoint</span> 
+	 / <span style="font-weight: bold;">Lesestellen</span> <span style="font-weight: bold; 
+	 color: #ff0000;">(2)</span> im LC2 vorgenommen werden:<br/>
+	<br/>
+	<br/>
+	<img src="../../../Bilder/Reporting_Areas_Area-Identpoints_EN.png" alt="" style="border: none;" border="0"/><br/>
+	<br/>
+	</p></li>
+	<li><p class="BodyText">Damit die Durchlaufzeit zwischen zwei Lesestellen 
+	 oder auch Identifikationspunkten (Identpoints) gemessen werden kann, 
+	 werden Identifizierungstypen Einfahrt (Entry ident types) und Identifizierungtypen 
+	 Ausfahrt (Exit ident types) definiert. Die gewonnen Daten werden auf 
+	 die gleiche Weise wie andere konfigurierte Attribute analysiert. Beispiele 
+	 der Identifizierungtypen sind z.B. Abstapeln, Ausfahrt, Einfahrt, 
+	 usw. <br/>
+	Beachten Sie hierzu die folgenden Abbildungen:</p>
+	<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+		<colgroup><col style="width: 50%;"/>
+		<col style="width: 50%;"/>
+		</colgroup><tbody><tr>
+			<td><p class="BodyText"><span style="font-weight: bold;">Identifizierungstypen 
+			 Einfahr</span>t<br/>
+			(Identifizierungstypen Entry ident type)</p></td>
+			<td><p class="BodyText"><span style="font-weight: bold;">Identifizierungstypen 
+			 Ausfahr</span>t<br/>
+			(Identifizierungstypen Exit ident type)</p></td>
+		</tr>
+		<tr>
+			<td><p class="BodyText"><img src="../../../Bilder/LC2_Area-Identpoints_Entry_Ident_Types_1_EN.png" alt="" style="border: none;" border="0"/></p></td>
+			<td><p class="BodyText">     <img src="../../../Bilder/LC2_Area-Identpoints_Exit_Ident_Types_1_EN.png" alt="" style="border: none;" border="0"/></p></td>
+		</tr>
+	</tbody></table></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Im Filterdialog des Boardlets Produktdatenreport kann 
+ alles eingestellt werden, damit der Benutzer eine umfangreiche Auswertung 
+ durchführen kann. Eine Voraggregierung im LC2 ist jedoch notwendig. <br/>
+Neben den bereits im Abschnitt <a href="#Allgemein">Allgemein</a> beschriebenen 
+ <span style="font-weight: bold;">Time range</span> / <span style="font-weight: bold;">Zeitbereich</span>-Filtern 
+ <span style="font-weight: bold; color: #ff0000;">(1)</span> gibt es folgende 
+ Filter:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 18.919%;"/>
+	<col style="width: 81.081%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText"><span style="font-weight: bold; color: #ff0000;">(2)</span> 
+		 Production area / Report-Bereich</p>
+		<p class="BodyText"><span style="font-weight: bold; color: #ff0000;">(3)</span> 
+		 Products / Produkte</p>
+		<p class="BodyText"><span style="font-weight: bold; color: #ff0000;">(4)</span> 
+		 Attributes to show / Anzuzeigende Attribute</p>
+		<p class="BodyText"><span style="font-weight: bold; color: #ff0000;">(5)</span> 
+		 Group by interval type / Gruppieren nach Intervalltyp</p>
+		<p class="BodyText"><span style="font-weight: bold; color: #ff0000;">(6)</span> 
+		 Group by attributes / Gruppen nach Attributen</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p></td>
+		<td><br/>
+		<img src="../../../Bilder/Boardlet_Filters_Product_Product_Data_Report_EN.png" alt="" style="border: none;" border="0"/><br/>
+		</td>
+	</tr>
+</tbody></table>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die häufigsten Einstellungen auf den Reiter <span class="Bold">Filter</span> 
+ sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+<p class="GUIControl" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="BodyText">timeFrame</p></td>
+		<td><p class="BodyText">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="BodyText">productionArea</p></td>
+		<td><p class="BodyText">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="BodyText">products</p></td>
+		<td><p class="BodyText">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="BodyText">attributesToShow</p></td>
+		<td><p class="BodyText">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="BodyText">groupByIntervalType</p></td>
+		<td><p class="BodyText">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="BodyText">groupByAttributes</p></td>
+		<td><p class="BodyText">NumberArray</p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

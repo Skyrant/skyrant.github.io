@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Individuelles Änderungsprotokoll","type":"item","tilePath":"","description":"","url":"de/Boardlets/01_Framework/Individuelles_Änderungsprotokoll.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

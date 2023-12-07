@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Überblick"]],"2":[["\n"],["\n","In der Stammdatenverwaltung werden Stammdaten verwaltet, \n wie beispielsweise Adressen von Lieferanten, Kostenstellen, Produktbeschreibungen \n etc. Auf diese Stammdaten wird von diversen Modulen zugegriffen.","\n\n\n"]],"3":[["Überblick"]],"id":"61"})

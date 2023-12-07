@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.4.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Systemvoraussetzung</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Systemvoraussetzung">
+        <span>Systemvoraussetzung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Systemvoraussetzung</h1>
+<h2 data-condition="Others:Deutsch"><a name="Hardwarevoraussetzungen" id="Hardwarevoraussetzungen"></a>Hardwarevoraussetzungen</h2>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ein 64-Bit-Prozessor (erkennbar z. B. an der Antwort &quot;x86_64&quot; auf den Befehl &quot;uname -m&quot;)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ausreichend dimensionierte Hardware  (vgl. die Abschnitte 3.2 bis 3.4 der Oracle Anleitung: <a href="">https://docs.oracle.com/database/121/LTDQI/toc.htm#BABBAJBE</a>,). Absolute Minimalvoraussetzungen:</p>
+
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch"><span class="Aufzählungszeichen1">1 GB RAM (2 GB RAM dringend empfohlen)</span></p>
+
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch"><span class="Aufzählungszeichen1">1,5 bis 16 GB Swap-Space (auf der Festplatte), abh</span><span class="Aufzählungszeichen1"><span style="font-family: &#39;Times New Roman&#39;, serif;">ä</span>ngig vom RAM-Ausbau</span></p>
+
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch"><span class="Aufzählungszeichen1">6,4 GB Festplattenplatz f</span><span style="font-family: &#39;Times New Roman&#39;, serif;">ü</span><span class="Aufzählungszeichen1">r Software und Daten zzgl. Festplattenplatz für die Fast Recovery Area, falls eine verwendet wird (Gefasoft-Empfehlung für Legato)</span></p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Softwarevoraussetzungen" id="Softwarevoraussetzungen"></a>Softwarevoraussetzungen</h2>
+<h3 data-condition="Others:Deutsch">Betriebssystem</h3>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">64-Bit-Linux-Betriebssystem mit ausreichend hoher Kernel-Version<br/>
+(für RHEL 6.x vgl. <a href="">http://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7534</a>)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">der Server ist bis auf die Installation des Betriebssystems und einiger üblicher Utilities im Wesentlichen &quot;blank&quot;; das Betriebssystem enthält nur den User root und einen interaktiven Standard-User (z. B. &quot;gefasoft&quot;); insbesondere hat es vorher keine Installation eines Oracle-RDBMS gegeben</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Benutzerzugang zum Server mit dem User root (entweder direkt/interaktiv oder über VNC/X-Window System o. ä.)</p>
+
+<h3 data-condition="Others:Deutsch">Oracle-Spezifika</h3>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">bestimmte Package-, Compiler- und sonstige Software-Anforderungen (vgl. Kapitel 7, <a href="">https://docs.oracle.com/database/121/LTDQI/toc.htm#BABFIDJF</a>), die hier nicht weiter ausgeführt werden</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">die Installationsdateien für Oracle  12cR1 64 Bit</p>
+
+<h2 data-condition="Others:Deutsch"><a name="Netzwerkvoraussetzungen" id="Netzwerkvoraussetzungen"></a>Netzwerkvoraussetzungen</h2>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Internetverbindung</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Eine registrierte Red Hat (oder Oracle Linux) Verbindung wird benötigt. (Der Zugang zu den CentOS-Mirrors ist kostenlos.)</p>
+
+
+
+</body></html>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SapientContext</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SapientContext">
+        <span>SapientContext</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">SapientContext</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Wird als erster Parameter der durch die Sapient Engine 
+ aufgerufenen Funktionen übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte vom Typ SapientContext haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">jsonOut:</p>
+<p class="BodyText" data-condition="Others:Deutsch">JsonWriter. Beschreibung siehe <a href="09_JsonWriter.htm">dort</a>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Gegensatz zu Buchungs-Prozeduren und dergleichen, 
+ für die JSON-RPC bisher vornehmlich verwendet wurde, liefern Daten-Abfragen 
+ sehr viel größere, potentiell riesige Ergebnisse. Die bisherige Implementierung 
+ in der SE arbeitet derzeit so, dass diese Ergebnisse erst im Speicher 
+ aufgebaut und dann erst zum Aufrufer serialisiert werden. Diese Vorgehensweise 
+ ist für Daten-Abfragen nicht brauchbar. Im Einzelnen verläuft die Verarbeitung 
+ eines JSON-RPC-Batch derzeit so:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1. Alle Aufrufe werden aus dem Request geparst und 
+ getrennt nach &quot;notifications&quot; (von denen der Aufrufer kein Ergebnis 
+ erwartet) und &quot;calls&quot; (deren Ergebnis der Aufrufer benötigt) 
+ gemerkt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">2. Der Servlet-Request wird unterbrochen (&quot;startAsync&quot;), 
+ somit kann die Servlet Engine den Thread für andere Abfragen benutzen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">3. Die &quot;calls&quot; werden dem RPC-Threadpool 
+ zur Ausführung übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">4. Die &quot;notifications&quot; werden ebenfalls dem 
+ Threadpool zur Ausführung übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">5. Es wird gewartet, bis von allen &quot;calls&quot; 
+ die Ergebnisse vorliegen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">6. Der Servlet-Request wird reaktiviert (&quot;AsyncContext.getRequest&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">7. Die Ergebnisse aller &quot;calls&quot; werden in 
+ die Antwort serialisiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Normalerweise wird &quot;Result&quot; als Objekt geliefert, 
+ das zum Browser oder Gateway zurückserialisiert wird. Bei großen Ergebnissen 
+ soll das aber quasi als &quot;Stream&quot; passieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn man das aufgerufen hat, darf man von der Prozedur 
+ nichts mehr zurückgeben.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">locale:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt Javascript-Objekte zurück mit Informationen über 
+ die vom Aufrufer eingestellte Sprache.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Eigenschaft kann selbst folgende Eigenschaften 
+ haben:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">tag 
+ (de_DE)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">country 
+ (DE)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">language 
+ (de)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">variant 
+ (ch)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">script 
+ ()</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">countryname 
+ (Germany)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">languagename 
+ (german)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">variantname 
+ (schweitzerdeutsch)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">scriptname 
+ ()</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">locale</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">symbol</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">nativeName</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">sortId</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">locales:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt einen Array mit allen Länderinformationen (Locales), 
+ die im Repository definiert sind. Jede Länderinformation ist ein Objekt 
+ mit folgenden Eigenschaften:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">symbol: 
+ Eindeutiger Name im Repository</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">index: 
+ Der Index in diesem Array, wird von Clients als &quot;Language Index&quot; 
+ verwendet</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">nativeName: 
+ Name dieser Länderinformation in der Originalsprache</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">locale: 
+ Unterobjekt mit den folgenden Eigenschaften:</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">tag: Länderkennzeichnung</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">country: Abgekürzter 
+ Name des Landes</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">language: Abgekürzter 
+ Name der Sprache</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">variant: Abgekürzter 
+ Name der Variante</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">script: Abgekürzter 
+ Name des Skripts</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">countryname: Name des 
+ Landes</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">languagename: Name 
+ der Sprache</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">variantname: Name der 
+ Variante</p>
+<p class="Aufzählung3 Liste3" style="margin-left: 70px; text-indent: -24px;" data-condition="Others:Deutsch">scriptname: Name des 
+ Skripts</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt einen Array von Objekten wie oben beschrieben 
+ zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">logger:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Logger für diesen Aufruf.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">user:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aufrufender Sapient-Benutzer.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte vom Typ SapientContext haben folgende Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">callRProc(name, params)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ruft die Prozedur auf.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getDbCoalesceIndexes(dbname)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt einen Array von Indexen aus dem Wert, der von 
+ jsFunction_getDbLocales(String) zurückgegeben wird und der die lokalisierten 
+ Varianten von DB-Feldern definiert, die in einem verschmolzenen Ausdruck 
+ verwendet werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es sind folgende Parameter möglich:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">schemaname: 
+ Die Datenbank, deren Einstellungen ausgewertet werden sollen</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">langIndex: 
+ Der &quot;Language Index&quot; (Index in jsGet_locales() von dieser Session).</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt einen Array von Objekten wie oben beschrieben 
+ zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getDbLocales(dbname)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Länderinformationen, die von einer bestimmten Datenbank 
+ (einem Schema) unterstützt werden. Array mit Javascript-Objekten wie unter 
+ &quot;locales&quot; beschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es sind folgende Parameter möglich:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">schemaname: Die Datenbank, deren Einstellungen 
+ ausgewertet werden sollen</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt einen Array mit Objekten zurück, die die Länderinformation 
+ enthalten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getDbType(dbname)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert einen String mit dem Datenbank-Typ.</p>
+
+
+</body></html>

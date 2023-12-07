@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Boardlets der Personalzeiterfassung","type":"item","tilePath":"","description":"","url":"de/Boardlets/12_Personalzeiterfassung/Boardlets_der_Personalzeiterfassung.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

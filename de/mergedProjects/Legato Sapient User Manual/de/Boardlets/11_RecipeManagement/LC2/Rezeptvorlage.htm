@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.11.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Rezeptvorlagen</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rezeptvorlagen">
+        <span>Rezeptvorlagen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Rezeptvorlagen</h1>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Allgemeines"></a>Allgemeines</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Im LC2 können für Rezepte Vorlagen angelegt werden. 
+ </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie folgende Punkte: </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Eine Rezeptvorlage deckt die gesamte Struktur 
+	 einer Rezeptur ab, ohne eine andere Verbindung zu anderen Objekten 
+	 (<span style="font-weight: bold;">P_CONNECTIONS</span>,<span style="font-weight: bold;"> 
+	 </span><span style="font-weight: bold; font-size: 11pt;">L_NODES</span><span style="font-size: 11pt;">, </span><span style="font-size: 11pt; font-weight: bold;">VALUES</span><span style="font-size: 11pt;"> etc.) zu haben. </span></p></li>
+	<li><p class="BodyText">Die Rezeptvorlage ist somit unabhängig von 
+	 den Objekten, die den Shopfloor abdecken. Rezepturvorlagen und Rezepte 
+	 werden als Baum mit flexiblen Ebenen strukturiert. </p></li>
+	<li><p class="BodyText">Es wird beispielsweise eine Gruppe (Array) 
+	 von Parametern verwendet, um ein bestimmtes Produkt abzudecken. Hierbei 
+	 erhält die SPS<span style="mso-fareast-language: DE;"> die Parameter 
+	 für alle möglichen Produkte in einem Rezept. Für diesen Anwendungsfall 
+	 ist das Rezept mit Hilfe von Gruppen (Arrays) von Parametern für jedes 
+	 mögliche Produkt strukturiert. Die Anzahl der Produkte (Gruppen im 
+	 Rezept) kann dabei sehr hoch sein. Daher gibt es eine Kopierfunktion 
+	 für Gruppen (Arrays), die dies vereinfachen.</span></p></li>
+	<li><p class="BodyText"><span style="mso-bidi-font-family: &#39;Segoe UI&#39;; 
+									 mso-fareast-font-family: &#39;Times New Roman&#39;;">Neue</span><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; mso-bidi-font-family: &#39;Segoe UI&#39;;"> 
+	 Rezepte werden mit Hilfe einer Rezepturvorlage oder direkt ohne Vorlage 
+	 erstellt. In beiden Fällen werden die entsprechenden Werte (Records 
+	 in der Tabelle </span><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+								 mso-bidi-font-family: &#39;Segoe UI&#39;; font-weight: bold;">RM_ITEM_VALUES</span><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; mso-bidi-font-family: &#39;Segoe UI&#39;;"> 
+	 [siehe Kapitel <a href="Datenmodell.htm">Datenmodell</a>]) automatisch 
+	 angelegt. Wenn ein Element in der Rezepturstruktur entfernt wird, 
+	 wird der entsprechende Wert (Datensatz in der Tabelle </span><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; mso-bidi-font-family: &#39;Segoe UI&#39;; 
+	 font-weight: bold;">RM_ITEM_VALUES </span><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+													 mso-bidi-font-family: &#39;Segoe UI&#39;;">[siehe 
+	 Kapitel <a href="Datenmodell.htm">Datenmodell</a>]</span><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: &#39;Segoe UI&#39;;">) ebenfalls automatisch gelöscht.</span></p></li>
+	<li><p class="BodyText"><span style="mso-bidi-font-family: &#39;Segoe UI&#39;; 
+									 mso-fareast-language: DE;">Wenn ein 
+	 neues Rezept mit Hilfe einer Rezepturvorlage erstellt wird, können 
+	 in diesem Rezept &quot;Standardwerte&quot; gesetzt werden, die auf 
+	 den Standardwerten der Vorlage basieren.</span></p></li>
+	<li><p class="BodyText">Generell wird ein Rezept als JSON-Objekt gespeichert. 
+	 </p></li>
+	<li><p class="BodyText">Mit Hilfe des SCC werden alle Parameter eines 
+	 Rezeptes an die SPS übertragen. </p></li>
+	<li><p class="BodyText">Durch Skripte kann ein Rezept auf Richtigkeit 
+	 und Gültigkeit validiert werden. </p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Im 
+ LC2 können Sie:</span></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="color: #000000;"><p class="BodyText"><span style="mso-fareast-language: DE;">D</span>ie 
+	 Grundstruktur eines Rezeptes definieren.</p></li>
+	<li style="color: #172B4D;"><p class="BodyText"><span style="color: #000000;">SPS-Datentypen 
+	 verwalten, die in Rezepten verwendet werden (Inhalt der Tabelle </span><span style="font-weight: bold; color: #000000;">P_DATA_TYPES [</span><span style="color: #000000;">siehe Kapitel</span> <a href="Datenmodell.htm">Datenmodell</a><span style="color: #000000;">]),</span></p></li>
+	<li style="color: #000000;"><p class="BodyText" style="color: #000000;"><span style="mso-fareast-language: DE;">&quot;Rezepturmodi&quot; verwalten, 
+	 die das Betriebsverhalten von Rezepturen steuern (Inhalt der Tabelle 
+	 </span><span style="mso-fareast-language: DE; font-weight: bold;">RM_RECIPE_MODES 
+	 [</span>siehe Kapitel <a href="Datenmodell.htm">Datenmodell</a>]<span style="mso-fareast-language: DE;">),</span></p></li>
+	<li style="color: #172B4D;"><p class="BodyText"><span style="color: #000000;">die 
+	 &quot;Up-/Download Results&quot; verwalten, die in der Web-GUI angezeigt 
+	 und optional in die SPS-Ebene übertragen werden <br/>
+	(Inhalt der Tabelle </span><span style="font-weight: bold; color: #000000;">RM_UP_DOWNLOAD_RESULTS 
+	 [</span><span style="color: #000000;">siehe Kapitel</span> <a href="Datenmodell.htm">Datenmodell</a><span style="color: #000000;">]),</span></p></li>
+	<li style="color: #000000;"><p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;;"><span style="mso-fareast-language: DE;">Rezepturvorlagen verwalten (anlegen, 
+	 bearbeiten, löschen),</span></p></li>
+	<li style="color: #000000;"><p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;;"><span style="mso-fareast-language: DE;">die Erstellung von Rezepturvorlagen 
+	 durch eine Kopierfunktion für Gruppen (Arrays) vereinfachen,</span></p></li>
+	<li style="color: #000000;"><p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;;"><span style="mso-fareast-language: DE;">neue Rezepte auf Basis einer gespeicherten 
+	 Rezepturvorlage inkl. der Einstellung für &quot;Standardwerte&quot; 
+	 erstellen,</span></p></li>
+	<li style="color: #000000;"><p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;;"><span style="mso-fareast-language: DE;">das Anlegen von Rezepten durch eine 
+	 Kopierfunktion für Gruppen (Arrays) vereinfachen,</span></p></li>
+	<li style="color: #000000;"><p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;; 
+									 mso-fareast-language: DE;">Rezepte 
+	 verwalten (anlegen, bearbeiten, löschen).</p></li>
+	<li style="color: #000000;"><p class="BodyText" style="mso-bidi-font-family: &#39;Segoe UI&#39;; 
+									 mso-fareast-language: DE;">Standardrezeptdaten 
+	 erstellen.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Anlegen_einer_Rezeptvorlage"></a>Anlegen einer Rezeptvorlage</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Es gibt zwei Wege, um eine Rezeptvorlage anzulegen:</p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Durch das <span style="font-weight: bold;">Hinzufügen 
+	 Rezeptvorlage</span>-Dialogfenster.</p></li>
+	<li><p class="BodyText">Durch das <span style="font-weight: bold;">Plus</span>-Symbol 
+	 <span style="color: #ff0000; font-weight: bold;">(1)</span> im <span style="font-weight: bold;">Rezeptvorlagen</span>-Menü im LC2-Hauptbildschirm.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der bevorzugte Weg, eine Rezeptvorlage anzulegen ist 
+ durch das Erstellen einer neuen Zeile im <span style="font-weight: bold;">Rezeptvorlagen</span>-Reiter:<br/>
+</p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Navigieren Sie zu <span class="Bold">Produktionsmanagement</span> 
+	 <img src="../../../../assets/images/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Rezeptverwaltung </span><img src="../../../../assets/images/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Rezeptvorlagen </span><span class="Bold" style="font-weight: normal;">und 
+	 klicken Sie in die leere, weiße Fläche im </span><span class="Bold">Rezeptvorlagen</span><span class="Bold" style="font-weight: normal;">-Reiter.</span></p></li>
+	<li><p class="BodyText">Klicken Sie anschließend auf das <span style="font-weight: bold;">Plus</span>-Symbol 
+	 <span style="font-weight: bold; color: #ff0000;">(1)</span>. </p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch">Hierdurch wird eine neue Zeile mit <span style="font-weight: bold;">ID</span> 
+ <span style="font-weight: bold; color: #ff0000;">(2), </span><span style="font-weight: bold;">Sortiernummer</span> 
+ <span style="font-weight: bold; color: #ff0000;">(3)</span>,<span style="font-weight: bold; 
+	 color: #ff0000;"> </span>usw. generiert:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Rezeptvorlage_anlegen_LC2_DE.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Im <span style="font-weight: bold;">Rezeptvorlagen</span>-Reiter 
+ des LC2 können Sie auf die Elemente der Rezeptvorlage zugreifen, in dem 
+ Sie die orangenen Balken anklicken und mit gedrückter Maustaste das Fenster 
+ nach oben ziehen. </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Reiter_Rezeptvorlage_LC2_DE.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie die folgende Tabelle mit der Erklärung 
+ der einzelnen <span style="font-weight: bold;">Parameter der Rezeptvorlage</span>:</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="78.094%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 20.868%;"/>
+	<col style="width: 79.132%;"/>
+	</colgroup><tbody><tr style="height: 32px;">
+		<td bgcolor="#C0C0C0"><p class="BodyText">Einzelne Parameter der 
+		 Rezeptvorlage</p></td>
+		<td bgcolor="#C0C0C0"><p class="BodyText">Information</p></td>
+	</tr>
+	<tr style="height: 72px;">
+		<td><p class="BodyText">ID</p></td>
+		<td><p class="BodyText">Fortlaufende Zahl. Wird beim Anlegen einer 
+		 neuen Rezeptvorlage automatisch generiert. In der Datenbank (serverseitig) 
+		 ist eine Sequenz definiert, die die ID vorgibt.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Rezeptvorlage</p></td>
+		<td><p class="BodyText">Name der im oberen Feld vergebenen Rezeptvorlage.</p></td>
+	</tr>
+	<tr style="height: 25px;">
+		<td><p class="BodyText">Parent</p></td>
+		<td><p class="BodyText">Beschreibt eine Beziehung (z.B. zwischen 
+		 Rezeptvorlagen und Elementen), bei der es ein übergeordnetes Objekt 
+		 gibt. Ein Objekt steht sozusagen unterhalb eines anderen Projektes 
+		 (Parent -&gt; Child). Durch die Angabe eines Parent kann eine 
+		 Referenzierung gemacht werden.<br/>
+		<br/>
+		<br/>
+		Siehe nachstehende Abbildung zur Veranschaulichung des Parent-Konzepts 
+		 bei Rezeptvorlagen.<br/>
+		</p></td>
+	</tr>
+	<tr style="height: 112px;">
+		<td><p class="BodyText">Name (de)<br/>
+		Name (en)<br/>
+		Name (es)<br/>
+		Name (fr)<br/>
+		Name (nl)</p></td>
+		<td><p class="BodyText">Name des Rezepts in verschiedenen Sprachen.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Sortiernummer</p></td>
+		<td><p class="BodyText">Wird automatisch vergeben (fortlaufende 
+		 Erhöhung in 10er Schritten).</p></td>
+	</tr>
+	<tr style="height: 72px;">
+		<td><p class="BodyText">JSON Path</p></td>
+		<td><p class="BodyText">JSON Path wird genutzt, um in standardisierter 
+		 Form Elemente eines JSON-Objektes abzufragen. Von JSON Path werden 
+		 Pfadausdrücke verwendet, um (verschachtelte) Elemente und Arrays 
+		 in einem JSON-Dokument zu navigieren.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Datentyp</p></td>
+		<td><p class="BodyText">Siehe Abschnitt <a href="#Datentypen">Datentyp</a>.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Byteanzahl (variabel)</p></td>
+		<td><p class="BodyText">Für die Plausibilitätsprüfung relevant. 
+		 <br/>
+		Anhand einer Reihenfolge-Kontrolle kann man durch Zahlen prüfen, 
+		 ob das JSON-Objekt gültig ist.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Byteanzahl (gesamt)</p></td>
+		<td><p class="BodyText">Für die Plausibilitätsprüfung relevant. 
+		 <br/>
+		Anhand einer Reihenfolge-Kontrolle kann man durch Zahlen prüfen, 
+		 ob das JSON-Objekt gültig ist.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Einheit</p></td>
+		<td><p class="BodyText">Maßeinheit. Eine zugrunde gelegte Größe.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Defaultwert (bool)</p></td>
+		<td><p class="BodyText">Bestimmter Boolean. Bei der Neuanlage einer 
+		 Rezeptvorlage ist der Wert NULL festgelegt. Der bestimmte Boolean 
+		 wird an die Steuerung kommuniziert.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Defaultwert (num)</p></td>
+		<td><p class="BodyText">Bestimmter numerischer Wert. Bei der Neuanlage 
+		 einer Rezeptvorlage ist der Wert NULL festgelegt. Der bestimmte 
+		 numerische Defaultwert wird an die Steuerung kommuniziert.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Defaultwert (str)</p></td>
+		<td><p class="BodyText">Bestimmter Default-String. Bei der Neuanlage 
+		 einer Rezeptvorlage ist der Wert NULL festgelegt. Der bestimmte 
+		 Default-String wird an die Steuerung kommuniziert.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Value Pattern</p></td>
+		<td><p class="BodyText">Formatierung von Werten für die Anzeige. 
+		 Gibt somit an, wie bestimmte Werte dargestellt werden.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Arraylänge (min)</p></td>
+		<td><p class="BodyText">Eingrenzender Wertebereich. Hier: Minimale 
+		 Länge eines Arrays.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Arraylänge (max)</p></td>
+		<td><p class="BodyText">Eingrenzender Wertebereich. Hier: Maximale 
+		 Länge eines Arrays.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Lookup-Tabelle</p></td>
+		<td><p>Definition, die angibt, auf welche Tabelle referenziert 
+		 werden soll.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Lookup - Anzeigespalte</p></td>
+		<td><p class="BodyText">Definition, die angibt, auf welche Anzeigespalte 
+		 referenziert werden soll.</p>
+		<p> </p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Lookup - Wertspalte</p></td>
+		<td><p class="BodyText">Definition, die angibt, auf welche Wertespalte 
+		 referenziert werden soll.</p>
+		<p> </p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Lookup - Filterausdruck</p></td>
+		<td><p class="BodyText">Definition, die angibt, auf welchen Filterausdruck 
+		 referenziert werden soll.</p>
+		<p> </p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Lookup - Eingabe ermöglichen</p></td>
+		<td><p class="BodyText">Definition, die angibt, auf welche &quot;Eingabe 
+		 ermöglichen&quot; referenziert werden soll.</p>
+		<p> </p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Lookup - Abfrage (JSON)</p></td>
+		<td><p class="BodyText">Definition, die angibt, auf welche Tabelle 
+		 referenziert werden soll.</p>
+		<p> </p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Bitflag-Wert</p></td>
+		<td><p class="BodyText" style="line-height: 107%; color: #222222; 
+				 background-color: #ffffff; font-size: 11pt;"><span style="background: white;">Mit 
+		 Bitflags kann man mehrere Zustände in einer einzigen Zahl unterbringen. 
+		 Von Vorteil ist dies bei Rückgabewerten von Funktionen.</span></p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Wertbereich - Min</p></td>
+		<td><p class="BodyText">Eingrenzender Bereich, damit nur bestimmte 
+		 Werte eingegeben werden können.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Wertbereich - Max</p></td>
+		<td><p class="BodyText">Eingrenzender Bereich, damit nur bestimmte 
+		 Werte eingegeben werden können.</p></td>
+	</tr>
+	<tr style="height: 32px;">
+		<td><p class="BodyText">Erw. Eigenschaften</p></td>
+		<td><p class="BodyText">Möglichkeit, Einschränkungen für die Benutzeroberfläche 
+		 einzugeben.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Parent_Rezeptvorlage_DE.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Gehen Sie wie folgt vor, wenn Sie alternativ über das 
+ <span style="font-weight: bold;">Hinzufügen Rezeptvorlage</span>-Dialogfenster 
+ eine neue Rezeptvorlage hinzufügen möchten:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Navigieren Sie zu <span class="Bold">Produktionsmanagement</span> 
+	 <img src="../../../../assets/images/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Rezeptverwaltung </span><img src="../../../../assets/images/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Rezeptvorlagen</span><span class="Bold" style="font-weight: normal;"> 
+	 und klicken mit der rechten Maustaste auf </span><span class="Bold">Rezeptvorlagen</span><span class="Bold" style="font-weight: normal;">. </span></p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold" style="font-weight: normal;">Im 
+ sich öffnenden Dialogfenster können Sie Werte für die neue Rezeptvorlage 
+ angeben.</span></p>
+<p style="font-weight: normal;" data-condition="Others:Deutsch"><span class="Bold" style="font-weight: normal;"><img src="../../../Bilder/Rezept_anlegen.png" alt="" style="border: none;" border="0"/></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie folgende Hinweise beim Ausfüllen des Dialogfensters:</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="45.653%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 24.679%;"/>
+	<col style="width: 75.321%;"/>
+	</colgroup><tbody><tr>
+		<td bgcolor="#C0C0C0"><p class="BodyText">Rezeptwert</p></td>
+		<td bgcolor="#C0C0C0"><p class="BodyText">Information</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">ID</p></td>
+		<td><p class="BodyText">Fortlaufende Zahl. Wird beim Anlegen einer 
+		 neuen Rezeptvorlage automatisch generiert. In der Datenbank (serverseitig) 
+		 ist eine Sequenz definiert, die die ID vorgibt.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Symbol</p></td>
+		<td><p class="BodyText">Muss selbst vergeben werden.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Sortiernummer</p></td>
+		<td><p class="BodyText">Wird per Default in 10er Schritten fortlaufend 
+		 erweitert.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Name (de)<br/>
+		Name (en)<br/>
+		Name (es)<br/>
+		Name (fr)<br/>
+		Name (nl)</p></td>
+		<td><p class="BodyText">Name des Rezepts in verschiedenen Sprachen, 
+		 z.B. Deutsch</p>
+		<p class="BodyText">(kann variieren).</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Beschreibung (de)</p>
+		<p class="BodyText">Beschreibung (en)</p>
+		<p class="BodyText">Beschreibung (es)</p>
+		<p class="BodyText">Beschreibung (fr)</p>
+		<p class="BodyText">Beschreibung (nl)</p></td>
+		<td><p class="BodyText">Beschreibung des Rezepts in verschiedenen 
+		 Sprachen, z.B. Deutsch</p>
+		<p class="BodyText">(kann variieren).</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Byteanzahl</p></td>
+		<td><p class="BodyText">Wichtig bei Plausibilitätsprüfung.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezept_abrufen_und_bearbeiten"></a>Rezept abrufen und bearbeiten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Rezepte, die einer Rezeptvorlage angehören, 
+ können im Hauptfenster des LC2 abgerufen und bearbeitet werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Wählen Sie hierzu im Hauptfenster des LC2 eine 
+	 <span style="font-weight: bold;">Rezeptvorlage</span> <span style="font-weight: bold; 
+	 color: #ff0000;">(1)</span> aus.</p></li>
+	<li><p class="BodyText">Wählen Sie im Fenster des unteren Bereichs 
+	 (großgezogen durch den orangenen Balken) zunächst den Reiter <span style="font-weight: bold;">Elemente</span> <span style="font-weight: bold; 
+														 color: #ff0000;">(2)</span> 
+	 aus.</p></li>
+	<li><p class="BodyText">Wählen Sie in diesem Reiter anschließend das 
+	 jeweilige Element aus.</p></li>
+	<li><p class="BodyText">Wählen Sie im Reiter Rezepte das gewünschte 
+	 <span style="font-weight: bold;">Rezept</span> <span style="font-weight: bold; 
+															 color: #ff0000;">(3) 
+	 </span>aus.</p></li>
+	<li><p class="BodyText">Sie können das markierte Rezept abschließend 
+	 bearbeiten <span style="font-weight: bold; color: #ff0000;">(4)</span>.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Rezeptvorlagen_Elemente_Rezepte_LC2_DE.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="font-size: 11pt;" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie das Kapitel <a href="../Allgemeines_(Spezifikation)/Rezepte/Rezept.htm#Rezept_anlegen">Rezepte</a>, 
+ um für das Anlegen von Rezepten weitere Details zu erhalten. Die Definition 
+ der einzelnen Parameter des Reiters Rezepte können Sie ebenfalls im Kapitel 
+ <a href="../Allgemeines_(Spezifikation)/Rezepte/Rezept.htm#Rezept_anlegen">Rezepte</a> 
+ abrufen.</p>
+<h2 data-condition="Others:Deutsch"><a id="Datentypen"></a>Datentypen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Elemente der Rezeptvorlagen entsprechen verschiedenen 
+ Datentypen. Durch die Eingrenzung des Datentyps wird sichergestellt, dass 
+ die richtige Eingabe erfolgt, d.h. bei bestimmten Rezeptparametern darf 
+ nur eine Ganzzahl oder eine Zeichenkette angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Generell bilden die Datentypen die Grundlage für die 
+ Informationen aus der Steuerung. Für die Steuerung müssen die Datentypen 
+ angepasst sein, da diese die Grundstruktur der Datenübertragung darstellen. 
+ Der SCC überprüft, ob die Datentypen in der SPS und in Legato Sapient 
+ gleich sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Datentyp_Übersicht.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="70.047%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.364%;"/>
+	<col style="width: 87.636%;"/>
+	</colgroup><tbody><tr>
+		<td bgcolor="#C0C0C0"><p class="BodyText">Datentyp</p></td>
+		<td bgcolor="#C0C0C0"><p class="BodyText">Information</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Array</p></td>
+		<td><p class="BodyText">Liste/Gruppe von (Struktur-) Elementen</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Boolean</p></td>
+		<td><p class="BodyText">wahr/falsch (true/false)</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Byte</p></td>
+		<td><p>Einheit von 8 Binärzeichen. Byte = 8 Bit. <br/>
+		Bit hat den Signalzustand 1 oder 0.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Doppelte Ganzzahl</p></td>
+		<td><p class="BodyText">INT (kann dual bzw. binär dargestellt werden)</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Doppelwort binär</p></td>
+		<td><p>Wortlänge entspricht der Anzahl von 32 Binärzeichen. Doppelwort 
+		 hat die Größe von 2 Worten (=DWORD), 4 Byte oder 32 Bit.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Ganzzahl</p></td>
+		<td><p class="BodyText">Zahl ohne Nachkommastellen</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Gleitkommazahl</p></td>
+		<td><p class="BodyText">Wird auch Fließkommazahl genannt. Zahl 
+		 wird durch Exponentialschreibweise dargestellt.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Lange Ganzzahl</p></td>
+		<td><p class="BodyText">Umfasst 4 Bytes.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Langwort binär</p></td>
+		<td><p class="BodyText">Umfasst 64 Bit (= Lword).</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Wort</p></td>
+		<td><p class="BodyText">Bezeichnet eine festgelegte Anzahl von 
+		 Bits oder Bytes.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Zeichenkette</p></td>
+		<td><p class="BodyText">Komplexer Datentyp mit Methoden und Eigenschaften. 
+		 Zeichenkette (Zeichenfolge, Zeichenreihe oder String) = Liste 
+		 von char-Werten bzw. eine endliche Abfolge von Zeichen.</p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Bearbeiten_einer_Rezeptvorlage"></a>Bearbeiten einer Rezeptvorlage</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Im LC2 kann eine Rezeptvorlage wie folgt abgerufen 
+ und bearbeitet werden:</p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Navigieren Sie im Navigationsbaum auf <span style="font-weight: bold;">Rezeptverwaltung</span> und auf <span style="font-weight: bold;">Rezeptvorlagen</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(1)</span>.</p></li>
+	<li><p class="BodyText">Klicken Sie auf eine <span style="font-weight: bold;">Rezeptvorlage</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(2)</span>.</p></li>
+	<li><p class="BodyText">Im sich öffnenden Baummenü können Sie auf <span style="font-weight: bold;">Elemente</span> <span style="color: #ff0000; 
+														 font-weight: bold;">(3)</span> 
+	 klicken. </p></li>
+	<li><p class="BodyText">Dort können Sie die einzelnen <span style="font-weight: bold;">Parameter</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(4)</span> anwählen.</p></li>
+	<li><p class="BodyText">Unter <span style="font-weight: bold;">Rezepte</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(5)</span> können 
+	 Sie auf die jeweiligen Rezepte innerhalb der <span style="font-weight: bold;">Rezeptvorlage</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(2)</span> zugreifen.</p></li>
+	<li><p class="BodyText">Bearbeiten Sie einzelne Werte im <span style="font-weight: bold;">Hauptbildschirm 
+	 des LC2</span> <span style="color: #ff0000; font-weight: bold;">(6)</span>.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/LC2_Rezeptvorlagen_Navigation_DE.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Ein Rezept wird im LC2 in den <span style="font-weight: bold;">Rezeptvorlagen</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(1)</span> in einer 
+	 Baumstruktur mit flexiblen Ebenen strukturiert.</p></li>
+	<li><p class="BodyText">Für die Struktur eines <span style="font-weight: bold;">Rezepts</span> 
+	 <span style="color: #ff0000; font-weight: bold;">(2)</span> gilt Folgendes 
+	 (siehe Rezeptprozedur <span style="font-weight: bold;">RM_RECIPE_ITEMS):</span></p></li>
+	<ul style="list-style: disc;">
+		<li><p class="BodyText">Die Struktur eines Rezeptes ist eine Liste 
+		 von Rezeptelementen (auch &quot;Zutaten&quot; genannt).</p></li>
+		<li><p class="BodyText">Diese Struktur ist geordnet.</p></li>
+		<li><p class="BodyText">Jedes Rezept hat einen Typ als &quot;SPS-Datentypen&quot; 
+		 definiert, welche in den Rezeptelementen verwendet werden (Inhalt 
+		 der Tabelle <span style="font-weight: bold;">P_DATA_TYPES</span>).</p></li>
+		<li><p class="BodyText">Rezeptelemente können in Gruppen angeordnet 
+		 werden, die man zwischen den Rezepten kopieren kann.</p></li>
+	</ul>
+	<li><p class="BodyText">Ein Rezept hat einen Modus &quot;Recipe Mode&quot;, 
+	 der das Betriebsverhalten von Rezepten steuert (Inhalt der Tabelle 
+	 <span style="font-weight: bold;">RM_RECIPE_MODES</span>).</p></li>
+	<li><p class="BodyText">Dieser &quot;Recipe Modus&quot; für ein neues 
+	 Rezept wird auf &quot;0&quot; gesetzt (Upload SPS &gt; MES), und kann 
+	 vom Anwender geändert werden.</p></li>
+	<li><p class="BodyText">Ein Rezept ist unabhängig von den Objekten, 
+	 die den Shopfloor abdecken.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="font-size: 11pt;" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Werte aller Rezeptelemente werden aus den SPSen 
+ importiert, wenn sie von Sapient ausgelöst werden. Sie werden daher nicht 
+ in LC2 konfiguriert.</p>
+
+
+</body></html>

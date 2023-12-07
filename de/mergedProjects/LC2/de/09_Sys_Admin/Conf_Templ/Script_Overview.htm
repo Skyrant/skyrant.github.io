@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Skript-Überblick</title>
+<link rel="StyleSheet" href="../../Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Skript-Überblick">
+        <span>Skript-Überblick</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Skript-Überblick</h2>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für jede Projektierungsvorlage wird ein Skript erstellt, 
+ mit dem der TemplateHelper konfiguriert wird. Dieses Script muss den Aufruf 
+ &quot;initActions&quot; beinhalten:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">function initActions(context, args) {</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">var th = args.templateHelper; </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">var action1 = th.addAction(&quot;con1&quot;, &quot;Connection&quot;, 
+ &quot;p_connections&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action1.addField(&quot;connection_symbol&quot;, th.getParamValue(&quot;akz&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action1.addField(&quot;name_0&quot;, th.getParamValue(&quot;plcname&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action1.addField(&quot;module&quot;, 9, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action1.addField(&quot;default_node&quot;, th.getParamValue(&quot;default_node&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">var action2 = th.addAction(&quot;var1&quot;, &quot;Variable 
+ 1&quot;, &quot;p_values_config&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action2.addField(&quot;connection&quot;, action1, false)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action2.addField(&quot;value_symbol&quot;, th.getParamValue(&quot;akz&quot;) 
+ + &quot;.CNT0001&quot;, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action2.addField(&quot;value_format&quot;, 1, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action2.addField(&quot;value_type&quot;, 2, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action2.addField(&quot;name_0&quot;, &quot;Counter 
+ 1&quot;, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">var action3 = th.addAction(&quot;var2&quot;, &quot;Variable 
+ 2&quot;, &quot;p_values_config&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action3.addField(&quot;connection&quot;, action1, false)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action3.addField(&quot;value_symbol&quot;, th.getParamValue(&quot;akz&quot;) 
+ + &quot;.CNT0002&quot;, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action3.addField(&quot;value_format&quot;, 1, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action3.addField(&quot;value_type&quot;, 2, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">action3.addField(&quot;name_0&quot;, &quot;Counter 
+ 2&quot;, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der TemplateHelper (in der Sapient Engine in Java implementiert) 
+ stellt folgende Hauptfunktionen zur Verfügung:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Erstellen einer Vorlageninstanz</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Aktualisieren einer Vorlageninstanz</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Löschen einer Vorlageninstanz</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Prüfen, welche Änderungen sich bei der Ausführung 
+ o.g. Funktionen ergeben würden</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Wird eine dieser Funktionen aufgerufen, sucht der TemplateHelper 
+ das passende Vorlagenscript (dieses ist im Feld CT_TEMPLATES.PROPERTIES 
+ hinterlegt) und ruft dessen &quot;initActions&quot;-Funktion auf. Über 
+ den &quot;context&quot; steht dort eine Referenz auf den TemplateHelper 
+ zur Verfügung. Dort werden ein oder mehrere Aktionen (korrespondierende 
+ Klasse TemplateAction) angelegt. Jede Aktion entspricht einer Datarow 
+ (normalerweise ein Eintrag in den Legato-Konfigurationstabellen). Der 
+ JsTemplateHelper stellt ein Host-Objekt zur Verfügung, um den TemplateHelper 
+ im Script verwenden zu können. Dieser bietet zum Anlegen von Aktionen 
+ die Methode TemplateHelper.addAction an:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">templateElementKey: eindeutige Kennung (als String) 
+ innerhalb des Templates</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">description: kurze Beschreibung (wird z.B. im 
+ Log zur Klartextanzeige einer Aktion verwendet)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">tableName: Name der Zieltabelle</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für jede Aktion wird angegeben, welche Tabellenfelder 
+ durch die Aktion beschrieben werden. Parameter von TemplateAction.addField:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">fieldName: Feldname</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">newValue: gewünschter Feldwert - in den meisten 
+ Fällen ein fester Wert. Soll das Feld auf einen Datensatz verweisen, der 
+ zuvor innerhalb der Vorlage anhand einer Aktion definiert ist, wird die 
+ gewünschte Aktion als Feldwert zugewiesen. Diese Referenz wird dann bei 
+ Bedarf intern aufgelöst und auf die tatsächliche ID des Zieldatensatzes 
+ gesetzt.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">preventUpdate: false --&gt; der Feldwert wird 
+ generell wie gewünscht gesetzt / true --&gt; der Wert wird nur beim Anlegen 
+ des Zieldatensatzes gesetzt, bei der späteren Aktualisierung des Vorlagenelements 
+ werden diese Felder nicht mehr überschrieben, d.h. in der Zwischenzeit 
+ manuell geänderte Feldwerte (typisch: Sortierreihenfolge von Elementen) 
+ bleiben erhalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Aktionen werden dann zur Ausführung der gewünschten 
+ Funktion zugrunde gelegt.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only">Erweiterte Eigenschaften (ATTR_JSONB)</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Es wird empfohlen, erweiterte Eigenschaften in Projektierungsvorlagen 
+ genauso wie Felder zu beschreiben bzw. hinzuzufügen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">function initActions(context, args) {</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">var th = args.templateHelper; </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">var actNode = th.addAction(&quot;node&quot;, &quot;Logical 
+ Structure Node&quot;, &quot;l_nodes&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;parent&quot;, th.getParamValue(&quot;parent_node&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;node_level&quot;, 4, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;factor&quot;, 1, false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;offset_sec&quot;, 0, false); 
+ </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;short_name&quot;, th.getParamValue(&quot;short_name&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;name_0&quot;, th.getParamValue(&quot;name&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;name_1&quot;, th.getParamValue(&quot;name&quot;), 
+ false);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">actNode.addField(&quot;sc1359_int&quot;, 17, false); 
+  // Attribute</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Sapient Engine</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Funktionalität für die Verwaltung von Projektierungs-Vorlagen 
+ und Vorlageninstanzen ist im Namespace de.gefasoft.sapient.sapieng.util.configurationtemplates 
+ (SeEngine) implementiert:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">TemplateHelper: implementiert die Hauptfunktionen 
+ zum Anlegen/Aktualisieren (inkl. Überprüfen der Änderungen) und Löschen 
+ von Instanzelementen</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">TemplateAction: Beschreibt eine einzelne Instanziierungs-Aktion 
+ (Insert/Update in beliebige Konfigurationstabellen)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">TemplateField: Felder, die innerhalb einer Aktion 
+ aktualisiert werden</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die entsprechenden Wrapper für die Verwendung des TemplateHelper 
+ im Rhino-Script finden sich im Namespace de.gefasoft.sapient.sapieng.exec.js.host 
+ (SeEngine):</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">JsTemplateHelper</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">JsTemplateAction</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für den Aufruf aus externen Programmen werden die Hauptfunktionen 
+ des TemplateHelper via RPC bereitgestellt. Klasse Template.java in de.gefasoft.sapient.db.configurationtemplates 
+ (SeProcs). Aufrufe:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">deleteInstance</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">evalDeleteInstance</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">evalUpdateInstance</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">updateInstance</p>
+
+
+</body></html>

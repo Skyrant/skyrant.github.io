@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Meldeklassen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: purple;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Meldeklassen">
+        <span>Meldeklassen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Meldeklassen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Werksverwaltung | Meldungsmanagement | Meldeklassen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Durch die Zuordnung von Meldeklassen wird die Darstellung 
+ und Verarbeitung einer Meldung bestimmt. Hier können die Meldeklassen 
+ bearbeitet und neue Klassen hinzugefügt werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Eigenschaft</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer 
+		 der Klasse.</p>
+		<p class="TabellenInhalt">Siehe auch weiter unten &quot;Reservierte 
+		 System-Meldeklassen&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Frei wählbarer Name der Meldeklasse.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung der Meldeklasse.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Quittierart</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Quittierart 
+		 für die Meldeklasse. Die Quittierart legt fest, unter welchen 
+		 Voraussetzungen die Meldung abgeschlossen wird. Folgende Quittierarten 
+		 sind standardmäßig vorhanden:</p>
+		<p class="TabellenInhalt">·         Quittiert 
+		 &amp; Protokoll: die Meldung wird mit der manuellen Quittierung 
+		 in der Übersicht im WebClient abgeschlossen. Danach wird die Meldung 
+		 im Archiv angezeigt.</p>
+		<p class="TabellenInhalt">·         Protokoll: 
+		 die Meldung erscheint nie in der Aktuellansicht, sondern wird 
+		 automatisch abgeschlossen und im Archiv angezeigt. Die Melde-Dauer 
+		 ist 0.</p>
+		<p class="TabellenInhalt">·         Gehend: 
+		 die Meldung wird in der Übersicht angezeigt. Mit dem Gehend-Telegramm 
+		 wird sie abgeschlossen und ins Archiv verschoben.</p>
+		<p class="TabellenInhalt">·         Quittiert: 
+		 die Meldung wird mit der manuellen Quittierung im WebClient abgeschlossen 
+		 und ins Archiv geschoben.</p>
+		<p class="TabellenInhalt">·         Quittiert 
+		 &amp; Gehend: die Meldung muss im WebClient quittiert (abgeschlossen) 
+		 werden und das Gateway muss ein Gehend-Ereignis übermitteln. Die 
+		 Reihenfolge der beiden Ereignisse ist beliebig. Danach wird die 
+		 Meldung im Archiv angezeigt.</p>
+		<p class="TabellenInhalt">·         Quittiert 
+		 nach Gehend: für die Meldung muss vom Gateway ein Gehend-Ereignis 
+		 übermittelt werden. Die zusätzliche manuelle Quittierung durch 
+		 den Anwender im WebClient ist erst anschließend möglich. Bis diese 
+		 erfolgt ist, bleibt die Meldung in der Übersicht. Nach der manuellen 
+		 Quittierung wird die Meldung abgeschlossen und ins Archiv verschoben.</p>
+		<p class="TabellenInhalt">·         Quittierung 
+		 optional: Meldung kann quittiert werden. Quittierung ist aber 
+		 nicht zwingend erforderlich. Die Meldung wird mit dem Gehend-Telegramm 
+		 ins Archiv verschoben und kann ggf. dort quittiert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Priorität (optional)</p></td>
+		<td><p class="TabellenInhalt">Priorität der Meldeklasse. Wird hier 
+		 ein Eintrag vorgenommen, so wird dieser unter &quot;Funkruf&quot; 
+		 bei der Fertigungsstruktur als &quot;Vererbte Priorität&quot; 
+		 angezeigt und kann dort knotenspezifisch überschrieben werden. 
+		 Die Priorität beeinflusst zudem, ob diese Meldung unterdrückt 
+		 wird, wenn in der Aktuellansicht der Filter auf &quot;Erstwert 
+		 nach Priorität&quot; gesetzt ist. Je niedriger die Zahl, desto 
+		 höher die Priorität (d.h. 1 = höchste Prio). Wird nichts eingetragen, 
+		 wird von niedrigster Prio ausgegangen. Außerdem wird die Prio 
+		 der Meldeklasse für Berechnete Werte verwendet.</p>
+		<p class="TabellenInhalt" data-condition="Others:Sapient_only">Die 
+		 Priorität der Meldung beeinflusst auch, wie der Knoten im Layout-Boardlet 
+		 eingefärbt wird, an dem die Meldung ansteht. Für Prio 1-9 wird 
+		 die im Theme definierte Farbe für &quot;error&quot; verwendet, 
+		 von 10-19 die Farbe für &quot;warning&quot;, &gt;= 20 die Farbe 
+		 für &quot;info&quot;. Bei 0 oder NULL erfolgt keine Einfärbung 
+		 des Knotens im Layout.</p></td>
+	</tr>
+	
+	
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Vererbungsrichtung</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Richtung, 
+		 in der Meldungen in der Fertigungsstruktur vererbt werden (Meldungen 
+		 eines Knotens auch für über- oder untergeordnete Knoten anzeigen).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Hierarchiestufe (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Hierarchiestufe, 
+		 bis zu der eine Vererbung von Meldungen erfolgt (um z.B. Meldungen 
+		 nicht komplett bis zur Wurzel zu vererben, sondern nur bis zu 
+		 einer bestimmten Knotenebene).</p></td>
+	</tr>
+	
+	
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Kommentar erf. (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird der Bediener 
+		 beim Quittieren der Meldung im WebClient aufgefordert, einen zusätzlichen 
+		 Kommentar zur Meldungsursache einzugeben. Der Kommentar wird zusammen 
+		 mit der Meldung im Meldearchiv gespeichert (nur sinnvoll bei quittierpflichtigen 
+		 Meldungen).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt"><span data-condition="Others:Sapient_only">Funkruf-Art</span> 
+		 (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Weiterleitungsart 
+		 für den Funkruf oder eine andere, wie Funkrufsysteme parametrierte 
+		 weiterführende Behandlung der Meldungen.</p>
+		<p class="TabellenInhalt">Folgende Arten sind standardmäßig wählbar:</p>
+		<p class="TabellenInhalt">·         Keine 
+		 Weiterleitung: Meldungen werden nicht an unter Funkruf-Empfänger 
+		 parametrierte Module weitergeleitet.</p>
+		<p class="TabellenInhalt">·         Erstwerterkennung: 
+		 nur die Erstwert-Meldung wird an einen Funkruf-Empfänger weitergeleitet.</p>
+		<p class="TabellenInhalt">·         generelle 
+		 Weiterleitung: alle Meldungen dieser Klasse werden an einen Funkruf-Empfänger 
+		 weitergeleitet.</p>
+		<p class="TabellenInhalt">·         Erstwertverarb. 
+		 innerhalb der Klasse: nur die Erstwert-Meldung innerhalb der Klasse 
+		 wird an einen Funkruf-Empfänger weitergeleitet.</p>
+		<p class="TabellenInhalt">·         Erstwertverarbeitung 
+		 über Priorität: nur die Erstwert-Meldung der Priorität wird an 
+		 einen Funkruf-Empfänger weitergeleitet.</p>
+		<p class="TabellenInhalt">·         Sofortige 
+		 Weiterleitung: Meldungen werden sofort an einen Funkruf-Empfänger 
+		 weitergeleitet.</p>
+		<p class="TabellenInhalt"> </p>
+		<p class="TabellenInhalt">Unter Anwendungsstruktur | Datenaustausch 
+		 | Datenaustausch-Module | Verbindungen | Meldungsdefinitionen 
+		 können die einzelnen Meldungen bei Bedarf mit einer anderen Parametrierung 
+		 überschrieben werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt" data-condition="Others:Sapient_only">KPI-relevant</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt" data-condition="Others:Sapient_only">Checkbox. Wenn aktiv, werden Meldungen 
+		 dieser Klasse bei der KPI-Berechnung berücksichtigt. Der Verfügbarkeitstyp 
+		 der Meldung wird über die Meldeart festgelegt.</p>
+		<p class="TabellenInhalt" data-condition="Others:Sapient_only">Diese 
+		 Spalte wird nur angezeigt, wenn der Systemparameter -43 = 1 ist.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt" data-condition="Others:Sapient_only">Verfügbarkeits-Typ</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt" data-condition="Others:Sapient_only"><span>Lookup-Liste zur Auswahl eines 
+		 Verfügbarkeits-Typs. Gibt an, wie Meldungen dieser Klasse bei 
+		 der KPI-Berechnung berücksichtigt werden. </span></p>
+		<p class="TabellenInhalt" data-condition="Others:Sapient_only">Diese 
+		 Spalte wird nur angezeigt, wenn der Systemparameter -43 = 0 ist.</p></td>
+	</tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">CSS Style</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">CSS 
+		 Style zur Formatierung von Meldungen. Für jeden Status einer Meldung 
+		 kann eine Schriftart, eine Farbe, ein Symbol etc. definiert werden. 
+		 Alle verfügbaren States, Styles und Icons sind unter &quot;<a href="AL_Formats.htm">Formatierung</a>&quot; beschrieben.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+
+
+
+
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Reservierte System-Meldeklassen</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Meldeklassen mit negativer ID sind vom System reserviert 
+ und dürfen nicht verändert werden. Bei einer Standardinstallation werden 
+ auch die IDs 0, 1 und 2 mit ausgeliefert, können aber auch projektspezifisch 
+ geändert werden. In diesem Fall ist bei Updates sicherzustellen, dass 
+ die projektspezifischen Änderungen nicht ungewollt durch den Standard 
+ überschrieben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Negative Meldeklassen-IDs korrespondieren mit den Verbindungs-IDs 
+ der Datenquelle System, der die Meldungen beim Auftreten zugeordnet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">ID = 0 ist für die Klasse unbekannte Meldung reserviert 
+ und darf nicht verändert werden. Diese Klasse wird Meldungen zugeordnet, 
+ deren Meldungsnummer nicht in den Meldungsdefinitionen vorhanden ist. 
+ Die Meldung wird automatisch als nicht parametriert angelegt</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die reservierten Klassen sind:</p>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="73"/>
+	<col width="1085"/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Klassen-ID</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-13</p></td>
+		<td><p class="TabellenInhalt">Puffer-Laufzeitüberwachung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-12</p></td>
+		<td><p class="TabellenInhalt">Überwachung AppEngine</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-11</p></td>
+		<td><p class="TabellenInhalt">TPM Wartungsmeldung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-10</p></td>
+		<td><p class="TabellenInhalt">Rezepte</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-9</p></td>
+		<td><p class="TabellenInhalt">Überwachung Daemon</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-8</p></td>
+		<td><p class="TabellenInhalt">Kalenderpflege</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-7</p></td>
+		<td><p class="TabellenInhalt">Zyklische Meldung: Ein Gateway meldet, 
+		 dass von einer Verbindung eine sehr hohe Anzahl Meldungen (quasi 
+		 zyklisch) auftritt und die Weiterleitung der Meldungen an die 
+		 Datenbank aus Performancegründen temporär unterdrückt wurde</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-6</p></td>
+		<td><p class="TabellenInhalt">Unterer Grenzwert (Alarmgrenze) einer 
+		 Variablen unterschritten</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-5</p></td>
+		<td><p class="TabellenInhalt">Untere Warngrenze einer Variablen 
+		 unterschritten</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-4</p></td>
+		<td><p class="TabellenInhalt">Obere Warngrenze einer Variablen 
+		 überschritten</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-3</p></td>
+		<td><p class="TabellenInhalt">Oberer Grenzwert (Alarmgrenze) einer 
+		 Variablen überschritten</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-2</p></td>
+		<td><p class="TabellenInhalt">Verbindungsstörung, wird vom Gateway 
+		 gemeldet</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-1</p></td>
+		<td><p class="TabellenInhalt">Modul-Verbindungsstörung: Time-Out-Überwachung 
+		 einer Datenquelle (Gateway) hat angesprochen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">0</p></td>
+		<td><p class="TabellenInhalt">unbekannte Meldung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">Störung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Meldung</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

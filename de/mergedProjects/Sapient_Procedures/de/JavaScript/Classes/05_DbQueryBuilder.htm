@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">DbQueryBuilder</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DbQueryBuilder">
+        <span>DbQueryBuilder</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">DbQueryBuilder</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte dieses Typs dienen zum bequemen Zusammenbauen 
+ von DbQuery. Eine korrekte Benutzung vorausgesetzt, sichert er die Applikation 
+ auch gegen SQL-Injections ab, da Parameter-Werte als Bind-Variablen an 
+ den DB-Server übergeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Konstruktor new DbQueryBuilder hat ein optionales 
+ Argument, nämlich den Anfang des zu bauenden SQL-Strings.</p>
+<p class="BodyText" data-condition="Others:Deutsch">DbQueryBuilder-Objekte haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">empty</p>
+<p class="BodyText" data-condition="Others:Deutsch">Boolean. Gibt an, ob der SQL-String leer ist oder nicht.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">sql</p>
+<p class="BodyText" data-condition="Others:Deutsch">Enthält den bislang gebauten SQL-String.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">DbQueryBuilder-Objekte haben die folgenden Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">append(sql_builder, type_val, def, in_val, out, 
+ val)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind alle 5 Argumente angegeben, muss das erste Argument 
+ ein SQL-String sein, der einen Platzhalter (?) enthält. Das zweite Argument 
+ ist der Typ der Bind-Variablen (z.B. DbCon, Varchar). Das dritte ist ein 
+ Boolean, der angibt, ob es sich um einen Input-Parameter handelt. Das 
+ vierte ist ein Boolean, der angibt, ob das Argument auch als Ausgabe-Parameter 
+ (out) verwendet werden soll. Das fünfte Argument ist der Wert, der diesem 
+ Parameter zugewiesen werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind nur 4 Argumente angegeben, ist der Wert nicht 
+ ausgefüllt. Dieser muss im Anschluss bei DbQery.params gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind nur 3 Argumente angegeben, wird als zweiter Parameter 
+ eine DbQuery-Paramdef erwartet. Diese enthält die Angaben type_val, def, 
+ in_val und out.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind nur 2 Argumente angegeben, kann es sich dabei 
+ entweder um einen SQL-String und eine Paramdef handeln, oder um einen 
+ SQL-String und einen Wert (dann wird versucht, den DB-Feldtyp anhand des 
+ Wertes zu ermitteln).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird nur 1 Argument angegeben, handelt es sich dabei 
+ entweder um einen Teil eines SQL-Strings oder um einen anderen DbQueryBuilder.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">appendFilters(filters)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Spezialfunktion für geskriptete DB-Quellen. Interpretiert 
+ den JSON-API-Parameter &quot;Filter&quot; und macht daraus einen SQL-String.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">appendLiteral(text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt den übergebenen Wert als String-Literal an (d.h., 
+ mit einfachen Anführungszeichen vorne und hinten und doppelten Anführungszeichen 
+ innen).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">appendRaw(text):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt den übergebenen Text / String hinzu, ohne etwas 
+ zu überprüfen. Verwendung wird nicht empfohlen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">appendTrailingAnd(text):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt ein AND hinzu, falls noch nicht vorhanden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">appendTrailingOr(text):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt ein OR hinzu, falls noch nicht vorhanden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">appendTrailingSpace(text):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt ein Leerzeichen hinzu, falls noch nicht vorhanden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clear():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht den bisher gebauten SQL-String.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">prepareQuery(Con):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erzeugt ein DbQuery-Objekt und gibt dieses als Ergebnis 
+ zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">toString():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert das zusammengebaute SQL.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle append-Funktionen liefern das DbQueryBuilder-Objekt 
+ zurück, damit man diese Objekte miteinander verknüpfen kann.</p>
+
+
+</body></html>

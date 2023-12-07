@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="Sapient_User-Manual" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\Welcome.htm">
+    
+    <topic>
+      de\Welcome.htm
+    </topic>
+    
+    <topic>
+      de\Overview.htm
+    </topic>
+    
+    <topic>
+      de\Param.htm
+    </topic>
+    
+    <topic>
+      de\Menus\DashboardMenu.htm
+    </topic>
+    
+    <topic>
+      de\Menus\FavMenu.htm
+    </topic>
+    
+    <topic>
+      de\Profiles.htm
+    </topic>
+    
+    <topic>
+      de\Menus\Print.htm
+    </topic>
+    
+    <topic>
+      de\Menus\UserMenu.htm
+    </topic>
+    
+    <topic>
+      de\Menus\Custom_Bar.htm
+    </topic>
+    
+    <topic>
+      de\Search.htm
+    </topic>
+    
+    <topic>
+      de\Create_Dashboard.htm
+    </topic>
+    
+    <topic>
+      de\Edit_Mode\EnterEditMode.htm
+    </topic>
+    
+    <topic>
+      de\New_Dashboard_Folder.htm
+    </topic>
+    
+    <topic>
+      de\Settings\Standard_Dashboards_Überblick.htm
+    </topic>
+    
+    <topic>
+      de\Hauptseite_des_EpiK_Reports.htm
+    </topic>
+    
+    <topic>
+      de\Zweite_Seite_des_EpiK_Reports.htm
+    </topic>
+    
+    <topic>
+      de\Knoten_und_KPIs_in_Sapient_konfigurieren.htm
+    </topic>
+    
+    <topic>
+      de\Raw_Daten-Seite_des_EpiK_Reports.htm
+    </topic>
+    
+    <topic>
+      de\Edit_Mode\General.htm
+    </topic>
+    
+    <topic>
+      de\Edit_Mode\Empfehlungen_für_die_Größe_von_Boardlets.htm
+    </topic>
+    
+    <topic>
+      de\Edit_Mode\Boardlet_Library.htm
+    </topic>
+    
+    <topic>
+      de\Edit_Mode\Size_and_Pos.htm
+    </topic>
+    
+    <topic>
+      de\Edit_Mode\Edit_menu.htm
+    </topic>
+    
+    <topic>
+      de\Settings\Dashboard_Settings.htm
+    </topic>
+    
+    <topic>
+      de\Settings\Boardlet_Settings.htm
+    </topic>
+    
+    <topic>
+      de\Settings\Table_Settings.htm
+    </topic>
+    
+    <topic>
+      de\Settings\Boardlet_Menu_Bar.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\Detailinfo.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\01_Framework\Bookmarks.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\01_Framework\Connection_Overview.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\01_Framework\Individuelles_Änderungsprotokoll.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\01_Framework\Container.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\01_Framework\Top_Dashboards.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Link.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Navigation\Layout\Layout.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Navigation\Layout\Edit.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Navigation\Layout\Settings.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Navigation\Layout\Samples_Details.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Navigation\Node_Tree.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Time_Selection.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\LGD.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Geplante_Werteinstellung.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Barchart.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Piechart.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Generic_Table.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Graphic.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\iFrame.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Current_Vals.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Multiple_Nodes.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Node_Info.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Node_State.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Prod_Change_Matrix.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Prod_Change_Table.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\03_Visualization\Energieverbräuche.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\04_CIP\Measure_Actions.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\04_CIP\Measures.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\05_Shift_Cal\Shift_Calendar.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\05_Shift_Cal\Shift_Exceptions.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\05_Shift_Cal\Target_Values.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\05_Shift_Cal\Shift_Plan.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\05_Shift_Cal\Shift_Calendar_Overview.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\05_Shift_Cal\Zielwerte_in_aktueller_Schicht.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Alarm_Cross_Table.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Alarm_Chart.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Alarm_Gantt.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Alarm_Timeline.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Archived_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Current_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Proc_Shortcut.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Top_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\06_Alarms\Meldungsdefinitionen.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\07_KPIs\KPI_Chart.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\07_KPIs\KPI_Data.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\07_KPIs\Shift_End_Vals.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\07_KPIs\KPI_Versand.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\08_BCT\Histogram.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\08_BCT\CTA_-_Zykluszeiten.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\08_BCT\Taktzeiten_Boxplot.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\08_BCT\Histogramm_der_Zykluszeiten.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\09_TPM\Comp_Archive.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\09_TPM\TPM_Plans.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\09_TPM\TPM_Orders.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\09_TPM\TPM_Analysis.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Attributes.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Produktdatenreport.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Produktdatendiagramm.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Konfiguration_in_LC2_für_Produktdaten.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\ID_View.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Lesestellen_Sequenzvergleich.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\PU_View.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Produktionseinheitenübersicht.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Produktionseinheiten_Verfolgung.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\PU_Q_Supervisor.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Split_History.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\10_TT\Assembly_History.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Allgemeines_(Spezifikation)\Allgemeines.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Allgemeines_(Spezifikation)\Rezepte\Rezept.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Web_App\User_Interface_der_WebApp.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Web_App\User_Interface_der_WebApp\Recipe_History.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Web_App\Recipe_List.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Web_App\User_Interface_der_WebApp\Recipe_Details.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Web_App\User_Interface_der_WebApp\Rezeptliste.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\LC2\Datenmodell.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Allgemeines_(Spezifikation)\Rezepte\Rechte.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Parameterstruktur\Rezeptparameter.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\LC2\Rezeptvorlage.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Allgemeines_(Spezifikation)\Rezepte\Rezepte\Datenstruktur_der_Rezepte.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\Rezeptprozeduren\Rezeptprozeduren.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\11_RecipeManagement\LC2\Standardwerte_für_neue_Rezepte.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\12_Personalzeiterfassung\Boardlets_der_Personalzeiterfassung.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Time.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Flexi_Val.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Werteerfassung_eSFM_v2.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\02_Basis\Werterfassung_Chart_eSFM_v2.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Accident_free.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Al_Units_Lost.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Attendance.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Att_Report.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Logistics_Rep.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Node_News.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Occ_Safety.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Quality_Rep.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\SFM_Analysis.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\SFM_Karma.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\SFM_Report.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\15_SFM\Task_Management.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\16_Project\Availability_Card.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\16_Project\Piece_Counter.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\17_Customer\KPI-Table.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\Preview\Super-Generic-Table.htm
+    </topic>
+    
+    <topic>
+      de\Boardlets\Preview\Boardlet_Datasources.htm
+    </topic>
+    
+    <topic>
+      de\View_Modes.htm
+    </topic>
+    
+    <topic>
+      de\Parameters.htm
+    </topic>
+    
+    <topic>
+      de\Placeholders.htm
+    </topic>
+    
+    <topic>
+      de\Filter_Strings.htm
+    </topic>
+    
+    <topic>
+      de\Example_Specials.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

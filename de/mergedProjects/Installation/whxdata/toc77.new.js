@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Introduction","type":"item","tilePath":"","description":"","url":"en/CentOS/Overview.htm#Introduction"},{"name":"Prerequisites","type":"item","tilePath":"","description":"","url":"en/CentOS/Overview.htm#Prerequisites"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

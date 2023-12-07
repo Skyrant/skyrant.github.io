@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Überblick MDX Manager</title>
+<link rel="stylesheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Überblick MDX Manager">
+        <span>Überblick MDX Manager</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Überblick MDX Manager</h1>
+
+<h2 class="BodyText" data-condition="Others:Deutsch"><a id="Introduction"></a>Allgemein</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Produktfamilie &quot;Machine Data eXchange (MDX)&quot; 
+ dient im Kontext der industriellen Produktion der Implementierung des 
+ Datenaustauschs zwischen Maschinensteuerungen (Operational Technology 
+ / OT Devices) des Shopfloor und verschiedensten IT Systemen (Information 
+ Technology).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dazu bietet MDX auf den Betriebssystemen Windows und 
+ Linux verschiedene OT Connectors (OTC) zur Anbindung der OT Devices und 
+ einen IT Connector (ITC) zur Anbindung der IT Systeme an. Die Verbindung 
+ zwischen OT Connectors und IT Connectors erfolgt über das Message Queuing 
+ Telemetry Transport (MQTT) Protokoll. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Innerhalb der ITCs besteht die Möglichkeit projektspezifische 
+ Skripte auszuführen. Das ermöglicht eine dynamische Konfiguration der 
+ OTCs, die Vorverarbeitung und Anreicherung von Datenströmen sowie die 
+ Implementierung kundenspezifischer Businesslogik auf der Edge. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Projektierung von ITCs und OTCs stellt die 
+ Produktfamilie MDX zwei Anwenderprogramme mit grafischer Benutzeroberfläche 
+ unter Windows zur Verfügung. Das eine Programm, der OTC Manager, dient 
+ der lokalen Installation und initialen Konfiguration von OT Connectors 
+ (OTC) auf Windows Betriebssystemen. Das andere Programm, der MDX Manager, 
+ erlaubt darüber hinaus auch die lokale Installation von IT Connectors 
+ sowie die Erstellung und das Debugging von Konfigurationen und Skripten 
+ zur Ausführung in ITCs.</p>
+<p class="Note" data-condition="Others:Deutsch">INFO zur Terminologie:</p>
+<ul class="NoteTextBullet" data-condition="Others:Deutsch">
+	<li class="NoteTextBullet">Die Bezeichnungen &quot;OT Connector&quot; 
+	 und &quot;OTC&quot; ersetzen die bisherigen Bezeichnungen &quot;Sapient 
+	 Maschinenclient&quot; / &quot;Sapient Maschinen-Client&quot; und &quot;SMC&quot;.</li>
+	<li class="NoteTextBullet">Die Bezeichnungen &quot;IT Connector&quot; 
+	 und &quot;ITC&quot; ersetzen die bisherigen Bezeichnungen &quot;(Sapient 
+	 Cloud Connector) Runtime&quot; / &quot;SCC Runtime&quot; und &quot;SCC&quot;.</li>
+	<li class="NoteTextBullet">Die Bezeichnung MDX Manager löst den Begriff 
+	 &quot;(Sapient Cloud Connector) Editor&quot; bzw. &quot;SCC Editor&quot; 
+	 ab. </li>
+	<li class="NoteTextBullet">In Teilen der Software aus der Produktfamilie 
+	 MDX und deren Hilfeseiten werden bis auf Weiteres auch noch die bisherigen 
+	 Begriffe verwendet.</li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="SystemEnvironment"></a>Systemumgebung</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Anwendung ist eine 64-Bit-Applikation. Die Anwendung 
+ unterstützt aber ausschließlich 32-Bit-Datentypen. Die unterstützten Datentypen 
+ können hier nachgelesen werden: <a href="Data_Types.htm">Unterstützte 
+ SPS-Datentypen</a>.</p>
+<h2 data-condition="Others:Deutsch"><a id="ITConnector"></a>Der IT Connector</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Der Cloud Connector besteht aus den folgenden zentralen 
+ Bausteinen, die auf verbreiteten technologischen Standards beruhen und 
+ eine maximale Flexibilität und Performance gewährleisten:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><a href="#Amazon_Web_Services">Amazon Web 
+	 Services</a> (Linux)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#OPC_UA_Interface">OPC 
+	 UA Schnittstelle</a> (Win64, Linux/Unix)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#TelegramInterface_SNDRCV">SendRecv 
+	 Telegrammschnittstelle</a> (Win64, Linux/Unix)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#PubSub_Interface">Pub/Sub 
+	 Schnittstelle</a> (Win64, Linux/Unix)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#HTTP_Interface">HTTP 
+	 Schnittstelle</a> (Win64, Linux/Unix)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#DatabaseInterface">Datenbank-Schnittstelle</a> 
+	 (Win64, Linux/Unix)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#ScriptEngine">Script-Engine</a> 
+	 für Funktionslogik (Win64, Linux/Unix)</p></li>
+	<li><p class="ListBulletL1"><a href="Overview_SCC.htm#LocalDatabase">Lokale 
+	 Datenbank</a> zur Erhöhung der Datensicherheit (Win64, Linux/Unix)</p></li>
+</ul>
+<h3 data-condition="Others:Deutsch"><a id="Amazon_Web_Services"></a>Amazon Web Services</h3>
+<p class="ListBulletL1" data-condition="Others:Deutsch">Amazon Web Services (AWS) ist einer der führenden 
+ Anbieter im Cloud Computing. Als erste AWS-Schnittstelle ist der Simple 
+ Queue Service in der Linux-Version des IT Connectors integriert. Es stehen 
+ Verbindungen zum Senden oder Empfangen zur Verfügung.</p>
+<h3 data-condition="Others:Deutsch"><a id="OPC_UA_Interface"></a>OPC UA Schnittstelle <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Da der klassische OPC Standard auf den alternden COM/DCOM 
+ Technologien von Microsoft basiert, wurde durch die OPC Foundation eine 
+ neue Spezifikation unter dem Namen OPC UA eingeführt. Das Hauptziel dabei 
+ war eine Umstellung von COM/DCOM auf moderne web-basierte Technologien 
+ bei Erhaltung bzw. Verbesserung der OPC Funktionalität.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Einsatz von OPC UA beschränkt sich damit - auch 
+ im IT Connector - nicht mehr wie der klassische OPC Standard auf Windows-Umgebungen. 
+ Es ist nun ebenfalls möglich den Standard unter Unix/Linux sowie auf Controllern 
+ und intelligenten Geräten mit entsprechenden Betriebssystemen zu implementieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Cloud Connector ist eine OPC UA Client Schnittstelle 
+ mit folgender Funktionalität integriert:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Discovery</p></li>
+	<li><p class="ListBulletL1">Sessionverwaltung</p></li>
+	<li><p class="ListBulletL1">Browsefunktion mit Import</p></li>
+	<li><p class="ListBulletL1">Read/Write (einfach, ohne Registrierung)</p></li>
+	<li><p class="ListBulletL1">Subscribe/Unsubscribe</p></li>
+</ul>
+<h3 data-condition="Others:Deutsch"><a id="TelegramInterface_SNDRCV"></a>SendRecv Telegrammschnittstelle 
+ <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Nicht alle Geräte oder Steuerungen können über OPC 
+ UA angesprochen werden. Um eine Kommunikation mit solchen Partnern aufzubauen, 
+ kann die SendRecv Telegrammschnittstelle verwendet werden. Diese ermöglicht 
+ die generelle Kommunikation des IT Connectors über die folgenden Treiber:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">TCP/IP</p></li>
+	<li><p class="ListBulletL1">ISO-on-TCP</p></li>
+	<li><p class="ListBulletL1">UDP</p></li>
+	<li><p class="ListBulletL1">Serielle Kommunikation mit 3964R oder offenes 
+	 Protokoll (feste Länge, festes Endezeichen oder Quittungsverzug, nur 
+	 unter Windows)</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch">Die Verwendung der SendRecv-Schnittstelle kann insbesondere 
+ bei großen Projekten sinnvoll sein, da damit ein Telegramm mit nur einem 
+ Script über alle SPSen verarbeitet werden kann. Somit wird auch die Wartbarkeit 
+ erhöht. Allerdings ist der initiale Aufwand bei der SPS-Programmierung 
+ recht hoch.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="PubSub_Interface"></a>Pub/Sub Schnittstelle 
+ <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich zu den Kommunikationsmöglichkeiten von OPC 
+ UA oder der SND/RCV Telegrammschnittstelle nimmt der Datenaustausch über 
+ Protokolle basierend auf dem Publish/Subscribe-Prinzip aus dem Umfeld 
+ des industriellen Internet der Dinge (industrial Internet of Things, iIoT) 
+ beständig zu. Für diese Protokolle stellt der IT Connector eine PubSub-Schnittstelle 
+ zur Verfügung. Über diese Schnittstelle können mehrere Clients für verschiedene 
+ Publish/Subscribe Protokolle instanziiert werden. Derzeit sind die folgenden 
+ Protokolle und deren Versionen im IT Connector verfügbar:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Message Queuing Telemetry Transport (MQTT)</p></li>
+</ul>
+<p class="ListBulletL1_Contd" data-condition="Others:Deutsch">Im IT Connector können MQTT Clients entsprechend 
+ der Version 3.1.1 dieses Protokolls instanziiert werden. Der IT Connector 
+ unterstützt dabei sowohl SSL/TLS Verschlüsselung als auch Authentifizierung 
+ des Clients beim Broker mit Username/Password.</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Apache Kafka</p></li>
+</ul>
+<p class="ListBulletL1_Contd" data-condition="Others:Deutsch">Im IT Connector können Consumer Verbindungen 
+ zum Lesen von Daten aus einem Kafka-Cluster angelegt werden.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="HTTP_Interface"></a>HTTP Schnittstelle <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um auch Webinterfaces von anderen IT Systemen ansprechen 
+ zu können, verfügt der IT Connector über eine HTTP Schnittstelle. Über 
+ diese Schnittstelle ist es möglich Webservices von anderen IT Systemen 
+ aufzurufen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die HTTP Schnittstelle des IT Connectors wird hauptsächlich 
+ für die Kommunikation mit dem MES Legato Sapient verwendet. Dieses bietet 
+ mehrere Webservices zur Kommunikation über eine JSON RPC Schnittstelle 
+ an.</p>
+<h3 data-condition="Others:Deutsch"><a id="DatabaseInterface"></a>Datenbank-Schnittstelle <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datenbank-Schnittstelle dient der Anbindung von 
+ verschiedenen Datenbanken mittels des IT Connectors. Der Haupt-Anwendungsfall 
+ dieser Schnittstelle ist die Anbindung von Maschinen an die Datenbank 
+ des MES &quot;Legato Classic&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für Windows steht der ODBC-Treiber zur Anbindung an 
+ Datenbanken zur Verfügung. Die Vorteile von &quot;ODBC&quot; liegen in 
+ der hohen Verfügbarkeit für nahezu alle am Markt befindlichen Datenbanken 
+ und deren Versionen. Die in den IT Connector unter Windows implementierte 
+ Schnittstelle wurde bisher mit folgenden Datenbanken erfolgreich getestet:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Oracle</p></li>
+	<li><p class="ListBulletL1">MS SQL-Server</p></li>
+	<li><p class="ListBulletL1">DB2</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch">Für Linux/Unix können nur Oracle Datenbanken mittels 
+ OCI (Oracle Call Interface) angebunden werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="ScriptEngine"></a>Script-Engine <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zur Verknüpfung und Vorverarbeitung der Daten, für 
+ logische Funktionen oder einfache Ablaufsteuerungen bietet sich der Einsatz 
+ von Scripten an. Dabei ist die Auswahl der Scriptsprache ein oft diskutiertes 
+ Thema. Der Einsatz einer standardisierten Sprache mit großer Marktverbreitung, 
+ wie VB Script oder Javascript, bietet Vorteile in Bezug auf die Akzeptanz 
+ bei potentiellen Anwendern. Demgegenüber kann eine speziell für den IT 
+ Connector entwickelte Sprache mit einem auf die Aufgabenstellung abgestimmten 
+ Befehlssatz aufwarten. Auch das Zeitverhalten des Scriptinterpreters und 
+ die Einbindung in den Gesamtablauf kann für das System optimiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Ausführung von Scripten im IT Connector wurde 
+ in der Vergangenheit eine eigenständige Scriptsprache entwickelt, deren 
+ Syntax sich an eine standardisierte Sprache (&quot;Structured Text&quot; 
+ aus der IEC 61131-3) anlehnt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Bearbeitung der Scripte erfolgt streng ereignisgesteuert 
+ durch die Script-Engine innerhalb des IT Connectors. Als Ereignisse können 
+ wählbare Timer oder jede Änderung eines Variablenwertes herangezogen werden. 
+ Werte von Variablen können Scripten als Parameter übergeben werden können. 
+ Komplexe Applikationen können in mehrere, wiederverwendbare Scripte unterteilt 
+ und diese in einer Ordnerstruktur abgelegt werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="LocalDatabase"></a>Lokale Datenbank <a href="#ITConnector" title="Zurück zu Der IT Connector"><img src="../assets/images/back.png" alt="" style="border: none;" border="0"/></a></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zuordnungs- oder Nachschlagetabellen können in einer 
+ lokalen (integrierten) Datenbasis (Redis) des Cloud Connectors gehalten 
+ werden. Wenn z.B. bei einem bestimmten Ereignis aus der Produktion jeweils 
+ ein Eintrag in einer Zuordnungstabelle gelesen werden soll, muss eine 
+ lokale Kopie dieser Tabelle im Cloud Connector existieren, da die ständige 
+ Abfrage der Datenbank zu einem inakzeptablen Zeitverhalten führen würde.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zur Überbrückung von Verbindungsproblemen können alle 
+ Daten über die lokale Datenhaltung in Redis zwischengespeichert werden. 
+ Über projektspezifische Scripte können Anwender so die Datensicherheit 
+ ihrer Applikation wesentlich verbessern.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

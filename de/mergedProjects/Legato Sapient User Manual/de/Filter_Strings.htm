@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Filterstrings</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Filter" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Filterstrings">
+        <span>Filterstrings</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Filterstrings</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">In einigen Boardlets, zum Beispiel in der Generischen 
+ Tabelle kann ein Filter als String angegeben werden. In diesem String 
+ können auch Platzhalter für Parameter eingetragen werden. Für weitere 
+ Details zu Platzhaltern, siehe bitte <a href="Placeholders.htm">Platzhalter</a>. 
+ </p>
+<h3 data-condition="Others:Deutsch"><a id="Formatierung_der_Strings"></a>Formatierung der Strings</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Strings sind immer als Wertepaare formatiert, die 
+ einander mit Doppelpunkt gegenübergestellt werden. Die Werte sind dabei 
+ in doppelten Hochkommata notiert. Die verschiedenen Wertepaare sind dabei 
+ durch Komma voneinander getrennt. Der String darf keine Leerzeichen enthalten. 
+ Der gesamte String ist durch geschweifte Klammern eingefasst.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<table class="CodeTab" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">{&quot;field&quot;:&quot;node&quot;,&quot;op&quot;:&quot;in&quot;,&quot;val&quot;:$node$} 
+		 </p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Operanden"></a>Operanden</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Als Vergleichsoperanden stehen &quot;in&quot; und &quot;eq&quot; 
+ zur Verfügung.</p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;in&quot; = Wert muss sich innerhalb vorgegebener 
+ Wertgrenzen befinden, z.B. zwischen 10-15 oder einer der Werte 1,2,3,6 
+ sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;eq&quot; = equal; Wert muss gleich der Vorgabe 
+ sein. </p>
+<h3 data-condition="Others:Deutsch"><a id="Platzhalter" data-indexterm="Platzhalter"></a><a id="Beispiele_zu_Platzhaltern_in_Filtern"></a>Beispiele zu Platzhaltern 
+ in Filtern</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Das Feld &quot;Node&quot; wird mit einem oder mehreren 
+ Knoten-IDs aus einer sendenden Tabelle befüllt (üblicherweise Knotenbaum 
+ oder Layout, aber auch jede andere Tabelle mit Knotenbezug möglich).</p>
+<table class="CodeTab" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">{&quot;field&quot;:&quot;node&quot;,&quot;op&quot;:&quot;in&quot;,&quot;val&quot;:$node$}</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch">Das Feld &quot;Einheit&quot; mit Operand &quot;Equal&quot; 
+ soll dem Wert des Platzhalters &quot;Detailinfo&quot; entsprechen. </p>
+<table class="CodeTab" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">{&quot;field&quot;:&quot;unit&quot;,&quot;op&quot;:&quot;eq&quot;,&quot;val&quot;:&quot;$detailInfo$&quot;}</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Compilieren Linux Gateway</title>
+<link rel="StyleSheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+</head>
+<body>
+<h1>Compilieren Linux Gateway</h1>
+<h2><a name="Allgemein" id="Allgemein"></a>Allgemein</h2>
+<p class="BodyText">Für das Compilieren des Gateways und der zugehörigen Bibliotheken muss zunächst ein Verzeichnis z.B. $HOME/legato/CppIx angelegt werden. Der komplette Pfad dieses Verzeichnisses wird im Folgenden mit &lt;BASE_DIR&gt; bezeichnet.</p>
+<p class="BodyText">Die Quelltexte aller IX-Module sind unter</p>
+<p class="BodyText"><a href="http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix"><span class="Hyperlink">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix</span></a></p>
+<p class="BodyText">eingecheckt.</p>
+<h2><a name="ACE" id="ACE"></a>ACE</h2>
+<h3>Schritt 1</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3rdParty</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ACE</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ACE-6.3.0</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</ins></span></p>
+<p class="BodyText"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">&lt;BASE_DIR&gt;</ins></span></span></p>
+<p class="BodyText"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05"><span style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;3rdParty</ins></span></span></p>
+<p class="BodyText"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05"><span style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;ACE_64</ins></span></span></p>
+<p class="BodyText"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05"><span style="mso-tab-count: 3;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;ACE-6.3.0</ins></span></span></p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 2</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE/ACE-6.2.0 ist die Datei:</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/ACE/ACE-6.2.0.tar.gz</p>
+<p class="BodyText">zu kopieren.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE_64/ACE-6.3.0 ist die Datei:</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/ACE/ACE-6.3.0.tar.gz</p>
+<p class="BodyText">zu kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 3</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE/ACE-6.3.0</p>
+<p class="BodyText">ist nun</p>
+<p class="BodyText">gunzip ACE-6.3.0.tar.gz</p>
+<p class="BodyText">und anschließend</p>
+<p class="BodyText">tar –xvf ACE-6.3.0.tar</p>
+<p class="BodyText">auszuführen.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE_64/ACE-6.3.0</p>
+<p class="BodyText">ist nun</p>
+<p class="BodyText">gunzip ACE-6.3.0.tar.gz</p>
+<p class="BodyText">und anschließend</p>
+<p class="BodyText">tar –xvf ACE-6.3.0.tar</p>
+<p class="BodyText">auszuführen.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 4</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Die Umgebungsvariable ACE_ROOT muss auf folgenden Wert:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/ACE/ACE-6.3.0/ACE_wrappers</p>
+<p class="BodyText">gesetzt werden.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Die Umgebungsvariable ACE_ROOT muss auf folgenden Wert:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/ACE_64/ACE-6.3.0/ACE_wrappers</p>
+<p class="BodyText">gesetzt werden.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 5</h3>
+<p class="BodyText">In das Verzeichnis $ACE_ROOT/ace wechseln und mittels Editor (z.B. vi) die Datei config.h</p>
+<p class="BodyText">mit folgendem Inhalt erstellen:</p>
+<p class="BodyText">#include "config-linux.h"</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 6</h3>
+<p class="BodyText">In das Verzeichnis $ACE_ROOT/include/makeinclue wechseln und folgenden Symbolic Link erstellen:</p>
+<p class="BodyText">platform_macros.GNU -&gt; platform_linux.GNU</p>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Sofern es sich um ein 64 Bit Betriebssystem handelt, ist in der Datei platform_linux.GNU folgender Abschnitt:</p>
+<p class="TextCode">ifeq ($(buildbits),32)</p>
+<p class="TextCode">&#160;&#160;FLAGS_C_CC += -m32</p>
+<p class="TextCode">&#160;&#160;LDFLAGS&#160;&#160;&#160;&#160;+= -m32</p>
+<p class="TextCode">endif</p>
+<p class="TextCode">ifeq ($(buildbits),64)</p>
+<p class="TextCode">&#160;&#160;FLAGS_C_CC += -m64</p>
+<p class="TextCode">&#160;&#160;LDFLAGS&#160;&#160;&#160;&#160;+= -m64</p>
+<p class="TextCode">Endif</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">durch diesen zu ersetzen:</p>
+<p class="TextCode"># ifeq ($(buildbits),32)</p>
+<p class="TextCode">&#160;&#160;FLAGS_C_CC += -m32</p>
+<p class="TextCode">&#160;&#160;LDFLAGS&#160;&#160;&#160;&#160;+= -m32</p>
+<p class="TextCode"># endif</p>
+<p class="TextCode"># ifeq ($(buildbits),64)</p>
+<p class="TextCode">#&#160;&#160;&#160;FLAGS_C_CC += -m64</p>
+<p class="TextCode">#&#160;&#160;&#160;LDFLAGS&#160;&#160;&#160;&#160;+= -m64</p>
+<p class="TextCode"># endif</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 7</h3>
+<p class="BodyText">In das Verzeichnis $ACE_ROOT/ace wechseln und die ACE Bibliothek durch make erstellen.</p>
+<p class="BodyText">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis $ACE_ROOT/ace die Bibliothek libACE.so.6.3.0 befinden.</p>
+<h2><a name="OciCpp" id="OciCpp"></a>OciCpp</h2>
+<h3>Schritt 1</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3rdParty</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;OciCpp</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3rdParty</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;OciCpp_64</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 2</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/OciCpp</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/OciCpp</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/OciCpp_64</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/OciCpp_64</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 3</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp wechseln und die OciCpp Bibliothek durch make erstellen.</p>
+<p class="BodyText">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp die Bibliothek libocicpp.a befinden.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp_64 wechseln und die OciCpp Bibliothek durch make erstellen.</p>
+<p class="BodyText">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp_64 die Bibliothek libocicpp_64.a befinden.</p>
+<p class="BodyText">&#160;</p>
+<h2><a name="GutiACE" id="GutiACE"></a>GutiACE</h2>
+<h3>Schritt 1</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Für die GutiACE Bibliothek sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gutiACE</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;include</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gutiACE</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Für die GutiACE Bibliothek sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gutiACE_64</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;include</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gutiACE</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 2</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/gutiACE</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/gutiACE</p>
+<p class="BodyText">kopieren</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/include/gutiACE_64</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/gutiACE_64</p>
+<p class="BodyText">kopieren</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 3</h3>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/include/gutiACE</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/include/gutiACE</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 4</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/gutiACE wechseln und die gutiACE Bibliothek durch make erstellen.</p>
+<p class="BodyText">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/gutiACE die Bibliothek libguti.a befinden.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/gutiACE_64 wechseln und die gutiACE Bibliothek durch make erstellen.</p>
+<p class="BodyText">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/gutiACE_64 die Bibliothek libguti_64.a befinden.</p>
+<h2><a name="Gateway" id="Gateway"></a>Gateway</h2>
+<h3>Schritt 1</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Für das Gateway sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3rdParty</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SAP</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RfcSdk.720.LINUX</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;include</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lib</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;GatewayIx</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;include</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TelHandler</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Für das Gateway sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3rdParty</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SAP</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;RfcSdk.720.LINUX_64</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;include</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lib</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;GatewayIx_64</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&lt;BASE_DIR&gt;</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;include</p>
+<p class="BodyText">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TelHandler</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 2</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX/include</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX/include</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX_64/include</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX_64/include</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 3</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX/lib</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX/lib</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX_64/lib</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX_64/lib</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 4</h3>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/GatewayIx</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/GatewayIx</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett">Gateway 64 Bit</p>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/GatewayIx_64</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/GatewayIx_64</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 5</h3>
+<p class="BodyText">Die Dateien aus</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/include/TelHandler</p>
+<p class="BodyText">in das Verzeichnis</p>
+<p class="BodyText">&lt;BASE_DIR&gt;/include/TelHandler</p>
+<p class="BodyText">kopieren.</p>
+<p class="BodyText">&#160;</p>
+<h3>Schritt 6</h3>
+<p class="BodyText">In das Verzeichnis &lt;BASE_DIR&gt;/GatewayIx wechseln und das Gateway durch make erstellen.</p>
+<p class="BodyText">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/GatewayIx das Binary gateway befinden.</p>
+<p class="BodyText">&#160;</p>
+<h2><a name="Telegrammhandler" id="Telegrammhandler"></a>Telegrammhandler</h2>
+<p class="BodyText">Wie bereits erwähnt, ist im Gateway TCP-Native Kommunikation mit aktivem Verbindungsaufbau enthalten.</p>
+<p class="BodyText">Um weitere Anforderungen abzudecken, wurden in der Vergangenheit verschiedene Telegrammhandler entwickelt:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler KM (Kommunikation mit BMW KM)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler GP (Kommunikation mit BMW KM und GP-Telegrammen)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler NQ (Kommunikation mit NetQueue)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler IsoOnTcp (Kommunikation RFC 1006 Protokoll)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler AgLink (Kommunikation mit S5/S7 Steuerungen)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler S5Lan (Kommunikation mit S5 Lan Modul)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Telegrammhandler TcpMpi (Kommunikation mit TcpMpi Modul)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Die Quelletexte der o.g. Module befinden sich in entsprechenden Unterverzeichnissen von</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix</p>
+<p class="BodyText">Sofern 3rdParty Bibliotheken erforderlich sind befinden sich diese unter:</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty</p>
+<p class="BodyText">(Besipiel: DeltaLogic für AgLink Telegrammhandler).</p>
+<p class="BodyText">Sofern 3rdParty Headerdateien erforderlich sind befinden sich diese unter:</p>
+<p class="BodyText">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/include</p>
+<p class="BodyText">(Besipiel: ibhlink für TcpMpi Telegrammhandler).</p>
+<p class="BodyText">Das Erstellen eines Telegrammhandlers erfolgt wie vorher bereits beschrieben, durch Kopieren der entsprechenden Dateien in das zuvor erstellte Verzeichnis und dem Aufruf von make.</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Telegrammhandler, die mit der BMW KM kommunizieren, können nur auf der BMW Entwicklungsplattform compiliert und gelinkt werden, da nur dort die entsprechenden KM Bibliotheken zur Verfügung stehen.</p>
+</body>
+</html>

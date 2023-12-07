@@ -1,0 +1,4 @@
+(function() {
+var glossary =  {"type":"data","entrys":[{"type":"entry","name":"Boardlet","value":"Ein Boardlet ist eine abgeschlossene Funktionseinheit zur Darstellung und der Bearbeitung von Daten / Informationen."},{"type":"entry","name":"Container","value":"Ein Container ist eine Gruppe von Boardlets, deren Darstellung übergreifend geregelt wird. Er dient zur Gruppierung von Boardlets als Grid oder als Tabs."},{"type":"entry","name":"Dashboard","value":"Ein Dashboard ist eine Zusammenstellung aus unterschiedlichen Boardlets."},{"type":"entry","name":"Platzhalter","value":"Die Parameter \"Node\", \"Detail-Info\", \"Startzeit\" und \"Endzeit\" können als Platzhalter  in Filterstrings und URLs verwendet werden. Dann werden diese Platzhalter durch änderbare  Werte aus anderen Boardlets befüllt."}]};
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), glossary, { sync:true });
+})();

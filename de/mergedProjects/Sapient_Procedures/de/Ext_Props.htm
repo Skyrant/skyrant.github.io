@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_Database_de1.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Erweiterte Eigenschaften buchen</title>
+<link rel="stylesheet" href="../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="attr_jsonb,Erweiterte Eigenschaft" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Erweiterte Eigenschaften buchen">
+        <span>Erweiterte Eigenschaften buchen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Erweiterte Eigenschaften buchen</h1>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Beschreibung"></a>Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Für jede Datenquelle können erweiterte Eigenschaften 
+ konfiguriert werden. Diese werden als Key-Value-Pairs in der Spalte attr_jsonb 
+ gespeichert und können abgefragt oder als Filter verwendet werden.  Keys 
+ (d.h., der Spaltenname der erweiterten Eigenschaft) werden immer in Kleinbuchstaben 
+ gespeichert.</p>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Validierung"></a>Validierung</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Buchen wird überprüft, dass ein gültiges JSON-Format 
+ übergeben wird. Fehlerhaftes JSON wird zurückgewiesen und die gesamte 
+ Transaktion schlägt somit fehl. Fehlerhaftes JSON kann eins der Folgenden 
+ sein:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Falscher Datentyp</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel: Datentyp INTEGER wurde für die erweiterte 
+ Eigenschaft konfiguriert, aber es wurde ein FLOAT (2.1) oder ein STRING 
+ (&quot;a&quot;) übergeben. In diesem Fall wird ein Fehler zurückgegeben 
+ wie: Ungültiger Parameter: Feldprüfung für &#39;attr2&#39; der Tabelle p_connections 
+ ist fehlgeschlagen. Feldtyp: INTEGER, Wert &#39;\&quot;a\&quot;&#39;.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Key existiert nicht</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel: Es wird ein Wert für den Key &quot;non_configured_key&quot; 
+ übergeben, dieser Key wurde aber nicht konfiguriert. In diesem Fall wird 
+ ein Fehler zurückgegeben wie: Ungültige Konfiguration: ungültige JSON-Konfiguration 
+ - Konfiguration für Feld &#39;non_configured_key&#39; der Tabelle p_connections 
+ kann nicht geladen werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Leerer Key</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird ein leerer Key übergeben, wird ein Fehler zurückgegeben 
+ wie: Ungültiger Parameter. ungültige JSON-Konfiguration - Feldname ist 
+ leer, Eintrag auf Index-Position 0 wird übersprungen, JSON ist: JSON.</p>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Datentypen"></a>Datentypen</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Es stehen folgende Datentypen zur Verfügung:</p>
+<p class="BodyText" data-condition="Others:Deutsch">INTEGER, z.B. 1</p>
+<p class="BodyText" data-condition="Others:Deutsch">FLOAT, z.B. 1.1 (Komma ist als Separator NICHT zulässig)</p>
+<p class="BodyText" data-condition="Others:Deutsch">STRING, z.B. &quot;abc&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">BOOL: wird immer als 0 (false) bzw. 1 (true) gespeichert; 
+ gültige Parameter zum Speichern sind 0 oder 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch">INSTANT: Zeitstempel-Format, wie es im Client verwendet 
+ wird, z.B. &quot;2018-07-12T11:52:00Z&quot;</p>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Beispiel-Aufruf"></a>Beispiel-Aufruf</h6>
+<p class="BodyText" data-condition="Others:Deutsch">{ </p>
+<p class="BodyText" data-condition="Others:Deutsch">  &quot;jsonrpc&quot;: &quot;2.0&quot;,</p>
+<p class="BodyText" data-condition="Others:Deutsch">  &quot;id&quot;: 123,</p>
+<p class="BodyText" data-condition="Others:Deutsch">  &quot;method&quot;: &quot;/de/gefasoft/sapient/db/values/Current/bool_in&quot;,</p>
+<p class="BodyText" data-condition="Others:Deutsch">  &quot;params&quot;: { </p>
+<p class="BodyText" data-condition="Others:Deutsch">    &quot;ID&quot;: 135, </p>
+<p class="BodyText" data-condition="Others:Deutsch">    &quot;VALUE_BOOL&quot;: 0, 
+ </p>
+<p class="BodyText" data-condition="Others:Deutsch">    &quot;ATTR_JSONB&quot;: &quot;{\&quot;sc1359_Int\&quot;: 
+ 98765, \&quot;sc1359_Float\&quot;: 1.234, \&quot;sc1359_STRING\&quot;: 
+ \&quot;In Ordnung\&quot;, \&quot;sc1359_bool\&quot;: 1, \&quot;sc1359_instant\&quot;: 
+ \&quot;2018-08-31T11:52:00Z\&quot;}&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">  }</p>
+<p class="BodyText" data-condition="Others:Deutsch">}</p>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Parametrierung"></a>Parametrierung</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die benötigten erweiterten Eigenschaften können im 
+ LC2 über &quot;Anpassen &gt; Benutzerdefinierte Spalten&quot; parametriert 
+ werden. Dafür muss der LC2 im SysDev-Modus gestartert werden.</p>
+
+
+</body></html>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Einbinden von externen Funktionen und Java-Klassen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="extern" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Einbinden von externen Funktionen und Java-Klassen">
+        <span>Einbinden von externen Funktionen und Java-Klassen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Einbinden von externen Funktionen und Java-Klassen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Java-Klassen können im Script während des Ladens der 
+ Script-Datei eingebunden werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Während des Ladens einer Script-Datei steht in Scripten 
+ ein globales Objekt namens &quot;loader&quot; zur Verfügung. Dieses besitzt 
+ nur zwei aufrufbare Funktion, nämlich &quot;include(scriptfile)&quot;, 
+ mit der weitere Script-Dateien angegeben werden können, die in das Script 
+ eingebunden werden sollen und importObjectType(javaClassName), wodurch 
+ die genannten Java Klassen für das Script aufrufbar gemacht werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über &quot;loader.include(scriptfile)&quot; werden 
+ externe Dateien in das Script eingebunden. Der Inhalt dieser Dateien wird 
+ quasi an das Ende der aktuellen Script-Datei angehängt (bitte beachten: 
+ es wird wirklich &quot;angehängt&quot;, nicht an der Stelle des Aufrufs 
+ ausgewertet). Wird die gleiche Datei mehrmals angegeben, wird sie trotzdem 
+ nur ein einziges Mal geladen, sodass es nicht zu Fehlern wegen mehrfacher 
+ Definition der darin definierten Funktionen oder Variablen kommen kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mittels &quot;loader.importObjectType(javaClassName)&quot; 
+ werden Java-Klassen als JavaScript Objekt-Typen im Script bekannt gemacht. 
+ Bei den betreffenden Java-Klassen muss es sich um speziell für diesen 
+ Zweck geschriebene Klassen handeln, die den Anforderungen der JavaScript-Engine 
+ (Apache Rhino) entsprechen (d.h., sie müssen das Interface &quot;Scriptable&quot; 
+ implementieren bzw. von &quot;ScriptableObject&quot; abgeleitet sein). 
+ Es muss der komplette Name der Java-Klasse inklusive Package-Namen angegeben 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Objekt &quot;loader&quot; steht ausschließlich 
+ während des Ladens des Scripts zur Verfügung und ist später, z.B. während 
+ der Initialisierung oder Ausführung des Jobs nicht definiert. Die entsprechenden 
+ Aufrufe von &quot;loader.include()&quot; sollten folglich außerhalb aller 
+ Job-Funktionen stehen, z.B.:</p>
+<p class="TextCode" data-condition="Others:Deutsch">loader.include(&quot;lib/commons.js&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">function execute(scheduler) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    // irgendwas tun (Job erledigen)</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein JavaScript-Job überwacht sowohl die Datei seines 
+ Haupt-Scripts als auch alle darin eingebundenen Dateien auf Änderung und 
+ lädt gegebenenfalls das gesamte Script neu.</p>
+
+
+</body></html>

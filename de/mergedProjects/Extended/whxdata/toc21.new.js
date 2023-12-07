@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Bibliotheksymbole erstellen","type":"item","tilePath":"","description":"","url":"de/LGD/Bibliotheksymbole_erstellen.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

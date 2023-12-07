@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "7.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Compilieren Linux Gateway</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Linux,Gateway" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Compilieren Linux Gateway">
+        <span>Compilieren Linux Gateway</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Compilieren Linux Gateway</h1>
+<h2 data-condition="Others:Deutsch"><a name="Allgemein" id="Allgemein"></a>Allgemein</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Compilieren des Gateways und der zugehörigen Bibliotheken muss zunächst ein Verzeichnis z.B. $HOME/legato/CppIx angelegt werden. Der komplette Pfad dieses Verzeichnisses wird im Folgenden mit &lt;BASE_DIR&gt; bezeichnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Quelltexte aller IX-Module sind unter</p>
+<p class="BodyText" data-condition="Others:Deutsch"><a href="http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix"><span class="Hyperlink">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix</span></a></p>
+<p class="BodyText" data-condition="Others:Deutsch">eingecheckt.</p>
+<h2 data-condition="Others:Deutsch"><a name="ACE" id="ACE"></a>ACE</h2>
+<h3 data-condition="Others:Deutsch">Schritt 1</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            3rdParty</p>
+<p class="BodyText" data-condition="Others:Deutsch">                        ACE</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                ACE-6.3.0</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</ins></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">&lt;BASE_DIR&gt;</ins></span></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05"><span style="mso-tab-count: 1;">           </span> 3rdParty</ins></span></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05"><span style="mso-tab-count: 2;">                       </span> ACE_64</ins></span></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05"><span style="mso-tab-count: 3;">                                  </span> ACE-6.3.0</ins></span></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 2</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE/ACE-6.2.0 ist die Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/ACE/ACE-6.2.0.tar.gz</p>
+<p class="BodyText" data-condition="Others:Deutsch">zu kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE_64/ACE-6.3.0 ist die Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/ACE/ACE-6.3.0.tar.gz</p>
+<p class="BodyText" data-condition="Others:Deutsch">zu kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 3</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE/ACE-6.3.0</p>
+<p class="BodyText" data-condition="Others:Deutsch">ist nun</p>
+<p class="BodyText" data-condition="Others:Deutsch">gunzip ACE-6.3.0.tar.gz</p>
+<p class="BodyText" data-condition="Others:Deutsch">und anschließend</p>
+<p class="BodyText" data-condition="Others:Deutsch">tar –xvf ACE-6.3.0.tar</p>
+<p class="BodyText" data-condition="Others:Deutsch">auszuführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/ACE_64/ACE-6.3.0</p>
+<p class="BodyText" data-condition="Others:Deutsch">ist nun</p>
+<p class="BodyText" data-condition="Others:Deutsch">gunzip ACE-6.3.0.tar.gz</p>
+<p class="BodyText" data-condition="Others:Deutsch">und anschließend</p>
+<p class="BodyText" data-condition="Others:Deutsch">tar –xvf ACE-6.3.0.tar</p>
+<p class="BodyText" data-condition="Others:Deutsch">auszuführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 4</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Umgebungsvariable ACE_ROOT muss auf folgenden Wert:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/ACE/ACE-6.3.0/ACE_wrappers</p>
+<p class="BodyText" data-condition="Others:Deutsch">gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Umgebungsvariable ACE_ROOT muss auf folgenden Wert:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/ACE_64/ACE-6.3.0/ACE_wrappers</p>
+<p class="BodyText" data-condition="Others:Deutsch">gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 5</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis $ACE_ROOT/ace wechseln und mittels Editor (z.B. vi) die Datei config.h</p>
+<p class="BodyText" data-condition="Others:Deutsch">mit folgendem Inhalt erstellen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">#include &quot;config-linux.h&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 6</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis $ACE_ROOT/include/makeinclue wechseln und folgenden Symbolic Link erstellen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">platform_macros.GNU -&gt; platform_linux.GNU</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern es sich um ein 64 Bit Betriebssystem handelt, ist in der Datei platform_linux.GNU folgender Abschnitt:</p>
+<p class="TextCode" data-condition="Others:Deutsch">ifeq ($(buildbits),32)</p>
+<p class="TextCode" data-condition="Others:Deutsch">  FLAGS_C_CC += -m32</p>
+<p class="TextCode" data-condition="Others:Deutsch">  LDFLAGS    += -m32</p>
+<p class="TextCode" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch">ifeq ($(buildbits),64)</p>
+<p class="TextCode" data-condition="Others:Deutsch">  FLAGS_C_CC += -m64</p>
+<p class="TextCode" data-condition="Others:Deutsch">  LDFLAGS    += -m64</p>
+<p class="TextCode" data-condition="Others:Deutsch">Endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">durch diesen zu ersetzen:</p>
+<p class="TextCode" data-condition="Others:Deutsch"># ifeq ($(buildbits),32)</p>
+<p class="TextCode" data-condition="Others:Deutsch">  FLAGS_C_CC += -m32</p>
+<p class="TextCode" data-condition="Others:Deutsch">  LDFLAGS    += -m32</p>
+<p class="TextCode" data-condition="Others:Deutsch"># endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"># ifeq ($(buildbits),64)</p>
+<p class="TextCode" data-condition="Others:Deutsch">#   FLAGS_C_CC += -m64</p>
+<p class="TextCode" data-condition="Others:Deutsch">#   LDFLAGS    += -m64</p>
+<p class="TextCode" data-condition="Others:Deutsch"># endif</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 7</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis $ACE_ROOT/ace wechseln und die ACE Bibliothek durch make erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis $ACE_ROOT/ace die Bibliothek libACE.so.6.3.0 befinden.</p>
+<h2 data-condition="Others:Deutsch"><a name="OciCpp" id="OciCpp"></a>OciCpp</h2>
+<h3 data-condition="Others:Deutsch">Schritt 1</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            3rdParty</p>
+<p class="BodyText" data-condition="Others:Deutsch">                         OciCpp</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die ACE Bibliothek ist unter &lt;BASE_DIR&gt; folgende Verzeichnisstruktur erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            3rdParty</p>
+<p class="BodyText" data-condition="Others:Deutsch">                        OciCpp_64</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 2</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/OciCpp</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/OciCpp</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/OciCpp_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/OciCpp_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 3</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp wechseln und die OciCpp Bibliothek durch make erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp die Bibliothek libocicpp.a befinden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp_64 wechseln und die OciCpp Bibliothek durch make erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/3rdParty/OciCpp_64 die Bibliothek libocicpp_64.a befinden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="GutiACE" id="GutiACE"></a>GutiACE</h2>
+<h3 data-condition="Others:Deutsch">Schritt 1</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die GutiACE Bibliothek sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            include</p>
+<p class="BodyText" data-condition="Others:Deutsch">                      gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die GutiACE Bibliothek sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            gutiACE_64</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            include</p>
+<p class="BodyText" data-condition="Others:Deutsch">                               gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 2</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/include/gutiACE_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/gutiACE_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 3</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/include/gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/include/gutiACE</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 4</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/gutiACE wechseln und die gutiACE Bibliothek durch make erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/gutiACE die Bibliothek libguti.a befinden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/gutiACE_64 wechseln und die gutiACE Bibliothek durch make erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/gutiACE_64 die Bibliothek libguti_64.a befinden.</p>
+<h2 data-condition="Others:Deutsch"><a name="Gateway" id="Gateway"></a>Gateway</h2>
+<h3 data-condition="Others:Deutsch">Schritt 1</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Gateway sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            3rdParty</p>
+<p class="BodyText" data-condition="Others:Deutsch">                        SAP</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                   RfcSdk.720.LINUX</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                               include</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                               lib</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            GatewayIx</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            include</p>
+<p class="BodyText" data-condition="Others:Deutsch">                      TelHandler</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Gateway sind unter &lt;BASE_DIR&gt; folgende Verzeichnisstrukturen erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            3rdParty</p>
+<p class="BodyText" data-condition="Others:Deutsch">                        SAP</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                   RfcSdk.720.LINUX_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                               include</p>
+<p class="BodyText" data-condition="Others:Deutsch">                                               lib</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            GatewayIx_64</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">            include</p>
+<p class="BodyText" data-condition="Others:Deutsch">                               TelHandler</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 2</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX/include</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX/include</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX_64/include</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX_64/include</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 3</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX/lib</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX/lib</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty/SAP/RfcSdk.720.LINUX_64/lib</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX_64/lib</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 4</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/GatewayIx</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/GatewayIx</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 64 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/GatewayIx_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/GatewayIx_64</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 5</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Dateien aus</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/include/TelHandler</p>
+<p class="BodyText" data-condition="Others:Deutsch">in das Verzeichnis</p>
+<p class="BodyText" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/include/TelHandler</p>
+<p class="BodyText" data-condition="Others:Deutsch">kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Schritt 6</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;BASE_DIR&gt;/GatewayIx wechseln und das Gateway durch make erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach erfolgreichem Compilieren/Linken muss sich im Verzeichnis &lt;BASE_DIR&gt;/GatewayIx das Binary gateway befinden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Telegrammhandler" id="Telegrammhandler"></a>Telegrammhandler</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Wie bereits erwähnt, ist im Gateway TCP-Native Kommunikation mit aktivem Verbindungsaufbau enthalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um weitere Anforderungen abzudecken, wurden in der Vergangenheit verschiedene Telegrammhandler entwickelt:</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler KM (Kommunikation mit BMW KM)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler GP (Kommunikation mit BMW KM und GP-Telegrammen)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler NQ (Kommunikation mit NetQueue)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler IsoOnTcp (Kommunikation RFC 1006 Protokoll)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler AgLink (Kommunikation mit S5/S7 Steuerungen)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler S5Lan (Kommunikation mit S5 Lan Modul)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Telegrammhandler TcpMpi (Kommunikation mit TcpMpi Modul)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Quelletexte der o.g. Module befinden sich in entsprechenden Unterverzeichnissen von</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern 3rdParty Bibliotheken erforderlich sind befinden sich diese unter:</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/3rdParty</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Besipiel: DeltaLogic für AgLink Telegrammhandler).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern 3rdParty Headerdateien erforderlich sind befinden sich diese unter:</p>
+<p class="BodyText" data-condition="Others:Deutsch">http://av-devdata.muc.gefasoft.office/svn/WinDev/Cpp/trunk/legato/Ix/include</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Besipiel: ibhlink für TcpMpi Telegrammhandler).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Erstellen eines Telegrammhandlers erfolgt wie vorher bereits beschrieben, durch Kopieren der entsprechenden Dateien in das zuvor erstellte Verzeichnis und dem Aufruf von make.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Telegrammhandler, die mit der BMW KM kommunizieren, können nur auf der BMW Entwicklungsplattform compiliert und gelinkt werden, da nur dort die entsprechenden KM Bibliotheken zur Verfügung stehen.</p>
+
+
+</body></html>

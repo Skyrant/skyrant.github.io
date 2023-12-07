@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Abschließende Einstellungen</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Abschließende Einstellungen</h2>
+<p class="BodyText">Die soeben erstellte Datenbank-Instanz LEGATO ist in 
+ der Datei /etc/oratab eingetragen worden. Der User oracle kann diese Datei 
+ zum Editieren öffnen:</p>
+<p class="TextCode">$ vi /etc/oratab</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image107.png" 
+						 alt="" width="661" height="447" border="0" /></p>
+<p class="BodyText">Wie an dem abschließenden N (für "no") in der Zeile, 
+ die mit "LEGATO" beginnt (hier: die vorletzte Zeile), erkennbar, wird 
+ die Instanz per Default <b>nicht</b> zusammen mit dem Datenbanksystem 
+ gestartet. Dieses Verhalten kann geändert werden, indem das N durch ein 
+ Y (für "yes") ersetzt wird.</p>
+<p class="BodyText">Nach dieser letzten Änderung sind Datenbank und Instanz 
+ voll funktionsfähig. Allerdings müssten bei einem Neustart des Servers 
+ sowohl das Datenbank-System als auch der Listener &quot;von Hand&quot; 
+ neu gestartet werden. Nicht zwingend notwendig, aber äußerst sinnvoll 
+ ist deshalb die Erstellung einer Autostart-Funktionalität für Datenbank. 
+ Diese wird im folgenden Abschnitt beschrieben.</p>
+</body>
+</html>

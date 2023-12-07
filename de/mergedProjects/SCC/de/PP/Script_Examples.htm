@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Classic_only"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch;Others:Classic_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Classic_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Classic_only" data-condition="Others:Deutsch;Others:Classic_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Classic_only"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch;Others:Classic_only"/>
+<title data-condition="Others:Deutsch;Others:Classic_only">Nur Classic: Script-Beispiele</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch;Others:Classic_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Classic_only">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Nur Classic: Script-Beispiele">
+        <span>Nur Classic: Script-Beispiele</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Classic_only">Nur Classic: Nützliche Scriptbeispiele</h2>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Viele Scripten werden in ähnlicher Form immer wieder 
+ benötigt. Eine Auswahl wird in diesem Abschnitt angeboten.</p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="OnPrjStart" id="OnPrjStart"></a>OnPrjStart</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Bei Start Ablauf des Cloud Connectors werden grundlegende 
+ Parameter gesetzt oder initialisiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Die Identifikation des Cloud Connectors bei der Datenbank 
+ erfolgt per ID. Kommunizieren mehrere Cloud Connector-Projekte gleichzeitig 
+ mit einer Datenbank, werden sie über eine Variable Value.ProjectID unterschieden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script   : OnPrjStart</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from event PrjStart (start application)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string prj_id, srv_ip</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">debug(&#39;***********************************************************&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">debug(&#39;*  Application started version 3.2.0.0   &#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">debug(&#39;***********************************************************&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Cloud Connector project id</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Value.System.GwProjectId := 1</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">prj_id := LToStr(Value.System.GwProjectId, 10)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//LeWePo Init</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">srv_ip := &#39;192.168.1.100&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Automation.LeWePoServ.ILeWePoServ.Init(prj_id,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                       srv_ip,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                       &#39;/Legato/Visu/ValIn.html&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="GwSyncSysModule" id="GwSyncSysModule"></a>GwSyncSysModule</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Zur TimeOut-Überwachung der Modul-Verbindung Cloud 
+ Connector auf Seite der SQL-Datenbank wird über ein zyklisches Event im 
+ Script die Rückmeldeprozedur der Datenbank p_sync_sysmodule aufgerufen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Wurde die Prozedur als Datenbankelement in das Cloud 
+ Connector-Projekt importiert, kann sie direkt aufgerufen werden. Alternativ 
+ besteht die Möglichkeit, die Prozedur per &quot;execute&quot;-Befehl auszuführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>: In 
+ diesem Listing sind beide Varianten vorhanden.</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script GwSyncSysModule</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from event TimerSyncSys (Cyclic 
+ 5 sec.)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//call db</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">err := Database.Legato.P_SYNC_SYSMODULE(Value.System.GwProjectID)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//on error</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if err &lt;&gt; 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;ERROR: Database.Legato.P_SYNC_SYSMODULE: 
+ &#39; +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39;Project-ID 
+ = &#39; + LToStr(Value.System.GwProjectID, 10) +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39;Error-Code 
+ = &#39; + LToStr(err, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//******************************************************************</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//Alternative</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string szSql</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// build sql command</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">szSql := &#39;CALL p_sync_sysmodule(&#39; +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">          ltostr(Value.System.GwProjectID, 
+ 10) +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">          &#39;)&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//for test</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">debug(&#39;script p_sync_sysmodule stmt:&#39; + szSql)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// execute sql command</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Database.Legato_P.Execute(szSql)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="P_Out_Values" id="P_Out_Values"></a>P_Out_Values</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Die Variablenübergabe von der Datenbank über den Cloud 
+ Connector bis zum Prozess erfolgt bei Legato über eine Schnittstellentabelle 
+ p_out_values. Über ein zyklisches Event gesteuert, selektiert das Script 
+ aktuelle Datensätze aus der Tabelle und beschreibt die entsprechenden 
+ Cloud Connector-Variablen mit dem neuen Wert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script p_out_values</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from event TimerOutValues (Cyclic 
+ 1 sec.)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">bool    datatosel</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string  filter, value, acttime, errstr</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">acttime := timestr(&#39;YYYY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">filter  := printf(&#39; where PROJECT_ID = %u 
+ and TIME_STARTED &lt;= %s&#39;,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                  Value.System.GwProjectID, 
+ &#39;\&#39;&#39; + acttime + &#39;\&#39;&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if Database.Legato.P_OUT_VALUES.select(filter, 2) then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  datatosel := Database.Legato.P_OUT_VALUES.First</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">while datatosel do</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  //select value_format of variable</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  switch Database.Legato.P_OUT_VALUES.VALUE_FORMAT</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    case 1:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      value := Database.Legato.P_OUT_VALUES.VALUE_NUM.AsString</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      break</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    case 2:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      value := Database.Legato.P_OUT_VALUES.VALUE_BOOL.AsString</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      break</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    case 3:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      value := Database.Legato.P_OUT_VALUES.VALUE_STR.AsString</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      break</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  end</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  //Check for variable selected from database</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if isvar(Database.Legato.P_OUT_VALUES.VALUE_SYMBOL) 
+ then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    strvar(Database.Legato.P_OUT_VALUES.VALUE_SYMBOL) 
+ := value</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    errstr := &#39;&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    //on error</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    debug(&#39;Script p_out_values: 
+ Var not existing: &#39; +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">          Database.Legato.P_OUT_VALUES.VALUE_SYMBOL)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  datatosel := Database.Legato.P_OUT_VALUES.Next</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="GwValNumIn" id="GwValNumIn"></a>GwValNumIn</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Wertänderungen, z.B. von OPC-Variablen (aber auch allen 
+ anderen Variablen), sollen vom Cloud Connector erfasst und in die Datenbank 
+ gebucht und / oder direkt an die Web-Applikation zur Anzeige im WebClient 
+ geschickt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Dazu wird in den Variablen-Eigenschaften als Reaktion 
+ &quot;Skript ausführen&quot; angewählt. Ein Beispiel für ein solches Script 
+ ist &quot;GwValNumIn&quot; für numerische Variablenwerte vom Typ &quot;long&quot;. 
+ Entsprechend dem zu buchenden Datentyp kann das Script auch für &quot;Bool&quot;, 
+ &quot;String&quot;, &quot;Double&quot; etc. angepasst werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script GwValNumIn ruft auf:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Classic_only">Script.CommonFunctions.Check_PLC_ChangeRate(string 
+ plc, bool test)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Vor allem in der Testphase von Kopplungen kann es aufgrund 
+ von Fehlern immer wieder vorkommen, dass sich Variablenwerte sehr häufig 
+ (&quot;zyklisch&quot;) ändern, ohne dass diese Änderungen als prozessrelevant 
+ gebucht werden sollen. Zur Überwachung der Aktivität von Datenquellen 
+ (z.B. SPS) wird dieses Script aufgerufen, das als Rückgabewert den Status 
+ der Verbindung liefert (zyklische Aktivität oder OK).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Classic_only">Automation.LeWePoServ.ILeWePoServ.ValIn(string 
+ varname, string value)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Einbuchen der Variable in die Automation-Schnittstelle 
+ mit der Methode ValIn. Die Variable kann in der Web-Applikation direkt 
+ angezeigt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Classic_only">Database.Legato.GW_VAL_NUM_IN(long ProjectID, 
+ string varname, long value, string updtime)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Einbuchen des Variablenwertes in die Datenbank unter 
+ Angabe der Projekt-ID des Cloud Connectors, des Variablensymbols wie in 
+ der Datenbank parametriert, des Wertes und dem Zeitstempel der Wertänderung.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">FULLNAME</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Übergabe 
+		 des Variablennamens mit vollständigem Pfad. Es wird dabei angenommen, 
+		 dass das Variablen-Symbol in der Datenbank identisch mit FULLNAME 
+		 im Cloud Connector ist.</p>
+		<p class="BodyText">Beim Aufruf des Scripts als Reaktion auf eine 
+		 Wertänderung kann für diesen Parameter die Systemvariable @fullname 
+		 angegeben werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">VALUE</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Übergabe 
+		 des aktuellen Variablenwerts an das Script.</p>
+		<p class="BodyText">Beim Aufruf des Scripts als Reaktion auf eine 
+		 Wertänderung kann für diesen Parameter die Systemvariable @value 
+		 angegeben werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Aufrufbeispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Script.CommonFunctions.GwValNumIn(@fullname, @value)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script GwValNumIn</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called as reaction on value-change of 
+ variables</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string plc, updtime</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">bool   ok</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long   err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// get PLC-Name from fullname of the var</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Fullname like &quot;OPC.GOPS.PLC.Foldername.Varname&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">plc := StrToken(FULLNAME,&#39;.&#39;,3)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Check the cyclic-state of the PLC-connection</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// If there are to many value-changes in a certain 
+ period,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// the changes are not entered into the database to 
+ aviod</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// overload of database and connections.</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">ok := Script.CommonFunctions.Check_PLC_ChangeRate(plc,false)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if not ok then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script GwValNumIn: PLC &#39; + plc +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39; sends 
+ cyclic value-changes!&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  return</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Send new value as string to the WebServer</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Automation.LeWePoServ.ILeWePoServ.ValIn(FULLNAME,LtoStr(VALUE,10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Call procedure to enter new value into the database</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">updtime := eventtimestr(&#39;YYYY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">err := Database.Legato.GW_VAL_NUM_IN(Value.System.GwProjectID,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                     FULLNAME,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                     VALUE,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                     updtime)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if err &lt;&gt; 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script GwValNumIn: Error &#39; + LToStr(err,10) 
+ +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39; calling 
+ DB-procedure GW_VAL_NUM_IN!&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="Check_PLC_ChangeRate" id="Check_PLC_ChangeRate"></a>Check_PLC_ChangeRate</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Vor allem in der Testphase von Kopplungen kann es aufgrund 
+ von Fehlern immer wieder vorkommen, dass sich Variablenwerte sehr häufig 
+ (&quot;zyklisch&quot;) ändern, ohne dass diese Änderungen als prozessrelevant 
+ gebucht werden sollen. Zur Überwachung der Aktivität von Datenquellen 
+ (z.B. SPS) wird dieses Script aufgerufen, das als Rückgabewert den Status 
+ der Verbindung liefert (zyklische Aktivität oder OK).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Beispielscript legt Arrays für Steuerungsnummern 
+ von 0 bis 100 an. Die Arraygrößen können an die realen Gegebenheiten angepasst 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script GwValNumIn ruft auf:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Script.Tools.GetPlcNo(string plc)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Dieses Script ist sehr projektabhängig. Das Script 
+ muss anhand des übergebenen Strings plc (Name der Verbindung) eine eindeutige 
+ numerische Kennung zurückgeben. Dies kann z.B. durch ein internes Array 
+ im Script oder feste Zuweisungen geschehen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">PLC</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Übergabe 
+		 des Verbindungsnamens der zu checkenden (SPS-)Verbindung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">TEST</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Angabe 
+		 der Betriebsart des Scripts:</p>
+		<p class="BodyText">TEST = 0: Vollständige Auswertung des Zustands 
+		 der Verbindung</p>
+		<p class="BodyText">TEST = 1: Rückgabe des aktuellen Zustands der 
+		 Verbindung.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script Check_PLC_ChangeRate</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from GwValNumIn</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long        plcnr</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">static long firsttimecyclic[100]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">static long lastchange[100]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">static long OKstart[100]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">static bool blocked[100]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">static long i</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string      act_time_s</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long        act_time</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long        delta</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">plcnr := Script.Tools.GetPlcNo(PLC)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// When testing only return status of the connection 
+ (cyclic/OK)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if Test then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if i &lt; 100 then i := i + 1 else i := 
+ 1 endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // enter every 100th value even with status 
+ cyclic</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if i = 100 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    return true</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    // return status</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    return not blocked[plcnr]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Check real status of the connection (cyclic/OK)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">act_time_s := TimeStr(&#39;YYYY/MM/DD HH:mm:ss&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">act_time   := TimeToL(&#39;YYYY/MM/DD HH:mm:ss&#39;, 
+ act_time_s)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">delta := act_time - lastchange[plcnr]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// cyclic ?</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if delta &gt; 3 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  firsttimecyclic[plcnr] := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if firsttimecyclic[plcnr] = 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    firsttimecyclic[plcnr] := act_time</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Analyse rate</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if not blocked[plcnr] then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // If there are to many value-changes in 
+ the last 60 secs or more:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // Set connection-status to &quot;blocked, 
+ cyclic value-changes&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if (firsttimecyclic[plcnr] &gt; 0) and 
+ (firsttimecyclic[plcnr] + 60 &lt; act_time) then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    blocked[plcnr] := true</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    debug(&#39;Script Check_PLC_ChangeRate: 
+ Connection &#39; +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">          PLC 
+ + &#39;: Value-changes blocked&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // If the value-change-cycle is valid since 
+ more than 60 secs:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // Set connection-status to &quot;OK&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if (firsttimecyclic[plcnr] = 0) or</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  (firsttimecyclic[plcnr] + 60 &gt; act_time) 
+ then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    if OKStart[plcnr] = 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">      OKStart[plcnr] 
+ := lastchange[plcnr]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    OKStart[plcnr] := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if (OKStart[plcnr] &gt; 0) and (OKStart[plcnr] 
+ + 30 &lt; act_time) then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    blocked[plcnr] := false</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    firsttimecyclic[plcnr] := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    OKStart[plcnr] := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    debug(&#39;Script Check_PLC_ChangeRate: 
+ Connection &#39; +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">          PLC 
+ + &#39;: Value-changes cyclic-state OK&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Diagnose for testing</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string lt</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">lt := &#39;Script Check_PLC_ChangeRate: Connection &#39; + 
+ PLC</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if blocked[plcnr] then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  lt := lt + &#39; Blocked&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  lt := lt + &#39; OK     &#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">lt := lt + &#39; Delta: &#39; + ltostr(delta, 10)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Debug(lt)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Save processingtime</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">lastchange[plcnr] := act_time</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">return not blocked[plcnr]</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="AlarmBitArray" id="AlarmBitArray"></a>AlarmBitArray</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Scriptbeispiel, bei dem angenommen wird, dass Störmeldungen 
+ in der Steuerung als Datenblock zur Verfügung stehen, und jedes Bit im 
+ Block einer Störmeldung zugeordnet ist. Der Datenblock wird z.B. über 
+ die OPC-Schnittstelle zyklisch gepollt und bitweise auf Änderung überprüft. 
+ Array beginnt bei der Adressierung mit 0, d.h., Array[0] ist das erste 
+ Feld.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Im Cloud Connector-Projekt ist der Datenblock als OPC-Item 
+ angelegt, z.B. &quot;OPC.GOPS.PLC1.AlarmBlock&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Im gleichen Knoten muss ein Vergleichsblock parametriert 
+ werden, im dem jeweils das alte Blockabbild abgelegt werden kann, z.B. 
+ &quot;OPC.GOPS.PLC1.AlarmBlock_Compare&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script vergleicht bitweise den &quot;AlarmBlock&quot; 
+ mit &quot;AlarmBlock_Compare&quot; und ruft bei einem geänderten Bit das 
+ Script &quot;OnChangeAlarmBit&quot; auf, das die Information für die Datenbankprozedur 
+ aufbereitet.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script AlarmBitArray ruft auf:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Script.AlarmHandler.OnChangeAlarmBit</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Der Aufruf erfolgt indirekt aus dem Befehl CompBitArray. 
+ Die Parameter von OnChangeAlarmBit werden automatisch versorgt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">FULLNAME</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Übergabe 
+		 des Variablennamens mit vollständigem Pfad. Es wird dabei angenommen, 
+		 dass das Variablen-Symbol in der Datenbank identisch mit FULLNAME 
+		 im Cloud Connector ist.</p>
+		<p class="BodyText">Beim Aufruf des Scripts als Reaktion auf eine 
+		 Wertänderung kann für diesen Parameter die Systemvariable @fullname 
+		 angegeben werden</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">VALUE</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Übergabe 
+		 des aktuellen Variablenwerts an das Script.</p>
+		<p class="BodyText">Beim Aufruf des Scripts als Reaktion auf eine 
+		 Wertänderung kann für diesen Parameter die Systemvariable @value 
+		 angegeben werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Aufrufbeispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Script.AlarmHandler.AlarmBitArray(@fullname, @value)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script AlarmBitArray</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called as reaction on value-change of 
+ alarmblocks</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">block  b</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string vb</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long   bllen</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Save temporary</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Value.Temp.VarName := FULLNAME</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">b     := BlkVar(FULLNAME)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">bllen := BlockSize(b)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Name of Block to compare (oldblock)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">vb    := FULLNAME + &#39;_Compare&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Check changes in datablock bitwise</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if IsVar(vb) then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  CompBitArray(b, blkvar(vb), bllen, Script.AlarmHandler.OnChangeAlarmBit)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  BlkVar(vb) := b</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script AlarmBitArray: Varname not 
+ valid: &#39; + vb)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="OnChangeAlarmBit" id="OnChangeAlarmBit"></a>OnChangeAlarmBit</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script bereitet die übergebenen Informationen für 
+ das Einbuchen in die Datenbank auf. Dies sind die Byte- und Bit-Adresse 
+ und der neue Zustand des Bits.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Die Aufbereitung ist sehr projektspezifisch. Im Beispiel 
+ wird angenommen, dass Meldetexte mit einer Meldungsnummer in der Datenbank 
+ als einfache Verkettung von Byte- und Bit-Adresse bestehen, und dass das 
+ Operandensymbol aus Byte.Bit besteht.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script OnChangeAlarmBit ruft auf:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Script.LegatoDB. DBAlarmIn2(string connection_symbol, 
+ long ext_code, string operand, long action, long associated_value)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">BYTEADR</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Nummer 
+		 des Bytes im Datenblock, in dem das geänderte Bit liegt</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">BITADR</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Nummer 
+		 des geänderten Bits im Datenblock</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">VALUE</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Neuer 
+		 Wert des Bits</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script OnChangeAlarmBit</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from AlarmBitArray</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string plc, operator</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long   err, ext_code, action, av</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Get Connection Symbol (PLC-Name) from FULLNAME</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">plc := StrToken(Value.Temp.VarName, &#39;.&#39;, 4)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Create ID of alarm, like messagenumber in database,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// p.ex. by chaining byte- and bitadress in the datablock)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">ext_code := StrToL(LToStr(BYTEADR, 10) + LToStr(BITADR, 
+ 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Create symbol for operator</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// p.ex. &quot;ByteNo.BitNo&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">operator := LToStr(BYTEADR, 10) + &#39;.&#39; + LToStr(BITADR, 
+ 10)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Create action of the alarm: coming or going</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if VALUE then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // Coming</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  action := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script OnChangeAlarmBit: PLC &#39; + 
+ plc +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39;: 
+ Operator: &#39; + operator + &#39; Coming&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  // Going</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  action := 1</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script OnChangeAlarmBit: PLC &#39; + 
+ plc +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39;: 
+ Operator: &#39; + operator + &#39; Going&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Associated value to the alarm (here 0)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">av := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Call script to enter dataset to the database</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">err := Script.LegatoDB.DBAlarmIn2(plc, ext_code, operator, 
+ action, av)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//on error</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if err &lt;&gt; 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script OnChangeAlarmBit: Error calling 
+ Script.LegatoDB.DBAlarmIn2&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="DBAlarmIn2" id="DBAlarmIn2"></a>DBAlarmIn2</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script ruft die Datenbank-Prozedur GwAlarmIn2 auf 
+ und versorgt entsprechend deren Parameter.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">CONNECTION_SYMBOL</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Name 
+		 der Verbindung, wie sie in der Datenbank parametriert ist.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">EXT_CODE</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Meldungsnummer 
+		 der Störmeldung, wie sie bei der Verbindung in der Meldetextliste 
+		 parametriert ist.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">OPERATOR</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Symbolische 
+		 Bezeichnung der Störmeldung in der Meldetextliste.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">ACTION</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Aktion 
+		 dieser Buchung, wie sie in der Datenbank verarbeitet wird:</p>
+		<p class="BodyText">0 = Störmeldung kommend</p>
+		<p class="BodyText">1 = Störmeldung gehend</p>
+		<p class="BodyText">2 = Verbindung ist fehlerfrei, alle evtl. offenen 
+		 Störmeldungen werden abgeschlossen</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="142"><p class="BodyText">ASSOCIATED_VALUE</p></td>
+		<td style="vertical-align: top;" width="463"><p class="BodyText">Begleitwert 
+		 dieser Störmeldung, z.B. ein Prozesswert.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script DBAlarmIn2</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from OnChangeAlarmBit</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// Call procedure GW_ALARM_IN2</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// CONNECTION_SYMBOL Name of the connection (source) 
+ in the database</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// EXT_CODE          Number 
+ of the alarm (numeric)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// OPERAND           Operator 
+ (string)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// ACTION            0: 
+ coming / 1: going / 2: connection without any pending alarm</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// ASSOCIATED_VALUE  Value to associate with 
+ this alarm in the database</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">err := Database.Legato.GW_ALARM_IN2(CONNECTION_SYMBOL,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                    EXT_CODE,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                    OPERATOR,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                    ACTION,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                    ASSOCIATED_VALUE)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">// on error</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if err &lt;&gt; 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script DBAlarmIn2: Error &#39; + LToStr(err, 
+ 10) +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39; Connection 
+ &#39; + CONNECTION_SYMBOL            +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39; Ext_Code 
+ &#39; + LToStr(EXT_CODE, 10)           +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39; Operator 
+ &#39; + OPERATOR                       +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">        &#39; Action 
+ &#39; + LToStr(ACTION, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">return err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="WriteToProtFile" id="WriteToProtFile"></a>WriteToProtFile</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Die Standard-Logbuchfunktion per &quot;debug&quot;-Befehl 
+ erfolgt in das Projekt-Logbuch. Protokollierung in eigene Protokolldateien 
+ von einem Win64-Cloud Connector aus in ein beliebiges Verzeichnis kann 
+ über folgende Scripte projektiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Bei Aufruf von &quot;WriteToProtFile&quot; wird in 
+ die angegebene Protokolldatei im vorbelegten Pfad &quot;ProtFilePath&quot; 
+ der angegebene Text geschrieben. Vor den Text wird der aktuelle Zeitstempel 
+ gesetzt. Würde die vorbelegte Maximalgröße &quot;ProtFileMaxSize&quot; 
+ der Datei überschritten, werden die Protokoll-Archivdateien um einen Index 
+ verschoben, und die aktuelle Protokolldatei mit Index 1 archiviert. Das 
+ Protokollarchiv mit Index &quot;ProtFileMaxNumber&quot; wird gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Für die Protokolle sind im Projekt-Start-Script einige 
+ Vorbelegungen festzulegen. Hier der Auszug aus dem Script &quot;OnPrjStart&quot;:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//Protocols</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Value.Protocol.ProtFilePath      := 
+ &#39;C:\\temp\\&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Value.Protocol.ProtFileMaxSize   := 
+ 1024</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Value.Protocol.ProtFileMaxNumber := 10</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if Script.Protocol.CheckPath &lt;&gt; 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  debug(&#39;Script OnPrjStart: Error calling 
+ CheckPath&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Interne Variable:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">String Value.Protocol.ProtFilePath</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Angabe des Pfads, in den die Protokolldateien geschrieben 
+ werden. Der Cloud Connector unter dem zur Laufzeit aktuellen Benutzer 
+ muss Schreib/Leserechte auf diesem Laufwerk besitzen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Int Value.Protocol.ProtFileMaxSize</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Maximalgröße einer Protokolldatei in Bytes.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Int Value.Protocol.ProtFileMaxNumber</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Anzahl der Archiv-Protokolldateien bezogen auf einen 
+ Protokolldatei-Namen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Das Script WriteToProtFile ruft auf</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Script.Protocol.MoveProtFiles(string fullname)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Der fullname ist der vollständige Pfad mit Dateiname 
+ der Protokolldatei.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="167"><p class="BodyText">FILENAME</p></td>
+		<td style="vertical-align: top;" width="437"><p class="BodyText">Name 
+		 der Datei (mit Extension), in die protokolliert werden soll.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="167"><p class="BodyText">PROTTEXT</p></td>
+		<td style="vertical-align: top;" width="437"><p class="BodyText">Zu 
+		 protokollierender Text.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Aufrufbeispiel für 
+ WriteToProtFile</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">Script.Protocol.WriteToProtFile(&#39;Prot_1.log&#39;,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                                &#39;The 
+ quick brown fox jumps over the lazy dog&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script     : 
+ WriteToProtFile</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from: Scripts to write to protocol-file</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author     :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long     proterr, i</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">bool     fileok</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">file     f</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string   fullname, fulltext</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">/*</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//Optional calling here or in OnPrjStart!</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">proterr := Script.Protocol.CheckPath</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if proterr &lt;&gt; 0 then return endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">*/</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">fullname := Value.Protocol.ProtFilePath + FILENAME</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">fulltext := TimeStr(&#39;YYYY-MM-DD HH:mm:ss&#39;) + &#39;: &#39; + 
+ PROTTEXT</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">f.open(fullname, 4)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if f.size + (StrLen(fulltext)/2) &gt; Value.Protocol.ProtFileMaxSize 
+ then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  Script.Protocol.MoveProtFiles(fullname)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.open(fullname, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*********************************************************&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*  Created  : 
+ &#39; + TimeStr(&#39;YYYY-MM-DD HH:mm:ss&#39;) +</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">            &#39;                       *&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*********************************************************&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*  Attention: Do NOT 
+ leave this file opened in editors  *&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*             like 
+ NOTEPAD. You will lose data !        *&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*             Use 
+ tools like TEXTPAD or TAIL instead !  *&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.writeln(&#39;*********************************************************&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">f.seek(f.size)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">f.writeln(SubStr(fulltext, 0, 1024))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="CheckPath" id="CheckPath"></a>CheckPath</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Im Projekt-Anlauf, bei Bedarf auch bei jedem Aufruf 
+ von &quot;WriteToProtFile&quot; (z.B. bei Netzlaufwerken), wird &quot;CheckPath&quot; 
+ ausgeführt, um die Zugriffsrechte auf das Protokoll-Verzeichnis zu prüfen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script     : 
+ CheckPath</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from: Script WriteToProtFile or 
+ OnPrjStart</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author     :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">string p</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long   err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">file   f</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if SubStr(Value.Protocol.ProtFilePath,</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">          StrLen(Value.Protocol.ProtFilePath) 
+ - 1, 1) = &#39;\\&#39; then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  p := Value.Protocol.ProtFilePath</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  p := Value.Protocol.ProtFilePath + &#39;\\&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  Value.Protocol.ProtFilePath := p</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">err := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if not f.open(p + &#39;~a.txt&#39;, 2) then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  //Path invalid or access denied!</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  err := 1</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if not DeleteFile(p + &#39;~a.txt&#39;) then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    //Cannot delete testfile ~a.txt!</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    err := 2</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">switch err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  case 0:  break</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  case 1:  p := &#39;! 1: Path invalid 
+ or access denied&#39; break</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  case 2:  p := &#39;! 2: Cannot delete 
+ testfile ~a.txt&#39; break</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  default: p := &#39;!??: Unknown error&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">end</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">return err</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Classic_only"><a name="MoveProtFiles" id="MoveProtFiles"></a>MoveProtFiles</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only">Bei Erreichen der max. Dateigröße einer Protokolldatei 
+ wird diese ins Archiv geschoben und bei Bedarf die älteste Archivdatei 
+ gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Parameter des Scripts</span>:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Classic_only">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="167"><p class="BodyText">FULLNAME</p></td>
+		<td style="vertical-align: top;" width="437"><p class="BodyText">Angabe 
+		 von Pfad und Dateiname des Protokolls.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Classic_only"><span style="font-weight: bold;">Listing</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  script     : 
+ MoveProtFiles</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  called from: Script WriteToProtFile</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision   :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  author     :</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//  revision history:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">//</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">////////////////////////////////////////////////////////////////////</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">long i</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">bool fileok</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">i := Value.Protocol.ProtFileMaxNumber</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">if i &lt; 1 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  i := 1</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  Value.Protocol.ProtFileMaxNumber := 1</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">fileok := DeleteFile(fullname + &#39;.&#39; + LToStr(i, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">while i &gt; 0 do</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  i := i - 1</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if i = 0 then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    fileok := MoveFile(fullname, 
+ fullname + &#39;.1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  else</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    fileok := MoveFile(fullname 
+ + &#39;.&#39; + LToStr(i, 10),</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">                       fullname 
+ + &#39;.&#39; + LToStr(i + 1, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  if not fileok then</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">    debug(&#39;Script MoveProtFiles: 
+ ERROR moving ProtFiles near No &#39; + LToStr(i, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">  endif</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Classic_only"> </p>
+
+
+</body></html>

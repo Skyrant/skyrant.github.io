@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Reader</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Reader">
+        <span>Reader</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">Reader</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte dieses Typs fungieren als Reader, der die Daten 
+ liest, während sie noch geladen werden. Das heißt, die Daten müssen nicht 
+ erst komplett in den Speicher geschrieben werden, ehe sie durchsucht werden 
+ können. Vielmehr ist es möglich, die bereits geschriebenen Stücke gleich 
+ zu durchsuchen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Reader werden von Methoden anderer Objekte als Ergebnis 
+ geliefert, z.B. HttpCon.getResponseReader() und üblicherweise nicht per 
+ &quot;new&quot; erzeugt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Reader haben die folgenden Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">close():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließt die Datei oder sonstigen Ausgabekanal. Danach 
+ kann nicht mehr geschrieben werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readChar():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert das nächste Zeichen aus der Eingabe.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readLine():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest bis zum Ende der aktuellen Zeile. Das Zeilenende 
+ (&#39;\r\n&#39;, &#39;\n&#39; oder &#39;\r&#39;) wird nicht als Teil des Ergebnisses geliefert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readLines(name, value):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den Rest der Eingabe als String. Zeilenenden 
+ sind im Ergebnis enthalten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readWordOrSpaces(Trennzeichen):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zerstückelt den eingegebenen Text gemäß den angegebenen 
+ Trennzeichen oder, falls nicht spezifiziert, Leerzeichen. Gibt einen String 
+ zurück, der entweder nur aus Trennzeichen oder nur aus Nicht-Trennzeichen 
+ besteht.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">lineNumer():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Nummer der aktuellen Zeile der Eingabe.</p>
+
+
+</body></html>

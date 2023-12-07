@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.9.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">TPM-Analyse</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TPM-Analyse">
+        <span>TPM-Analyse</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">TPM Analyse</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">TPM Analyse</span> 
+ zeigt die Anzahl der gewählten Begründungen für Wartungstätigkeiten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/TPM_Analysis.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Mouseover über einen Balken werden die Begründung 
+ und die Häufigkeit eingeblendet.</p>
+<div data-conref="../../../assets/snippets/de_Hide-value.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Durch Klick auf den Namen eines Wertes unten in der 
+ Legende kann dieser aus- bzw. wieder eingeblendet werden. Ausgeblendete 
+ Werte werden in der Legende hellgrau dargestellt.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">TPM Analyse </span>stehen 
+ folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">X-Achse: / Y-Achse:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste können die X- und 
+ Y-Achse festgelegt werden. Es stehen Tätigkeiten, Komponenten und Begründungen 
+ zur Auswahl.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Auslöser:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann selektiert werden, 
+ wodurch die Tätigkeit ausgelöst wurde (Wartungsplan, Meldung, Benutzer).</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Tätigkeits-Kategorie:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann eine Tätigkeits-Kategorie 
+ ausgewählt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Top-Ergebnisse:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann die Anzahl der angezeigten Ergebnisse 
+ auf die mit der größten Häufigkeit eingeschränkt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Komponenten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann eine Komponente 
+ ausgewählt werden. Hierzu öffnet sich ein Suchfenster, in dem nach Komponenten 
+ gesucht werden kann.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Tätigkeiten auf unterster Ebene:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ Tätigkeiten der untersten Ebene angezeigt werden oder nur &quot;Parent&quot;-Einträge.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Tätigkeiten werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Tätigkeiten</span> angelegt.</p></li>
+	<li><p class="ListBulletL1">Komponenten werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Komponentenarten</span> angelegt und ein Knotenbezug 
+	 hergestellt.</p></li>
+	<li><p class="ListBulletL1">Begründungen werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Begründungen</span> angelegt.</p></li>
+</ul>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">axisX</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">axisY</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">triggers</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">activityCategory</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">topResults</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">tpmComponents</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">lastLevelActivities</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

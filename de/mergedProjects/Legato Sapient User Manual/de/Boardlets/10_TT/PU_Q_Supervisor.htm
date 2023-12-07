@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.10.11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">PU Qualitätsüberwachung</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="PU Qualitätsüberwachung">
+        <span>PU Qualitätsüberwachung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">PU Qualitätsüberwachung</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">PU Qualitätsüberwachung</span> 
+ zeigt für alle Schichten des selektierten Knotens für einen Zeitraum von 
+ maximal einer Woche die gebuchten Q-Zustände zu einem Arbeitsplan an. 
+ Über die Einstellungen des Boardlets kann festgelegt werden, welche Q-Zustände 
+ rot (Fehler) oder orange (Warnung) angezeigt werden sollen. Wurde kein 
+ Q-Zustand erfasst, wird der Eintrag für die Schicht schwarz angezeigt, 
+ wurde ein Q-Zustand erfasst, der nicht als Fehler oder Warnung definiert 
+ ist, wird der Eintrag grün angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/PU_Q_Supervisor.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">So lässt sich auf einen Blick erkennen, in welcher 
+ Schicht es bei welchem Arbeitsgang zu Qualitätsproblemen kam. Hat man 
+ im Dashboard zusätzlich das <a href="PU_View.htm">Produktionseinheiten-Boardlet</a> 
+ eingefügt, so filtert ein Klick auf einen Eintrag auf die betroffene PU 
+ und färbt diese rot ein.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">PU Qualitätsüberwachung</span> 
+ stehen folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Nur Arbeitspläne von letzter Woche:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiv, werden im Reiter 
+ Filter nur die Arbeitspläne in der Dropdown-Liste angezeigt, die letzte 
+ Woche kativ waren.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Fehler:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Aus der Dropdown-Liste können ein oder mehrere 
+ Q-Zustände selektiert werden, die als Fehler (rot) visualisiert werden 
+ sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Warnung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Aus der Dropdown-Liste können ein oder mehrere 
+ Q-Zustände selektiert werden, die als Warnung (orange) visualisiert werden 
+ sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zeitschema:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiv, wird nicht automatisch 
+ das Zeitschema des selektierten Knotens verwendet, sondern kann individuell 
+ im Reiter Filter ausgewählt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Maximale Tage zur Anzeige:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Angabe, wieviele Tage unabhängig vom gewählten 
+ Zeitfilter des Dashboards maximal angezeigt werden sollen.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Arbeitsplan auswählen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Aus der Dropdown-Liste kann ein Arbeitsplan 
+ ausgewählt werden, für den die Auswertung erfolgen soll. Je nach Einstellung 
+ werden hier alle Arbeitspläne angezeigt oder nur solche, die letzte Woche 
+ aktiv waren.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zeitschema:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist die Einstellung &quot;Zeitschema&quot; = 
+ true, kann das gewünschte Zeitschema hier ausgewählt werden. Andernfalls 
+ wird das Zeitschema des selektierten Knotens verwendet.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Für den selektierten Knoten müssen Schichten parametriert 
+ und über den Schichtkalender geplant sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem wird ein Arbeitsplan mit Arbeitsgängen benötigt. 
+ Diese Daten können im <span class="Bold">LC2</span> unter <span class="Bold">Produktionsmanagement</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Produktionsplanung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Arbeitspläne</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Arbeitsgänge</span> 
+ parametriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließlich muss für eine bestehende PU ein Q-Zustand 
+ mit Bezug zu einem Arbeitsgang gebucht werden. Dies erfolgt über die Prozedur 
+ &quot;setQStateId&quot;.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">qStateMandatory</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">displayBop</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">redColor</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">orangeColor</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletColorArray</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletPUs</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletColor</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">daysToShow</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

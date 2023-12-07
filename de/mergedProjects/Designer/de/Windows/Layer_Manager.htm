@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "4.1_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Layer Manager</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Layer Manager" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Layer Manager">
+        <span>Layer Manager</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Layer Manager</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Fenster dient zum Verwalten der Layer / Ebenen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prinzipiell hat jede Grafik immer einen default Layer. 
+ Dieser wird aber zunächst nicht im DOM angezeigt. Wird ein weiterer Layer 
+ angelegt, werden alle vorhandenen Layer im DOM angezeigt. Dem default 
+ Layer werden automatisch alle bisher gezeichneten Elemente untergeordnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Jeder Layer wird in der Liste mit einer Checkbox und 
+ seiner ID angezeigt. Wird die Checkbox deselektiert, werden alle in dem 
+ entsprechenden Layer enthaltenen Elemente ausgeblendet. Auf die spätere 
+ SVG Datei hat dies keine Auswirkung.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Neue Elemente werden automatisch in den im DOM selektierten 
+ Layer gezeichnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="msoDel"><del cite="mailto:Mario%20J.%20Rutar" datetime="2016-06-24T13:29">Im 
+ Preferences Dialog (Option: &quot;Operate on all layers&quot;) kann definiert 
+ werden, ob unabhängig von der momentanen Layerselektion gearbeitet werden 
+ kann oder ob nur mit denjenigen Elementen gearbeitet werden kann, die 
+ sich im momentan selektierten Layer befinden.</del></span> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Im unteren Bereich sind einige Menüpunkte zur Verwaltung 
+ erhältlich.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="451" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="92"><p class="TabellenÜberschrift">Option</p></td>
+		<td style="vertical-align: top;" width="359"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">Refresh</p></td>
+		<td style="vertical-align: top;" width="359"><p class="TabellenInhalt">Zurzeit 
+		 nicht implementiert.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">New 
+		 Layer</p></td>
+		<td style="vertical-align: top;" width="359"><p class="TabellenInhalt">Erstellt 
+		 einen neuen Layer.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">Delete 
+		 Layer</p></td>
+		<td style="vertical-align: top;" width="359"><p class="TabellenInhalt">Löscht 
+		 einen Layer und alle enthaltenen Elemente.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">Move 
+		 Up</p></td>
+		<td style="vertical-align: top;" width="359"><p class="TabellenInhalt">Verschiebt 
+		 einen Layer eine Position nach oben.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">Move 
+		 Down</p></td>
+		<td style="vertical-align: top;" width="359"><p class="TabellenInhalt">Verschiebt 
+		 einen Layer eine Position nach unten.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Reihenfolge der Layer wird ebenfalls im DOM widergespiegelt.</p>
+
+
+</body></html>

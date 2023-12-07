@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.4.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_Windows_2012R2_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Archiving Status prüfen, Archiving aktivieren / deaktivieren</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Archiving Status prüfen, Archiving aktivieren / deaktivieren">
+        <span>Archiving Status prüfen, Archiving aktivieren / deaktivieren</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Archiving Status prüfen, Archiving aktivieren / deaktivieren</h2>
+<h3 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Für sensible Produktionsumgebungen kann nun das Archivieren 
+ von Redo-Logs aktiviert werden. Archivierte Redo-Log-Dateien (Archivelogs) 
+ sind Offline-Kopien der Redo-Log Dateien und können mit Hilfe eines Backups 
+ der Datenbank verwendet werden, um im Fehlerfall eine vollständige Reparatur 
+ der Datenbank zu gewährleisten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Wird das Archiving aktiviert, so muss sichergestellt 
+ werden, dass die Log-Files regelmäßig gelöscht werden. Sonst läuft die 
+ Festplatte bzw. die Fast Recovery Area über!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem ist es aus Gründen der Ausfallsicherheit und 
+ der Performance sinnvoll, die Archivdateien auf einer anderen Platte oder 
+ Partition abzulegen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Archive_Log_Status_überprüfen"></a>Archive Log Status überprüfen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Prüfen Sie zuerst den Status des Archive Logs. Gehen 
+ Sie folgendermaßen vor:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sqlplus / as sysdba</p>
+<p class="TextCode" data-condition="Others:Deutsch">archive log list;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls der Befehl sqlplus / as sysdba nicht funktioniert, 
+ melden Sie sich wie folgt an:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sqlplus &lt;SYSUSER&gt;/&lt;SYSPWD&gt;[@&lt;DBNAME&gt;] 
+ as sysdba</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Nun wird Information über den Datenbank-Log-Modus ausgegeben. 
+ Ist das Archiving bereits aktiviert, sieht die Antwort in etwa so aus:</p>
+<p class="TextCode" data-condition="Others:Deutsch">Datenbank-Log-Modus                Archive-Modus</p>
+<p class="TextCode" data-condition="Others:Deutsch">Automatische Archivierung          Aktiviert</p>
+<p class="TextCode" data-condition="Others:Deutsch">Archivierungsziel                  D:\oracle\oradata\IDDB2\archive</p>
+<p class="TextCode" data-condition="Others:Deutsch">Älteste Online-Log-Sequenz         11160</p>
+<p class="TextCode" data-condition="Others:Deutsch">Nächste Log-Sequenz ins Archiv     11163</p>
+<p class="TextCode" data-condition="Others:Deutsch">Aktuelle Log-Sequenz               11163</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist das Archiving ausgeschaltet, so sieht die Antwort 
+ in etwa folgendermaßen aus:</p>
+<p class="TextCode" data-condition="Others:Deutsch">Datenbank-Log-Modus                NoArchive-Modus</p>
+<p class="TextCode" data-condition="Others:Deutsch">Automatische Archivierung          Deaktiviert</p>
+<p class="TextCode" data-condition="Others:Deutsch">Archivierungsziel                  /srv/oracle/product/12.1.0/dbhome_2/dbs/arch</p>
+<p class="TextCode" data-condition="Others:Deutsch">Älteste Online-Log-Sequenz         514409</p>
+<p class="TextCode" data-condition="Others:Deutsch">Aktuelle Log-Sequenz               514415</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Mount-Phase_anstoßen"></a>Mount-Phase anstoßen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Änderung des ARCHIVELOG-Modus ist nur in der Mount-Phase 
+ möglich. Gehen Sie folgendermaßen vor:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sqlplus / as sysdba</p>
+<p class="TextCode" data-condition="Others:Deutsch">shutdown immediate;</p>
+<p class="TextCode" data-condition="Others:Deutsch">startup mount;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Archiving_aktivieren"></a>Archiving aktivieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Aktivieren des ARCHIVE_LOG-Modus folgenden Befehl 
+ absetzen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">alter database archivelog;</p>
+<p class="TextCode" data-condition="Others:Deutsch">alter database open;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Archiving_deaktivieren"></a>Archiving deaktivieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Deaktivieren des ARCHIVE_LOG-Modus lautet der Befehl:</p>
+<p class="TextCode" data-condition="Others:Deutsch">alter database noarchivelog;</p>
+<p class="TextCode" data-condition="Others:Deutsch">alter database open;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

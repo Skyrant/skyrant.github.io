@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Software_Documentation_MediaServer_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Konfigurationsdateien</title>
+<link rel="stylesheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Konfigurationsdateien</h1>
+<h2><a name="Serverkonfiguration__Server.cfg_" id="Serverkonfiguration__Server.cfg_"></a>Serverkonfiguration (Server.cfg)</h2>
+<p class="TextCode">[Common]</p>
+<p class="TextCode">Port=1122</p>
+<p class="TextCode">MediaClientsConfigPath=/home/ap/supvis/mediaserver/mediaclients</p>
+<p class="TextCode">WavFilesPath=C:\RL-BRASIL\WavFiles</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[Database]</p>
+<p class="TextCode">Connect=TLEGO</p>
+<p class="TextCode">User=legato_write</p>
+<p class="TextCode">Password=F01D2092E5071540C91D8FF6FB46B4A49C7847F391684A37BB74FB93</p>
+<p class="TextCode">ProjectId=10000</p>
+<p class="TextCode">SQLMsgStmt="select a.ID, a.TIME_START, a.AL_TYPE, m.NODE, m.SYMBOL_1 as SYMBOL, l.NAME_0 as NODENAME from AL_PENDING a, AL_MESSAGE_ARCHIVE m, L_NODES l where a.TIME_END is NULL and a.AL_TYPE in(11, 12) and m.ID = a.MESSAGE and l.ID = m.NODE order by a.TIME_START"</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In dieser Konfigurationsdatei sind allgemeine Einstellungen (Abschnitt [Common]) und Datenbankeinstellungen (Abschnitt [Database]) enthalten.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText"><b>Abschnitt [Common]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Port (Listenport des Servers für eingehende TCP Verbindungen der Clients)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">MediaClientsConfigPath (Konfigurationspfad der Clients)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">WavFilesPath (Pfad der WAV Dateien, in dem sich die WAV Dateien auf den Windows-Clients befinden)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><b>Abschnitt [Database]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Connect (Name der Legato Datenbank)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">User (Datenbankbenutzer)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Password (verschlüsseltes Datenbankpasswort)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">ProjectId (Kennung des Medienservers für den Aufruf von P_SYNC_SYSMODULE)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">SQLMsgStmt (SQL Statement zum Selektieren der Meldungen)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<h2><a name="Konfiguration_der_Meldearten__AlTypes.cfg_" id="Konfiguration_der_Meldearten__AlTypes.cfg_"></a>Konfiguration der Meldearten (AlTypes.cfg)</h2>
+<p class="TextCode">[Config]</p>
+<p class="TextCode">AlTypesCnt=2</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[AlType1]</p>
+<p class="TextCode">Type=11</p>
+<p class="TextCode">BitNo=1</p>
+<p class="TextCode">Melody=1</p>
+<p class="TextCode">Expression="\D*\d+(.*)?"</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[AlType2]</p>
+<p class="TextCode">Type=12</p>
+<p class="TextCode">BitNo=0</p>
+<p class="TextCode">Melody=2</p>
+<p class="TextCode">Expression="\D*\d+(.*)?"</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In dieser Konfigurationsdatei befindet sich die Konfiguration der Meldearten.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText"><b>Abschnitt [Config]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">AlTypesCnt (Anzahl der Meldearten)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><b>Abschnitte [</b>AlType1, AlType2, …<b>]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Type (Meldeart)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">BitNo (BitNummer, die in der Statusvariablen gesetzt wird, die Zählung beginnt mit 0)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Expression (Regular Expression um die Taktnummer aus der Symbolik zu ermitteln)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Melody (0 = keine Melodie abspielen (default), 1 = langsame Melodie abspielen, 2 = schnelle Melodie abspielen)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<h2><a name="Konfiguration_der_Montagelinien__Lines.cfg_" id="Konfiguration_der_Montagelinien__Lines.cfg_"></a>Konfiguration der Montagelinien (Lines.cfg)</h2>
+<p class="TextCode">[Common]</p>
+<p class="TextCode">LinesCnt=1</p>
+<p class="TextCode">Line1Name=Montagem</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[Line1]</p>
+<p class="TextCode">StartScript=</p>
+<p class="TextCode">ShutdownScript=</p>
+<p class="TextCode">StatusVarsConnectionId=1303</p>
+<p class="TextCode">SectionsCnt=5</p>
+<p class="TextCode">Section1Name=Braco 1</p>
+<p class="TextCode">Section2Name=Braco 2</p>
+<p class="TextCode">Section3Name=Braco 3</p>
+<p class="TextCode">Section4Name=Braco 4</p>
+<p class="TextCode">Section5Name=Braco 5</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In dieser Konfigurationsdatei befindet sich die Konfiguration der Montagelinien.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText"><b>Abschnitt [Common]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">LinesCnt (Anzahl der Montagelinien)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Line1Name, Line2Name … (Namen der Montagelinien)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><b>Abschnitte [Line1, Line2, …]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">StartScript (Name des Scripts, das ausgeführt wird, wenn der Produktionsstatus der Montagelinie von 0 auf 1 wechselt.)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">ShutdownScript (Name des Scripts, das ausgeführt wird, wenn der Produktionsstatus der Montagelinie von 1 auf 0 wechselt.)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">StatusVarsConnectionId (VerbindungsId unter der das Konfigurationsprogramm MediaConfig die Statusvariablen anlegt)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">SectionsCnt (Anzahl der Bandabschnitte der Montagelinie)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Section1Name, Section2Name … (Namen der Bandabschnitte der Montagelinie)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<h2><a name="Konfiguration_der_Bandabschnitte__Sections.cfg_" id="Konfiguration_der_Bandabschnitte__Sections.cfg_"></a>Konfiguration der Bandabschnitte (Sections.cfg)</h2>
+<p class="TextCode">[Line1_Section1]</p>
+<p class="TextCode">Node=2048</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[Line1_Section2]</p>
+<p class="TextCode">Node=2049</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[Line1_Section3]</p>
+<p class="TextCode">Node=2050</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[Line1_Section4]</p>
+<p class="TextCode">Node=2051</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">[Line1_Section5]</p>
+<p class="TextCode">Node=2052</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In dieser Konfigurationsdatei befindet sich die Konfiguration der Bandabschnitte.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText"><b>Abschnitte [</b>Line<b>X</b>_Section<b>Y]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Node (Id des Fertigungsknotens des Bandabschnitts)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<h2><a name="Konfiguration_der_Melodien__WavFiles.ini_" id="Konfiguration_der_Melodien__WavFiles.ini_"></a>Konfiguration der Melodien (WavFiles.ini)</h2>
+<p class="TextCode">[Config]</p>
+<p class="TextCode">FileCnt = 34</p>
+<p class="TextCode">1 = 'Melo 1'</p>
+<p class="TextCode">2 = 'Take 5'</p>
+<p class="TextCode">3 = 'Lolipop'</p>
+<p class="TextCode">4 = 'Pink Panther'</p>
+<p class="TextCode">5 = 'Entertainer'</p>
+<p class="TextCode">6 = 'Auld Lang Syne'</p>
+<p class="TextCode">7 = 'Bill Bailey'</p>
+<p class="TextCode">8 = 'Clementine'</p>
+<p class="TextCode">9 = 'Go tell it on the mountains'</p>
+<p class="TextCode">10 = 'Home on the Range'</p>
+<p class="TextCode">11 = 'John Browns Body'</p>
+<p class="TextCode">12 = 'Oh Susanna'</p>
+<p class="TextCode">13 = 'Yellow Rose of Texas'</p>
+<p class="TextCode">14 = 'Oh when the Saints'</p>
+<p class="TextCode">15 = 'Glory, glory Hallelujah'</p>
+<p class="TextCode">16 = 'Melodie 16'</p>
+<p class="TextCode">17 = 'Melodie 17'</p>
+<p class="TextCode">18 = 'Down by the Riverside'</p>
+<p class="TextCode">19 = 'Melodie 19'</p>
+<p class="TextCode">20 = 'Melodie 20'</p>
+<p class="TextCode">21 = 'Melodie 21'</p>
+<p class="TextCode">22 = 'Melodie 22'</p>
+<p class="TextCode">23 = 'Melodie 23'</p>
+<p class="TextCode">24 = 'Melodie 24'</p>
+<p class="TextCode">25 = 'Pause: Gong 1'</p>
+<p class="TextCode">26 = 'Pause: Gong 2'</p>
+<p class="TextCode">27 = 'Pause: Vierklang'</p>
+<p class="TextCode">28 = 'Pause: Jingle'</p>
+<p class="TextCode">29 = 'Pause: Ole, ole ...'</p>
+<p class="TextCode">30 = 'Bilder einer Ausstellung'</p>
+<p class="TextCode">31 = 'Menuett A-Dur'</p>
+<p class="TextCode">32 = 'An die Freude'</p>
+<p class="TextCode">33 = 'Auf in den Kampf'</p>
+<p class="TextCode">34 = 'Wilhelm Tell'</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In dieser Konfigurationsdatei befindet sich die Konfiguration der Melodien.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText"><b>Abschnitt [</b>Config<b>]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">FileCnt (Anzahl der Melodien (WAV-Files))</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">1 … N (Bezeichnung der Melodie)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Der Dateiname einer Wavdatei setzt sich folgendermaßen zusammen:</p>
+<p class="TextCode">M&lt;NR&gt;&lt;1/2&gt;.wav</p>
+<p class="TextCode">|&#160;&#160;|&#160;&#160;&#160;|&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="TextCode">|&#160;&#160;|&#160;&#160;&#160;|&#160;&#160;&#160;&#160;&#160;|-------- Extension (.wav)</p>
+<p class="TextCode">|&#160;&#160;|&#160;&#160;&#160;|</p>
+<p class="TextCode">|&#160;&#160;|&#160;&#160;&#160;+-------------- 1 für Melodie langsam, 2 für Melodie schnell</p>
+<p class="TextCode">|&#160;&#160;|</p>
+<p class="TextCode">|&#160;&#160;+------------------ dreistellige Nummer der Melodie rechtsbündig (ggf. links</p>
+<p class="TextCode">|&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;mit Nullen aufgefüllt)</p>
+<p class="TextCode">+--------------------- fixes Prefix M</p>
+<p class="TextCode">&#160;</p>
+<h2><a name="Zuordnung_der_Melodien__WavFilesRel.ini_" id="Zuordnung_der_Melodien__WavFilesRel.ini_"></a>Zuordnung der Melodien (WavFilesRel.ini)</h2>
+<p class="TextCode">[Config]</p>
+<p class="TextCode">1.111=1</p>
+<p class="TextCode">1.112=2</p>
+<p class="TextCode">2.111=11</p>
+<p class="TextCode">2.112=12</p>
+<p class="TextCode">1.121=11</p>
+<p class="TextCode">1.113=18</p>
+<p class="TextCode">1.122=12</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In dieser Konfigurationsdatei befindet sich die Zuordnung der Melodien zu Gruppen der Montagelinien. Die Einträge in dieser Datei werden vom Konfigurationsprogramm MediaConfig generiert.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText"><b>Abschnitt [</b>Config<b>]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">X.Y=Z (X = Montageline, Y = Gruppe, Z = Nummer der Melodie))</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<h2><a name="Konfiguration_Client___COMPUTERNAME_.cfg_" id="Konfiguration_Client___COMPUTERNAME_.cfg_"></a>Konfiguration Client (&lt;COMPUTERNAME&gt;.cfg)</h2>
+<p class="TextCode">[Config]</p>
+<p class="TextCode">GroupCnt=2</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">Line1=1</p>
+<p class="TextCode">Group1=111</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">Line2=1</p>
+<p class="TextCode">Group2=112</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Im Verzeichnis MediaClients ist für jede Anzeige eine Konfigurationsdatei (Name = Computername der Anzeige) abgelegt.</p>
+<p class="BodyText">Die Einträge haben folgende Bedeutung:</p>
+<p class="BodyText"><b>Abschnitt [</b>Config<b>]</b></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">GroupCnt (Anzahl der Gruppen, für die Daten benötigt werden)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">LineN (Nummer der Montagelinie von GroupN)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">GroupN (Bezeichnung der Gruppe)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+</body>
+</html>

@@ -1,0 +1,2465 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.3.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Java Zeitzonen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation22.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Java Zeitzonen">
+        <span>Java Zeitzonen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Java Zeitzonen</h2>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beim Buchen von Planungsdaten (Schichten, Pausen etc.) muss die Zeitzone mit angegeben werden, damit die 
+ Uhrzeiten bei Wechsel von/zu Sommerzeit erhalten bleiben (also die Schicht 
+ bei Sommerzeit nicht um 07:00 statt 06:00 beginnt). Es muss wirklich die 
+ Zeitzone angegeben werden, der aktuelle Offset zu UTC reicht nicht aus. 
+ Nur die explizite Zeitzone garantiert, dass die Uhrzeit erhalten bleibt 
+ und zum richtigen Datum von/zu Sommerzeit umgeschaltet wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die verfügbaren Zeitzonen können mit dem folgenden 
+ Befehl abgerufen werden: fügen Sie /data/legato/available_timezones an 
+ die Adresse Ihrer Sapient Engine an (z.B. localhost:8080/data/legato/available_timezones). 
+ Die Datenquelle liefert immer alle Zeitzonen, die der Sapient Engine in 
+ der jeweiligen Java-Umgebung am betreffenden System zur Verfügung stehen, 
+ die sie also verarbeiten kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der folgenden Tabelle finden Sie alle verfügbaren 
+ Java Zeitzonen.</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col style="mso-width-source: userset; mso-width-alt: 7862;" width="215"/>
+	<col style="mso-width-source: userset; mso-width-alt: 11849;" width="324"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">Name DE</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Abidjan</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Accra</p></td>
+		<td><p class="TabellenInhalt">Ghanaische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Addis_Ababa</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Algiers</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Asmara</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Asmera</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Bamako</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Bangui</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Banjul</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Bissau</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Blantyre</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Brazzaville</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Bujumbura</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Cairo</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Casablanca</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Ceuta</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Conakry</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Dakar</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Dar_es_Salaam</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Djibouti</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Douala</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/El_Aaiun</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Freetown</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Gaborone</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Harare</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Johannesburg</p></td>
+		<td><p class="TabellenInhalt">Südafrikanische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Juba</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Kampala</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Khartoum</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Kigali</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Kinshasa</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Lagos</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Libreville</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Lome</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Luanda</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Lubumbashi</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Lusaka</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Malabo</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Maputo</p></td>
+		<td><p class="TabellenInhalt">Zentralafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Maseru</p></td>
+		<td><p class="TabellenInhalt">Südafrikanische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Mbabane</p></td>
+		<td><p class="TabellenInhalt">Südafrikanische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Mogadishu</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Monrovia</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Nairobi</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Ndjamena</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Niamey</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Nouakchott</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Ouagadougou</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Porto-Novo</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Sao_Tome</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Timbuktu</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Tripoli</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Africa/Tunis</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Africa/Windhoek</p></td>
+		<td><p class="TabellenInhalt">Westafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Adak</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Anchorage</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Anguilla</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Antigua</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Araguaina</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/Buenos_Aires</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Argentina/Catamarca</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/ComodRivadavia</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Argentina/Cordoba</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/Jujuy</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Argentina/La_Rioja</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/Mendoza</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Argentina/Rio_Gallegos</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/Salta</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Argentina/San_Juan</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/San_Luis</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Argentina/Tucuman</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Argentina/Ushuaia</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Aruba</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Asuncion</p></td>
+		<td><p class="TabellenInhalt">Paraguay Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Atikokan</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Atka</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Bahia</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Bahia_Banderas</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Barbados</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Belem</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Belize</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Blanc-Sablon</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Boa_Vista</p></td>
+		<td><p class="TabellenInhalt">Amazonas Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Bogota</p></td>
+		<td><p class="TabellenInhalt">Kolumbianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Boise</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Buenos_Aires</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Cambridge_Bay</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Campo_Grande</p></td>
+		<td><p class="TabellenInhalt">Amazonas Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Cancun</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Caracas</p></td>
+		<td><p class="TabellenInhalt">Venezuelanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Catamarca</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Cayenne</p></td>
+		<td><p class="TabellenInhalt">Französisch-Guiana Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Cayman</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Chicago</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Chihuahua</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Coral_Harbour</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Cordoba</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Costa_Rica</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Creston</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Cuiaba</p></td>
+		<td><p class="TabellenInhalt">Amazonas Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Curacao</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Danmarkshavn</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Dawson</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Dawson_Creek</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Denver</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Detroit</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Dominica</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Edmonton</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Eirunepe</p></td>
+		<td><p class="TabellenInhalt">Acre Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/El_Salvador</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Ensenada</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Fort_Nelson</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Fort_Wayne</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Fortaleza</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Glace_Bay</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Godthab</p></td>
+		<td><p class="TabellenInhalt">Westgrönländische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Goose_Bay</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Grand_Turk</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Grenada</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Guadeloupe</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Guatemala</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Guayaquil</p></td>
+		<td><p class="TabellenInhalt">Ecuadorianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Guyana</p></td>
+		<td><p class="TabellenInhalt">Guyanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Halifax</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Havana</p></td>
+		<td><p class="TabellenInhalt">Kubanische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Hermosillo</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Indiana/Indianapolis</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Indiana/Knox</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Indiana/Marengo</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Indiana/Petersburg</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Indiana/Tell_City</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Indiana/Vevay</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Indiana/Vincennes</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Indiana/Winamac</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Indianapolis</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Inuvik</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Iqaluit</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Jamaica</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Jujuy</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Juneau</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Kentucky/Louisville</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Kentucky/Monticello</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Knox_IN</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Kralendijk</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/La_Paz</p></td>
+		<td><p class="TabellenInhalt">Bolivianische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Lima</p></td>
+		<td><p class="TabellenInhalt">Peruanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Los_Angeles</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Louisville</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Lower_Princes</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Maceio</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Managua</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Manaus</p></td>
+		<td><p class="TabellenInhalt">Amazonas Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Marigot</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Martinique</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Matamoros</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Mazatlan</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Mendoza</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Menominee</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Merida</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Metlakatla</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Mexico_City</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Miquelon</p></td>
+		<td><p class="TabellenInhalt">Pierre &amp; Miquelon Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Moncton</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Monterrey</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Montevideo</p></td>
+		<td><p class="TabellenInhalt">Uruguayische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Montreal</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Montserrat</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Nassau</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/New_York</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Nipigon</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Nome</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Noronha</p></td>
+		<td><p class="TabellenInhalt">Fernando de Noronha Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/North_Dakota/Beulah</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/North_Dakota/Center</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/North_Dakota/New_Salem</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Ojinaga</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Panama</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Pangnirtung</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Paramaribo</p></td>
+		<td><p class="TabellenInhalt">Suriname Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Phoenix</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Port_of_Spain</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Port-au-Prince</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Porto_Acre</p></td>
+		<td><p class="TabellenInhalt">Acre Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Porto_Velho</p></td>
+		<td><p class="TabellenInhalt">Amazonas Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Puerto_Rico</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Rainy_River</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Rankin_Inlet</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Recife</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Regina</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Resolute</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Rio_Branco</p></td>
+		<td><p class="TabellenInhalt">Acre Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Rosario</p></td>
+		<td><p class="TabellenInhalt">Argentinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Santa_Isabel</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Santarem</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Santiago</p></td>
+		<td><p class="TabellenInhalt">Chilenische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Santo_Domingo</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Sao_Paulo</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Scoresbysund</p></td>
+		<td><p class="TabellenInhalt">Ostgrönländische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Shiprock</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Sitka</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/St_Barthelemy</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/St_Johns</p></td>
+		<td><p class="TabellenInhalt">Neufundland Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/St_Kitts</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/St_Lucia</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/St_Thomas</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/St_Vincent</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Swift_Current</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Tegucigalpa</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Thule</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Thunder_Bay</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Tijuana</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Toronto</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Tortola</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Vancouver</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Virgin</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Whitehorse</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Winnipeg</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">America/Yakutat</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">America/Yellowknife</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Antarctica/Casey</p></td>
+		<td><p class="TabellenInhalt">Westliche Normalzeit (Australien)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Antarctica/Davis</p></td>
+		<td><p class="TabellenInhalt">Davis Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Antarctica/DumontDUrville</p></td>
+		<td><p class="TabellenInhalt">Dumont-d&#39;Urville Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Antarctica/Macquarie</p></td>
+		<td><p class="TabellenInhalt">Macquarieinsel Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Antarctica/Mawson</p></td>
+		<td><p class="TabellenInhalt">Mawson Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Antarctica/McMurdo</p></td>
+		<td><p class="TabellenInhalt">Neuseeland Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Antarctica/Palmer</p></td>
+		<td><p class="TabellenInhalt">Chilenische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Antarctica/Rothera</p></td>
+		<td><p class="TabellenInhalt">Rothera Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Antarctica/South_Pole</p></td>
+		<td><p class="TabellenInhalt">Neuseeland Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Antarctica/Syowa</p></td>
+		<td><p class="TabellenInhalt">Syowa Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Antarctica/Troll</p></td>
+		<td><p class="TabellenInhalt">Koordinierte Universalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Antarctica/Vostok</p></td>
+		<td><p class="TabellenInhalt">Vostok Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Arctic/Longyearbyen</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Aden</p></td>
+		<td><p class="TabellenInhalt">Arabische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Almaty</p></td>
+		<td><p class="TabellenInhalt">Alma Ata Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Amman</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Anadyr</p></td>
+		<td><p class="TabellenInhalt">Anadyr Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Aqtau</p></td>
+		<td><p class="TabellenInhalt">Aqtau Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Aqtobe</p></td>
+		<td><p class="TabellenInhalt">Aqtobe Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Ashgabat</p></td>
+		<td><p class="TabellenInhalt">Turkmenische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Ashkhabad</p></td>
+		<td><p class="TabellenInhalt">Turkmenische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Baghdad</p></td>
+		<td><p class="TabellenInhalt">Arabische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Bahrain</p></td>
+		<td><p class="TabellenInhalt">Arabische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Baku</p></td>
+		<td><p class="TabellenInhalt">Aserbaidschanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Bangkok</p></td>
+		<td><p class="TabellenInhalt">Indochina Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Barnaul</p></td>
+		<td><p class="TabellenInhalt">GMT+07:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Beirut</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Bishkek</p></td>
+		<td><p class="TabellenInhalt">Kirgisische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Brunei</p></td>
+		<td><p class="TabellenInhalt">Brunei Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Calcutta</p></td>
+		<td><p class="TabellenInhalt">Indische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Chita</p></td>
+		<td><p class="TabellenInhalt">Jakutsk Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Choibalsan</p></td>
+		<td><p class="TabellenInhalt">Choibalsan Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Chongqing</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Chungking</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Colombo</p></td>
+		<td><p class="TabellenInhalt">Indische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Dacca</p></td>
+		<td><p class="TabellenInhalt">Bangladesch Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Damascus</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Dhaka</p></td>
+		<td><p class="TabellenInhalt">Bangladesch Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Dili</p></td>
+		<td><p class="TabellenInhalt">Timor-Leste Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Dubai</p></td>
+		<td><p class="TabellenInhalt">Golf Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Dushanbe</p></td>
+		<td><p class="TabellenInhalt">Tadschikische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Gaza</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Harbin</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Hebron</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Ho_Chi_Minh</p></td>
+		<td><p class="TabellenInhalt">Indochina Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Hong_Kong</p></td>
+		<td><p class="TabellenInhalt">Hongkong Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Hovd</p></td>
+		<td><p class="TabellenInhalt">Hovd Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Irkutsk</p></td>
+		<td><p class="TabellenInhalt">Irkutsk Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Istanbul</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Jakarta</p></td>
+		<td><p class="TabellenInhalt">Westindonesische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Jayapura</p></td>
+		<td><p class="TabellenInhalt">Ostindonesische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Jerusalem</p></td>
+		<td><p class="TabellenInhalt">Israelische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Kabul</p></td>
+		<td><p class="TabellenInhalt">Afghanistanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Kamchatka</p></td>
+		<td><p class="TabellenInhalt">Petropawlowsk-Kamtschatkische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Karachi</p></td>
+		<td><p class="TabellenInhalt">Pakistanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Kashgar</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Kathmandu</p></td>
+		<td><p class="TabellenInhalt">Nepalesische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Katmandu</p></td>
+		<td><p class="TabellenInhalt">Nepalesische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Khandyga</p></td>
+		<td><p class="TabellenInhalt">Jakutsk Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Kolkata</p></td>
+		<td><p class="TabellenInhalt">Indische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Krasnoyarsk</p></td>
+		<td><p class="TabellenInhalt">Krasnojarsker Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Kuala_Lumpur</p></td>
+		<td><p class="TabellenInhalt">Malaysische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Kuching</p></td>
+		<td><p class="TabellenInhalt">Malaysische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Kuwait</p></td>
+		<td><p class="TabellenInhalt">Arabische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Macao</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Macau</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Magadan</p></td>
+		<td><p class="TabellenInhalt">Magadanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Makassar</p></td>
+		<td><p class="TabellenInhalt">Zentralindonesische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Manila</p></td>
+		<td><p class="TabellenInhalt">Philippinische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Muscat</p></td>
+		<td><p class="TabellenInhalt">Golf Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Nicosia</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Novokuznetsk</p></td>
+		<td><p class="TabellenInhalt">Krasnojarsker Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Novosibirsk</p></td>
+		<td><p class="TabellenInhalt">Nowosibirsker Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Omsk</p></td>
+		<td><p class="TabellenInhalt">Omsk Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Oral</p></td>
+		<td><p class="TabellenInhalt">Oral Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Phnom_Penh</p></td>
+		<td><p class="TabellenInhalt">Indochina Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Pontianak</p></td>
+		<td><p class="TabellenInhalt">Westindonesische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Pyongyang</p></td>
+		<td><p class="TabellenInhalt">Koreanische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Qatar</p></td>
+		<td><p class="TabellenInhalt">Arabische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Qyzylorda</p></td>
+		<td><p class="TabellenInhalt">Qyzylorda Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Rangoon</p></td>
+		<td><p class="TabellenInhalt">Myanmar Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Riyadh</p></td>
+		<td><p class="TabellenInhalt">Arabische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Saigon</p></td>
+		<td><p class="TabellenInhalt">Indochina Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Sakhalin</p></td>
+		<td><p class="TabellenInhalt">Sakhalin Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Samarkand</p></td>
+		<td><p class="TabellenInhalt">Usbekistan Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Seoul</p></td>
+		<td><p class="TabellenInhalt">Koreanische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Shanghai</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Singapore</p></td>
+		<td><p class="TabellenInhalt">Singapur Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Srednekolymsk</p></td>
+		<td><p class="TabellenInhalt">Srednekolymsk Time</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Taipei</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Tashkent</p></td>
+		<td><p class="TabellenInhalt">Usbekistan Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Tbilisi</p></td>
+		<td><p class="TabellenInhalt">Georgische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Tehran</p></td>
+		<td><p class="TabellenInhalt">Iranische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Tel_Aviv</p></td>
+		<td><p class="TabellenInhalt">Israelische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Thimbu</p></td>
+		<td><p class="TabellenInhalt">Bhutanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Thimphu</p></td>
+		<td><p class="TabellenInhalt">Bhutanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Tokyo</p></td>
+		<td><p class="TabellenInhalt">Japanische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Tomsk</p></td>
+		<td><p class="TabellenInhalt">GMT+07:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Ujung_Pandang</p></td>
+		<td><p class="TabellenInhalt">Zentralindonesische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Ulaanbaatar</p></td>
+		<td><p class="TabellenInhalt">Ulaanbaatar Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Ulan_Bator</p></td>
+		<td><p class="TabellenInhalt">Ulaanbaatar Zeit&quot;</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Urumqi</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Ust-Nera</p></td>
+		<td><p class="TabellenInhalt">Ust-Nera Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Vientiane</p></td>
+		<td><p class="TabellenInhalt">Indochina Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Vladivostok</p></td>
+		<td><p class="TabellenInhalt">Wladiwostok Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Yakutsk</p></td>
+		<td><p class="TabellenInhalt">Jakutsk Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Asia/Yekaterinburg</p></td>
+		<td><p class="TabellenInhalt">Jekaterinburger Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Asia/Yerevan</p></td>
+		<td><p class="TabellenInhalt">Armenische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Atlantic/Azores</p></td>
+		<td><p class="TabellenInhalt">Azoren Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Atlantic/Bermuda</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Atlantic/Canary</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Atlantic/Cape_Verde</p></td>
+		<td><p class="TabellenInhalt">Kap Verde Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Atlantic/Faeroe</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Atlantic/Faroe</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Atlantic/Jan_Mayen</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Atlantic/Madeira</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Atlantic/Reykjavik</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Atlantic/South_Georgia</p></td>
+		<td><p class="TabellenInhalt">South Georgia Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Atlantic/St_Helena</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Atlantic/Stanley</p></td>
+		<td><p class="TabellenInhalt">Falkland Inseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/ACT</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (New South Wales)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Adelaide</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Südaustralien)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Brisbane</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Queensland)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Broken_Hill</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Südaustralien/New 
+		 South Wales)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Canberra</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (New South Wales)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Currie</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (New South Wales)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Darwin</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Northern Territory)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Eucla</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Northern Territory)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Hobart</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Tasmanien)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/LHI</p></td>
+		<td><p class="TabellenInhalt">Lord Howe Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Lindeman</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Queensland)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Lord_Howe</p></td>
+		<td><p class="TabellenInhalt">Lord Howe Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Melbourne</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Victoria)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/North</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (New South Wales)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/NSW</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Northern Territory)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Perth</p></td>
+		<td><p class="TabellenInhalt">Westliche Normalzeit (Australien)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Queensland</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Queensland)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/South</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Südaustralien)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Sydney</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (New South Wales)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/Tasmania</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Tasmanien)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Victoria</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit (Victoria)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Australia/West</p></td>
+		<td><p class="TabellenInhalt">Westliche Normalzeit (Australien)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Australia/Yancowinna</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit (Südaustralien/New 
+		 South Wales)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Brazil/Acre</p></td>
+		<td><p class="TabellenInhalt">Acre Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Brazil/DeNoronha</p></td>
+		<td><p class="TabellenInhalt">Fernando de Noronha Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Brazil/East</p></td>
+		<td><p class="TabellenInhalt">Brasilianische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Brazil/West</p></td>
+		<td><p class="TabellenInhalt">Amazonas Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Canada/Atlantic</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Canada/Central</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Canada/Eastern</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Canada/East-Saskatchewan</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Canada/Mountain</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Canada/Newfoundland</p></td>
+		<td><p class="TabellenInhalt">Neufundland Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Canada/Pacific</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Canada/Saskatchewan</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Canada/Yukon</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">CET</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Chile/Continental</p></td>
+		<td><p class="TabellenInhalt">Chilenische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Chile/EasterIsland</p></td>
+		<td><p class="TabellenInhalt">Osterinseln Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">CST6CDT</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Cuba</p></td>
+		<td><p class="TabellenInhalt">Kubanische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">EET</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Egypt</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Eire</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">EST5EDT</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+0</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT+1</p></td>
+		<td><p class="TabellenInhalt">GMT-01:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+10</p></td>
+		<td><p class="TabellenInhalt">GMT-10:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT+11</p></td>
+		<td><p class="TabellenInhalt">GMT-11:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+12</p></td>
+		<td><p class="TabellenInhalt">GMT-12:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT+2</p></td>
+		<td><p class="TabellenInhalt">GMT-02:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+3</p></td>
+		<td><p class="TabellenInhalt">GMT-03:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT+4</p></td>
+		<td><p class="TabellenInhalt">GMT-04:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+5</p></td>
+		<td><p class="TabellenInhalt">GMT-05:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT+6</p></td>
+		<td><p class="TabellenInhalt">GMT-06:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+7</p></td>
+		<td><p class="TabellenInhalt">GMT-07:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT+8</p></td>
+		<td><p class="TabellenInhalt">GMT-08:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT+9</p></td>
+		<td><p class="TabellenInhalt">GMT-09:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT0</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-0</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-1</p></td>
+		<td><p class="TabellenInhalt">GMT+01:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-10</p></td>
+		<td><p class="TabellenInhalt">GMT+10:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-11</p></td>
+		<td><p class="TabellenInhalt">GMT+11:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-12</p></td>
+		<td><p class="TabellenInhalt">GMT+12:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-13</p></td>
+		<td><p class="TabellenInhalt">GMT+13:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-14</p></td>
+		<td><p class="TabellenInhalt">GMT+14:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-2</p></td>
+		<td><p class="TabellenInhalt">GMT+02:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-3</p></td>
+		<td><p class="TabellenInhalt">GMT+03:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-4</p></td>
+		<td><p class="TabellenInhalt">GMT+04:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-5</p></td>
+		<td><p class="TabellenInhalt">GMT+05:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-6</p></td>
+		<td><p class="TabellenInhalt">GMT+06:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-7</p></td>
+		<td><p class="TabellenInhalt">GMT+07:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/GMT-8</p></td>
+		<td><p class="TabellenInhalt">GMT+08:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/GMT-9</p></td>
+		<td><p class="TabellenInhalt">GMT+09:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/Greenwich</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/UCT</p></td>
+		<td><p class="TabellenInhalt">Koordinierte Universalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/Universal</p></td>
+		<td><p class="TabellenInhalt">Koordinierte Universalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Etc/UTC</p></td>
+		<td><p class="TabellenInhalt">Koordinierte Universalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Etc/Zulu</p></td>
+		<td><p class="TabellenInhalt">Koordinierte Universalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Amsterdam</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Andorra</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Astrakhan</p></td>
+		<td><p class="TabellenInhalt">GMT+04:00</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Athens</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Belfast</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Belgrade</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Berlin</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Bratislava</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Brussels</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Bucharest</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Budapest</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Busingen</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Chisinau</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Copenhagen</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Dublin</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Gibraltar</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Guernsey</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Helsinki</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Isle_of_Man</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Istanbul</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Jersey</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Kaliningrad</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Kiev</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Kirov</p></td>
+		<td><p class="TabellenInhalt">GMT+03:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Lisbon</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Ljubljana</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/London</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Luxembourg</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Madrid</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Malta</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Mariehamn</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Minsk</p></td>
+		<td><p class="TabellenInhalt">Moskauer Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Monaco</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Moscow</p></td>
+		<td><p class="TabellenInhalt">Moskauer Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Nicosia</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Oslo</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Paris</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Podgorica</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Prague</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Riga</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Rome</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Samara</p></td>
+		<td><p class="TabellenInhalt">Samarische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/San_Marino</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Sarajevo</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Simferopol</p></td>
+		<td><p class="TabellenInhalt">Moskauer Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Skopje</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Sofia</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Stockholm</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Tallinn</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Tirane</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Tiraspol</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Ulyanovsk</p></td>
+		<td><p class="TabellenInhalt">GMT+04:00</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Uzhgorod</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Vaduz</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Vatican</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Vienna</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Vilnius</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Volgograd</p></td>
+		<td><p class="TabellenInhalt">Moskauer Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Warsaw</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Zagreb</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Europe/Zaporozhye</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Europe/Zurich</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">GB</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">GB-Eire</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">GMT</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">GMT0</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Greenwich</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Hongkong</p></td>
+		<td><p class="TabellenInhalt">Hongkong Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Iceland</p></td>
+		<td><p class="TabellenInhalt">Greenwich Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Indian/Antananarivo</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Indian/Chagos</p></td>
+		<td><p class="TabellenInhalt">Indischer Ozean Territorium Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Indian/Christmas</p></td>
+		<td><p class="TabellenInhalt">Christmas Island Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Indian/Cocos</p></td>
+		<td><p class="TabellenInhalt">Cocos Islands Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Indian/Comoro</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Indian/Kerguelen</p></td>
+		<td><p class="TabellenInhalt">Französisch Süd- u. Antarktische 
+		 Landzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Indian/Mahe</p></td>
+		<td><p class="TabellenInhalt">Seychellen Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Indian/Maldives</p></td>
+		<td><p class="TabellenInhalt">Maledivische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Indian/Mauritius</p></td>
+		<td><p class="TabellenInhalt">Mauritius Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Indian/Mayotte</p></td>
+		<td><p class="TabellenInhalt">Ostafrikanische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Indian/Reunion</p></td>
+		<td><p class="TabellenInhalt">Reunion Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Iran</p></td>
+		<td><p class="TabellenInhalt">Iranische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Israel</p></td>
+		<td><p class="TabellenInhalt">Israelische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Jamaica</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Japan</p></td>
+		<td><p class="TabellenInhalt">Japanische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Kwajalein</p></td>
+		<td><p class="TabellenInhalt">Marshallinseln Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Libya</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">MET</p></td>
+		<td><p class="TabellenInhalt">Zentraleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Mexico/BajaNorte</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Mexico/BajaSur</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Mexico/General</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">MST7MDT</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Navajo</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">NZ</p></td>
+		<td><p class="TabellenInhalt">Neuseeland Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">NZ-CHAT</p></td>
+		<td><p class="TabellenInhalt">Chatham Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Apia</p></td>
+		<td><p class="TabellenInhalt">West Samoa Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Auckland</p></td>
+		<td><p class="TabellenInhalt">Neuseeland Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Bougainville</p></td>
+		<td><p class="TabellenInhalt">Bougainville Standard Time</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Chatham</p></td>
+		<td><p class="TabellenInhalt">Chatham Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Chuuk</p></td>
+		<td><p class="TabellenInhalt">Chuuk Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Easter</p></td>
+		<td><p class="TabellenInhalt">Osterinseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Efate</p></td>
+		<td><p class="TabellenInhalt">Vanuatu Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Enderbury</p></td>
+		<td><p class="TabellenInhalt">Phoenix Inseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Fakaofo</p></td>
+		<td><p class="TabellenInhalt">Tokelau Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Fiji</p></td>
+		<td><p class="TabellenInhalt">Fidschi Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Funafuti</p></td>
+		<td><p class="TabellenInhalt">Tuvalu Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Galapagos</p></td>
+		<td><p class="TabellenInhalt">Galapagos Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Gambier</p></td>
+		<td><p class="TabellenInhalt">Gambier Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Guadalcanal</p></td>
+		<td><p class="TabellenInhalt">Salomoninseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Guam</p></td>
+		<td><p class="TabellenInhalt">Chamorro Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Honolulu</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Johnston</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Kiritimati</p></td>
+		<td><p class="TabellenInhalt">Line Inseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Kosrae</p></td>
+		<td><p class="TabellenInhalt">Kosrae Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Kwajalein</p></td>
+		<td><p class="TabellenInhalt">Marshallinseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Majuro</p></td>
+		<td><p class="TabellenInhalt">Marshallinseln Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Marquesas</p></td>
+		<td><p class="TabellenInhalt">Marquesas Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Midway</p></td>
+		<td><p class="TabellenInhalt">Samoa Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Nauru</p></td>
+		<td><p class="TabellenInhalt">Nauru Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Niue</p></td>
+		<td><p class="TabellenInhalt">Niue Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Norfolk</p></td>
+		<td><p class="TabellenInhalt">Norfolk Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Noumea</p></td>
+		<td><p class="TabellenInhalt">Neukaledonische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Pago_Pago</p></td>
+		<td><p class="TabellenInhalt">Samoa Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Palau</p></td>
+		<td><p class="TabellenInhalt">Palau Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Pitcairn</p></td>
+		<td><p class="TabellenInhalt">Pitcairn Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Pohnpei</p></td>
+		<td><p class="TabellenInhalt">Pohnpei Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Ponape</p></td>
+		<td><p class="TabellenInhalt">Pohnpei Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Port_Moresby</p></td>
+		<td><p class="TabellenInhalt">Papua-Neuguinea Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Rarotonga</p></td>
+		<td><p class="TabellenInhalt">Cook-Inseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Saipan</p></td>
+		<td><p class="TabellenInhalt">Chamorro Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Samoa</p></td>
+		<td><p class="TabellenInhalt">Samoa Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Tahiti</p></td>
+		<td><p class="TabellenInhalt">Tahiti Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Tarawa</p></td>
+		<td><p class="TabellenInhalt">Gilbert-Inseln Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Tongatapu</p></td>
+		<td><p class="TabellenInhalt">Tonga Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Truk</p></td>
+		<td><p class="TabellenInhalt">Chuuk Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Wake</p></td>
+		<td><p class="TabellenInhalt">Wake Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pacific/Wallis</p></td>
+		<td><p class="TabellenInhalt">Wallis u. Futuna Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pacific/Yap</p></td>
+		<td><p class="TabellenInhalt">Chuuk Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Poland</p></td>
+		<td><p class="TabellenInhalt">Mitteleuropäische Zeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Portugal</p></td>
+		<td><p class="TabellenInhalt">Westeuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">PRC</p></td>
+		<td><p class="TabellenInhalt">Chinesische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">PST8PDT</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ROK</p></td>
+		<td><p class="TabellenInhalt">Koreanische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Singapore</p></td>
+		<td><p class="TabellenInhalt">Singapur Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/AST4</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SystemV/AST4ADT</p></td>
+		<td><p class="TabellenInhalt">Atlantik Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/CST6</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SystemV/CST6CDT</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/EST5</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SystemV/EST5EDT</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/HST10</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SystemV/MST7</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/MST7MDT</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SystemV/PST8</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/PST8PDT</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">SystemV/YST9</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SystemV/YST9YDT</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Turkey</p></td>
+		<td><p class="TabellenInhalt">Osteuropäische Zeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">UCT</p></td>
+		<td><p class="TabellenInhalt">Koordinierte Universalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">US/Alaska</p></td>
+		<td><p class="TabellenInhalt">Alaska Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">US/Aleutian</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">US/Arizona</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">US/Central</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">US/Eastern</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">US/East-Indiana</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">US/Hawaii</p></td>
+		<td><p class="TabellenInhalt">Hawaii Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">US/Indiana-Starke</p></td>
+		<td><p class="TabellenInhalt">Zentrale Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">US/Michigan</p></td>
+		<td><p class="TabellenInhalt">Östliche Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">US/Mountain</p></td>
+		<td><p class="TabellenInhalt">Rocky Mountains Normalzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">US/Pacific</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">US/Pacific-New</p></td>
+		<td><p class="TabellenInhalt">Pazifische Normalzeit</p></td>
+	</tr>
+</tbody></table>
+  
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+
+
+</body></html>

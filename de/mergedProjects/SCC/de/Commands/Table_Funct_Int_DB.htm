@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Tabellenfunktionen für die interne Datenbank</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tabellenfunktionen für die interne Datenbank">
+        <span>Tabellenfunktionen für die interne Datenbank</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Tabellenfunktionen für die interne Datenbank</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Der Cloud Connector verwendet für die interne Datenbank 
+ dBase-kompatible Dateistrukturen. Die Tabellen können auf der Festplatte 
+ gespeichert werden oder im Hauptspeicher angelegt werden. Wird die Datei 
+ im Hauptspeicher angelegt, gehen die Daten nach Programmende verloren. 
+ Ob eine Datei im Speicher oder auf der Festplatte angelegt wird, kann 
+ durch den Namen bestimmt werden. Eine Datei im Speicher beginnt bei Windows 
+ mit dem Pfad &#39;<b>$MEM\</b>&#39;, bei Linux/Unix/AIX mit dem Pfad &#39;<span style="font-weight: bold;">$MEM/</span>&#39;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Tabellenfunktionen kann in einem Script eine 
+ Variable vom Typ DBTBL deklariert werden. Alle Tabellenfunktionen werden 
+ dann mit dem Namen der Variablen, einem Punkt und dem Namen der Funktion 
+ gemeinsam angesprochen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Append" id="Append"></a>Append</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Append(dbrec record)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hängt einen neuen Datensatz ans Ende der Datei und 
+ schreibt den Inhalt des Recordpuffers <b>record</b> in den Datensatz.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.append(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Bufopen" id="Bufopen"></a>Bufopen</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Bufopen(dbrec record)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet den Recordpuffer <b>record</b> und ordnet diesen 
+ der Tabelle zu.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.append(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Close" id="Close"></a>Close</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.close</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließt die Datei. Die Tabellenvariable wird auf den 
+ Wert NULL gesetzt. Alle weiteren Zugriffe, die vor einem &quot;Open&quot; 
+ ausgeführt werden, liefern einen Fehler.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.append(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Create" id="Create"></a>Create</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Create(string name, string 
+ descr)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erzeugt eine neue Datei. Beginnt der <b>name</b> mit 
+ &#39;<b>$MEM\</b>&#39;  wird die Datei nur im Hauptspeicher angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Struktur der Datei wird durch <b>descr</b> festgelegt. 
+ Dabei werden die Feldbeschreibungen durch Semikolon getrennt. Eine Feldbeschreibung 
+ besteht aus Feldname (max. 10 Zeichen), Feldtyp und optional Nachkommastellen 
+ bei numerischen Feldern. Die möglichen Feldtypen sind:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="534" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="75"><p class="TabellenÜberschrift">Feldtyp</p></td>
+		<td style="vertical-align: top;" width="137"><p class="TabellenÜberschrift">Beschreibung</p></td>
+		<td style="vertical-align: top;" width="90"><p class="TabellenÜberschrift">Feldlänge</p></td>
+		<td style="vertical-align: top;" width="232"><p class="TabellenÜberschrift">Nachkomma</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="75"><p class="TabellenInhalt">C</p></td>
+		<td style="vertical-align: top;" width="137"><p class="TabellenInhalt">Alphanumerisch</p></td>
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">1 
+		 - 255</p></td>
+		<td style="vertical-align: top;" width="232"><p class="TabellenInhalt">-</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="75"><p class="TabellenInhalt">N</p></td>
+		<td style="vertical-align: top;" width="137"><p class="TabellenInhalt">Numerisch</p></td>
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">1 
+		 - 19</p></td>
+		<td style="vertical-align: top;" width="232"><p class="TabellenInhalt">max. 
+		 Feldlänge - 2</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="75"><p class="TabellenInhalt">D</p></td>
+		<td style="vertical-align: top;" width="137"><p class="TabellenInhalt">Datum</p></td>
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">8</p></td>
+		<td style="vertical-align: top;" width="232"><p class="TabellenInhalt">-</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="75"><p class="TabellenInhalt">L</p></td>
+		<td style="vertical-align: top;" width="137"><p class="TabellenInhalt">Logikfeld</p></td>
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="232"><p class="TabellenInhalt">-</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert true, wenn sie korrekt ausgeführt 
+ werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.create(&#39;$MEM\\List.dbf&#39;, &#39;Name,C,10;Value,N,6,2;Date,D,8&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.append(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Delete" id="Delete"></a>Delete</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.delete</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kennzeichnet den aktuellen Satz als gelöscht. Der Satzzeiger 
+ muss zuvor mit &quot;Goto&quot;, &quot;First&quot;, &quot;Last&quot;, 
+ &quot;Next&quot; oder &quot;Prev&quot; richtig positioniert werden. Ein 
+ endgültiges Löschen des Datensatzes wird erst durch Aufruf der Funktion 
+ &quot;Pack&quot; durchgeführt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.goto(4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.delete</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.pack</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="First" id="First"></a>First</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.first</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Satzzeiger wird auf den ersten Satz gestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.first</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.delete</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.pack</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Goto" id="Goto"></a>Goto</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.goto(long recnr)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Satzzeiger wird auf den Satz <b>recnr</b> gestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.goto(4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.delete</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.pack</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Get" id="Get"></a>Get</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Get(dbrec record)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den aktuellen Satz <b>record</b> aus der Datei 
+ in den Recordpuffer ein. Der Satzzeiger muss zuvor mit &quot;Goto&quot;, 
+ &quot;First&quot;, &quot;Last&quot;, &quot;Next&quot; oder &quot;Prev&quot; 
+ richtig positioniert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.ascii(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.ascii(1) := &#39;123&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetNumIdx" id="GetNumIdx"></a>GetNumIdx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.GetNumIdx(dbrec record,<br/>
+                                  long  field,<br/>
+                                  long  num)<br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht den ersten Satz, dessen numerischer Wert im Feld 
+ <b>field</b> dem Wert <b>num</b> entspricht. Wurde ein Satz gefunden, 
+ wird er aus der Datei in den Recordpuffer <b>record</b> eingelesen. Da 
+ es sich dabei um eine Indexfunktion handelt, kann sie nur ausgeführt werden, 
+ wenn zuvor die Funktion &quot;SetIndex&quot; für das Feld aufgerufen wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es wird empfohlen, &quot;SetIndex&quot; vor jedem Aufruf 
+ von &quot;GetNumIdx&quot; auszuführen (siehe Beispiel).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Diese Funktion sollte nur verwendet werden, 
+ wenn die Daten sich nicht oft ändern. Ansonsten wird die Abfrage zu häufig 
+ durchgeführt, was zu Performance-Einschränkungen führen kann. In diesen 
+ Fällen sollte besser &quot;GetNumKey&quot; verwendet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.setindex(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.getnumidx(rec, 1, 23)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.ascii(2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetNumKey" id="GetNumKey"></a>GetNumKey</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.GetNumKey(dbrec record,<br/>
+                                  long  field,<br/>
+                                  long  num)<br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht den ersten Satz, dessen numerischer Wert im Feld 
+ <b>field</b> dem Wert  <b>num</b> entspricht. Wurde ein Satz 
+ gefunden, wird er aus der Datei in den Recordpuffer <b>record</b> eingelesen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if tbl.getnumkey(rec, 1, 23)then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  s := rec.ascii(2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetStrIdx" id="GetStrIdx"></a>GetStrIdx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.GetStrIdx(dbrec  record,<br/>
+                                  long   field,<br/>
+                                  string 
+ str)<br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht den ersten Satz, dessen alphanumerischer Wert 
+ im Feld <b>field</b> dem String <b>str</b> entspricht. Wurde ein Satz 
+ gefunden, wird er aus der Datei in den Recordpuffer <b>record</b> eingelesen. 
+ Da es sich dabei um eine Indexfunktion handelt, kann sie nur ausgeführt 
+ werden, wenn zuvor die Funktion &quot;SetIndex&quot; für das Feld aufgerufen 
+ wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es wird empfohlen, &quot;SetIndex&quot; vor jedem Aufruf 
+ von &quot;GetStrIdx&quot; auszuführen (siehe Beispiel).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Diese Funktion sollte nur verwendet werden, 
+ wenn die Daten sich nicht oft ändern. Ansonsten wird die Abfrage zu häufig 
+ durchgeführt, was zu Performance-Einschränkungen führen kann. In diesen 
+ Fällen sollte besser &quot;GetStrKey&quot; verwendet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.setindex(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.getstridx(rec, 1, &#39;Search for me&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.ascii(2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetStrKey" id="GetStrKey"></a>GetStrKey</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.GetStrKey(dbrec  record,<br/>
+                                  long   field,<br/>
+                                  string 
+ str)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht den ersten Satz, dessen alphanumerischer Wert 
+ im Feld <b>field</b> dem String <b>str</b> entspricht. Wurde ein Satz 
+ gefunden, wird er aus der Datei in den Recordpuffer <b>record</b> eingelesen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if tbl.getstrkey(rec, 1, &#39;Search for me&#39;) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  s := rec.ascii(2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Import" id="Import"></a>Import</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Import(string file,<br/>
+                               string 
+ delim,<br/>
+                               bool   skip)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Importiert die CSV-Datei <b>file</b> in die Tabelle. 
+ <b>delim</b> gibt das gültige Trennzeichen an, üblicherweise Komma oder 
+ Semikolon. Hat <b>skip</b> den Wert &quot;true&quot;, wird die Spaltenbeschreibung 
+ der CSV-Datei ignoriert und die erste Spalte der CSV-Datei dem ersten 
+ Feld zugeordnet usw.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird die Spaltenbeschreibung verwendet, wird nach gleichnamigen 
+ Feldern gesucht und nur die Daten übernommen, deren Spaltenbeschreibung 
+ einem Feldnamen entspricht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.create(&#39;$MEM\\alist1.dbf&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Operand,C,10;&#39;   +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Symbolik,C,10;&#39;  +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Text,C,40;&#39;      +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Klasse,N,3;&#39;     +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Art,C,40;&#39;       +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Funk,C,1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.import(&#39;C:\\files\\alarms1.csv&#39;, &#39;,&#39;, 
+ false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Insert" id="Insert"></a>Insert</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Insert(dbrec record)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt einen neuen Datensatz an die aktuelle Position 
+ ein und schreibt den Inhalt des Recordpuffers <b>record</b> in den Datensatz. 
+ Der Satzzeiger muss zuvor mit &quot;Goto&quot;, &quot;First&quot;, &quot;Last&quot;, 
+ &quot;Next&quot; oder &quot;Prev&quot; richtig positioniert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.first</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.insert(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Last" id="Last"></a>Last</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.last</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Satzzeiger wird auf den letzen Satz gestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.last</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.delete</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.pack</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Next" id="Next"></a>Next</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.next</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Satzzeiger wird auf den nächsten Satz gestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.first</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while ok do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  ok := tbl.next</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="nRecs" id="nRecs"></a>nRecs</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long dbtbl.nrecs</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Anzahl der vorhandenen Datensätze.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     q</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">q := tbl.nrecs</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Open" id="Open"></a>Open</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.open(string File)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet eine vorhandene Datei <b>File</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.first</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.delete</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.pack</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Pack" id="Pack"></a>Pack</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Pack</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle zuvor mit &quot;Delete&quot; zum Löschen gekennzeichneten 
+ Datensätze werden endgültig aus der Datei gelöscht. Die weiter hinten 
+ liegenden Datensätze rücken nach vorne.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.first</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.delete</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.pack</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Prev" id="Prev"></a>Prev</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.prev</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Satzzeiger wird auf den vorhergehenden Satz gestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.last</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while ok do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  ok := tbl.prev</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="RecIsDeleted" id="RecIsDeleted"></a>RecIsDeleted</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.recisdeleted</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Löschen eines Datensatzes mit Delete wird dieser 
+ nur als gelöscht gekennzeichnet. Ein endgültiges Löschen des Datensatzes 
+ wird erst durch Aufruf der Funktion &quot;Pack&quot; durchgeführt. Durch 
+ die Funktion RecIsDeleted kann abgefagt werden, ob der betreffende Satz 
+ schon als gelöscht gekennzeichnet wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Satzzeiger muss zuvor mit &quot;Goto&quot;, &quot;First&quot;, 
+ &quot;Last&quot;, &quot;Next&quot; oder &quot;Prev&quot; richtig positioniert 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.goto(4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if tbl.reisdeleted then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;Dieser Satz wurde als gelöscht 
+ gekennzeichnet&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="RecNum" id="RecNum"></a>RecNum</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long dbtbl.recnum</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Nummer des aktuellen Satzes (Position des 
+ Satzzeigers).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     num</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok  := tbl.last</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">num := tbl.recnum</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Resident" id="Resident"></a>Resident</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.resident</p>
+<p class="BodyText" data-condition="Others:Deutsch">Lässt eine im Hauptspeicher angelegte Datei auch nach 
+ dem Schließen im Speicher. Sie kann danach auch von anderen Scripten wieder 
+ geöffnet werden. Die Daten bleiben bis Beendigung des Cloud Connectors 
+ oder bis zum Schließen des Projekts erhalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     anz</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.create(&#39;$MEM\\alist1.dbf&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Operand,C,10;&#39;   +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Symbolik,C,10;&#39;  +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Text,C,40;&#39;      +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Klasse,N,3;&#39;     +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Art,C,40;&#39;       +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Funk,C,1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.resident</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.zap</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.import(&#39;C:\\files\\alarms1.csv&#39;, &#39;,&#39;, 
+ false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;$MEM\\alist1.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">anz := tbl.nRecs</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="ResidentEx" id="ResidentEx"></a>ResidentEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.ResidentEx(long type)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Lässt eine im Hauptspeicher angelegte Datei auch nach 
+ dem Schließen im Speicher. Sie kann danach auch von anderen Scripten wieder 
+ geöffnet werden. Die Daten bleiben je nach <b>type</b> erhalten:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="496" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="75"><p class="TextkörperTable"><b>Wert 
+		 (type)</b></p></td>
+		<td style="vertical-align: top;" width="421"><p class="TextkörperTable"><b>Beschreibung</b></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="75"><p class="TextkörperTable">0</p></td>
+		<td style="vertical-align: top;" width="421"><p class="TextkörperTable">Tabelle 
+		 nicht resident</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="75"><p class="TextkörperTable">1</p></td>
+		<td style="vertical-align: top;" width="421"><p class="TextkörperTable">Tabelle 
+		 bis Projektende resident</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="75"><p class="TextkörperTable">2</p></td>
+		<td style="vertical-align: top;" width="421"><p class="TextkörperTable">Tabelle 
+		 resident bis Beendigung des Cloud Connectors oder bis zum Schließen 
+		 des Projekts</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     anz</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.create(&#39;$MEM\\alist1.dbf&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Operand,C,10;&#39;   +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Symbolik,C,10;&#39;  +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Text,C,40;&#39;      +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Klasse,N,3;&#39;     +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Art,C,40;&#39;       +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">           &#39;Funk,C,1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.residentEx(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.zap</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.import(&#39;C:\\files\\alarms1.csv&#39;, &#39;,&#39;, 
+ false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;$MEM\\alist1.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">anz := tbl.nRecs</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetIndex" id="SetIndex"></a>SetIndex</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.SetIndex(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt einen Index auf das Feld <b>field</b>. Eine Tabelle 
+ kann pro Feld einen Index haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.setindex(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.getstridx(rec, 1, &#39;Search for me&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.ascii(2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Update" id="Update"></a>Update</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Update(dbrec record)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den Inhalt des Recordpuffers <b>record</b> 
+ in den aktuellen Datensatz. Der Satzzeiger muss zuvor mit &quot;Goto&quot;, 
+ &quot;First&quot;, &quot;Last&quot;, &quot;Next&quot; oder &quot;Prev&quot; 
+ richtig positioniert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.first</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := tbl.update(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Zap" id="Zap"></a>Zap</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbtbl.Zap</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht alle Datensätze der Tabelle.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn sie korrekt 
+ ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.zap</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

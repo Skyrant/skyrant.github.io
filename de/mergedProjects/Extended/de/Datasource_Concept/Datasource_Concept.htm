@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Datasource-Konzept</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Datasource-Konzept">
+        <span>Datasource-Konzept</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Datasource-Konzept</h1>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Datasource-Konzept (Datenquellen-Konzept) ermöglicht 
+ es, jede Art von Abfrage schnell und unkompliziert für den Anwender bereitzustellen. 
+ Die Daten können dabei als Tabelle (super-generic-table) oder als Diagramm 
+ (super-generic-chart) dargestellt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Grundsätzlich unterscheidet man zwischen gescripteten 
+ Datenquellen und Datasource Models.</p>
+<h2 data-condition="Others:Deutsch">Gescriptete Datenquellen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Bei gescripteten Datenquellen handelt es sich um JavaScript-Dateien, 
+ die sich mit der entsprechenden Select-Methode in gp_r_datasources registrieren. 
+ Diese Datenquellen können dann genauso wie Datenbank-Tabellen in Abfragen 
+ und Boardlets verwendet werden.</p>
+<h2 data-condition="Others:Deutsch">Datasource Models</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Datasource Model dient dazu, bestimmte Daten aus 
+ mehreren Tabellen darzustellen. Dabei können die anzuzeigenden Spalten 
+ sowie bestimmte Filter bereits vorgegeben werden. Weitere Einstellungen 
+ können dann vom Dashboard-Entwickler im Client festgelegt werden, ehe 
+ der Enduser das neue Modell in einem Boardlet zu sehen bekommt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Datasource Model (d.h. Einträge in gp_r_datasource_models) 
+ referenzieren immer auf Einträge in gp_r_dashboards. Dabei wird das verwendete 
+ Modell als Filter bzw. Parameter gespeichert. In gp_r_dashboards können 
+ auch weitere Eigenschaften angegeben werden.</p>
+
+
+</body></html>

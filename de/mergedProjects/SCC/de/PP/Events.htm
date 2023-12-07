@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Ereignisse</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Ereignis" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Ereignisse">
+        <span>Ereignisse</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Ereignisse</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Der Cloud Connector funktioniert im Ablauf voll ereignisgesteuert. 
+ Solche Ereignisse werden z.B. von Wertänderungen der Variablen ausgelöst. 
+ Zusätzlich können jedoch auch Ereignisse wie Timer angelegt werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Anlegen_eines_Ereignisses"></a>Anlegen eines Ereignisses</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie dazu das Grundelement &quot;Event&quot; 
+ im Projektbaum und wählen Sie im Kontextmenü den Befehl &quot;Neues Ereignis&quot;. 
+ Der angezeigte Dialog hängt vom gewählten Typ ab.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Event.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Parameter &quot;Typ&quot; hat folgende Bedeutung:</p>
+<p class="TabellenÜberschrift" data-condition="Others:Deutsch"> </p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenÜberschrift">Typ</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenÜberschrift">Erklärung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Manuell</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis kann nur manuell ausgelöst werden. Zum Auslösen im Kontextmenü 
+		 des Events (rechte Maustaste auf das Event) den Eintrag &quot;Ausführen&quot; 
+		 anklicken.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Zyklisch</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis wird zyklisch ausgelöst. Das Zeitraster wird in Millisekunden 
+		 angegeben, die dann ggf. in Std und Min gewandelt werden, um die 
+		 Anzeige zu vereinfachen.</p>
+		<p class="TabellenInhalt">Ist zusätzlich die Checkbox &quot;Mehrfacheintrag 
+		 sperren&quot; aktiviert, so wird das Event nur einmal getriggert 
+		 und danach solange gesperrt, bis das zugehörige Script abgearbeitet 
+		 wurde. Der Timer wir dann neu aufgezogen und wieder freigegen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Zeittrigger</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis wird zu einem bestimmten Zeitpunkt ausgelöst. Es kann 
+		 eine Uhrzeit und einer oder mehrere Wochentage angegeben werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Zeitpunkt</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis wird zu einem einmaligen Zeitpunkt ausgeführt. Dieser 
+		 wird mit Datum und Uhrzeit festgelegt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Ablaufstart</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis wird einmalig nach dem Projektstart ausgelöst. Es werden 
+		 zuerst alle Variablen gestartet, danach wird das Ereignis &quot;Projektstart&quot; 
+		 ausgelöst.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Ablaufende 
+		 Vorbereitung</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis wird einmalig vor dem Ereignis &quot;Ablaufende&quot; 
+		 ausgelöst.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Ablaufende</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Das 
+		 Ereignis wird einmalig vor dem Projektende ausgelöst. Es wird 
+		 zuerst das Ereignis &quot;Ablaufende&quot; ausgelöst, danach werden 
+		 alle Variablen gestoppt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Grenze 
+		 Kommandoqueue</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Ab 
+		 einer bestimmten Anzahl von Kommandos in der Queue wird ein Script 
+		 gestartet, das eine Fehlermeldung generiert. Bei Kommend wird 
+		 das Event bei Überschreitung des eingegebenen Schwellenwerts ausgelöst, 
+		 bei Gehend bei Unterschreitung.</p>
+		<p class="TabellenInhalt">Um ein zu häufiges Generieren des Ereignisses 
+		 zu verhindern, kann eine Hysterese eingestellt werden. Im Bild 
+		 oben wird beim Überschreiten von 100 Einträgen das Script ausgeführt. 
+		 Wenn die Queue danach kleiner als 90 Einträge wird und im Anschluss 
+		 wieder auf über 100 steigt, wird das Script erneut ausgeführt. 
+		 Dieser Mechanismus kann auch in die andere Richtung verwendet 
+		 werden (Gehend).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Als auszulösende Reaktion bei Auftreten eines Events 
+ kann ein Script vom Typ OnTrigger aufgerufen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist bei der Aufrufart &quot;Zyklisch&quot; als Aktion 
+ der Aufruf eines Scripts eingestellt, so können an diesem Script dennoch 
+ Änderungen vorgenommen werden. Diese werden dann beim nächsten Aufruf 
+ des Scripts nach dem Kompilieren übernommen.</p>
+
+
+</body></html>

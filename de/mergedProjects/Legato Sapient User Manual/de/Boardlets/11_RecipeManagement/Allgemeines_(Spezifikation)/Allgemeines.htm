@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.11.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Allgemeines</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Allgemeines">
+        <span>Allgemeines</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Allgemeines zu Rezepte und Rezeptmanagement</h1>
+<h2 data-condition="Others:Deutsch"><a id="Allgemeines_und_Definition"></a>Allgemeines und Definition</h2>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ul class="null" style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Ein 
+	 Rezept ist ein festgelegtes Set von Parametern, die in einer Steuerung 
+	 (SPS) einen bestimmten Betriebszustand abdecken. Es gibt nur 
+	 ein Rezept für eine Steuerung mit gleichem Namen und unterschiedlichen 
+	 Parametern.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;">Ein 
+	 Rezept kann von der SPS durch ein Flag zu Legato Sapient gesendet 
+	 werden. Normalerweise ist aber die umgekehrte Richtung der Fall: Das 
+	 Rezept wird von Legato Sapient zur SPS gesendet. </li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Eine 
+	 </span><span class="misspell-word">Rezeptdefinition</span><span> ist 
+	 eine feste Struktur von Parametern.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Eine 
+	 </span><span class="misspell-word">Rezeptsammlung</span><span> besteht 
+	 aus allen Rezepten einer </span><span class="misspell-word">Rezeptdefinition</span><span>.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Ein 
+	 Rezept und somit ein Parameterset ist eine Zusammenfassung von 1 bis 
+	 n Datensätzen/Parametern, z.B. Legato DB Variablen und unterschiedliche 
+	 Datentypen.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;">Ein 
+	 Rezept ist über eine eindeutige ID identifizierbar und bildet eine 
+	 versionierbare und archivierbare Einheit in der Legato DB.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; mso-bidi-font-family: Helvetica; 
+	 mso-fareast-language: DE;">Es werden bei einer manuellen Änderung 
+	 von einem oder mehreren Werten im Rezept immer alle Datensätze vom 
+	 betreffenden Rezept (mit ihrem aktuellen Wert) an die Anlage übertragen.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Ein Rezept 
+	 besteht immer aus Header und Body. Der Header enthält u.a. die Version 
+	 und einen Kommentarbereich. Der Body beinhaltet die einzelnen Datensätze.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Der Aufbau 
+	 von einem Rezept ist frei parametrierbar.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Ein oder 
+	 mehrere Rezepte können einer Verbindung und einem Fertigungsknoten 
+	 zugewiesen werden.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Die Zuweisung 
+	 zu einer Verbindung ist notwendig, damit das vollständige Rezept an 
+	 den SCC übertragen werden kann.</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<ul class="null" style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Das 
+	 </span><span class="misspell-word">Rezeptmanagement</span><span> dient 
+	 dazu, das Set von Parametern, welche für den Prozess relevant sind, 
+	 zentral zu speichern, zu bearbeiten und zu verteilen.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Dabei 
+	 werden in den Steuerungen der Anlagen alle Rezepte vorgehalten, welche 
+	 für die Fertigung aller Produktvarianten benötigt werden. Diese Werte 
+	 können zentral über Legato </span><span class="misspell-word">Sapient</span><span> 
+	 Clients bearbeitet und auf die Anlage übertragen werden.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Ein 
+	 Parameter ist ein einzelner Wert, welcher der Anlage vorgegeben wird.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span class="misspell-word">Anlageparameter</span><span> sind die Summe 
+	 aller Parameter einer Anlage.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Das</span><span class="misspell-word"> Rezeptmanagement </span><span>ist eine </span><span class="misspell-word">Parameterverwaltung</span><span>.</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><span>Das 
+	 Rezeptmanagement ist ein Modul zur zentralen Sicherung, Bearbeitung 
+	 und Verteilung von allen Anlageparametern.</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<ul class="null" style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;">Generell 
+	 ist Legato Sapient das bestimmende System. Es kann aber auch in Einzelfällen 
+	 (z.B. Erstinbetriebnahme) sein, dass die SPS die <span class="misspell-word">Rezeptdaten</span> 
+	 im Speicher hat, diese aber für Legato Sapient noch unbekannt sind. 
+	 </li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;">Deshalb 
+	 gibt es pro Rezept ein sog. <span class="misspell-word">Masterflag</span>. 
+	 Solange das <span class="misspell-word">Masterflag</span> nicht gesetzt 
+	 ist, werden die <span class="misspell-word">Parameterwerte</span> 
+	 aus der Steuerung in <span class="misspell-word">Sapient</span> übernommen. 
+	 </li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;">Mit 
+	 gesetztem <span class="misspell-word">Masterflag</span> werden keine 
+	 Änderungen aus der Steuerung mehr übernommen, Legato <span class="misspell-word">Sapient</span> 
+	 nimmt für dieses Rezept die Masterrolle ein.</li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Notwendigkeit_für_ein_Rezept"></a>Notwendigkeit für ein Rezept</h2>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">In einem 
+	 Rezept werden 1 bis n Parameter mit ihren aktuellen Werten, die zusammengehören, 
+	 verwaltet.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Erfolgt 
+	 eine Änderung von einem Wert eines Parameters im Rezept, werden trotzdem 
+	 immer alle Parameter mit ihren aktuellen Werten z.B. an eine Anlagensteuerung 
+	 übertragen.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Dies ist 
+	 der wesentliche Unterschied zur Änderung einzelner Variablen in der 
+	 Legato DB. Diese sind immer für sich betrachtet unabhängig von anderen 
+	 Variablen und deren Werten. Dies gilt auch für die Übertragung an 
+	 eine Anlagensteuerung.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Zielsystem 
+	 für Rezepte sind Anlagensteuerungen, die für bestimmte Funktionen 
+	 vordefinierte Parameter und deren Werte benötigen. Hier muss sichergestellt 
+	 werden, falls sich ein bestimmter Parameter ändern sollte, alle mit 
+	 diesem Parameter verbundenen Parameter und Werte mitändern bzw. gleich 
+	 bleiben sollen.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Erfolgt 
+	 ein kompletter Steuerungstausch, d.h., es wird die SPS-Hardware ausgetauscht 
+	 und auf diese das aktuelle SPS-Programm aufgespielt, so sind nach 
+	 dem Aufspielen vom Programm alle benötigten Parameter des Programms 
+	 mit Defaultwerten/Initialwerten versehen. Alle vorher verwendeten 
+	 Parameterwerte gehen hierbei verloren und müssen nach dem SPS-Tausch 
+	 ggf. manuell geändert werden. Jedoch besteht hierbei die Gefahr, dass 
+	 einzelne Werte vergessen werden.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Beim Einsatz 
+	 von Rezepten können nach einem SPS-Tausch vom SPS-Programm die Daten 
+	 automatisch nach einem SPS-Neustart von Legato angefordert werden. 
+	 Hierbei werden alle Rezepte der betreffenden SPS mit den zuletzt in 
+	 der Legato DB gespeicherten Werten an die SPS übertragen.</span></li>
+</ul>
+<h2 style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;"><a id="Arbeit_mit_einem_Rezept"></a>Arbeit mit einem Rezept</span></h2>
+<p class="BodyText" style="mso-bidi-font-family: Helvetica;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Man 
+ kann mit einem Rezept auf verschiedene Art und Weise arbeiten:</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 color: #333333; font-weight: bold;" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: Helvetica; 
+												 mso-fareast-language: DE;">Variante 
+ 1: Manuelles Editieren</span></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Die Änderungen 
+	 an einem Rezept werden über den Sapient Webclient durchgeführt.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Alle Parameter 
+	 eines Rezeptes können manuell geändert werden.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Wenn alle 
+	 Änderungen durchgeführt wurden, erfolgt die Übernahme durch einen 
+	 Mausklick.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Wird eine 
+	 Änderung im Rezept bestätigt, wird ein Triggersignal in der SE gesetzt, 
+	 welches dem SCC signalisiert, dass ein Rezept an die SPS zu übertragen 
+	 ist.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Nach der 
+	 Übertragung an die SPS quittiert der SCC das Rezept in der DB durch 
+	 das Setzen einer SE-Methode.</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 color: #333333; font-weight: bold;" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: Helvetica; 
+												 mso-fareast-language: DE;">Variante 
+ 2: Anforderung von der SPS bei Neustart</span></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Umgekehrt 
+	 kann eine SPS z.B. bei einem SPS-Neustart alle Rezepturen, die für 
+	 diese SPS gelten durch das Setzen eines Signals vom SCC anfordern.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Der SCC 
+	 fordert daraufhin alle Rezepte der betreffenden SPS von der SE und 
+	 somit aus der DB, an.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Alle Rezepte 
+	 der Verbindung werden an den SCC übertragen und je Rezept quittiert.</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 color: #333333; font-weight: bold;" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: Helvetica; 
+												 mso-fareast-language: DE;">Variante 
+ 3: Anforderung von SPS im Programmablauf</span></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l1 level1 lfo3; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Das Funktionsprinzip 
+	 entspricht jenem von Variante 2, es werden in dem Fall aber nur bestimmte 
+	 Rezepte angefordert.</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 color: #333333; font-weight: bold;" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: Helvetica; 
+												 mso-fareast-language: DE;">Variante 
+ 4: Übertragung der Rezepte aus der SPS</span></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo4; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Es können 
+	 Rezepte aus der SPS in die DB übertragen werden.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo4; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Voraussetzung: 
+	 Das Rezept muss vorhanden sein und die Struktur des übertragenen Rezeptes 
+	 muss jenem in der DB entsprechen. Dies gilt nicht für die Werte, sondern 
+	 nur für die einzelnen Parameter.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo4; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE; font-weight: bold;">Beispiel</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">: Das 
+	 Rezept aus der SPS beinhaltet 100 Parameter, die alle numerisch sind. 
+	 Das dazugehörige Rezept in der DB muss demnach ebenfalls 100 numerische 
+	 Parameter enthalten, damit ein Datenabgleich durchgeführt werden darf.</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo4; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Die Übertragung 
+	 aus der SPS kann sowohl automatisiert über das SPS-Programm, als auch 
+	 über SCC-Skripte oder manuell über den Webclient erfolgen.</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Verbindung_mit_anderen_Legato_Funktionen_und_Modulen"></a>Verbindung 
+ mit anderen Legato Funktionen und Modulen</h2>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff;" data-condition="Others:Deutsch"><span style="line-height: normal; background-color: #ffffff;"><b><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+	 mso-fareast-font-family: &#39;Times New Roman&#39;; mso-bidi-font-family: Helvetica; 
+	 color: #333333; mso-fareast-language: DE;">Tracking &amp; Tracing</span></b></span></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Schnittstelle, 
+	 um Rezepte mit einem Bauteil zu verheiraten</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l0 level1 lfo1; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">Schnittstelle, 
+	 um Rezepte einem Produkt zuzuordnen</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff;" data-condition="Others:Deutsch"><b><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; color: #333333; mso-fareast-language: DE;">Sapient 
+ Cloud Connector SCC + SMC</span></b></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l1 level1 lfo2; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">SE-Methoden 
+	 und SCC-Skripte, um Rezepte in der Legato DB anzufordern und in die 
+	 SPS zu übertragen</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l1 level1 lfo2; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">SE-Methoden 
+	 und SCC-Skripte, um die Übertragung eines Rezepts an die SPS in der 
+	 Legato DB zu quittieren</span></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; 
+	 margin-left: 0cm; line-height: normal; background-color: #ffffff;" data-condition="Others:Deutsch"><b><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; color: #333333; mso-fareast-language: DE;">Sapient 
+ Engine SE</span></b></p>
+<ul style="margin-top: 0cm;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo3; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">SE-Methoden, 
+	 um Rezepte aus der Legato DB anzufordern (einzeln über IDs von betreffenden 
+	 Rezepten oder alle Rezepte eines Fertigungsknoten über die NodeID)</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo3; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">SE-Methoden, 
+	 um eine Rezepte-Übertragung zu quittieren</span></li>
+	<li class="MsoNormal" style="color: #333333; margin-bottom: 0cm; line-height: normal; 
+		 mso-list: l2 level1 lfo3; tab-stops: list 36.0pt; background-color: #ffffff;"><span style="font-family: &#39;Palatino Linotype&#39;, serif; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Helvetica; mso-fareast-language: DE;">SE-Methoden, 
+	 um manuell geänderte Rezepte an den SCC zu übertragen</span></li>
+</ul>
+
+
+</body></html>

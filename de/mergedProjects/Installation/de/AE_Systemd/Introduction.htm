@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "4.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Einleitung</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Einleitung">
+        <span>Einleitung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Einleitung</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Anleitung beschreibt die Installation und Konfiguration 
+ der Legato Application Engine mit Hilfe des Systems Init System auf einem 
+ Ubuntu Betriebssystem Version 16.04. </p>
+<h2 data-condition="Others:Deutsch"><a id="Was_ist_systemd_"></a>Was ist systemd?</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Systemd ist ein System und Service Manager für 
+ Linux Betriebssysteme. Es soll rückwärts kompatibel mit SysV Init-Skripten 
+ sein und bietet eine Anzahl Features wie paralleles Hochfahren von Systemdiensten 
+ beim Starten, Aktivierung von Daemons auf Abruf, Unterstützung für Snapshots 
+ des Systemzustands oder eine Abhängigkeits-basierte Dienststeuerungslogik.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemd führt das Konzept von Systemd Einheiten ein. 
+ Diese Einheiten werden durch Einheiten-Konfigurationsdateien repräsentiert, 
+ die in einem der Verzeichnisse aus der Tabelle &quot;Systemd Einheiten-Orte&quot; 
+ gespeichert werden. Sie kapseln Informationen über Systemdienste, horchende 
+ Sockets, gespeicherte Snapshots des Systemzustands und andere Objekte, 
+ die für das Init-System relevant sind. Für eine vollständige Liste verfügbarer 
+ Systemd Einheits-Arten, siehe die Tabelle &quot;Verfügbare Systemd Einheiten-Arten&quot;.</p>
+<h2 data-condition="Others:Deutsch"><a id="Verfügbare_Systemd_Einheiten-Arten"></a>Verfügbare Systemd 
+ Einheiten-Arten</h2>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p>Einheiten-Art</p></td>
+		<td><p class="TabellenÜberschrift">Dateiendung</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Dienst-Einheit</p></td>
+		<td><p class="TabellenInhalt">.service</p></td>
+		<td><p class="TabellenInhalt">Ein Systemdienst.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Ziel-Einheit</p></td>
+		<td><p class="TabellenInhalt">.target</p></td>
+		<td><p class="TabellenInhalt">Eine Gruppe von Systemd-Einheiten.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Auto-Mount-Einheit</p></td>
+		<td><p class="TabellenInhalt">.automount</p></td>
+		<td><p class="TabellenInhalt">Ein Auto-Einhängepunkt des Dateisystems.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Geräte-Einheit</p></td>
+		<td><p class="TabellenInhalt">.device</p></td>
+		<td><p class="TabellenInhalt">Eine Geräte-Datei, die vom Kernel 
+		 erkannt wird.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Mount-Einheit</p></td>
+		<td><p class="TabellenInhalt">.mount</p></td>
+		<td><p class="TabellenInhalt">Ein Einhängepunkt des Dateisystems.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p>Pfad-Einheit</p></td>
+		<td><p class="TabellenInhalt">.path</p></td>
+		<td><p class="TabellenInhalt">Eine Datei oder ein Verzeichnis im 
+		 Dateisystem.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Rahmen-Einheit</p></td>
+		<td><p class="TabellenInhalt">.scope</p></td>
+		<td><p class="TabellenInhalt">Ein extern erstellter Prozess.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Teil-Einheit</p></td>
+		<td><p class="TabellenInhalt">.slice</p></td>
+		<td><p class="TabellenInhalt">Eine Gruppe von hierarchisch strukturierten 
+		 Einheiten, die Systemprozesse verwalten.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Snapshot-Einheit</p></td>
+		<td><p class="TabellenInhalt">.snapshot</p></td>
+		<td><p class="TabellenInhalt">Ein gespeicherter Zustand des Systemd-Managers.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Socket-Einheit</p></td>
+		<td><p class="TabellenInhalt">.socket</p></td>
+		<td><p class="TabellenInhalt">Ein prozessübergreifender Kommunikations-Socket.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Austausch-Einheit</p></td>
+		<td><p class="TabellenInhalt">.swap</p></td>
+		<td><p class="TabellenInhalt">Ein Austausch-Gerät oder eine Austausch-Datei.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Timer-Einheit</p></td>
+		<td><p class="TabellenInhalt">.timer</p></td>
+		<td><p class="TabellenInhalt">Ein Systemd Timer.</p></td>
+	</tr>
+</tbody></table>
+<h2 data-condition="Others:Deutsch"><a id="Systemd_Einheiten-Orte"></a>Systemd Einheiten-Orte</h2>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Shortcut</p></td>
+		<td><p class="TabellenÜberschrift">Format</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">/usr/lib/systemd/system/</p></td>
+		<td><p class="TabellenInhalt">Systemd-Einheiten aus installiertem 
+		 RPM Paket.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">/run/systemd/system/</p></td>
+		<td><p class="TabellenInhalt">Systemd-Einheiten, die zur Lauzeit 
+		 erstellt werden. Dieses Verzeichnis hat Vorrang vor dem Verzeichnis 
+		 mit installierten Dienst-Einheiten.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">/etc/systemd/system/</p></td>
+		<td><p class="TabellenInhalt">Systemd-Einheiten, die vom Systemadministrator 
+		 erstellt und verwaltet werden. Dieses Verzeichnis hat Vorrang 
+		 vor dem Verzeichnis mit Laufzeit-Einheiten.</p></td>
+	</tr>
+</tbody></table>
+<h2 data-condition="Others:Deutsch"><a id="Hauptmerkmale"></a>Hauptmerkmale</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Systemd-System und der Service Manager bieten die 
+ folgenden Hauptmerkmale:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Socket-basierte Aktivierung </p>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Zeitpunkt des Startens erstellt Systemd horchende 
+ Sockets für alle Systemdienste, die diese Art der Aktivierung unterstützen 
+ und gibt die Sockets an diese Dienste weiter, sobald sie gestartet sind. 
+ Dadurch kann Systemd nicht nur Dienste gleichzeitig starten, sondern es 
+ ist auch möglich, einen Dienst neu zu starten, ohne irgendeine Meldung 
+ zu verlieren, die während seiner Nicht-Verfügbarkeit an ihn gesendet wurde: 
+ das entsprechende Socket verbleibt zugänglich und alle Meldungen werden 
+ in die Warteschlange geschrieben. Systemd verwendet Socket-Einheiten für 
+ die Socket-basierte Aktivierung.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Bus-basierte Aktivierung </p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemdienste, die D-Bus für prozessübergreifende Kommunikation 
+ verwenden, können beim ersten Mal, wenn eine Client-Anwendung versucht, 
+ mit ihnen zu kommunizieren,  auf Abruf gestartet werden. Systemd 
+ verwendet D-Bus Dienstdateien für die Bus-basierte Aktivierung.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Geräte-basierte Aktivierung </p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemdienste, die Geräte-basierte Aktivierung unterstützen, 
+ können auf Abruf gestartet werden, wenn eine bestimmte Hardware angeschlossen 
+ oder verfügbar wird. Systemd verwendet Geräte-Einheiten für die Geräte-basierte 
+ Aktivierung.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Pfad-basierte Aktivierung </p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemdienste, die Pfad-basierte Aktivierung unterstützen, 
+ können auf Abruf gestartet werden, wenn eine bestimmte Datei oder ein 
+ bestimmtes Verzeichnis den Status ändern. Systemd verwendet Pfad-Einheiten 
+ für die Pfad-basierte Aktivierung.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Systemzustand Snapshots </p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemd kann den aktuellen Status aller Einheiten vorübergehend 
+ speichern oder einen früheren Zustand des Systems aus einem dynamisch 
+ generierten Snapshot wiederherstellen. Um den aktuellen Status des Systems 
+ zu speichern, verwendet Systemd dynamisch erstellte Snapshot-Einheiten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Verwaltung von (Auto-)Einhängepunkten </p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemd überwacht und verwaltet (Auto-)Einhängepunkte. 
+ Systemd verwendet Mount-Einheiten für Einhängepunkte und Auto-Mount-Einheiten 
+ für Auto-Einhängepunkte.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Aggressive Parallelisierung </p>
+<p class="BodyText" data-condition="Others:Deutsch">Wegen der Verwendung der Socket-basierten Aktivierung 
+ kann Systemd Systemdienste gleichzeitig starten, sobald alle horchenden 
+ Sockets eingerichtet sind. In Verbindung mit Systemdiensten, die Aktivierung 
+ auf Abruf unterstützen, reduziert die parallele Aktivierung die für den 
+ Systemstart benötigte Zeit beträchtlich.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Transaktionale Aktivierungslogik der Einheiten </p>
+<p class="BodyText" data-condition="Others:Deutsch">Bevor eine Einheit aktiviert oder deaktiviert wird, 
+ berechnet Systemd die Abhängigkeiten, erstellt eine temporäre Transaktion 
+ und stellt sicher, dass diese Transaktion konsistent ist. Ist eine Transaktion 
+ inkonsistent, versucht Systemd automatisch, sie zu korrigieren und entfernt 
+ unwesentliche Jobs, bevor ein Fehler ausgegeben wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Rückwärtskompatibilität mit SysV Init</p>
+<p class="BodyText" data-condition="Others:Deutsch">Systemd unterstützt SysV Init-Skripte vollständig, 
+ wie sie in der Linux Standard Base Core Spezifikation beschrieben sind. 
+ So wird der Upgrade-Path auf Systemd Systemeinheiten vereinfacht.</p>
+<h2 data-condition="Others:Deutsch"><a id="Verwaltung_von_Systemdiensten"></a>Verwaltung von Systemdiensten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Dienst-Einheiten enden auf .service und erfüllen einen 
+ ähnlichen Zweck wie Init-Skripte. Um Systemdienste anzusehen, zu starten, 
+ stoppen, neu zu starten, zu aktivieren oder deaktivieren verwenden Sie 
+ den Systemctl-Befehl, wie in Tabelle &quot;Service Utility mit Systemctl&quot;.</p>
+<h2 data-condition="Others:Deutsch"><a id="Service_Utility_mit_Systemctl"></a>Service Utility mit Systemctl</h2>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Systemctl</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">systemctl start name.service</p></td>
+		<td><p class="TabellenInhalt">Startet einen Dienst.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">systemctl stop name.service</p></td>
+		<td><p class="TabellenInhalt">Stoppt einen Dienst.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">systemctl restart name.service</p></td>
+		<td><p class="TabellenInhalt">Startet einen Dienst neu.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">systemctl try-restart name.service</p></td>
+		<td><p class="TabellenInhalt">Startet einen laufenden Dienst neu.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">systemctl reload name.service</p></td>
+		<td><p class="TabellenInhalt">Lädt die Konfiguration neu.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">systemctl status name.service</p>
+		<p class="TabellenInhalt">systemctl is-active name.service</p></td>
+		<td><p class="TabellenInhalt">Prüft, ob ein Dienst läuft.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">systemctl list-units --type service 
+		 --all</p></td>
+		<td><p class="TabellenInhalt">Zeigt die Status aller Dienste an.</p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

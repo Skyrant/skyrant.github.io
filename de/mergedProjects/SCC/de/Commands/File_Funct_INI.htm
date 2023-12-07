@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Dateifunktionen (INI-Dateien)</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Dateifunktion" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dateifunktionen (INI-Dateien)">
+        <span>Dateifunktionen (INI-Dateien)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Dateifunktionen (INI-Dateien)</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Mit diesen Funktionen können Konfigurationsdateien 
+ im Stil der INI-Dateien geschrieben und gelesen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Dateifunktionen kann in einem Script eine Variable 
+ vom Typ INIFILE deklariert werden. Alle weiteren Funktionen werden dann 
+ mit dem Namen der Variablen, einem Punkt und dem Namen der Funktion gemeinsam 
+ angesprochen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">inifile  f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\config.ini&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Close" id="Close"></a>Close</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: inifile.close</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datei <b>f</b> wird geschlossen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">inifile  f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\config.ini&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.write(&#39;Section&#39;, &#39;Entry&#39;, &#39;Value&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.save</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Open" id="Open"></a>Open</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool inifile.open(string datei)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet die <b>Datei</b>. Die Funktion liefert &quot;false&quot;, 
+ wenn ein ungültiger Pfad übergeben wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">inifile  f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\config.ini&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.write(&#39;Section&#39;, &#39;Entry&#39;, &#39;Value&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.save</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Read" id="Read"></a>Read</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string inifile.read(string Section, 
+ string Entry)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest aus der Sektion <b>Section</b> den Eintrag <b>Entry</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">inifile  f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\config.ini&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := f.read(&#39;SIZE&#39;, &#39;XPOS&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Save" id="Save"></a>Save</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: inifile.save</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sichert die Datei. Wurde die INI-Datei nach dem Öffnen 
+ mit &quot;Write&quot; beschrieben, werden die Änderungen erst nach dem 
+ Aufruf von &quot;Save&quot; auf die Festplatte geschrieben. Wird die Datei 
+ ohne &quot;Save&quot;-Aufruf mit &quot;Close&quot; geschlossen, gehen 
+ die Änderungen verloren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">inifile  f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\config.ini&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.write(&#39;Section&#39;, &#39;Entry&#39;, &#39;Value&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.save</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Write" id="Write"></a>Write</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: inifile.write(string section,<br/>
+                           string 
+ entry,<br/>
+                           string 
+ value)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt in die Sektion <b>section</b> den Eintrag 
+ <b>entry</b> mit dem Wert <b>value</b>. Ist die Sektion oder der Eintrag 
+ nicht vorhanden, werden sie neu angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">inifile  f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\config.ini&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.write(&#39;SIZE&#39;, &#39;XPOS&#39;, &#39;624&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.write(&#39;SIZE&#39;, &#39;YPOS&#39;, &#39;100&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.save</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+
+
+</body></html>

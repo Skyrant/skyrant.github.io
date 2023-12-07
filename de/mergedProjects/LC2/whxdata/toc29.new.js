@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Überblick","type":"item","tilePath":"","description":"","url":"de/06_Plant_Mgmt/02_WTS/01_Overview.htm"},{"name":"Grundeinstellungen","type":"book","tilePath":"","key":"toc30"},{"name":"Zeitschemata","type":"book","tilePath":"","key":"toc31"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

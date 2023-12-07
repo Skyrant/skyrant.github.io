@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.28";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen der Publish/Subscribe-Schnittstelle</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen der Publish/Subscribe-Schnittstelle">
+        <span>Funktionen der Publish/Subscribe-Schnittstelle</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen der Publish/Subscribe-Schnittstelle</h2>
+<h3 data-condition="Others:Deutsch"><a id="Subscribe"></a>Subscribe</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Subscribe(string topic, int qos)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abonniert beim Broker Nachrichten zum Thema <span style="font-weight: bold;">topic</span>. 
+ <span style="font-weight: bold;">qos</span> definiert die Qualität des 
+ Services.</p>
+<p class="BodyText" data-condition="Others:Deutsch">qos:</p>
+<p class="BodyText" data-condition="Others:Deutsch">0 höchstens einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch">1 mindestens einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch">2 genau einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">PubSub.Mosquitto.Subscribe(&#39;temp/random&#39;,0)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Unsubscribe"></a>Unsubscribe</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Unsubscribe(string topic)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beendet das Abonnement der Nachrichten zum Thema <span style="font-weight: bold;">topic</span>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">PubSub.Mosquitto.Unsubscribe(&#39;temp/random&#39;,0)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Publish"></a>Publish</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Publish(string topic, string message, 
+ int qos)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sendet eine Nachricht <span style="font-weight: bold;">message</span> 
+ zum Thema <span style="font-weight: bold;">topic</span>. <span style="font-weight: bold;">qos</span> 
+ definiert die Qualität des Services.</p>
+<p class="BodyText" data-condition="Others:Deutsch">qos:</p>
+<p class="BodyText" data-condition="Others:Deutsch">0 höchstens einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch">1 mindestens einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch">2 genau einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">PubSub.Mosquitto.Publish(&#39;temp/random&#39;, &#39;12.0&#39;,0)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="PublishEx"></a>PublishEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: PublishEx(string topic, string message, 
+ int qos, bool dup, bool retain)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sendet eine Nachricht <span style="font-weight: bold;">message</span> 
+ zum Thema <span style="font-weight: bold;">topic</span>. <span style="font-weight: bold;">qos</span> 
+ definiert die Qualität des Services.</p>
+<p class="BodyText" data-condition="Others:Deutsch">qos:</p>
+<p class="BodyText" data-condition="Others:Deutsch">0 höchstens einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch">1 mindestens einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch">2 genau einmal</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">dup</span> gibt an, 
+ ob es sich um eine Wiederholung der Nachricht handelt (<span style="font-weight: bold;">dup</span> 
+ = true). Bei <span style="font-weight: bold;">qos</span> = 0 muss <span style="font-weight: bold;">dup</span> false sein!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">retain</span> = true 
+ veranlasst den Server, die Nachricht zu speichern, um den Wert auch zukünftigen 
+ Clients senden zu können.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">PubSub.Mosquitto.Publish(&#39;temp/random&#39;, &#39;12.0&#39;,0,false,true)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

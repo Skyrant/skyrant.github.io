@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.11.2_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Rezeptprozeduren</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rezeptprozeduren">
+        <span>Rezeptprozeduren</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Rezeptprozeduren</h1>
+<h2 data-condition="Others:Deutsch"><a id="Rezept_generieren_von_einem_Template"></a>Rezept von einem 
+ Template generieren (RM_RECIPE_TEMPLATES) </h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 13.371%;"/>
+	<col style="width: 86.629%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText">Ein Rezept von einem Template kann mit 
+		 der Prozedur <span style="font-weight: bold;">RM_RECIPE_TEMPLATES</span> 
+		 umgesetzt werden. Es ist möglich, Rezepte in LC2 hinzuzufügen, 
+		 zu bearbeiten oder zu entfernen. </p>
+		<p>Beim Hinzufügen eines neuen Rezepts wird ein JSON-Schema für 
+		 die ausgewählte Rezeptvorlage auf der Grundlage ihrer Elemente 
+		 generiert.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;;"><span style="font-family: &#39;Palatino Linotype&#39;;">/de/gefasoft/sapient/db/recipes/RecipeManagement/insert/</span></p>
+		<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;;">/de/gefasoft/sapient/db/recipes/RecipeManagement/update/</p>
+		<p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;;">/de/gefasoft/sapient/db/recipes/RecipeManagement/delete/</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Parameter</p></td>
+		<td><p class="BodyText">RECIPE_TEMPLATE_ID<br/>
+		CONNECTION_ID<br/>
+		RECIPE_SYMBOL <br/>
+		SORT_ID<br/>
+		NAME</p>
+		<p class="TextCode"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Beispiel</p></td>
+		<td><p class="TextCode"> </p>
+		<p class="TextCode">{<br/>
+		&quot;SYMBOL&quot;: &quot;a&quot;,</p>
+		<p class="TextCode">&quot;NAME_0&quot;: &quot;a&quot;,</p>
+		<p class="TextCode">&quot;CONNECTION_ID&quot;: 61,</p>
+		<p class="TextCode">&quot;SORT_ID&quot;: 10,</p>
+		<p class="TextCode">&quot;RECIPE_TEMPLATE_ID&quot;:2</p>
+		<p class="TextCode">}</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezept_aus_der_Datenbank_lesen"></a>Rezept aus der Datenbank 
+ lesen (RM_READ_RECIPE)</h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText">Für das Lesen eines Rezeptes aus der Datenbank 
+		 ist die Prozedur <span style="font-weight: bold;">readRecipe</span> 
+		 notwendig.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;;">/de/gefasoft/sapient/db/recipes/RecipeManagement/readRecipe/</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Details</p></td>
+		<td><p class="BodyText"><span style="font-weight: bold;">RM_READ_RECIPE</span> 
+		 liest das adressierte Rezept aus der Datenbank. Die gesamte Struktur 
+		 (Aufbau, Anzahl und Typ der Elemente) und auch die tatsächlichen 
+		 Werte jedes Elements werden gelesen und in ein entsprechendes 
+		 JSON-Objekt gespeichert.</p>
+		<p class="BodyText">Für das Element <span style="font-weight: bold;">Werte</span> 
+		 gibt es zwei verschiedene Optionen:</p>
+		<ul style="list-style: disc;">
+			<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><p class="BodyText">Lesen des Wertes aus dem neuesten (Zeitstempel) 
+			 Datensatzes</p></li>
+			<li style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"><p class="BodyText">Lesen des Wertes aus dem neuesten (Zeitstempel) 
+			 Datensatzes, bei dem RH_ITEM_VALUES.NO_PLC_DOWNLOAD = 0</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p class="BodyText">RECIPE_ID: eindeutige ID des Rezepts, oder 
+		 die folgenden Parameter:<br/>
+		<br/>
+		CONNECTION: Symbol des SPS-Anschlusses<br/>
+		<br/>
+		RECIPE_SYMBOL: eindeutiges Symbol (innerhalb von CONNECTION) für 
+		 das Rezept (auch in der SPS gespeichert) <br/>
+		<br/>
+		USE_DOWNLOADED_VALUES: neueste Datensätze <br/>
+		<br/>
+		RM_ITEM_VALUES.NO_PLC_DOWNLOAD = 1 sollte verwendet werden</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p>
+		<p class="BodyText" style="font-weight: bold;"> </p></td>
+		<td><p class="BodyText">READ_RESULT: &quot;0&quot; = OK, &quot;1&quot; 
+		 = Rezept nicht gefunden</p>
+		<p class="BodyText">RECIPE_STRUCTURE: JSON-Objekt, welches das 
+		 gesamte Rezept umfasst (Struktur der Elemente und Werte)</p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezept_in_die_Datenbank_schreiben"></a>Rezept in die Datenbank 
+ schreiben (RM_WRITE_RECIPE)</h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText">Für das Schreiben eines Rezeptes aus der 
+		 Datenbank ist die Prozedur <span style="font-weight: bold;">RM_WRITE_RECIPE 
+		 </span>notwendig. Die Prozedur vergleicht eine gegebene Rezeptstruktur 
+		 mit der adressierten Rezeptstruktur in der Datenbank.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;;">/de/gefasoft/sapient/db/recipes/RecipeManagement/writeRecipe/</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Details</p></td>
+		<td><p><span style="font-weight: bold;">RM_WRITE_RECIPE</span> 
+		  schreibt das angegebene Rezept in die Datenbank. </p>
+		<p>Die vorgegebene Rezeptstruktur (Aufbau, Anzahl und Art der Positionen) 
+		 muss mit der gespeicherten Struktur übereinstimmen. </p>
+		<p>Dies muss von der Prozedur während des Speichervorgangs überprüft 
+		 werden. Im Falle eines Strukturunterschieds muss der Speichervorgang 
+		 abgebrochen (ohne ein Commit zur Datenbank) und ein Fehler zurückgegeben 
+		 werden. Es werden nur die Werte (Felder VALUE_BOOL, VALUE_NUM, 
+		 VALUE_STRING) in der Datenbank aktualisiert, alle anderen Felder 
+		 sollten nicht verändert werden.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p>RECIPE_ID - eindeutige ID des Rezepts</p>
+		<p>CONNECTION - Verbindungssymbol</p>
+		<p>RECIPE_SYMBOL - Rezeptur-Symbol</p>
+		<p> </p>
+		<p>Um die Prozedur auszuführen, muss der Benutzer RECIPE_STRUCTURE 
+		 und RECIPE_ID oder sowohl CONNECTION als auch RECIPE_SYMBOL angeben.</p>
+		<p>RECIPE_STRUCTURE- Rezeptstruktur in Form von stringifiziertem 
+		 JSON</p>
+		<p>PARENT_ID - ID eines Parents (Elternteils)</p>
+		<p>CHANGE_USER_ID - ID eines Benutzers</p>
+		<p>TIME_STAMP - Zeitstempel (wenn nicht angegeben, wird die aktuelle 
+		 Zeit gespeichert)</p>
+		<p>CHANGE_COMMENT - Kommentar</p>
+		<p>ATTR_JSONB - Erweiterte Eigenschaften</p>
+		<p> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p>
+		<p class="BodyText" style="font-weight: bold;"> </p></td>
+		<td><p>Prozedur gibt 0 zurück, wenn RECIPE_STRUCTURE erfolgreich 
+		 in die Datenbank geschrieben wurde,</p>
+		<p>1, wenn Rezept (RECIPE_SYMBOL) nicht in der Datenbank gefunden 
+		 wurde,</p>
+		<p>2, wenn die Rezeptstruktur nicht mit dem Schema aus der Datenbank 
+		 übereinstimmt.</p>
+		<p> </p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezeptstruktur_mit_gespeicherter_Struktur_in_Datenbank_vergleichen__RM_COMP_REC_STRUCT_"></a>Rezeptstruktur 
+ mit gespeicherter Struktur in Datenbank vergleichen (RM_COMP_REC_STRUCT)</h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText"><span style="font-weight: bold;">RM_COMP_REC_STRUCT</span> 
+		 vergleicht eine gegebene Rezeptstruktur mit der adressierten Rezeptstruktur 
+		 in der Datenbank.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText"> /de/gefasoft/sapient/db/recipes/RecipeManagement/compare/</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Details</p></td>
+		<td><p class="BodyText">Vergleicht eine gegebene Rezeptstruktur 
+		 mit der adressierten Rezeptstruktur in der Datenbank. Im ersten 
+		 Schritt wird das RECIPE_SYMBOL (dieser Name ist auch in der SPS 
+		 gespeichert) verglichen.</p>
+		<p class="BodyText">In einem zweiten Schritt, wenn das SYMBOL übereinstimmt, 
+		 wird die gesamte Struktur (nicht die Positionswerte) verglichen.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p class="BodyText">RECIPE_STRUCTURE: JSON-Objekt, das das 
+		 gesamte 1. Rezept umfasst (Struktur der Items und Werte)</p>
+		<p class="BodyText">RECIPE_ID: eindeutige ID des 2. Rezepts, oder 
+		 die folgenden beiden Parameter:<br/>
+		<br/>
+		</p>
+		<p class="BodyText">CONNECTION: Symbol für die SPS-Verbindung</p>
+		<p class="BodyText">RECIPE_SYMBOL: eindeutiges Symbol (innerhalb 
+		 der CONNECTION) für das Rezept (auch in der SPS gespeichert)</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p>
+		<p class="BodyText" style="font-weight: bold;"> </p></td>
+		<td><p class="BodyText">Um die Prozedur auszuführen, muss der Benutzer 
+		 RECIPE_STRUCTURE und RECIPE_ID oder sowohl CONNECTION als auch 
+		 RECIPE_SYMBOL angeben.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText">COMPARE_RESULT: &quot;0&quot; = Die Prozedur 
+		 gibt 0 zurück, wenn RECIPE_STRUCTURE erfolgreich validiert wurde, 
+		 </p>
+		<p class="BodyText">1, wenn Rezept (RECIPE_SYMBOL) nicht in der 
+		 Datenbank gefunden wurde, </p>
+		<p class="BodyText">2, wenn die Rezeptstruktur nicht mit dem Schema 
+		 aus der Datenbank übereinstimmt</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezeptstatus_auf_der_Datenbank_setzen"></a>Rezeptstatus in 
+ die Datenbank setzen (RM_SET_REC_STATUS)</h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText"><span style="font-weight: bold;">RM_SET_REC_STATUS</span> 
+		 setzt den Rezeptstatus für ein adressiertes Rezept in die Datenbank 
+		 (der Rezeptstatus wird geschrieben).</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText">/de/gefasoft/sapient/db/recipes/RecipeManagement/setRecipeStatus/ 
+		 </p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Details</p></td>
+		<td><p class="BodyText">Wenn das WRITE_RESULT auf &quot;0&quot; 
+		 gesetzt ist<br/>
+		</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText">muss das Datenbankfeld UPLOAD_REQUESTED 
+			 auf &quot;0&quot; gesetzt werden</p></li>
+			<li><p class="BodyText">muss das Datenbankfeld PLC_MATCH auf 
+			 &quot;1&quot; gesetzt werden<br/>
+			</p></li>
+		</ul>
+		<p class="BodyText">Wenn das READ_RESULT auf &quot;0&quot; gesetzt 
+		 wurde<br/>
+		</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText">muss das Datenbankfeld DOWNLOAD_REQUESTED 
+			 auf &quot;0&quot; gesetzt werden</p></li>
+			<li><p class="BodyText">muss das Datenbankfeld PLC_MATCH auf 
+			 &quot;1&quot; gesetzt werden</p></li>
+			<li><p class="BodyText">alle Merker RM_ITEM_VALUES.NO_PLC_DOWNLOAD<br/>
+			bei denen der Zeitstempel älter ist als READ_TIMESTAMP<br/>
+			müssen auf &quot;0&quot; gesetzt werden.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p class="BodyText">RECIPE_ID: eindeutige ID des Rezepts, oder 
+		 die folgenden Parameter:</p>
+		<p class="BodyText">CONNECTION: Symbol für die SPS-Verbindung</p>
+		<p class="BodyText">RECIPE_SYMBOL: eindeutiges (innerhalb der CONNECTION) 
+		 Symbol für das Rezept (auch in der SPS gespeichert)</p>
+		<p class="BodyText">WRITE_TIMESTAMP: Zeitstempel des letzten erfolgreichen 
+		 Uploads</p>
+		<p class="BodyText">WRITE _RESULT: &quot;0&quot; = OK, &quot;1&quot; 
+		 = Rezept nicht gefunden oder &quot;2&quot; = Rezeptstruktur nicht 
+		 passend</p>
+		<p class="BodyText">READ_TIMESTAMP: Zeitstempel des letzten erfolgreichen 
+		 Downloads</p>
+		<p class="BodyText">READ _RESULT: &quot;0&quot; = OK, &quot;1&quot; 
+		 = Rezept nicht gefunden oder &quot;2&quot; = Rezeptstruktur nicht 
+		 passend</p>
+		<p class="BodyText">PLC_MATCH: &quot;0&quot; = keine Übereinstimmung 
+		 der Daten, &quot;1&quot; = Daten übereinstimmend</p>
+		<p class="BodyText">RECIPE_MODE:</p>
+		<p class="BodyText">&quot;0&quot; = Upload von der SPS (Teaching-Modus),</p>
+		<p class="BodyText">&quot;1&quot; = Download zur SPS (Master-Modus, 
+		 kann nur auf &quot;1&quot; gesetzt werden, wenn der vorherige 
+		 Zustand &quot;0&quot; war; andere Zustände bleiben unverändert)</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p>
+		<p class="BodyText" style="font-weight: bold;"> </p></td>
+		<td><p class="BodyText">ERGEBNIS: &quot;0&quot; = OK, </p>
+		<p class="BodyText">&quot;1&quot; = Rezept (RECIPE_SYMBOL) nicht 
+		 in Datenbank gefunden</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezeptstatus_von_der_Datenbank_abfragen"></a>Rezeptstatus 
+ von der Datenbank abfragen (RM_GET_REC_STATUS)</h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText"><span style="font-weight: bold;">RM_GET_REC_STATUS 
+		 </span>liest<span style="font-weight: bold;"> </span>den Rezeptstatus 
+		 für ein adressiertes Rezept aus der Datenbank.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText">/de/gefasoft/sapient/db/recipes/RecipeManagement/getRecipeStatus/</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p class="BodyText">RECIPE_ID: eindeutige ID des Rezepts, oder 
+		 die folgenden beiden Parameter:<br/>
+		</p>
+		<p class="BodyText">CONNECTION: Symbol der SPS-Verbindung</p>
+		<p class="BodyText">RECIPE_SYMBOL: eindeutiges Symbol (innerhalb 
+		 der CONNECTION) für das Rezept (auch in der SPS gespeichert)</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p></td>
+		<td><p class="BodyText">WRITE_TIMESTAMP: Zeitstempel des letzten 
+		 erfolgreichen Uploads</p>
+		<p class="BodyText">WRITE_RESULT: &quot;-1&quot; = OK; &quot;-2&quot; 
+		 = Rezept nicht gefunden; &quot;-3&quot; = Rezeptstruktur nicht 
+		 passend</p>
+		<p class="BodyText">READ_TIMESTAMP: Zeitstempel des letzten erfolgreichen 
+		 Downloads</p>
+		<p class="BodyText">READ_RESULT: &quot;-1&quot; = OK; &quot;-2&quot; 
+		 = Rezeptur nicht gefunden; &quot;-3&quot; = Rezepturstruktur nicht 
+		 passend</p>
+		<p class="BodyText">PLC_MATCH: &quot;0&quot; = keine Übereinstimmung 
+		 der Daten, &quot;1&quot; = Daten übereinstimmend</p>
+		<p class="BodyText">RECIPE_MODE: &quot;-1&quot; = Upload der SPS 
+		 zum MES; &quot;-2&quot; = Download vom MES zur SPS; &quot;-3&quot; 
+		 = keine Datenübertragung; &quot;-4&quot; = inaktiv</p>
+		<p class="BodyText">OPTIMIZED_PLC_DATA: &quot;0&quot; = nein, &quot;1&quot; 
+		 = ja</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beispiel</p>
+		<p class="BodyText" style="font-weight: bold;"> </p></td>
+		<td><p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+				 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span><span style="line-height: normal; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="font-size: 10.0pt; font-family: &#39;Courier New&#39;; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+		 mso-fareast-language: DE;">{</span></span></span></p>
+		<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+			 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="font-size: 10.0pt; font-family: &#39;Courier New&#39;; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+		 mso-fareast-language: DE;"><span style="mso-tab-count: 1;">      </span> &quot;RECIPE_ID&quot;: 
+		 1</span></p>
+		<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+			 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="font-size: 10.0pt; font-family: &#39;Courier New&#39;; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+		 mso-fareast-language: DE;"><span style="mso-spacerun: yes;"> </span>}</span></p>
+		<p class="MsoNormal" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; 
+			 line-height: normal;"><span style="font-size: 12.0pt; font-family: &#39;Times New Roman&#39;, serif; 
+										 mso-fareast-font-family: &#39;Times New Roman&#39;; 
+										 mso-fareast-language: DE;">or</span></p>
+		<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+			 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="font-size: 10.0pt; font-family: &#39;Courier New&#39;; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+		 mso-fareast-language: DE;">{</span></p>
+		<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+			 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="font-size: 10.0pt; font-family: &#39;Courier New&#39;; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+		 mso-fareast-language: DE;"><span style="mso-tab-count: 1;">       </span> &quot;CONNECTION&quot;: 
+		 &quot;Symbol&quot;,</span></p>
+		<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+			 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="font-size: 10.0pt; font-family: &#39;Courier New&#39;; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+		 mso-fareast-language: DE;"><span style="mso-tab-count: 1;">       </span> &quot;RECIPE_SYMBOL&quot;: 
+		 &quot;TEST&quot;</span></p>
+		<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; 
+			 tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;"><span style="mso-spacerun: yes;"> </span><span style="font-size: 10.0pt; 
+														 font-family: &#39;Courier New&#39;; 
+														 mso-fareast-font-family: &#39;Times New Roman&#39;; 
+														 mso-fareast-language: DE;">}</span></p></td>
+	</tr>
+</tbody></table>
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;" data-condition="Others:Deutsch"> </p>
+<h2 class="MsoNormal" data-condition="Others:Deutsch"><a id="Ergebnis_von_Rezept_Up-_und_Downloads_melden_"></a>Ergebnis 
+ von Rezept Up- und Downloads melden </h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText"><span style="font-weight: bold;">RM_SET_UPLOAD_RESULT</span> 
+		 und<span style="font-weight: bold;"> RM_SET_DOWNLOAD_RESULT</span><br/>
+		<br/>
+		Um Up- oder Download-Anforderungen für Rezepte zu erkennen, fragt 
+		 der SCC (MDX) die Tabelle RM_RECIPES nach Zeilen ab, bei denen 
+		 UPLOAD_REQUESTED ein neuerer Zeitstempel als LAST_UPLOAD oder 
+		 DOWNLOAD_REQUESTED ein neuerer als LAST_DOWNLOAD ist.</p>
+		<p class="BodyText">Wenn der SCC (MDX) einen Upload beendet hat, 
+		 wird RM_WRITE_RECIPE aufgerufen, um die empfangenen Daten zu speichern, 
+		 und anschließend RM_SET_UPLOAD_RESULT, um das Ende der Upload-Anforderung 
+		 zu signalisieren. Analog dazu liest die SCC bei einer Download-Anforderung 
+		 die Rezepturdaten mit RM_READ_RECIPE, sendet sie an die SPS und 
+		 ruft dann RM_SET_DOWNLOAD_RESULT auf, um das Ende der Download-Anforderung 
+		 zu signalisieren.</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText">/de/gefasoft/sapient/db/recipes/RecipeManagement/setUploadResult</p>
+		<p class="BodyText">/de/gefasoft/sapient/db/recipes/RecipeManagement/setDownloadResult</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p class="BodyText" style="font-weight: bold;"><span style="font-weight: bold;">Parameter 
+		 von <span style="font-weight: bold;">setUploadResult:</span></span></p>
+		<p class="MsoNormal">RECIPE_ID - Rezeptur-ID</p>
+		<p class="MsoNormal">CONNECTION - Verbindungssymbol</p>
+		<p class="MsoNormal">RECIPE_SYMBOL - Rezeptur-Symbol</p>
+		<p class="MsoNormal">RESULT_ID - Ergebnis-ID (RM_RECIPE_RESULTS.ID)</p>
+		<p class="MsoNormal">Beim Aufruf dieser Prozedur muss entweder 
+		 die RECIPE_ID oder sowohl CONNECTION als auch RECIPE_SYMBOL angegeben 
+		 werden, damit die Prozedur das Rezept identifizieren kann, auf 
+		 das sie reagieren soll. Die RESULT_ID muss ebenfalls angegeben 
+		 werden.</p>
+		<p class="MsoNormal">Die Prozedur setzt den Zeitstempel UPLOAD_REQUESTED 
+		 auf NULL zurück und speichert die RESULT_ID in UPLOAD_RESULT_ID 
+		 von RM_RECIPES. Die Prozedur sollte diese Spalten in separaten 
+		 Transaktionen aktualisieren, damit die Anforderung auch dann zurückgesetzt 
+		 wird, wenn das Ergebnis nicht gespeichert werden konnte.</p>
+		<p class="MsoNormal"> </p>
+		<p class="MsoNormal" style="font-weight: bold;">Parameter von setDownloadResult</p>
+		<p class="MsoNormal"><span style="font-weight: bold;">R</span>ECIPE_ID 
+		 - Rezeptur-ID</p>
+		<p class="MsoNormal">CONNECTION - Verbindungssymbol</p>
+		<p class="MsoNormal">RECIPE_SYMBOL - Rezeptur-Symbol</p>
+		<p class="MsoNormal">RESULT_ID - Ergebnis-ID (RM_RECIPE_RESULTS.ID)</p>
+		<p class="MsoNormal">Beim Aufruf dieser Prozedur muss entweder 
+		 die RECIPE_ID oder sowohl CONNECTION als auch RECIPE_SYMBOL angegeben 
+		 werden, damit die Prozedur das Rezept identifizieren kann, auf 
+		 das sie reagieren soll. Die RESULT_ID muss ebenfalls angegeben 
+		 werden.</p>
+		<p class="MsoNormal">Die Prozedur setzt den Zeitstempel DOWNLOAD_REQUESTED 
+		 auf NULL zurück und speichert die RESULT_ID in DOWNLOAD_RESULT_ID 
+		 von RM_RECIPES. Die Prozedur sollte diese Spalten in separaten 
+		 Transaktionen aktualisieren, damit die Anforderung auch dann zurückgesetzt 
+		 wird, wenn das Ergebnis nicht gespeichert werden konnte (vielleicht 
+		 wegen einer fehlerhaften RESULT_ID)<span style="font-weight: bold;">.</span><br/>
+		</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p>
+		<p class="BodyText" style="font-weight: bold;"> </p></td>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte 
+		 von setUploadResult:<br/>
+		<br/>
+		<span style="font-weight: normal;">0 - OK</span></p>
+		<p class="MsoNormal">1 - Kein Datensatz wurde aktualisiert (kein 
+		 Rezept gefunden)</p>
+		<p class="MsoNormal">JSONRPC_INVALID_PARAMETER (Ausnahme), wenn 
+		 die Ergebnis-ID ungültig war oder Parameter fehlten.</p>
+		<p class="MsoNormal"> </p>
+		<p class="MsoNormal" style="font-weight: bold;">Ausgabewerte von 
+		 setDownloadResult:</p>
+		<p class="MsoNormal">0 - OK</p>
+		<p class="MsoNormal">1 - Kein Datensatz wurde aktualisiert (kein 
+		 Rezept gefunden)</p>
+		<p class="MsoNormal">JSONRPC_INVALID_PARAMETER (Ausnahme), wenn 
+		 die Ergebnis-ID ungültig war oder Parameter fehlten.</p>
+		<p class="MsoNormal"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beispiel setUploadResult</p></td>
+		<td><p class="BodyText" style="font-weight: normal;">{</p>
+		<p class="BodyText" style="font-weight: normal;">    &quot;RECIPE_ID&quot;: 
+		 1,</p>
+		<p class="BodyText" style="font-weight: normal;">    &quot;RESULT_ID&quot;: 
+		 -3</p>
+		<p class="BodyText" style="font-weight: normal;">}</p>
+		<p class="BodyText" style="font-weight: normal;"> </p>
+		<p class="BodyText" style="font-weight: normal;"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beispiel setDownloadResult</p></td>
+		<td><p class="BodyText" style="font-weight: normal;"><span style="font-weight: normal;">{</span></p>
+		<p class="BodyText" style="font-weight: normal;">    &quot;RECIPE_ID&quot;: 
+		 2,</p>
+		<p class="BodyText" style="font-weight: normal;">    &quot;RESULT_ID&quot;: 
+		 -3</p>
+		<p class="BodyText" style="font-weight: normal;">}</p></td>
+	</tr>
+</tbody></table>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<h2 class="MsoNormal" data-condition="Others:Deutsch"><a id="Rezeptbearbeitungen_in_der_Datenbank_speichern__RM_CHANGE_RECIPE_DATA_"></a>Rezeptbearbeitungen 
+ in der Datenbank speichern (RM_CHANGE_RECIPE_DATA)</h2>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 12.976%;"/>
+	<col style="width: 87.024%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Beschreibung</p></td>
+		<td><p class="BodyText"><span style="font-weight: bold;">RM_CHANGE_RECIPE_DATA 
+		 s</span>peichert die Änderungen an einem oder mehreren Rezept-Item-Werten, 
+		 die ein Benutzer mit Hilfe der Webanwendung eingegeben hat. Das 
+		 Ändern von Rezept-Item-Werten erfordert eine bestimmte Benutzerberechtigung.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText">Beim Ändern von Rezept-Item-Werten, bei denen 
+		 das CHANGE_CONTROL-Flag gesetzt ist, kann der Benutzer einen Kommentar 
+		 für die Änderung am spezifischen Item eingeben (&quot;single item 
+		 change comment&quot;). Nachdem er alle gewünschten Positionswerte 
+		 geändert hat, kann der Benutzer anschließend einen Kommentar für 
+		 den gesamten Satz von Änderungen eingeben, die er speichern möchte 
+		 (&quot;recipe change comment&quot;). Anschließend kann der Benutzer 
+		 die geänderten Rezeptdaten speichern. Das ruft diese Prozedur 
+		 letztlich auf.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText">Die Prozedur prüft, ob der aufrufende Benutzer 
+		 die Berechtigung hat, Rezepte auf dem Knoten (Anschluss) zu bearbeiten, 
+		 mit dem das Rezept verbunden ist. Später wird die ID dieses Benutzers 
+		 auch in RM_RECIPE_DATA.CHANGE_USER_ID geschrieben.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText">Die Prozedur validiert die neuen Rezeptdaten 
+		 gegen das JSON-Schema des Rezepts. Wenn die Validierung erfolgreich 
+		 ist, erzeugt sie eine neue Zeile für die neue Rezeptdatenversion 
+		 und, falls Änderungs-Kommentare pro Element vorhanden sind, Zeilen 
+		 für jede kommentierte Elementänderung in RM_CHANGE_COMMENTS.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText">Wenn die Änderung erfolgreich gespeichert wurde, 
+		 wird das Rezept aktualisiert: Das Kennzeichen PLC_MATCH wird auf 
+		 0 zurückgesetzt und die ID der neuen Rezeptdatenversion wird in 
+		 CURRENT_DATA_ID von RM_RECIPES geschrieben.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;; 
+				 font-weight: bold;">Prozedur</p></td>
+		<td><p class="BodyText">/de/gefasoft/sapient/db/recipes/RecipeManagement/saveChanges</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td><p class="MsoNormal">RECIPE_ID - (Zahl) eindeutige ID des Rezepts</p>
+		<p class="MsoNormal">CONNECTION - (String) Verbindungssymbol</p>
+		<p class="MsoNormal">RECIPE_SYMBOL - (Zeichenkette) Rezeptur-Symbol</p>
+		<p class="MsoNormal">PARENT_ID - (Zahl, optional) ID der RM_RECIPE_DATA-Zeile, 
+		 die geladen und bearbeitet wurde</p>
+		<p class="MsoNormal">RECIPE_JSON - (String, erforderlich) bearbeitete 
+		 Rezepturdaten (komplette Rezeptur, nicht nur geänderte Positionen)</p>
+		<p class="MsoNormal">CHANGE_COMMENT - (String, optional) Kommentar, 
+		 den der Benutzer für den kompletten Änderungssatz eingegeben hat</p>
+		<p class="MsoNormal">ITEM_CHANGE_COMMENTS - (Array, optional) Kommentare, 
+		 die der Benutzer für Änderungen an bestimmten Elementen eingegeben 
+		 hat. <br/>
+		<br/>
+		Jedes Element enthält:</p>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">ITEM_PATH - (String) JSON-Pfad des 
+			 geänderten Elements</p></li>
+			<li><p class="MsoNormal">ITEM_COMMENT - (String) Kommentar, 
+			 den der Benutzer für das spezifische Element eingegeben hat</p></li>
+		</ul>
+		<p class="MsoNormal">Zur Identifizierung des Rezepts muss entweder</p>
+		<p class="MsoNormal"> </p>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">RECIPE_ID oder</p></li>
+			<li><p class="MsoNormal">CONNECTION und RECIPE_SYMBOL oder</p></li>
+			<li><p class="MsoNormal">PARENT_ID</p></li>
+		</ul>
+		<p class="MsoNormal">vom Aufrufenden angegeben werden.</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-weight: bold;">Ausgabewerte</p></td>
+		<td><p class="MsoNormal">0 - OK</p>
+		<p class="MsoNormal">1 - Fehler, Rezeptur nicht gefunden</p>
+		<p class="MsoNormal">2 - Fehler, Rezepturstruktur nicht gültig</p>
+		<p class="MsoNormal">Standard SapientError - Ausnahmen für allgemeine 
+		 Fehlerursachen wie ungültige Parameter, fehlende Benutzerrechte, 
+		 etc.</p>
+		<p class="MsoNormal"> </p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

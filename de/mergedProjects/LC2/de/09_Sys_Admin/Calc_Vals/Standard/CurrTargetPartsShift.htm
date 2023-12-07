@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.2.1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">CurrTargetPartsShift</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="CurrTargetPartsShift">
+        <span>CurrTargetPartsShift</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Sapient_only">CurrTargetPartsShift</h3>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für einen parametrierten Knoten wird der Kennwert Soll 
+ aktuell für die laufende Schicht auf Basis einer Soll-Stückzahl berechnet. 
+ Dazu muss in der Fertigungsstruktur der Knoten mit einem Zeitschema verknüpft 
+ sein. Die Soll-Stückzahl wird der Funktion als Parameter übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Mit Zeitschema und dem aktuellen Schicht-/Pausenmodell 
+ aus dem Kalender kann das Verhältnis vergangene Schichtzeit zu gesamter 
+ Schichtzeit (jeweils als Netto-Zeiten) berechnet werden. Im gleichen Verhältnis 
+ stehen Soll aktuell und Soll-Stückzahl gesamt zueinander:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/06_Calculated-Values/de/01_CalcCurrentTargetOnParts_de.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Zeiten werden in [sec] berechnet.</p>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">Parameterliste</h4>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">ParamNo 
+ 0 – RESULT</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Typ: Variable, Datentyp numerisch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">InOut: Out</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Multi: 0</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung: Sollstückzahl aktuell für laufende 
+ Schicht</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">ParamNo 
+ 1 – PARTS</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Typ: Variable oder Konstante, Datentyp Numerisch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">InOut: In</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Multi: 0</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung: Sollstückzahl für die aktuelle 
+ Schicht</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">ParamNo 
+ 2 – NODE</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Typ: Knoten</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">InOut: In</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Multi: 0</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung: Über den Knoten wird die Verbindung 
+ zum Schicht- Pausenmodell hergestellt.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">ParamNo 
+ 3 – BREAK_TYPE_LIST</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Typ: Variable oder Konstante, Datentyp String</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">InOut: In</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Multi: 0</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung: Liste der Pausentypen, die bei 
+ der Berechnung berücksichtigt werden sollen. Die einzelnen Pausentypen 
+ müssen voneinander anhand von Semikolons getrennt werden, z.B. &quot;1;2&quot;.</p>
+
+
+</body></html>

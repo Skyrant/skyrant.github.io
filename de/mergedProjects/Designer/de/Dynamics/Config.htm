@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Konfiguration</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Konfiguration" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Konfiguration">
+        <span>Konfiguration</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Konfiguration</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Sämtliche Konfigurationen werden im root-SVG (Klick 
+ auf den Hintergrund oder die graue Umrandung) unter Inspector/Properties 
+ vorgenommen.</p>
+<h3 data-condition="Others:Deutsch"><a id="KPI-Werte" data-indexterm="KPI-Werte"></a><a id="Schichtinformation" data-indexterm="Schichtinformation"></a><a id="Schichtprotokollwert" data-indexterm="Schichtprotokollwert"></a><a id="UserVars1" data-indexterm="UserVars"></a><a id="UserVars"></a>UserVars</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Punkt erlaubt es, eigene Variablen zu definieren. 
+ Dies ist notwendig, um z.B. KPI- oder Schichtprotokollwerte in die Visualisierung 
+ zu integrieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Fenster ist zweigeteilt. Auf der linken Seite werden 
+ unter dem Oberpunkt &quot;User-Defined-Variables&quot; alle bereits parametrierten 
+ Variablen aufgelistet. Die rechte Seite zeigt weitere Informationen zu 
+ dem gewählten Punkt bzw. ermöglicht weitere Einstellungen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine neue Variable anzulegen, ist der Button &quot;New&quot; 
+ zu wählen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im folgenden Dialog können mögliche Arten von benutzerdefinierten 
+ Variablen ausgewählt werden. Die jeweiligen Arten können beliebig oft 
+ angelegt werden. Es stehen alle Arten zur Verfügung, die über das Data-Objects-File 
+ importiert wurden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Liste der abfragbaren Informationen ist durch 
+ das Projekt anpassbar und beliebig erweiterbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die angelegten Variablen können im &quot;Select Variable&quot; 
+ Dialog unter &quot;User-Defined Vars&quot; bei den Dynamisierungen eingebunden 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Da die folgenden drei Arten am häufigsten genutzt werden, 
+ sollen sie hier detaillierter beschrieben werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">KPIRel = KPI-Werte,</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ShiftProtValRel = Schichtprotokollwerte und</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ShiftInfoRel = Schichtinformationen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch">KPI-Werte</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Nach Wählen dieses Punktes wird eine neue Instanz angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In der rechten Fensterhälfte können die zugehörigen 
+ Daten geändert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="73"><p class="TabellenÜberschrift">Parameter</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Name</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Hier 
+		 kann ein Name frei gewählt werden. Dieser dient zur Identifizierung 
+		 bei der späteren Variablenreferenzierung. Er wird auch in der 
+		 linken Ansicht genutzt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Node</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Auswahl 
+		 eines Knotens der Fertigungsstruktur, dessen KPI-Werte angezeigt 
+		 werden sollen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">ShiftOffset</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Angabe 
+		 einer relativen Schicht<br/>
+		1 = aktuelle oder letzte Schicht, wenn keine aktuell ist<br/>
+		2 = letzte Schicht<br/>
+		3 = vorletzte Schicht<br/>
+		…</p></td>
+	</tr>
+</tbody></table>
+<h4 data-condition="Others:Deutsch">Schichtprotokollwerte</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Ebenfalls wird für Schichtprotokollwerte eine neue 
+ Instanz angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="73"><p class="TabellenÜberschrift">Parameter</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Name</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Hier 
+		 kann ein Name frei gewählt werden. Dieser dient zur Identifizierung 
+		 bei der späteren Variablenreferenzierung. Er wird auch in der 
+		 linken Ansicht genutzt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Node</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Auswahl 
+		 eines Knotens der Fertigungsstruktur, dessen Schichtprotokoll-Werte 
+		 angezeigt werden sollen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">ShiftOffset</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Angabe 
+		 einer relativen Schicht<br/>
+		1 = aktuelle oder letzte Schicht wenn keine aktuell ist<br/>
+		2 = letzte Schicht<br/>
+		3 = vorletzte Schicht<br/>
+		…</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">ValSym</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Hier 
+		 kann die Schichtprotokollvariable gewählt werden. Da leider keine 
+		 direkte Zuordnung existiert, welche Variable auf welchem Knoten 
+		 das Flag &quot;protokolliert&quot; hat, ist die korrekte Auswahl 
+		 erschwert. Um Fehler zu vermeiden empfiehlt es sich, die Auswahl 
+		 der Variable über den Tab &quot;Nodes with Vars&quot; vorzunehmen. 
+		 Hier ist zumindest ersichtlich, welcher Knoten welche Variablen 
+		 zugewiesen hat. Dennoch wird das Wissen aus der Admin benötigt, 
+		 welche dieser Variablen mit dem Flag &quot;protokolliert &quot; 
+		 versehen wurden.</p></td>
+	</tr>
+</tbody></table>
+<h4 data-condition="Others:Deutsch">Schichtinformationen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich zu den Werten der Schichten ist eine Klasse 
+ implementiert, die Informationen über die Schichten bietet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="78"><p class="TabellenÜberschrift">Parameter</p></td>
+		<td style="vertical-align: top;" width="378"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="78"><p class="TabellenInhalt">Name</p></td>
+		<td style="vertical-align: top;" width="378"><p class="TabellenInhalt">Hier 
+		 kann ein Name frei gewählt werden. Dieser dient zur Identifizierung 
+		 bei der späteren Variablenreferenzierung. Er wird auch in der 
+		 linken Ansicht genutzt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="78"><p class="TabellenInhalt">Node</p></td>
+		<td style="vertical-align: top;" width="378"><p class="TabellenInhalt">Auswahl 
+		 eines Knotens der Fertigungsstruktur, dessen Schichtinformationen 
+		 angezeigt werden sollen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="78"><p class="TabellenInhalt">ShiftOffset</p></td>
+		<td style="vertical-align: top;" width="378"><p class="TabellenInhalt">Angabe 
+		 einer relativen Schicht<br/>
+		1 = aktuelle oder letzte Schicht wenn keine aktuell ist<br/>
+		2 = letzte Schicht<br/>
+		3 = vorletzte Schicht<br/>
+		…</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="78"><p class="TabellenInhalt">Localformat</p></td>
+		<td style="vertical-align: top;" width="378"><p class="TabellenInhalt">Sprachspezifische 
+		 Ausgabe der Schichtzeiten. Es stehen folgende Ausführlichkeits-Stufen 
+		 zur Auswahl:<br/>
+		- FULL (0), z.B.: &quot;Tuesday, April 12, 1952 AD&quot; oder &quot;3:30:42pm 
+		 PST&quot;<br/>
+		- LONG (1) z.B.: &quot;January 12, 1997&quot; oder &quot;3:30:32pm&quot;<br/>
+		- MEDIUM (2) z.B.: &quot;Jan 12, 1997&quot;<br/>
+		- SHORT (3) z.B.: &quot;12.13.97&quot; oder &quot;3:30pm&quot;</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><b><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</b> </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Werden die Namen der Instanzen nachträglich 
+ geändert, muss dies auch in der Referenzierung der Variablen in den Dynamiken 
+ nachgezogen werden. Eine Änderung wird nicht automatisch übernommen. Wird 
+ dies nicht berichtigt, kann das Bild nicht erfolgreich kompiliert werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="ViewOpts1" data-indexterm="ViewOpts"></a><a id="ViewOpts"></a>ViewOpts</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Mit den folgenden Einträgen kann das Aktualisierungsverhalten 
+ bzw. Aussehen der Grafik innerhalb von Legato spezifiziert werden. Die 
+ Einstellungen findet man im Properties-Fenster, wenn man auf den grauen 
+ Hintergrund außerhalb der Zeichenfläche klickt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dabei sollten die Standardeinstellungen nicht verändert 
+ werden bzw. nur mit Rücksprache des GEFASOFT Supports.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="69"/>
+	<col width="383"/>
+	</colgroup><tbody><tr class="t1st">
+		<td style="vertical-align: top;"><p class="TabellenÜberschrift">Parameter</p></td>
+		<td style="vertical-align: top;"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Varwait</p></td>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Maximale 
+		 Zeitspanne in Millisekunden, nach der der Server ein Lebenszeichen 
+		 an den Browser schickt (empfohlener Standardwert: 110000).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Timeout</p></td>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Zeitspanne 
+		 in Millisekunden, nach der der Browser ohne Lebenszeichen vom 
+		 Server eine Fehlermeldung anzeigt (empfohlener Standardwert: 120000).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Refresh</p></td>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Verzögerung 
+		 der Aktualisierung in Millisekunden, um eine Serverüberlastung 
+		 bei Visualisierungen mit vielen Veränderungen zu vermeiden (empfohlener 
+		 Standardwert: 2000).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">PgWidth</p></td>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Breite 
+		 der Grafik (sollte auf 100% stehen).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">PgHeight</p></td>
+		<td style="vertical-align: top;"><p class="TabellenInhalt">Höhe 
+		 der Grafik (sollte auf 99% stehen).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

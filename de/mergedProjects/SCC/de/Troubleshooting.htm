@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Überwachung im Ablauf und Fehlersuche (Win64)</title>
+<link rel="stylesheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Diagnose,Debug,Überwachung" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Überwachung im Ablauf und Fehlersuche (Win64)">
+        <span>Überwachung im Ablauf und Fehlersuche (Win64)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Überwachung im Ablauf und Fehlersuche (Win64)</h1>
+<h3 data-condition="Others:Deutsch"><a id="Debug-Funktionen_über_das_Diagnose-Menü"></a>Debug-Funktionen 
+ über das Diagnose-Menü</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Über das &quot;Diagnose&quot;-Menü können folgende 
+ &quot;Debug&quot;-Fenster geöffnet werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Performance-Monitor (Diagnose | Performance-Monitor)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zeigt für bestimmte Prozesse (z.B. Befehle, Scripten) 
+ den Wert bzw. die Dauer in ms an. Folgende Werte werden angeboten: minimaler 
+ Wert, maximaler Wert, arithmetisches Mittel, aktueller Wert. Zu jedem 
+ Wert wird zusätzlich ein Zeitstempel erfasst, wann der Wert aufgetreten 
+ ist. Die Werte werden zur Laufzeit aktualisiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/image051.png" alt="" width="700" height="183" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beobachten (Diagnose | Beobachten neu bzw. Beobachten 
+ öffnen)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zeigt den Status von ausgewählten Variablen. Der Eintrag 
+ der Informationen in das Fenster erfolgt, wenn &quot;Beobachten&quot; 
+ im Kontextmenü des Elements aktiviert wird. Wurde die Liste geändert, 
+ öffnet sich beim Schließen ein Dialog, um die Datei getrennt vom Projekt 
+ zu speichern. Dafür kann ein beliebiger Dateiname für die Debug-Datei 
+ (Endung .DBG) angegeben werden. Diese Datei wird im Projekt-Ordner des 
+ Cloud Connector Projekts abgelegt und kann jederzeit wieder über das Menü 
+ &quot;Diagnose | Beobachten öffnen&quot; geladen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/image053.png" alt="" width="476" height="254" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a name="Debuggen_von_Scripten" id="Debuggen_von_Scripten"></a>Debuggen 
+ von Scripten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein beliebiges Script kann über den Eintrag &quot;Script 
+ debuggen&quot; im Kontextmenü in ein Debug-Fenster geladen werden. Das 
+ Fenster erscheint erst, wenn das Script erstmals bearbeitet wird. Mit 
+ dem Start des Debug-Modus wird das Script (und die gesamte Bearbeitung 
+ aller Scripten) an der ersten Position angehalten und kann nun in Einzelschritten 
+ oder auch bis zum Ende des Scripts durch den Bediener fortgesetzt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Das Laden eines Scripts in den Debug-Modus 
+ bewirkt einen generellen Stopp der Scriptbearbeitung!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit Start des Debug-Modus wird die Symbolleiste des 
+ Cloud Connectors um einige Schaltflächen erweitert:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Nächste Anweisung ausführen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Bearbeitung des Scripts wird in der nächsten Zeile 
+ fortgesetzt. Das Script (und damit die gesamte Scriptbearbeitung) verbleibt 
+ im Debug-Modus.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Ausführung fortsetzen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Script wird bis zum Ende durchlaufen. Das Script 
+ (und damit die gesamte Scriptbearbeitung) verbleibt aber im Debug-Modus, 
+ bis das Debug-Fenster durch den Anwender geschlossen wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Debugger beenden</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beendet den Debugger und schließt das Debug-Fenster.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im oberen Teil des Fensters wird der Sourcecode des 
+ Scripts mit einem Balken für die aktuelle Bearbeitungsposition angezeigt. 
+ Im unteren Teil wird der Zustand der vom Script verwendeten Variablen 
+ zur aktuellen Position angezeigt.</p>
+
+
+</body></html>

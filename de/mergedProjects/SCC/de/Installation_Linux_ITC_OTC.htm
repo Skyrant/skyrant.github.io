@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "3.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Installation Linux ITC / OTC</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Installation Linux ITC / OTC">
+        <span>Installation Linux ITC / OTC</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Installation Linux ITC / OTC</h1>
+<p data-condition="Others:Deutsch">Die Linux ITC und OTC Binaries, sowie die dazu benötigten Libraries 
+ (ausschließlich der System Libraries) werden unter</p>
+<p data-condition="Others:Deutsch"><a href="https://github.com/Gefasoft/scc-rts-ix/releases">https://github.com/Gefasoft/scc-rts-ix/releases</a></p>
+<p data-condition="Others:Deutsch">abgelegt.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beispiel Release 3.17.0:</p>
+<p data-condition="Others:Deutsch"><img src="../SCC_Dateien/Release_3_17_0.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Je Release ist jeweils eine Zip-Datei für die Linux-Derivate</p>
+<p data-condition="Others:Deutsch">• RedHat</p>
+<p data-condition="Others:Deutsch">• SUSE</p>
+<p data-condition="Others:Deutsch">• Ubuntu</p>
+<p data-condition="Others:Deutsch">verfügbar.</p>
+<p data-condition="Others:Deutsch">Diese Zip-Datei kann in einem beliebigen Verzeichnis auf dem Linux-Zielsystem 
+ entpackt werden.</p>
+<p data-condition="Others:Deutsch">Für die ITC und OTC Binaries müssen dann die Ausführungsrechte entsprechend 
+ gesetzt werden. Außerdem muss der LD_LIBRARY_PATH das o.g. Verzeichnis 
+ enthalten, damit die Libraries gefunden werden können.</p>
+<p data-condition="Others:Deutsch">Ob alle Referenzen eines Binaries in Bezug auf Libraries richtig aufgelöst 
+ werden können, kann in der Konsole durch den Befehl:</p>
+<p class="TextCode" data-condition="Others:Deutsch">ldd &lt;Binary&gt;</p>
+<p data-condition="Others:Deutsch">geprüft werden.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch">ldd ./ITCRuntimeStd</p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Der Aufruf eines Binaries ohne Parameter zeigt 
+ an, ob das Binary ausgeführt werden kann. Ist dies der Fall, werden darüber 
+ hinaus die Version und alle verfügbaren Parameter angezeigt.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">Usage: ITCRuntimeStd</p>
+<p class="TextCode" data-condition="Others:Deutsch">  required parameters:</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -p &lt;processcfgfile&gt; process 
+ configuration file</p>
+<p class="TextCode" data-condition="Others:Deutsch">  alternatively:</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -f &lt;projectfile&gt; scc 
+ project file</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -m &lt;logmask&gt; mask for 
+ logmessages (64 bit value)</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -l &lt;logdir&gt;  directory 
+ for logfiles</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -n &lt;logname&gt; name for 
+ logfile</p>
+<p class="TextCode" data-condition="Others:Deutsch">  optional parameters:</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -d &lt;logdest&gt; destination 
+ for logmessages (0x01 -&gt; file  0x02 -&gt; stdout  0x03 -&gt; 
+ file and stdout) default:0x01</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -r &lt;runmode&gt; runmode 
+ (1 -&gt; normal  2 -&gt; containerized) default:1</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -i &lt;listen port manager&gt; 
+ listen port mdx manager</p>
+<p class="TextCode" data-condition="Others:Deutsch">    -w &lt;listen port monitor&gt; 
+ listen port prometheus monitor</p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch">ITC und OTC Prozesse können sowohl durch die Angabe 
+ aller notwendigen Kommandozeilenparameter, als auch durch die Übergabe 
+ einer Parameterdatei (INI Dateiformat), welche diese enthält, gestartet 
+ werden.</p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch">Beispiel für Start ITC (Übergabe Kommandozeilenparameter):</p>
+<p class="TextCode" data-condition="Others:Deutsch">/legato/bin/ITCRuntimeStd -f /legato/prj/test.lpx -l 
+ /legato/log/ -m 0xFFFFFFFFFFFFFFFF -n itc_test</p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch">Beispiel für Start ITC (Übergabe mittels Parameterdatei):</p>
+<p class="TextCode" data-condition="Others:Deutsch">/legato/bin/ITCRuntimeStd -p /legato/cfg/itc_test.cfg</p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch">Beispiel für eine Parameterdatei (itc_test.cfg):</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">[Service]</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">Signature=6C52A5EE-5505-49CF-B1E2-D872A7654E1C</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">Name=itc_test</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">[Logging]</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">Dest=0x02</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">Mask=0xFFFFFFFFFFFFFFFF</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">Path=/legato/log</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">[Start]</p>
+<p class="TextCode" style="font-size: 10pt;" data-condition="Others:Deutsch">Project=/legato/prj/test.lpx</p>
+
+
+</body></html>

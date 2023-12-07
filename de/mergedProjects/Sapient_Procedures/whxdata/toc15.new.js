@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Überblick","type":"item","tilePath":"","description":"","url":"de/JavaScript/Objects/01_Overview.htm"},{"name":"logger","type":"item","tilePath":"","description":"","url":"de/JavaScript/Objects/03_logger.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

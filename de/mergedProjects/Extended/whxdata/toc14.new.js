@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Zahlenformate","type":"item","tilePath":"","description":"","url":"de/LGD/Zahlenformate.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

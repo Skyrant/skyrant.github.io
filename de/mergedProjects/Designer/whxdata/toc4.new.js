@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Maus","type":"item","tilePath":"","description":"","url":"de/Canvas/Designer.htm#Maus"},{"name":"Tastatur","type":"item","tilePath":"","description":"","url":"de/Canvas/Designer.htm#Tastatur"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

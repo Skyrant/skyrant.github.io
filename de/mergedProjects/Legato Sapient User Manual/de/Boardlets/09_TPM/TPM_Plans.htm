@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.9.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">TPM Plans</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TPM Plans">
+        <span>TPM Plans</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">TPM Plans (Wartungspläne)</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" id="TopicWidth" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">TPM 
+ Plans </span>zeigt alle verfügbaren Wartungspläne zum selektierten Knoten 
+ an. Es werden verschiedene Informationen angeboten, beispielsweise die 
+ nächste Fälligkeit, die letzte Erledigung und die zuständige Instandhaltungs-Gruppe 
+ (IH-Gruppe). </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/TPM_Plans.png" alt="" style="border: none;" border="0"/></p>
+<div data-conref="../../../assets/snippets/Boardlets/de_Sort_Column.hts" data-condition="Others:Deutsch">
+<p class="BodyText" style="max-width: 1000px;">Mittels Drag &amp; Drop 
+ lassen sich die Breite oder Position der Spalten einfach verändern. Durch 
+ Klick auf eine Zeilenüberschrift wird nach dieser Spalte sortiert. <br/>
+Nach welcher Spalte sortiert ist, und ob auf- oder absteigend sortiert 
+ ist, wird durch die dreieckigen Symbole angezeigt: </p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<div data-conref="../../../assets/snippets/Boardlets/de_mandatory_fields_sidebars.hts" data-condition="Others:Deutsch">
+<p class="Note">INFO: </p>
+<p class="NoteText">Pflichtfelder in den Seitenleisten sind mit einem Ausrufezeichen 
+ <img src="../../../Bilder/Icons/mandatory_exclamation.png" alt="" style="border: none;" border="0"/> gekennzeichnet.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Neuen_Wartungsplan_anlegen"></a>Neuen Wartungsplan anlegen</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Knoten selektiert, erscheinen oben 
+		 in der Boardlet-Menüleiste weitere Symbole. </p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/add_black_2_18dp.png" alt="" style="border: none;" border="0"/> kann ein 
+		 neuer Wartungsplan für diesen Knoten angelegt werden. Der Dialog 
+		 <span class="Bold">Neuer Wartungsplan</span> erscheint in der 
+		 Seitenleiste: ------&gt;&gt;</p>
+		<p class="BodyText">Der <span class="Bold">Name</span> kann frei 
+		 vergeben werden. In der Dropdown-Liste <span class="Bold">Parent</span> 
+		 kann der Wartungsplan optional einem übergeordneten Plan zugeordnet 
+		 werden. Dann wird die Fälligkeit unterdrückt, wenn der <span class="Bold">Parent</span> 
+		 zur selben Zeit ansteht.</p>
+		<p class="BodyText">Das <span class="Bold">Startdatum</span> legt 
+		 die erste Fälligkeit des Plans fest.</p>
+		<p class="BodyText">Über die Dropdown-Liste <span class="Bold">Basiert 
+		 auf</span> kann festgelegt werden, ob der Wartungsplan basierend 
+		 auf Zeit, Wert, Meldung oder einer Kombination aus mehreren Kriterien 
+		 ausgelöst werden soll. Abhängig von der Auswahl hier können im 
+		 unteren Teil des Dialogs die Trigger konfiguriert werden.</p>
+		<p class="BodyText">Aus der Dropdown-Liste <span class="Bold">Priorität</span> 
+		 kann die Priorität des Wartungsplans selektiert werden (hoch, 
+		 mittel, niedrig).</p>
+		<p class="GUIControl">Aktiv:</p>
+		<p class="GUIControlDescr">Schieberegler zur Aktivierung/Deaktivierung 
+		 eines Wartungsplans.</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">an: Der Wartungsplan erzeugt neue 
+			 Wartungsaufträge entsprechend dem Trigger, der aus der Dropdown-Liste 
+			 <span class="Bold">Basiert auf</span> gewählt wurde. Sie werden 
+			 im Boardlet <a href="TPM_Orders.htm">TPM Wartungsaufträge</a> 
+			 angezeigt.</p></li>
+		</ul>
+		<p class="ListBulletL1_Contd" style="margin-top: 6pt;"><span class="Bold">Beispiel</span>: 
+		 Das <span class="Bold">Startdatum</span> wird auf den 07.07.2020 
+		 um 11:00 Uhr festgelegt und in der Dropdown-Liste <span class="Bold">Basiert 
+		 auf</span> als Trigger <span class="Bold">Time</span> gewählt. 
+		 Zum angegebenen Datum und Zeitpunkt erscheint dann der Wartungsauftrag 
+		 im Boardlet <a href="TPM_Orders.htm">TPM Wartungsaufträge</a>.</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">aus: Der Wartungsplan erzeugt keine 
+			 neuen Wartungsaufträge. </p></li>
+		</ul>
+		<p class="GUIControlDescr">Standardmäßig werden nur aktive Wartungspläne 
+		 im Boardlet angezeigt. Mit folgenden Schritten können Sie auch 
+		 inaktive Wartungspläne im Boardlet anzeigen: <br/>
+		Wählen Sie im Menü <span class="Bold">Quick-Edit</span> [<img src="../../../Bilder/Icons/menu_dots.png" alt="" style="border: none;" border="0"/>] <img src="../../../assets/images/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> 
+		 <img src="../../../Bilder/Icons/filter_list_gray.png" alt="" style="border: none;" border="0"/> <span class="Bold">Filter</span> <img src="../../../assets/images/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Aktivieren Sie den 
+		 Schieberegler <span class="Bold">Deaktivierte anzeigen</span>.</p>
+		<p class="GUIControl"><a id="Configuration_of_Triggers"></a>Basiert 
+		 auf:</p>
+		<p class="GUIControlDescr">Die folgenden Trigger-Typen sind verfügbar: 
+		 a) <a href="#Time">Zeit</a>, b) <a href="#Value">Wert</a>, and 
+		 c) <a href="#Alarm">Meldung</a>. Je nach gewähltem Trigger-Typ 
+		 werden nun weitere Möglichkeiten zur Parametrierung angeboten:</p>
+		<p class="GUIControl"><a id="Time"></a>a) Zeitbasierter Trigger:</p>
+		<p class="GUIControlDescr">Zunächst kann definiert werden, ob der 
+		 Zeit-Trigger auf einem Kalender- oder einem Cron-Intervall basieren 
+		 soll. </p>
+		<p class="GUIControlDescr">Bei Kalender-Intervall wird dann zunächst 
+		 die Größe des Intervalls eingestellt, darunter kann dann die Einheit 
+		 gewählt werden.</p>
+		<p class="GUIControlDescr">Bei Cron kann ein Cron-Ausdruck in ein 
+		 Textfeld eingegeben werden.</p>
+		<p class="GUIControl"><a id="Value"></a>b) Wertbasierter Trigger:</p>
+		<p class="GUIControlDescr">Zunächst muss eine Variable aus einer 
+		 Dropdown-Liste selektiert werden, deren Wertänderung triggern 
+		 soll. Es werden alle dem Knoten zugewiesenen Variablen angeboten, 
+		 zu dem auch der Wartungsplan gehört.</p>
+		<p class="GUIControlDescr">Darunter wird eingegeben, alle wieviel 
+		 Stück die Variable einen Wartungsauftrag auslösen soll.</p>
+		<p class="GUIControl"><a id="Alarm"></a>c) Meldungsbasierter 
+		 Trigger:</p>
+		<p class="GUIControlDescr">Zunächst muss eine Verbindung aus einer 
+		 Dropdown-Liste ausgewählt werden, deren Meldung den Wartungsauftrag 
+		 auslösen soll. Darunter kann dann die gewünschte Meldungsdefinition 
+		 selektiert werden.</p></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/TPM_New_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration"></a>Wartungsplan bearbeiten</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsplan im Boardlet <span class="Bold">TPM Plans</span> markiert, erscheinen in der Boardlet-Menüleiste 
+		 weitere Symbole.</p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/edit_black_2_18dp.png" alt="" style="border: none;" border="0"/> kann die 
+		 Konfiguration des Wartungsplans angesehen oder geändert werden, 
+		 die beim Anlegen getroffen wurde. Der Dialog <span class="Bold">Wartungsplan 
+		 bearbeiten</span> erscheint in der Seitenleiste. Siehe <a href="TPM_Plans.htm#Neuen_Wartungsplan_anlegen">Neuen 
+		 Wartungsplan anlegen</a>.</p></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="AddEditMaintenanceOrder"></a>Wartungsauftrag hinzufügen/bearbeiten</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsplan im Boardlet <span class="Bold">TPM Plans</span> markiert, erscheinen oben in der 
+		 Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/power_drill.png" alt="" style="border: none;" border="0"/> können Sie 
+		 in der Seitenleiste (a) einen neuen Wartungsauftrag anlegen oder 
+		 (b) sich den aktive Wartungsauftrag anzeigen lassen. Der Dialog 
+		 <span class="Bold">Wartungsauftrag bearbeiten</span> erscheint 
+		 in der Seitenleiste: --------&gt;&gt;</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Für jeden Wartungsplan können Sie 
+			 <span style="text-decoration: underline; ">nur einen aktiven</span> 
+			 Wartungsauftrag anlegen. Ein Wartungsauftrag bleibt aktiv, 
+			 bis er auf den Status <span class="Bold">erledigt</span> gesetzt 
+			 wird.<br/>
+			Siehe Boardlet <span class="Bold">TPM Wartungsaufträge</span> 
+			 <img src="../../../assets/images/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> <a href="TPM_Orders.htm#Status_ändern">Status 
+			 ändern</a>.<br/>
+			Solange es einen aktiven Wartungsauftrag gibt, können Sie keinen 
+			 neuen Wartungsauftrag für den markierten Wartungsplan anlegen.</p></li>
+			<li><p class="ListBulletL1">Zusätzlich zum aktiven Wartungsauftrag 
+			 für einen bestimmten Wartungsplan kann es noch mehrere Wartungsaufträge 
+			 geben, die bereits im Status <span class="Bold">erledigt</span> 
+			 vorliegen. Eine Übersicht über alle Wartungsaufträge wird 
+			 im Boardlet <a href="TPM_Orders.htm">TPM Wartungsaufträge</a> 
+			 angezeigt.</p></li>
+		</ul></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/edit_maintenance_order_from_tpm_plans_boardlet_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Activity_Management"></a><a id="Activity_ManagementAddRemove"></a>Tätigkeitsverwaltung: 
+ Tätigkeit hinzufügen/entfernen</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsplan im Boardlet <span class="Bold">TPM Plans</span> markiert, erscheinen oben in der 
+		 Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/page.png" alt="" style="border: none;" border="0"/> können Sie 
+		 sich die Liste der für Wartungspläne verfügbaren Tätigkeiten anzeigen 
+		 lassen. Der Dialog <span class="Bold">Aktivität Hinzufügen/Entfernen</span> 
+		 erscheint in der Seitenleiste, siehe Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span>: ----&gt;&gt;</p>
+		<p class="BodyText">Außerdem können Sie folgende Aktionen ausführen: 
+		 </p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Hinzufügen von Tätigkeiten zum 
+			 Wartungsplan, indem Sie die Checkboxen neben den erforderlichen 
+			 Tätigkeiten aktivieren.</p></li>
+			<li><p class="ListBulletL1">Entfernen von Tätigkeiten aus dem 
+			 Wartungsplan, indem Sie die Checkboxen neben den erforderlichen 
+			 Tätigkeiten deaktivieren.</p></li>
+		</ul>
+		<p class="ListBulletL1">Eine Beschreibung von Reiter <span style="color: #ff0000;">[</span><span class="Bold">B</span><span style="color: #ff0000;">]</span> finden 
+		 Sie in <a href="TPM_Plans.htm#Activity_ManagementAddEdit">Tätigkeitsverwaltung: 
+		 Tätigkeit hinzufügen/bearbeiten</a> weiter unten.</p></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/add_remove_activity_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Activity_ManagementAddEdit"></a>Tätigkeitsverwaltung: Tätigkeit 
+ hinzufügen/bearbeiten</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsplan im Boardlet <span class="Bold">TPM Plans</span> markiert, erscheinen oben in der 
+		 Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Mit Klick auf <img src="../../../Bilder/Icons/page.png" alt="" style="border: none;" border="0"/> und auf 
+		 den zweiten Reiter <span style="color: #ff0000;">[</span><span class="Bold">B</span><span style="color: #ff0000;">]</span> können 
+		 Sie den Dialog <span class="Bold">Aktivität Hinzufügen/Bearbeiten</span> 
+		 in der Seitenleiste öffnen. Dort können Sie folgende Aktionen 
+		 ausführen: </p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Anlegen neuer Tätigkeitsbeschreibungen</p></li>
+			<li><p class="ListBulletL1">Bearbeiten bestehender Tätigkeitsbeschreibungen</p></li>
+		</ul>
+		<p class="BodyText">Die neuen bzw. bearbeiteten Tätigkeitsbeschreibungen 
+		 stehen danach auf dem Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span> zur 
+		 Auswahl bereit.</p>
+		<table class="ProcedureTab" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col/>
+			</colgroup><tbody><tr>
+				<td colspan="2"><p class="ph-ProcedureHeading">So fügen 
+				 Sie eine neue Tätigkeitsbeschreibung zur Liste der Tätigkeiten 
+				 hinzu: </p></td>
+				
+			</tr>
+			<tr>
+				<td id="StepNumSpacer"><p class="psn-ProcedureStepNum">1</p></td>
+				<td><p class="ps-ProcedureStep">Schalten Sie den Schieberegler 
+				 von <span class="Bold">Bearbeiten</span> auf <span class="Bold">Hinzufügen</span>.</p></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">2</p></td>
+				<td><p class="ps-ProcedureStep">Geben Sie eine <span class="Bold">Beschreibung</span> 
+				 für die neue Tätigkeit ein.</p></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">3</p></td>
+				<td><p class="ps-ProcedureStep">Weisen Sie die neue Tätigkeitsbeschreibung 
+				 einer <span class="Bold">Kategorie</span> zu.</p></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">4</p></td>
+				<td><p class="ps-ProcedureStep">Wenn Sie fertig sind, klicken 
+				 Sie <span class="Bold">Bestätigen</span>.</p>
+				<p class="ps-ProcedureStep">Die neue Tätigkeit steht nun 
+				 auf dem Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span> 
+				 zur Auswahl bereit.</p></td>
+			</tr>
+		</tbody></table>
+		<p class="BodyText"> </p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/add_edit_activity_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+
+
+
+
+
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">TPM Plans </span>stehen 
+ folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Deaktivierte anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ nur aktive Wartungspläne angezeigt werden sollen oder auch inaktive Wartungspläne.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Priorität:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann nach den Statusarten 
+ <span class="Bold">hoch</span>, <span class="Bold">mittel</span> und <span class="Bold">niedrig</span> gefiltert werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" id="TopicWidth" data-condition="Others:Deutsch">Wartungspläne werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Wartungspläne</span> angelegt. Dort können auch Tätigkeiten 
+ und Gruppen dem Plan zugeordnet werden. </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="200"/>
+	<col width="300"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedMaintPlan</p></td>
+		<td><p class="TabellenInhalt">Number</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">showDisabled</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">tableColumns</p></td>
+		<td><p class="TabellenInhalt">TableSettings</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Installation</title>
+<link rel="stylesheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Installation">
+        <span>Installation</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Installation</h1>
+<h2 data-condition="Others:Deutsch"><a id="Überblick"></a>Überblick</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Installation des Cloud Connectors erfolgt über 
+ das Installationsprogramm &quot;setupscc.exe&quot;. Eine detaillierte 
+ Installationsanleitung finden Sie im separaten Dokument &quot;Legato_Systeminstallation&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird die Cloud Connector Installation zur Laufzeit 
+ (online) als Win64 Cloud Connector betrieben, sind ggf. der OPC-Server 
+ und die zugehörigen Treiber durch das Installationsprogramm Scc_opc.exe&quot; 
+ ebenfalls am Cloud Connector PC zu installieren. Das ist nur sinnvoll, 
+ wenn der Cloud Connector im Ablauf als Windows Cloud Connector verwendet 
+ wird oder die aktuelle Installation als Projektierungsumgebung verwendet 
+ werden soll. In diesem Fall empfiehlt es sich, die Installation von Cloud 
+ Connector und OPC-Server in einem Schritt durchzuführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span>Bei Benutzung der Installation als Editor für 
+ UNIX Cloud Connector Projekte ist die Installation des Cloud Connector 
+ selbst ausreichend.</span></p>
+<h2 data-condition="Others:Deutsch"><a id="Dienst" data-indexterm="Dienst"></a><a name="Einrichten_des_Cloud_Connectors_als_Dienst" id="Einrichten_des_Cloud_Connectors_als_Dienst"></a>Einrichten 
+ des Cloud Connectors als Dienst</h2>
+<h3 data-condition="Others:Deutsch"><a name="Anlegen_von_Diensten" id="Anlegen_von_Diensten"></a>Anlegen 
+ von Diensten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In einem ersten Schritt muss eine Verbindung vom Editor 
+ zur Runtime hergestellt werden. Öffnen Sie die Datei &quot;Scc_Edt.exe&quot;. 
+ Die Datei muss mit Administrator-Rechten ausgeführt werden. Wählen Sie 
+ unter &quot;Datei&quot; den Eintrag &quot;Service Administration&quot; 
+ aus:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/File-Menu.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Es öffnet sich folgender Dialog, in dem alle vorhandenen 
+ Dienste angezeigt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Service_Conf.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf &quot;Ändern&quot; kann ein bestehender 
+ Dienst editiert werden, Klick auf &quot;Löschen&quot; löscht einen Dienst.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf &quot;Hinzufügen&quot; können neue 
+ Dienste konfiguriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Service_Conf1.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie einen Namen und eine Beschreibung für den 
+ Dienst ein. Der Service-Name muss innerhalb der Runtime eindeutig sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Typ muss der Typ des Dienstes angegeben werden. 
+ Es werden alle gefundenen Diensttypen angezeigt. Im Folgenden sind die 
+ bekanntesten Möglichkeiten beschrieben:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Win64 Service: Standard bei Windows-Rechnern; 
+ der Cloud Connector wird als Dienst eingerichtet.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Win64 Exe: Testversion bei Windows-Rechnern; der 
+ Cloud Connector wird normal ausgeführt, mit den angegebenen Parametern. 
+ Der Cloud Connector muss manuell gestoppt werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Unix: Standard bei Unix-Rechnern.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">LFZ Win64 Service: Dienst für den Logfilezipper.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">SMC AGLink S7 Win64 Service: Maschinenclient zur 
+ Koppelung mit AGLink.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">...</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dann wählen Sie einen Pfad aus, wohin der Dienst seine 
+ Log-Dateien schreiben soll. Standardmäßig ist hier das Verzeichnis &quot;Eigene 
+ Dokumente&quot; des angemeldeten Benutzers eingetragen. Darunter kann 
+ durch Klick auf ... ausgewählt werden, welche Ereignisse gelogt werden 
+ sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Log_Classes.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließlich muss die URI der Runtime eingegeben werden 
+ (Pfad und Host).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn gewünscht, kann zusätzlich ein Projekt festgelegt 
+ werden, das beim Start des Editors direkt geladen und gestartet werden 
+ soll.</p>
+<h3 data-condition="Others:Deutsch"><a name="Sapient_Maschinenclients__SMC_" id="Sapient_Maschinenclients__SMC_"></a>Sapient 
+ Maschinenclients (SMC)</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Auch Sapient Maschinenclients (SMC) können hier als 
+ Dienste konfiguriert werden. Sie dienen dazu, über Broker (z.B. Mosquitto) 
+ mit dem SCC zu kommunizieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für SMCs muss zusätzlich noch eine Konfigurationsdatei 
+ selektiert werden. Durch Klick auf &quot;Ändern...&quot; öffnet sich ein 
+ Dialog zum Ändern der Konfigurationsdatei:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/SMC_Conf.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier muss zunächst der Name des Clients eingegeben 
+ werden. Der &quot;Clientname&quot; dient der Anmeldung beim Broker. Er 
+ sollte so gewählt werden, dass er auf Broker-Seite eindeutig ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter &quot;URI&quot; muss der Verbindungsstring zum 
+ MQTT-Broker eingegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem kann eine Authentifizierung für den Verbindungsaufbau 
+ definiert werden, falls notwendig oder gewünscht. In diesem Fall müssen 
+ ein Benutzer und ein Passwort eingegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Soll beim Broker eine &quot;Last Will Nachricht&quot; 
+ für den Fall einer Verbindungsunterbrechung hinterlegt werden, muss diese 
+ im folgenden Menüpunkt aktiviert werden. Es können dann ein Thema für 
+ die Nachricht, der Inhalt der Nachricht sowie die Qualität der Nachricht 
+ definiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem kann der Namensbereich festgelegt werden, 
+ in dem der Client mit dem Broker kommuniziert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließlich müssen noch die Treibereinstellungen festgelegt 
+ werden. Es wird eine .los-Datei als Konfigurationsdatei selektiert und 
+ das Ausgabeformat des Werts festgelegt (Standardeinstellungen belassen!) 
+ Simple gibt nur den Wert zurück, Extended gibt den Wert + Buchungsdatum 
+ zurück (z.B. hilfreich, um Fehler zu finden), Complete gibt den Wert inklusive 
+ aller Details zurück.</p>
+<h3 data-condition="Others:Deutsch"><a name="Logfilezipper" id="Logfilezipper"></a>Logfilezipper</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Da die Anzahl der gespeicherten Logbücher begrenzt 
+ ist, ist der einzusehende Zeitraum bei vielen Ereignissen relativ kurz 
+ (bei großen Konfigurationen im Minutenbereich). Eine eventuell notwendige 
+ Fehleranalyse ist dann kaum möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine große Menge an Logdaten archivieren zu können, 
+ gibt es den Logfilezipper. Mit diesem werden die ältesten Logbücher komprimiert 
+ und in ein eigenes Verzeichnis gespeichert. Die Anzahl der komprimierten 
+ Logbücher kann parametriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Unix werden entsprechende Prozesse konfiguriert 
+ und vor dem Cloud Connector gestartet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Windows können entsprechende Service Instanzen 
+ konfiguriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Prozess ist derselbe wie für alle anderen Dienste 
+ auch (siehe oben).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Bereich &quot;Konfiguration&quot; muss nun noch 
+ die Konfigurationsdatei für den Logfilezipper angegeben werden. Ist die 
+ Datei noch nicht vorhanden, wird sie bei Aufruf des Dialoges automatisch 
+ angelegt. Im Anschluss müssen durch Klick auf &quot;Bearbeiten...&quot; 
+ weitere Einstellungen vorgenommen werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Lfz_Config3.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter &quot;Verzeichnis Logdateien&quot; wird das Verzeichnis 
+ gewählt, das überwacht werden soll. Dieses Verzeichnis muss bereits vorhanden 
+ sein!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter &quot;Verzeichnis Zipdateien&quot; wird das Verzeichnis 
+ angegeben, in dem die komprimierten Dateien abgelegt werden sollen. Dieses 
+ Verzeichnis muss noch nicht existieren, es wird dann beim Start angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In &quot;Dateiname&quot; muss der Name der Datei angegeben 
+ werden, welche bei Änderung komprimiert wird. Diese Datei ist im Regelfall 
+ die letzte Logdatei (bei Meldungslogs name+&quot;.log.019&quot;, bei Fehlerlogs 
+ name+&quot;err.09&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die &quot;Max. Anzahl Zipdateien&quot; gibt an, wieviele 
+ Dateien im Zip-Verzeichnis vorgehalten werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließlich muss noch der Pfad zum Zip-Programm angegeben 
+ werden. Derzeit kann nur gzip.exe verwendet werden bzw. ein Programm, 
+ welches die gleichen Aufrufparameter verwendet. gzip.exe wird mit der 
+ SCC Runtime mit ausgeliefert.</p>
+<h3 data-condition="Others:Deutsch"><a name="Dienst_installieren" id="Dienst_installieren"></a>Dienst installieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Dienst ist nun konfiguriert, aber noch nicht installiert. 
+ Selektieren Sie den Dienst im mittleren Teil des Dialogs und klicken Sie 
+ dann unten auf &quot;Installieren&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Service_Inst.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Dienst wird installiert; der Text unten ändert 
+ sich von &quot;Dienst nicht installiert&quot; zu &quot;Dienst gestoppt&quot;.</p>
+<h3 data-condition="Others:Deutsch"><a name="Dienst_starten" id="Dienst_starten"></a>Dienst starten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Klicken Sie nun auf &quot;Start&quot;, um den Dienst 
+ zu starten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Service_Start.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Text ändert sich zu &quot;Dienst läuft&quot;. Er 
+ kann nun bei Bedarf gestoppt oder pausiert werden. Dies kann auch über 
+ das Dienste-Menü von Windows erfolgen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beenden Sie den Dialog mit &quot;OK&quot;.</p>
+<h3 data-condition="Others:Deutsch"><a name="Verbinden_zur_Runtime" id="Verbinden_zur_Runtime"></a>Verbinden 
+ zur Runtime</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Nun muss sich der Editor mit der gewünschten Runtime 
+ verbinden. Öffnen Sie dazu das Menü &quot;Datei&quot; - &quot;Mit Service 
+ verbinden ...&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../SCC_Dateien/Service_Connect.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Service-Name kann nun aus einer Drop-Down-Liste 
+ der gewünschte Dienst ausgewählt werden (es stehen alle Dienste zur Verfügung, 
+ die zuvor eingerichtet wurden).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Darunter muss noch die URI des Dienstes eingegeben 
+ werden (Pfad zur Runtime und Port des Redis).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Editor ist nun mit der Runtime verbunden. Nun kann 
+ ein Projekt geladen und gestartet werden.</p>
+
+
+</body></html>

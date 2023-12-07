@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Überblick</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Überblick">
+        <span>Überblick</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Überblick</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Das Programm MediaConfig beinhaltet folgende Funktionalität:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Anlegen / Löschen von Gruppen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zuordnung der Takte zu Gruppen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zuordnung der Takte zu Gruppen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konfiguration Melodie abspielen pro Takt (notwendig für MediaClient)</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Informationen werden in der Datenbanktabelle RC_CONFIG gespeichert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Tabelle besitzt folgende Spalten:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+<tbody><tr class="t1Row">
+<td>
+<p class="TextkörperTablefett">Spalte</p>
+</td>
+<td>
+<p class="TextkörperTablefett">Typ</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TextkörperTable">LINE</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TextkörperTable">SECTION</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TextkörperTable">GRP</p>
+</td>
+<td>
+<p class="TextkörperTable">VARCHAR2(8)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TextkörperTable">TACT</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TextkörperTable">MELODY</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Darüber hinaus kann mit dem Programm MediaConfig einer Gruppe eine Melodie zugeordnet werden, welche vom MediaClient abgespielt wird. Diese Information wird in der Konfigurationsdatei WavFilesRel.cfg (befindet sich im Konfigurationsverzeichnis) abgespeichert.</p>
+<h2 style="mso-list: l0 level2 lfo1; mso-bookmark: _Toc367452384;" data-condition="Others:Deutsch"><a name="Kommandozeile" id="Kommandozeile"></a>Kommandozeile</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Programm MediaConfig erwartet in der Kommandozeile die Angabe des Konfigurationsverzeichnisses (Beispiel: C:\RC-BRASIL\Config), in dem sich die allgemeinen Konfigurationsdateien befinden (notwendig für Datenbank Connect und Anzeige der Baumstruktur der Montagelinien, siehe auch Dokumentation MediaServer).</p>
+
+
+</body></html>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.4.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Erweitert;Others:Deutsch" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Erweitert;Others:Deutsch"/>
+<title data-condition="Others:Erweitert;Others:Deutsch">Regular Expressions - Reguläre Ausdrücke</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Erweitert;Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Erweitert;Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Regulärer Ausdruck,Regular Expression" data-condition="Others:Erweitert;Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Regular Expressions - Reguläre Ausdrücke">
+        <span>Regular Expressions - Reguläre Ausdrücke</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Erweitert;Others:Deutsch">Regular Expressions - Reguläre Ausdrücke</h2>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">In ein paar Tabellen kann über sogenannte &quot;Regular 
+ Expressions&quot; das Format von Identifiern überprüft werden. Hierfür 
+ werden die Regeln von Oracle verwendet. Die folgende Kurzbeschreibung 
+ deckt die am häufigsten verwendeten regulären Ausdrücke ab und bietet 
+ einige Beispiele zur Anwendung.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Eine &quot;normale&quot; 
+ <b>Zeichenfolge</b> im Suchmuster muss genau so im Text vorkommen (z.B. 
+ passt zum Muster &quot;in&quot; der Text &quot;Bein&quot;, aber nicht 
+ &quot;nicht&quot;)</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Bestimmte 
+ Zeichen, die sogenannten &quot;<b>reservierten Zeichen</b>&quot; müssen 
+ im Suchmuster durch einen umgekehrten Schrägstrich (&quot;Backslash&quot;) 
+ davor gekennzeichnet werden. Diese sind: <span style="color: windowtext;">+?.*^$()[]{}|\</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Beispiel: 
+ &quot;data\[0\]&quot; zum Suchen von &quot;data[0]&quot;.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Um nach 
+ <b>Zeichen</b> <b>aus einer bestimmten Menge</b> zu suchen, werden die 
+ entsprechenden Zeichen in eckigen Klammern notiert. So passen zum Muster 
+ &quot;[xy]&quot; nur Ergebnisse, die mindestens ein &quot;x&quot; oder 
+ ein &quot;y&quot; enthalten.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Um nach 
+ <b>Zeichen</b> zu suchen, <b>die nicht einer bestimmten Menge angehören</b>, 
+ wird die Menge mit einem &quot;^&quot; negiert, z.B. passen zu &quot;[^xy]&quot; 
+ nur Ergebnisse, die weder ein &quot;x&quot; noch ein &quot;y&quot; enthalten.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch"><b>Zeichen 
+ in einem bestimmten Bereich</b> können durch das erste und letzte zum 
+ Bereich gehörige Zeichen und ein &quot;-&quot; dazwischen abgekürzt werden. 
+ &quot;[0-9]&quot; sucht also nach Einträgen, in denen mindestens eine 
+ Ziffer vorkommt. Achtung: Umlaute o.Ä. gehören leider nicht zum Bereich 
+ &quot;[a-z]&quot;. Soll &quot;-&quot; eines der Zeichen sein, nach denen 
+ gesucht wird, muss das Minus-Zeichen durch einen Backslash davor seiner 
+ Bedeutung enthoben werden: &quot;[a\-z]&quot; sucht also nach Ergebnissen, 
+ die mindestens ein &#39;a&#39;, ein &#39;-&#39; oder ein &#39;z&#39; enthalten.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Für einige 
+ <b>Zeichenmengen</b> und deren <b>Negierungen</b> gibt es abgekürzte Schreibweisen:</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\d              Ziffern 
+ (&quot;digits&quot;)</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\D             alles 
+ außer Ziffern</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\w             Buchstaben, 
+ Ziffern oder Unterstriche (&quot;words&quot;)</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\W            alles 
+ außer Buchstaben, Ziffern oder Unterstrichen</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\n              Zeilenumbruch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\r               Wagenrücklauf 
+ (&quot;carriage return&quot;)</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\t               Tabulator</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch"> \f              Seitenumbruch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch"> \s              Leerzeichen, 
+ Zeilenumbruch, Wagenrücklauf, Tabulator oder Seitenumbruch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch"> \S             Alles 
+ außer Leerzeichen etc.</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch"> .                 ein 
+ beliebiges Zeichen</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Einige 
+ besondere <b>Positionen</b> können auch angegeben werden:</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\b              Wortgrenze, 
+ z.B. &quot;um\b&quot; passt zu &quot;Baum&quot; und &quot;warum&quot;, 
+ aber nicht zu &quot;umgehen&quot;, &quot;\bum&quot; passt zu &quot;umständlich&quot;, 
+ aber nicht zu &quot;kaum&quot;</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">\B              nicht 
+ an Wortgrenze</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">^                Beginn 
+ des Textes. &quot;^SPS&quot; passt also zum Text &quot;SPS1 ...&quot;, 
+ aber nicht zu &quot;Verbindung SPS5.....&quot;<br/>
+$                Ende 
+ des Textes</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch"><b>Wiederholungen 
+ von Zeichen</b> können durch folgende Konstrukte angegeben werden:</p>
+<p class="TextkörperAufzähl" data-condition="Others:Erweitert;Others:Deutsch">?               kein 
+ oder genau ein Vorkommen, z.B. passen zu &quot;Mei?er&quot; sowohl &quot;Meer&quot; 
+ als auch &quot;Meier&quot;<br/>
++               ein 
+ oder mehrere Vorkommen, z.B. passen zu &quot;au+a&quot; sowohl &quot;aua&quot; 
+ als auch &quot;auuuua&quot;, aber nicht &quot;aa&quot;<br/>
+*                beliebig 
+ viele Vorkommen. Zu &quot;au*a&quot; passen &quot;aa&quot;, &quot;aua&quot;, 
+ &quot;auua&quot; u.s.w.<br/>
+{n}            genau 
+ n Vorkommen: Zu &quot;H.{2}m&quot; passen z.B. &quot;Heim&quot;, &quot;Helm&quot;, 
+ &quot;Harm&quot;, weil genau 2 Zeichen zwischen &quot;H&quot; und &quot;m&quot; 
+ stehen</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch"><b>Alternativen</b> 
+ werden mittels des Senkrecht-Strichs | (&quot;Pipe&quot;-Symbol) notiert. 
+ So passt &quot;\bin\b|\bum\b&quot; zu allen Texten, die eines der Wörter 
+ &quot;in&quot; oder &quot;um&quot; enthalten.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch"><b>Teilausdrücke</b> 
+ können mit runden Klammern gebildet werden, z.B. findet &quot;dideld(um|ei)&quot; 
+ entweder &quot;dideldum&quot; oder &quot;dideldei&quot;.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">Ein <b>Leerstring</b> 
+ kann durch Prüfung auf den Text &#39;NULL&#39; gefunden werden.</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Die <b>Rangfolge der Operatoren</b> in einem regulären 
+ Ausdruck ist</p>
+<p class="Aufzählung1 ListeNum" style="text-indent: -24px; margin-left: 42px;" data-condition="Others:Erweitert;Others:Deutsch">()                 Klammern</p>
+<p class="Aufzählung1 ListeNum" style="margin-left: 42px; 
+											 text-indent: -24px; margin-top: 0pt;" data-condition="Others:Erweitert;Others:Deutsch">+*?{}            Wiederholung</p>
+<p class="Aufzählung1 ListeNum" style="text-indent: -24px; margin-left: 42px;" data-condition="Others:Erweitert;Others:Deutsch">abc 
+ []          Zeichen, 
+ -ketten, -mengen und abgekürzte Schreibweisen dafür, sowie Positionen</p>
+<p class="Aufzählung1 ListeNum" style="text-indent: -24px; margin-left: 42px;" data-condition="Others:Erweitert;Others:Deutsch">|                  Alternativen</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Die folgende Tabelle fasst die Bedeutung der regulären 
+ Ausdrücke gemäß Oracle noch einmal kurz zusammen:</p>
+<p class="Listing" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" style="margin-left: 2.85pt; 
+		 border: none;" cellspacing="0" width="633" cellpadding="1" data-condition="Others:Erweitert;Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Operator</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+		<td><p class="TabellenÜberschrift">Beispiel</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">\</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Backslash. Der Backslash 
+		 kann abhängig vom Kontext vier verschiedene Bedeutungen haben. 
+		 Er kann:</p>
+		<p class="TabellenInhalt">-<span style="font: 7.0pt &#39;Times New Roman&#39;;">      </span> für 
+		 sich stehen</p>
+		<p class="TabellenInhalt">-<span style="font: 7.0pt &#39;Times New Roman&#39;;">      </span> den 
+		 nächsten Buchstaben zitieren</p>
+		<p class="TabellenInhalt">-<span style="font: 7.0pt &#39;Times New Roman&#39;;">      </span> einen 
+		 Operator einleiten</p>
+		<p class="TabellenInhalt">-<span style="font: 7.0pt &#39;Times New Roman&#39;;">      </span> nichts 
+		 tun</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;\+&quot; sucht 
+		 nach dem Zeichen Plus (&quot;+&quot;). Findet z.B. &quot;abc+def&quot;. 
+		 Findet nicht &quot;abcdef&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">*</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Beliebig viele Vorkommen 
+		 (auch keines) des vorangegangenen Zeichens / Ausdrucks.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;ab*c&quot; findet 
+		 &quot;ab&quot;, &quot;abc&quot;, &quot;abbc&quot;. Findet nicht 
+		 &quot;abb&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">+</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Mindestens ein Vorkommen 
+		 des vorangegangenen Zeichens / Ausdrucks.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;a+&quot; findet 
+		 &quot;a&quot;, &quot;aa&quot;, &quot;aaa&quot;. Findet nicht &quot;bbb&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">?</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Kein oder höchstens 
+		 ein Vorkommen des vorangegangenen Zeichens / Ausdrucks.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;ab?c&quot; findet 
+		 &quot;abc&quot; und &quot;ac&quot;. Findet nicht &quot;abbc&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">|</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">&quot;Oder&quot; Operator, 
+		 um Alternativen anzuzeigen.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;a|b&quot; findet 
+		 &quot;a&quot; oder &quot;b&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">^</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Entspricht dem Zeichen 
+		 am Anfang des Textes.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;^def&quot; findet 
+		 &quot;defghi&quot;. Findet nicht &quot;abcdef&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">$</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Entspricht dem Zeichen 
+		 am Ende des Textes.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;def$&quot; findet 
+		 &quot;abcdef&quot;. Findet nicht &quot;defghi&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Entspricht einem beliebigen 
+		 Zeichen außer NULL.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;a.b&quot; findet 
+		 &quot;abb&quot;, &quot;acb&quot;, &quot;adb&quot;. Findet nicht 
+		 &quot;acc&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">[ 
+		 ]</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Liste von passenden 
+		 Zeichen. Eine negierte Liste beginnt mit ^ und spezifiziert eine 
+		 Liste die allen Zeichen entspricht, die nicht in der Liste enthalten 
+		 sind.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;[abc]&quot; findet 
+		 &quot;all&quot;, &quot;bill&quot; und &quot;cold&quot;. Findet 
+		 nicht &quot;doll&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">( 
+		 )</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Gruppiert einen (Unter)Ausdruck 
+		 (Substring).</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;(abc)?def&quot; 
+		 entspricht &quot;abc&quot;, gefolgt von &quot;def&quot;. Findet 
+		 &quot;abcdefghi&quot; und &quot;def&quot;. Findet nicht &quot;ghi&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">{m}</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Genau m Vorkommen.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;a{3}&quot; findet 
+		 &quot;aaa&quot;. Findet nicht &quot;aa&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">{m,}</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Mindestens m Vorkommen.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;a{3,}&quot; findet 
+		 &quot;aaa&quot; und &quot;aaaa&quot;. Findet nicht &quot;aa&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">{m,n}</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Mindestens m Vorkommen, 
+		 aber höchstens n Vorkommen.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;a{3,5}&quot; findet 
+		 &quot;aaa&quot;, &quot;aaaa&quot;, &quot;aaaaa&quot;. Findet nicht 
+		 &quot;aa&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 2.85pt 0cm 2.85pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="66"><p class="TabellenInhalt">\n</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="340"><p class="TabellenInhalt">Rückwärtsreferenz (mit 
+		 n als Zahl zwischen 1  und 9) entspricht dem n<sup>ten</sup> 
+		 Unterausdruck zwischen &#39;(&#39; und &#39;)&#39; vor dem \n.</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 2.85pt 0cm 2.85pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="227"><p class="TabellenInhalt">&quot;(abc|def)xy\1)&quot; 
+		 findet &quot;abcxyabc&quot; und &quot;defxydef&quot;. Findet nicht 
+		 &quot;abcxydef&quot; oder &quot;abcxy&quot;.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+
+
+</body></html>

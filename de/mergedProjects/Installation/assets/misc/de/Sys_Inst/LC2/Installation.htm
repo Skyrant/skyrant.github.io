@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Installation Legato Configuration Center (LC2)</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Installation Legato Configuration Center (LC2)</h2>
+<h3><a name="Grafische_Installation"></a>Grafische Installation</h3>
+<p class="BodyText">Die Installation des LC2 erfolgt über das Installationsprogramm 
+ <b>SetupLC2.exe</b>. Das Setup prüft, ob alle o.g. benötigten Komponenten 
+ vorhanden sind und installiert gegebenenfalls fehlende Komponenten.</p>
+<p class="BodyText">Das Legato Configuration Center (LC2) kann auf allen 
+ Rechnern installiert werden, die zur Parametrierung und Pflege des Leitsystems 
+ verwendet werden sollen – eine spezielle Freischaltung oder Lizenz ist 
+ nicht erforderlich.</p>
+<p class="BodyText">Es ist darauf zu achten, dass der Windows-Dienst &quot;Windows 
+ Installer&quot; auf dem PC gestartet ist. Andernfalls schlägt die Installation 
+ fehl, es erscheint eine entsprechende Fehlermeldung. Üblicherweise ist 
+ der Windows Installer jedoch korrekt konfiguriert, es sind dann keine 
+ Anpassungen notwendig.</p>
+<h3><a name="Installation_im_Silent_Mode"></a>Installation im Silent Mode</h3>
+<p class="BodyText">Es ist möglich, das Setup auch im sogenannten Silent 
+ Mode im Hintergrund laufen zu lassen, ohne grafische Dialoge.</p>
+<p class="BodyText">Dabei wird das Setup mit optionalen Parametern über 
+ die Kommandozeile ausgeführt.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Kommandozeile muss als Administrator gestartet 
+ werden, sonst erscheint ein Dialog, der eine Bestätigung erfordert, um 
+ die Installation zu starten.</p>
+<p class="BodyText">Es gibt folgende Möglichkeiten:</p>
+<p class="BodyText">1. Installation im Silent Mode mit Default-Einstellungen 
+ über die Kommandozeile erfolgt durch den Parameter /s.</p>
+<p class="BodyText">Beispiel:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">2. Silent Installation mit Angabe des Installationspfades 
+ über die Kommandozeile erfolgt durch die Variable TARGETDIR.</p>
+<p class="BodyText">Beispiel:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s TARGETDIR=C:\Gefasoft</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">3. Silent Installation mit Log-Ausgabe erfolgt durch 
+ den Parameter /l.</p>
+<p class="BodyText">Beispiel:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s /l=C:\LC2\install.log</p>
+<p class="TextCode">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Hier ist als Logging-Level verbose eingestellt. 
+ Es werden dadurch während der Installation viele Informationen geloggt 
+ und das Logfile ist recht groß (120 MB).</p>
+<p class="BodyText">4. Silent Installation mit reduziertem Log erfolgt 
+ mit dem Parameter LOGDIR. Der Pfad zur Log-Datei ist beliebig einstellbar.</p>
+<p class="BodyText">Beispiel:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s LOGDIR=C:\LC2\install.txt</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">5. Silent Installation ohne Sqlcompact erfolgt durch 
+ die Variable SQLCOMPACT=FALSE.</p>
+<p class="BodyText">Beispiel:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s SQLCOMPACT=FALSE</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">6. Deinstallation im Silent Mode mit Default-Einstellungen 
+ über die Kommandozeile erfolgt durch den Parameter /s MODIFY=FALSE REMOVE=TRUE 
+ UNINSTALL=YES.</p>
+<p class="BodyText">Beispiel:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s MODIFY=FALSE REMOVE=TRUE UNINSTALL=YES</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Optional kann hier noch der Parameter /l für das Logging 
+ mit angegeben werden.</p>
+<p class="BodyText">7. Deinstallation im Silent Mode mit reduziertem Logging:</p>
+<p class="TextCode">&lt;setup.exe&gt; /s MODIFY=FALSE REMOVE=TRUE UNINSTALL=YES 
+ LOGDIR=C:\LC2\uninstall.txt</p>
+<p class="TextCode">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Installation/Deinstallation im Silent 
+ Mode dauert länger als die normale Installation. Dauer der Installation: 
+ ca. 20 Minuten. Dauer der Deinstallation: ca. 10 Minuten.</p>
+</body>
+</html>

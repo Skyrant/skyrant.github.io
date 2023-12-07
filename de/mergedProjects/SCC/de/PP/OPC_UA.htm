@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">OPC_UA</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="OPC_UA" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="OPC_UA">
+        <span>OPC_UA</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">OPC_UA</h2>
+<h3 data-condition="Others:Deutsch"><a id="Neuen_OPC_UA-Server_anlegen"></a>Neuen OPC_UA-Server anlegen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Unter dem Knoten OPC_UA können OPC_UA-Sitzungen angelegt 
+ werden. Diese werden im Menü sowie in den Dialogen als &quot;Server&quot; 
+ bezeichnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Grundknoten &quot;OPC_UA&quot; hat im Eigenschaftsdialog 
+ den Pfad zum Zertifikatsspeicher und einen Button zum Anlegen neuer Zertifikate.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Zert.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Zertifikate werden im Dateisystem angelegt und 
+ nicht im Windows-Zertifikatspeicher (Kompatibilität zur Unix-Version).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach dem Anlegen eines neuen Servers werden zunächst 
+ dessen Eigenschaften festgelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die URL und die Security Parameter des Servers können 
+ manuell eingegeben werden (Offlineparametrierung) oder über die Discoveryfunktion 
+ gesucht und übernommen werden. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Opt.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim späteren Onlinebetrieb wird bei Änderung des Verbindungsstandards 
+ ein Event ausgelöst. Diesem kann ein Skriptaufruf zugeordnet werden. Der 
+ übergebene Wert (@Value) kann dabei folgende Zustände annehmen:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Wert</p></td>
+		<td><p class="TabellenÜberschrift">Status</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">0</p></td>
+		<td><p class="TabellenInhalt">Disconnected</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">Connected</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">Warning watchdog</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">3</p></td>
+		<td><p class="TabellenInhalt">Reconnect</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">4</p></td>
+		<td><p class="TabellenInhalt">Shutdown</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">5</p></td>
+		<td><p class="TabellenInhalt">New Session created</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird die Discoveryfunktion verwendet, muss eine Verbindung 
+ zu dem Discoveryserver vorhanden sein und der Pfad sowie der Zugangspunkt 
+ bekannt sein.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Als Discoverymethode ist derzeit nur &quot;Local 
+ Discovery Server&quot; zulässig!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die gefundenen Interfaces werden in der oberen Liste 
+ des Ergebnisdialogs angezeigt. Für den dort selektierten Server werden 
+ in der unteren Liste die vorhandenen Securitystufen angezeigt. In dieser 
+ zweiten List kann dann die gewünschte Kommunikationsart ausgewählt werden. 
+ Die Parameter werden mit Doppelklick bzw. durch Drücken des OK-Buttons 
+ übernommen. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Server.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Funktionen"></a>Funktionen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ist der Server angelegt, kann über das Kontextmenü 
+ eine Reihe von Funktionen gewählt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Context.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist der Server erreichbar, kann z.B. ein Verbindungstest 
+ durchgeführt werden (Connect), die Namensräume angezeigt werden (Namensräume…) 
+ oder die Struktur des Servers angesehen werden (Durchsuchen…).</p>
+<h3 data-condition="Others:Deutsch"><a id="Serverstruktur"></a>Serverstruktur</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Struktur des Servers wird als Baum dargestellt. 
+ Dabei werden die unterschiedlichen Knotentypen durch eigene Icons visualisiert:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Objects.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im rechten Fenster werden Details zum aktuell selektierten 
+ Knoten dargestellt. Die Node-Id (wird für alle Funktionen eines Knotens 
+ benötigt) besteht aus drei Teilen, die durch einen Querstrich (|) getrennt 
+ sind. Der erste Teil gibt den Index des Namensraums an, der zweite den 
+ Typ der Node-Id und der dritte die Node-Id selbst.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Es werden im Cloud Connector derzeit nur zwei 
+ Typen der Node-Id unterstützt. Diese sind Number und String!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Links im Baum selektierte Knoten können über Add zw. 
+ Enter übernommen werden, wenn &quot;Class&quot; eine Variable ist. In 
+ der Liste der ausgewählten Knoten können Variablen wieder gelöscht werden 
+ [Remove] oder auch die gesamte Liste gelöscht werden [Delete list].</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über [Import] werden alle Items aus der Liste mit den 
+ angegebenen Importparametern importiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Handelt es sich bei einem Item um eine Struktur, wird 
+ diese komplett mit Ordnern und Werten abgebildet.</p>
+<h3 data-condition="Others:Deutsch"><a id="Namensräume"></a>Namensräume</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Bezeichnungen der Namensraume können über die Funktion 
+ &quot;Namensräume…&quot; eingesehen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Names.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="SPS_Wert_anlegen"></a>SPS Wert anlegen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Unter dem Server können nun SPS-Werte angelegt werden. 
+ Die Parameter Node-Id, Node-Typ und Namensraum können manuell eingegeben 
+ werden oder aus der Struktur des Servers übernommen werden. Dabei können 
+ nur Knoten vom Typ &quot;Variable&quot; importiert werden. Der Datentyp 
+ der Variable kann gewählt bzw. bei importierten Elementen angezeigt werden. 
+ Beim Import der Knoteninformation werden diese Felder automatisch befüllt 
+ bzw. korrigiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OpcUaItem.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Struktur kann auf zwei Arten behandelt werden. 
+ Welche davon verwendet werden soll, kann unter Struktur-Parametern eingestellt 
+ werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Dynamisch: </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Elemente der Struktur werden nicht im Projekt gespeichert 
+ und können nicht mit Ereignissen vom Typ OnValue versehen werden. Die 
+ Struktur selbst kann folgende Ereignisse bekommen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1. OnInsert: neuer Unterknoten wurde eingefügt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">2. OnDelete: existierender Unterknoten wurde gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">3. OnNodeValue: Wert des Unterknotens wurde geändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">4. OnValue: Wertänderungen bei einem oder mehreren 
+ Unterknoten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Statisch: </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Elemente der Struktur werden im Projekt gespeichert 
+ und wie einzelne Variablen behandelt. Jeder Unterknoten vom Typ OPC-UA-Wert 
+ kann ein Ereignis vom Typ OnValue bekommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Verhalten der Schreib-Funktion hängt von zwei Parametern 
+ ab:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1. Alle Knoten beschreiben: Beschreiben der Hauptstruktur 
+ erzwingt das Beschreibung aller Unterknoten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">2. Unterknoten direkt beschreiben: die Änderung eines 
+ Unterknotens (z.B. Wertzuordnung in einem Skript) führt sofort zu einer 
+ Schreib-Aktion für diesen einen Unterknoten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist keine dieser beiden Optionen selektiert, wartet 
+ das System auf einen Schreib-Befehl für das Hauptstrukturelement. Der 
+ Schreib-Befehl wird dann nur jeden geänderten Unterknoten beschreiben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird die Option &quot;Bei Projektstart anmelden&quot; 
+ gewählt, wird die Variable nach Start des Projekts mit dem parametrierten 
+ Abtastintervall angefordert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Kontextmenü des SPS Werts können verschiedene Testfunktionen 
+ durchgeführt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_VarProp.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Sollen mehrere Items dieselbe Funktionalität bekommen 
+ (z.B. gleichzeitiges Lesen/Schreiben, gleiches Abtastinverall), können 
+ diese in einer Gruppe zusammengefasst werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_UA_Group.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Funktionalität_in_Skripten"></a>Funktionalität in Skripten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um die Funktionalität in Scripten nutzen zu können, 
+ wurde der Befehl &quot;ExtNodeFunc&quot; eingeführt. Die Beschreibung 
+ finden Sie unter <a href="../Commands/Control.htm">Befehle - Steuern von 
+ Elementen</a>.</p>
+<h3 data-condition="Others:Deutsch"><a id="Sonderfälle"></a>Sonderfälle</h3>
+<h4 data-condition="Others:Deutsch">Begrenzung der Subscriptions</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Legt man z.B. mittels CreateNode mehrere 
+ OPC-Items direkt am OPC-UA-Server-Knoten an (Struktur im SCC: OPC_UA.&lt;OPC-UA-Servername&gt;.&lt;OPC-Item[1..i]&gt;), 
+ so wird je Item eine eigene Subscription am OPC-UA-Server erzeugt. 
+ Die Anzahl der Subscriptions ist in manchen Fällen begrenzt. 
+ Diese Begrenzung führt dazu, dass Items, die über dieser Grenze liegen, 
+ nicht mehr erzeugt und verbunden werden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Limitierung kann umgangen werden, indem man je 
+ OPC-UA-Server eine oder mehrere Gruppen als Zwischenebene einfügt (Struktur 
+ im SCC: OPC_UA.&lt;OPC-UA-Servername&gt;.&lt;OPC-UA Gruppe [1..i]&gt;.&lt;OPC-Item[1..i]&gt;). 
+ Die Subscription wird in diesem Fall der Gruppe übergeben (Attribut: 
+ autosubsc=&quot;true&quot;), welche diese an die der Gruppe zugeordneten 
+ Items weitervererbt. Die Anzahl Items je Gruppe ist unbegrenzt; hier ist 
+ allerdings je nach Anwendungsfall insbesondere die Performance bei der 
+ Datenübertragung zu testen. Es besteht die Option, mehrere Gruppen je 
+ Server anzulegen, wobei hier wiederum das Limit für Subscriptions zu 
+ beachten ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Begrenzung der Anzahl Subscriptions ist 
+ immer bezogen auf je einen OPC-UA-Server, d.h., je eine SPS. 
+ </p>
+<h4 data-condition="Others:Deutsch">Auswertungen von Strukturen in der SPS</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Strukturen sind als Items vom Typ String im SCC in 
+ der OPC-UA-Verbindung anzulegen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispieldeklaration im SPS-Programm:</p>
+<p class="TextCode" data-condition="Others:Deutsch">Version_Nr Array[0..4] of Char Wert in SPS</p>
+<p class="TextCode" data-condition="Others:Deutsch">Version_Nr[0] Char 0</p>
+<p class="TextCode" data-condition="Others:Deutsch">Version_Nr[1] Char 2</p>
+<p class="TextCode" data-condition="Others:Deutsch">Version_Nr[2] Char .</p>
+<p class="TextCode" data-condition="Others:Deutsch">Version_Nr[3] Char 0</p>
+<p class="TextCode" data-condition="Others:Deutsch">Version_Nr[4] Char 1</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Auswertung im SCC:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es können die einzelnen 5 Bytes als je eigenes Items 
+ ausgewertet werden, aus Performancegründen empfiehlt es sich, das ganze 
+ Array mit den 5 Einzelbytes auszulesen. Das Aufbau im SCC ist wie folgt:</p>
+<p class="TextCode" data-condition="Others:Deutsch">OPC_UA.&lt;OPC_SERVER&gt;.&lt;Gruppe&gt;.Version_Nr</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Als Datentyp ist String anzugeben. Es wird nun im SCC 
+ für Strukturen standardmäßig folgende Datenstruktur vom Typ String zurückgeliefert:</p>
+<p class="TextCode" data-condition="Others:Deutsch">{val1,val2,..val[i]}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte val sind ASCII-Zeichen im Dezimalformat. 
+ Um diese in eine String zu wandeln, muss man den DEZ-Wert in HEX wandeln 
+ und diesen nach ASCII. Dies kann am besten mit den Block-Funktionen des 
+ SCC erfolgen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispielskript:</p>
+<p class="TextCode" data-condition="Others:Deutsch">string szVal, szTmp, x, y</p>
+<p class="TextCode" data-condition="Others:Deutsch">long i, nLen, nOff</p>
+<p class="TextCode" data-condition="Others:Deutsch">block b</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">// if using structures in plc-programm, you get an 
+ object with this structure:</p>
+<p class="TextCode" data-condition="Others:Deutsch">// {val1, val2, ... val[i]}</p>
+<p class="TextCode" data-condition="Others:Deutsch">// The value val is a decimal-value, that is to convert 
+ to hexadecimal format</p>
+<p class="TextCode" data-condition="Others:Deutsch">// this hex-value is to convert to ascii</p>
+<p class="TextCode" data-condition="Others:Deutsch">// Example:</p>
+<p class="TextCode" data-condition="Others:Deutsch">// value from PLC via OPC-UA: {48,50,46,48,49}</p>
+<p class="TextCode" data-condition="Others:Deutsch">// value afer conversion to hex-values: 30 32 2E 30 
+ 31</p>
+<p class="TextCode" data-condition="Others:Deutsch">// value after conversion to ascii: 0 2 . 0 1</p>
+<p class="TextCode" data-condition="Others:Deutsch">szVal := &#39;&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">// eliminate {} in the string</p>
+<p class="TextCode" data-condition="Others:Deutsch">nLen := StrLen(_szValue)</p>
+<p class="TextCode" data-condition="Others:Deutsch">nOff := nLen-2</p>
+<p class="TextCode" data-condition="Others:Deutsch">szTmp := SubStr(_szValue, 1, nOff)</p>
+<p class="TextCode" data-condition="Others:Deutsch">nLen := StrLen(szTmp)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">// eliminate the comma-separators in the string</p>
+<p class="TextCode" data-condition="Others:Deutsch">i := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch">x := &#39;&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">while i&lt;nLen do</p>
+<p class="TextCode" data-condition="Others:Deutsch">x := SubStr(szTmp, i, 1)</p>
+<p class="TextCode" data-condition="Others:Deutsch">if (x = &#39;,&#39;) then szTmp := StrDel(szTmp, i, 1) endif</p>
+<p class="TextCode" data-condition="Others:Deutsch">i := i + 1</p>
+<p class="TextCode" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">// read alway 2 characters and convert them to hex-values</p>
+<p class="TextCode" data-condition="Others:Deutsch">nLen := StrLen(szTmp)</p>
+<p class="TextCode" data-condition="Others:Deutsch">i := 0</p>
+<p class="TextCode" data-condition="Others:Deutsch">x := &#39;&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">b := newblock(1)</p>
+<p class="TextCode" data-condition="Others:Deutsch">while i&lt;nLen do</p>
+<p class="TextCode" data-condition="Others:Deutsch">x := SubStr(szTmp, i, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch">SetBlockNum(b, 0, 1, false, StrTolEx(x, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch">szVal := szVal + GetBlockStr(b, 0, 1)</p>
+<p class="TextCode" data-condition="Others:Deutsch">i := i + 2</p>
+<p class="TextCode" data-condition="Others:Deutsch">enddo </p>
+<p class="TextCode" data-condition="Others:Deutsch">return szVal</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch">Auswertung von Bit-Arrays mit OPC-UA</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Variante 1: Auswertung vom Item als String</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Struktur wird je Bit wie folgt aufgebaut: { Bitstatus0 
+ , Bitstatus1 , .. , Bitstatus[i] }</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Bitstatus hat den String-Wert &quot;false&quot; 
+ oder &quot;true&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese 4 oder 5 String-Zeichen müssen je Bitstatus in 
+ einem GW-Skript ausgewertet werden und daraus ist ein numerischer Wert 
+ 0 bei false und 1 bei true zu bilden. Danach kann man die Werte weiterverarbeiten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variante 2: Auswertung vom Item als Block</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Struktur wird je Bit wie folgt aufgebaut:</p>
+<p class="BodyText" data-condition="Others:Deutsch">7B &lt;Nutzdaten Bit 0&gt; 2C &lt;Nutzdaten Bit 1&gt; 
+ 2C .. &lt;Nutzdaten Bit [i]&gt; 7D</p>
+<p class="BodyText" data-condition="Others:Deutsch">2C hex ist das Trennzeichen Komma und 7B / 7D hex sind 
+ die beiden Klammern { und }.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Bool&#39;sche Wert wird übergeben als:</p>
+<p class="BodyText" data-condition="Others:Deutsch">HEX ASCII</p>
+<p class="BodyText" data-condition="Others:Deutsch">66 hex = f</p>
+<p class="BodyText" data-condition="Others:Deutsch">61 hex = a</p>
+<p class="BodyText" data-condition="Others:Deutsch">6C hex = l</p>
+<p class="BodyText" data-condition="Others:Deutsch">73 hex = s</p>
+<p class="BodyText" data-condition="Others:Deutsch">65 hex = e</p>
+<p class="BodyText" data-condition="Others:Deutsch">oder:</p>
+<p class="BodyText" data-condition="Others:Deutsch">HEX ASCII</p>
+<p class="BodyText" data-condition="Others:Deutsch">74 hex = t</p>
+<p class="BodyText" data-condition="Others:Deutsch">72 hex = r</p>
+<p class="BodyText" data-condition="Others:Deutsch">75 hex = u</p>
+<p class="BodyText" data-condition="Others:Deutsch">65 hex = e</p>
+<p class="BodyText" data-condition="Others:Deutsch">Auch hier müssen zuerst die beiden Klammern und die 
+ Kommas entfernt werden. Danach können die Bytes als ASCII-Zeichen gewandelt 
+ werden. Als Ergebnis erhält man wieder die Werte &quot;true&quot; oder 
+ &quot;false&quot;, die in 1 oder 0 zu wandeln sind.</p>
+
+
+</body></html>

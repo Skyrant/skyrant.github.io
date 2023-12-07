@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Einrichten eines Andon-Projekts</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Einrichten eines Andon-Projekts">
+        <span>Einrichten eines Andon-Projekts</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Einrichten eines Andon-Projekts</h1>
+<p data-condition="Others:Deutsch">Für das Einrichten eines Andon-Projekts sind 6 Schritte zu beachten.</p>
+<p data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p>Andon-Projekt erstellen (ähnlich wie ein HMI-Projekt)</p></li>
+	<li><p>Projekt und Andon-Anzeigen/Clients registrieren</p></li>
+	<li><p>Individuelle Zeichnungen für jede(n) Andon-Anzeige/Andon-Client 
+	 einrichten</p></li>
+	<li><p>An jeder Station den ID-Server einrichten</p></li>
+	<li><p>Systemparameter für die Identifizierung der Station einrichten</p></li>
+	<li><p>Voraussetzungen: Anzeige des Verbindungsstatus jedes Boards</p></li>
+</ol>
+<h2 data-condition="Others:Deutsch"><a id="1._Erstellen_eines_Andon-Projekts"></a>1. Erstellen eines 
+ Andon-Projekts</h2>
+<p data-condition="Others:Deutsch">Die Struktur eines Andon-Projekts ist der eines HMI-Projekts grundsätzlich 
+ sehr ähnlich. Es besteht aus einem Projektordner der die Projektdatei 
+ (andon.prj) und normalerweise eine Zeichnung pro Bereich enthält. Die 
+ Informationen zu jedem Bereich müssen auf einem oder mehreren Andon-Boards 
+ angezeigt werden. Es ist nicht nötig, einzelne Projekte für jedes Board 
+ oder jeden Bereich zu erstellen. Aus verwaltungstechnischen Gründen wird 
+ jedoch empfohlen, nur ein Andon-Projekt zu erstellen. Dieses Andon-Projekt 
+ umfasst für jeden Bereich mehrere Kunden, die eine Andon-Lösung nutzen 
+ (z. B. assembly, body shop …).</p>
+<p data-condition="Others:Deutsch">Beachten Sie, dass sich der Projektordner im Andon-Ordner im freigegebenen 
+ Verzeichnis befinden muss:</p>
+<p data-condition="Others:Deutsch"><img src="../../Bilder/Andon_1.png" alt="" style="border: none;" width="800" height="360" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Struktur eines Andon-Projekts:</p>
+<p class="TextCode" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;defaultLogin&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;userName&quot;: &quot;andon_default&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;password&quot;: &quot;andon_default&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;parameters&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;debugMode&quot;: true</p>
+<p class="TextCode" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;theme&quot;: &quot;sapient-dark&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;header&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;hide&quot;: true</p>
+<p class="TextCode" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;boardlets&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;component&quot;: 
+ &quot;drawing-canvas-boardlet&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;parameters&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;fileName&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;value&quot;: 
+ &quot;andon/assembly/default.xml&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;showHeader&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;value&quot;: 
+ false</p>
+<p class="TextCode" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;footer&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;fileName&quot;: &quot;andon/assembly/footer.xml&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;height&quot;: &quot;60px&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;navigation&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;items&quot;: []</p>
+<p class="TextCode" data-condition="Others:Deutsch">  }</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p><span style="font-weight: bold;">defaultLogin</span>: Gibt den 
+	 Nutzer an, der nach dem Hochfahren eingeloggt wird. Wenn der aktuelle 
+	 Browser bereits eine Session mit einem aktiven Nutzer hat, wird dieser 
+	 aktive Nutzer für den Login verwendet.</p></li>
+	<li><p><span style="font-weight: bold;">paramsters.debugMode</span>: 
+	 Stellt den Debug-Modus für das gesamte Projekt ein. Hierdurch wird 
+	 mit gedrückter STRG-Taste und einem Klick an einer beliebigen Stelle 
+	 in einer Visualisierungszeichnung die Debug-Seitenleiste geöffnet.</p></li>
+	<li><p><span style="font-weight: bold;">theme</span>: Ermöglicht das 
+	 Einrichten eines bestimmten Themes, das während der Laufzeit verwendet 
+	 werden kann. Hierdurch wird das Theme ersetzt, welches in den momentanen 
+	 Nutzerpräferenzen eingestellt ist. Diese Einstellung wird empfohlen, 
+	 da die meisten Visualisierungszeichnungen für ein bestimmtes Thema 
+	 optimiert sind.</p></li>
+	<li><p><span style="font-weight: bold;">header.hide</span>: Ermöglicht 
+	 das Ausblenden der Kopfzeile. Hierdurch wird die Visualisierung in 
+	 voller Bildschirmgröße angezeigt.</p></li>
+	<li><p><span style="font-weight: bold;">boardlets</span>: Richtet das/die 
+	 Boardlet(s) so ein, dass sie ab Beginn angezeigt werden. Mithilfe 
+	 des drawing-canvas-boardlet kann eine Visualisierung während der Laufzeit 
+	 angezeigt werden. Beachten Sie, dass der Dateiname der wichtigste 
+	 Teil dieser Komponenten ist. Die Kopfzeile des Boardlets wird in unserem 
+	 Fall nicht benötigt. Die Kopfzeile wird mithilfe des showHeader-Parameters 
+	 ausgeblendet.</p></li>
+	<li><p><span style="font-weight: bold;">footer</span>: Optionale Fußzeilen-Visualisierung, 
+	 die durchgehend angezeigt wird. Dies ist unabhängig vom Inhalt des 
+	 Hauptbereichs und kann beispielsweise zur Darstellung von Datum und/oder 
+	 Zeit, etc. verwendet werden. Um die Fußzeile auszublenden, muss der 
+	 Dateiname zu einem leeren String geändert und die Höhe auf 0 gesetzt 
+	 werden.</p></li>
+	<li><p><span style="font-weight: bold;">navigation</span>: Ist in diesem 
+	 Fall leer. navigation erlaubt das Festlegen einer Menüstruktur, die 
+	 in der Kopfzeile angezeigt wird.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="2._Registrieren_des_Projekts_und_der_Andon-Anzeigen_Clients"></a>2. 
+ Registrieren des Projekts und der Andon-Anzeigen/Clients</h2>
+<p data-condition="Others:Deutsch">Die Registrierung eines Andon-Projekts läuft über den LC2. Öffnen Sie 
+ hierzu die HMI-Projekte-Tabelle im Konfigurationsbaum (Frontend/HMI Projects):</p>
+<p data-condition="Others:Deutsch"><img src="../../Bilder/Andon_2.png" alt="" style="border: none;" width="1500" height="574" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Anschließend kann das Projekt im Browser geöffnet werden, indem eine 
+ Station in der URL festgelegt wird.</p>
+<p data-condition="Others:Deutsch">Geben Sie hierzu die Adresse und die Station ein:</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">http://***.**.**.**:****/app/</span><span style="mso-ansi-language: EN-US;">andon?station=section1</span></p>
+<p data-condition="Others:Deutsch">(die Sternchen in der URL stellen Platzhalter dar)</p>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="3._Individuelle_Zeichnungen_für_jede_Anzeige_einstellen"></a>3. 
+ Individuelle Zeichnungen für jede Anzeige einstellen</h2>
+<p data-condition="Others:Deutsch">Die Projektdatei enthält den Bereich „Boardlets“, der das anfangs angezeigte 
+ Boardlet definiert und dessen Parameter definiert. In diesem Fall ist 
+ dies das Visualisierungs-Canvas-Boardlet.</p>
+<p data-condition="Others:Deutsch">Dieses Boardlet dient dem Darstellen einer Visualisierungszeichnung. 
+ Damit die gewünschte Visualisierungszeichnung für die einzelnen Stationen/Produktionsbereiche 
+ angezeigt werden, können Voreinstellungen durch Eingaben in der Spalte 
+ Projektkonfiguration überschrieben werden:</p>
+<p data-condition="Others:Deutsch"><img src="../../Bilder/Andon_3.png" alt="" style="border: none;" width="1500" height="463" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;boardlets&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;parameters&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;fileName&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;value&quot;: 
+ &quot;andon/assembly/section1.xml&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ]</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="4._Einrichten_des_ID-Servers_an_jeder_Station"></a>4. Einrichten 
+ des ID-Servers an jeder Station</h2>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Damit die Anwendung die Station identifizieren 
+ kann, muss der HMI-ID-Server auf jedem Stations-PC installiert werden. 
+ </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Der Download und die Anleitung hierzu findet 
+ man unter <a href="https://github.com/Gefasoft/hmi-id-server/">https://github.com/Gefasoft/hmi-id-server/</a>.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Rufen Sie <span style="font-weight: bold;">localhost:8765/sapient/hmiterm.json</span> 
+ auf, um zu prüfen, ob der lokale Server richtig funktioniert. Der Browser 
+ sollte ein JSON-Objekt anzeigen, welches Informationen zu der Maschine 
+ enthält.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch">5. Systemparameter für die Identifikation der Station einstellen</h2>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"><span style="line-height: normal; mso-layout-grid-align: none; 
+									 text-autospace: none;">Um die Anwendung 
+ zu zwingen, die aktuelle Station zu identifizieren und den entsprechenden 
+ Stationsinhalt automatisch zu laden, muss ein Hostname für die einzelnen 
+ Stationen angegeben werden:</span></p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"><img src="../../Bilder/Andon_4.png" alt="" style="border: none;" width="1500" height="287" border="0"/></p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Die folgenden Systemparameter müssen angepasst 
+ werden:</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"><img src="../../Bilder/Andon_5.png" alt="" style="border: none;" width="1500" height="195" border="0"/></p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"><span style="line-height: normal; mso-layout-grid-align: none; 
+									 text-autospace: none;">• -330 – Wert 
+ 1: Wird benötigt, damit die WebApp den lokal installierten ID-Server nutzt.</span></p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">• -320 – default 8765: Muss auf den Port eingestellt 
+ werden, der lokal installierte ID-Server überwacht.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">• -310 – Wert 0: Ermöglicht es, jede Station 
+ auch direkt über die URL anzuzeigen (ID-Server kann ignoriert werden). 
+ Wenn der Wert auf 0 gesetzt ist, kann sichergestellt werden, dass ein 
+ bestimmter Client nur auf den gewünschten Host initialisiert werden kann.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Wenn die Anwendung ohne Angabe einer bestimmten 
+ Station mit der URL <span lang="EN-US" xml:lang="EN-US">(http://hostname:8080/app/andon) 
+ </span>aufgerufen wird, versucht die Applikation die Kundenstation mithilfe 
+ des Hostnamens zu bestimmen.</p>
+<h2 data-condition="Others:Deutsch"><a id="6._Voraussetzungen_für_die_Anzeige_des_Verbindungsstatus_jedes_Kunden"></a>6. 
+ Voraussetzungen für die Anzeige des Verbindungsstatus jedes Clients</h2>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Jeder verbundene Client pingt den Server regelmäßig 
+ an. Hierbei wird die Uhrzeit des letzten Kundenfeedbacks in der hmi_client_states-Tabelle 
+ festgehalten, um den Verbindungsstatus jedes Clients anzugeben.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Anzeige einer Liste aller Clients (einschließlich ihres Verbindungsstatus 
+ in der WebApp)</h3>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Nutzen Sie den LC2, um ein Datenquellenmodell 
+ hinzuzufügen. Dies legt fest, wie diese Informationen abgefragt und wie 
+ auf die Anzeige einer Liste aller Clients in der WebApp zugegriffen werden 
+ kann. Außerdem wird hierdurch festgelegt, wie man die Informationen nutzen 
+ kann. Auf die Datenquellenmodelle kann über den Konfigurationsbaum unter 
+ Systemverwaltung und Datenquellenmodelle zugegriffen werden.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"><img src="../../Bilder/Andon_6.png" alt="" style="border: none;" width="1500" height="644" border="0"/></p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Fügen Sie ein neues Modell, z. B. „Client states“ 
+ hinzu und geben Sie die Anfragendefinition in das Feld Konfiguration ein:</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="line-height: normal; mso-layout-grid-align: none; 
+							 text-autospace: none;">{</span></p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;resources&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    { &quot;resource&quot;: &quot;hmi_clients&quot;, 
+ &quot;as&quot;: &quot;hmic&quot; },</p>
+<p class="TextCode" data-condition="Others:Deutsch">    { &quot;resource&quot;: &quot;hmi_client_states&quot;, 
+ &quot;as&quot;: &quot;hmics&quot; }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;query&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;fields&quot;: [&quot;hmic.symbol&quot;, 
+ &quot;hmic.name&quot;, &quot;hmic.host_name&quot;, &quot;hmics.last_sync&quot;],</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;relations&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">      {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;src&quot;: 
+ &quot;hmic&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;dst&quot;: 
+ &quot;hmics&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;how&quot;: 
+ &quot;i&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;on&quot;: 
+ { &quot;left&quot;: &quot;hmic.id&quot;, &quot;op&quot;: &quot;EQ&quot;, 
+ &quot;right&quot;: &quot;hmics.id&quot; }</p>
+<p class="TextCode" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    ]</p>
+<p class="TextCode" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;defaultFields&quot;: [&quot;symbol&quot;, 
+ &quot;name&quot;, &quot;host_name&quot;, &quot;last_sync&quot;],</p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;staticFilter&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;left&quot;: 
+ &quot;hmic.host_name&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;op&quot;: 
+ &quot;NN&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ]</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Diese Definition kann je nach spezifischen 
+ Kundenanforderungen variieren.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Um das Ergebnis in der WebApp anzuzeigen, fügen 
+ Sie ein generisches Tabellenboardlet zu einem Dashboard hinzu. Wechseln 
+ Sie zum Tab <span style="font-weight: bold;">Datenquellen</span> <span style="font-weight: bold;">Einstellungen</span> in der Seitenleiste 
+ und wählen Sie anschließend das oben erwähnte Datenquellenmodell aus. 
+ </p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch">Damit sich die Tabelle automatisch aktualisiert, 
+ setzen Sie den Parameter „Aktualisieren“ und geben Sie ein passendes Intervall 
+ wie z. B. 10 Sekunden ein. Wählen Sie am besten kein unnötig kurzes Intervall. 
+ Dadurch wird überflüssiger Datenverkehr im Netzwerk vermieden.</p>
+<p class="MsoNormal" style="line-height: normal; mso-layout-grid-align: none; 
+	 text-autospace: none;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../Bilder/Andon_7.png" alt="" style="border: none;" width="600" height="765" border="0"/></p>
+
+
+</body></html>

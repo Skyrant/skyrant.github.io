@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Hinweis für Updates, Patches, Hotfixes"]],"1":[["\n"],["\n","Nach jeder Änderung an System-, Context- oder Init-Parametern muss die Webapplikation neu gestartet werden, um die Änderungen aktiv zu setzen. Dies gilt für jedes Update bzw. jede Installation eines Patches oder Hotfixes.","\n\n\n"]],"3":[["Hinweis für Updates, Patches, Hotfixes"]],"id":"18"})

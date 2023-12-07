@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Software_Documentation_MediaServer_de.docx" />
+<meta name="build tags" content="Deutsch" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Allgemeines</title>
+<link rel="StyleSheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Allgemeines</h1>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Das Programm MediaServer ist unter Linux lauffähig und beinhaltet folgende Funktionalität:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Kopplung zur Legato Datenbank über OCI (Oracle Call Interface)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Zyklisches Lesen der Reißleinenmeldungen und Schaltbefehle</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Kommunikation mit den Anzeigen (Clients) über TCP/IP</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Verbuchung der Werte der Statusvariablen in der Datenbank</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Überwachung der Anzeigen (Verbindungsstatus)</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<h2><a name="Kommandozeile" id="Kommandozeile"></a>Kommandozeile</h2>
+<p class="BodyText">Das Programm mediaserver benötigt folgende Kommandozeilenparameter:</p>
+<table class="SimpleGridBlack" cellspacing="0">
+<tr class="t1Row">
+<td style="vertical-align: top;" width="113">
+<p class="TabellenÜberschrift">Parameter</p>
+</td>
+<td style="vertical-align: top;" width="510">
+<p class="TabellenÜberschrift">Bedeutung</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="113">
+<p class="TabellenInhalt">-k</p>
+</td>
+<td style="vertical-align: top;" width="510">
+<p class="TabellenInhalt">Verzeichnis, das die Konfigurationsdateien beinhaltet</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="113">
+<p class="TabellenInhalt">-l</p>
+</td>
+<td style="vertical-align: top;" width="510">
+<p class="TabellenInhalt">Pfad für Logdateien</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="113">
+<p class="TabellenInhalt">-m</p>
+</td>
+<td style="vertical-align: top;" width="510">
+<p class="TabellenInhalt">Maske für Logklassen</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="113">
+<p class="TabellenInhalt">-n</p>
+</td>
+<td style="vertical-align: top;" width="510">
+<p class="TabellenInhalt">Name der Logdatei ohne Extension</p>
+</td>
+</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Logklassen:</p>
+<p class="BodyText">Es stehen 32 Logklassen zur Verfügung (siehe auch Logklassen).</p>
+<p class="TextCode">Beispiel Maske Logklassen</p>
+<p class="TextCode">11111111111111110000000000000011</p>
+<p class="TextCode">|&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|</p>
+<p class="TextCode">Klasse 32&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Klasse 1</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In obigem Beispiel sind die Logklassen 1, 2 und 17 - 32 aktiviert d.h. die entsprechenden Meldungen werden im Logfile (.log), bzw. auch im Errorfile (.err) wenn die Klasse &gt;= 17 ist, gespeichert. Die Maske Logklassen kann auch in hexadezimaler Form angegeben werden, d.h. 0xFFFF0003 für o. g. Beispiel.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Wird das Programm mediaserver ohne, oder nicht mit allen o. g. Parametern aufgerufen erscheint folgende Ausgabe auf der Konsole:</p>
+<p class="TextCode">mediaserver version: 4.0.0.0 (build time Feb 22 2010 12:34:22) started</p>
+<p class="TextCode">mediaserver fatal error no valid cmdline</p>
+<p class="TextCode">Usage: mediaserver</p>
+<p class="TextCode">&#160;-k &lt;cfgdir&gt;&#160;&#160;directory of configfiles</p>
+<p class="TextCode">&#160;-l &lt;logdir&gt;&#160;&#160;directory for logfiles</p>
+<p class="TextCode">&#160;-m &lt;logmask&gt; mask for logmessages</p>
+<p class="TextCode">&#160;-n &lt;logname&gt; name for logfile</p>
+<p class="TextCode">&#160;</p>
+<h2><a name="Logklassen" id="Logklassen"></a>Logklassen</h2>
+<p class="BodyText">Insgesamt stehen 32 Logklassen zur Verfügung.</p>
+<p class="BodyText">Dies sind Meldungen (Klasse 1 –16) und Fehler (Klasse 17 – 32).</p>
+<p class="BodyText">Die Bedeutung der Meldungen und Fehler wird in der folgenden Tabelle gezeigt:</p>
+<p class="BodyText">&#160;</p>
+<table class="SimpleGridBlack" cellspacing="0" width="624">
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenÜberschrift">Klasse</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenÜberschrift">Text im Logfile</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenÜberschrift">Bedeutung</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">1</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;1</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Meldungen Initialisierung</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">2</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;2</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Meldungen Datenbank</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">3</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;3</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Meldungen MediaServer</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">4</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;4</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Meldungen MediaClient</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">5</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;5</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Meldungen Werte</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">6</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;6</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">7</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;7</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">8</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;8</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">9</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message&#160;&#160;9</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Ablaufverfolgung Initialisierung</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">10</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 10</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Ablaufverfolgung Datenbank</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">11</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 11</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Ablaufverfolgung MediaServer</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">12</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 12</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Ablaufverfolgung MediaClient</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">13</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 13</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Ablaufverfolgung Werte</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">14</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 14</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">15</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 15</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">16</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Message 16</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">17</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;1</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fehler Initialisierung</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">18</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;2</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fehler Datenbank</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">19</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;3</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fehler MediaServer</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">20</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;4</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fehler MediaClient</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">21</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;5</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fehler Werte</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">22</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;6</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fehler Konfiguration</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">23</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;7</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">24</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;8</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">25</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error&#160;&#160;9</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler Initialisierung</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">26</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 10</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler Datenbank</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">27</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 11</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler MediaServer</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">28</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 12</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler MediaClient</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">29</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 13</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler Werte</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">30</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 14</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler Konfiguration</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">31</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 15</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="47">
+<p class="TabellenInhalt">32</p>
+</td>
+<td style="vertical-align: top;" width="106">
+<p class="TabellenInhalt">Error 16</p>
+</td>
+<td style="vertical-align: top;" width="471">
+<p class="TabellenInhalt">Fatale Fehler</p>
+</td>
+</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<h2>Logdateien</h2>
+<p class="BodyText">Logdateien erhalten die Extension .log, Errorfiles die Extension .err. Der Name wird über den Kommandozeilenparameter –n angegeben. Logdateien haben eine maximale Größe von 10 MB, Errordateien haben eine maximale Größe von 1 MB. Pro Programminstanz werden maximal 20 Logdateien und 10 Errordateien auf Platte gespeichert.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Beispiel: Name der Logdatei mediaserver</p>
+<p class="BodyText">Somit heißt die aktuelle Logdatei mediaserver.log, die aktuelle Errordatei mediaserver.err.</p>
+<p class="BodyText">Wenn die Größe einer Logdatei 10 MB überschreitet, werden die Logdateien mediaserver.log.n in mediaserver.log.n+1 umbenannt (dto. für Errordateien beim Überschreiten der Größe von 1MB).</p>
+<p class="BodyText">Wenn bereits 20 Logdateien bzw. 10 Errordateien existieren, wird die älteste Datei gelöscht.</p>
+<p class="BodyText">Somit sind:20 * 10 MB + 10 * 1 MB = 210 MB Plattenplatz erforderlich.</p>
+</body>
+</html>

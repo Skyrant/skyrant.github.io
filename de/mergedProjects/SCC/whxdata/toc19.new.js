@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Anlegen eines Ereignisses","type":"item","tilePath":"","description":"","url":"de/PP/Events.htm#Anlegen_eines_Ereignisses"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

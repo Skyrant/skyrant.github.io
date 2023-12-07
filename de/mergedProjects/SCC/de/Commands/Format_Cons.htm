@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Formatkonvertierungen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Formatkonvertierungen">
+        <span>Formatkonvertierungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Formatkonvertierungen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Werden in einem arithmetischen Ausdruck zwei Operanden 
+ unterschiedlichen Typs verwendet, wird der Long-Operand automatisch in 
+ einen Double-Wert konvertiert. Das Ergebnis der Operation ist ein Double-Wert. 
+ Soll die Berechnung einen Integerwert (Long) liefern, muss der Double-Operand 
+ oder das Ergebnis durch die Funktion &quot;Round&quot; in einen Long-Wert 
+ konvertiert werden.</p>
+<h3 data-condition="Others:Deutsch"><a name="DToF" id="DToF"></a>DToF</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long DToF(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wandelt den Double-Wert <b>x</b> in das Fließkommaformat 
+ der Simatic-S7.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Ergebnis dieser Funktion kann im Script nicht weiter 
+ verarbeitet werden, sondern ist nur dazu geeignet, mit SetBlockNum in 
+ einen Datenblock eingetragen zu werden, der in ein AG des Typs Simatic 
+ S7 geschrieben werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := NewBlock(6)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetBlockNum(b, 0, 2, false,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            Endian(Value.InputAsInteger, 
+ true, false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            )</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetBlockNum(b, 2, 4, false,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            DToF(Value.InputAsFloat)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            )</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">OPC.GOPS.PLC1.Targetblock := b</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DToKG" id="DToKG"></a>DToKG</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long DToKG(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wandelt den Double-Wert <b>x</b> in eine Fließkommazahl 
+ mit dem KG-Format der Simatic-S5.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double    d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long      l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := sin(pi)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := DToKG(d)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">OPC.GOPS.PLC1.Distance := l</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DToStr" id="DToStr"></a>DToStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string DToStr(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wandelt den Double-Wert <b>x</b> in einen String. Die 
+ Zahl wird je nach Größe entweder exponential oder dezimal dargestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double    d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := 125.56 / 37</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Result : &#39; + DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DToStrEx" id="DToStrEx"></a>DToStrEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string DToStrEx(double x, long digits)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wandelt den Double-Wert <b>x</b> in einen String mit 
+ <b>digits</b> Stellen. Dabei werden Vorzeichen und Dezimalpunkt nicht 
+ als Stellen gewertet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double    d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := 125.56 / 37</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Result : &#39; + DToStrEx(d, 8))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Endian" id="Endian"></a>Endian</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long Endian(long x, bool wo, bool by)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist <b>by</b> = true werden jeweils High- und Low-Byte 
+ des Arguments <b>x</b> miteinander vertauscht. Ist <b>wo</b> = true wird 
+ das High- und Low-Word des Arguments <b>x</b> miteinander getauscht. Diese 
+ Funktion erleichtert die Bearbeitung von Daten, die von anderen Maschinen  stammen 
+ (z.B.Simatic-S5).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long x</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">x := 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;TestEndian:&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;0,0 --&gt; &#39; + LToStr(endian(x, false, false), 
+ 2))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;0,1 --&gt; &#39; + LToStr(endian(x, false, true 
+ ), 2))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;1,0 --&gt; &#39; + LToStr(endian(x, true , false), 
+ 2))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;1,1 --&gt; &#39; + LToStr(endian(x, true , true 
+ ), 2))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Ausgabe im Logbuch:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">TestEndian:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">0,0 --&gt; 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">0,1 --&gt; 1 00000000</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">1,0 --&gt; 1 00000000 00000000</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">1,1 --&gt; 1 00000000 00000000 00000000</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="FToD" id="FToD"></a>FToD</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double FToD(long x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wandelt einen Wert aus dem Fließkommaformat der Simatic-S7 
+ in einen Double-Wert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Als sinnvolle Eingabe dieser Funktion eignen sich nur 
+ Werte, die mittels GetBlockNum aus einem Datenblock extrahiert wurden, 
+ der aus einem AG des Typs Simatic S7 gelesen wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := FToD(GetBlockNum(OPC.GOPS.PLC1.Targetblock, 
+ 2, 4, false))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="KGToD" id="KGToD"></a>KGToD</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double KGToD(long x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wandelt eine Fließkommazahl <b>x</b> mit dem KG-Format 
+ der Simatic-S5 in einen Double-Wert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long    l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double  d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := OPC.GOPS.PLC1.ValueAsKG</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := KGToD(l)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LToStr" id="LToStr"></a>LToStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string LToStr(long x, long radix)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert den Long-Wert <b>x</b> in einen String. 
+ Der Parameter <b>radix</b> legt die Basis fest, auf der die Konvertierung 
+ stattfinden soll - mögliche Werte liegen im Bereich von 2 bis 36.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn <b>radix</b> den Wert 10 hat und <b>x</b> kleiner 
+ als Null ist, stellt LToStr dem Ergebnis ein Minuszeichen voran.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long    l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string  s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := 1247</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := LToStr(l, 10)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Decimal     : &#39; 
+ + s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := LToStr(l, 16)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Hexadecimal : &#39; + s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := LToStr(l, 2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Binary      : 
+ &#39; + s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Printf" id="Printf"></a>Printf</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string Printf(string format, ...)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl erzeugt einen String aus einem Formatstring 
+ <b>format</b> und einer beliebigen Anzahl Parameter. Die Parameter können 
+ Strings oder numerische Werte sein. Für den Formatstring gelten folgende 
+ Angaben:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="120"><p class="TabellenÜberschrift">Formatzeichen</p></td>
+		<td style="vertical-align: top;" width="413"><p class="TabellenÜberschrift">Interpretation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="120"><p class="TabellenInhalt">u</p></td>
+		<td style="vertical-align: top;" width="413"><p class="TabellenInhalt">Dezimal 
+		 ohne Vorzeichen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="120"><p class="TabellenInhalt">d</p></td>
+		<td style="vertical-align: top;" width="413"><p class="TabellenInhalt">Dezimal 
+		 mit Vorzeichen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="120"><p class="TabellenInhalt">x</p></td>
+		<td style="vertical-align: top;" width="413"><p class="TabellenInhalt">Hexadezimal 
+		 Kleinschreibung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="120"><p class="TabellenInhalt">X</p></td>
+		<td style="vertical-align: top;" width="413"><p class="TabellenInhalt">Hexadezimal 
+		 Großschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="120"><p class="TabellenInhalt">s</p></td>
+		<td style="vertical-align: top;" width="413"><p class="TabellenInhalt">String</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dem Formatzeichen muss ein &#39;<b>%</b>&#39; vorangestellt 
+ sein. Bei numerischen Formaten kann die Länge sowie führende Nullen parametriert 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string    s, partstr</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">partstr := &#39;This is the part to add&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := printf(&#39;String                        : 
+ %s&#39;, partstr)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := printf(&#39;Decimal without / with sign   : 
+ %u / %d&#39;, 123, -456)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := printf(&#39;Hex 4 digits with leading zero: %04x&#39;, 
+ 123)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrToD" id="StrToD"></a>StrToD</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double StrToD(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert den durch <b>source</b> bezeichneten String 
+ in eine Gleitkommazahl und liefert das Ergebnis als Double zurück.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double    d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := StrToD(&#39;-1.7567E+02&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrToL" id="StrToL"></a>StrToL</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long StrToL(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert den durch <b>source</b> bezeichneten String 
+ in einen Long-Wert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long    l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := strtol(&#39;-1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrToLEx" id="StrToLEx"></a>StrToLEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long StrToLEx(string source,<br/>
+                           long 
+ radix)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert eine in dem durch <b>source</b> bezeichneten 
+ String enthaltene Zahl in einen Long-Wert</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Parameter <b>radix</b> gibt die dabei für die im 
+ String gespeicherte Zahl angenommene Zahlenbasis an. Zulässig sind die 
+ Werte 0, sowie 2 bis 36. Wird als radix 0 angegeben, bestimmen die ersten 
+ Zeichen des Strings die zu verwendende Zahlenbasis:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="123"><p class="TabellenÜberschrift">Anfangszeichen</p></td>
+		<td style="vertical-align: top;" width="411"><p class="TabellenÜberschrift">Zahlenbasis</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="123"><p class="TabellenInhalt">1...9</p></td>
+		<td style="vertical-align: top;" width="411"><p class="TabellenInhalt">Dezimaldarstellung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="123"><p class="TabellenInhalt">0x</p></td>
+		<td style="vertical-align: top;" width="411"><p class="TabellenInhalt">Hexadezimaldarstellung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="123"><p class="TabellenInhalt">0</p></td>
+		<td style="vertical-align: top;" width="411"><p class="TabellenInhalt">Oktaldarstellung</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Konvertierung endet beim ersten nicht wandelbaren 
+ Zeichen im String.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long    l, k</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := StrToLEx(&#39;0x1D7F&#39;, 0)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">k := StrToLEx(&#39;0001110101111111&#39;, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="UToStr" id="UToStr"></a>UToStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string UToStr(dword x, long radix)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konvertiert den dWord-Wert <b>x</b> in einen String. 
+ Der Parameter <b>radix</b> legt die Basis fest, auf der die Konvertierung 
+ stattfinden soll - mögliche Werte liegen im Bereich von 2 bis 36.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dword    d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := 1247</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := UToStr(d, 10)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Decimal     : &#39; 
+ + s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := UToStr (d, 16)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Hexadecimal : &#39; + s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := UToStr (d, 2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Binary      : 
+ &#39; + s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

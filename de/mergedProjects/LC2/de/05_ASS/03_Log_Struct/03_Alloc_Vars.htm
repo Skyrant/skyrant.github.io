@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.3.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Variablenzuordnungen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Solltaktzeit,Sollwert,Variable,Variablenzuordnung" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Variablenzuordnungen">
+        <span>Variablenzuordnungen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Variablenzuordnungen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Fertigungsstruktur | Fertigungsknoten 
+ | Variablenzuordnungen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Jedem Knoten können Variablen einer Verbindung zugeordnet 
+ werden. Zugeordnete Variablen können im WebClient angezeigt werden und 
+ mit Statistiken zu diesem Knoten verknüpft werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Knoten</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl des Knotens. 
+		 Wird automatisch befüllt und kann geändert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Variable</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Variablen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Anzeigen (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird die Variable 
+		 im WebClient in der Übersicht angezeigt; sonst nicht.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Änderbar (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, kann die Variable 
+		 im WebClient in der Übersicht editiert werden, wenn der Benutzer 
+		 die entsprechenden Rechte für diesen Knoten besitzt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Sortiernummer (optional)</p></td>
+		<td><p class="TabellenInhalt">Mehrere Variablen können durch Angabe 
+		 einer Sortiernummer aufsteigend sortiert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Protokoll (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird die Variable 
+		 mit dem letzten Wert ins Schichtprotokoll übernommen. Wenn nicht 
+		 aktiv, wird die Variable nicht im Schichtprotokoll gespeichert.</p>
+		<p class="TabellenInhalt">Das Flag &quot;Statistik-relevant&quot; 
+		 sorgt auch dafür, dass für die KPI-Berechnung benötigte Werte 
+		 ins Schichtarchiv geschrieben werden. Es ist also nicht nötig, 
+		 das Flag doppelt zu setzen.</p>
+		<p class="TabellenInhalt"><img src="../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" border="0"/>: Handelt 
+		 es sich um eine Variable vom Typ Sollstückzahl oder Soll-Taktzeit, 
+		 die über Sollwertvorgaben gepflegt werden soll, darf diese Checkbox 
+		 nicht aktiv sein. Die Checkbox muss aktiv sein, wenn es sich um 
+		 statistikrelevante Variablen vom Typ Sollstückzahl oder Soll-Taktzeit 
+		 handelt, die für KPI-Auswertungen ohne Sollwertvorgaben oder für 
+		 vererbte Sollwertvorgaben (Spalte Automatisch berechnen) herangezogen 
+		 werden sollen. Siehe auch das eigene Kapitel &quot;Konfiguration 
+		 von Sollwerten&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Statistik-relevant (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird die Variable 
+		 für statistische Berechnungen verwendet. Variablen vom Typ Aktuellstückzahl 
+		 / Sollstückzahl oder Soll-Taktzeit können für den gewählten Knoten 
+		 statistikrelevant sein und bilden damit entsprechend ihres Typs 
+		 die Basis für statistische Berechnungen (die Beschreibung der 
+		 KPIs PREAL, PTARG, CTARG).</p>
+		<p class="TabellenInhalt"><img src="../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" border="0"/>: Variablen 
+		 für Online-KPIs dürfen nicht statistik-relevant markiert sein.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Autom. berechnen (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird die Variable 
+		 über die automatische Sollwertberechnung versorgt.</p>
+		<p class="TabellenInhalt"><img src="../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" border="0"/>: Werden solche 
+		 Werte für die KPI-Berechnung herangezogen, müssen die Spalten 
+		 &quot;Schichtprotokoll&quot; und &quot;Statistik-relevant&quot; 
+		 auf 1 gesetzt sein.</p>
+		<p class="TabellenInhalt">Siehe auch Unterkapitel &quot;Automatische 
+		 Sollwertberechnung&quot;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Bauteilbez. speichern (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird die Variable 
+		 inklusive Bauteildetails gespeichert (relevant für das Modul Bauteilverfolgung).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">KPI-Typ</p></td>
+		<td><p class="TabellenInhalt">Verweis auf einen KPI-Typ. Dieses 
+		 Feld wird bei Variablen für Online-KPIs automatisch mit dem entsprechenden 
+		 KPI-Typ befüllt. Nur zur Information, schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">KPI Delta</p></td>
+		<td><p class="TabellenInhalt">Dieser Wert ist wichtig für Online-KPIs, 
+		 danach richtet sich die AppEngine bei der Berechnung. Dieser Eintrag 
+		 kann beim jeweiligen KPI gepflegt werden. Hier dient es nur der 
+		 Information, schreibgeschützt.</p></td>
+	</tr>
+	
+	
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Aktueller Wert</p></td>
+		<td><p class="TabellenInhalt">Hier wird der aktuelle Wert der Variablen 
+		 angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Letztes Update</p></td>
+		<td><p class="TabellenInhalt">Hier wird der Zeitstempel der letzten 
+		 Wertänderung der Variablen angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Kontextmenü</h6>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Wert setzen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch einen Klick mit der rechten Maustaste auf eine 
+ Variable entweder im Navigationsbaum oder am Anfang der Tabellenzeile 
+ öffnet sich ein Kontextmenü. Darüber kann der Wert der Variable gesetzt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für Testzwecke kann der Wert einer Variablen gesetzt 
+ werden, damit er im WebClient sichtbar wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In dem erscheinenden Dialog kann der neue Wert der 
+ Variable eingegeben werden, die Syntax der Eingabe wird überwacht (z.B. 
+ keine Buchstaben bei num. Variablen). Durch Aktivieren der Checkbox &quot;Set 
+ Value to NULL&quot; wird der Wert der Variablen auf NULL gesetzt. Der 
+ derzeitige Wert der Variable ist im Eingabefeld vorbelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn die Variable mit Weitergabe an Gateway parametriert 
+ ist, wird der geänderte Wert erst dann eingetragen, wenn die Übergabe 
+ des Wertes vom Gateway mit <i>gw_val_transmitted</i> quittiert wurde!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

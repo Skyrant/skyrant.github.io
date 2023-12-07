@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SQL","type":"item","tilePath":"","description":"","url":"de/02_Handling/02_Menues/01_SQL.htm"},{"name":"Einstellungen","type":"item","tilePath":"","description":"","url":"de/02_Handling/02_Menues/02_Settings.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rhpml majorversion="7" minorversion="13">
+	<folders>
+		<folder>
+			<name>Win_2012_11g</name>
+		</folder>
+		<folder>
+			<name>Win_2012_12c</name>
+		</folder>
+		<folder>
+			<name>RHEL_64_11g</name>
+		</folder>
+		<folder>
+			<name>RHEL_67_12c</name>
+		</folder>
+	</folders>
+</rhpml>

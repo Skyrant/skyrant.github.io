@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">ThreadPool</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ThreadPool">
+        <span>ThreadPool</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">ThreadPool</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte dieses Typs erlauben die parallele Abarbeitung von Operationen innerhalb eines einzigen Scripts. Dies eignet sich besonders für Jobs, die mehrere voneinander unabhängige und potentiell langwierige Aufrufe von externen Servern durchführen müssen (z.B. Up-/Download von Dateien, Aufruf von Web-Services o.ä.), da dann alle diese Aufrufe parallel stattfinden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Typ ThreadPool hat folgende Eigenschaften und Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Konstruktor ThreadPool(name, threadcount):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dient zum Erzeugen von Threadpool-Objekten, wobei optional gleich dessen Name (siehe Eigenschaft &quot;name&quot;) und die maximale Anzahl Threads für diesen Pool vorgegeben werden können. Beispiel: var tp = new ThreadPool(&#39;downloads&#39;, 3).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Eigenschaft name (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Name des Thread-Pools. Wird zum Benennen der Threads benutzt (erscheint z.B. in Logmeldungen). Kann nur geändert werden, wenn der Thread-Pool nicht (oder nicht mehr) läuft (siehe Eigenschaft &quot;running&quot;).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Eigenschaft threadcount (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Maximale Anzahl zu erzeugender Threads (parallel ablaufende Operationen). Kann nur geändert werden, wenn der Thread-Pool nicht (oder nicht mehr) läuft (siehe Eigenschaft &quot;running&quot;).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Eigenschaft running (readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt an, ob Threads im Pool laufen. Wird &quot;true&quot;, wenn die erste Operation gestartet wird, wird &quot;false&quot;, wenn waitTillDone() beendet wurde.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Die Threads im Pool laufen weiter, auch wenn alle Operationen beendet sind, es könnten ja jederzeit neue Operationen hinzukommen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Funktion exec(operation):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Startet die angegebene Operation. Dies kann sein:</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">eine Zeichenkette: wird wie mittels &quot;eval()&quot; ausgewertet.</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">eine Funktion: wird in einem Thread aufgerufen.</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ein Objekt: falls es eine Funktion &quot;run()&quot; enthält, wird diese aufgerufen.</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ein Java-Runnable: seine Methode &quot;run()&quot; wird aufgerufen.</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ein Java-Callable: seine Methode &quot;call()&quot; wird aufgerufen.</p>
+
+<p class="Aufzählung2" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Aufruf von exec(operation) gibt ein Objekt vom Typ AsyncResult zurück (siehe unten).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Funktion waitTillDone():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wartet, bis alle Operationen beendet sind und stoppt alle Threads im Pool</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Das von <b>exec(operation)</b> zurückgegebene <b>AsyncResult</b>-Objekt hat folgende Eigenschaften und Methoden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Funktion cancel(mayInterrupt):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bricht die Ausführung der betreffenden Operation ab. Sofern sie noch nicht begonnen hat, wird sie aus der Warteschlange gelöscht. Bereits gestartete Operationen werden nur abgebrochen, wenn &quot;mayInterrupt&quot; als true angegeben ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Funktion awaitResult():</p>
+<p class="BodyText" data-condition="Others:Deutsch">wartet auf Beendigung der Operation und gibt deren Ergebnis zurück:</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">bei Auswertung einer Zeichenkette das Ergebnis des letzten darin vorkommenden Ausdrucks</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">bei Auswertung einer Funktion deren Ergebnis</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">bei Auswertung eines Objekts oder Java-Runnable: das Objekt</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">bei Auswertung eines Java-Callable das Ergebnis der Methode &quot;call()&quot;</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls bei der Abarbeitung der asynchronen Operation eine Ausnahme aufgetreten ist, gibt awaitResult() ein Java-ExecutionException-Objekt zurück, das die eigentliche Ausnahme über getCause() zur Verfügung stellt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Eigenschaft done (readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt an, ob die Operation beendet ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Eigenschaft cancelled (<span class="TextkörperZchn">readonly):</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextkörperZchn">G</span><span class="TextkörperZchn">ibt an, ob die Operation abgebrochen wurde.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Jeder ThreadPool enthält eine bestimmte Anzahl von Threads. Es können mehr Aufgaben an einen ThreadPool delegiert werden, als dieser Threads enthält. Überzählige Aufgaben werden in eine Warteschlange eingereiht und ausgeführt, sobald eine andere fertig wird.</p>
+
+
+</body></html>

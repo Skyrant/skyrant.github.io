@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"JOB_POLLER","type":"item","tilePath":"","description":"","url":"de/Basics/JOB_POLLER.htm"},{"name":"Task_dbtimesync","type":"item","tilePath":"","description":"","url":"de/Basics/Task_dbtimesync.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

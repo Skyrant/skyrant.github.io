@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="System_Update_Legato_de.docx" />
+<meta name="build tags" content="Deutsch" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Update WebApplikation</title>
+<link rel="stylesheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Update WebApplikation</h1>
+<h2><a name="Vorbereitungen" id="Vorbereitungen"></a>Vorbereitungen</h2>
+<p class="BodyText">WebApplikation Server stoppen.</p>
+<h2><a name="Update" id="Update"></a>Update</h2>
+<h3>Tomcat</h3>
+<p class="BodyText">Löschen aller Log-Dateien (.log) der WA im Pfad "C:\LegatoAppData\logs\webapp\"</p>
+<p class="BodyText">Den Ordner der bestehenden WA umbenennen (z.B. Ordner "Legato" unter "C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\" umbenennen in "old_LegatoVxxx") und als Sicherung in ein temporäres Verzeichnis verschieben.</p>
+<p class="BodyText">Das war-file der neuen Webapplikation (z.B. Legato_vxxx.war) in ein temporäres Verzeichnis kopieren und entpacken. Dazu die Dateiendung ".war" in ".zip" umbenennen und den ZIP-Ordner entpacken.</p>
+<p class="BodyText">Den entpackten Ordner als neue WA-Version in den regulären Ordner der WebApps des Applikationsservers kopieren (z.B. "C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\") und den Verzeichnisnamen der neuen WebApp in den offiziellen Verzeichnisnamen der Vorgängerversion umbenennen (z.B. "Legato").</p>
+<p class="BodyText">Evtl. nachträglich durchgeführte projektspezifischen Erweiterungen (z.B. themes) aus dem Sicherungsverzeichnis der alten WebApp (z.B. "old_LegatoVxxx") in das entsprechende Verzeichnis der neuen WebApp kopieren.</p>
+<p class="BodyText">Alle Daten im "work"-Verzeichnis des Applikationsservers (z.B. "C:\Program Files\Apache Software Foundation\Tomcat 7.0\work\") löschen. Dort befinden sich u.a. die kompilierten Java .class Dateien vor dem Update (Zugriff auf alte Versionen vermeiden!)</p>
+<h3>Unter Glassfish</h3>
+<h4>Über .tar-Datei</h4>
+<p class="BodyText">Auf einem neuen Glassfish-Server existiert das Deploy-Skript noch nicht. Entpacken Sie es manuell aus dem Tar-Archiv.</p>
+<p class="BodyText">Alle Instanzen stoppen (auf allen Maschinen)</p>
+<p class="BodyText">Deploy-Skript ausführen.</p>
+<p class="BodyText">Ggf. Applikationsserver auf weiteren Maschinen starten.</p>
+<p class="BodyText">Neue .war-Datei in den Ordner /config kopieren. In diesem Verzeichnis darf nur genau eine .war-Datei liegen; ggf. löschen Sie die alte.</p>
+<p class="BodyText">Sofern eine angepasste web.xml genutzt werden soll, kopieren Sie diese ins Verzeichnis "/project-data/web.xml".</p>
+<p class="BodyText">Erstellen Sie eine .tar-Datei</p>
+<h4>Manuelles Deployment</h4>
+<p class="BodyText">Alle Instanzen stoppen.</p>
+<p class="BodyText">NUR, wenn neue .tar-Datei deployed wird: alle alten Konfigurations-Verzeichnisse löschen:</p>
+<p class="TextCode">rm –r config/*</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Alte Konfigurations-Verzeichnisse löschen:</p>
+<p class="TextCode">rm –fr logs/*</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Tar-Archiv entpacken.</p>
+<p class="BodyText">Alte Domänen-Dateien entfernen:</p>
+<p class="TextCode">rm –r nodes clusterDomain</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Domäne wiederherstellen (dauert ca. 5 Minuten)</p>
+<p class="TextCode">./GFserver3 restore</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Postchange-Skript ausführen:</p>
+<p class="TextCode">./GFserver3 exec –f config/hooks/postchange</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Applikationsserver starten (Befehl auf jeder Maschine des Clusters ausführen, beginnend mit dem Admin-Server):</p>
+<p class="TextCode">./GFserver3 start --all</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Alle Instanzen stoppen (auf allen Maschinen):</p>
+<p class="TextCode">./GFserver3 stop --all</p>
+<p class="TextCode">&#160;</p>
+<h2><a name="Nacharbeiten" id="Nacharbeiten"></a>Nacharbeiten</h2>
+<p class="BodyText">WebApplikation Server starten.</p>
+</body>
+</html>

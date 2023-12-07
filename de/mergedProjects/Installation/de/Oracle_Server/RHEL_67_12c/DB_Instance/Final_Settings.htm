@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.4.4.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Abschließende Einstellungen</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Abschließende Einstellungen">
+        <span>Abschließende Einstellungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Abschließende Einstellungen</h2>
+<h3 data-condition="Others:Deutsch"><a id="Parameter_anpassen"></a>Parameter anpassen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Nun müssen noch einige Parameter überprüft und angepasst 
+ werden.</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch"><span style="font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; 
+											 color: #000000; font-style: normal; 
+											 font-variant-ligatures: normal; 
+											 font-variant-caps: normal; 
+											 font-weight: normal; letter-spacing: normal; 
+											 orphans: 2; text-transform: none; 
+											 white-space: normal; widows: 2; 
+											 word-spacing: 0px; -webkit-text-stroke-width: 0px;">Öffnen 
+ Sie ein Terminal und verbinden sich als Systemadministrator mit der neuen 
+ Datenbank-Instanz. In unserem Fall lautet der Befehl hierfür:</span></p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: &#39;Courier New&#39;; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch">sqlplus<span class="Apple-converted-space"> </span><a href="mailto:sys/system@LEGATO" style="">sys/system@LEGATO</a><span class="Apple-converted-space"> </span>as sysdba</p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: &#39;Courier New&#39;; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/params1.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch">Anschließend kann man sehen, ob die 
+ Instanz hochgefahren wurde. Mit select * from dual; kann man auch einen 
+ Test ausführen.</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch">Nun können die Oracle-Initparameter 
+ überprüft werden, zum Beispiel mit dem Aufruf: show parameter nls_length_semantics. 
+ Bitte richten Sie sich immer nach den aktuellen Hinweisen hierzu in unserer 
+ Legato-Systeminstallation.</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch">An dieser Stelle können wir nun auch 
+ den versteckten Parameter b_tree_bitmap_plans setzen. Wichtig hierbei 
+ ist, dass bei versteckten Parametern immer die doppelten Anführungszeichen 
+ benutzt werden müssen. Der komplette Befehl lautet dann:</p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: &#39;Courier New&#39;; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch">alter system set &quot;_b_tree_bitmap_plans&quot; 
+ = false scope = both;</p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: &#39;Courier New&#39;; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">An dieser Stelle muss auch noch der Parameter OPTIMIZER_FEATURES_ENABLE 
+ auf 11.2.0.1 gesetzt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Wird dieser Wert nicht auf 11.2.0.1 geändert, 
+ sondern verbleibt wie voreingestellt auf 12.1.0.2, so kommt es insbesondere 
+ bei 1-DB Systemen zu massiven Performance-Einbußen!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl zum Ändern des Parameters lautet:</p>
+<p class="TextCode" data-condition="Others:Deutsch">alter system set optimizer_features_enable=&#39;11.2.0.1&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/optimizer.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Autostart_für_Instanz"></a>Autostart für Instanz</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die soeben erstellte Datenbank-Instanz LEGATO ist in 
+ der Datei /etc/oratab eingetragen worden. Der User oracle kann diese Datei 
+ zum Editieren öffnen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ vi /etc/oratab</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image115.png" alt="" width="700" height="411" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wie an dem abschließenden N (für &quot;no&quot;) in der Zeile, 
+ die mit &quot;LEGATO&quot; beginnt (hier: die vorletzte Zeile), erkennbar, wird 
+ die Instanz per Default <b>nicht</b> zusammen mit dem Datenbanksystem 
+ gestartet. Dieses Verhalten kann geändert werden, indem das N durch ein 
+ Y (für &quot;yes&quot;) ersetzt wird. Nach dieser letzten Änderung sind Datenbank 
+ und Instanz voll funktionsfähig. Allerdings müssten bei einem Neustart 
+ des Servers sowohl das Datenbank-System als auch der Listener &quot;von 
+ Hand&quot; neu gestartet werden. Nicht zwingend notwendig, aber äußerst 
+ sinnvoll ist deshalb die Erstellung einer Autostart-Funktionalität für 
+ Datenbank. Diese wird im folgenden Abschnitt beschrieben.</p>
+
+
+</body></html>

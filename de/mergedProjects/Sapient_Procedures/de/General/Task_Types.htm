@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Task-Types</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Job,Function,Task-Typ,SSL,Webserver,Webapp,Shiftscache,Root,Print,Paging,Jobs,EventBus,DB-Cache,Task" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Task-Types">
+        <span>Task-Types</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Task-Typen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Sapient Engine kann folgende Task-Typen ausführen:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">calcstask: 
+ Ausführung von Berechneten Werten</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">dbcache: 
+ Cachen von DB-Daten</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">eventbus: 
+ Verwendung von Events, wie beispielsweise Meldungen oder Schichten</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">functions: 
+ Ausführung von Funktionen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">jobs: 
+ Ausführung von Jobs</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">jsonapi: 
+ Ausführung von JSON-API Befehlen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">jsonrpc: 
+ Ausführung von JSON-RPC Befehlen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">paging: 
+ Ausführung von Funkrufen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">print: 
+ Ausführung von ad-hoc-Ausdrucken</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">rabbitmqconnector: 
+ dient zum Verteilen von Funktionen zwischen SEs</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">repository: 
+ Aktualisierung des Repository</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">root: 
+ Basis-Task</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">shiftevents: 
+ Verwendung von Schicht-Ereignissen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">shiftscache: 
+ Cachen von Schichtdaten</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webapp: 
+ Anzeige der WebApplikation</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webclient: 
+ Dient als WebClient</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webserver: 
+ Dient als WebServer</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task-Typen werden mit Standard-Eigenschaften ausgeliefert. 
+ Diese werden verwendet, wenn keine besonderen Eigenschaften für die jeweilige 
+ Instanz der Task definiert wurden. Die Standard-Eigenschaften können in 
+ der Spalte &quot;Properties&quot; in der Tabelle se_tasks für jede Instanz 
+ individuell angepasst werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Welche Tasks jeweils ausgeführt werden sollen, kann 
+ für jede Sapient Engine Instanz separat festgelegt werden. Es kann also 
+ beispielsweise eine Instanz geben, die lediglich Jobs ausführt, ohne die 
+ Webanwendung zur Verfügung zu stellen. Diese Konfiguration erfolgt im 
+ LC2 in der Tabelle se_tasks.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_DB-Cache"></a>Konfiguration DB-Cache</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task DB-Cache hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">updateInterval = 67</p>
+<p class="TextCode" data-condition="Others:Deutsch">updateNodeRels = true</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">dbcache.updateNodeRels 
+ gibt an, ob die Tabelle L_NODE_RELATIONS synchronisiert werden soll. Ist 
+ die Synchronisation aktiv, wird der Inhalt von L_NODE_RELATIONS geprüft 
+ und repariert, falls Unterschiede zur aktuellen Knotenstruktur entdeckt 
+ werden. Dabei wird nicht die Tabelle gelöscht und komplett neu geschrieben, 
+ sondern nur differenzielle DELETE, UPDATE und INSERT Operationen ausgeführt, 
+ so dass die Daten für alle anderen Datenbank-Threads dauernd verfügbar 
+ bleiben.</p>
+<p class="TextkörperfettAufzähl" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>: 
+ </p>
+<p class="TextkörperHinweisAufzähl" data-condition="Others:Deutsch">Diese Option darf nur für genau eine 
+ Instanz der Sapient Engine aktiv sein.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">dbcache.updateInterval 
+ gibt dabei das Intervall in Sekunden an.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_EventBus"></a>Konfiguration EventBus</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task EventBus hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">dispatcherthreads = 1</p>
+<p class="TextCode" data-condition="Others:Deutsch">notifierthreads = 4</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">dispatcherthreads 
+ gibt an, wieviele Threads dem Dispatcher  zur Verfügung stehen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">notifierthreads 
+ gibt an, wieviele Threads dem Notifier zur Verfügung stehen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_Functions"></a>Konfiguration Functions</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Functions hat standardmäßig keine Eigenschaften. 
+ Falls gewünscht, können die folgenden Eigenschaften pro Task angegeben 
+ werden, um die verwendete Version der JavaScript-Sprache zu definieren:</p>
+<p class="TextCode" data-condition="Others:Deutsch">js.version = 0</p>
+<p class="TextCode" data-condition="Others:Deutsch">#js.optimization = 9</p>
+<p class="TextCode" data-condition="Others:Deutsch">updateCheckSeconds = 0</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die individuellen Werte haben die folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.version 
+ (Integer) setzt die Version der JavaScript-Sprache, die die Sapient Engine 
+ verwenden soll. Mögliche Werte sind 0 (Rhino Default), 100 bis 180 für 
+ die JavaScript Versionen 1.0 bis 1.8, oder 200 für ECMAScript 6. Default 
+ ist 0.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.optimization 
+ (Integer) setzt das Optimierungslevel auf Werte von -1 (Interpreter) bis 
+ 9 (optimiertes Kompilieren). Default ist 9.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">updateCheckSeconds 
+ (Integer) setzt das Intervall, in dem das Repository auf Updates überprüft 
+ werden soll. Um die Prüfung zu deaktivieren, kann ein Wert kleiner / gleich 
+ 0 eingegeben werden. In produktiven Umgebungen sollte die Prüfung deaktiviert 
+ sein, da eine Überprüfung der Skripte auf Updates die Aktivität des Dateisystems 
+ erhöht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wegen technischer Restriktionen können weitere Einstellungen 
+ für die JavaScript Engine nur über die .properties-Datei der Sapient Engine 
+ oder durch Definition von Systemeigenschaften mit demselben Namen im Startskript 
+ getroffen werden:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.e4x 
+ (<span style="text-indent: -30px;">Boolean) - XML-Verarbeitung via E4X 
+ aktivieren/deaktivieren. Default true.</span></p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.enhancedJavaAccess 
+ (Boolean) - Zugriff auf geschützte und private Mitglieder von Java-Klassen 
+ und das Abfagen aller Java-Exceptions aktivieren/deaktivieren. Default 
+ true.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.locationInError 
+ (Boolean) - Information über Speicherort des Quellcodes in JavaScript 
+ Fehlerobjekten aktivieren/deaktivieren. Default true.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.parentProtoProperties 
+ (Boolean) - Die speziellen Eigenschaften _parent_ und _proto_ für JavaScript-Objekte 
+ aktivieren/deaktivieren. Default true.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.strictMode 
+ (Boolean) - JavaScript Strict-Mode aktivieren/deaktivieren.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.toStringSource 
+ (Boolean) - Rückgabe desselben Werts wie &quot;toSource&quot; für &quot;toString&quot; 
+ statt des normalen &quot;[object Object]&quot; aktivieren/deaktivieren, 
+ wenn auf Objekte oder Arrays angewendet. Default true.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.V8Extensions 
+ (Boolean) - Zugriff auf ES6-Erweiterungen von JavaScript Engines wie V8, 
+ die noch nicht komplett ES6 unterstützen aktivieren/deaktivieren. Default 
+ true.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.nonEcmaGetYear 
+ (Boolean) - Date.getYear() Abzug von 1900 nur für die Jahre 1900 bis 2000 
+ aktivieren/deaktivieren, statt für alle Jahre wie von ECMA gefordert. 
+ Default false.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.memberExprAsFunctionName 
+ (Boolean) - Die Funktion zum Festlegen von Mitgliedern als  &quot;function 
+ object.member(...&quot; als eine alternative Syntax zu &quot;object.member 
+ = function(...&quot; aktivieren/deaktivieren. Default false.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.reservedKeywordAsIdentifier 
+ (Boolean) - Die Verwendung von reservierten Worten als Identifier aktivieren/deaktiveren. 
+ Default false.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.threadsafeObjects 
+ (Boolean) - JavaScript Objekt-Eigenschaften-Maps als thread-sicher aktivieren/deaktivieren. 
+ Default false.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">js.intWithoutDecimals 
+ (Boolean) - Rückgabe von Ganzzahlen ohne Dezimalstellen aktivieren/deaktivieren 
+ (z.B. &quot;5&quot; versus &quot;5.0&quot;). Default true.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist eine dieser Einstellungen sowohl in der .properties-Datei 
+ vorhanden und als Systemeigenschaft im Startskript gesetzt, dann hat die 
+ Einstellung aus dem Startskript Vorrang.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_Jobs"></a>Konfiguration Jobs</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Jobs hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">schedulers = main</p>
+<p class="TextCode" data-condition="Others:Deutsch">main.user = -1</p>
+<p class="TextCode" data-condition="Others:Deutsch">main.startDelay = 1</p>
+<p class="TextCode" data-condition="Others:Deutsch">main.threadCount = 10</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">schedulers 
+ gibt die Scheduler an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">user 
+ gibt die Anzahl Benutzer an, die für diesen Scheduler zur Verfügung stehen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">startDelay 
+ gibt die Start-Verzögerung für diesen Scheduler an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">threadCount 
+ gibt die Anzahl der parallel ausführbaren Jobs in diesem Scheduler an. 
+ Bitte beachten Sie, dass Jobs, die mehrere Threads verwenden (SHIFT_KPI, 
+ TIMESLICES, Aggr_Poller) die Threads von dieser Task ausleihen. Daher 
+ muss die angegebene Anzahl Threads hier hoch genug gewählt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Scheduler sind Ausführungs-Pfade in einem Programm. 
+ Auf Maschinen mit mehreren Prozessoren können Scheduler parallel auf verschiedenen 
+ Prozessoren ausgeführt werden, aber auch auf Systemen mit nur einem einzigen 
+ Prozessor haben Programme mit mehreren Schedulers Vorteile: Wenn ein Scheduler 
+ auf irgendwelche externe Ereignisse warten muss (z.B. das Bearbeiten einer 
+ Datenbank-Abfrage), kann der Prozessor in der Zwischenzeit einen anderen 
+ Scheduler ausführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Sapient Engine werden Scheduler dazu benutzt, 
+ Aufgaben (Jobs) für bestimmte Zeitpunkte zu planen und um mehrere Aufgaben 
+ parallel auszuführen. Beim Start der Sapient Engine muss mindestens ein 
+ Scheduler namens main angelegt werden, damit die Initialisierungs-Jobs 
+ überhaupt ausgeführt werden können und sich die Sapient Engine nicht sofort 
+ wieder beendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Eintrag jobs.schedulers in der Konfigurationsdatei 
+ enthält, durch Kommata getrennt, die Namen aller beim Start anzulegenden 
+ Schedulers.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Anzahl an Threads und Datenbankverbindungen der 
+ Task Jobs sollte größer sein als die Summe der benötigten Threads für 
+ die Jobs SHIFT_KPI, TIMESLICES, Aggr_Poller, die auf der jeweiligen Sapient 
+ Engine Instanz laufen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_Funkruf"></a>Konfiguration Paging</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Paging hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">suppress-recipients = Mr.X,Mr.Y,Mr.Z</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">paging.suppress-recipients 
+ gibt die Liste der  unterdrückten Funkruf-Empfänger an (Empfängernamen 
+ aus m_recipients.rec_name). Die Namen können als komma-separierte Liste 
+ hinzugefügt werden (ohne Leerzeichen nach den Kommata). Die Empfängernamen 
+ dürfen kein Komma enthalten.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_Print"></a>Konfiguration Print</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Print hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">result.path=/web/app/assets/images/</p>
+<p class="TextCode" data-condition="Others:Deutsch">header.path=/web/app/assets/print/print_header.png</p>
+<p class="TextCode" data-condition="Others:Deutsch">domain=localhost</p>
+<p class="TextCode" data-condition="Others:Deutsch">port=4444</p>
+<p class="TextCode" data-condition="Others:Deutsch">username=print</p>
+<p class="TextCode" data-condition="Others:Deutsch">password=print</p>
+<p class="TextCode" data-condition="Others:Deutsch">driver.key=webdriver.chrome.driver</p>
+<p class="TextCode" data-condition="Others:Deutsch">driver.binary=selenium.chrome.driver-3.7.0.jar</p>
+<p class="TextCode" data-condition="Others:Deutsch">dashboard.baseurl=<a href="http://localhost:8080/app/dashboards/" target="_blank" title="http://localhost:8080/app/dashboards/" rel="noreferrer noopener">http://localhost:8080/app/dashboards/</a></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">result.path 
+ gibt an, in welchem Verzeichnis die Print-Reports abgelegt werden sollen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">header.path 
+ gibt an, in welchem Verzeichnis das Bild für die Kopfzeile des Reports 
+ liegt.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">domain 
+ gibt die Domäne an, in der sich der Printserver befindet.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">port 
+ gibt den Port des Printservers an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">username 
+ gibt den Benutzer an, mit dem der Druck ausgeführt wird (und dessen Benutzereinstellungen, 
+ Theme etc. demzufolge verwendet werden).</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">password 
+ Passwort des Print-Benutzers.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">driver.key 
+ gibt den Treiber an, der vom Printserver verwendet wird.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">driver.binary 
+ gibt den Binär-Treiber an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">dashboard.baseurl 
+ gibt die IP-Adresse und den Port des Printservers an. Somit kann der Printserver 
+ auf einer anderen Instanz laufen. Lässt man ihn weg, wird <a href="http://localhost:8080/app/dashboards/" target="_blank" title="http://localhost:8080/app/dashboards/" rel="noreferrer noopener">http://localhost:8080/app/dashboards/</a> 
+ als Default verwendet.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Konfiguration_Rabbitmqconnector"></a>Konfiguration 
+ Rabbitmqconnector</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Rabbitmqconnector hat standardmäßig folgende 
+ Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">rabbitMqUri = amqp://rabbit:carrot@localhost:5672</p>
+<p class="TextCode" data-condition="Others:Deutsch">exchangeName = sapient-eventbus</p>
+<p class="TextCode" data-condition="Others:Deutsch">publishingThreadCount = 1</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">rabbitMqUri 
+ gibt den RabbitMq-Server, den virtuellen Host und die Anmeldedaten an. 
+ Muss im Format amqp://user:passwort@host:port/vhost angegeben werden. 
+ Wird der defaultmäßige virtuelle Host verwendet, muss das Format amqp://user:passwort@host:port 
+ sein (ohne abschließenden Schrägstrich). </p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">exchangeName 
+ gibt den Namen des Exchange an, der verwendet wird, um Nachrichten zu 
+ verteilen. Default ist &#39;sapient-eventbus&#39;</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">publishingThreadCount 
+ gibt die Anzahl Threads an, die verwendet werden, um Nachrichten an RabbitMq 
+ zu senden. Default ist 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Benutzer, der verwendet wird, um sich mit RabbitMq 
+ zu verbinden, muss die folgenden Privilegien auf dem verwendeten virtuellen 
+ Host haben:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">configure, 
+ write, read Berechtigungen auf den konfigurierten Exchange</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">configure, 
+ write, read Berechtigungen auf serverseitig erstellte Namen (beginnend 
+ mit &quot;amq.gen&quot;) für die temporären Queues</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es empfiehlt sich, einen dedizierten virtuellen Host 
+ nur für den zugeteilten Event-Bus zu erstellen. Dann kann man dem konfigurierten 
+ RabbitMq-Benutzer configure, write und read Berechtigungen für den gesamten 
+ virtuellen Host geben, ohne dass er andere Applikationen, die denselben 
+ RabbitMq-Server benutzen, beeinträchtigen kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn er gestartet ist, tut &#39;rabbitmqconnector&#39; zwei 
+ Dinge:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Er 
+ verbindet sich mit dem Instanz-internen Event-Bus. Alle Ereignisse, die 
+ auf diesem Event-Bus veröffentlicht werden (außer denen mit aeInst=0, 
+ die nicht für andere Instanzen vorgesehen sind), werden an RabbitMq gesendet.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Er 
+ verbindet sich mit RabbitMq. Alle Ereignisse, die von RabbitMq empfangen 
+ werden (außer denen, die von der Instanz der Task stammen) werden auf 
+ dem internen Event-Bus veröffentlicht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nachrichten, die an RabbitMq geschickt werden, werden 
+ an einen &quot;Fan-Out&quot;-Exchange gesendet. Dieser Exchange kann entweder 
+ von einem Administrator erstellt werden oder automatisch durch die Task 
+ beim Start (wenn sie die nötigen Privilegien dazu hat).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um Nachrichten von diesem Exchange zu empfangen, erstellt 
+ die Task eine kurzlebige Queue. RabbitMq entfernt diese Queue automatisch, 
+ wenn sich der Client abmeldet; es muss keine Aufräum-Aktion durch einen 
+ Administrator durchgeführt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Der RabbitMq-Server muss entsprechend dimensioniert 
+ sein, so dass er die Menge der  von den Instanzen generierten Nachrichten 
+ bearbeiten kann. Falls der Server überlastet wird, oder falls eine Instanz 
+ zu lange die Netzwerkverbindung verliert, können Nachrichten verloren 
+ gehen.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Konfiguration_Root"></a>Konfiguration Root</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Root hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">defaultConPoolSize = 0</p>
+<p class="TextCode" data-condition="Others:Deutsch">threads = 2</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">defaultConPoolSize 
+ gibt die Default-Größe des Verbindungspools für Scheduler an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">threads 
+ gibt die Anzahl verfügbarer Threads für diese Task an.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Konfiguration_Shiftscache"></a>Konfiguration 
+ Shiftscache</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Shiftscache hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">futureInterval = 05:00:00</p>
+<p class="TextCode" data-condition="Others:Deutsch">historyInterval = 01:00:00</p>
+<p class="TextCode" data-condition="Others:Deutsch">updateInterval = 00:05:00</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">futureInterval 
+ gibt an, wie lange in die Zukunft Schichten gecacht werden sollen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">historyInterval 
+ gibt an, wie lange in die Vergangenheit Schichten gecacht werden sollen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">updateInterval 
+ gibt an, in welchem Intervall auf Änderungen geprüft werden soll.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Konfiguration_Webapp"></a>Konfiguration Webapp</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Webapp hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">appname=Legato Sapient (engine)</p>
+<p class="TextCode" data-condition="Others:Deutsch">x_ua_compatible=IE=edge</p>
+<p class="TextCode" data-condition="Others:Deutsch">x_frame_options=SAMEORIGIN</p>
+<p class="TextCode" data-condition="Others:Deutsch">content_security_policy=</p>
+<p class="TextCode" data-condition="Others:Deutsch">content_security_policy_report_only=</p>
+<p class="TextCode" data-condition="Others:Deutsch"># content_security_policy_report_only=default-src &#39;none&#39;; 
+ script-src &#39;self&#39;; connect-src &#39;self&#39;; img-src &#39;self&#39;; style-src &#39;self&#39; 
+ &#39;unsafe-inline&#39;; font-src &#39;self&#39;; frame-src: &#39;self&#39;;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">appname 
+ gibt den Namen der Webapp an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">x_ua_compatible 
+ enthält die <span style="font-family: &#39;Palatino Linotype&#39;; font-size: 14.6667px; 
+					 color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; 
+					 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+					 text-decoration-style: initial; text-decoration-color: initial; 
+					 background-color: #ffffff;">User Agent Kompatibilitäts-Erklärung, 
+ die in generierte Seiten eingefügt wird. Vgl. <a href="http://msdn.microsoft.com/de-de/library/cc817574.aspx">http://msdn.microsoft.com/de-de/library/cc817574.aspx</a>). 
+ </span><span style="font-family: &#39;Palatino Linotype&#39;; font-size: 14.6667px; 
+				 color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; 
+				 orphans: 2; text-indent: 0px; widows: 2; -webkit-text-stroke-width: 0px; 
+				 text-decoration-style: initial; text-decoration-color: initial;">Generiert 
+ einen &quot;X-UA-kompatiblen&quot; Header, der die definierten Werte enthält. 
+ </span><span style="font-family: &#39;Palatino Linotype&#39;; font-size: 14.6667px; 
+				 color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; 
+				 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+				 text-decoration-style: initial; text-decoration-color: initial; 
+				 background-color: #ffffff;">Es können mehrere Werte definiert 
+ und durch Semikolon getrennt eingegeben werden.</span><span style="font-family: &#39;Palatino Linotype&#39;; 
+															 font-size: 14.6667px; 
+															 color: #000000; 
+															 font-variant-ligatures: normal; 
+															 font-variant-caps: normal; 
+															 orphans: 2; 
+															 text-indent: 0px; 
+															 widows: 2; 
+															 -webkit-text-stroke-width: 0px; 
+															 text-decoration-style: initial; 
+															 text-decoration-color: initial;"> 
+ Mögliche Werte sind:</span></p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"> ie=edge 
+ um Microsoft Edge zu verwenden.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">chrome=1 
+ damit der IE das &quot;Chrome Frame&quot; Plug-in verwendet, um Seiten 
+ zu rendern<span style="font-family: &#39;Palatino Linotype&#39;; font-size: 14.6667px; 
+				 color: #000000; font-style: normal; font-variant-ligatures: normal; 
+				 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+				 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+				 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+				 text-decoration-style: initial; text-decoration-color: initial;">.</span></p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">x_frame_options 
+ <span style="font-family: &#39;Palatino Linotype&#39;; font-size: 11pt;">steuert, 
+ ob die Web-Applikation in andere Seiten eingebettet werden darf. Da die 
+ einzelnen Ansichten ja bereits eingebettet in der Hauptseite der Web-Applikation 
+ angezeigt werden müssen, gestatten diese immer das Einbetten in Seiten 
+ der gleichen Domäne. Nur bei NONE wird auch das Einbetten in andere Seiten 
+ gestattet. Mögliche Werte sind:</span></p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; margin-left: 60px;" data-condition="Others:Deutsch">DENY 
+ - Einbetten der Web-Applikation in andere Seiten nicht erlaubt.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; margin-left: 60px;" data-condition="Others:Deutsch">ALLOW-FROM 
+ URL-Liste - Web-Applikation darf nur in aufgeführte Seiten eingebettet 
+ werden.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; margin-left: 60px;" data-condition="Others:Deutsch">SAMEORIGIN <span>- 
+ Einbetten nur in Seiten erlaubt, die aus der gleichen Domäne wie die Web-Applikation 
+ kommen (Default).</span></p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; margin-left: 60px;" data-condition="Others:Deutsch">NONE 
+ - Einbetten der Web-Applikation in beliebige Seiten erlaubt.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Konfiguration_Webclient"></a>Konfiguration 
+ Webclient</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Webclient hat standardmäßig folgende 
+ Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">https = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.keystorefile = keystore.jks</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.keystorepass = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.keymanagerpass = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.truststorepass = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf</p>
+<p class="TextCode" data-condition="Others:Deutsch">maxConnectionsPerDestination = 6</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestBufferSize=</p>
+<p class="TextCode" data-condition="Others:Deutsch">responseBufferSize=</p>
+<p class="TextCode" data-condition="Others:Deutsch">maxRedirects=</p>
+<p class="TextCode" data-condition="Others:Deutsch">followRedirects=true</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">https 
+ gibt an, ob der Client https unterstützen soll. Wenn true müssen zusätzlich 
+ die folgenden Angaben korrekt parametriert werden (siehe hierfür <a href="Task_Types.htm#Sapient_Engine_mit_TLS_SSL">Sapient_Engine_mit_TLS__SSL</a>).</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">maxConnectionsPerDestination 
+ gibt die maximale Anzahl an Verbindungen pro Ziel an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">requestBufferSize 
+ gibt die maximale Buffergröße für Anfragen an. Wenn leer, ist die Größe 
+ nicht beschränkt.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">responseBufferSize 
+ gibt die maximale Buffergröße für Antworten an. Wenn leer, ist die Größe 
+ nicht beschränkt.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">maxRedirects 
+ gibt die maximale Anzahl an Redirects an. Wenn leer, ist die Anzahl nicht 
+ beschränkt.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">followRedirects 
+ gibt an, ob der Client Redirects folgen soll (true) oder nicht (false).</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Konfiguration_Webserver"></a>Konfiguration 
+ Webserver</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Task Webserver hat standardmäßig folgende Eigenschaften:</p>
+<p class="TextCode" data-condition="Others:Deutsch">contentdir = web</p>
+<p class="TextCode" data-condition="Others:Deutsch">threads = 500</p>
+<p class="TextCode" data-condition="Others:Deutsch">jmx = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">http = 8080</p>
+<p class="TextCode" data-condition="Others:Deutsch">https = -8443</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.keystorefile = keystore.jks</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.keystorepass = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.keymanagerpass = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf</p>
+<p class="TextCode" data-condition="Others:Deutsch">https.truststorepass = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf</p>
+<p class="TextCode" data-condition="Others:Deutsch">redirsecure = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">http2 = false</p>
+<p class="TextCode" data-condition="Others:Deutsch">http2c = false</p>
+<p class="TextCode" data-condition="Others:Deutsch">jsonapi = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">jsonrpc = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">webapp = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">sessiontimeout = 900</p>
+<p class="TextCode" data-condition="Others:Deutsch"># auth.modules = basic, ldap, userdb</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.modules = userdb</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.userdb = legato</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.provider.url=ldap://server.domain/</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.security.principal=user@domain</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.security.credentials=OBF:1vny1zlo1x8e1vnw1vn61x8g1zlu1vn4</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.com.directory.ldap.people.searchBase=CN=Users,DC=domain,DC=domain,DC=domain</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.com.directory.ldap.people.searchAttributeExtension=@domain</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.com.directory.ldap.baseDN=</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.com.directory.ldap.people.searchAttribute=userPrincipalName</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.security.authentication=simple</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.referral=follow</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.factory.initial=com.sun.jndi.ldap.LdapCtxFactory</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.ldap.version=3</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.ldap.java.naming.factory.url.pkgs=com.sun.jndi</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.jaas.config = /etc/jaas.conf</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.jaas.name = SapientEngine</p>
+<p class="TextCode" data-condition="Others:Deutsch"># meaning of error codes below for Kerberos, see https://technet.microsoft.com/en-us/library/bb463166.aspx</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.jaas.errs.pwd = 23, 24</p>
+<p class="TextCode" data-condition="Others:Deutsch">auth.jaas.errs.user = 6, 8, 18, 21</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.enable = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.extendedFmt = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.retainDays = 14</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.logLatency = true</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.logCookies = false</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.timezone = GMT</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.dateFormat =</p>
+<p class="TextCode" data-condition="Others:Deutsch">requestlog.locale =</p>
+<p class="TextCode" data-condition="Others:Deutsch">upload.storage.path = uploads</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Werte haben folgende Bedeutung:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">http 
+ gibt den http-Port des Webservers an.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">https 
+ gibt den https-Port des Webservers an. Bei Verwendung von https müssen 
+ zusätzlich die folgenden Angaben korrekt parametriert werden (siehe hierfür 
+ <a href="Task_Types.htm#Sapient_Engine_mit_TLS_SSL">Sapient_Engine_mit_TLS__SSL</a>).</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">sessiontimeout 
+ gibt an, nach wie vielen Sekunden ohne Aktivität der Webserver eine neue 
+ Anmeldung an der SE verlangt.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">upload.storage.path 
+ gibt den Pfad an, unter dem in der WebApp hochgeladene Dateien abgelegt 
+ werden sollen. Standardwert ist &quot;uploads&quot;. Der Konfig-Wert wird 
+ relativ zu %sapieng.home% ausgewertet. Natürlich kann man auch einen absoluten 
+ Pfad angeben. Ist gar nichts angegeben, wird &quot;%java.io.tmpdir%/Sapi-Upload&quot; 
+ verwendet. </p>
+<p class="TextkörperfettAufzähl" data-condition="Others:Deutsch"><img src="../02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweisAufzähl" data-condition="Others:Deutsch">Der Pfad muss mit Vorwärts-Slashes 
+ (/) angegeben werden, Backslashes (\) funktionieren nicht!</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">maxConnection 
+ ermöglicht die Einschränkung der Anzahl an gleichzeitigen HTTP-Verbindungen, 
+ die vom Webserver akzeptiert werden. Die Default-Einstellung maxConnection 
+ = 0 schränkt die Anzahl nicht ein. Wird dieser Wert auf eine Zahl größer 
+ 0 gesetzt, verhindert dies, dass der Webserver mehr als die angegebene 
+ Anzahl an Verbindungen gleichzeitig akzeptiert. Dies kann als Schutz gegen 
+ Dienstangriffe oder Überlastung des Servers verwendet werden. </p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">http.acceptors, 
+ http.selectors, https.acceptors und https.selectors können verwendet werden, 
+ um die Anzahl an Jetty Threads manuel einzustellen. Defaultmäßig existieren 
+ diese Einträge nicht, weil Jetty eine angemessene Heuristik verwendet, 
+ um diese Werte basierend auf den Systemfunktionen zu setzen. Um diese 
+ Einstellungen für ein Protokoll (HTTP oder HTTPS) zu ändern, müssen Werte 
+ größer 0 sowohl für &quot;acceptors&quot; als auch für &quot;selectors&quot; 
+ eingegeben werden.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">auth.modules 
+ gibt die erlaubten Authentifizierungsmodule an. Eine detaillierte Beschreibung 
+ der einzelnen Optionen kann in der Installationsanleitung der Sapient 
+ Engine gefunden werden.</p>
+<h4 data-condition="Others:Deutsch"><a id="Sapient_Engine_mit_TLS_SSL"></a>Sapient Engine mit TLS/SSL</h4>
+<div data-conref="../../assets/snippets/SE_TLS_de.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Soll die Sapient Engine TLS (SSL) unterstützen, müssen 
+ ein Java Keystore und Truststore mit einem SSL-Zertifikat für den Server 
+ und den Client erstellt werden. Die Dateien sollten im Konfigurationsverzeichnis 
+ der Sapient Engine abgelegt werden. Zum genauen Vorgehen beim Erstellen 
+ des Zertifikats, siehe bitte: <a href="http://www.eclipse.org/jetty/documentation/current/configuring-ssl.html" target="_blank">http://www.eclipse.org/jetty/documentation/current/configuring-ssl.html</a></p>
+<p class="BodyText">In der Konfiguration der Tasks webserver und webclient 
+ müssen folgende Einstellungen vorgenommen werden:</p>
+<p class="Aufzählung1 Liste1neu">Eintragen des Keystore unter dem Schlüssel &quot;https.keystorefile&quot;, 
+ z.B. &quot;https.keystorefile = keystore.jks&quot;.</p>
+<p class="Aufzählung1 Liste1neu">Eintragen des beim Erstellen des Keystore angegebenen 
+ Kennworts unter dem Schlüssel &quot;https.keystorepass&quot;, z.B. &quot;https.keystorepass 
+ = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf&quot;.</p>
+<p class="Aufzählung1 Liste1neu">Eintragen des Truststore unter dem Schlüssel &quot;https.truststorefile&quot;, 
+ z.B. &quot;https.truststorefile = truststore.jks&quot;.</p>
+<p class="Aufzählung1 Liste1neu">Eintragen des beim Erstellen des Truststore angegebenen 
+ Kennworts unter dem Schlüssel &quot;https.truststorepass&quot;, z.B. &quot;https.truststorepass 
+ = OBF:1cj31sop1x1d1ch71cib1x191sp11cgf&quot;.</p>
+<p class="BodyText"> </p>
+<p class="BodyText">Wird &#39;https.truststorefile&#39; nicht angegeben, wird &#39;https.truststorefile&#39; 
+ auf den Wert von &#39;https.keystorefile&#39; gesetzt, &#39;https.truststorepass&#39; 
+ wird auf den Wert von &#39;https.keystorepass&#39; gesetzt. Dadurch wird Abwärtskompatibilität 
+ gewährleistet.</p>
+<p class="BodyText">Soll ein eigenes Truststore-File verwendet werden, 
+ müssen beide Parameter angegeben werden.</p>
+<p class="BodyText">Für die Task webserver müssen außerdem folgende Einträge 
+ erstellt werden:</p>
+<p class="Aufzählung1 Liste1neu">Eintragen des TCP-Ports, auf dem die Sapient Engine 
+ TLS-Verbindungen annehmen soll unter dem Schlüssel &quot;https&quot;, 
+ z.B. &quot;https = 8443&quot;. Ein Wert größer 0 schaltet gleichzeitig 
+ die TLS-Unterstützung ein.</p>
+<p class="Aufzählung1 Liste1neu">Festlegung, ob die Sapient Engine allen Verkehr 
+ auf sichere Verbindungen umleiten soll und entsprechend den Eintrag &quot;redirsecure&quot; 
+ auf &quot;true&quot; oder &quot;false&quot; setzen.</p>
+<p class="Textkörperfett"> </p>
+<p class="Textkörperfett"><img src="../02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">HTTP/2 über TLS funktioniert nur, wenn Jetty 
+ ALPN korrekt installiert wurde. Das erfordert, dass eine &quot;ALPN boot&quot;-Bibliothek 
+ im Class Path der JVM installiert wird (im Bibliotheksverzeichnis der 
+ SE ablegen reicht nicht). Damit nicht bei jedem Start der Sapient Engine 
+ eine Warnmeldung im Log ausgegeben wird, falls ALPN nicht korrekt konfiguriert 
+ ist, sollte in diesem Fall HTTP/2 über den Eintrag &quot;webserver.http2 
+ = false&quot; in der Konfigurationsdatei ausgeschaltet werden.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch"><a id="Konfiguration_Webserver_Request_Log"></a>Konfiguration Webserver 
+ Request Log</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Angaben betreffen die Konfiguration des Webserver 
+ Request Logs:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webserver.requestlog.enable 
+ gibt an, ob überhaupt ein solches Log geschrieben werden soll.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webserver.requestlog.extendedFmt 
+ gibt an, ob das erweiterte Format oder das NCSA Common Log Format verwendet 
+ werden soll.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webserver.requestlog.retainDays 
+ gibt an, wie viele Tage die Log-Dateien aufgehoben werden sollen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webserver.requestlog.logCookies 
+ gibt an, ob HTTP Cookies auch geloggt werden sollen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">webserver.requestlog.timezone 
+ gibt die Zeitzone an, die für die Zeitstempel in den Log-Dateien verwendet 
+ werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

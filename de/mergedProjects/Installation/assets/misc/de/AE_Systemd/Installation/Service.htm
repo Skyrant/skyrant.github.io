@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>AE Service verwalten</title>
+<link rel="StyleSheet" href="..\..\..\Legato_Systemdokumentation.css" type="text/css" />
+</head>
+
+<body>
+<h2>Application Engine Service verwalten</h2>
+<h3><a name="Service-Status_anzeigen"></a>Service-Status anzeigen</h3>
+<p class="BodyText">Um detaillierte Informationen über eine Serviceeinheit 
+ (entspricht einem Systemdienst)anzuzeigen, geben Sie folgenden Befehl 
+ in die Shell-Eingabeaufforderung ein:</p>
+<p class="TextCode">systemctl status Leappeng_LEGATO.service </p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><img src="../../../Images/AE_systemd/image8.gif" alt="" 
+						 style="border: none;" border="0" /></p>
+<p class="BodyText">Dieser Befehl zeigt den Namen der gewählten Diensteinheit, 
+ gefolgt von der Kurzbeschreibung. Dann folgen ein oder mehrere Felder 
+ der Tabelle &quot;Verfügbare Informationen über Diensteinheiten&quot; 
+ und, falls der Befehl durch den Root-Benutzer ausgeführt wurde, die letzten 
+ Logeinträge.</p>
+<h3><a name="Verfügbare_Informationen_über_Diensteinheiten"></a>Verfügbare 
+ Informationen über Diensteinheiten</h3>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0">
+	<tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Loaded</p></td>
+		<td><p class="TabellenInhalt">Geladen. Information, ob die Diensteinheit 
+		 geladen wurde, der absolute Pfad zur Einheits-Datei und ein Hinweis, 
+		 ob die Einheit aktiv ist.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Active</p></td>
+		<td><p class="TabellenInhalt">Aktiv. Information, ob die Dienst-Einheit 
+		 läuft, gefolgt von einem Zeitstempel.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Main PID</p></td>
+		<td><p class="TabellenInhalt">Haupt-PID. Die PID des entsprechenden 
+		 Systemdienstes gefolgt von seinem Namen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Status</p></td>
+		<td><p class="TabellenInhalt">Status. Zusätzliche Information über 
+		 den entsprechenden Systemdienst.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Process</p></td>
+		<td><p class="TabellenInhalt">Prozess. Zusätzliche Information 
+		 über zugehörige Prozesse.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">CGroup</p></td>
+		<td><p class="TabellenInhalt">C-Gruppe. Zusätzliche Informationen 
+		 über zugehörige Kontroll-Gruppen (CGroups).</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Um nur sicherzustellen, dass eine bestimmte Diensteinheit 
+ läuft, führen Sie folgenden Befehl aus:</p>
+<p class="TextCode">systemctl is-active Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Um herauszufinden, ob eine bestimmte Diensteinheit 
+ aktiviert ist, geben Sie folgenden Befehl ein:</p>
+<p class="TextCode">systemctl is-enabled Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Einen_Dienst_aktivieren"></a>Einen Dienst aktivieren</h3>
+<p class="BodyText">Um eine Diensteinheit (entspricht einem Systemdienst) 
+ so zu konfigurieren, dass sie beim Systemstart automatisch startet, geben 
+ Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung ein:</p>
+<p class="TextCode">systemctl enable Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" style="border: none;" 
+								 alt="" border="0" />:</p>
+<p class="TextkörperHinweis">Für die Installation der Legato Application 
+ Engine empfiehlt es sich, den Dienst zu aktivieren, so dass der Dienst 
+ beim Systemstart automatisch gestartet werden kann. Standardmäßig ist 
+ der Dienst deaktiviert.</p>
+<p class="BodyText">Dieser Befehl liest den [Install] Bereich der gewählten 
+ Diensteinheit und erstellt entsprechende symbolische Links zur Datei &#160;/usr/lib/systemd/system/name.service&#160;file 
+ im Verzeichnis&#160;/etc/systemd/system/&#160;und Unterverzeichnissen. 
+ Dieser Befehl überschreibt allerdings keine bereits existierenden Links. 
+ Um sicherzustellen, dass die symbolischen Links neu erstellt werden, führen 
+ Sie folgenden Befehl als Root aus:</p>
+<p class="TextCode">systemctl reenable Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dieser Befehl deaktiviert die gewählte Diensteinheit 
+ und aktiviert sie sofort wieder.</p>
+<h3><a name="Einen_Dienst_deaktivieren"></a>Einen Dienst deaktivieren</h3>
+<p class="BodyText">Um zu verhindern, dass eine Diensteinheit (entspricht 
+ einem Systemdienst) automatisch beim Systemstart gestartet wird, geben 
+ Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung ein:</p>
+<p class="TextCode">systemctl disable Leappeng_LEGATO.service </p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Einen_Dienst_starten"></a>Einen Dienst starten</h3>
+<p class="BodyText">Um eine Diensteinheit (entspricht einem Systemdienst) 
+ zu starten, geben Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung 
+ ein:</p>
+<p class="TextCode">sudo systemctl start Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dieser Befehl startet die gewählte Diensteinheit in 
+ der aktuellen Sitzung.</p>
+<p class="BodyText">Prüfen Sie, ob der Dienst erfolgreich gestartet wurde, 
+ indem Sie den Status überprüfen.</p>
+<p class="TextCode">systemctl status Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Prüfen Sie, ob die Logdateien leappeng.log und leappeng.err 
+ im Logverzeichnis /var/log/leappeng erstellt wurden. </p>
+<h3><a name="Einen_Dienst_stoppen"></a>Einen Dienst stoppen</h3>
+<p class="BodyText">Um eine Diensteinheit &#160;(entspricht einem Systemdienst) 
+ zu stoppen, geben Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung 
+ ein:</p>
+<p class="TextCode">sudo systemctl stop Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dieser Befehl stoppt die gewählte Diensteinheit in 
+ der aktuellen Sitzung.</p>
+<p class="BodyText">Prüfen Sie, ob der Dienst erfolgreich gestoppt wurde, 
+ indem Sie den Status überprüfen.</p>
+<p class="TextCode">systemctl status Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Einen_Dienst_neu_starten"></a>Einen Dienst neu starten</h3>
+<p class="BodyText">Um eine Diensteinheit (entspricht einem Systemdienst) 
+ neu zu starten, geben Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung 
+ ein:</p>
+<p class="TextCode">sudo restart Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dieser Befehl stoppt die gewählte Diensteinheit in 
+ der aktuellen Sitzung und startet sie sofort wieder.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" style="border: none;" 
+								 alt="" border="0" />:</p>
+<p class="TextkörperHinweis">Wenn die gewählte Diensteinheit nicht läuft, 
+ wird sie durch diesen Befehl trotzdem gestartet.</p>
+<h3><a name="Konfiguration_aktualisieren"></a>Konfiguration aktualisieren</h3>
+<p class="BodyText">Führen Sie folgende Befehle als Root aus, um die Konfiguration 
+ nach den Änderungen an der Datei &quot;Leappeng_LEGATO.service&quot; neu 
+ zu laden. So werden die Änderungen an den Einheiten-Dateien übernommen, 
+ ohne dass das System neu gestartet werden muss.</p>
+<p class="TextCode">sudo systemctl daemon-reload</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die Option &quot;daemon-reload&quot;&#160;aktualisiert 
+ alle Einheiten-Dateien und erstellt den gesamten Abhängigkeitsbaum neu. 
+ Dies wird benötigt, um Änderungen an einer Einheiten-Datei sofort zu übernehmen.</p>
+<p class="BodyText">Wenn die geänderte Einheiten-Datei zu einem laufenden 
+ Dienst gehört, z.B. hier zu &quot;Leappeng_LEGATO.service&quot;, muss 
+ dieser Dienst ebenfalls neu gestartet werden, um die Änderungen zu übernehmen:</p>
+<p class="TextCode">sudo systemctl restart Leappeng_LEGATO.service</p>
+<p class="TextCode">&#160;</p>
+</body>
+</html>

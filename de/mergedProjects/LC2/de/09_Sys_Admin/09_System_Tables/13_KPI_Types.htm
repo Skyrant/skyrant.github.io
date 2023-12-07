@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.7.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="LC2_en6.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">KPI-Typen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="KPI,KPI-Typ" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="KPI-Typen">
+        <span>KPI-Typen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">KPI-Typen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">System-Administration | Systemtabellen | KPI-Typen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Tabelle zeigt alle in Legato verfügbaren KPI-Typen. 
+ Diese Tabelle dient rein Informationszwecken und ist schreibgeschützt.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld        </p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige ID. Wird vom System vergeben.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Name des KPI-Typen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung</p></td>
+		<td><p class="TabellenInhalt">Beschreibung des KPI-Typen und ggf. 
+		 die Formel der Berechnung.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Quelle</p></td>
+		<td><p class="TabellenInhalt">Verweis auf die Quelle des KPI-Typen, 
+		 z.B. Meldungen oder MDE-Zustände.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Klasse</p></td>
+		<td><p class="TabellenInhalt">Verweis auf die KPI-Klasse, der dieser 
+		 Typ zugeordnet ist.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Summierbar?</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = der KPI-Typ kann summiert 
+		 werden, 0 = nicht summierbar.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Einheit</p></td>
+		<td><p class="TabellenInhalt">Verweis auf die Einheit des KPI-Typen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Schicht-KPI</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = Schicht-KPI,  0 
+		 = kein Schicht-KPI.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Online-KPI</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = Online-KPI, 0 = kein 
+		 Online-KPI.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Format</p></td>
+		<td><p class="TabellenInhalt">Darstellungsformat von Online-KPIs 
+		 (Variablen).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Online Delta</p></td>
+		<td><p class="TabellenInhalt">Delta für Online-KPIs. Der automatische 
+		 Default ist abhängig von der Einheit des KPIs: Stück = 0,5, Zeit 
+		 = 5 Sek., Prozent = 1. Der KPI wird immer bei Änderungen &gt; 
+		 oder = Delta berechnet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Symbol</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Eindeutiges 
+		 Symbol. Wird zur Referenzierung in JavaScript verwendet.</p>
+		<p class="TabellenInhalt">Es dürfen nur die Zeichen [a-z] und [0-9] 
+		 verwendet werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

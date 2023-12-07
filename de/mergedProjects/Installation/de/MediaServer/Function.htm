@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "9.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Software_Documentation_MediaServer_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktion</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktion">
+        <span>Funktion</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Funktion</h1>
+<h2 data-condition="Others:Deutsch"><a id="Rückmeldung_an_Datenbank"></a>Rückmeldung an Datenbank</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Programm ruft zyklisch (10 Sekunden Raster) die Datenbankprozedur P_SYNC_SYSMODULE als Lifemeldung auf. Wenn diese Lifemeldung ausbleibt, verbucht die Datenbank eine Modulverbindungsstörung.</p>
+<h2 data-condition="Others:Deutsch"><a id="Verbindungsüberwachung"></a>Verbindungsüberwachung</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Programm überwacht das zyklische Eintreffen von Lebenstelegrammen der parametrierten Anzeigen (Anzeigen werden als Verbindungen vom Typ -2 unter dem Modul MediaServer parametriert). Bleibt das Lebenstelegramm einer Anzeige für mehr als 120 Sekunden aus wird für die Anzeige Verbindungsfehler in der Datenbank verbucht.</p>
+<h2 data-condition="Others:Deutsch"><a id="Selektion_der_Reißleinenmeldungen"></a>Selektion der Reißleinenmeldungen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Reißleinenmeldungen werden zyklisch (1 Sekunden Raster) mit dem konfigurierten SQL Statement (Server.cfg) selektiert, das beispielsweise folgendermaßen lautetet:</p>
+<p class="TextCode" data-condition="Others:Deutsch">select a.ID, a.TIME_START, a.AL_TYPE, m.NODE, m.SYMBOL_1 as SYMBOL,</p>
+<p class="TextCode" data-condition="Others:Deutsch">l.NAME_0 as NODENAME from</p>
+<p class="TextCode" data-condition="Others:Deutsch">AL_PENDING a, AL_MESSAGE_ARCHIVE m, L_NODES l</p>
+<p class="TextCode" data-condition="Others:Deutsch">where</p>
+<p class="TextCode" data-condition="Others:Deutsch">a.TIME_END is NULL and</p>
+<p class="TextCode" data-condition="Others:Deutsch">a.AL_TYPE in(11, 12) and</p>
+<p class="TextCode" data-condition="Others:Deutsch">m.ID = a.MESSAGE and</p>
+<p class="TextCode" data-condition="Others:Deutsch">l.ID = m.NODE</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Select muss folgende Spalten liefern:</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ID</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">TIME_START</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">AL_TYPE</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">NODE</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">SYMBOL</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">NODENAME</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern eine &quot;neue&quot; Meldung gekommen wird, wird an alle Clients für die die Gruppe der Meldung parametriert ist, ein Telegramm zum Abspielen einer WAV-Datei gesendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Änderung am Meldungsstatus (Meldung kommt / geht) werden die zugehörigen Statusvariablen in der Datenbank aktualisiert. Dies erfolgt durch Aufrufe der Datenbankprozeduren gw_val_num_in bzw. gw_val_str_in.</p>
+<h2 data-condition="Others:Deutsch"><a name="Selektion_von_Schaltbefehlen" id="Selektion_von_Schaltbefehlen"></a>Selektion von Schaltbefehlen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Um beispielsweise Anzeigen einer Montagelinie automatisch starten und herunterfahren zu können werden Schaltbefehle der Tabelle P_OUT_VALUES zyklisch (10 Sekunden Raster) mit folgendem SQL Statement selektiert:</p>
+<p class="TextCode" data-condition="Others:Deutsch">select ID, VALUE_SYMBOL, VALUE_BOOL from</p>
+<p class="TextCode" data-condition="Others:Deutsch">P_OUT_VALUES</p>
+<p class="TextCode" data-condition="Others:Deutsch">where</p>
+<p class="TextCode" data-condition="Others:Deutsch">PROJECT_ID = <b>&lt;PID&gt;</b> and</p>
+<p class="TextCode" data-condition="Others:Deutsch">VALUE_FORMAT = 2 and</p>
+<p class="TextCode" data-condition="Others:Deutsch">TIME_STARTED &gt;= TO_DATE(&#39;<b>&lt;TS&gt;</b>&#39;, &#39;DD.MM.YYYY HH24:MI:SS&#39;) and</p>
+<p class="TextCode" data-condition="Others:Deutsch">TIME_STARTED &lt;= SYSDATE and</p>
+<p class="TextCode" data-condition="Others:Deutsch">VALUE_SYMBOL like &#39;%.PRODSTATUS&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">order by TIME_STARTED</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Platzhalter &lt;PID&gt; wird durch die parametrierte ProjectId ersetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Platzhalter &lt;TS&gt; wird durch die Zeit des Programmstarts ersetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern die Abfrage einen oder mehrere Datensätze liefert und der erste Teil des jeweiligen Variablensymbols mit dem Namen einer Montagelinie übereinstimmt, wird das entsprechende Skript zum Starten (VALUE_BOOL = 1) bzw. zum Herunterfahren (VALUE_BOOL = 0) der Anzeigen aufgerufen. Anschließend wird für jeden Datensatz die Datenbankprozedur gw_val_transmitted aufgerufen.</p>
+
+
+</body></html>

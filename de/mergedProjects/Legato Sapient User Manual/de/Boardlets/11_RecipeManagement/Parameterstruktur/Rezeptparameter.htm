@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.11.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Parameterstruktur</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Parameterstruktur">
+        <span>Parameterstruktur</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Parameterstruktur</h1>
+<h2 data-condition="Others:Deutsch"><a id="Array"></a>Array</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Array kann eine komplexe Struktur mit untergeordneten 
+ Elementen und weiteren Arrays in mehreren Ebenen (Baumstruktur) umfassen. 
+ D.h., ein Array ist eine Liste/Gruppe von (Struktur-) Elementen im LC2. 
+ Ein Array im LC2 besteht hierbei aus dem Arrayname, hat eine bestimmte 
+ Anzahl an Elementen und verweist auf Parameter.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Parameter"></a>Parameter</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Legato Sapient gilt als Master für die <span class="misspell-word">Rezeptverwaltung</span>. </p></li>
+	<li><p class="BodyText">Die SPS speichert alle Rezepte intern. </p></li>
+	<li><p class="BodyText">Bei der Initialisierung schickt die SPS alle 
+	 Rezepte an Legato Sapient für den Abgleich der Datenstände. </p></li>
+	<li><p class="BodyText">Typischerweise sind Rezeptparameter z.B. Temperaturwerte</p></li>
+</ul>
+<p class="Textkrper" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Jeder Parameter enthält folgende Daten:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText"><span class="misspell-word">Parametername</span></p></li>
+	<li><p class="BodyText">Beschreibung</p></li>
+	<li><p class="BodyText">Parametertyp</p></li>
+	<li><p class="BodyText"><span class="misspell-word">Parameterwert</span></p></li>
+	<li><p class="BodyText">Obere <span class="misspell-word">Wertgrenze</span></p></li>
+	<li><p class="BodyText">Untere <span class="misspell-word">Wertgrenze</span></p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beachten Sie das Kapitel <a href="../Rezeptprozeduren/Rezeptprozeduren.htm">Rezeptprozeduren</a>, 
+ um weitere Informationen zu den jeweiligen Parametern zu erhalten.</p>
+<p data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Bearbeitung_der_Parameterwerte"></a>Bearbeitung 
+ der Parameterwerte</h6>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText"><span>Die 
+	 Bearbeitung der </span><span class="misspell-word">Parameterwerte</span><span> 
+	 eines Rezepts erfolgt über den </span><span class="misspell-word">Sapient</span><span>-Client. 
+	 </span></p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText"><span>Die 
+	 Änderung der Daten in den Rezepten erfolgt über die </span><span class="misspell-word">Sidebar</span><span>. 
+	 Je nach Parametertyp werden die üblichen </span><span class="misspell-word">Eingabeeditoren</span><span> 
+	 in der </span><span class="misspell-word">Sidebar</span><span> bereitgestellt. 
+	 </span></p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Für weitere Informationen zur Bearbeitung der Parameterwert 
+ siehe das Kapitel <a href="../LC2/Rezeptvorlage.htm#Bearbeiten_einer_Rezeptvorlage">Rezeptvorlagen</a>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Sicherung_der_Parameter"></a>Sicherung der Parameter</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="Textkrper">Daten werden in der Datenbank von <span class="misspell-word">Sapient</span> 
+	 gesichert.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Versionierung_der_Parameter"></a>Versionierung der Parameter</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Eine <span class="misspell-word">Versionierung</span> 
+	 der Parametersätze ist nicht notwendig. </p></li>
+	<li><p class="BodyText">Alte Parametersätze müssen nicht wiederhergestellt 
+	 werden. </p></li>
+	<li><p class="BodyText">Jedoch sind Änderungen über das <span class="misspell-word">Änderungsjournal</span> 
+	 zu dokumentieren und mit Änderungsgrund zu versehen.</p></li>
+	<li><p class="BodyText">Der <span class="misspell-word">Username</span> 
+	 des Benutzers, der die Änderung vorgenommen hat, wird im Journal aufgenommen. 
+	 Dies ist zulässig, wenn parallel nicht nach allen Änderungen einer 
+	 einzelnen Person gefiltert werden kann.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Übertragung_der_Parametersets"></a>Übertragung der Parametersets</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Daten werden an die SPS übertragen. Der Anwender 
+	 muss erkennen, dass die Parameter erfolgreich in die Anlage übertragen 
+	 wurden. </p></li>
+	<li><p class="BodyText">Dafür ist ein <span class="misspell-word">Rückmeldetelegramm</span> 
+	 für den erfolgreichen Versand in der Schnittstellenbeschreibung spezifiziert.</p></li>
+	<li><p class="BodyText">Wenn die Datenübertragung von <span class="misspell-word">Legato 
+	 Sapient</span> zur SPS nicht positiv quittiert wurde, bleibt die <span class="misspell-word">Rezeptdarstellung</span> in Legato Sapient erhalten 
+	 und ermöglicht so einen erneuten Versand, oder auch den Sprung in 
+	 <span class="misspell-word">Diagnosebildschirme</span> mit z.B. dem 
+	 <span class="misspell-word">Kommunikationsstatus</span>, um Maßnahmen 
+	 einzuleiten.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Template_für_Parametersets"></a>Template für Parametersets</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Das Template soll den Anlagen zugeordnet werden 
+	 können.</p></li>
+	<li><p class="BodyText">Wenn ein Aufruf über das <span class="misspell-word">HMI 
+	 erfolgen soll</span>, dann sollen dies nur <span class="misspell-word">Rezeptvorschläge</span> 
+	 für entsprechende Anlagen sein.<br/>
+	</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Zuordnung_von_Parametersets"></a>Zuordnung von Parametersets</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Mehrere Rezepte können einer Anlage zugeordnet 
+	 werden. </p></li>
+	<li><p class="BodyText">Damit können auch mehrere <span class="misspell-word">Rezeptstrukturen</span> 
+	 für eine Anlage zugehörig sein.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Kopieren_der_Parametersets"></a>Kopieren der Parametersets</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Um die Eingabe zu erleichtern, sollen Rezepte 
+	 sollen kopiert werden können.</p></li>
+	<li><p class="BodyText">Rezepte können damit auch auf andere Anlagen 
+	 (SPS-Bereiche) übertragen werden.</p></li>
+	<li><p class="BodyText">Nach dem Kopier-Funktionsaufruf erscheint ein 
+	 Menü zur Auswahl des SPS-Bereichs und der <span class="misspell-word">Namenseingabe.</span></p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Änderungsgrund"></a>Rezeptänderungen</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Alle <span class="misspell-word">Rezeptänderungen</span> 
+	 in Legato Sapient müssen im Änderungsjournal erfasst werden. D.h. 
+	 dies umfasst auch das Erfassen der Rezeptänderungen im Änderungsjournal 
+	 auf der SPS-Seite, wenn dieses an die SPS geschickt wird.</p></li>
+	<li><p class="BodyText">Ein Änderungsgrund muss immer angegeben werden. 
+	 Ebenso wird der auslösende <span class="misspell-word">Benutzername 
+	 </span>mitgespeichert.</p></li>
+</ul>
+<h2 data-condition="Others:Deutsch"><a id="Arbeiten_vom_HMI"></a>Arbeiten vom HMI</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Wird von einem <span class="misspell-word">HMI</span> 
+	 die <span class="misspell-word">Rezeptverwaltung</span> aufgerufen, 
+	 bekommt man nur eine Auswahl der Rezepte, die vom aufrufenden SPS-Bereich 
+	 stammen.</p></li>
+	<li><p class="BodyText">Ein Rezept identifiziert sich aus SPS-Bereich 
+	 und <span class="misspell-word">Rezeptname</span>.</p></li>
+</ul>
+
+
+</body></html>

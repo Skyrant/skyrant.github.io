@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.8.1_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Histogramm der Zykluszeiten</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Histogramm der Zykluszeiten">
+        <span>Histogramm der Zykluszeiten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Histogramm der Zykluszeiten</h1>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Das Boardlet <span style="font-weight: bold;">Histogramm</span> 
+ <span style="font-weight: bold;">der Zykluszeiten</span> (Zykluszeiten 
+ Histogramm Trend) zeigt die relativen Häufigkeiten einer Zykluszeitvariablen 
+ in einem Histogramm. </p>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Das Boardlet zeigt ein Histogramm der Zykluszeiten 
+ für einen bestimmten Knoten für jede der letzten vier Wochen in einem 
+ Diagramm. Mit dem Boardlet ist es möglich, die relativen Häufigkeiten 
+ in Intervallen von einer Sekunde zu vergleichen. Die Intervalle und die 
+ Skalierung der y-Achsen sind für alle Histogramme gleich.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Folgende Eigenschaften treffen au das Histogramm zu:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="Ü3_Search">feste Intervallbreite von einer Sekunde</p></li>
+	<li><p class="Ü3_Search">25 Säulen mit unterem und oberem Rest</p></li>
+	<li><p class="Ü3_Search">Variable kann in Boardlet-Filtern ausgewählt 
+	 werden</p></li>
+	<li><p class="Ü3_Search">Säulen um den Modus (häufigster Wert in einem 
+	 Datensatz), der über alle Daten platziert ist</p></li>
+	<li><p class="Ü3_Search">vier Histogramme (eines pro Woche) werden 
+	 im selben Säulendiagramm angezeigt </p></li>
+	<li><p class="Ü3_Search">Wochen werden durch Farbe gekennzeichnet</p></li>
+	<li><p class="Ü3_Search">Legende mit Wochen, die als Kalenderwochen 
+	 gekennzeichnet sind</p></li>
+	<li><p class="Ü3_Search">Intervalle können hervorgehoben werden, die 
+	 benannte Zielgrößen darstellen (Zielstückzahl/Schicht angezeigt)</p></li>
+	<li><p class="Ü3_Search">Standardzeitspanne sind die letzten 4 Wochen</p></li>
+	<li><p class="Ü3_Search">Zeitende wird verwendet, wenn der Benutzer 
+	 die Standardzeitspanne ändert</p></li>
+	<li><p class="Ü3_Search">Zeitspanne beträgt immer 4 Wochen</p></li>
+	<li><p class="Ü3_Search">Name der ausgewählten Zykluszeitvariable wird 
+	 angezeigt</p></li>
+</ul>
+<p class="Ü3_Search" data-condition="Others:Deutsch">Außerdem gibt es ein Standard-Dashboard, auf das über 
+ den Ordner <span style="font-weight: bold;">Standard</span> <span style="font-weight: bold;">Dashboards</span> 
+ zugegriffen werden kann und das die Zykluszeiten im Histogramm-Boardlet 
+ (Zykluszeiten Histogram Trend) anzeigt.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"><img src="../../../Bilder/Standard_Dashboard_Cycle_Times.png" alt="" style="border: none;" border="0"/></p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Darstellung_des_Baordlets"></a>Darstellung 
+ des Boardlets</h6>
+<p data-condition="Others:Deutsch">Der Titel des Boardlets setzt sich zusammen aus <span style="font-weight: bold;">node_name 
+ - variable_name.</span></p>
+<p data-condition="Others:Deutsch">Die x-Achse stellt die Taktzeit dar. Außerdem fasst das Boardlet die 
+ Taktzeiten pro Kalenderwoche(n) zsammen. Das bedeutet, dass ein Balken 
+ die prozentuale Verteilung in einem Bereich ist.</p>
+<p data-condition="Others:Deutsch">Anders ausgedrückt, stellt das Boardlet </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p>die prozentuale Häufigkeit der Taktzeiten </p></li>
+	<li><p>über einen gewissen Zeitraum und </p></li>
+	<li><p>nach Kalenderwochen pro Säule dar.</p></li>
+</ol>
+<p data-condition="Others:Deutsch">Durch das Boardlet ist erkennbar, ob die Anlage schneller oder langsamer 
+ geworden ist.</p>
+<p data-condition="Others:Deutsch">Im Beispiel stellen die Taktzeiten 14-15 in der Kalenderwoche 22 33,33 
+ % dar (--&gt; KW 22: Taktzeit 14-15 = 33,33%).</p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"><img src="../../../Bilder/Cycle_Times_Histogram_Trend_Boardlet.png" alt="" style="border: none;" border="0"/></p>
+
+
+</body></html>

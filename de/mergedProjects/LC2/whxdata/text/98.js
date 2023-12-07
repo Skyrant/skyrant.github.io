@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Beschreibung der KPIs"]],"2":[["\n"],["\n","Zur Berechnung der KPIs können verschiedene Formeln \n zugrunde gelegt werden. Die Sichtweisen sind in verschiedenen Projekten \n durchaus unterschiedlich. Im Folgenden werden die standardmäßig implementierten \n Berechnungsgrundlagen und Kennwerte erläutert.","\n\n\n"]],"3":[["Beschreibung der KPIs"]],"id":"98"})

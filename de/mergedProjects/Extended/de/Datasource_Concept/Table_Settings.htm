@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Tabellen-Einstellungen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation3.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tabellen-Einstellungen">
+        <span>Tabellen-Einstellungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Tabellen-Einstellungen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Für jedes Boardlet, das eine Tabelle anzeigt, steht 
+ ein weiterer Reiter mit Einstellungen zur Verfügung. Hierüber können Spalten 
+ ausgeblendet, gelöscht und hinzugefügt werden. Außerdem können für jede 
+ Spalte Einstellungen getroffen werden.</p>
+<p data-condition="Others:Deutsch"><img src="../../assets/images/Table_Settings.png" alt="" style="border: none;" border="0"/></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Alternativer Spaltenname</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier kann die Spaltenüberschrift definiert werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Sortierbar</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den Schieberegler kann festgelegt werden, ob die 
+ Spalte sortiert werden kann.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Skalierbar</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den Schieberegler kann festgelegt werden, ob die 
+ Größe der Spalte per Drag &amp; Drop verändert werden kann.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Verschiebbar</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den Schieberegler kann festgelegt werden, ob diese 
+ Spalte per Drag &amp; Drop woanders hin gezogen werden kann oder nicht.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Komponente</p>
+<p class="BodyText" data-condition="Others:Deutsch">Formatierung der Spalte. Folgende Eingaben sind möglich:</p>
+<table class="TabelleBlank" style="border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 5.364%;"/>
+	<col style="width: 11.54%;"/>
+	<col style="width: 83.096%;"/>
+	</colgroup><tbody><tr style="height: 24px;">
+		<td colspan="2"><p class="BodyText">date-table-cell-component</p></td>
+		<td><p class="BodyText">stellt den Inhalt im lokalen Datumsformat 
+		 (Datum, Uhrzeit) dar. Der Inhalt der Zelle muss vom Typ Date sein.</p></td>
+	</tr>
+	<tr style="height: 20px;">
+		<td colspan="2"><p class="BodyText">icon-table-cell-component</p></td>
+		<td><p class="BodyText">stellt den Inhalt als Icon dar. Der Inhalt 
+		 der Zelle muss der Name des Icons als String sein.</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td colspan="2"><p class="BodyText">limit-table-cell-component</p></td>
+		<td><p class="BodyText">stellt eine Zahl dar und färbt diese je 
+		 nach Limits ein</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText">max</p></td>
+		<td><p class="BodyText">Limit max</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText">min</p></td>
+		<td><p class="BodyText">Limit min</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText">format</p></td>
+		<td><p class="BodyText">Legato Formatstring</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText">mode</p></td>
+		<td><p class="BodyText">Markierung bei Grenzwertüberschreitung 
+		 (border, color, background)</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td colspan="2">bar-table-cell-component</td>
+		<td><p class="BodyText">stellt den Inhalt als Balken mit Maximalwert 
+		 dar.</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td> </td>
+		<td>max: key String</td>
+		<td><p class="BodyText">gibt den Maximalwert vor</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td> </td>
+		<td>formatAs: &#39;time&#39;</td>
+		<td><p class="BodyText">Formatierung als 00:00:00</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td colspan="2"><p>custom-style-cell-component</p></td>
+		<td><p class="BodyText">ermöglicht die Formatierung des CSS-Stils 
+		 der Zelle. Kann mit &quot;common&quot; für alle Themes verwendet 
+		 werden oder mit &quot;themes&quot; und dem jeweiligen Theme-Namen 
+		 für spezifische Themes.</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p> </p></td>
+		<td>font-weight</td>
+		<td><p class="BodyText">Schriftgewicht</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p> </p></td>
+		<td>font-style</td>
+		<td><p class="BodyText">Schrift-Stil, z.B. italic oder bold</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p> </p></td>
+		<td>color</td>
+		<td><p class="BodyText">Schriftfarbe</p></td>
+	</tr>
+	<tr style="height: 24px;">
+		<td><p> </p></td>
+		<td>background-color</td>
+		<td><p class="BodyText">Hintergrundfarbe</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Breite</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den Schieberegler kann festgelegt werden, ob die 
+ Breite der Spalte fest vorgegeben werden soll. Falls aktiv, wird eine 
+ Zeile eingeblendet, in der die Breite in Pixeln eingegeben werden kann.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Sichtbar</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den Schieberegler kann festgelegt werden, ob diese 
+ Spalte ausgeblendet werden soll oder ob sie angezeigt wird.</p>
+
+
+</body></html>

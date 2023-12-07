@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Voraussetzungen</title>
+<link rel="StyleSheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+</head>
+<body>
+<h1>Voraussetzungen</h1>
+<h2><a name="Betriebssystem" id="Betriebssystem"></a>Betriebssystem</h2>
+<h3>Allgemein</h3>
+<p class="BodyText">Das Gateway kann sowohl als 32 Bit als auch als 64 Bit Applikation compiliert werden.</p>
+<p class="BodyText">Das 32-Bit-Gateway ist sowohl unter 32 Bit als auch unter 64 Bit Linux Betriebssystemen lauffähig. <span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">Das 64-Bit-Gateway ist nur unter 64 Bit Linux Betriebssystemen lauffähig.</ins></span></p>
+<p class="BodyText">Für TCP-Native und ISO on TCP Kommunikation (RFC 1006) ist nur das Gateway und kein Telegrammhandler erforderlich. Dabei ist das Gateway der aktive Kommunikationspartner, passive Verbindungen seitens des Gateways werden nicht unterstützt.</p>
+<p class="Textkörperfett" style="mso-bidi-font-weight: normal;"><b><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</b></p>
+<p class="TextkörperHinweis">Bibliotheken, mit denen das Gateway gelinked wird, müssen in der zugehörigen 32 bzw. 64 Bit Variante vorhanden sein!</p>
+<h3>Verwendete Betriebssysteme</h3>
+<p class="BodyText"><span style="mso-fareast-language: AR-SA;">Das Gateway ist unter folgenden Betriebssystemen in Einsatz:</span></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span style="mso-fareast-language: AR-SA;">SUSE Linux Enterprise Server 10 (x86_64)</span></p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span style="mso-fareast-language: AR-SA;">SUSE Linux Enterprise Server 11 (x86_64)</span></p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span style="mso-fareast-language: AR-SA;">openSUSE 12.1 (i586)</span></p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1" style="mso-fareast-language: AR-SA;">openSUSE 12.3 (i586)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span style="mso-fareast-language: AR-SA;">openSUSE 13.1</span></p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1" style="mso-fareast-language: AR-SA;">Red Hat Enterprise Linux Server release 6.4 (Santiago)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list;" ?>
+<p class="Aufzählung1">Red Hat Enterprise Linux Server release 6.5 (Santiago)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Red Hat Enterprise Linux Server release 6.6 (Santiago)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Red Hat Enterprise Linux Server release 7.1 (Maipo)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span style="mso-fareast-language: AR-SA;">Oracle Linux Server release 6.4</span></p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1" style="mso-fareast-language: AR-SA;">Ubuntu 12.04.3</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1" style="mso-fareast-language: AR-SA;">Ubuntu 14.04.3</p>
+<?rh-list_end ?>
+<h2 style="mso-fareast-language: AR-SA;"><a name="Programme" id="Programme"></a>Programme</h2>
+<h3 style="mso-fareast-language: AR-SA;">Benötigte Programme</h3>
+<p class="BodyText"><span style="mso-fareast-language: AR-SA;">F</span>ür das Compilieren des Gateways sind folgende Programme erforderlich:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">g++ (GNU C++ Compiler)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">make (GNU Make Tool), Version &gt;= 3.80</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">gunzip</p>
+<?rh-list_end ?>
+<h3>Verwendete Compilerversionen</h3>
+<p class="BodyText"><span style="mso-fareast-language: AR-SA;">Das Gateway wurde bisher mit folgenden Versionen des g++ Compiler compiliert:</span></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.1.0 (SUSE Linux)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.1.2 (SUSE Linux)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.3.4 (SUSE Linux)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.6.2 (SUSE Linux)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.7.2 (SUSE Linux)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.4.7 20120313 (Red Hat 4.4.7-3)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.8.3 (Red Hat 4.8.3-9)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.6.3 (Ubuntu/Linaro)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Version 4.8.4 (Ubuntu 4.8.4)</p>
+<?rh-list_end ?>
+<h2><a name="Bibliotheken" id="Bibliotheken"></a>Bibliotheken</h2>
+<h3>32 Bit</h3>
+<p class="BodyText">Wenn das Gateway als 32 Bit Applikation compiliert wird, müssen folgende Bibliotheken (in der 32 Bit Version) auf dem Gatewayrechner vorhanden sein (Beispiel Ubuntu 14.04):</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">linux-gate.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libclntsh.so.11.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">librfccm.so</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libACE.so.6.3.0</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libstdc++.so.6</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libm.so.6</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libgcc_s.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libpthread.so.0</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libc.so.6</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libnnz11.so</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libdl.so.2</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libnsl.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">librt.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">/lib/ld-linux.so.2</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libaio.so.1</p>
+<?rh-list_end ?>
+<h3>64 Bit</h3>
+<p class="BodyText">Wenn das <span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">Gateway als 64 Bit Applikation compiliert wird müssen folgende Bibliotheken (in der 64 Bit Version) auf dem Gatewayrechner vorhanden sein (Beispiel Ubuntu 14.04):</ins></span></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">linux-vdso.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libclntsh.so.11.2</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">librfccm.so</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libACE.so.6.3.0</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libstdc++.so.6</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libm.so.6</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libgcc_s.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libpthread.so.0</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libc.so.6</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">libnnz11.so</ins></span></span></p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libdl.so.2</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libnsl.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">libaio.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">librt.so.1</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">/lib64/ld-linux-x86-64.so.2</p>
+<?rh-list_end ?>
+<h2><a name="Oracle_Client" id="Oracle_Client"></a>Oracle Client</h2>
+<p class="BodyText">Der Oracle Client muss in der Version &gt;= 11.2.0.3.0 komplett mit allen Headerdateien, &#160;Bibliotheken und OCI (Oracle Call Interface) installiert sein.</p>
+<p class="BodyText">Die Umgebungsvariable ORACLE_HOME muss den Pfad des Oracle Clients enthalten, die Umgebungsvariable LD_LIBRARY_PATH muss den Pfad der Bibliotheken des Oracle Clients enthalten. Die Umgebungsvariable NLS_LANG ist entsprechend der gewünschten Ländereinstellung zu setzen.</p>
+</body>
+</html>

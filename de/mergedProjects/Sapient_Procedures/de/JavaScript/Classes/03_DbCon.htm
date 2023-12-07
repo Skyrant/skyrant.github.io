@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">DbCon</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DbCon">
+        <span>DbCon</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">DbCon</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte dieses Typs bieten jeweils Zugriff auf eine 
+ Datenbankverbindung aus einem bestimmten Pool. Sie werden benötigt, um 
+ Objekte vom Typ <b>DbQuery</b> anlegen zu können.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">DbCon(context, dbconnectionname, readwrite, shared)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt eine Verbindung aus dem Verbindungs-Pool namens 
+ &quot;dbconnectionname&quot; (üblicherweise &quot;legato&quot;) des angegebenen 
+ SE-Contexts (Task). </p>
+<p class="BodyText" data-condition="Others:Deutsch">Readwrite(opt): Wenn der erste Parameter ein Sapient 
+ Context-Objekt war, legt dieser Parameter fest, ob eine &quot;nur lesen&quot; 
+ oder eine &quot;lesen/schreiben&quot; Verbindung zugewiesen wird. Falls 
+ &quot;wahr-ähnlich&quot; im Sinne von JavaScript wird eine &quot;lesen/schreiben&quot; 
+ Verbindung zugewiesen. Andernfalls vergibt die Verbindung nur lesenden 
+ Zugriff auf die Datenbank.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Shared(opt): Wenn &lt;code&gt;truish&lt;/code&gt; wird 
+ eine geteilte Verbindung vom Sapient Context ausgeliehen. Wenn &lt;code&gt;falsy&lt;/code&gt; 
+ wird eine nicht-geteilte Verbindung ausgeliehen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">DbCon hat nur eine ausführungsrelevante Eigenschaft: 
+ <b>autocommit</b> (Boolean, readwrite).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um die Verarbeitung von Feld- und Parametertypen von 
+ SQL-Abfragen zu erleichtern, enthält DbCon noch eine Reihe konstanter 
+ (readonly) Eigenschaften. Diese können auch &quot;static&quot; (also ohne 
+ Objekt) benutzt werden (z.B. &quot;DbConDOUBLE&quot; statt &quot;var.DOUBLE&quot;):</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">DOUBLE</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">FLOAT</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">NUMERIC</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">REAL</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">BIGINT</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">INTEGER</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">SMALLINT</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">TINYINT</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">BOOLEAN</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">BIT</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">DATE</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">TIME</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">TIMESTAMP</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">TIMESTAMPLTZ</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">TIMESTAMPNS</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">TIMESTAMPTZ</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">CHAR</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">VARCHAR</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">CLOB</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">LONGVARCHAR</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">OTHER</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Eigenschaft &quot;dbtype&quot; liefert den GP_R_CONNECTION_TYPE 
+ der Datenbank, also &quot;POSTGRESQL&quot; oder &quot;ORACLE&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">DbCon-Objekte haben folgende Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">commit()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Übernimmt die bisher abgesetzten Datenbank-Operationen. 
+ Wirkt sich nur aus, wenn autocommit auf false steht, ansonsten wird ja 
+ jede Operation sofort übernommen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">rollback()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Verwirft die bisher abgesetzten Datenbank-Operationen. 
+ Wirkt sich nur aus, wenn autocommit auf false steht, ansonsten wird ja 
+ jede Operation sofort übernommen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getDbTime()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt die aktuelle DB-Zeit (Date) zurück. </p>
+
+
+</body></html>

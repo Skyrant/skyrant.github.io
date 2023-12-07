@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Dialoge</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Dialog" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dialoge">
+        <span>Dialoge</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Dialoge</h2>
+<h3 data-condition="Others:Deutsch"><a id="Select_Variable1" data-indexterm="Select Variable"></a><a id="Select_Variable"></a>Select Variable</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Dialog ist das zentrale Instrument zur Zuweisung 
+ von Variablen, die bei den Dynamic-Funktionen genutzt werden sollen. Dieser 
+ Dialog kann aus den diversen Parametrierungsdialogen heraus aufgerufen 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Einlesen des Variablen-Files aus der der WebApp 
+ (Var-File) stehen in diesem Dialog alle parametrierten Variablen aus der 
+ Datenbank sowie dem Gateway zur Verfügung.</p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="101"><p class="TabellenÜberschrift">Tab</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Db-Var</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Variablen 
+		 aus der Legato-Datenbank.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Gw-Var</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Variablen 
+		 aus dem Gateway.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Nodes 
+		 with Vars</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Variablen, 
+		 die auf Knoten in der Fertigungsstruktur liegen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">User 
+		 Defined Vars</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Variablen, 
+		 die vom Benutzer definiert wurden (z.B. KPI-Referenzen).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klicken auf einen Eintrag in den Listen werden 
+ im Bereich &quot;Details&quot; Einzelheiten zum gewählten Eintrag angezeigt. 
+ Sind für einen Eintrag keine Details ersichtlich, ist dieser Eintrag keine 
+ gültige Variable.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die beiden Auswahlmöglichkeiten im Feld &quot;Variable 
+ Type&quot; bieten eine Auswahl, welcher Name einer Variable genutzt werden 
+ soll. Eine Variable hat meistens zwei Namen. Einen, der aus dem Gateway 
+ stammt und einen, der durch das Legato Configuration Center in der Datenbank 
+ angelegt wird. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Kästchen &quot;User defined&quot; unter &quot;Value&quot; 
+ ermöglicht eine manuelle Eingabe der Variablen. Eine Auswahl aus den Listen 
+ ist nun nicht mehr möglich.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>: </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Wird ein falscher Variablenname eingegeben, 
+ kann die Funktion nicht richtig arbeiten, da für nicht existente Variablen 
+ der Wert &quot;NULL&quot; geliefert wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Button &quot;Set to empty value&quot; setzt die 
+ Auswahl auf leer zurück. Dies führt auch zum Löschen der Dynamik-Funktion.</p>
+<h4 data-condition="Others:Deutsch">User Defined Vars</h4>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Tab werden alle vom Benutzer definierten 
+ Instanzen angezeigt. Je nach Instanztyp ergeben sich unterschiedliche 
+ Variablen zum Einbinden. Zusätzlich zu den unten angeführten Variablen 
+ können auch die parametrierten Eingaben (z.B. Knotennummer, Variablennamen) 
+ angezeigt und sogar beeinflusst werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">KPIRel</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen KPI-Werte als einzelne Variablen</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">ShiftProtoValRel</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der protokollierte Wert einer Variable</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">ShiftInfoRel</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schichtnummer</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schicht-Typ (numerisch, ID aus der Datenbank)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Produktionsdatum im Format YYYY-MM-DD, z.B. &quot;2015-12-21&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schichtbeginn im Format YYYY-MM-DD HH:MI:SS, z.B. &quot;2015-12-21 
+ 14:44:00&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schichtende im Format YYYY-MM-DD HH:MI:SS, z.B. &quot;2015-12-21 
+ 14:44:00&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Name des Schicht-Typs in der aktuell eingestellten 
+ Sprache</p>
+<p class="BodyText" data-condition="Others:Deutsch">Produktionsdatum in der aktuell eingestellten Sprache 
+ und der über &quot;localformat&quot; eingestellten Ausführlichkeit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schichtbeginn in der aktuell eingestellten Sprache 
+ und der über &quot;localformat&quot; eingestellten Ausführlichkeit</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schichtende in der aktuell eingestellten Sprache und 
+ der über &quot;localformat&quot; eingestellten Ausführlichkeit</p>
+<h3 data-condition="Others:Deutsch"><a id="Expression-Funktion1" data-indexterm="Expression-Funktion"></a><a id="Expression-Funktion"></a>Expression-Funktion</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Soll zusätzlich zur Formatierung noch eine Berechnung 
+ einer Variablen durchgeführt werden, kann dies entweder direkt im Scriptcode 
+ erzeugt werden, oder man verwendet die Expression-Funktion des Designers. 
+ Dazu aktiviert man die Checkbox &quot;Expression&quot;. Wurde zuvor eine 
+ Variable ausgewählt, wird diese gleich in eine Expression umgewandelt, 
+ andernfalls öffnet sich über die drei Punkte ein leerer Eingabe-Dialog, 
+ in dem Expressions definiert werden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit der rechten Maustaste – Insert Variable können 
+ weitere Variablen in den Expression-Dialog hinzugefügt werden. Diese können 
+ dann durch verschiedene mathematische Operatoren miteinander verbunden 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Grundsätzlich können die vier Grundrechenarten (+, 
+ -, *, /) direkt in den SVG-Bildern berechnet werden. Neben mehreren Variablen 
+ können auch Berechnungen von Variablen und Zahlen durchgeführt werden. 
+ Ein Beispiel verdeutlicht die Implementierung:</p>
+<p class="TextCode" data-condition="Others:Deutsch">&lt;text x=&quot;691&quot; y=&quot;93&quot;&gt;x&lt;?Gefasoft</p>
+<p class="TextCode" data-condition="Others:Deutsch">   &lt;dyndef&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &lt;jsfncall name=&quot;SvgSetText&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">         &lt;eleid/&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">         &lt;jsfncall 
+ name=&quot;SvgFmtInt&quot; tgtobj=&quot;parent&quot; nparams=&quot;2&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &lt;jsexpr 
+ quotes=&quot;0&quot;&gt;(</p>
+<p class="TextCode" data-condition="Others:Deutsch">               parseInt(&lt;varref 
+ var=&quot;legatodb.Test1&quot;/&gt;) ?</p>
+<p class="TextCode" data-condition="Others:Deutsch">               parseInt(&lt;varref 
+ var=&quot;legatodb.test2&quot;/&gt;))</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &lt;jsexpr 
+ quotes=&quot;&quot;&gt;10&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">         &lt;/jsfncall&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &lt;/jsfncall&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">   &lt;/dyndef&gt; ?&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">&lt;/text&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">An der Stelle des Fragezeichens sollte der gewünschte 
+ Rechenoperator stehen. Zahlen und numerische Variablen können auch ohne 
+ parseInt() übergeben werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Script_Dialog1" data-indexterm="Script Dialog"></a><a id="Script_Dialog"></a>Script Dialog</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Jede Dynamic-Funktion wird als Script im Quelltext 
+ der SVG Datei verankert. Über diesen Dialog kann für ein Objekt und für 
+ eine Funktion das Script bequem verändert werden. Dieser Dialog ist teilweise 
+ aus anderen Dialogen aufrufbar, jedoch immer über den Button &quot;Script&quot; 
+ im Hauptdialog einer Dynamik (z.B. TDynBlink).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wurde für ein ausgewähltes Objekt eine Dynamic-Funktion 
+ gewählt und ist sie vollständig parametriert, dann ist in diesem Dialog 
+ ein Script eingetragen. Dieses kann beliebig geändert werden. Ein Klick 
+ auf &quot;Validate&quot; überprüft das XML-Format des Scripts auf Richtigkeit 
+ und meldet Fehler.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der wichtigste Aspekt des Script Editors ist das Copy&amp;Paste 
+ von sich wiederholenden Dynamisierungen. So muss ein und dieselbe Dynamisierung, 
+ die mitunter sehr aufwändig sein kann, nicht für jedes einzelne Objekt 
+ über die anderen Dialoge durchgeführt werden. Man kann hier den Scriptcode 
+ in die Zwischenablage laden und für ein anderes Objekt wieder einfügen. 
+ Nun bleibt unter Umständen die Änderung der Variable. Entweder kann hier 
+ händisch der Name eingegeben werden, oder es kann eine Abkürzung zum &quot;Select 
+ Variable&quot;-Dialog genutzt werden. Zu diesem Zweck im oberen Bereich 
+ mit der rechten Maustaste klicken und ein Menü wird ersichtlich mit Insert 
+ Variable. Dieser Punkt führt direkt zu dem oben beschriebenen &quot;Select 
+ Variable&quot;-Dialog.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><b>Tipp:</b> </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Vor Betätigen der rechten Maustaste empfiehlt 
+ es sich, die komplette Variable zu selektieren. Wird nun eine Variable 
+ ausgewählt, wird die alte Variable komplett ersetzt.</p>
+<h3 data-condition="Others:Deutsch"><a id="by_Bits" data-indexterm="by Bits"></a><a id="by_Values" data-indexterm="by Values"></a><a id="Select_Visibility1" data-indexterm="Select Visibility"></a><a id="Select_Visibility"></a>Select Visibility</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Dialog wird durch Klick auf bestimmte Dynamiken 
+ geöffnet (z.B. bei TDynBlink). Über &quot;Variable&quot; wird die referenzierte 
+ Variable ersichtlich, der Button mit den drei Punkten führt zum &quot;Select 
+ Variable&quot;-Dialog. Grundsätzlich sollte die gewählte Variable einen 
+ Zahlenwert liefern oder eine Bitleiste darstellen. Buchstaben oder andere 
+ Zeichen führen zu einem Fehler in der Funktionalität.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird ein Zahlenwert ausgewertet, sollte im &quot;Select 
+ Visibility&quot;-Dialog der Tab &quot;by Values&quot; gewählt werden. 
+ Soll eine Bitleiste als Grundlage dienen, sollte die Parametrierung im 
+ Tab &quot;by Bits&quot; durchgeführt werden.</p>
+<h4 data-condition="Others:Deutsch">by Values</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Die Parametrierung arbeitet mit Limits. Vor und hinter 
+ jedem Textfeld ist eine Checkbox die entscheidet, ob ein Objekt sichtbar 
+ ist oder nicht. Das Kästchen vor einem Eingabefeld geht jeweils vom vorangegangenen 
+ Limit (eingeschlossen) bis zu dem nächstfolgenden (nicht eingeschlossen). 
+ Es können bis zu 16 Limits festgelegt werden, es müssen jedoch nicht alle 
+ definiert werden. Nur diejenigen Checkboxen sind anwählbar, deren Limits 
+ ausgefüllt wurden. Der erste Bereich geht von minus Unendlich bis zu dem 
+ eingegebenen Limit (nicht eingeschlossen). Der letzte Bereich geht vom 
+ letzten ausgefüllten Limit (eingeschlossen) bis zu plus Unendlich.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Beispiel:</b><br/>
+Für DynVisibility wird die erste Checkbox nicht aktiviert, das erste Limit 
+ auf 10 gesetzt und die zweite Checkbox aktiviert. Wenn die Variable einen 
+ Wert von 9 oder weniger hat, ist das Objekt unsichtbar. Falls 10 oder 
+ ein Wert größer 10 erreicht wird, wird das Objekt sichtbar.</p>
+<h4 data-condition="Others:Deutsch">by Bits</h4>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Fall wird eine Bitleiste analysiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die gelieferte Zahl wird in Bits aufgeschlüsselt, wobei 
+ das erste Bit die interne Nummer 0 hat, das zweite 1 usw.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Eingabefelder, die von 0 bis 15 nummeriert sind, 
+ geben die Priorität / Reihenfolge der Auswertung an. Je niedriger die 
+ Nummer ist, desto höher die Priorität, bzw. die Eingabe bei 0 wird zuerst 
+ ausgewertet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Checkbox hinter jedem Eingabefeld gibt an, ob das 
+ Objekt sichtbar sein soll oder nicht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion überprüft, ob das angegebene Bit auf 1 
+ steht. Wird für das angegeben Bit 1 geliefert, wird anhand der Angabe 
+ das Attribut gesetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Reihenfolge der Bits ist egal, es wird entsprechend 
+ der Priorität vorgegangen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Scale_Range1" data-indexterm="Scale Range"></a><a id="Scale_Range"></a>Scale Range</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn ein Attribut Zahlenwerte akzeptiert, werden die 
+ Dynamic-Funktionen durch diesen Dialog parametriert. Es werden jeweils 
+ Start- und Endpunkte parametriert. Werte zwischen den Grenzen werden durch 
+ die WebApp interpoliert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls das Attribut Prozentwerte nutzt, wird dies bei 
+ den Feldern &quot;Attribute max value&quot; und &quot;Attribute min value&quot; 
+ durch ein Prozentzeichen (%) kenntlich gemacht. Wenn dieses Zeichen nicht 
+ angegeben ist, sind die Angaben dieser Felder in Pixel zu treffen. String-Variablen 
+ führen zu einem Fehler.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Felder mit &quot;max/upper&quot; geben die Endparameter 
+ an. &quot;Variable upper limit&quot; gibt den maximalen gelieferten Wert 
+ der Variable an. &quot;Attribute max value&quot; gibt an, welchen Wert 
+ das Attribut bekommen soll, wenn der Wert in &quot;Variable upper limit&quot; 
+ erreicht ist. &quot;Attribute max value&quot; wird nicht überschritten, 
+ falls die Variable einen größeren Wert liefert als in &quot;Variable upper 
+ limit&quot; spezifiziert. Wenn die Funktion &quot;DynHeight&quot; oder 
+ &quot;DynWidth&quot; parametriert wird, wird das Feld &quot;Attribute 
+ max value&quot; automatisch mit der Höhe bzw. Breite des aktuellen Objektes 
+ ausgefüllt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Felder mit &quot;min/lower&quot; geben den Startpunkt 
+ an. Normalerweise sind diese auf 0 gesetzt. Dementsprechend hat das Attribut 
+ den Wert 0, wenn die Variable 0 liefert. Falls das nicht der Fall sein 
+ soll, muss ein entsprechendes Offset definiert werden. &quot;Variable 
+ lower limit&quot; gibt an, unter welchem Wert der Variable nicht weiter 
+ interpoliert werden soll. &quot;Attribute min value&quot; gibt an, welcher 
+ Attributwert nicht unterschritten werden darf.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn die Funktionen &quot;DynXPos&quot; oder &quot;DynYPos&quot; 
+ parametriert werden, kann das Feld bei den &quot;Attribute max/min Values&quot; 
+ negative Werte annehmen. Da hier eine Verschiebung parametriert werden 
+ soll, werden hier die Anzahl Pixel der Verschiebung angegeben. Für eine 
+ Bewegung nach links oder oben muss entsprechend dem Koordinatensystem 
+ von SVG ein negativer Wert angegeben werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="by_Bits1" data-indexterm="by Bits"></a><a id="by_Values1" data-indexterm="by Values"></a><a id="Select_Colors1" data-indexterm="Select Colors"></a><a id="Select_Colors"></a>Select Colors</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Dialog setzt Farben nach gelieferten Nummern 
+ oder Bitleisten. Der Dialog funktioniert vergleichbar &quot;Select Visibility&quot;.</p>
+<h4 data-condition="Others:Deutsch">by Values</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Anstatt Checkboxen hat dieser Dialog Felder zum Definieren 
+ von Farben. Diese Felder sind zwischen den Limits gelegen. Die Farbfelder 
+ sind nur auswählbar, wenn das entsprechende Limit ausgefüllt wurde. Ein 
+ Feld vor einem Limit geht von dem vorangegangenen Limit (eingeschlossen 
+ / beim ersten von -Unendlich) bis zum Limit rechts davon (nicht eingeschlossen).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Beispiel:<br/>
+</b>Die erste Farbe ist rot, die zweite gelb und die dritte grün. Das erste 
+ Limit wurde mit 10 festgelegt und das zweite mit 20. Wenn die Variable 
+ 9 oder weniger liefert, wird das Objekt rot. Bei Werten zwischen 10 und 
+ 20 (nicht eingeschlossen) wird das Objekt gelb. Bei Werten von 20 oder 
+ größer wird es schließlich grün.</p>
+<h4 data-condition="Others:Deutsch">by Bits</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Die Reihenfolge / Wichtigkeit wird durch die Zahlen 
+ vor den Kästchen repräsentiert (0 das Wichtigste usw.). In dem Textfeld 
+ schreibt man die Nummer des Bits hinein, das ausgewertet werden soll. 
+ Wird für das Bit eine 1 geliefert, wird die parametrierte Farbe gesetzt.</p>
+
+
+</body></html>

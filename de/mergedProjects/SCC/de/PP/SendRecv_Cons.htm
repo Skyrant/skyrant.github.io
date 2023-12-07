@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SendRecv-Verbindungen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="IP,TCP,SendRecv" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SendRecv-Verbindungen">
+        <span>SendRecv-Verbindungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SendRecv-Verbindungen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Nicht alle Geräte oder Steuerungen können über OPC 
+ angesprochen werden. Um eine Kommunikation mit solchen Partnern aufzubauen, 
+ kann die &quot;SendRecv&quot;-Schnittstelle verwendet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Verwendung der SendRecv-Schnittstelle kann insbesondere 
+ bei großen Projekten sinnvoll sein, da damit ein Telegramm mit nur einem 
+ Script über alle SPSen verarbeitet werden kann. Somit wird auch die Wartbarkeit 
+ erhöht. Allerdings ist der initiale Aufwand bei der SPS-Programmierung 
+ recht hoch.</p>
+<h3 data-condition="Others:Deutsch"><a id="Verfügbare_Treiber__Win64_"></a>Verfügbare Treiber (Win64)</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Es sind Treiber für folgende Standardprotokolle verfügbar:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">TCP/IP</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Serielle Kommunikation mit 3964R oder offenes 
+ Protokoll (feste Länge, festes Endezeichen oder Quittungsverzug)</p>
+<h3 data-condition="Others:Deutsch"><a name="Anlegen_des_Treiberelements" id="Anlegen_des_Treiberelements"></a>Anlegen 
+ des Treiberelements</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie das Grundelement &quot;SendRecv&quot; 
+ im Projektbaum und wählen Sie im Kontextmenü den Befehl &quot;Neuer Treiber&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/SR_Driver.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine Auswahlliste bietet die möglichen Treiber an.</p>
+<h3 data-condition="Others:Deutsch"><a name="Anlegen_von_Verbindungen" id="Anlegen_von_Verbindungen"></a>Anlegen 
+ von Verbindungen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie das Treiberelement im Projektbaum und 
+ wählen Sie im Kontextmenü den Befehl &quot;Neue Verbindung&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/SR_Con.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der &quot;Zeitwert für Reconnect&quot; gibt an, nach 
+ wievielen Sekunden ein Reconnect versucht werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einstellung von &quot;Verzögerung Send&quot; in 
+ [ms] gibt die Zeit an, wie lange nach dem Anstoßen des Send gewartet wird, 
+ bis die Daten wirklich an die Karte übergeben werden. Diese Funktion ist 
+ dann nutzbar, wenn keine gesicherte Rückmeldung der Karte für &quot;Kanal 
+ frei&quot; existiert, um ein gegenseitiges Überschreiben von Telegrammen 
+ zu verhindern. Der einzustellende Wert ist von der Gesamtkonfiguration 
+ der Kommunikation abhängig und muss empirisch ermittelt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ähnliches gilt für &quot;Verzögerung Recv&quot;, nur 
+ dass hier die Zeit nach dem Anstoßen des Receive angegeben wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf &quot;Parameter&quot; können je nach 
+ Treibertyp weitere Parameter eingestellt werden, z.B. die IP-Adresse und 
+ der Port für einen TCP/IP-Treiber.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Verbindungen müssen nicht manuell angelegt werden, 
+ sondern können über das Script &quot;OnPrjStart&quot; aus der Datenbank-Tabelle 
+ &quot;P_CONNECTIONS&quot; gelesen werden. Zur Laufzeit werden sie dann 
+ über die IP in einer Extended Property verbunden. Dadurch sind keine Änderungen 
+ am Cloud Connector nötig, wenn sich SPSen ändern oder neue hinzukommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für UNIX-Cloud Connectors ist ausschließlich dieses 
+ Vorgehen möglich.</p>
+<h3 data-condition="Others:Deutsch"><a name="Verbindungsvariablen" id="Verbindungsvariablen"></a>Verbindungsvariablen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Für jede Verbindung werden vom System automatisch drei 
+ Variablen angelegt:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="534" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenÜberschrift">Name</p></td>
+		<td style="vertical-align: top;" width="72"><p class="TabellenÜberschrift">Format</p></td>
+		<td style="vertical-align: top;" width="311"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">Connectstatus</p></td>
+		<td style="vertical-align: top;" width="72"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="vertical-align: top;" width="311"><p class="TabellenInhalt">Status 
+		 der Verbindung. Ist der Status &quot;0&quot; ist die Verbindung 
+		 i.O. Beim Status &quot;1&quot; ist die Verbindung nicht aktiv 
+		 oder im Aufbau. Negative Werte treten bei Verbindungsfehlern auf.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">RecvData</p></td>
+		<td style="vertical-align: top;" width="72"><p class="TabellenInhalt">Block</p></td>
+		<td style="vertical-align: top;" width="311"><p class="TabellenInhalt">Enthält 
+		 die empfangenen Daten. Jedes neu empfangene Telegramm bewirkt 
+		 eine Wertänderung von RecvData.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">SendStatus</p></td>
+		<td style="vertical-align: top;" width="72"><p class="TabellenInhalt">Ganzzahl</p></td>
+		<td style="vertical-align: top;" width="311"><p class="TabellenInhalt">Status 
+		 von Sendeaufträgen. Ist ein Sendeauftrag fertig, wird die Sende-ID 
+		 des Auftrages im SendStatus gespiegelt. Trat ein Fehler beim Senden 
+		 auf, wird zu der ID der Wert 0x80000000 addiert.</p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

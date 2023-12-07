@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Dashboard mit manuellen Meldungen erstellen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dashboard mit manuellen Meldungen erstellen">
+        <span>Dashboard mit manuellen Meldungen erstellen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Dashboard mit manuellen Meldungen erstellen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Schritte beschreiben, wie ein neues Dashboard 
+ basierend auf dem Datasource-Model &quot;Archived Alarms&quot; erstellt 
+ werden kann, in dem nur manuelle Meldungen angezeigt werden.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">neues 
+ Dashboard anlegen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Boardlet 
+ &quot;Generische Tabelle&quot; reinziehen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">im 
+ Tab Datasources des Boardlets:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">die Datenquelle 
+ &quot;Archived Alarms&quot; auswählen</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">Bereich 
+ &quot;Node&quot; auf &quot;NodeList&quot; setzen</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">Bereich 
+ &quot;Time&quot; auf &quot;TimeFrame&quot; setzen</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">im Bereich 
+ &quot;Actions&quot; alles deaktivieren</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">im Tab 
+ Filter des Boardlets:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">Klick 
+ auf &quot;Parameter hinzufügen&quot;</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">Name &quot;Manual&quot; 
+ eingeben</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">aus Drop-down-Liste 
+ den Typ &quot;Number&quot; auswählen (eigentlich handelt es sich um eine 
+ Bool&#39;sche Angabe, wird DB-seitig aber als Zahl gehändelt)</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">als Wert 
+ &quot;1&quot; eingeben</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">zurück 
+ zum Tab Datasources:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">im Bereich 
+ &quot;Felder&quot; al_archive aufklappen</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">bei der 
+ Spalte &quot;Manual?&quot; Klick auf + &quot;Filter hinzufügen&quot;</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">aus der 
+ linken Drop-down-Liste &quot;Equal&quot; auswählen</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">aus der 
+ rechten Drop-down-Liste &quot;Manual&quot; auswählen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">im Tab 
+ &quot;Tabelleneinstellungen&quot;</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">ganz unten 
+ die neu hinzugefügte Spalte &quot;al_archive/manual_insert&quot; auf &quot;Sichtbar&quot; 
+ setzen</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

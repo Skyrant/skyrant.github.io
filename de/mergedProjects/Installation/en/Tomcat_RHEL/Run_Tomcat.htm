@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.4_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Run Tomcat using Minimally Privileged (non-root) User</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Run Tomcat using Minimally Privileged (non-root) User">
+        <span>Run Tomcat using Minimally Privileged (non-root) User</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Run Tomcat using Minimally Privileged (non-root) User</h1>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">In our Tomcat configuration above, we are running Tomcat as Root.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">For security reasons, it is always best to run services with the only those privileges that are necessary.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">There are some who make a strong case that this is not required, but it&#39;s always best to err on the side of caution.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">To run Tomcat as non-root user, we need to do the following:</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">1. Create the group &#39;tomcat&#39;:</p>
+<p class="TextCode" data-condition="Others:Englisch"> [root@localhost ~]# groupadd tomcat</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">2. Create the user &#39;tomcat&#39; and add this user to the tomcat group we created above.</p>
+<p class="TextCode" data-condition="Others:Englisch"> [root@localhost ~]# useradd -s /bin/bash -g tomcat tomcat</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">The above will create a home directory for the user tomcat in the default user home as /home/tomcat</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">If we want the home directory to be elsewhere, we simply specify so using the -d switch.</p>
+<p class="TextCode" data-condition="Others:Englisch"> [root@localhost ~]# useradd -g tomcat -d /usr/share/apache-tomcat-7.0.42/tomcat tomcat</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">The above will create the user tomcat&#39;s home directory as /usr/share/apache-tomcat-7.0.42/tomcat</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">3. Change ownership of the tomcat files to the user tomcat we created above:</p>
+<p class="TextCode" data-condition="Others:Englisch"> [root@srv6 ~]# chown -Rf tomcat.tomcat /usr/share/apache-tomcat-7.0.29/</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">4. Adjust the start/stop service script we created above(/etc/init.d/tomcat). In our new script, we need to su to the user tomcat:</p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor">#!/bin/bash</span></p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor"># description: Tomcat Start Stop Restart</span></p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor"># processname: tomcat</span></p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor"># chkconfig: 234 20 80</span></p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_HOME=/usr/java/jdk1.7.0_45</p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">export</span> JAVA_HOME</p>
+<p class="TextCode" data-condition="Others:Englisch">PATH=$JAVA_HOME/bin:$PATH</p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">export</span> PATH</p>
+<p class="TextCode" data-condition="Others:Englisch">CATALINA_HOME=/usr/share/apache-tomcat-7.0.42/</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">case</span> $1 <span class="keyword">in</span></p>
+<p class="TextCode" data-condition="Others:Englisch">start)</p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/startup.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">;;</p>
+<p class="TextCode" data-condition="Others:Englisch">stop)</p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/shutdown.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">;;</p>
+<p class="TextCode" data-condition="Others:Englisch">restart)</p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/shutdown.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">/bin/su tomcat $CATALINA_HOME/bin/startup.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">;;</p>
+<p class="TextCode" data-condition="Others:Englisch">esac</p>
+<p class="TextCode" data-condition="Others:Englisch">exit 0</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+
+
+</body></html>

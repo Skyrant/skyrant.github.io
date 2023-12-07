@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.2.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Erweitert;Others:Deutsch;Others:Sapient_only" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Die Schnittstellentabelle Datenbank - Gateway (P_OUT_VALUES)</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="P_OUT_VALUES,Sollwert" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Die Schnittstellentabelle Datenbank - Gateway (P_OUT_VALUES)">
+        <span>Die Schnittstellentabelle Datenbank - Gateway (P_OUT_VALUES)</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Die Schnittstellentabelle Datenbank - Gateway (P_OUT_VALUES)</h2>
+<h6 class="Ü3_Search" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Funktion</h6>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Sollwertvorgaben aus der Datenbank an den Prozess (entsprechend 
+ Gateways) erfolgen über die Schnittstellentabelle P_OUT_VALUES. Einträge 
+ in diese Tabelle erzeugt das System aus dem Schichtkalender (Sollwertvorgaben). 
+ Diese Einträge werden standardmäßig jeden Tag um 01:30 mit einem Vorlauf 
+ von 1,5 Tagen übergeben (einstellbar über den SE-Job REFRESH_SHIFT_TARGETS).</p>
+<h6 class="Ü3_Search" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Ablaufbeispiel</h6>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Wertänderung der Variable Sollwert durch Kontextmenü 
+ &quot;Wert setzen&quot; im LC2. Die Variable ist für die Verbindung zur 
+ Steuerung 1 definiert:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Anwendungsstruktur 
+ | Datenaustausch | Gateway 1</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Connection 
+ | Steuerung 1</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Variablensymbol 
+ OPC.GOPS.Montage.PLC_1.Sollwert, Kennung &quot;Forward to Gateway&quot; 
+ = 1</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Durch die Wertänderung wird zunächst nicht der Wert 
+ der Variablen selbst geändert, sondern ein Eintrag in die Tabelle P_OUT_VALUES 
+ gebucht, mit den folgenden wichtigsten Angaben:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">TransID: 
+ ID zur Identifikation der Variablenübergabe an das Gateway</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">ProjectID: 
+ ID der Datenquelle Gateway, die auch auf Gatewayseite parametriert ist</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Variablensymbol: 
+ Aus der Variablenliste, Symbol ist mit diesem Namen auch im Gateway parametriert</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Wert: Variablenwert 
+ entsprechend Datentyp</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Updatezeit: 
+ Zeitpunkt, ab wann dieser neue Variablenwert für den Prozess gültig ist, 
+ bei manueller Wertänderung = Änderungszeitpunkt</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Die Gateways müssen so projektiert sein, dass die Tabelle 
+ P_OUT_VALUES zyklisch gelesen wird und die Datensätze bearbeitet werden, 
+ die</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">für dieses 
+ Gateway bestimmt sind (Kennung = ProjectID)</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">gültig 
+ sind (Updatezeit älter oder gleich aktuelle Zeit)</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Nach Bearbeitung der Variablen im Gateway, z.B. Weitergabe 
+ über OPC an die Steuerung, führt das Gateway die Datenbank-Prozedur GW_VAL_TRANSMITTED(TransID, 
+ ErrorStr) aus. Damit besteht auf Datenbankseite die Sicherheit, dass der 
+ Sollwert verarbeitet wurde und im Prozess genauso vorliegt wie in der 
+ Datenbank.</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Die Prozedur löscht den Datensatz mit der TransID aus 
+ der Tabelle P_OUT_VALUES und bucht den Wert zur Variable. Erst dann wird 
+ der geänderte Wert in der Variablentabelle oder im WebClient sichtbar.</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Ein optionaler ErrorString, der mit dem Prozeduraufruf 
+ übergeben werden kann, wird in das Änderungsprotokoll der Legato-Datenbank 
+ gebucht und ist für Systemanalysen verfügbar.</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch;Others:Sapient_only">Interne Variablenänderungen für Sollwerte (d.h., ohne 
+ PROJECT_NO und COMMAND_ID) werden durch den SE-Job HANDLE_EVENTS abgearbeitet. 
+ Der Job setzt Out-Werte beim Ereignis SHIFT_START auf übertragen. Dadurch 
+ werden alle internen Sollwerte in P_VALUES_CURRENT geschrieben und aus 
+ P_OUT_VALUES gelöscht. </p>
+
+
+</body></html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">BitSet</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="BitSet">
+        <span>BitSet</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">BitSet</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte dieses Typs erlauben die bequeme und effiziente Verwaltung eines Arrays boolescher Werte. Jedes der Bits kann gesetzt, zurückgesetzt oder abgefragt werden, außerdem können komplette BitSets miteinander logisch verknüpft werden und auf Überschneidung geprüft werden (&quot;Mengen-Operationen&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte vom Typ BitSet werden mittels <b>new BitSet()</b> angelegt. In neuen BitSet-Objekten ist ursprünglich kein Bit gesetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">BitSets haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">cardinality (Zahl, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Anzahl gesetzter Bits in diesem BitSet.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">empty (Boolean, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob dieses BitSet leer ist (d.h., kein einziges gesetztes Bit enthält).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">first (Zahl, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Index des ersten gesetzten Bits. Falls kein einziges Bit gesetzt ist: -1.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">last (Zahl, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Index des letzten gesetzten Bits. Falls kein einziges Bit gesetzt ist: -1.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Sie haben folgende Methoden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">and(bitset)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht in diesem BitSet alle Bits, die nicht auch im Übergebenen gesetzt sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">andNot(bitset)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht in diesem BitSet alle Bits, die im Übergebenen gesetzt sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clear()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht alle Bits in diesem BitSet.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clearAt(index)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht das Bit an dem angegebenen Index (0..n).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clearRange(from, to)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht alle Bits im angegebenen Bereich (inklusive).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clone()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erzeugt ein neues BitSet, in dem genau die gleichen Bits gesetzt sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">equals(bitset)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüft, ob in diesem und dem übergebenen BitSet die genau gleichen Bits gesetzt sind (Boolean).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">flipAt(index)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schaltet das angegebene Bit um.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">flipRange(from, to)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schaltet alle Bits im angegebenen Bereich um (inklusive).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getAt(index)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert des angegebenen Bits (Boolean).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getRange(from, to)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert ein neues BitSet, das nur die Bits aus dem angegebenen Bereich (inklusive) dieses BitSets enthält.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">intersects(bitset)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüft, ob es mindestens ein Bit gibt, das in beiden BitSets gesetzt ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">nextClear(index)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Index des nächsthöheren nicht gesetzten Bits an oder ab dem angegebenen Index oder -1, falls es kein solches gibt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">nextSet(index)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Index des nächsthöheren gesetzten Bits an oder ab dem angegebenen Index gesetzten Bits oder -1, falls es kein solches gibt. Um über alle gesetzten Bits zu iterieren, kann man z.B. folgende Schleife benutzen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">for (var i = bitset.first; i &gt;= 0; i = bitset.nextSet(i + 1)) { ... }</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">or(bitset)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt in diesem BitSet alle Bits, die im Übergebenen gesetzt sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">setAt(index)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt das Bit am angegeben Index.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">setRange(from, to)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt alle Bits im angegebenen Bereich (inklusive).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">xor(bitset)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schaltet in diesem BitSet alle Bits um, die im Übergebenen gesetzt sind.</p>
+
+
+</body></html>

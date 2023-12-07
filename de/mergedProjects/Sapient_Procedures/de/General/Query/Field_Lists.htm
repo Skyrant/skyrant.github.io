@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.5.2_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Feldlisten abfragen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Feldliste,Query" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Feldlisten abfragen">
+        <span>Feldlisten abfragen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Feldlisten abfragen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die JSON-RPC-Methode um Feldlisten abzufragen ist</p>
+<p class="BodyText" data-condition="Others:Deutsch">de/gefasoft/sapient/data/Query/fields_of</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es gibt drei Parameter:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">REPO_CONN 
+ (String) - Der Name der Repository-Verbindung, die die abzufragende Datenquelle 
+ enthält.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">DATASOURCE 
+ (String) - Name der Datenquelle, deren Felder abgefragt werden sollen.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">INCL_INREFS 
+ (Boolean, optional, Default false) - Wenn angegeben und true, enhält die 
+ zurückgegebene Feldliste auch eingebundene Referenzen (&quot;to-many&quot;-Beziehungen).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Rückgabewert hat zwei Eigenschaften:</p>
+<p class="Liste_1 Liste_Level_num" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">queryTime 
+ (String Zeitstempel) - Zeitpunkt, wann das Ergebnis erstellt wurde. </p>
+<p class="Liste_1 Liste_Level_num" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">data 
+ (JSON-Array von JSON-Objekten) - Jedes dieser Elemente enthält Informationen 
+ über ein Feld der abgefragten Datenquelle.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">name (String) 
+ - Der Feldname; innerhalb dieser Datenquelle eindeutig.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">type (String) 
+ - Der JSON-Type des Feldes: STRING, NUMBER, BOOLEAN oder ANY (wenn nicht 
+ bekannt).</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">keyIndex 
+ (String) - Nur verfügbar für Felder die Teil des Primärschlüssels der 
+ Datenquelle sind. Gibt die Position an, die dieses Feld in dem Schlüssel 
+ hat (1 für die 1., etc.)</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">localized 
+ (Boolean) - Ob die Inhalte dieses Felds lokalisiert sind und sich daher 
+ unterscheiden können, abhängig von der Sprachumgebung des Benutzers der 
+ die Daten abfragt.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">relation 
+ (Objekt) - Eine JSON-Objekt-Eigenschaft, die nur verfügbar ist für Felder, 
+ die eine Beziehung zu einer anderen Datenquelle sind. Enthält die folgenden 
+ Teile:</p>
+<p class="Liste_3 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">datasource 
+ (String) - Name der Datenquelle, die diese Beziehung referenziert.</p>
+<p class="Liste_3 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">field 
+ (String) - Name des referenzierten (für abgehende, &quot;to-one&quot;-Beziehungen) 
+ bzw. refernzierenden (für eingehende, &quot;to-many&quot;-Beziehungen) 
+ Felds in dieser Datenquelle.</p>
+<p class="Liste_3 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">many (Boolean) 
+ - Ob es sich um eine &quot;to-many&quot;, also eingehende Beziehung handelt. 
+ Hinweis: Eingehende Beziheungen werden nur aufgeführt, wenn der Parameter 
+  INCL_INREFS im Aufruf dieser Methode auf true gesetzt war.</p>
+<p class="Liste_3 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">reffield 
+ (String) - Nur für eingehende Beziehungen und nur, wenn bekannt: Der Name 
+ des Feldes der Datenquelle, das von der Beziehung referenziert wird.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">jsonpart 
+ (Object) - Eine JSON-Objekt-Eigenschaft, die nur verfügbar ist für &quot;erweiterte 
+ Eigenschaften&quot;-Felder, die in einer JSONB-Spalte gespeichert sind.</p>
+<p class="Liste_3 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">field 
+ (String) - Name des JSONB-Felds, das die Daten dieses virtuellen Feldes 
+ enthält.</p>
+<p class="Liste_3 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">path (String) 
+ - Pfad in den JSON-Inhalt des &quot;Feldes&quot;, das die Daten dieses 
+ virtuellen Feldes referenziert.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">dbcolname 
+ (String) - Name der Datenbank-Tabellenspalte, die diesem Feld entspricht. 
+ Nicht verfügbar für &quot;to-many&quot;-Beziehungen; kann ein SQL-Ausdruck 
+ sein, wenn dieses Feld lokalisiert wird oder Teil einer JSONB-Spalte ist.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">title 
+ (String) - Spaltentitel, wie im Repository definiert, übersetzt in die 
+ Sprachumgebung des Benutzers, der diese RPC-Methode aufgerufen hat.</p>
+<p class="Liste_2 Liste_Level_num" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">hint (String) 
+ - Tooltipp-Hinweis für dieses Feld, wie im Repository definiert, übersetzt 
+ in die Sprachumgebung des Benutzers, der diese RPC-Methode aufgerufen 
+ hat.</p>
+
+
+</body></html>

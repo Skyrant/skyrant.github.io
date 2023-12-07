@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">BlockingQueue</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="BlockingQueue">
+        <span>BlockingQueue</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">BlockingQueue</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Eine BlockingQueue kann benutzt werden, um von einem 
+ <a href="22_ThreadPool.htm">ThreadPool</a> (s.o.) zu bearbeitende &quot;Aufgaben&quot; 
+ an die Arbeits-Threads zu verteilen. Ein &quot;Generator&quot;-Thread 
+ (meist der Haupt-Thread des Jobs) erzeugt &quot;Aufgaben&quot;-Objekte 
+ und legt sie in die Queue. Jeder &quot;Arbeits&quot;-, hier oft auch als 
+ &quot;Verbraucher&quot;-Thread bezeichnet, entnimmt in einer Schleife 
+ je eine &quot;Aufgabe&quot; aus der Queue und erledigt sie. Hat der &quot;Generator&quot; 
+ keine weiteren Aufgaben zu erzeugen, &quot;schließt&quot; er die Queue, 
+ indem er eine &quot;null&quot;-Aufgabe hinein legt. Sind alle &quot;Aufgaben&quot; 
+ abgearbeitet und die Queue geschlossen, enden die &quot;Verbraucher&quot;-Threads.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Kapazität einer BlockingQueue kann begrenzt und 
+ damit vermieden werden, dass die Queue und somit deren Speicher-Verbrauch 
+ unendlich anwachsen kann. Ist eine begrenzte Queue voll, muss der Generator 
+ darauf warten, dass einer der Verbraucher wieder eine Aufgabe entnimmt, 
+ bevor er eine neue Aufgabe hineinlegen kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine BlockingQueue hat folgende Eingenschaften und 
+ Funkionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Konstruktor new BlockingQueue(capacity)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erzeugt eine neue Queue. Falls der Parameter capacity 
+ angegeben wird, ist die Queue auf die entsprechende Anzahl Einträge begrenzt. 
+ Diese Begrenzung kann später nicht mehr geändert oder auch nur abgefragt 
+ werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">put(object)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Legt ein Objekt in die Queue. Ist die Länge der Queue 
+ begrenzt und die Queue voll, wartet diese Funktion so lange, bis darin 
+ wieder Platz ist (d.h. ein anderer Thread ein Objekt entnommen hat). Aufruf 
+ dieser Funktion ohne Übergabe eines Objekts oder Übergabe von null schließt 
+ die Queue.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">boolean offer(object, millis)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hängt das angegebene Objekt an die Queue an, sofern 
+ das in der angegebenen Zeitspanne möglich ist. Ist die Queue begrenzt 
+ und voll, wartet diese Funktion die als millis angegebene Anzahl Millisekunden 
+ auf freien Platz darin. Falls kein Platz frei wird, liefert die Funktion 
+ false als Ergebnis. Wird der Parameter millis weggelassen, kehrt die Funktion 
+ bei voller Queue sofort mit Ergebnis false zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Object take()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Entnimmt das erste (älteste) Objekt aus der Queue und 
+ liefert es als Ergebnis. Ist die Queue leer, wartet diese Funktion darauf, 
+ dass ein Objekt hineingelegt wird. Ist die Queue geschlossen und leer, 
+ liefert diese Funktion bei jedem Aufruf das Ergebnis null.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Object poll(millis)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist die Queue nicht leer, entnimmt diese Funktion das 
+ erste Objekt daraus und liefert es als Ergebnis. Ist die Queue leer und 
+ wurde der Parameter millis angegeben, wartet die Funktion die angegebene 
+ Anzahl Millisekunden auf ein neues Objekt in der Queue und liefert gegebenenfalls 
+ dieses Objekt zurück. Wurde keine Wartezeit angegeben oder ist die Queue 
+ auch nach deren Ablauf leer, liefert die Funktion null zurück. Ist die 
+ Queue leer und geschlossen, kehrt die Funktion sofort mit Ergebnis null 
+ zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Eigenschaft done (boolean, readoly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist true, wenn die Queue geschlossen und leer ist, 
+ davor immer false.</p>
+
+
+</body></html>

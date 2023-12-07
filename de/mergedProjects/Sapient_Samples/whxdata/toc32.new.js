@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SE-Jobs","type":"item","tilePath":"","description":"","url":"de/AL_Mgmt/SE_Jobs/SE_Jobs.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

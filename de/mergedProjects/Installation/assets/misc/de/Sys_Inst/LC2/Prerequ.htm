@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Systemvoraussetzungen</title>
+<link rel="StyleSheet" href="..\..\Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Systemvoraussetzungen</h2>
+<?rh-placeholder type="snippet" ref="LC2_de" ?>
+<?rh-placeholder type="snippet" ref="LC2_add_de" ?>
+<p class="BodyText">Falls noch nicht vorhanden, kann ODAC hier heruntergeladen 
+ werden:</p>
+<p class="BodyText"><a href="http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html">http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html</a></p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Bei der Installation von Oracle Server und 
+ OraClient (als Teil des ODAC) auf demselben Rechner unter Windows kommt 
+ es zu Problemen mit den Pfadangaben in den Umgebungsvariablen. Dort werden 
+ der Client- und der Serverpfad in der falschen Reihenfolge eingetragen, 
+ weshalb die benötigten Dateien zur Ausführung der Datenbank nicht gefunden 
+ werden. Gehen Sie folgendermaßen vor, um die Reihenfolge zu korrigieren: 
+ Unter Systemeigenschaften - System - Erweiterte Systemeinstellungen - 
+ Umgebungsvariablen - Path mit Doppelklick den Eintrag öffnen. Hier sind 
+ alle Pfadangaben als kommaseparierte Liste eingetragen. Am besten kopieren 
+ Sie den kompletten Eintrag in einen Editor. Dort kopieren Sie den Pfad 
+ des Oracle Servers von hinter dem Client-Pfad VOR den Clientpfad. Meist 
+ finden sich die beiden Pfadangaben ganz am Anfang, weil die zugehörigen 
+ Programme als letztes installiert wurden. Kopieren Sie nun den geänderten 
+ Eintrag wieder in die Umgebungsvariable und speichern Sie die Änderung.</p>
+<p class="BodyText">Zusätzlich werden diverse Komponenten benötigt. Diese 
+ werden vom Setup geprüft und, sofern möglich, mitinstalliert. Die im LC2 
+ Setup mitgelieferten Pre-Installs sind:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Microsoft .NET Framework 4.5.1 (je nach Betriebssystem 
+ 64- bzw. 32-Bit)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Microsoft Visual C++ Runtime 8.0 (includes ATL 
+ and MFC) (32-Bit). Bei Programmen und Funktionen registriert sich diese 
+ Runtime als Microsoft Visual C++ 2005 Redistributable</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Microsoft Visual C++ Runtime 8.0 (includes ATL 
+ and MFC) (32-Bit) Service Pack 1. Bei Programmen und Funktionen registriert 
+ sich diese Runtime als eine weitere Microsoft Visual C++ 2005 Redistributable 
+ mit höherer Versionsnummer</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Microsoft Visual C++ Runtime 8.0 (includes ATL 
+ and MFC) (32-Bit) Service Pack 2. Bei Programmen und Funktionen registriert 
+ sich diese Runtime als eine weitere Microsoft Visual C++ 2005 Redistributable 
+ mit höherer Versionsnummer.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Microsoft Windows Installer 3.0 (32-Bit)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Microsoft Windows Installer 3.1 (32-Bit)</p><?rh-list_end ?>
+</body>
+</html>

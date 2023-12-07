@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Installation des Legato Datenmodells mit SetupLDB (nur für Oracle)</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Installation des Legato Datenmodells mit SetupLDB (nur für Oracle)</h2>
+<h3><a name="Systemvoraussetzungen" id="Systemvoraussetzungen"></a>Systemvoraussetzungen</h3>
+<p class="BodyText">PC mit Betriebssystem Windows XP oder höher.</p>
+<p class="BodyText">Oracle Client muss in der 32-Bit Version installiert 
+ sein. Es wird die Version 11.2.0.1 empfohlen.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die 64-Bit Version ist nicht geeignet.</p>
+<h3><a name="Überblick"></a>Überblick</h3>
+<p class="BodyText">Das Datenmodell (für eine oder - in einer Oracle-Umgebung 
+ - auch für zwei Instanzen) wird mit Hilfe des Legato Datenbank Installers 
+ (SetupLDB.exe, im Folgenden als Installer bezeichnet) eingerichtet.</p>
+<p class="BodyText">Der Installer wird sowohl für eine Neuinstallation 
+ als auch für die Installation von Updates, unabhängig vom Datenbanktyp, 
+ verwendet.</p>
+<p class="BodyText">Die wichtigsten Angaben für den Installer wie z.B. 
+ der Datenbanktyp, und die Reihenfolge der auszuführenden Scripte, sind 
+ in der Datei SetupLDB.ini festgehalten. Diese Datei muss sich im selben 
+ Verzeichnis wie der Installer befinden.</p>
+<p class="BodyText">Auf der Installations-CD können drei verschieden Varianten 
+ vorhanden sein:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Im Pfad …/standard eine SetupLDB.ini für eine 
+ Standard-Installation mit einer Instanz</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Im Pfad …/operative eine SetupLDB.ini für eine 
+ Standard-Installation für zwei (Operativ und Archiv getrennt) Instanzen</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Im Pfad …/&lt;projektname&gt; eine SetupLDB.ini 
+ für eine projektspezifische Installation mit einer oder zwei Instanzen</p><?rh-list_end ?>
+<p class="Textkörperfett">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Im Auslieferungsverzeichnis können neben der 
+ Basisversion (z.B. 4.5.0.0) auch ein oder mehrere Patches zu dieser Version 
+ vorhanden sein. In diesem Fall existiert zu jedem Patch ein Unterverzeichnis 
+ mit dem DB-Installer und einer eigenen SetupLDB.ini-Datei. Es muss unbedingt 
+ zuerst die Basisinstallation (Version x.x.x.000) und danach in aufsteigender 
+ Reihenfolge die Patches installiert werden.</p>
+<p class="BodyText">Beispiel für SetupLDB.ini (Oracle Installation mit 
+ einer Instanz):</p>
+<p class="TextCode">[SETUPLDB]</p>
+<p class="TextCode">DBTYPE=ORACLE</p>
+<p class="TextCode">[MANUAL]</p>
+<p class="TextCode">#OPERATIVE_DB</p>
+<p class="TextCode">00=Sequenzen anpassen,standard\sequences.txt,connect 
+ %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode">01=Tabellen anlegen,Standard\struct.txt,,</p>
+<p class="TextCode">02=Prozeduren anlegen,Standard\procedures.txt,,</p>
+<p class="TextCode">03=Views anlegen,Standard\views.txt,,</p>
+<p class="TextCode">04=Trigger anlegen,Standard\triggers.txt,,</p>
+<p class="TextCode">05=Basiskonfiguration,Standard\configdata.txt,,,</p>
+<p class="TextCode">06=Berechtigungen erteilen,Standard\grants.txt,,</p>
+<p class="TextCode">07=Basiskonfiguration,Standard\recompile_all_objects.txt,,select 
+ object_name from user_objects where status = 'INVALID';</p>
+<p class="TextCode">08=DB-Job anpassen,standard\db_jobs.txt,,</p>
+<p class="TextCode">09=Versionierung,Standard\set_objectversion.txt,,,</p>
+<p class="TextCode">[TRANSLATION]</p>
+<p class="TextCode">05=Standard\configdata.mld</p>
+<p class="TextCode">[REPLACE]</p>
+<p class="TextCode">#Tablespaces</p>
+<p class="TextCode">#Tablespaces Operative</p>
+<p class="TextCode">%TS_LEGATO_DATA_M%=</p>
+<p class="TextCode">%TS_LEGATO_DATA_S%=</p>
+<p class="TextCode">%TS_LEGATO_DATA_L%=</p>
+<p class="TextCode">%TS_LEGATO_INDX_S%=</p>
+<p class="TextCode">%TS_LEGATO_INDX_M%=</p>
+<p class="TextCode">%TS_LEGATO_INDX_L%=</p>
+<p class="TextCode">#Users and initial Passwords</p>
+<p class="TextCode">%LEGATO_OWNER%=</p>
+<p class="TextCode">%LEGATO_OWNERPW%=</p>
+<p class="TextCode">%LEGATO_READ_USR%=</p>
+<p class="TextCode">%LEGATO_READ_USRPW%=</p>
+<p class="TextCode">%LEGATO_WRITE_USR%=</p>
+<p class="TextCode">%LEGATO_WRITE_USRPW%=</p>
+<p class="TextCode">%LEGATO_LC2_USR%=</p>
+<p class="TextCode">%LEGATO_LC2_USRPW%=</p>
+<p class="TextCode">%LEGATO_GW_USR%=</p>
+<p class="TextCode">%LEGATO_GW_USRPW%=</p>
+<p class="TextCode">%LEGATO_AE_USR%=</p>
+<p class="TextCode">%LEGATO_AE_USRPW%=</p>
+<p class="TextCode">%LEGATO_WA_USR%=</p>
+<p class="TextCode">%LEGATO_WA_USRPW%=</p>
+<p class="TextCode">#Roles</p>
+<p class="TextCode">%LEGATO_READ_ROLE%=</p>
+<p class="TextCode">%LEGATO_WRITE_ROLE%=</p>
+<p class="TextCode">%LEGATO_SID%=</p>
+<p class="TextCode">%MASTER_VERSION%=Standard 3.3.0.005</p>
+<p class="TextCode">[DESCRIPTION]</p>
+<p class="TextCode">#Tablespaces</p>
+<p class="TextCode">%TS_LEGATO_DATA_M%=Tablespace Operativ-DB f. mittlere 
+ Tabellen</p>
+<p class="TextCode">%TS_LEGATO_DATA_S%=Tablespace Operativ-DB f. kleine 
+ Tabellen</p>
+<p class="TextCode">%TS_LEGATO_DATA_L%=Tablespace Operativ-DB f. große 
+ Tabellen</p>
+<p class="TextCode">%TS_LEGATO_INDX_S%=Tablespace Operativ-DB f. kleine 
+ Indizes</p>
+<p class="TextCode">%TS_LEGATO_INDX_M%=Tablespace Operativ-DB f. mittlere 
+ Indizes</p>
+<p class="TextCode">%TS_LEGATO_INDX_L%=Tablespace Operativ-DB f. große 
+ Indizes</p>
+<p class="TextCode">#Users and initial Passwords</p>
+<p class="TextCode">%LEGATO_OWNER%=Benutzername des Besitzers der LEGATO 
+ Datenbank</p>
+<p class="TextCode">%LEGATO_OWNERPW%=Passwort des Besitzers der LEGATO 
+ Datenbank</p>
+<p class="TextCode">%LEGATO_READ_USR%=Benutzername des LEGATO Benutzers 
+ mit Leserechten</p>
+<p class="TextCode">%LEGATO_READ_USRPW%=Passwort des LEGATO Benutzers mit 
+ Leserechten</p>
+<p class="TextCode">%LEGATO_WRITE_USR%=Benutzername des LEGATO Benutzers 
+ mit Schreibrechten</p>
+<p class="TextCode">%LEGATO_WRITE_USRPW%=Passwort des LEGATO Benutzers 
+ mit Schreibrechten</p>
+<p class="TextCode">%LEGATO_LC2_USR%=Benutzername des LEGATO Benutzers 
+ für den LC2</p>
+<p class="TextCode">%LEGATO_LC2_USRPW%=Passwort des LEGATO Benutzers für 
+ den LC2</p>
+<p class="TextCode">%LEGATO_GW_USR%=Benutzername des LEGATO Benutzers für 
+ das Gateway</p>
+<p class="TextCode">%LEGATO_GW_USRPW%=Passwort des LEGATO Benutzers für 
+ das Gateway</p>
+<p class="TextCode">%LEGATO_AE_USR%=Benutzername des LEGATO Benutzers für 
+ die Application Engine</p>
+<p class="TextCode">%LEGATO_AE_USRPW%=Passwort des LEGATO Benutzers für 
+ die Application Engine</p>
+<p class="TextCode">%LEGATO_WA_USR%=Benutzername des LEGATO Benutzers für 
+ die WebApp</p>
+<p class="TextCode">%LEGATO_WA_USRPW%=Passwort des LEGATO Benutzers für 
+ die WebApp</p>
+<p class="TextCode">#Roles</p>
+<p class="TextCode">%LEGATO_READ_ROLE%=Rollenname f. Rolle mit Leserechten 
+ auf LEGATO</p>
+<p class="TextCode">%LEGATO_WRITE_ROLE%=Rollenname f. Rolle mit Schreibrechten 
+ auf LEGATO</p>
+<p class="TextCode">%LEGATO_SID%=SID der Datenbank</p>
+<p class="TextCode">#Version</p>
+<p class="TextCode">%MASTER_VERSION%=Versionstand der Legato DB</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die INI-Datei enthält Platzhalter (%???%), die zur 
+ Laufzeit vom <i>Installer</i> durch die vom Benutzer festgelegten Werte 
+ ersetzt werden.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Platzhalter für die Legato-Benutzer LEGATO_OWNER, 
+ LEGATO_READ, LEGATO_WRITE, LEGATO_LC2, LEGATO_GW, LEGATO_AE und LEGATO_WA 
+ dürfen nicht &quot;Legato&quot; genannt werden. Andernfalls kommt es zu 
+ Fehlern, da &quot;Legato&quot; auch der Name eines DB-Packages ist. Auch 
+ die Namen anderer DB-Packages dürfen nicht für Datenbank-Benutzer verwendet 
+ werden.</p>
+<p class="Textkörperfett"><b>Die INI-Datei wird von GEFASOFT erstellt und 
+ ausgeliefert. Anpassungen sollten nur nach Rücksprache durchgeführt werden, 
+ um Fehler zu vermeiden.</b></p>
+<p class="BodyText">Der eigentliche Installationsvorgang wird durch SQL-Skripte 
+ gesteuert, die durch den Installer interpretiert und ausgeführt werden. 
+ Auf diese Skripte wird im Abschnitt [MANUAL] der INI-Datei verwiesen.</p>
+<p class="BodyText"><img src="../../../Images/Sys_Inst/image007.png" alt="" 
+						 width="700" height="571" border="0" /></p>
+<p class="Bildunterschrift">Beispielmaske aus dem Installer:</p>
+<p class="Bildunterschrift">Schritt 1 – Überprüfung des Treibers</p>
+<p class="BodyText">Der Warnhinweis bezüglich des Client Charactersets 
+ wird ausgegeben, wenn der Zeichensatz des Oracle Clients nicht auf UTF8 
+ gestellt ist. UTF8 ist die Einstellungsempfehlung für die Datenbank. Da 
+ nicht geprüft wird, wie die Datenbank eingestellt ist, kann diese Meldung 
+ nur als&#160;&#160;Information verstanden werden.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Es liegt in der Verantwortung des Bedieners 
+ zu beurteilen, ob ein Problem mit inkompatiblen Zeichensätzen vorliegen 
+ könnte.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Wie im Screen erwähnt, müssen alle Clients, 
+ die auf die Datenbank zugreifen, vor Beginn der Installation deaktiviert 
+ werden.</p>
+<p class="BodyText"><img src="../../../Images/Sys_Inst/image009.png" alt="" 
+						 width="700" height="755" border="0" /></p>
+<p class="Bildunterschrift">Beispielmaske aus dem Installer:</p>
+<p class="Bildunterschrift">Schritt 2 – Festlegen der Installationsparameter</p>
+<p class="BodyText">Hier müssen in der rechten Spalte überall dort Werte 
+ eingetragen werden, wo die Zeile in roter Schrift gekennzeichnet ist.</p>
+<p class="Textkörperfett">INFO:</p>
+<p class="TextkörperHinweis">Kann oder will man einen dieser &quot;Pflichteinträge&quot; 
+ nicht vergeben (z.B. bei %SCHEMA_PROD%, %SCHEMA_ARC% und %JDBC_URL_ARC%), 
+ so muss man ein Leerzeichen eintragen, um speichern zu können.</p>
+<p class="BodyText">Außerdem müssen die Sprachen (Language 1 und Language 
+ 2) eingestellt werden.</p>
+<p class="BodyText">Nachdem die Installationsparameter einmal eingegeben 
+ wurden, kann durch Klick auf den Button &quot;Save&quot; ein Parameter-File 
+ (Dateiendung .prm) lokal abgespeichert werden. Für weitere Installationen 
+ kann man das PRM-File dann durch Klick auf &quot;Load&quot; wieder laden 
+ und muss nicht alle Parameter erneut eingeben.</p>
+<p class="BodyText"><img src="../../../Images/Sys_Inst/image011.png" alt="" 
+						 width="700" height="694" border="0" /></p>
+<p class="Bildunterschrift">Beispielmaske aus dem Installer:</p>
+<p class="Bildunterschrift">Schritt 2 – Laden der Parameter aus einem PRM-File.</p>
+<p class="BodyText">So sieht beispielsweise ein geladenes PRM-File aus.</p>
+<p class="BodyText"><img src="../../../Images/Sys_Inst/image013.png" alt="" 
+						 width="595" height="723" border="0" /></p>
+<p class="Bildunterschrift">Beispielmaske aus dem Installer:</p>
+<p class="Bildunterschrift">Schritt 3 – Installation des Datenmodells in 
+ mehreren Schritten</p>
+<p class="BodyText">Ausgeführt wird die Installation durch Klick auf &quot;GO!&quot;. 
+ In der unteren Hälfte des Dialogs wird geloggt.</p>
+<h3><a name="Zweisprachige_Installation" id="Zweisprachige_Installation"></a>Zweisprachige 
+ oder fremdsprachige Installation</h3>
+<p class="BodyText">Die gewünschte Basissprache für das System und wahlweise 
+ eine zweite Sprache (Fremdsprache) können unabhängig voneinander gewählt 
+ werden. Der Installer führt die notwendigen Übersetzungen anhand einer 
+ Übersetzungstabelle (Dateiformat .MLD) durch.</p>
+<h4>Besonderheit für fremdsprachige Texte mit Sonderzeichen außerhalb dem 
+ jeweiligen Standardzeichensatz des DB-Servers</h4>
+<p class="BodyText">Um in LEGATO fremdsprachige Texte mit Sonderzeichen 
+ außerhalb dem jeweiligen Standardzeichensatz des DB-Servers installieren 
+ zu können, müssen bestimmte Einstellungen in der Datenbank vorgenommen 
+ werden. Andernfalls kommt es zu Problemen bei der Darstellung der Sonderzeichen. 
+ Beispielsweise muss für Installationen im westeuropäischem Standardzeichensatz 
+ (z.B. DE) für Sprachen aus demselben Sprachraum (z.B. Französisch), nichts 
+ beachtet werden. Soll nun aber z.B. eine deutsche Installation auf einem 
+ Server mit US-Einstellung installiert werden, so muss auch für DE der 
+ NLS_LANG Parameter gesetzt werden.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Fremdsprachige Texte werden nicht korrekt 
+ in die standardmäßig ausgelieferte Legato Datenbank übernommen, solange 
+ diese Einstellungen nicht vorgenommen wurden.</p>
+<p class="BodyText">Der Oracle-Parameter NLS_LANG (für den Zeichencode) 
+ muss auf den entsprechenden Wert gesetzt werden, damit die Datenbank die 
+ fremden Sonderzeichen aufnehmen kann. Grundsätzlich gibt es dafür drei 
+ Möglichkeiten (siehe auch<br />
+<a href="../">http://www.oracle.com/technetwork/products/globalization/nls-lang-099431.html#_Toc110410543</a>):</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">den Datenbank-Parameter NLS_LANG bzw. NLS_LANGUAGE 
+ setzen</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">den Datenbankinstanz-Parameter NLS_LANG bzw. NLS_LANGUAGE 
+ setzen</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">den Database Session-Parameter NLS_LANG setzen</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Die Einstellung des Session-Parameters überlagert den 
+ Datenbankinstanz-Parameter und dieser wiederum den Parameter auf Datenbankebene.</p>
+<p class="BodyText">Da weder die Datenbank insgesamt noch die eine Legato-Instanz 
+ dauerhaft umgestellt werden sollen, ist das (vorübergehende) Setzen des 
+ Session-Parameters das Mittel der Wahl. Der Session-Parameter wird auf 
+ Betriebssystem-Ebene gesetzt.</p>
+<p class="BodyText">Am einfachsten wird dazu vor dem Starten der SetupLDB.ini 
+ in einer DOS-Box (auf Windows) die Umgebungsvariable NLS_LANG gesetzt:</p>
+<p class="TextCode">C:\Aufrufverzeichnis\&gt;set NLS_LANG=[gewünschter 
+ Zeichensatz]</p>
+<p class="TextCode">C:\Aufrufverzeichnis\&gt;setupldb</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">In den Parametern des Legato DB Setup-Tool wird dann 
+ als eine Sprache (z. B. &quot;Language 1&quot;) die entsprechende Sprache 
+ (z.B. Chinesisch (&quot;Chinese, Simplified&quot;)) eingestellt. Anschließend 
+ können die Texte eingespielt werden.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Diese Einstellung muss vor der Ausführung 
+ jeder einzelnen SetupLDB erfolgen, falls mehrere in Folge installiert 
+ werden müssen.</p>
+<p class="BodyText">Wenn aus einem Tool (insbesondere SQL*Plus, PL/SQL 
+ Developer und Legato DB Setup) fremdsprachige Texte in die Datenbank geschrieben 
+ werden soll, dann müssen sie in Umgebungen gestartet werden, in denen 
+ der Session-Parameter NLS_LANG gesetzt ist.</p>
+<p class="BodyText">Folgende Werte müssen dem Parameter NLS_LANG gegebenenfalls 
+ zugewiesen werden:</p>
+<table class="TabelleBlank" cellspacing="0">
+	<col style="width: 29.167%;" />
+	<col style="width: 70.833%;" />
+	<tr>
+		<td>für Chinesisch:</td>
+		<td>SIMPLIFIED CHINESE_CHINA.UTF8 (sic!; inklusive Leerzeichen!)</td>
+	</tr>
+	<tr>
+		<td>für Polnisch:</td>
+		<td>POLISH_POLAND.EE8MSWIN1250</td>
+	</tr>
+	<tr>
+		<td>für Ungarisch:</td>
+		<td>HUNGARIAN_HUNGARY.EE8MSWIN1250</td>
+	</tr>
+	<tr>
+		<td>für Slowakisch:</td>
+		<td>SLOVAK_SLOVAKIA.UTF8</td>
+	</tr>
+	<tr>
+		<td>für Deutsch:</td>
+		<td>GERMAN_GERMANY.WE8ISO8859P15</td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<h3><a name="Bedienung_des_Installers" id="Bedienung_des_Installers"></a>Bedienung 
+ des Installers für eine Oracle Installation</h3>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Button &quot;Next&quot;</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Parameter überprüfen bzw. ergänzen. Vorschlag: 
+ LEGATO_OWNER / LEGATO_OWNER, LEGATO_READ / LEGATO_READ, LEGATO_WRITE / 
+ LEGATO_WRITE LEGATO_READ_ROLE, LEGATO_WRITE_ROLE</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Der Installationsvorgang ist abgeschlossen, wenn 
+ alle Jobs erfolgreich bearbeitet wurden (die untere Laufleiste stehen 
+ bleibt) und der Button &quot;Go!&quot; deaktiviert (grau) erscheint.</p><?rh-list_end ?>
+<h3><a name="Erweiterungen_für_2DB_Installationen"></a>Erweiterungen für 
+ 2-DB-Installationen ab V4.0.0.002</h3>
+<p class="BodyText">Ab der Version V4.0.0.002 wird einmalig ein neues Package 
+ flush_pool angelegt. Für die Installation benötigt man kurzfristig einen 
+ Zugang als sysdba auf die Datenbank. Alternativ kann vor der Installation 
+ das Skript &quot;ACM\Archive\generate_flush_pool.sql&quot; als sysdba 
+ in der Archiv-DB ausgeführt werden. In diesem Fall kann der entsprechende 
+ Arbeitsschritt bei der Installation deaktiviert werden. Mit diesem Package 
+ ist es künftig möglich als LEGATO_OWNER den SHARED_POOL von Oracle in 
+ der Archive-Instanz zu leeren. Dies ist zum Teil nach einem Legato-DB-Update 
+ nötig, damit keine ungültigen DB-Objekte zurückbleiben.</p>
+</body>
+</html>

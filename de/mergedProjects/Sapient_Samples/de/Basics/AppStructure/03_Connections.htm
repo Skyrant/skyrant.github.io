@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "2.3.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Verbindungen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Verbindungen">
+        <span>Verbindungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Verbindungen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Datenaustausch | Datenaustausch-Module 
+ | Verbindungen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Unter dem jeweiligen Modul (Datenquelle) können Verbindungen 
+ parametriert werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Modul</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl des zugehörigen 
+		 Moduls. Wird automatisch befüllt und kann geändert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Gerätetyp (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl des Gerätetyps.</p>
+		<p class="TabellenInhalt">Die Auswahl des Gerätetyps dient standardmäßig 
+		 nur Anzeigezwecken zur Strukturierung v.a. großer Projekte.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">ID (SPS Identifier)</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Bezeichnung der Steuerung 
+		 (z.B. SPS) im Projekt, z.B. Ortskennzeichen oder Betriebsmittelkennzeichen. 
+		 Standard-Gateway-Skripte verwenden diese ID für die Buchung von 
+		 Verbindungszuständen diese Symbolik für die Adressierung der Verbindung 
+		 in der Datenbank. Die Verbindungssymbolik im Gateway und hier 
+		 sollten entsprechend gleichlautend sein.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Verbindungsname. Der Name der Verbindung 
+		 wird im WebClient an verschiedenen Stellen als Quelle visualisiert.</p>
+		<p class="TabellenInhalt">Hinweis: Im Namen darf die Zeichenfolge 
+		 &quot;##.&quot; nicht verwendet werden. Ansonsten wird eine Fehlermeldung 
+		 angezeigt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung der Verbindung. 
+		 Die Beschreibung der Verbindung wird im Webclient an verschiedenen 
+		 Stellen als Quellenbeschreibung visualisiert.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Knoten (Default)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Default-Knotens 
+		 aus der Fertigungsstruktur. Diesem Knoten werden System-Meldung 
+		 zur Verbindung und eventuell parametrierte Grenzwertverletzungen 
+		 zugeordnet.</p>
+		<p class="TabellenInhalt">Beim Import von Meldungstexten für das 
+		 Meldesystem werden Meldungen standardmäßig diesem Knoten zugeordnet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Parent (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer übergeordneten 
+		 Verbindung zur hierarchischen Darstellung.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Sync (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 0 = Verbindung ist noch 
+		 nicht synchronisiert; 1 = Verbindung ist synchronisiert. Default 
+		 ist 0.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Vorlageninstanz</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Vorlageninstanz, 
+		 von der der Wert stammt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Vorlagenreferenz</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Vorlagenreferenz. 
+		 Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Verbindungsstatus Nr.</p></td>
+		<td><p class="TabellenInhalt">Anzeige des aktuellen Verbindungsstatus 
+		 als Nummer. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Verbindungsstatus</p></td>
+		<td><p class="TabellenInhalt">Anzeige des aktuellen Verbindungsstatus 
+		 als Text. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Importeinstellungen (Meldungen)</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Hier 
+		 werden die Importeinstellungen für den Zuli-Import eingetragen. 
+		 Für Details, siehe unten.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt" data-condition="Others:Sapient_only">Auto 
+		 Import</p></td>
+		<td><p class="TabellenInhalt" data-condition="Others:Sapient_only">Die 
+		 Datei wird für einen automatischen Import durch die Legato Sapient 
+		 Engine vorgemerkt. Über Jobs wird die angegebene Datei auf Änderungen 
+		 überwacht und der Import bei Bedarf mit den gewählten Einstellungen 
+		 automatisch durchgeführt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Letzter Zuli Import</p></td>
+		<td><p class="TabellenInhalt">Datum des letzten Imports von Zuordnungslisten 
+		 (Zuli). Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Datum letzte Zuli</p></td>
+		<td><p class="TabellenInhalt">Datum der zuletzt importierten Zuli. 
+		 Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Letzter Import-Fehler Text</p></td>
+		<td><p class="TabellenInhalt">Text des letzten Import-Fehlers. 
+		 Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Letzter Import Variablenliste</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Datum 
+		 des letzten erfolgreichen Variablen-Imports. Nur zur Information; 
+		 schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Datum letzte Datei Variablenliste</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Datum 
+		 der Datei des letzten Variablen-Imports. Nur zur Information; 
+		 schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Letzter Import-Fehler Variablenliste</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Text 
+		 des letzten Fehlers eines fehlerhaften Variablen-Imports. Nur 
+		 zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Erweiterte Eigenschaften</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Die 
+		 unter Grundkonfiguration | Erweiterte Eigenschaften | Zuordnungen 
+		 von Erweiterten Eigenschaften | Erw. Eigenschaften (Verbindungen) 
+		 verwalteten erweiterten Verbindungseigenschaften werden hier angehängt 
+		 (je Eigenschaft eine Spalte) und können hier mit Werten versehen 
+		 werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Sapient_only;Others:Not_implemented"><p class="TabellenInhalt" data-condition="Others:Not_implemented;Others:Sapient_only">Erw. Eigenschaften</p></td>
+		<td data-condition="Others:Sapient_only;Others:Not_implemented"><p class="TabellenInhalt" data-condition="Others:Not_implemented;Others:Sapient_only">Die definierten erweiterten Eigenschaften 
+		 werden hier als eigene Spalten angehängt und können mit Werten 
+		 versehen werden.</p>
+		<p class="TabellenInhalt" data-condition="Others:Not_implemented;Others:Sapient_only">Die 
+		 Parametrierung von erweiterten Eigenschaften ist in einem separaten 
+		 Kapitel beschrieben, zu finden hier: <a href="..\..\Ext_Props.htm" data-condition="Others:Not_implemented;Others:Sapient_only">Erweiterte Eigenschaften</a>.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Classic_only;Others:Deutsch">Erweiterte Eigenschaften</h3>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Wie in der 
+ Feldbeschreibung erwähnt, gibt es abhängig von der Verbindungsart verschiedene 
+ erweiterte Eigenschaften, die unter Grundkonfiguration | Erweiterte Eigenschaften 
+ | Zuordnungen von Erweiterten Eigenschaften | Erw. Eigenschaften (Verbindungen) 
+ gepflegt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch"><b>TIPP:</b></p>
+<p class="TextkörperHinweis" data-condition="Others:Classic_only;Others:Deutsch">Da 
+ diese erweiterten Eigenschaften von der selektierten Verbindungsart abhängen, 
+ können einige von ihnen nicht im Tabellengrid gepflegt werden, sondern 
+ nur im Details-View.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Sollte eine 
+ erweiterte Eigenschaft für die gewählte Verbindungsart ein Pflichtfeld 
+ sein, so muss sie im Details View parametriert werden, um den neuen Eintrag 
+ in der Tabelle speichern zu können.</p>
+<h6 class="Ü3_Search" data-condition="Others:Classic_only;Others:Deutsch">Beispiel</h6>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Die Steuerungen 
+ der Vormontage und Montage werden über ein Gateway, die der Logistikhalle 
+ über ein weiteres Gateway an die Datenbank angebunden. Entsprechend werden 
+ zwei Gateways (Gateway_1 und Gateway_2) angelegt. Gateway_1 erhält als 
+ Verbindungen zunächst die Bereiche Vormontage und Montage, unter denen 
+ jeweils die SPS-Systeme der Bereiche parametriert werden. Die Hierarchie 
+ erhält damit etwa folgendes Aussehen:</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">Interne Werte     …</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">Gateway_1         Vormontage 
+ SPS_VMON1</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">                             SPS_VMON2</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">                             SPS_VMON3</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">                  Montage    SPS_MONT1</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">                             SPS_MONT2</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">Gateway_2         Logistik   SPS_LOGI1</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">                             LOGI_PC_1</p>
+<p class="TextCode" data-condition="Others:Classic_only;Others:Deutsch">                             LOGI_PC_2</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">Importeinstellungen 
+ (Meldungen)</span></h3>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">In der Spalte 
+ &quot;Importeinstellungen (Meldungen)&quot; der Verbindung werden die 
+ Einstellungen für den Import festgelegt.</p>
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0" data-condition="Others:Sapient_only"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Sapient_only;Others:Deutsch">Bei 
+ den Parametern ist auf Groß-/Kleinschreibung zu achten!</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Folgende 
+ Einstellungen sind verbindlich in jedem Fall einzutragen:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Filename=&#39;Pfad zur und Dateiname mit Endung&#39; (Beispiel: 
+ C:\Temp\Importdateien\GraphpicS5CSV.CSV)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">FileType=&#39;Angabe des Typs der Import-Datei&#39; (Beispiel: 
+ 5)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=&#39;ID der Default-Meldeklasse&#39; 
+ Beispiel: 0) </p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=&#39;ID der Default-Meldeart&#39; (Beispiel: 
+ 0)</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Folgende 
+ Einstellungen können optional eingetragen werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Script=&#39;Name des auszuführenden Skripts&#39; </p>
+<p class="TextkörperfettAufzähl" data-condition="Others:Sapient_only;Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0" data-condition="Others:Sapient_only"/>:</p>
+<p class="TextkörperHinweisAufzähl" data-condition="Others:Sapient_only;Others:Deutsch">Bei 
+ Verwendung des FileType 20 (Benutzerdefiniertes Skript) ist diese Eingabe 
+ verbindlich.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">DeleteOldItems=&#39;Löschen alter Zuordnungen nach 
+ erneutem Import&#39; (Beispiel: 1)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">UpdateItems=&#39;Aktualisieren bestehender Zuordnungen&#39; 
+ (Beispiel: 1)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Charset=&#39;Characterset der Import-Datei&#39; (Beispiel: 
+ ISO8859_15)</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Folgende 
+ optionale Einstellungen werden nur bei den Datentypen 1 (S5-SEQ-Datei), 
+ 2 (S7-SEQ-Datei) und 7 (S7-SDF-Datei) ausgewertet und verarbeitet:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">ImportFilterOpType=&#39;ImportFilterOperationType&#39; 
+ (mögliche Einträge: AB, EB, MB, SY); (Beispiel: SY)</p>
+<p class="TextkörperfettAufzähl" data-condition="Others:Sapient_only;Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>: 
+ </p>
+<p class="TextkörperHinweisAufzähl" data-condition="Others:Sapient_only;Others:Deutsch">S<span data-condition="Others:Sapient_only">Y 
+ ist nur bei FileType 1 (S5-SEQ_Datei) zulässig.</span></p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">ImportFilterFirstByte=&#39;ImportFilter von (inklusive) 
+ erstem Byte&#39; (Beispiel: 10)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">ImportfilterLastByte=&#39;ImportFilter bis (inklusive) 
+ letztem Byte&#39; (Beispiel: 1000)</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">Die 
+ beiden letzten dieser 3 Parameter werden nur ausgewertet, wenn der erste 
+ Parameter einen sinnvollen Eintrag enthält.</span></p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Mit obigen 
+ Beispielwerten werden nur Zuordnungen von SY 10 bis SY 1000 importiert.</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Standardmäßig 
+ werden folgende Datenformate unterstützt:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">S5-SEQ-Dateien (*.seq) Sequenzielle Quelldatei 
+ eines Simatic S5-Programmes</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">S7-SDF-Dateien (*.sdf) Empfohlene Quelldatei bei 
+ Verwendung eines Simatic S7-Programmes</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">S7-SEQ-Dateien (*.seq) Sequenzielle Quelldatei 
+ eines Simatic S7-Programmes (beschränkt auf 40 Zeichen)</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">P-DIAG (*.csv) aus Simatic PDiag exportierte Textdateien</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Textliste – Meldungsnr. &amp; Text (*.txt) mit 
+ tabulatorgetrennter Meldungsnummer und Text</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">P-DIAG XML (*.xml) Dateien</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Spezielle 
+ Formate für eine einheitliche Textbasis bei Verwendung von GEFASOFT GraphPic 
+ NT und Legato in einem Verbundprojekt sind:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">S5/S7-GraphPic-Importdateien (*.txt oder *.csv), 
+ die von GraphPic NT erzeugt werden können.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Sapient_only;Others:Sapient_only;Others:Deutsch">Phönix CSV-Dateien</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch">Beispiele</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 1 - S5-SEQ-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 1 S5Seq\S5seq mit S-Merkern.SEQ</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterOpType=SY</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterFirstByte=10</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterLastByte=1000</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 2 - S7-SEQ-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 2 S7Seq\S7seq.SEQ</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=2</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterOpType=EB</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterFirstByte=10</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterLastByte=1000</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 3 - S5-GraphPic-Importdatei 
+ txt:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 3 S5GraphpicTxt\GP8-S57-txt.TXT</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=3</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 4 - S7-GraphPic-Importdatei 
+ txt:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 4 S7GraphpicTxt\GP8-S57-txt.TXT</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=4</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 5 - S5-GraphPic-Importdatei 
+ csv:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 5 S5GraphpicCsv\GP8-S57-csv.CSV</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=5</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 6 - S7-GraphPic-Importdatei 
+ csv:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 6 S7GraphpicCsv\GP8-S57-csv.CSV</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=6</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 7 - S7-SDF-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 7 S7Sdf\S7sdf.SDF</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=7</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterOpType=MB</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterFirstByte=10</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">ImportFilterLastByte=1000</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 8 - P-Diag-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 8 PDiagCsv\PDiag_csv_Ger.csv</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=8</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 9 - Einfache 
+ Textliste:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 9 EinfacheTextlisteTxt\kurze_Textliste.txt</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=9</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 10 - 
+ P-Diag-XML-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 10 PDiagXml\K8SIM518.xml</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=10</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 11 - 
+ Tab-Textdatei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 11 TabText\Tab_Text.txt</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=11</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 12 - 
+ Phoenix-CSV-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 12 PhoenixCsv\B8_BSP.csv</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=12</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 12-1 PhoenixCsv\ExtScript_CreateNode.csv</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=12</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Script=imp_Phoenix_CSV_EXAMPLE_with_checkCreateNode.js</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 13 - 
+ Phoenix-M1-CSV-Datei:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 13 PhoenixM1Csv\KB8A1-200.csv</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=13</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=ISO8859_15</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Typ 20 - 
+ Benutzerdefiniertes Skript:</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"><span data-condition="Others:Sapient_only">FileName=C:\Temp\Sapient 
+ Meldungsimport\ZuliTyp 20 UserDefinedCsv\ExtScript_UserDefined.csv</span></p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">FileType=20</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Script=imp_EXAMPLE_user_defined.js</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_CLASS=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Default.AL_TYPE=0</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">Charset=UTF8</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">DeleteOldItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch">UpdateItems=1</p>
+<p class="TextCode" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Kontextmenü</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Im Kontextmenü der Verbindungen (rechte Maustaste auf 
+ die Verbindung im Navigationsbaum) werden verschiedene Optionen angeboten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Alle Meldungen zurücksetzen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt alle anstehenden Meldungen der selektierten Verbindung 
+ (ohne untergeordnete Verbindungen) auf &quot;Gehend&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Alle Meldungen zurücksetzen (auch Unterverbindungen)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt alle anstehenden Meldungen der selektierten Verbindung 
+ (inklusive aller untergeordneter Verbindungen) auf &quot;Gehend&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch">Variablen: 
+ Import-Einstellungen…</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Öffnet einen 
+ Dialog zur Auswahl einer Variablendatei mit Variablen, die für die selektierte 
+ Verbindung importiert werden sollen.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Über das 
+ Feld Zeichensatz&quot; kann aus einer Drop-down-Liste der zu verwendende 
+ Zeichensatz (z.B. UTF8) gewählt werden. Dies ist nur relevant, wenn die 
+ Importdatei Zeichen eines speziellen Zeichensatzes verwendet.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Die folgenden 
+ Optionen stehen für den Import zur Verfügung:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Existierende Variablen aktualisieren:</p>
+<p class="TextkörperAufzähl" data-condition="Others:Classic_only;Others:Deutsch">Die 
+ Angaben von bereits vorhandenen Variablen werden beim Import ersetzt.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Automatisch importieren:</p>
+<p class="TextkörperAufzähl" data-condition="Others:Classic_only;Others:Deutsch">Die 
+ Datei wird für einen automatischen Import durch die Legato ApplicationEngine 
+ vorgemerkt. Über Jobs wird die angegebene Datei auf Änderungen überwacht 
+ und der Import bei Bedarf mit den gewählten Einstellungen automatisch 
+ durchgeführt.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch">Variablen: 
+ Import starten</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Stößt den 
+ Import der Variablendatei mit den Einstellungen, die unter Import Settings… 
+ getroffen wurden, an.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Nach dem 
+ Anstoß des Importvorgangs wird dem Anwender direkt eine Meldung angezeigt, 
+ dass der Import gestartet wurde und asynchron durch die AE ausgeführt 
+ wird.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch">Meldungsdefinitionen: 
+ Import-Einstellungen…</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Öffnet einen 
+ Dialog, in dem Import-Einstellungen für Zuordnungslisten getroffen werden 
+ können. In der Regel werden die Meldungen aus vorhandenen Datenquellen 
+ manuell (über den LC2) oder automatisch (Systemprogramm <i>Legato ApplicationEngine</i>) 
+ importiert. Die entsprechenden ApplicationEngine-Jobs sind in der separaten 
+ Dokumentation &quot;Legato_ApplicationEngine&quot;  genauer beschrieben. 
+ Die Scripting-Schnittstelle ermöglicht die Erstellung von Scripten zum 
+ Import spezieller Dateiformate sowie die automatische Festlegung von Meldungseigenschaften 
+ beim Import.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Es kann eine 
+ Zuordnungsdatei für den Import ausgewählt werden.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Unter &quot;Type&quot; 
+ legt man die Art der Zuordnungsdatei fest. Dies entscheidet darüber, wie 
+ die Meldungsnummer gebildet wird (das ist meist abhängig von der Erfassungsart 
+ der Meldung). Standardmäßig werden folgende Datenformate unterstützt:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">S5-SEQ-Dateien (*.seq) Sequenzielle Quelldatei 
+ eines Simatic S5-Programmes</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">S7-SDF-Dateien (*.sdf) Empfohlene Quelldatei bei 
+ Verwendung eines Simatic S7-Programmes</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">S7-SEQ-Dateien (*.seq) Sequenzielle Quelldatei 
+ eines Simatic S7-Programmes (beschränkt auf 40 Zeichen)</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">P-DIAG (*.csv) aus Simatic PDiag exportierte Textdateien</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Textliste – Meldungsnr. &amp; Text (*.txt) mit 
+ tabulatorgetrennter Meldungsnummer und Text</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">P-DIAG XML (*.xml) Dateien</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Spezielle 
+ Formate für eine einheitliche Textbasis bei Verwendung von GEFASOFT GraphPic 
+ NT und Legato in einem Verbundprojekt sind:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">S5/S7-GraphPic-Importdateien (*.txt oder *.csv), 
+ die von GraphPic NT erzeugt werden können.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Phönix CSV-Dateien</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Über das 
+ Feld &quot;Zeichensatz&quot; kann aus einer Drop-down-Liste der zu verwendende 
+ Zeichensatz (z.B. UTF8) gewählt werden. Dies ist nur relevant, wenn die 
+ Importdatei Zeichen eines speziellen Zeichensatzes verwendet.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Das Feld 
+ &quot;Scriptname&quot; muss nur befüllt werden, wenn als Dateityp &quot;Benutzerdefiniert&quot; 
+ ausgewählt wurde. In diesem Fall wird hier der Scriptname der ApplicationEngine 
+ eingetragen, mit dem der Import durchgeführt werden soll. Diese Option 
+ wird verwendet, wenn für ein spezielles Dateiformat ein eigenes Importskript 
+ erstellt wurde.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Die folgenden 
+ Optionen stehen zur Verfügung:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Alte Zuordnungen löschen</p>
+<p class="TextkörperAufzähl" data-condition="Others:Classic_only;Others:Deutsch">Bereits 
+ vorhandene Meldungen, die beim Import nicht mehr in der Datei erhältlich 
+ sind, werden gelöscht.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Existierende Zuordnungen aktualisieren</p>
+<p class="TextkörperAufzähl" data-condition="Others:Classic_only;Others:Deutsch">Die 
+ Angaben für bereits vorhandene Meldungen werden beim Import ersetzt.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Nur Meldetexte aktualisieren</p>
+<p class="TextkörperAufzähl" data-condition="Others:Classic_only;Others:Deutsch">Zusätzliche 
+ Anwahl, um die Eigenschaften einer Meldung (z.B. Klasse und Art) beim 
+ Import beizubehalten und nur den Meldungstext zu aktualisieren.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Automatisch importieren</p>
+<p class="TextkörperAufzähl" data-condition="Others:Classic_only;Others:Deutsch">Die 
+ Datei wird für einen automatischen Import durch das Programm durch die 
+ Legato ApplicationEngine vorgemerkt. Über Jobs wird die angegebene Datei 
+ auf Änderungen überwacht und der Import bei Bedarf mit den gewählten Einstellungen 
+ automatisch durchgeführt.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Unter &quot;Operandenbereich&quot; 
+ können für umfangreiche Zuordnungsdateien Einschränkungen für den zu importierenden 
+ Operandenbereich festgelegt werden.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Bei &quot;Vorgabewerte&quot; 
+ können Standardwerte für die Felder &quot;Klasse&quot; und &quot;Art&quot; 
+ definiert werden. Beim Import wird dann der Defaultwert verwendet, sofern 
+ durch den Import keine meldungsspezifischen Angaben übergeben werden (möglich 
+ bei den Dateiformaten von GraphPic).</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch">Meldungsdefinitionen: 
+ Import starten</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Stößt den 
+ Import der Zuordnungsdatei mit den Einstellungen, die unter Import Settings… 
+ getroffen wurden, an.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Nach dem 
+ Anstoß des Importvorgangs wird dem Anwender direkt eine Meldung angezeigt, 
+ dass der Import gestartet wurde und asynchron durch die AE ausgeführt 
+ wird.</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch">Meldungsdefinitionen: 
+ Import starten</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Stößt den 
+ Import der Zuordnungsdatei an. Die Einstellungen werden im Feld &quot;Importeinstellungen 
+ (Meldungen)&quot; der Verbindung getroffen. Gibt es in diesem Feld keinen 
+ Eintrag, so wird eine entsprechende Fehlermeldung ausgegeben. Die entsprechenden 
+ Sapient Engine-Jobs sind in der separaten Dokumentation genauer beschrieben.</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Synchronisationsfunktion_der_Steuerelemente"></a>Synchronisationsfunktion 
+ der Steuerelemente</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Für jede SPS-Verbindung gibt es im LC2 eine Synchronisationsfunktion, 
+ mit der Steuerungen synchronisiert/initialisiert werden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Funktion können Sie im LC2 im Bereich Anwendungsstruktur 
+ und der Datenaustausch-Tabelle (P_CONNECTIONS) finden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/LC2_Sync_EN.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch das Auswählen des Kontrollkästchens in der Spalte 
+ <span style="font-weight: bold;">Sync</span> aktivieren Sie die Synchronisation.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Das Aktivieren der Synchronisationsfunktion hat nur 
+ eine Auswirkung, wenn diese im entsprechenden ITC-Projekt programmiert 
+ und somit festgelegt ist, wie mit der aktivierten Synchronisation weiter 
+ verfahren werden soll. Dies ist die Voraussetzung für das Funktionieren 
+ der Sync-Funktion.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

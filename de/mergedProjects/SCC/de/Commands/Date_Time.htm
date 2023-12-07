@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Datums- und Uhrzeitfunktionen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Datums- und Uhrzeitfunktionen">
+        <span>Datums- und Uhrzeitfunktionen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Datums- und Uhrzeitfunktionen</h2>
+<h3 data-condition="Others:Deutsch"><a name="ConvTimeStr" id="ConvTimeStr"></a>ConvTimeStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string ConvTimeStr(string time, string 
+ format1, string format2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion konvertiert den Zeitstring <b>time</b> 
+ im <b>format1</b> in einen neuen Zeitstring vom <b>format2</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   t1,t2</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">t1 := timestr(&#39;YYYY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">t2 := convtimestr(t1, &#39;YYYY-MM-DD HH:mm:ss&#39;, &#39;HH:mm:ss 
+ YYYY/MM/DD&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DToTime" id="DToTime"></a>DToTime</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string DToTime(string format, double 
+ time)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion rechnet den durch <b>time</b> vorgegebenen 
+ Double-Wert, der der Zeitdauer seit dem 01.01.1970 in Sekunden entspricht 
+ (Unix-Zeit) in einen Zeitstring um. <b>format</b> gibt an, wie die Zeitausgabe 
+ zu formatieren ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double unix</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string time</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">unix := 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">time := DToTime (&#39;YYYY/MM/DD HH:mm:ss:ttt&#39;, unix)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="EventAge" id="EventAge"></a>EventAge</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long EventAge</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert die Zeitspanne vom Auftreten des 
+ Events bis zur Bearbeitung in der Kommandoqueue (Aufruf des Scripts).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long age</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">age := eventage</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="EventTimeStr" id="EventTimeStr"></a>EventTimeStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string EventTimeStr(string Format)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert einen String mit der Zeit, zu 
+ der ein Ereignis aufgetreten ist, im vorgegeben <b>Format</b>. Diese Funktion 
+ ist vor allem in Scripten sinnvoll, deren Aufruf durch ein gepuffertes 
+ Ereignis ausgelöst wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := EventTimeStr(&#39;YYYY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="FileTimeStr" id="FileTimeStr"></a>FileTimeStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string FileTimeStr(pointer addr, string 
+ Format)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion konvertiert eine Zeit vom Format <b>Filetime</b> 
+ (8 Byte), die durch den Zeiger <b>addr</b> definiert wird, in einen String 
+ im vorgegeben <b>Format</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">struct fi</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">begin</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    dwFileAttributes</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftCreationTimeHigh, 
+ ftCreationTimeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastAccessTimeHigh</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastAccessTimeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastWriteTimeHigh</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastWriteTimeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    nFileSizeHigh</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    nFileSizeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    dwReserved0</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    dwReserved1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  byte     cFileName[260]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  byte     cAlternateFileName[14]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := FileTimeStr(&amp;fi.ftLastWriteTimeHigh, &#39;DD.MM.YY 
+ HH:mm:ss&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(d)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="LocalToUtc"></a>LocalToUtc</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: string LocalToUtc(string localtime)</p>
+<p data-condition="Others:Deutsch">Die Funktion konvertiert den Zeitstring <span style="font-weight: bold;">localtime</span> 
+ von der lokalen in einen Zeitstring der UTC Zeitzone. Für beide Zeitstrings 
+ wird das Format &#39;YYYY-MM-DD HH:mm:ss&#39; vorausgesetzt.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">string time_utc, time_local</p>
+<p data-condition="Others:Deutsch">time_local := &#39;2021-03-28 02:15:00&#39;</p>
+<p data-condition="Others:Deutsch">time_utc :=  LocalToUtc(time_local)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LToTime" id="LToTime"></a>LToTime</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string LToTime(string format, long 
+ time)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Rechnet den durch <b>time</b> vorgegebenen Long-Wert, 
+ der der Zeitdauer seit dem 01.01.1970 in Sekunden entspricht (Unix-Zeit) 
+ in einen Zeitstring um. <b>format</b> gibt an, wie die Zeitausgabe zu 
+ formatieren ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     unix</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   time</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">unix := 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">time := LToTime(&#39;YYYY/MM/DD HH:mm:ss&#39;, unix)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Modf" id="Modf"></a>Modf</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Modf(double val)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert den Wert der Nachkommastellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double d1, d2</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d1 := TimeDouble</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d2 := modf(d1)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetLocalTime" id="SetLocalTime"></a>SetLocalTime</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetLocalTime(longJahr, long Monat,<br/>
+                          long 
+ Tag, long Stunde,<br/>
+                          long 
+ Minute,<br/>
+                          long 
+ Sekunde)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion setzt die Systemzeit auf  die 
+ übergebenen Parameter.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetLocalTime(1999,9,21,14,45,00)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetVarTime" id="SetVarTime"></a>SetVarTime</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetVarTime(pointer addr, long offset,<br/>
+                        string 
+ format, string time)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt die durch <b>time</b> definierte Zeit in den 
+ Variablenbereich des Scripts ab dem <b>offset</b> von der variable <b>addr</b> 
+ aus gerechnet. Es werden 6 Bytes beschrieben. <b>format</b> gibt an, wie 
+ die Zeitvorgabe zu interpretieren ist. Die Jahreszahl kann maximal zweistellig 
+ ausgegeben werden, auch wenn <b>format</b> eine vierstellige Jahreszahl 
+ angibt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     dummy</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">byte     year, month, 
+ day, hour, minute, sec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   time</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">time := TimeStr(&#39;YY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetVarTime(&amp;jahr, 0, &#39;YY-MM-DD HH:mm:ss&#39;, time)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">oder...</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetVarTime(&amp;dummy, 4, &#39;YY-MM-DD, HH:mm:ss&#39;, 
+ time)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;YY: &#39; + LToStr(year, 10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;MM: &#39; + LToStr(month, 10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;DD: &#39; + LToStr(day, 10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;HH: &#39; + LToStr(hour, 10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;mm: &#39; + LToStr(minute, 10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;ss: &#39; + LToStr(sec, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="TimeDiffLocalTimeUtcTime"></a>TimeDiffLocalTimeUtcTime</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long TimeDiffLocalTimeUtcTime </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert die Differenz zwischen der lokalen 
+ Uhrzeit und der koordinierten Weltzeit (UTC) in Sekunden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long   l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := TimeDiffLocalTimeUtcTime</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="TimeDiffUtcToLocal"></a>TimeDiffUtcToLocal</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: long TimeDiffUtcToLocal(string localtime)</p>
+<p data-condition="Others:Deutsch">Berechnet den aktuellen Unterschied zwischen der UTC-Zeit und der lokalen 
+ Zeit in Sekunden für den Zeitpunkt localtime.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">string time_local</p>
+<p data-condition="Others:Deutsch">long diff</p>
+<p data-condition="Others:Deutsch">time_local := &#39;2021-03-28 02:15:00&#39;</p>
+<p data-condition="Others:Deutsch">diff :=  TimeDiffUtcToLocal(time_local)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="TimeDouble" id="TimeDouble"></a>TimeDouble</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double TimeDouble</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion rechnet die aktuelle Zeit in einen Double-Wert 
+ um, der der Zeitdauer seit dem 01.01.1970 in Sekunden entspricht (Unix-Zeit). 
+ Die Stellen hinter dem Komma enthalten die Millisekunden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double d1, d2</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d1 := TimeToD(&#39;YYYY/MM/DD HH:mm:ss&#39;, &#39;2000/01/01 
+ 00:00:00&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d2 := TimeDouble</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Seit dem 1.1.2000 sind &#39;+dtostr(d2-d1, 10)+&#39; 
+ Sekunde vergangen&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="TimeInt" id="TimeInt"></a>TimeInt</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long TimeInt</p>
+<p class="BodyText" data-condition="Others:Deutsch">Rechnet die aktuelle Zeit in einen Long-Wert um, der 
+ der Zeitdauer seit dem 01.01.1970 in Sekunden entspricht (Unix-Zeit).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     starttime, acttime</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">starttime := TimeToL(&#39;YYYY/MM/DD HH:mm:ss&#39;, &#39;2000/01/01 
+ 00:00:00&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">acttime   := TimeInt</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Since 1.1.2000 &#39;+</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      LToStr(acttime 
+ - starttime, 10) +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      &#39; seconds have 
+ passed&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="TimeStr" id="TimeStr"></a>TimeStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string TimeStr(string Format)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert einen String mit der aktuellen 
+ Systemzeit im vorgegeben <b>Format</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := TimeStr(&#39;YYYY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(d)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="TimeToD" id="TimeToD"></a>TimeToD</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double TimeToD(string format, string 
+ time)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion rechnet die durch <b>time</b> definierte 
+ Zeit in einen Double-Wert um, der der Zeitdauer seit dem 01.01.1970 in 
+ Sekunden entspricht (Unix-Zeit). <b>format</b> gibt an, wie die Zeitvorgabe 
+ zu interpretieren ist. Die Stellen hinter dem Komma enthalten die Millisekunden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double unix</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string time</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">time := TimeStr(&#39;YYYY/MM/DD HH:mm:ss:ttt&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">unix := TimeToD(&#39;YYYY/MM/DD HH:mm:ss:ttt&#39;, time)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="TimeToL1" id="TimeToL1"></a>TimeToL</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long TimeToL(string format, string 
+ time)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Rechnet die durch <b>time</b> definierte Zeit in einen 
+ Long-Wert um, der der Zeitdauer seit dem 01.01.1970 in Sekunden entspricht 
+ (Unix-Zeit). <b>format</b> gibt an, wie die Zeitvorgabe zu interpretieren 
+ ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     unix</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   time</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">time := TimeStr(&#39;YYYY/MM/DD HH:mm:ss&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">unix := TimeToL(&#39;YYYY/MM/DD HH:mm:ss&#39;, time)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="UtcTimeStr"></a>UtcTimeStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string UtcTimeStr(string Format) </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert einen String mit der aktuellen 
+ koordinierten Weltzeit (UTC) im vorgegebenen <span style="font-weight: bold;">Format</span>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := UtcTimeStr(&#39;YYYY-MM-DD HH:mm:ss&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(d)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="UtcToLocal"></a>UtcToLocal</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: string UtcToLocal(string utctime)</p>
+<p data-condition="Others:Deutsch">Die Funktion konvertiert den Zeitstring <span style="font-weight: bold;">utctime</span> 
+ von der UTC Zeit in einen Zeitstring der lokalen Zeitzone. Für beide Zeitstrings 
+ wird das Format &#39;YYYY-MM-DD HH:mm:ss&#39; vorausgesetzt.</p>
+<p data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p data-condition="Others:Deutsch">string time_utc, time_local</p>
+<p data-condition="Others:Deutsch">time_utc := &#39;2021-03-28 02:15:00&#39;</p>
+<p data-condition="Others:Deutsch">time_local :=  UtcToLocal(time_utc&#39;)</p>
+
+
+</body></html>

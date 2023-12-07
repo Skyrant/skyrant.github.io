@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.4.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Neue Funktion zum Kopieren von Rechten im LC2</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Neue Funktion zum Kopieren von Rechten im LC2">
+        <span>Neue Funktion zum Kopieren von Rechten im LC2</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Funktion zum Kopieren von Rechten im LC2</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dieser Funktion ist es möglich, alle Gruppenberechtigungen 
+ von einer Gruppe in eine andere zu kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Prozedur im LC2 besteht aus zwei Parametern:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ul style="font-family: &#39;Palatino Linotype&#39;, serif;" class="MsoNormal" data-condition="Others:Deutsch">
+	<li class="MsoNormal" style="color: #172B4D; mso-margin-top-alt: auto; 
+		 mso-margin-bottom-alt: auto; line-height: normal; mso-list: l0 level1 lfo1; 
+		 tab-stops: list 36.0pt; background-color: #ffffff; font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText" style="font-size: 10.5pt; mso-fareast-font-family: &#39;Times New Roman&#39;;"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">&quot;SOURCE_GRP_ID&quot; 
+	 (JsonValueType.INT, mandatory, &quot;U-GROUPS.ID&quot;),</span></p></li>
+	<li class="MsoNormal" style="color: #172B4D; mso-margin-top-alt: auto; 
+		 mso-margin-bottom-alt: auto; line-height: normal; mso-list: l0 level1 lfo1; 
+		 tab-stops: list 36.0pt; background-color: #ffffff; font-family: &#39;Palatino Linotype&#39;, serif;"><p class="BodyText" style="font-size: 10.5pt; mso-fareast-font-family: &#39;Times New Roman&#39;;"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">&quot;DEST_GRP_ID&quot; 
+	 (JsonValueType.INT, mandatory, &quot;U-GROUPS.ID&quot;)</span></p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Prozedur hat den Pfad:</p>
+<p class="BodyText" style="font-size: 10.5pt; line-height: 107%; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 color: #172B4D;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">de/gefasoft/sapient/db/userrights/Userrights/copy</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Ablauf der Prozedur</h3>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Im ersten Schritt werden die parametrisierten 
+	 Gruppen überprüft (wenn keine vorhanden ist, wird der Vorgang abgebrochen).</p></li>
+	<li><p class="BodyText">Anschließend werden alle Einträge mit <span style="font-weight: bold;">user_group = &quot;DEST_GRP_ID&quot;</span> 
+	 aus der Tabelle <span style="font-weight: bold;">U_PERMISSIONS</span> 
+	 gelöscht.</p></li>
+	<li><p class="BodyText">Im nächsten Schritt werden alle Einträge aus 
+	 der Tabelle <span style="font-weight: bold;">U_PERMISSIONS</span> 
+	 mit <span style="font-weight: bold;">user_group = &quot;SOURCE_GRP_ID&quot;</span> 
+	 in die <span style="font-weight: bold;">user_group &quot;DEST_GRP_ID&quot;</span> 
+	 kopiert.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch">Die Prozedur gibt entweder <span style="font-weight: bold;">ERROR</span> 
+ oder die Anzahl der eingefügten Zeilen bei erfolgreichem Ablauf zurück.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Bedienung im LC2</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion kann im LC2 über das Kontextmenü &quot;<span style="font-weight: bold;">Berechtigungen von Gruppe kopieren...</span>&quot; 
+ verwendet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Navigieren Sie zur Tabelle <span style="font-weight: bold;">User 
+	 Groups</span> (System Administration &gt; Users &gt; User Groups) 
+	 und wählen Sie die gewünschte Benutzergruppe mit einem Mausklick aus.</p></li>
+	<li><p class="BodyText">Wählen Sie im Kontextmenü &quot;Berechtigungen 
+	 von Gruppe kopieren...&quot; aus.<br/>
+	<br/>
+	<img src="../../../assets/images/Function_copy_user_right_1.png" alt="" style="border: none;" border="0"/><br/>
+	</p></li>
+	<li><p class="BodyText">Wählen Sie im folgenden Dialogfenster eine 
+	 Quellgruppe aus.<br/>
+	<br/>
+	<img src="../../../assets/images/Function_copy_user_right_2.png" alt="" style="border: none;" border="0"/><br/>
+	</p></li>
+	<li><p class="BodyText">Abschließend fragt der LC2 nach, ob Sie den 
+	 Vorgang wirklich vornehmen möchten. </p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/Function_copy_user_right.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

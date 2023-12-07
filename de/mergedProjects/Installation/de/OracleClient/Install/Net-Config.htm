@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Net-Konfigurationsassistent</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="OracleClient" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Net-Konfigurationsassistent">
+        <span>Net-Konfigurationsassistent</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Net-Konfigurationsassistent</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Nachdem die Oracle-Client Software am PC installiert wurde, kann ein Assistent zur Einrichtung der Verbindung zur Datenbank über das Windows Startmenü aufgerufen werden. Standardmäßig ist dieser Assistent zu finden unter</p>
+<p class="TextCode" data-condition="Others:Deutsch">Startmenü\Programme\Oracle – OraClient11g_home1\Konfigurations- und Migrations-Tools\Net-Konfigurationsassistent</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Assistent führt durch den Verbindungsaufbau zur Datenbank.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritt 1 - Konfiguration</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image7.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie &quot;Konfiguration von lokalem Net-Service Name&quot; aus und klicken Sie auf &quot;Weiter&quot;.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritt 2 - Konfiguration</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image8.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie &quot;Hinzufügen&quot; aus.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritt 3 - Dienstname</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image9.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie als &quot;Service-Name&quot; (Dienstname) den Oracle-Datenbanknamen auf dem Server an. In diesem Beispiel ist das &quot;Legato&quot;.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritt 4 - Netzwerkprotokoll</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image10.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie als Netzwerkprotokoll &quot;TCP&quot; aus.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritt 5 – Hostname</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image11.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Feld &quot;Host name&quot; ist entweder der Rechnername oder die IP-Adresse des Datenbankservers anzugeben. Als Port muss der Port eingestellt werden, der auch bei der Datenbank eingestellt ist. Im Beispiel ist dies der Standard-Port 1521. Klicken Sie &quot;Weiter&quot;.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritte 6-8 – Verbindung testen</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image12.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Sie haben nun die Möglichkeit, einen Verbindungstest zur Oracle-Datenbank durchzuführen. Wählen Sie dazu &quot;Ja, ein Test soll durchgeführt werden&quot; aus und klicken Sie dann auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Da noch kein Benutzername und Passwort zum Zugriff auf die Datenbank eingegeben wurden, erscheint zunächst eine Fehlermeldung:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image13.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Klick auf den Button &quot;Anmeldung ändern&quot; öffnet einen Dialog, in dem Benutzername und Kennwort für die Datenbank eingegeben werden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image14.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein erneuter Verbindungstest sollte erfolgreich sein.</p>
+<h3 style="mso-list: l0 level3 lfo1;" data-condition="Others:Deutsch">Schritt 9 – Net-Service Name</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/OracleClient/image15.gif" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Abschließend muss noch ein Name für den konfigurierten Net-Service eingegeben werden. In diesem Beispiel verwenden wir den Namen &quot;Workshop&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Danach kann die Konfiguration abgeschlossen und der Assistent beendet werden.</p>
+
+
+</body></html>

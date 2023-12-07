@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/01_General/SysDoc.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/01_General/02_General.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/01_General/03_About.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/01_General/04_General.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/01_General/05_Param_Info.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/01_General/06_Structure.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Admin-LC2/01_General-Settings/03_SysParam-200.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Admin-LC2/02_Login_User-Adm/20_SysParam-203.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Admin-LC2/02_Login_User-Adm/21_SysParam-201.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Admin-LC2/02_Login_User-Adm/22_SysParam-202.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Admin-LC2/02_Login_User-Adm/24_SysParam-261.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Admin-LC2/02_Login_User-Adm/25_SysParam-260.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_GW/01_SysParam-6.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_GW/02_SysParam-5.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_GW/03_SysParam-7.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_AE/02_KPI/01_SysParam-40.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_AE/02_KPI/02_SysParam-41.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_AE/02_KPI/03_SysParam-42.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_AE/03_Al_System/02_SysParam-1.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/06_SysParam-110.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/13_SysParam-100.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/14_SysParam-101.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/18_SysParam-109.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/20_SysParam-13.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/22_SysParam-12.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/01_Gen/23_SysParam-102.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/02_Conf/03_SysParam-9.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/02_Conf/06_SysParam-4.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/02_Conf/07_SysParam-3.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/02_Conf/09_SysParam-10.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/02_Conf/10_SysParam-11.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/04_Al_System/SysParam-43.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/04_Al_System/04_SysParam-22.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/06_Text_Defaults/06_SysParam-20.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-56.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-55.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-50.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-57.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-52.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-51.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-54.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-53.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/07_Paging/SysParam-58.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_DB/08_Anonym/Tage_bis_zur_Anonymisierung.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/11_Al_System/13_SysParam-21.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/MM3/SysParam-170.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/19_Shift_Cal/SysParam-30.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/19_Shift_Cal/SysParam-31.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/Print/SysParam-70.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/Print/SysParam-71.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_WA/28_Layout_Option/SysParam__-300.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/08_MES/04_PZE/04_SysParam5040.htm</loc>
+      <lastmod>2023-08-03</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

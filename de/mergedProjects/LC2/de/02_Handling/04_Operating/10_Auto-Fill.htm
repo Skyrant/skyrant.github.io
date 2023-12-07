@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "3.4.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Autofill</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Autofill,Inkrementieren,LPR-Datei,Lookup,Import" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Autofill">
+        <span>Autofill</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Autofill</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Der Autofill-View dient zum einfacheren Befüllen von 
+ Tabellen. Er besteht aus mehreren Teilen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Reiter__Lookup_"></a>Reiter &quot;Lookup&quot;</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Reiter &quot;Lookup&quot; dient zum Öffnen der 
+ Nachschlagetabelle für Lookup-Felder. Dadurch können einfach weitere Daten 
+ in die Tabelle übertragen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Initial sind keine Daten geladen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/02_Handling/03_Ansichten/04_Autofill/both/01_Autofill.png" alt="" width="343" height="496" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Inhalt des Autofill-Fensters wird aus der in &quot;Dokumente&quot; 
+ geöffneten Tabelle geladen. Klicken Sie dort in ein Lookup-Feld und wählen 
+ Sie im Kontextmenü &quot;Lookup-Elemente im Autofill anzeigen&quot;. Nun 
+ wird die entsprechende Lookup-Tabelle geladen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/02_Handling/03_Ansichten/04_Autofill/both/02_Lookup.png" alt="" width="345" height="416" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Nun können beliebig viele Einträge der Lookup-Tabelle 
+ selektiert werden. Mit dem Button &quot;Ausgewählte Elemente an aktuelle 
+ Tabelle anhängen&quot; werden in der aktiven Tabelle in der Dokumenten-Ansicht 
+ die entsprechende Anzahl Zeilen angelegt und die Lookup-Felder mit den 
+ selektierten Einträgen vorbelegt. Nun können die restlichen Daten befüllt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem kann die Lookup-Tabelle direkt im Autofill-Fenster 
+ editiert werden, z.B. wenn die benötigten Daten dort noch nicht enthalten 
+ sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In einigen Fällen kann nicht direkt die Lookup-Tabelle 
+ geladen werden (z.B. bei hierarchischen Tabellen). In diesem Fall wird 
+ eine Spiegelung des Navigationsbaums im Autofill Fenster angezeigt, wo 
+ die Gruppe der möglichen Einträge vorselektiert ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/02_Handling/03_Ansichten/04_Autofill/both/03_Lookup-Table.png" alt="" width="344" height="416" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Klick auf &quot;Details&quot; rechts blendet die 
+ Details zum im Navigationsbaum selektierten Eintrag ein.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/02_Handling/03_Ansichten/04_Autofill/both/04_Lookup-Details.png" alt="" width="689" height="415" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Unteransicht &quot;Details&quot; besteht aus zwei 
+ Teilen. Der Reiter &quot;Details&quot; zeigt die Detail-Ansicht des selektierten 
+ Eintrags an, sofern es sich hier um einen Datensatz handelt; der Reiter 
+ &quot;Items&quot; zeigt die Elemente der selektierten Tabelle an.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird die Checkbox &quot;Wert setzen durch Klick&quot; 
+ aktiviert, kann der Eintrag in der darunterliegenden Zeile per Mausklick 
+ in die bearbeitete Tabelle übernommen werden. Diese Zeile kann entweder 
+ mit einem Eintrag aus der Lookup-Tabelle gefüllt werden, oder es kann 
+ manuell etwas eingetragen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/02_Handling/03_Ansichten/04_Autofill/both/05_Set-value.png" alt="" width="327" height="58" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Beispiel wird jede angeklickte Zelle der 
+ bearbeiteten Tabelle mit dem Eintrag &quot;group&quot; gefüllt (sofern 
+ dieser Werttyp dort zulässig ist).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Daten im Autofill View werden nicht automatisch 
+ aktualisiert. Beim Wechsel der Tabelle müssen die Lookup-Daten ggf. neu 
+ angefordert werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Reiter__Inkrementieren_"></a>Reiter &quot;Inkrementieren&quot;</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich gibt es die Funktion &quot;Inkrementieren&quot;, 
+ die insbesondere für Zahlwerte und oder Texte mit Zahl-Elementen (z.B. 
+ Location 1, Location 2, Location 3, etc.) hilfreich ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/02_Handling/03_Ansichten/04_Autofill/both/06_Increment.png" alt="" width="357" height="343" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Texteingabefeld &quot;Format&quot; kann ein 
+ beliebiger Text eingegeben werden. Der vorhandene Eintrag {0} ist ein 
+ Platzhalter für das Inkrementieren. Z.B. Location {0}.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Eingabe im Feld &quot;Inkrementieren&quot; legt 
+ fest, um wieviel der Platzhalter jeweils inkrementiert werden soll. Im 
+ obigen Beispiel ist der Inkrement-Wert 2; es wird also in das erste Feld, 
+ das durch Mausklick befüllt wird, &quot;Location 1&quot; eingetragen, 
+ in das zweite &quot;Location 3&quot;, in das dritte &quot;Location 5&quot; 
+ usw.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Klick auf &quot;Zurücksetzen&quot; setzt die Eingaben 
+ in diesem Dialog zurück.</p>
+<h3 data-condition="Others:Deutsch"><a id="Reiter__Aus_LPR-Datei_importieren_"></a>Reiter &quot;Aus LPR-Datei 
+ importieren&quot;</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Reiter &quot;Aus LPR-Datei importieren&quot; dient 
+ dem Import von Variablen aus einem Gateway-Projekt in die Variablenliste 
+ einer Verbindung des Datenaustauschs. Siehe auch <a href="../../05_ASS/02_Data_Exchange/04_Vars/02_GW_Vars.htm">Datenaustausch 
+ | Module | Verbindungen | Variablen</a>.</p>
+
+
+</body></html>

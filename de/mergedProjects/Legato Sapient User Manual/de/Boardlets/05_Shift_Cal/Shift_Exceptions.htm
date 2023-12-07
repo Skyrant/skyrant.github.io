@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.5.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Schichtausnahmen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Schichtausnahmen">
+        <span>Schichtausnahmen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Schichtausnahmen</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-size: 14.6667px; font-variant-ligatures: normal; 
+							 font-variant-caps: normal; orphans: 2; widows: 2; 
+							 -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+							 text-decoration-style: initial; text-decoration-color: initial; 
+							 display: inline	 ! important ; float: none;">Im 
+ Boardlet </span><span class="Bold">Schichtausnahmen</span><span style="font-size: 14.6667px; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; 
+	 widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none;"> kann dem gewählten Knoten und allen Unterknoten mit 
+ demselben Zeitschema für einen bestimmten Zieltag ein abweichendes Schichtmodell 
+ zugewiesen werden. Das Standard-Schichtmodell der restlichen Knoten im 
+ selben Zeitschema bleibt davon unberührt.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem ist es möglich, die Start- oder Endzeit von 
+ Schichten oder Pausen zu ändern. Siehe auch <a href="../../../../SystemParameters/de/06_WA/19_Shift_Cal/SysParam-31.htm">Systemparameter 
+ -31</a>.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Es gelten folgende grundlegenden Bestimmungen:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Schichtausnahmen können nur auf Grund eines 
+	 Standardschichtmodells für ein Zeitschema (und einen Tag) eingegeben 
+	 werden, wenn die Schichten/Pausen bereits ausgerollt wurden.</p></li>
+	<li><p class="ListBulletL1">Eine nachträgliche Änderung des Standardschichtmodells 
+	 eines Zeitschemas (und Tages) kann getätigt werden auch wenn:</p></li>
+</ul>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch">ab 
+ einem Unterknoten ein abweichendes (Knoten-)Schichtmodell parametriert 
+ wurde (dieses wird nicht verändert, eventuell eingegebene Schicht- und/oder 
+ Pausenänderungen bleiben erhalten),</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch">an 
+ Knoten Schicht- und/oder Pausenänderungen eingegeben wurden (diese werden 
+ ohne Rückfrage überschrieben).</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Die Eingabe eines Knotenschichtmodells 
+	 (Abweichendes Modell für Knoten und dessen Unterknoten) ist zulässig 
+	 wenn:</p></li>
+</ul>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch">übergeordnet 
+ oder untergeordnet kein Knotenschichtmodell existiert.</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch">Schichten/Pausen 
+ von Knoten, welche nicht von der Eingabe eines Knotenschichtmodells betroffen 
+ sind, werden nicht verändert (eventuell eingegebene Schicht- und/oder 
+ Pausenänderungen bleiben erhalten).</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Wurde an einem Knoten ein Knotenschichtmodell 
+	 eingegeben, können auch hier noch Schicht- und/oder Pausenänderungen 
+	 eingegeben werden, allerdings nur auf der Knotenebene, in der auch 
+	 das Knotenschichtmodell eingegeben wurde.</p></li>
+	<li><p class="ListBulletL1">Eine nachträgliche Änderung eines Knotenschichtmodells 
+	 kann getätigt werden auch wenn:</p></li>
+</ul>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch">am 
+ (identischen) Knoten Schicht- und/oder Pausenänderungen eingegeben wurden 
+ (diese werden ohne Rückfrage überschrieben).</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Shift_Exc.png" alt="" style="border: none;" width="696" height="584" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Zunächst muss ein Knoten selektiert sein sowie ein 
+ Datum. Dann wird im Boardlet angezeigt, welches Zeitschema dem Knoten 
+ zugewiesen ist und welches Schichtmodell aktuell eingeplant ist. Darunter 
+ werden alle aktuell geplanten Schichten und Pausen mit Start- und Endzeit 
+ aufgelistet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nun kann entweder das Schichtmodell für den selektierten 
+ Tag geändert werden (durch Auswahl in der Dropdown-Liste). Durch Klick 
+ auf &quot;Anwenden&quot; wird die Änderung eingetragen und bei der nächsten 
+ Schichtplanung entsprechend verarbeitet. Danach ist es nicht mehr möglich, 
+ Änderungen an den Schicht- und Pausenzeiten vorzunehmen (da die neuen 
+ Schichten ja noch nicht geplant sind).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alternativ kann das Schichtmodell beibehalten werden 
+ und nur einzelne Zeiten von Schichten oder Pausen geändert werden. Durch 
+ Klick auf das Pfeilsymbol (&gt;) zu Beginn der gewünschten Zeile öffnet 
+ sich ein Dialog, in dem die Zeiten entsprechend geändert werden können.</p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Dies ist nur für die Zukunft möglich. Wurde als Datum 
+ der aktuelle Tag selektiert, werden die Pfeilsymbole (&gt;) nicht eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Shift_Exc1.png" alt="" style="border: none;" width="696" height="231" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Speichern wird überprüft, dass es durch die Änderung 
+ nicht zu Überschneidungen mit den restlichen Schichten kommt und dass 
+ zugehörige Pausen immer noch innerhalb des Schichtzeitraums liegen. Ist 
+ dies nicht der Fall, ist Speichern nicht möglich und es wird eine entsprechende 
+ Fehlermeldung ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf das + rechts von jeder Schicht kann 
+ eine zusätzliche Pause für diese Schicht erfasst werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wurden Änderungen vorgenommen, erscheint ein zusätzliches 
+ Symbol vor den geänderten Einträgen:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Shift_Exc_Undo.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick darauf, kann entweder die zusätzliche Pause 
+ wieder gelöscht werden oder die Änderung wieder auf den ursprünglich geplanten 
+ Wert zurückgesetzt werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für ein Boardlet <span class="Bold">Schichtausnahmen</span> 
+ stehen keine weiteren Einstellungen zur Verfügung. </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsknoten</span> wird dem 
+ Knoten ein Zeitschema zugewiesen (Spalte &quot;Zeitschema&quot;).</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<p class="BodyText" data-condition="Others:Deutsch">keine.</p>
+
+
+</body></html>

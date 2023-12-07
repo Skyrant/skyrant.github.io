@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">TABLE_DELETE</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Löschen" data-condition="Others:Deutsch;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TABLE_DELETE">
+        <span>TABLE_DELETE</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">TABLE_DELETE (Altdaten löschen)</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job dient zum Löschen von festgelegten Altdaten 
+ aus definierten Tabellen (z.B. alle Daten älter als x aus Tabelle y). 
+ Üblicherweise wird er durch Einträge in der Tabelle SYS_TABLE_DEL im LC2 
+ angestoßen. Für detaillierte Informationen zum Löschkonzept, siehe bitte 
+ <a href="Del_Jobs.htm">Lösch-Jobs</a>.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Sein Aufruf / Einsatz ist unabhängig vom Einsatz eines 
+ bestimmten Sapient-Moduls.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Log-Ausgaben dieses Jobs erfolgen in das Log-File der 
+ jeweiligen SE-Instanz unter dem Namen &#39;TableDel&#39;. Um die Ausführlichkeit 
+ der Log-Ausgaben getrennt von der anderer Jobs einzustellen, ist eine 
+ Zeile mit Inhalt &quot;logger.de.gefasoft.sapient.db.housekeeping.TableDel 
+ = &lt;loglevel&gt;&quot; in die Logging-Konfiguration einzutragen. </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Parametrierung</h6>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">TABLE_DELETE</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Altdaten 
+		 löschen</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="BodyText">/de/gefasoft/sapient/db/housekeeping/TableDelMain/execute</p></td>
+	</tr>
+	<tr style="height: 53px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{</p>
+		<p class="TextkörperTable">}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">0</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Bedeutung der Parameter</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standardmäßig benötigt der Job keine Parameter. Es 
+ können jedoch optional folgende Parameter eingetragen werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">consecMax</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Nach wie vielen Löschvorgängen mit der maximalen Löschgröße 
+ soll die Selbstverwaltung Jobs ändern? Default: 10</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">lastAnalyze</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Wie viele Tage zurück sollen die internen DB-Statistiken 
+ verwendet werden? Default: 3</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">lowLimitPerc</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Ab wie viel Prozent der Löschgröße wird CONSEC_LOW 
+ hochgezählt? Default: 10 Prozent</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">minCalcNumRows</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Wie groß soll die Löschgröße mindestens sein? Default: 
+ 10 Datensätze</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">minEntries</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Wie viele Datensätze muss eine Tabelle haben, damit 
+ der Lösch-Job bei einer Neuinstallation aktiviert wird? Default: 1000</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Trigger</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Trigger: zyklisch (-1)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Intervall: {&quot;Interval&quot;: &quot;10m&quot;}</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Business Logik</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Ausgangssituation ist Neuinstallation, d.h. der Parameter 
+ CONSEC_MAX steht auf null:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Job">Prüfung, ob Tabelle mehr als 1000 Datensätze hat</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Job">Ältesten Datensatz finden und prüfen, ob dieser 
+ älter als HOLD_HOURS ist</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Job">Wenn ein Datensatz gefunden wurde, der gelöscht 
+ werden soll, wird CONSEC_LOW und CONSEC_MAX auf 0 setzen und der Lösch-Job 
+ aktiviert und ausgeführt</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Falls ein Lösch-Job aktiviert ist (CONSEC_MAX ist nicht 
+ null und größer oder gleich 0), wird Folgendes abgearbeitet:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Job">tägliche Berechnung von CALC_NUM_ROWS bei Datumswechsel, 
+ d.h. bei erster Ausführung am Tag </p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Job">wenn 
+ Statistiken älter sind als 3 Tage (SE-Parameter lastAnalyze) wird 
+ ein count auf die betreffende Tabelle ausgeführt</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Job">Altdaten werden mit LIMIT (also CALC_NUM_ROWS) 
+ gelöscht</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Job">wenn Anzahl der gelöschten Datensätze gleich CALC_NUM_ROWS 
+ ist, wird CONSEC_MAX um 1 erhöht </p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Job">wenn 
+ CONSEC_MAX gleich 10 ist (SE-Parameter consecMax) und die Selbstverwaltung 
+ nicht ausgeschaltet ist (OPTIONS = 2) wird zuerst das INTERVAL_MINS halbiert 
+ und falls das Minimum (10 Minuten) erreicht wurde, wird DEL_PORTION_PERC 
+ verdoppelt (bis max. 50%)</p>
+
+
+</body></html>

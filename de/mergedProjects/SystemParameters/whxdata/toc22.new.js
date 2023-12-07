@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Personalzeiterfassung (PZE)","type":"book","tilePath":"","key":"toc23"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

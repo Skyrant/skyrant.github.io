@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_Windows_2012R2_Oracle_Server_12c_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Durchführung der DBMS-Installation</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Durchführung der DBMS-Installation</h2>
+<p class="BodyText">Nach den Vorbereitungen kann nun die Installation durchgeführt 
+ werden. Dazu wechselt man zunächst in das Verzeichnis &quot;database&quot; 
+ und führt dort das Programm &quot;setup.exe&quot; aus.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image007.png" 
+						 alt="" width="700" height="458" border="0" /></p>
+<p class="BodyText">Damit wird das Java-Installationsprogramm gestartet 
+ und es erscheint die folgende Maske:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image009.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Schritt 1: In dieser Maske kann die E-Mail-Adresse 
+ zu einem gültigen Metalink-Zugang eingetragen werden, um über Updates 
+ zu diesem Server automatisch benachrichtigt zu werden.</p>
+<p class="BodyText">In diesem Beispiel tragen wir hier nichts ein und deaktivieren 
+ die Auswahlbox für die Security Updates.</p>
+<p class="BodyText">Da man keine gültige E-Mail-Adresse angegeben hat, 
+ erfolgt die folgende Warnmeldung, die man jedoch ignorieren kann, indem 
+ man auf &quot;Yes&quot; klickt.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image011.png" 
+						 alt="" width="526" height="202" border="0" /></p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image012.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Schritt 2: Die Maske mit dem automatischen Download 
+ von Software-Paketen kann unausgefüllt bleiben, sofern man keinen gültigen 
+ Metalink-Zugang hat, indem man den Radiobutton &quot;Skip software updates&quot; 
+ aktiviert.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image014.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Schritt 3: Bei dieser Maske wählen wir die Option, 
+ dass nur die Datenbanksoftware installiert werden soll.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image016.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Schritt 4: Hier bitte die Option &quot;Single Instance 
+ Database&quot; auswählen.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Installation von Legato auf Oracle Real 
+ Application Clusters (RAC) wird nicht unterstützt!</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image018.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Schritt 5: Bitte wählen Sie die gewünschten Sprachen 
+ der Datenbanksoftware.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image020.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Schritt 6: Bei der Auswahl der Edition wählen wir die 
+ Enterprise Edition.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image022.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Schritt 7: Im Gegensatz zu früheren Oracle-Versionen 
+ benötigt Oracle 12c einen eigenen Windows-Account (Windows-User), um zu 
+ laufen. Dieser wird jetzt neu angelegt, falls notwendig</p>
+<p class="BodyText">Das gewählte Passwort muss der Windows System Policy 
+ entsprechen, sonst erscheint der folgende Warnhinweis:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image024.png" 
+						 alt="" width="530" height="305" border="0" /></p>
+<p class="BodyText">Falls ein passender User schon vorher angelegt worden 
+ ist, kann er natürlich hier genutzt werden.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image025.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Schritt 8: Auswahl der Verzeichnisse – Bitte wählen 
+ Sie hier sehr hohe Verzeichnisse, damit die Verzeichnisstruktur nicht 
+ so tief wird, zum Beispiel das Verzeichnis &quot;C:\oracle&quot;. (Ein 
+ vollständiger Pfadname in Windows – inklusive Dateiname – darf nicht länger 
+ als 255 Zeichen sein.)</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image027.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Im Schritt 9 werden alle Voraussetzungen von der Installationssoftware 
+ überprüft.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image029.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Sofern alles in Ordnung ist, erfolgt dann eine Zusammenfassung 
+ im Schritt 10. Diese Zusammenfassung kann man sich lokal abspeichern.</p>
+<p class="BodyText">Um fortzufahren, dann bitte den &quot;Install-Button&quot; 
+ klicken.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image031.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Im Schritt 11 wird die Oracle Software-Installation 
+ durchgeführt.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image033.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Nach der Installation erscheint dann erwartungsgemäß 
+ die obige Meldung. Damit ist die DBMS Installation erfolgreich durchgeführt. 
+ Das Fenster kann mit dem &quot;Close&quot;-Button geschlossen werden.</p>
+<p class="BodyText">Ergebnisse der Installation können in dem Logfile &quot;installActions.log&quot; 
+ nachgelesen werden.</p>
+<p class="BodyText">Eine spätere eventuelle Deinstallation erfolgt ebenfalls 
+ über das Installationsprogramm. Dafür sollte der Ordner mit den Installationsdateien 
+ auf dem System vorgehalten werden.</p>
+<p class="BodyText">In den nächsten Kapiteln folgen die Einrichtung eines 
+ Listeners und die Installation einer Datenbankinstanz für die spätere 
+ LEGATO-Installation.</p>
+</body>
+</html>

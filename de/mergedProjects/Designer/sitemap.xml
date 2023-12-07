@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/General/01_Legato_SysDoc.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/02_Change_History.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Gen/Introduction.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Gen/Context.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Gen/Format.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Gen/License.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Canvas/General.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Canvas/Designer.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Canvas/Script.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Canvas/SVG_Source.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/File.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/Edit.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/Draw.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/Window.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/Options.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/Help.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Menu/Bars.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Windows/Inspector_Props.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Windows/DOM.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Windows/Preview.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Windows/Layer_Manager.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Windows/Library.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Dynamics/General.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Dynamics/Config.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Dynamics/Functions.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Dynamics/Dialogs.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Events/General.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Events/SvgOpenWindow.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Events/SvgShowDialog.htm</loc>
+      <lastmod>2023-07-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

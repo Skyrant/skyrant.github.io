@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+  <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+  <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+  <title data-condition="Others:Deutsch">Geplante Werteinstellung</title>
+  <link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Geplante Werteinstellung">
+        <span>Geplante Werteinstellung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Others:Deutsch">Wertverlauf</h1>
+  <h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+  <p data-condition="Others:Deutsch">Das Boardlet <span class="DontTranslateBold">Wertverlauf</span> zeigt geplante Werteinstellungsereignisse für eine bestimmte Zeitspanne für ausgewählte Variablen an. Bei den Variablen kann es sich um diejenigen handeln, die dem ausgewählten Knoten zugeordnet sind, oder um Variablen, die von ausgewählten Auslösern aus dem Boardlet Geplante Werteinstellungen betroffen sind.</p>
+  <p data-condition="Others:Deutsch"> </p>
+  <p data-condition="Others:Deutsch"><img alt="" border="0" src="../../../assets/images/02_Hinweis_de.jpg" style="border: none;"/></p>
+  <p class="TextkörperHinweis" data-condition="Others:Deutsch">Alle bereits erfolgten Planungen des ausgewählten Knotens werden in einer Zeile aufgelistet (Historie).</p>
+  <p data-condition="Others:Deutsch"> </p>
+  <p data-condition="Others:Deutsch"><img alt="" border="0" src="../../../Bilder/Scheduled Value Setting_Boardlet.png" style="border: none;"/></p>
+  <p data-condition="Others:Deutsch"> </p>
+  <h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Parameter"></a>Parameter</h6>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p>Filter: ausgewählter Knoten, Zeitrahmen, Änderungsart (&quot;<span style="font-weight: bold;">Manuell</span>&quot;, &quot;<span style="font-weight: bold;">Trigger</span>&quot;, &quot;<span style="font-weight: bold;">Schaltbefehl</span>&quot;), Variable.</p>
+    </li>
+    <li>
+      <p>Zusätzlich kann ein versteckter Parameter &quot;<span style="font-weight: bold;">TriggerSymbol</span>&quot; verwendet werden, um nach Änderungen zu filtern, die durch einen bestimmten Job-Trigger verursacht wurden. Die Filterung erfolgt durch Auswahl von Zeilen im Boardlet &quot;<span style="font-weight: bold;">Scheduled Value Settings</span>&quot;.</p>
+    </li>
+    <li>
+      <p>Wenn der Filter &quot;<span style="font-weight: bold;">Variable</span>&quot; angegeben ist, wird der Knotenfilter ignoriert.</p>
+    </li>
+    <li>
+      <p>Wenn der Filter &quot;<span style="font-weight: bold;">TriggerSymbol</span>&quot; angegeben ist, werden die Filter &quot;<span style="font-weight: bold;">node</span>&quot; und &quot;<span style="font-weight: bold;">change_type</span>&quot; ignoriert.</p>
+    </li>
+    <li>
+      <p>Wenn ein Protokolleintrag auf eine nicht existierende Schaltbefehl-ID verweist, dann wird die numerische ID des Schaltbefehls in der Spalte &quot;<span style="font-weight: bold;">Schaltbefehl</span>&quot; angezeigt, gefolgt von &quot;(<span style="font-weight: bold;">nicht</span> <span style="font-weight: bold;">gefunden</span>)&quot; in Kursivschrift.</p>
+    </li>
+  </ul>
+  <h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+  <div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+  <p class="GUIControlDescr" data-condition="Others:Deutsch"> </p>
+  <h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte Parametrierung im LC2</h6>
+  <div data-conref="../../../assets/snippets/LC2/de_p_values_config.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablen werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Anwendungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Datenaustausch</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Modul] 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ [Verbindung] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Variablen</span> 
+ gepflegt. Hier wird auch die Einheit festgelegt.</p>
+
+
+</div>
+  <div data-conref="../../../assets/snippets/LC2/de_p_value_relations.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Knoten] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Variablenzuordnungen</span> werden die Variablen dem 
+ Knoten zugeordnet, für den sie angezeigt werden sollen. Hier muss das 
+ Flag &quot;Anzeigen&quot; auf 1 gesetzt sein, damit die Variable angezeigt 
+ wird. Die Sortiernummer legt fest, in welcher Reihenfolge die Variablen 
+ angezeigt werden.</p>
+
+
+</div>
+  <p class="BodyText" data-condition="Others:Deutsch">Außerdem muss das Flag &quot;Änderbar&quot; auf 1 gesetzt sein, damit die Variable im Client bebucht werden darf.</p>
+
+</body></html>

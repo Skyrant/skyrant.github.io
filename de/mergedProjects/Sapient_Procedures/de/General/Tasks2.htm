@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Tasks und Abhängigkeiten</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Task" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tasks und Abhängigkeiten">
+        <span>Tasks und Abhängigkeiten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Verfügbare Tasks und deren Abhängigkeiten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die verfügbaren Tasks sind in der Tabelle se_tasks 
+ gespeichert. Die Abhängigkeiten einzelner Task-Typen voneinander ist in 
+ der Spalte &quot;depends_on&quot; der Tabelle se_task_types hinterlegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Pro Task-Typ und SE-Instanz kann je eine Task angelegt 
+ werden. Wird dabei kein Eintrag in der Spalte &quot;Properties&quot; vorgenommen, 
+ werden die Eigenschaften des Task-Typs verwendet. Dabei ist es auch möglich, 
+ nur einzelne Zeilen der Eigenschaften für bestimmte Tasks anders zu definieren 
+ als im Standard.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wichtig ist auch das Feld &quot;Active&quot;: </p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Wert 
+ 1 bedeutet, dass die Task geladen werden soll.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Wert 
+ 0 bedeutet, dass die Task nur geladen wird, falls eine andere Task sie 
+ benötigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Damit kann man also Konfigurationen auch für Tasks 
+ angeben, die nicht explizit geladen werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel: Die Task &quot;functions&quot; wird normalerweise 
+ nicht explizit zum Laden angegeben,  aber in der Regel trotzdem 
+ benötigt (sie findet z.B. die auszuführenden Skript-Funktionen).  Damit 
+ kann man dann trotzdem eine Konfiguration angeben (z.B. &quot;updateCheckSeconds&quot; 
+ für das Intervall, in dem sie nach geänderten Skripten suchen soll).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das gleiche gilt auch für die Task &quot;webserver&quot;, 
+ die i.d.R. auch nicht explizit angegeben wird, sondern für &quot;webapp&quot;, 
+ &quot;jsonapi&quot; oder &quot;jsonrpc&quot; geladen wird. Dennoch werden 
+ natürlich Konfigurations-Einträge für die Task benötigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist also zu beachten, dass &quot;active = 0&quot; 
+ eben nicht wie bei SE-Jobs bedeutet, das die Task von der betreffenden 
+ Instanz gar nicht ausgeführt wird. Sie ist also weder &quot;deaktiviert&quot;, 
+ noch &quot;ausgeschaltet&quot; oder gar &quot;verboten&quot;.</p>
+
+
+</body></html>

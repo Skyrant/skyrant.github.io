@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "16.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">Job &#39;ZuliImport&#39;</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Zuordnungsliste,Zuli" data-condition="Others:Deutsch;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job &#39;ZuliImport&#39;">
+        <span>Job &#39;ZuliImport&#39;</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">Job &#39;ZuliImport&#39;</h2>
+<h3 data-condition="Others:Deutsch;Others:Job"><a id="Beschreibung"></a>Beschreibung</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job durchsucht die Datenbank nach fälligen (manuell 
+ über den LC2 gestarteten) bzw. nach automatisch zu importierenden Zuordnungslisten-Dateien. 
+ Bei manuellem Start wird unabhängig, bei automatischem Import abhängig 
+ vom Zeitstempel des Files importiert. Um einen flexiblen Import zu ermöglichen, 
+ wird der Import jeder Zeile einer Importdatei über ein Skript geleitet.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Sein Einsatz ist unabhängig vom Einsatz eines bestimmten 
+ Legato-Moduls.</p>
+<h3 data-condition="Others:Deutsch;Others:Job"><a id="Parametrierung"></a>Parametrierung</h3>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">ZULI_IMPORT</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Zuli 
+		 Import</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="BodyText">/jobs/zuliImport/ZuliImp_Base/execute</p></td>
+	</tr>
+	<tr style="height: 53px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{</p>
+		<p class="TextkörperTable">}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">0</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+
+
+</body></html>

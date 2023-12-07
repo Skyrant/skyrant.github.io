@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_Windows_2012R2_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Einrichtung des Listeners</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Einrichtung des Listeners">
+        <span>Einrichtung des Listeners</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Einrichtung des Listeners</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Nachdem die DBMS-Software installiert wurde, stehen 
+ noch keine Oracle Dienste im System zur Verfügung. Daher sollte nun zunächst 
+ ein Listener konfiguriert werden. Der Listener wird benötigt, um die Kommunikation 
+ zwischen den Oracle Clients und dem Oracle Server herzustellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image035.png" alt="" width="567" height="641" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Start-Menü von Windows sollte nun bei den Programmen 
+ ein neuer Ordner für das Oracle Home hinzugefügt worden seien. Dort starten 
+ wir nun den Net Configuration Assistant. Er kann auch gestartet werden, 
+ indem man in einer DOS-Konsole den Befehl &quot;netca&quot; eingibt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image036.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Net Configuration Assistent wird gestartet. Hier 
+ wählen wir zunächst die Listener Konfiguration und klicken auf &quot;Next&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image037.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie hier &quot;Add&quot; aus und klicken Sie 
+ auf &quot;Next&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image038.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im nächsten Schritt wird der Name des Listeners eingetragen. 
+ Hier kann der Default-Name &quot;Listener&quot; stehen bleiben. Außerdem muss das 
+ Passwort des Oracle Home Users (hier: des Users &quot;oracle&quot;) eingetragen 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image039.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei den Protokollen kann ebenfalls die Default-Einstellung 
+ &quot;TCP&quot; übernommen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image040.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ganz wichtig ist nun die Vergabe eines sinnvollen Ports 
+ für die Kommunikation. Dieser Port muss auch hinterher in Firewall freigeschaltet 
+ sein. Der Standard-Port ist hier die 1521, er kann jedoch hier geändert 
+ werden. In dieser Beispielinstallation belassen wir diesen Wert jedoch 
+ und klicken auf &quot;Next&quot;. Danach ist der Listener konfiguriert und es erfolgt 
+ folgende Frage:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image041.png" alt="" width="601" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Diese können wir verneinen und es folgt dann noch folgende 
+ Erfolgsmeldung:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image042.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit &quot;Next&quot; kommen wir in das Hauptmenü des 
+ Assistenten zurück.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image043.png" alt="" width="700" height="405" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">In den Systemdiensten finden wir nun auch den Listener, 
+ der schon erfolgreich gestartet wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image045.png" alt="" width="601" height="401" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Als nächstes müssen wir die Methoden benennen, mit 
+ denen man sich an den Instanzen anmelden kann. Dazu wählen wir den Punkt 
+ &quot;Naming Methods configuration&quot; und klicken dann auf &quot;Next&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image046.png" alt="" width="600" height="468" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier sollte man die Methoden &quot;Local Naming&quot; 
+ für TNSNAMES und &quot;Easy Connect Naming&quot; auswählen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image047.png" alt="" width="601" height="469" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Damit ist die Konfiguration des Listeners abgeschlossen. 
+ Kontrollieren lässt sich dies zusätzlich in einer DOS-Box mit dem Kommando: 
+ lsnrctl status</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dies sollte dann folgendermaßen aussehen:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image048.png" alt="" width="700" height="317" border="0"/>Weitere 
+ Hinweise können in den Logdateien &quot;netca.log&quot; oder &quot;listener.log&quot; nachgelesen 
+ werden.</p>
+
+
+</body></html>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "7.2.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funkruf-Empfänger</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Funkruf,Funkruf-Empfänger" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funkruf-Empfänger">
+        <span>Funkruf-Empfänger</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Funkruf-Empfänger</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Werksverwaltung | Meldungsmanagement | Funkruf-Empfänger</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><span class="TextChar">Funktion</span></h6>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextChar">Meldungen können automatisch 
+ an ein Funkrufsystem (z.B. PageControl der Fa. informel) weitergegeben 
+ werden. Legato verfügt über eine offene Schnittstelle, über die ein beliebiges 
+ System zur Meldungsweitergabe versorgt werden kann. Nachdem die Parametrierung 
+ von Empfängern stark vom verwendeten Rufsystem und dem Übertragungsmedium 
+ abhängt, wird in Legato lediglich eine Liste von Weiterleitungszielen 
+ (Empfängern) gehalten, die eigentliche Parametrierung der Empfänger erfolgt 
+ im Rufsystem. Dort werden Empfängereinstellungen und Funktionen wie Gruppenbildung, 
+ Folgerufe oder Eskalation parametriert.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextChar">Die Anbindung eines Funkrufservers 
+ erfolgt in der Regel im Rahmen der Projekterstellung bzw. des Customizings.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextChar"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></span>:</p>
+<p class="NoteText" data-condition="Others:Deutsch"><span class="TextChar">Detaillierte Informationen zur 
+ Verwendung der allgemeinen Legato-Funkrufschnittstelle erhalten Sie von 
+ unserem Legato-Service.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="font-weight: bold; font-family: Tahoma, sans-serif; 
+	 font-size: 12pt;" data-condition="Others:Deutsch"><a id="Mehrere_Funkruf-Empfänger"></a>Mehrere 
+ Funkruf-Empfänger</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für einen Funkruf können mehrere unterschiedliche Empfänger 
+ im LC2 angegeben werden, d.h. beim Verbuchen einer Meldung ist es nicht 
+ nur möglich, komplette Gruppen oder eine einzelne Person mittels eines 
+ Funkrufes zu alarmieren, sondern auch ausgewählte (und somit unterschiedliche) 
+ Personen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Sapient WebApp ist diese Funktion im Boardlet 
+ <span style="font-weight: bold;">Archivierte Meldungen</span> integriert. 
+ Dort kann man mittels einer Dropdown-Liste beispielsweise nach mehreren 
+ Funkrufempfängern filtern. Siehe hierzu den Bereich <a href="mergedProjects/Legato Sapient User Manual/de/Boardlets/06_Alarms/Archived_Alarms.htm">Archivierte 
+ Meldungen - Mehrere Funkrufempfänger</a>.</p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Zuordnung_von_Funkruf-Empfänger"></a>Zuordnung von Funkruf-Empfänger</h3>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Im LC2 kann das Paging-Empfängerfeld 
+ erweitert werden, damit es alle zugewiesenen Empfänger enthält. Beachten 
+ Sie Folgendes:</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Die Tabellen zur 
+	 Konfiguration von Meldedefinition, Knoten je Klasse und der Knoten 
+	 selbst verfügen über das Feld &quot;Empfänger&quot;, das eine durch 
+	 Kommata getrennte Liste aller zugewiesenen Empfänger enthält. Somit 
+	 kann die <span>Liste aller zugeordneten Empfängern über ein einziges 
+	 Feld zugewiesen werden.</span><br/>
+	<br/>
+	<span><img src="../../../../assets/images/Paging_Recipients_row.png" alt="" style="border: none;" border="0"/></span><br/>
+	</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Die Liste zeigt 
+	 den eindeutigen Empfängercode jedes Empfängers in der Spalte <span style="font-weight: bold;">Code (number)</span> an und kann manuell 
+	 durch Hinzufügen oder Löschen von Empfängercodes bearbeitet werden. 
+	 <br/>
+	<br/>
+	<img src="../../../../assets/images/Paging_Recipients_Code_number.png" alt="" style="border: none;" border="0"/><br/>
+	</li>
+</ul>
+<ul style="list-style: disc; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Um auf einfache 
+	 Art und Weise einen oder mehrere Empfänger hinzuzufügen ist es zusätzlich 
+	 möglich, Empfänger aus dem Konfigurationsbaum per Drag-and-Drop  in 
+	 das Empfängerfeld zu ziehen.<br/>
+	<span style="font-size: 12.0pt; line-height: 107%; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+			 mso-bidi-font-family: &#39;Times New Roman&#39;; mso-ansi-language: DE; 
+			 mso-fareast-language: DE; mso-bidi-language: AR-SA;">Beispielpfad: 
+	 Anwendungsstruktur -&gt; </span><span style="mso-no-proof: yes;"><img src="../../../../assets/images/clip_image001.png" alt="" width="22" height="22" border="0"/></span><span style="font-size: 12.0pt; line-height: 107%; 
+								 mso-fareast-font-family: &#39;Times New Roman&#39;; 
+								 mso-bidi-font-family: &#39;Times New Roman&#39;; 
+								 mso-ansi-language: DE; mso-fareast-language: DE; 
+								 mso-bidi-language: AR-SA;">Tabelle (z.B. 
+	 Datenaustausch) -&gt;  </span><span style="mso-no-proof: yes;"><img src="../../../../assets/images/clip_image002.png" alt="" width="22" height="23" border="0"/></span><span style="font-size: 12.0pt; line-height: 107%; 
+								 mso-fareast-font-family: &#39;Times New Roman&#39;; 
+								 mso-bidi-font-family: &#39;Times New Roman&#39;; 
+								 mso-ansi-language: DE; mso-fareast-language: DE; 
+								 mso-bidi-language: AR-SA;"> flache Zeile/flachen 
+	 Tabelleneintrag</span><span style="font-size: 12.0pt; line-height: 107%; 
+								 mso-fareast-font-family: &#39;Times New Roman&#39;; 
+								 mso-bidi-font-family: &#39;Times New Roman&#39;; 
+								 mso-ansi-language: DE; mso-fareast-language: DE; 
+								 mso-bidi-language: AR-SA;"><br style="mso-special-character: line-break;"/>
+	</span> <br/>
+	<br/>
+	<img src="../../../../assets/images/Paging_Recipients_Paging_Configuration_Recipients_Drag_and_drop.png" alt="" style="border: none;" border="0"/></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Außerdem ist durch 
+	 Copy-and-Paste das Einfügen von Empfängern im Empfängerfeld möglich.<br/>
+	<br/>
+	<img src="../../../../assets/images/Paging_Recipients_copy_and_paste.png" alt="" style="border: none;" border="0"/><br/>
+	</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Auch per Texteingabe 
+	 können neue Empfänger dem Empfängerfeld hinzufügt werden.<br/>
+	<br/>
+	<span><img src="../../../../assets/images/Paging_Recipients_add_via_text.png" alt="" style="border: none;" border="0"/></span><br/>
+	<br/>
+	</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn nichtexistierende 
+	 Empfänger der Zeile hinzugefügt werden, erscheint eine Fehlermeldung.<br/>
+	<br/>
+	<span><img src="../../../../assets/images/Paging_Recipients_Error_Recipients.png" alt="" style="border: none;" border="0"/></span><br/>
+	</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><span>Die zugewiesenen 
+	 Empfänger können weiterhin über die separate Untertabelle, die für 
+	 Alarmdefinitionen, Knoten und Knoten-/Klassenkonfigurationen verfügbar 
+	 ist, bearbeitet werden.</span><br/>
+	<br/>
+	<span><img src="../../../../assets/images/Paging_Recipients_Alarm_Definitions.png" alt="" style="border: none;" border="0"/></span></li>
+</ul>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Zusatzinformationen_zur_Alarmierung_mehrere_Empfänger"></a>Zusatzinformationen 
+ zur Alarmierung mehrere Empfänger</h3>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Beachten Sie im Vorfeld 
+ die Informationen im vorangegangenen Abschnitt <a href="#Zuordnung_von_Funkruf-Empfänger" style="font-weight: normal;">Zuordnung 
+ von Funkruf-Empfänger</a>. Mit der <span style="font-weight: bold;">Alarmierung 
+ mehrerer Empfänger</span> ist es möglich, mehrere Empfängergruppen mit 
+ einer Meldung zu verknüpfen. Dies reduziert die notwendige Anzahl 
+ an Empfängergruppen deutlich. Es muss also nicht mehr für jede Konstellation 
+ eine neue Empfängergruppe angelegt werden.</p>
+<h4 data-condition="Others:Deutsch">Konfiguration</h4>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Empfängergruppen: <span style="font-family: &#39;Palatino Linotype&#39;, serif;">Empfänger können 
+ im LC2 über Werksverwaltung →  Meldungsmanagement →  Funkruf-Empfänger 
+ konfiguriert werden.</span></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Die zugehörige DB Tabelle 
+ lautet <span style="font-weight: bold;">m_recipients</span>.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><img src="../../../../assets/images/Paging_Recipients_Alterting_Mulitple_Recipients.png" alt="" style="border: none;" border="0"/></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">Die 
+ Konfiguration der Funkrufempfängergruppen kann an vier Stellen erfolgen:</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">1. Meldungsdefinition</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">2. Dem Knoten zugeordnete 
+ Meldungen</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">3. Funkruf-Empfänger 
+ je Knoten</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">4. 
+ Funkruf-Empfänger je Knoten und Klasse</span></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextChar"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></span>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Wenn eine Konfiguration an Stelle eins erfolgt, unterbindet 
+ diese alle Konfigurationen in Punkt zwei, oder Punkt drei usw.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Das System ist hierbei 
+ hierarchisch zu verstehen.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">1. 
+ Meldungsdefinition </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">Pfad 
+ im LC2: Anwendungsstruktur →  Datenaustausch →  &quot;Verbindung&quot; 
+ →  Meldungsdefinitionen</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Für diese Meldungsdefinition 
+ werden ein oder mehrere Funkrufempfänger hinterlegt.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Im 
+ folgenden Beispiel sind der Meldung mit der Nummer 1 die Empfänger 1 und 
+ 3 zugeordnet.</span></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><img src="../../../../assets/images/Alarm_recipients_1_and_3.png" alt="" style="border: none;" border="0"/></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">2. 
+ Dem Knoten zugeordnete Meldungen </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">Pfad 
+ im LC2: Anwendungsstruktur → Fertigungsstruktur → &quot;Knoten&quot; → 
+ Meldungszuordnungen</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Für diese Meldungen 
+ werden ein oder mehrere Funkrufempfänger hinterlegt.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Im folgenden Beispiel 
+ sind der Meldung mit der Nummer 1 die Empfänger 1 und 3 zugeordnet.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><img src="../../../../assets/images/Alarm_recipients_1_and_3_number2.png" alt="" style="border: none;" border="0"/></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">3. 
+ Funkruf-Empfänger je Knoten</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">Pfad 
+ im LC2: Anwendungsstruktur → Fertigungsstruktur → &quot;Knoten&quot; → 
+ Funkruf-Empfänger</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Für den Knoten wird 
+ für alle ihm zugeordneten Meldungen eine Weiterleitung an die Funkrufempfänger 
+ erfolgen.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Im folgenden Beispiel 
+ werden alle Meldungen an die Empfänger 3 und ad weitergeleitet.</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><img src="../../../../assets/images/Alarm_recipients_1_and_3_number3.png" alt="" style="border: none;" border="0"/></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">4. 
+ Funkruf-Empfänger je Knoten und Klasse</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;" data-condition="Others:Deutsch">Pfad 
+ im LC2: Anwendungsstruktur → Fertigungsstruktur → &quot;Knoten&quot; → 
+ Funkruf-Konfiguration</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Für einen Knoten können 
+ Funkruf-Empfänger für jede Meldeklasse konfiguriert werden. Dies betrifft 
+ nur die Meldungen, d<span style="font-family: &#39;Palatino Linotype&#39;, serif;">ie 
+ dem jeweiligen Knoten zugeordnet sind.</span></p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Im folgenden Beispiel 
+ (mit Meldeklassen mit Priorität und Weiterleitungsart) werden alle Meldungen 
+ der Meldeklasse Jobfehler an die Empfänger paging_test, ad, mf und tm 
+ weitergeleitet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../assets/images/Alarm_recipients_1_and_3_number4.png" alt="" style="border: none;" border="0"/></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><span class="TextChar">Feldbeschreibung</span></h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Kann frei vergeben werden, muss aber eindeutig sein.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Code (Nummer)</p></td>
+		<td><p class="TabellenInhalt">Code: Symbolische Empfängerbezeichnung 
+		 (z.B. Empfänger- oder Gruppenname bei PageControl), bei anderen 
+		 Servern kann hier beispielsweise auch direkt die Rufnummer hinterlegt 
+		 sein.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Empfängername</p></td>
+		<td><p class="TabellenInhalt">Empfängername: Klartextbezeichnung 
+		 für den Empfänger.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Anzeige in Liste (man. FR)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, erscheint dieser 
+		 Empfänger in der Ansicht &quot;Manueller Funkruf&quot; der WebApp 
+		 zur Auswahl.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Funkruf-Server (optional)</p></td>
+		<td><p class="TabellenInhalt">Angabe des Funkrufservers, über den 
+		 die Meldung weitergegeben wird. Die Verteilung auf unterschiedliche 
+		 Rufserver muss im Funkruf-Gateway berücksichtigt werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Sprache (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Systemsprache, 
+		 in der die Meldetexte an diesen Funkrufempfänger gesendet werden.</p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

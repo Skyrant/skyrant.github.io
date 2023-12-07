@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Verlauf"]],"1":[["Verlauf"]],"2":[["\n"],["\n","Öffnet eine Liste mit den vorgenommenen Änderungen. \n Über den Button \"Undo\" können Änderungen rückgängig gemacht \n werden. Das Rückgängigmachen ist nur der Reihe nach möglich.","\n\n\n"]],"3":[["Verlauf"]],"id":"22"})

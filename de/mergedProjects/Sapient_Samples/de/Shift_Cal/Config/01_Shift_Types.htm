@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Schichttypen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Schichttypen">
+        <span>Schichttypen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Schichttypen</h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Werksverwaltung | Arbeitszeit-Einstellungen 
+ | Grundeinstellungen | Schichttypen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Tabelle müssen die unterschiedlichen Schichttypen 
+ definiert werden, die in einem Schichtmodell der im Projekt enthaltenen 
+ Fertigungsstruktur enthalten sein können. Schichttypen unterscheiden logische 
+ Schichtbezeichnungen, die innerhalb des Fertigungsbereichs bekannt sind 
+ und meist einer bestimmten Arbeitszeit zugeordnet sind, ohne dass mit 
+ dem Schichttyp bereits festgelegte Arbeitszeiten fest verknüpft sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiele für Schichttypen sind Frühschicht, Spätschicht 
+ oder Nachtschicht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die hier definierten Schichttypen gelten übergreifend 
+ für alle Zeitschemata. In den verschiedenen Auswertungen können Schichttypen 
+ als Filterkriterium genutzt werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Name des Schichttyps.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">CSS Style</p></td>
+		<td><p class="TabellenInhalt">CSS Style zur Formatierung der Farbe 
+		 des Schichttyps sowie eines Symbols zur Anzeige im Schichtplan.</p>
+		<p class="TabellenInhalt">Beispiel:</p>
+		<p class="TabellenInhalt">{</p>
+		<p class="TabellenInhalt">    &quot;image&quot;: 
+		 {</p>
+		<p class="TabellenInhalt">        &quot;filename&quot;: 
+		 &quot;icon-moon-white.svg&quot;,</p>
+		<p class="TabellenInhalt">        &quot;width&quot;: 
+		 20</p>
+		<p class="TabellenInhalt">    },</p>
+		<p class="TabellenInhalt">    &quot;style&quot;: 
+		 &quot;night-shift&quot;</p>
+		<p class="TabellenInhalt">}</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Beispiel</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die im Legato-Projekt abzubildende Fertigungsstruktur 
+ umfasst die Produktionsbereiche Vormontage, Montage und Logistikhalle. 
+ Vormontage und Montage arbeiten im 3-Schicht-Betrieb, der Versand in der 
+ Logistikhalle arbeitet in Normalschicht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aus ablauftechnischen Gründen beginnt die Frühschicht 
+ der Vormontage bereits um 05:30 Uhr eines Arbeitstages, die Frühschicht 
+ der Montage beginnt um 06:00 Uhr. Die folgenden Schichten Spätschicht 
+ und Nachtschicht beginnen ebenfalls um 30 Min. versetzt. Trotzdem werden 
+ die Schichten allgemein als Früh- Spät- und Nachtschicht bezeichnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hingegen beginnt die Schicht des Versands um 06:30 
+ Uhr und dauert bis 16:00 Uhr. Sie wird intern nur als Normalschicht bezeichnet. 
+ Sie ist auch von der Abfolge her nicht an diejenige des Montagebereichs 
+ gekoppelt.</p>
+
+
+</body></html>

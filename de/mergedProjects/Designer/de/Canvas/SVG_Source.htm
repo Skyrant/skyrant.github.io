@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "2.1_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SVG Source</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+ <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="SVG Source" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SVG Source">
+        <span>SVG Source</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SVG Source</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Text-Editor bietet eine Möglichkeit, den SVG-Quelltext 
+ direkt zu ändern. Es können Änderungen an bereits bestehenden Elementen 
+ vorgenommen bzw. Elemente gelöscht oder neu hinzugefügt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Änderungen in diesem Fenster werden bei einem Wechsel 
+ in einen anderen Bereich übernommen. Bevor die Ansicht verlassen werden 
+ kann, wird eine automatische Überprüfung des Quellcodes veranlasst. Ist 
+ dieser gültig, werden die Änderungen übernommen. Ist der Quellcode fehlerhaft, 
+ erscheint eine Fehlermeldung mit Angabe der fehlerhaften Zeile. Eine genauere 
+ Überprüfung kann auch mit F8 aufgerufen werden (siehe Seite 15).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Wechsel in den Source wird das gerade selektierte 
+ Element automatisch in der textuellen Darstellung markiert. Darüber hinaus 
+ bietet das DOM-Fenster die Möglichkeit, durch Selektion ebenfalls die 
+ entsprechende Zeile im Source zu markieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Änderungen wie Löschen oder Hinzufügen von Elementen 
+ bzw. Änderungen der Struktur oder der IDs werden im DOM nicht automatisch 
+ übernommen. Dieser muss über den angebotenen Button&quot; refresh DOM&quot; (F5) 
+ aktualisiert werden, um die Änderungen darzustellen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><b><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</b> 
+ </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Ein Undo nach einem Wechsel von Source zu 
+ Designer-Tab macht alle getroffenen Änderungen im Sourcecode auf einmal 
+ rückgängig.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Neben den üblichen Tastaturabkürzungen gibt es einige 
+ Abweichungen / Zusätze:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="101"><p class="TabellenÜberschrift">Tasten</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenÜberschrift">Aktion</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + Y</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Zeile, 
+		 in der sich der Cursor befindet, löschen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + Z</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Letzte 
+		 Aktion rückgängig machen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + F</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Suchen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">F3</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Nächstes 
+		 Vorkommen des Suchstrings.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">F8</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Syntax-Check 
+		 (von Java-Skripten oder SVG-Quellcode).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + R</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Suchen 
+		 + Ersetzen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + K + I</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Markierten 
+		 Block einrücken. Die Tasten K und I müssen bei gedrückter Strg-Taste 
+		 nacheinander betätigt werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + K + U</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Markierten 
+		 Block ausrücken. Die Tasten K und U müssen bei gedrückter Strg-Taste 
+		 nacheinander betätigt werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + A</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Gesamten 
+		 Text markieren.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Shift 
+		 + Strg + 0..9</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Lesezeichen 
+		 setzen (diese werden nach Verlassen des Editors gelöscht).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">Strg 
+		 + 0..9</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Zu 
+		 Lesezeichen springen.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" style="margin-left: 0cm;" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

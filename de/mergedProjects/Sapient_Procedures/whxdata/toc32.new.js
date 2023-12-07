@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SYS_CHANGE_LOG","type":"item","tilePath":"","description":"","url":"de/DB_Logging/Logging.htm#SYS_CHANGE_LOG"},{"name":"Aufruf_aus_J-LIW","type":"item","tilePath":"","description":"","url":"de/DB_Logging/Logging.htm#Aufruf_aus_J-LIW"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

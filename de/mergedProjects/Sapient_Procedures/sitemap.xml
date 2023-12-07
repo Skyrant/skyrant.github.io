@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/General/ANSI.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/About.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/SE_Conf.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/DB_ConPools.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/HikariCP_als_optionaler_DB-Verbindungspool.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Übersicht_der_Jobs.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Übersicht_der_Task-Typen.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Task_Types.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Desc_Trigger_Types.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Time_Zones.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/02_Dir_Structure.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Con_Pool_Status.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Call.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Query/Introduction.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Query/Querying_Data.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Query/SELECT_Params.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Query/SELECT_Return_Values.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Query/Field_Lists.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Query/Programmed_Datasources.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Job_Basics.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Paperclip_Printing.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Paperclip_Configuration_Parameter.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Task-Typen.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/Tasks2.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Overview/Introduction.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Overview/Custom_JavaScript.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Overview/JavaScript-Jobs.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Overview/JavaScript-Procs.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Overview/03_Ext_Functs.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Objects/01_Overview.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Objects/03_logger.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/02_file.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/03_DbCon.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/04_DbQuery.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/05_DbQueryBuilder.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/07_HttpCon.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/08_PrintWriter.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/09_JsonWriter.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/10_Reader.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/11_SaxInput.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/12_SaxReader.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/13_Process.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/14_SapientContext.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/15_SapientUser.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/20_MailMessage.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/21_MailSender.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/22_ThreadPool.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/23_BlockingQueue.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/24_BitSet.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/25_TimeRangeSet.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/TemplateHelper.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/TemplateAction.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/26_DependentTasksSolver.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/27_Repeat_Exec.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/JavaScript/Classes/28_Init_Tasks.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Ext_Props.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Basics/JOB_POLLER.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Basics/Task_dbtimesync.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/CompressedVal/AggrPoller.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Housekeeping/TABLE_DELETE.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Housekeeping/Del_Jobs.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/KPIs/SHIFT_KPI.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/KPIs/TIMESLICES.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/KPIs/KPI_Mailing.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Modules/MODULE_CONTROL_ALARM.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Paging/RECEIVE_PAGING_EVENT.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Shift/REFRESH_EVENT_LIST.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Shift/HANDLE_EVENTS.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysMessages/JOB_GEN_AL_SHIFTCAL_MAINTENENCE.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysMessages/MODULE_CONTROL_ALARMS.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysMessages/VALUE_ALARMS.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Target_Vals/REFRESH_SHIFT_TARGETS.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Target_Vals/TARGETCHAINS_ONLINE.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/TPM/JOB_POLLER_TPM.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/01_ZuliImport.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/02_Zuli_Scripts.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/Register_Script.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/03_Functions_Scripts.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/04_Vars.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/Functions.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/05_Map_Structs.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/Special_Functions.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Zuli/09_Creating_Zuli_Files.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/DB_Logging/Logging.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/SysDoc.htm</loc>
+      <lastmod>2023-09-21</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

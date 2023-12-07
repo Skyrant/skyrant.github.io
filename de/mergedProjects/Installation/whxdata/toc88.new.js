@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Configure Environment Variables","type":"item","tilePath":"","description":"","url":"en/Tomcat_Win/JDK_1_7.htm#Configure_Environment_Variables"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

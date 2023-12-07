@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/Sys_Inst/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB_GW.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/SCC.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Prerequ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/Locale_Language_Con/Locale_Language_Config.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Datenbankparameter.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Oracle.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Install_DB_SetupLDB.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Install_DB_JLIW.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/DB/Updates.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/AE/Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/AE/Configuration.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/LC2/Prerequ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/LC2/Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/LC2/DB-Connection.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/WA/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/WA/Prerequ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/WA/Configuration.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/WA/Updates.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Sys_Inst/GefasoftDesigner.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/Prerequ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/DB_Update.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/WA_Update.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/AE_Update.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/JDK.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/GW_Update.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/LC2_Update.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Update/Designer_Update.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OP_Sys/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OP_Sys/OP_Sys.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/AE_Systemd/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/AE_Systemd/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/AE_Systemd/Introduction.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/AE_Systemd/Installation/Prerequisite.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/AE_Systemd/Installation/AE.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/AE_Systemd/Installation/Service.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OracleClient/General/01_Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OracleClient/General/02_ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OracleClient/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OracleClient/Install/ClientSoftware.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OracleClient/Install/Net-Config.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/Introduction.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/Prep.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/Installation/DBMS_Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/Installation/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/Installation/DB_Instance_LEGATO.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/PostProc/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/PostProc/Final_Test.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/PostProc/LEGATO_Tables.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/PostProc/Maintenance.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_11g/PostProc/Archiving.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/Introduction.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/Prep.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/Installation/DBMS_Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/Installation/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/Installation/DB_Instance_LEGATO.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/PostProc/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/PostProc/Final_Tests.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/PostProc/LEGATO_Tables.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/PostProc/Maintenance.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/Win_2012_12c/PostProc/Archiving.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Introduction.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Sys_Requ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Installation/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Installation/Pre-Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Installation/Prep_RDBMS.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Installation/Graph_Inst.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/Installation/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/DB_Instance/Setup.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/DB_Instance/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/DB_Instance/User_oracle.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/DB_Instance/Final_Settings.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/DB_Instance/Autostart.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_64_11g/DB_Instance/Archiving.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Introduction.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Sys_Requ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Installation/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Installation/Pre-Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Installation/Prep_RDBMS.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Installation/Graph_Inst.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/Installation/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/DB_Instance/Setup.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/DB_Instance/Listener.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/DB_Instance/User_oracle.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/DB_Instance/Final_Settings.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/DB_Instance/Autostart.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Oracle_Server/RHEL_67_12c/DB_Instance/Archiving.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/GW_Linux/General/01_Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/GW_Linux/General/02_ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/GW_Linux/Intr.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/GW_Linux/Prerequ.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/GW_Linux/Compile_GW.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/GW_Linux/GW_Bin_Lib.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaConfig/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaConfig/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaConfig/Interface.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaConfig/Menue.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaServer/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaServer/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaServer/Config.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/MediaServer/Function.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/CentOS/General/01_Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/CentOS/General/02_ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/CentOS/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/CentOS/CentOS_6.5.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/CentOS/OpenJDK.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/JDK_1_7.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/Tomcat_7.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/Env_Vars.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/Tomcat_as_Service.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/Run_Tomcat.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/JAVA_OPTS.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_RHEL/Log4j_2.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/General/Change_History.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/General/ANSI.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/Overview.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/JDK_1_7.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/Installation.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/Parameters.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Tomcat_Win/Log4j_2.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Note_Units/Annex_I.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>en/Note_Units/Annex_II.htm</loc>
+      <lastmod>2023-09-25</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

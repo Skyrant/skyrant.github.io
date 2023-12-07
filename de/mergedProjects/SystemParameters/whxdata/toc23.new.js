@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SysParam 5040: PzeAllowedUpdTime","type":"item","tilePath":"","description":"","url":"de/08_MES/04_PZE/04_SysParam5040.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

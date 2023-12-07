@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Basisparametrierung","type":"item","tilePath":"","description":"","url":"de/Basics/User/Rights.htm#Basisparametrierung"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

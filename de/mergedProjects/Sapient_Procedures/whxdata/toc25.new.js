@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"REFRESH_EVENT_LIST","type":"item","tilePath":"","description":"","url":"de/Shift/REFRESH_EVENT_LIST.htm"},{"name":"HANDLE_EVENTS (Ereignisse bearbeiten)","type":"item","tilePath":"","description":"","url":"de/Shift/HANDLE_EVENTS.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Standardwerte","type":"item","tilePath":"","description":"","url":"de/LGD/Standardwerte.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

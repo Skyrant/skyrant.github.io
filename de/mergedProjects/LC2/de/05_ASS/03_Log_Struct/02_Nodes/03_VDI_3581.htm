@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.3.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Kennwert Verfügbarkeit nach VDI 3581</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Verfügbarkeit,VDI 3581,VDI Formel,Kennwert Verfügbarkeit nach VDI 3581" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Kennwert Verfügbarkeit nach VDI 3581">
+        <span>Kennwert Verfügbarkeit nach VDI 3581</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">Kennwert Verfügbarkeit nach VDI 3581</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Mit Hilfe dieser zusätzlichen 
+ erweiterten Eigenschaften eines Fertigungsknotens ist es möglich,</span> 
+ <span style="background: white;">zusätzliche KPI-Werte (Verfügbarkeiten) 
+ zu berechnen.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Dabei werden KPI-Werte 
+ vom unterlagerten Knoten miteinander verknüpft. In einem Textfeld wird 
+ eine Formel zur Berechnung des neuen KPI-Wertes definiert.</span> <span style="background: white;">Die Verfügbarkeit nach VDI 3581 ist nur 
+ eine mögliche Anwendung dieser erweiterten Eigenschaft.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Beschränkung: Es können 
+ nur KPI-Werte von unterlagerten Knoten verwendet werden. Außerdem müssen 
+ die untergeordneten Knoten demselben Schichtmodell zugeordnet sein wie 
+ der zu berechnende Knoten.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Verkettung von Einzelverfügbarkeiten 
+ (unterlagerter Knoten) in serieller und paralleler Struktur. Komplexe 
+ Systeme stellen eine Verknüpfung dieser Strukturen dar (sowohl seriell 
+ wie auch parallel, siehe Beispiele in VDI 3581).</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Es gibt 2 Arten der 
+ Berechnung:</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch"><span style="background: white;">Konventionelle 
+ Methode</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch"><span style="background: white;">Auswertung mit 
+ Gewichtungsfaktor</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;">Ausgeführt 
+ wird die Berechnung vom zyklischen AE-Job &quot;CalcOfflineKPI&quot;.</span></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><span style="background: white;"><img src="../../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" width="71" height="19" border="0"/>:</span></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"><span style="background: white;">In den XML-Parametern 
+ des AE-Jobs muss der Parameter</span> &quot;SortShiftsByNodeLevel&quot; 
+ auf 1 gesetzt werden, damit die Berechnung in der richtigen Reihenfolge 
+ erfolgt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beschreibung</p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;">Benutzbar 
+ sind prinzipiell alle KPIs, die offline berechnet werden. Sinnvoll sind 
+ jedoch nur solche, die Verfügbarkeiten darstellen; u.a.:</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Technische Verfügbarkeit, 
+ Technische Störzeit, Nettobetriebszeit, Verfügbarkeit nach VDI3581. Verfügbar 
+ sind alle KPI-Werte, die von den unterlagerten Knoten berechnet sind.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Die Berechnungsformel 
+ wird in Form von SQL in das Textfeld eingetragen, ähnlich wie:</span></p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;">&quot;kpi_of_subnode(%SHIFT%,910,15)*kpi_of_subnode(%SHIFT%,900,4)....&quot;</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">wobei der Platzhalter 
+ für %SHIFT% von der Berechnungsprozedur durch die ID der Schicht ersetzt 
+ wird, 900 die ID des zu verwendenden Knotens ist und 4 der KPI-Typ.</span></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiele zur Verfügbarkeitsberechnung</p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;">Einzelverfügbarkeit 
+ (entspricht techn./org./syst. Verfügbarkeit):</span></p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/01_Formel1.gif" alt="" style="border: none;" border="0"/></span></p>
+<p class="BodyText" data-condition="Others:Deutsch">Verfügbarkeit Serielle Struktur (3 Teilelemente):</p>
+<p class="BodyText" style="font-size: 12.0pt;" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/02_Formel2.gif" alt="" style="border: none;" border="0"/><br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Verfügbarkeit Parallele 
+ Struktur</span> <span style="background: white;">(hier rechnet man mit 
+ Nichtverfügbarkeiten):<br/>
+Nichtverfügbarkeit:</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/03_Formel3.gif" alt="" style="border: none;" border="0"/></span><br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch">Verfügbarkeit einer parallelen Struktur (3 Teilelemente):</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/04_Formel4.gif" alt="" style="border: none;" border="0"/><br/>
+</p>
+<p class="BodyText" data-condition="Others:Deutsch">Auswertung mit Gewichtungsfaktor (kommt zur Anwendung 
+ von parallel geschalteten Elementen):</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/05_Formel5.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/06_Formel6.gif" alt="" style="border: none;" border="0"/>     Einschaltzeit 
+ entspricht Nettobetriebsdauer</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/07_Formel7.gif" alt="" style="border: none;" border="0"/>     Ausfallzeit 
+ entspricht z. Bsp. Stördauer technisch</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/08_Formel8.gif" alt="" style="border: none;" border="0"/>     Gewichtungsfaktor 
+ der Teilsysteme zwischen 0 und 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch">            Bei 
+ seriellen Strukturen 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch">            Für 
+ die einzelnen Teilsysteme einer parallelen Struktur beträgt die Summe 
+ der   einzelnen Faktoren 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><span style="background: white;">Detail:</span></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im LC2 wird einem Knoten der Fertigungsstruktur über 
+ das Feld &quot;Formel z. Verfügbarkeitsb. nach VDI 3581&quot; eine Formel 
+ zur Berechnung zugewiesen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit Hilfe eines Texteditors wird die Formel zur Berechnung 
+ angegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/09_Input.png" alt="" width="562" height="194" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Formel sind die Operationen +, -, *, /  und 
+ Klammerausdrücke erlaubt. Ebenso alle zulässigen ORACLE-SQL-Ausdrücke. 
+ Um die KPI-Werte unterlagerter Knoten zu verwenden, kommt die neue Funktion 
+ <span style="background: white;">kpi_of_subnode</span>() zur Anwendung.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Liste zeigt eine Auswahl der verfügbaren KPI-Typen. 
+ Grundsätzlich sind alle KPIs verwendbar, die offline berechnet werden 
+ und die Verfügbarkeiten darstellen:</p>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">SHORT_NAME</p></td>
+		<td><p class="TabellenÜberschrift">NAME_0</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">preal</p></td>
+		<td><p class="TabellenInhalt">Ist-Stückzahl</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">ptarg</p></td>
+		<td><p class="TabellenInhalt">Soll-Stückzahl</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">3</p></td>
+		<td><p class="TabellenInhalt">ctarg</p></td>
+		<td><p class="TabellenInhalt">Soll-Taktzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">4</p></td>
+		<td><p class="TabellenInhalt">wtb</p></td>
+		<td><p class="TabellenInhalt">Arbeitszeit brutto</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">5</p></td>
+		<td><p class="TabellenInhalt">btp</p></td>
+		<td><p class="TabellenInhalt">Geplante Pausen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">6</p></td>
+		<td><p class="TabellenInhalt">bta</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Pausen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">7</p></td>
+		<td><p class="TabellenInhalt">bttpm</p></td>
+		<td><p class="TabellenInhalt">TPM-Pausen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">8</p></td>
+		<td><p class="TabellenInhalt">wtn</p></td>
+		<td><p class="TabellenInhalt">Arbeitszeit netto</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">9</p></td>
+		<td><p class="TabellenInhalt">ftcon</p></td>
+		<td><p class="TabellenInhalt">Verbindungs-Störzeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">10</p></td>
+		<td><p class="TabellenInhalt">fttot</p></td>
+		<td><p class="TabellenInhalt">Gesamt-Stördauer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">11</p></td>
+		<td><p class="TabellenInhalt">fttec</p></td>
+		<td><p class="TabellenInhalt">Stördauer technisch</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">12</p></td>
+		<td><p class="TabellenInhalt">ftorg</p></td>
+		<td><p class="TabellenInhalt">Stördauer organisatorisch</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">13</p></td>
+		<td><p class="TabellenInhalt">ftsys</p></td>
+		<td><p class="TabellenInhalt">Stördauer systembedingt</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">14</p></td>
+		<td><p class="TabellenInhalt">fctot</p></td>
+		<td><p class="TabellenInhalt">Anzahl Stillstände gesamt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">15</p></td>
+		<td><p class="TabellenInhalt">fctec</p></td>
+		<td><p class="TabellenInhalt">Anzahl technischer Stillstände</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">16</p></td>
+		<td><p class="TabellenInhalt">fcorg</p></td>
+		<td><p class="TabellenInhalt">Anzahl organisatorischer Stillstände</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">17</p></td>
+		<td><p class="TabellenInhalt">fcsys</p></td>
+		<td><p class="TabellenInhalt">Anzahl systembedingter Stillstände</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">18</p></td>
+		<td><p class="TabellenInhalt">mttr</p></td>
+		<td><p class="TabellenInhalt">Mean Time To Repair (MTBR)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">19</p></td>
+		<td><p class="TabellenInhalt">mtbf</p></td>
+		<td><p class="TabellenInhalt">Mean Time Between Failure (MTBF)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">20</p></td>
+		<td><p class="TabellenInhalt">eetec</p></td>
+		<td><p class="TabellenInhalt">Technische Verfügbarkeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">21</p></td>
+		<td><p class="TabellenInhalt">eeorg</p></td>
+		<td><p class="TabellenInhalt">Organisatorische Verfügbarkeit</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">22</p></td>
+		<td><p class="TabellenInhalt">eesys</p></td>
+		<td><p class="TabellenInhalt">Systembedingte Verfügbarkeit</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">23</p></td>
+		<td><p class="TabellenInhalt">oeeft</p></td>
+		<td><p class="TabellenInhalt">Gesamt-Verfügbarkeit störungsbasiert</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">24</p></td>
+		<td><p class="TabellenInhalt">oeept</p></td>
+		<td><p class="TabellenInhalt">Gesamt-Verfügbarkeit stückzahlbasiert</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">25</p></td>
+		<td><p class="TabellenInhalt">oeect</p></td>
+		<td><p class="TabellenInhalt">Gesamt-Verfügbarkeit taktzeitbasiert</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">26</p></td>
+		<td><p class="TabellenInhalt">avjs / vdi</p></td>
+		<td><p class="TabellenInhalt">Verfügbarkeit nach VDI 3581</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Um die KPI-Werte eines unterlagerten Knotens verwenden 
+ zu können, müssen diese in den betreffenden Knoten angewählt sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind einem unterlagerten Knoten keine Meldungen zugeordnet 
+ und es wird nur eine Verfügbarkeit vom Typ 26 errechnet, kann über den 
+ Umweg der Schichtnettozeit und diesem KPI-Wert 26 auch eine technische 
+ Ausfallszeit berechnet werden. Wird bei Gewichtungsfaktoren benötigt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiel einer rein seriellen Struktur:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/10_Serial.jpg" alt="" width="304" height="64" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Formel:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,1,20)/100*</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,2,20)/100*</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,3,20)/100</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Faktor /100 muss angegeben werden, da der KPI-Typ 
+ 20 (techn. Verfügbarkeit) in der Form 95% in der Datenbank abgelegt ist. 
+ Zur Berechnung muss er jedoch auf den Wert 0,95 gewandelt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiel einer rein parallelen Struktur:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/11_Parallel.jpg" alt="" width="174" height="135" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Konventionelle Art (ohne Gewichtung):</p>
+<p class="BodyText" data-condition="Others:Deutsch">1-(1-<span style="background: white;">kpi_of_subnode</span>(%SHIFT%,1,20)/100)*</p>
+<p class="BodyText" data-condition="Others:Deutsch">(1-<span style="background: white;">kpi_of_subnode</span>(%SHIFT%,2,20)/100)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Formel mit Gewichtungsfaktoren:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1-1/<span style="background: white;">kpi_of_subnode</span>(%SHIFT%,1,8)</p>
+<p class="BodyText" data-condition="Others:Deutsch">(<span style="background: white;">kpi_of_subnode</span>(%SHIFT%,1,11)/2+</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,2,11)/2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier wird jeweils ein Gewichtungsfaktor von 0,5 verwendet.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiel einer gemischten (seriellen und parallelen 
+ Struktur):</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/02_KPI_VDI_3581/both/12_Mixed.jpg" alt="" width="331" height="134" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Formel mit Gewichtungsfaktoren:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1-1/<span style="background: white;">kpi_of_subnode</span>(%SHIFT%,1,8)</p>
+<p class="BodyText" data-condition="Others:Deutsch">(<span style="background: white;">kpi_of_subnode</span>(%SHIFT%,1,11)+</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,2,11)/2+</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,3,11)/2+</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">kpi_of_subnode</span>(%SHIFT%,4,11))</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier wird für die beiden parallelen Teilsysteme jeweils 
+ ein Gewichtungsfaktor von 0,5 verwendet.</p>
+
+
+</body></html>

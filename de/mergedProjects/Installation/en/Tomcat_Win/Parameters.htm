@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_Win_en.docx" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Tomcat Parameters</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tomcat Parameters">
+        <span>Tomcat Parameters</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Tomcat Parameters</h1>
+<h2 data-condition="Others:Englisch"><a id="General"></a>General</h2>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">The following parameters and their values 
+ are just only recommendation for a single user and for single instance 
+ of Web application running under Tomcat. It is strongly recommended to 
+ set the most value that you can afford for parameters such as Initial 
+ memory size, Maximum memory size and Thread size depending on your operating 
+ setup.</p>
+<h2 data-condition="Others:Englisch"><a id="Tomcat7w_Monitor_Application"></a>Tomcat7w Monitor Application</h2>
+<p class="BodyText" data-condition="Others:Englisch">Tomcat7w is a GUI application for monitoring and configuring 
+ Tomcat services.</p>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_Win/image022.png" alt="" width="424" height="463" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">In order to configure the Tomcat memory settings check 
+ the Apache feather icon in the systray (or when absent, run <em><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-style: normal;">Monitor 
+ Tomcat</span></em> from the start menu). Double-click the feather icon 
+ and navigate to the &quot;Java&quot; tab, and set the values for Initial 
+ memory pool, Maximum memory pool and Thread stack size.</p>
+<p class="BodyText" data-condition="Others:Englisch">For the use of Legato, the following parameter values 
+ are recommended:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Initial memory pool (PermGen size): 512 MB</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Maximum memory pool (the maximum amount of memory 
+ that can be allocated to the Java VM heap): 4096 MB</p>
+
+
+</body></html>

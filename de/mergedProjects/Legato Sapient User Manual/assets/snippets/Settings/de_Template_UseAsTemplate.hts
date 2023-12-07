@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-comment" content=""/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>de_Template_UseAsTemplate</title>
+<link rel="StyleSheet" href="../../css/Legato_Systemdokumentation.css" type="text/css"/>
+</head>
+
+<body>
+<p class="GUIControl">Vorlage:</p>
+<p class="GUIControlDescr">Enthält eine Liste der Vorlagen, die erstellt 
+ und aktualisiert wurden, wie im Abschnitt <a href="#__GUI_UseAsTemplate">als 
+ Template benutzen</a> beschrieben. Wählen Sie die Vorlage, mit der Sie 
+ die Felder einer neuen Meldung auf der Seitenleiste <span class="Bold">Meldungen</span> 
+ vorbefüllen wollen.</p>
+<p class="GUIControlDescr">Farbkonvention für Einträge in der Dropdown-Liste 
+ <span class="Bold">Vorlage</span>:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1">Der Name der zuletzt verwendeten Vorlage 
+	 ist <span class="DDLEBB">blau markiert</span>.</p></li>
+	<li><p class="ListBulletL1">Die Daten, die (a) zuletzt auf der Seitenleiste 
+	 <span class="Bold">Meldungen</span> eingegeben wurden und (b) <span style="text-decoration: underline; ">nicht</span> als Vorlage gespeichert 
+	 wurden, sind ebenfalls <span class="DDLEBB">blau markiert</span>. 
+	 Jedoch ist dieser Listeneintrag - vergleichbar mit einem Eintrag in 
+	 der Zwischenablage Ihres Computers - nur vorübergehend verfügbar, 
+	 bis der Listeneintrag von einem neuen überschrieben wird.</p></li>
+</ul>
+<p class="GUIControl"><a id="__GUI_UseAsTemplate"></a>als Vorlage benutzen:</p>
+<p class="GUIControlDescr">Wenn Sie (a) <span style="text-decoration: underline; ">keine</span> 
+ Vorlage aus der Dropdown-Liste <span class="Bold">Vorlage</span> gewählt 
+ und (b) den Schieberegler <span class="Bold">als Template benutzen</span> 
+ aktiviert haben, dann wird eine neue Vorage angelegt. Alle Daten, die 
+ Sie in die Felder auf der Seitenleiste <span class="Bold">Meldungen</span> 
+ eingeben, werden in die neue Vorlage übernommen. Ihre Eingabe in das Feld 
+ <span class="Bold">Meldungstext</span> wird als Name für die Vorlage verwendet.</p>
+<table class="TabelleBlank" valign="top" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td rowspan="2"><img src="../../../Bilder/template_name_none_plus_on_de.png" alt="" style="border: none;" border="0"/></td>
+		<td style="vertical-align: bottom;"><p class="BodyText" style="margin-top: 0pt; 
+												 margin-bottom: 0pt;"> = </p></td>
+		<td style="vertical-align: bottom;"><p class="BodyText" style="margin-bottom: 0pt; 
+												 font-size: 10.5pt;">Neue 
+		 Vorlage</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: bottom;"> </td>
+		<td style="vertical-align: top;"> </td>
+	</tr>
+</tbody></table>
+<p class="GUIControlDescr">Wenn Sie (a) eine Vorlage aus der Dropdown-Liste 
+ <span class="Bold">Vorlage</span> gewählt und (b) den Schieberegler <span class="Bold">als Template benutzen</span> aktiviert haben, dann wird 
+ die Vorlage mit den Daten aktualisiert, die Sie in den Feldern der Seitenleiste 
+ <span class="Bold">Meldungen</span> modifiziert haben.</p>
+<table class="TabelleBlank" valign="top" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td rowspan="2"><img src="../../../Bilder/template_name_selected_plus_on_de.png" alt="" style="border: none;" border="0"/></td>
+		<td style="vertical-align: bottom;"><p class="BodyText" style="margin-top: 0pt; 
+												 margin-bottom: 0pt;"> = </p></td>
+		<td style="vertical-align: bottom;"><p class="BodyText" style="margin-bottom: 0pt;">Vorlagen-</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: bottom;"> </td>
+		<td style="vertical-align: top;"><p class="BodyText" style="margin-top: 0pt; 
+											 font-size: 10.5pt;">aktualisierung</p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

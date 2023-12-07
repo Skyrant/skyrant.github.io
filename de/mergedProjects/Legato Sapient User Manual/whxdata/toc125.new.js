@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Benutzerspezifische KPI-Tabelle","type":"book","tilePath":"","description":"","url":"de/Boardlets/17_Customer/KPI-Table.htm","key":"toc126"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

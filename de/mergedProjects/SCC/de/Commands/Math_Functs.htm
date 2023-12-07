@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Mathematische Funktionen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Mathematische Funktionen">
+        <span>Mathematische Funktionen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Mathematische Funktionen</h2>
+<h3 data-condition="Others:Deutsch"><a name="Exp" id="Exp"></a>Exp</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Exp(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Berechnet die Exponentialfunktion e<sup>x</sup>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := exp(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Ln" id="Ln"></a>Ln</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Ln(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Berechnet den natürlichen Logarithmus des Arguments 
+ <b>x</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := ln(2.718281)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Log" id="Log"></a>Log</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Log(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Berechnet den Logarithmus des Arguments <b>x</b> zur 
+ Basis 10.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := log(100)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Pi" id="Pi"></a>Pi</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Pi</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Zahl Pi als Double-Wert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := 2 * pi</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Pow" id="Pow"></a>Pow</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Pow(double x, double y)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Pow liefert das Ergebnis der Berechnung <b>x</b><sup>y</sup>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := KGToD(OPC.GOPS.PLC1.Length)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := pow(d, 3)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(DToStr(d))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Round" id="Round"></a>Round</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long Round(double x, bool up)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Rundet den Double-Wert <b>x</b> und liefert als Ergebnis 
+ einen Long-Wert. Ist <b>up</b> = true wird aufgerundet, sonst abgerundet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long      up, down</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d   := 123.45</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">up   := round(d, true)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">down := round(d, false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Rounded up   : &#39; + DToStr(up))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Rounded down : &#39; + DToStr(down))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Sqrt" id="Sqrt"></a>Sqrt</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double Sqrt(double x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Berechnet die Quadratwurzel des Arguments <b>x</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d, r</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := 100.0</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">r := sqrt(d)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := printf(&#39;The squareroot of %s is %s&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            DToStr(d), 
+ DToStr(r))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

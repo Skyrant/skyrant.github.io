@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Darstellungsformate</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Formatierung,Aktuellansicht,Darstellungsformat" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Darstellungsformate">
+        <span>Darstellungsformate</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Darstellungsformate</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Zu jeder numerischen Variable kann im Feld Darstellungsformat 
+ (Display format) eine Formatierungsanweisung angegeben werden, um beispielsweise 
+ die Anzahl der Nachkommastellen eines Wertes in der Client-Aktuellansicht 
+ zu bestimmen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Geben Sie bei numerischen Variablen immer 
+ ein Format vor, damit auch andere Anwendungen, die mit den Variablen arbeiten 
+ (z.B. der GefasoftDesigner) korrekt funktionieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Formatanweisung kann sich aus verschiedenen Bestandteilen 
+ zusammensetzen: &lt;Zahlenbasis&gt;&lt;Optionen&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">An erster Stelle steht die Zahlenbasis, keine Angabe 
+ führt zu dezimaler Darstellung:</p>
+<table class="AlternateGreyColoredGrid" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="75"/>
+	<col width="187"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenInhalt">d</p></td>
+		<td><p class="TabellenInhalt">Dezimal</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">I</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">h</p></td>
+		<td><p class="TabellenInhalt">Hexadezimal</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">b</p></td>
+		<td><p class="TabellenInhalt">Binär</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">o</p></td>
+		<td><p class="TabellenInhalt">Oktal</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">t</p></td>
+		<td><p class="TabellenInhalt">Dauer (hh:mm:ss)</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch">                </p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind keine Optionen angegeben erfolgt eine Standarddarstellung 
+ aufgrund der gewählten Zahlenbasis. Es werden dabei so viele Stellen (auch 
+ Nachkommastellen!) wie notwendig dargestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die zusätzlichen Optionen hängen teilweise von der 
+ gewählten Zahlenbasis ab:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Platzhalter für Ziffernstellen, die generell angezeigt 
+ werden, wenn nötig mit führenden Nullen oder Nachkommastellen mit angegebener 
+ Anzahl Nullen aufgefüllt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiele:</p>
+<table class="AlternateGreyColoredGrid" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="176"/>
+	<col width="172"/>
+	<col width="140"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenInhalt">keine Formatangabe</p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 128.345</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Format d </p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 128.345</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Format d0000</p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 0128</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Format h </p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 0x0080</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Format h0000</p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 0x0080</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Weitere Optionen für dezimale Werte:</p>
+<table class="AlternateGreyColoredGrid" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="77"/>
+	<col width="524"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenInhalt">#</p></td>
+		<td><p class="TabellenInhalt">Platzhalter für Ziffern, nur notwendige 
+		 Stellen werden angezeigt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">.</p></td>
+		<td><p class="TabellenInhalt">landesspezifisches Trennzeichen zwischen 
+		 Vor- und Nachkommastellen verwenden</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">,</p></td>
+		<td><p class="TabellenInhalt">landesspezifisches Tausendertrennzeichen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">E</p></td>
+		<td><p class="TabellenInhalt">Exponentialdarstellung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">%</p></td>
+		<td><p class="TabellenInhalt"><span class="TextkörperZchnTextkörperCharCharCharZchnTextkörperCharCharCharCharZchnTextkörperCharCharZchn">Darstellung 
+		 als Prozentzahl (der Wert wird zuvor mit 100 multipliziert). Das 
+		 %-Zeichen wird dort angezeigt, wo es eingefügt wird</span></p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiele:</p>
+<table class="AlternateGreyColoredGrid" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="174"/>
+	<col width="174"/>
+	<col width="146"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenInhalt">Format d </p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 128.345</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Wert 8,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 8.345</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Wert 0,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige .345</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Format d#0.##</p></td>
+		<td><p class="TabellenInhalt">Wert 128,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 128.34</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Wert 128</p></td>
+		<td><p class="TabellenInhalt">Anzeige 128</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">(mindestens eine Stelle vor dem Komma, nach dem Komma 
+ max. zwei Stellen)</p>
+<table class="AlternateGreyColoredGrid" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="186"/>
+	<col width="167"/>
+	<col width="140"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenInhalt">Format d%#0.##</p></td>
+		<td><p class="TabellenInhalt">Wert 0,7</p></td>
+		<td><p class="TabellenInhalt">Anzeige %70</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Format d#0.##%</p></td>
+		<td><p class="TabellenInhalt">Wert 0,7</p></td>
+		<td><p class="TabellenInhalt">Anzeige 70%</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Format d#,###,##0.0</p></td>
+		<td><p class="TabellenInhalt">Wert 1289,345</p></td>
+		<td><p class="TabellenInhalt">Anzeige 1,289.3</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Wert 128</p></td>
+		<td><p class="TabellenInhalt">Anzeige 128</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> (bei hohen Zahlen Tausendertrennzeichen einblenden)</p>
+<table class="AlternateGreyColoredGrid" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="185"/>
+	<col width="167"/>
+	<col width="138"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenInhalt">Format d0.00E00</p></td>
+		<td><p class="TabellenInhalt">Wert 1289,345 </p></td>
+		<td><p class="TabellenInhalt">Anzeige 1.29E03</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

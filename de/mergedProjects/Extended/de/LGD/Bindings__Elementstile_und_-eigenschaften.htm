@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+  <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+  <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+  <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+  <title data-condition="Others:Deutsch">Bindings - Elementstile und -eigenschaften</title>
+  <link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bindings - Elementstile und -eigenschaften">
+        <span>Bindings - Elementstile und -eigenschaften</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Others:Deutsch">Bindings: Elementstile und -eigenschaften</h1>
+  <p data-condition="Others:Deutsch">Jeglicher Elementstil kann als Bindingziel genutzt werden. Um die Stilnamen zu untersuchen, fügen Sie einfach ein Element zu einer Zeichnung hinzu, gestalten Sie es wie gewünscht über die Seitenleiste und lassen Sie die Änderungen anzeigen, indem Sie auf den Stil bearbeiten Button in der Seitenleiste klicken:</p>
+  <p data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img alt="" border="0" src="../../Bilder/bindable_element_1.png" style="border: none;"/></span></p>
+  <p data-condition="Others:Deutsch"> </p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><img alt="" border="0" src="../../Bilder/bindable_element_2.png" style="border: none;"/></p>
+  <p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"> </p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; 
+	 mso-fareast-language: DE;">Jeder der hier aufgelisteten Stile kann also Bindingziel genutzt werden, z. B.</span></p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• fillColor: Füllfarbe des Elements</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• strokeColor: Rahmenfarbe</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• fontStyle: Schriftart</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• dashed: “gestrichelte” Linie</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• rotation: Drehen um Gradzahlen</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">Sogar die Form eines Elements kann als Bindingziel verwendet werden, um z. B. das Element mit einer bestimmten, von einem Wert abhängigen Form anzuzeigen. Um die möglichen Werte für Stileigenschaften herauszufinden, legen Sie den jeweiligen Stil über die korrespondierenden Tools des Designers fest (normalerweise die Stil-Seitenleiste) und überprüfen Sie den Wert im Stildialog.</p>
+  <h3 data-condition="Others:Deutsch"><a id="Sonderformen"></a>Sonderformen</h3>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; 
+	 mso-fareast-language: DE;">Einige Formen verfügen über individuelle Eigenschaften, wie der Fortschritt von Fortschrittsbalken, die ebenfalls als Bindingziel verwendet werden können:</span></p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• Suchen Sie nach “Fortschritt” in der Formenbibliothek.</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• Wählen Sie “Cloud Fortschrittsbalken” und fügen Sie sie in eine Zeichnung ein.</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><img alt="" border="0" src="../../Bilder/special_shapes_progress_binding.png" style="border: none;"/></p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• Überprüfen Sie die Stile:</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><img alt="" border="0" src="../../Bilder/inspect_the_styles_binding.png" style="border: none;"/></p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch">• Die Eigenschaft barPos spezifiziert den Fortschritt in Prozentzahlen und kann als Bindingziel verwendet werden (angenommen, die Variable ist ein Prozentwert, aber natürlich kann auch jedes andere Rechenergebnis referenziert werden).</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;someVar&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: &quot;var&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: &quot;varSym&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;barPos&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;defaultValue&quot;: 0</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+  <p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+  <p data-condition="Others:Deutsch">Linien sind ein weiteres Beispiel für Elemente, die besondere Stileigenschaften unterstützen, z. B. die Stilart des Anfangs und Endes einer Linie (startArrow, endArrow):</p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img alt="" border="0" src="../../Bilder/edit_style_binding.png" style="border: none;"/></span></p>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+
+</body></html>

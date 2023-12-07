@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="System_Update_Legato_de.docx" />
+<meta name="build tags" content="Deutsch" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Update ApplicationEngine</title>
+<link rel="stylesheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Update ApplicationEngine</h1>
+<h2><a name="Vorbereitungen" id="Vorbereitungen"></a>Vorbereitungen</h2>
+<p class="BodyText">Dienst ApplicationEngine stoppen.</p>
+<h2><a name="Update" id="Update"></a>Update</h2>
+<p class="BodyText">Löschen aller Log-Dateien (.log) im Pfad "C:\LegatoAppData\logs\appengine\"</p>
+<p class="BodyText">Den Ordner der bestehende AE-Version umbenennen (z.B. Ordner "LegatoAppEng" unter "C:\Program Files (x86)\Gefasoft\" umbenennen in "old_LegatoAppEngVxxx") und als Sicherung in ein temporäres Verzeichnis verschieben.</p>
+<p class="BodyText">Neue Version der Legato-Application-Engine (z.B. LeAppEng-xxx.zip) in temporären Ordner entpacken.</p>
+<p class="TextCode">$JAVA_HOME/bin/jar xvf LeAppEng-xxx.zip</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Den entpackten Ordner in den regulären Pfad für die AE kopieren (z.B. unter "C:\Program Files (x86)\Gefasoft\") und den Verzeichnisnamen der neuen AE-Version in den offiziellen Verzeichnisnamen der Vorgängerversion umbenennen (z.B. "LegatoAppEng").</p>
+<p class="BodyText">Die Ordnerinhalte der neuen AE-Version (jetzt z.B. "LegatoAppEng") anpassen. Je nach Betriebssystem, auf dem die AE läuft, die Inhalte aus dem zutreffenden Ordner direkt eine Ebene höher in das Hauptverzeichnis kopieren (ix: Unix/Linux; win: Windows 32-bit; win64: Windows 64-bit).</p>
+<p class="BodyText">Aus dem gesicherten und umbenannten AE-Verzeichnis der Vorgängerversion (z.B. Ordner "old_LegatoAppEngVxxx" unter "C:\Program Files (x86)\Gefasoft\") alle applikationsspezifischen Dateien im Hauptverzeichnis in das jetzt aktuelle Hauptverzeichnis der AE (jetzt z.B. "LegatoAppEng") kopieren. Dazu gehören z.B. "appengine.properties". Prinzipiell können alle Dateien vom alten Ordner in den neuen AE-Ordner kopiert werden, die namentlich noch nicht enthalten sind.</p>
+<p class="BodyText">Evtl. nachträglich projektspezifischen Erweiterungen (z.B. zusätzliche Skripte) aus dem Sicherungsverzeichnis der alten AE-Version (z.B. "old_LegatoAppEngVxxx") in das entsprechende Verzeichnis der neuen AE-Version kopieren.</p>
+<p class="BodyText">Verweis auf Import-Skripte wiederherstellen (&lt;path_to_LegatoAppData_from_webapp&gt; muss durch korrekten Wert ersetzt werden):</p>
+<p class="TextCode">ln –s &lt;path_to_LegatoAppData_from_webapp&gt;/importfiles/importscripts ~/legato/bin/LeAppEng/scripts/zuli/importscripts</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Add paths for report output in "~/legato/cfg/appengine.properties" if not already in place:</p>
+<p class="TextCode">userreport.designbasedir=&lt;path_to_LegatoAppData_from_webapp&gt;/reports</p>
+<p class="TextCode">userreport.outbasedir=&lt;path_to_LegatoAppData_from_webapp&gt;/reportoutput</p>
+<p class="TextCode">userreport.tmpdir=tmp</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Falls noch nicht gesetzt, folgenden Parameter in dbarch.properties und dboper.properties einfügen:</p>
+<p class="TextCode">maxUseCount=999</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Falls im Zuge des gesamten Updates auch ein Update des JDK mit neuer Java-Version durchgeführt wurde, ist noch eine zusätzliche Anpassung notwendig. Die Datei "dosvc.cmd" im jetzt aktuellen AE-Ordner muss bearbeitet werden. Alle Angaben zu Java müssen korrigiert werden.</p>
+<p class="BodyText">Prüfung, ob die bestehenden Pfadangaben (z.B. zu einer .dll) auch in der aktuellen Java-Version vorhanden sind.</p>
+<p class="BodyText">Alle Pfadangaben auf den Pfad der aktuellen Java-Version anpassen.</p>
+<p class="BodyText">Aktualisierung der JDBC-Treiber für Oracle. Die Treiber "ojdbc*.jar" und "orai18n.jar" aus dem lib-Verzeichnis der aktualisierten AE-Version (z.B. "C:\Program Files (x86)\Gefasoft\LegatoAppEng\lib\") kopieren und in das lib-Verzeichnis des Applikationsservers (z.B. "C:\Program Files\Apache Software Foundation\Tomcat 7.0\lib") einfügen. Die älteren Versionen dieser Treiber im lib-Verzeichnis des Applikationsservers löschen.</p>
+<h2><a name="Nacharbeiten" id="Nacharbeiten"></a>Nacharbeiten</h2>
+<p class="BodyText">Dienst Legato ApplicationEngine starten.</p>
+</body>
+</html>

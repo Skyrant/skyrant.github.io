@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">OPC-Verbindungen (Win64 Cloud Connector)</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="OPC" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="OPC-Verbindungen (Win64 Cloud Connector)">
+        <span>OPC-Verbindungen (Win64 Cloud Connector)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">OPC-Verbindungen (nur Win64 Cloud Connector)</h2>
+<h3 data-condition="Others:Deutsch"><a id="OPC-Server_Überblick"></a>OPC-Server Überblick</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Mit <b>OLE for Process Control</b>, kurz <b>OPC</b>, 
+ ist die von vielen Anwendern gewünschte Standardisierung der Automatisierungssoftware 
+ einen großen Schritt vorangekommen. Die mühevolle und kostenintensive 
+ Treiberentwicklung für spezielle Schnittstellenprotokolle und Feldbussysteme 
+ entfällt komplett. Mit OPC, der standardisierten Programmierschnittstelle 
+ für Prozessdaten, muss in Zukunft für jede Hardware, z.B. eine spezielle 
+ Feldbuskarte, nur ein OPC-Server entwickelt werden. Umgekehrt muss eine 
+ Applikation, z.B. eine Prozessvisualisierung, nur über einen Treiber in 
+ Form eines OPC-Clients verfügen, um Daten über verschiedenste Hardwareschnittstellen 
+ akquirieren zu können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die von der Open Control Nutzergruppe des INTERBUS-S 
+ Clubs spezifizierte Schnittstelle CALL-R (Control Applikation Link Layer 
+ - Runtime) erweitert den OPC-Standard um einige Funktionen speziell für 
+ PC-basierte Automatisierungslösungen in der Industrie:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Anlegen mehrerer unterscheidbarer Instanzen des 
+ Server-Objekts</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Konfigurieren der ansprechbaren Variablen-Objekte 
+ (OPC-Items)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Vermeiden von Zugriffskonflikten beim Zugriff 
+ mehrerer Clients auf das gleiche Variablen-Objekt (Item)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Lesen bereits vorverarbeiteter Werte (als Alternative 
+ zum ausschließlichen Lesen eines Rohwertes), und das Parametrieren der 
+ Vorverarbeitung</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Anlegen von Programm- und Programmgruppen-Objekten, 
+ sowie die Funktionen zum Laden, Starten und Stoppen von Programmen</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Ein transparenter Datenkanal zur Übertragung anwendungsspezifischer, 
+ nicht allgemein interpretierbarer Daten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Cloud Connector ist ein <b>OPC-Client</b> integriert, 
+ der sowohl in Verbindung mit einem Standard-OPC-Server, als auch mit einem 
+ CALL-R-Server eingesetzt werden kann.</p>
+<h3 data-condition="Others:Deutsch"><a name="Installation_des_OPC-Servers" id="Installation_des_OPC-Servers"></a>Installation 
+ des OPC-Servers</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Installieren Sie einen OPC-Server entsprechend den 
+ Herstellerangaben. Das Installationsprogramm muss die notwendigen Einträge 
+ in der Registrierungsdatenbank vornehmen.</p>
+<h3 data-condition="Others:Deutsch"><a name="Parametrieren_des_OPC-Servers" id="Parametrieren_des_OPC-Servers"></a>Parametrieren 
+ des OPC-Servers</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Parametrieren Sie den OPC-Server entsprechend den Herstellerangaben. 
+ Die am OPC-Server parametrierten Items können im Cloud Connector importiert 
+ werden (sofern der OPC-Server das Interface zum Abfragen der Konfiguration 
+ beinhaltet).</p>
+<h3 data-condition="Others:Deutsch"><a name="Anlegen_des_Serverelements" id="Anlegen_des_Serverelements"></a>Anlegen 
+ des Serverelements</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Im Kontextmenü des Grundelements OPC im Projektbaum 
+ den Befehl &quot;Neuer Server&quot; wählen. Als Server wird die Kennung 
+ des OPC-Servers eingegeben. Wurde der Server korrekt installiert, kann 
+ mit dem &quot;Browse&quot;-Button neben dem Eingabefeld eine Auswahlliste 
+ geöffnet werden, in der alle installierten OPC-Server aufgelistet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OPC_Con.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Angabe einer Konfigurationsdatei (&quot;Konfig-Datei&quot;) 
+ des OPC-Servers ist nur möglich, wenn der verwendete Server eine entsprechende 
+ Konfiguration von OPC-Items verwendet (z.B. der GEFASOFT OPC-Server GOPS).</p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;Kontrolllesung nach Schreibvorgang&quot; ermöglicht 
+ eine Verifizierung der Variablenwerte, die soeben in die SPS geschrieben 
+ wurden.</p>
+<h3 data-condition="Others:Deutsch"><a name="Anlegen_von_Gruppen" id="Anlegen_von_Gruppen"></a>Anlegen 
+ von Gruppen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Jede Gruppe kann ein oder mehrere Items enthalten. 
+ Diese Gruppen können Items aus verschiedenen Steuerungen enthalten. Sie 
+ haben die Eigenschaft, dass alle enthaltenen Items mit der gleichen Aktualisierungsrate 
+ von dem OPC-Server angefordert und versorgt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie im Projektbaum unter &quot;OPC&quot; 
+ den Server, dem Sie eine Gruppe zuordnen möchten, und wählen Sie im Kontextmenü 
+ den Befehl &quot;Neue Gruppe&quot;. Im Dialog für die Gruppe geben Sie 
+ die Aktualisierungsrate in Millisekunden an. Diese Aktualisierungsrate 
+ definiert die kürzeste Zeit, in der die Werte vom Server an den Cloud 
+ Connector übergeben werden dürfen. Werte werden nur bei Änderung übertragen.</p>
+<h3 data-condition="Others:Deutsch"><a id="OPC" data-indexterm="OPC"></a><a name="OPC-Variable" id="OPC-Variable"></a>OPC-Variable</h3>
+<h4 data-condition="Others:Deutsch">Anlegen eines OPC-Items</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Als &quot;Item-Id&quot; wird die ID des OPC-Items angegeben, 
+ wie das Item auch beim OPC-Server bekannt ist. Diese ID kann bei Servern, 
+ welche die Abfrageschnittstelle implementiert haben, importiert werden. 
+ &quot;Format&quot; und &quot;Zugriff&quot; wird in diesem Fall automatisch 
+ vorbelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem kann der &quot;Zugriffspfad&quot; eingegeben 
+ werden. Dieses Feld ist frei editierbar. Bei bestehenden Projekten wird 
+ beim Laden der Name der Variablen als Zugriffspfad eingetragen. Bei neu 
+ angelegten Variablen bzw. nach dem kompletten Löschen des Wertes wird 
+ im Dialog &quot;&lt;NULL&gt;&quot; angezeigt. In diesem Fall wird als 
+ Access Path NULL an den OPC Server übergeben.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Leerzeichen werden auch als Leerzeichen übergeben, 
+ nicht als NULL.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über die Checkbox &quot;Format vorgeben&quot; kann 
+ das gewünschte OPC-Format an den Server vorgegeben werden. Hier werden 
+ nur Formate aufgelistet, die vom Cloud Connector gewandelt werden können. 
+ Üblicherweise ist hier kein Eintrag vorzunehmen. Lediglich bei der Verwendung 
+ eines Bosch/Rexroth Servers muss die Checkbox aktiviert und ein Format 
+ gewählt werden. Dabei sind prinzipiell alle Kombinationen zwischen Format 
+ und vorgegebenem Format möglich. D.h., das OPC-Item kann als Format &quot;Int&quot; 
+ haben und es kann VT_BSTR vorgegeben werden. Sofern der übergebene String 
+ eine Zahl enthält, kann diese gewandelt werden und es wird das richtige 
+ Ergebnis geliefert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Hier ist anwendungsspezifisch sicherzustellen, 
+ dass die Formate bzw. der Inhalt zusammenpassen. Andernfalls wird als 
+ Ergebnis 0 geliefert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird im Kontextmenü der Gruppe &quot;Import&quot; gewählt, 
+ können mehrere Items gleichzeitig importiert werden. Der Name der angelegten 
+ Elemente ergibt sich aus der ID der Items. Diese können beim Import an 
+ einer konfigurierbaren Stelle abgeschnitten werden.</p>
+<h4 data-condition="Others:Deutsch">Import von OPC-Items</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Import wird angegeben, ab dem wievielten Trennzeichen 
+ (&quot;/&quot;) der Variablenname übernommen werden soll. Beim Einsatz 
+ von GOPS als OPC-Server ist das in der Regel das zweite Trennzeichen, 
+ da die vorstehenden Elemente des hierarchischen Namens den Treiber und 
+ die Verbindung beschreiben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Spalte &quot;OPC-Item&quot; steht die volle 
+ ID, wie sie im OPC-Server hinterlegt ist, in der Spalte &quot;Variable&quot; 
+ der Name, wie er dem Element im Cloud Connector gegeben wird. Unter &quot;Typ&quot; 
+ steht der OPC-Typ, bei &quot;Format&quot; das entsprechende Cloud Connector 
+ Format.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Spalte &quot;RW&quot; gibt die möglichen Zugriffsarten 
+ für das Item an:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenÜberschrift">RW</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenÜberschrift">Zugriffsart</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">R</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Item 
+		 kann nur gelesen werden</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">W</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Item 
+		 kann nur geschrieben werden</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="151"><p class="TabellenInhalt">RW</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Item 
+		 kann gelesen und geschrieben werden</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine Variable wird über Eigenschaften beschrieben. 
+ Beim Import werden diese Eigenschaften bereits automatisch übernommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Reaktion auf eine Änderung des Variablenwertes 
+ kann zusätzlich parametriert werden. Normalerweise wird an dieser Stelle 
+ die Ausführung eines Scripts zur weiteren Verarbeitung der Variablen angestoßen.</p>
+
+
+</body></html>

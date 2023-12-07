@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.5.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Progammierte Datenquellen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Datenquelle" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Progammierte Datenquellen">
+        <span>Progammierte Datenquellen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Programmierte Datenquellen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die &quot;select&quot;-Prozedur unterstützt auch das 
+ Erstellen von serverseitigen Datenquellen in Java oder JavaScript.</p>
+<h3 data-condition="Others:Deutsch"><a id="Java-Klassen"></a>Java-Klassen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Datenquellen können als Java-Klassen implementiert 
+ werden. Diese Klassen müssen durch <span style="font-weight: bold;">@JavaRepoResource(connectionName=&quot;name-of-schema&quot;) 
+ </span>kommentiert sein. Dieser Kommentar definiert das Schema (GP_R_CONNECTIONS), 
+ zu dem diese Datenquelle gehören soll. Eine Java-Klasse, die solcherart 
+ kommentiert ist, kann mehr als eine Datenquelle für dieses Schema implementieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für jede Datenquelle muss eine Klasse zwei Methoden 
+ implementieren. Beide müssen die übliche RPC-Methoden-Signatur (Objekt 
+ method(SapientCallContext, Objekt)) haben und müssen entsprechend kommentiert 
+ sein, damit sie vom Repository-Loader erkannt werden:</p>
+<p class="Liste_1 Liste_Level1" style="font-weight: bold; text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">@QueryFields(name=&quot;name-of-the-data-source&quot;) 
+ <span style="font-weight: normal;">Identifiziert die Methode, die vom 
+ Repository-Loader aufgerufen wurde um die Feldliste der Datenquelle zu 
+ holen. Diese Methode wird nur aufgerufen, während die Sapient Engine das 
+ Repository lädt oder neu lädt. In dieser Zeit ist das Repository (oder 
+ die neue Version davon, im  Falle eines Neuladens) nicht durch normale 
+ Sapient Engine Methoden erreichbar. Nichtsdestotrotz kann es sein, dass 
+ die Implementierung dieser Methode Informationen über das Schema benötigt, 
+ zu dem sie gehört. Um dies anzupassen, übergibt der Repository-Loader 
+ eine Referenz auf das Java Schema-Objekt als Parameter &quot;schema&quot; 
+ an diese Methode. Die &quot;fields&quot;-Methode sollte einen JSON-kompatiblen 
+ Array von JSON-Objekten zurückgeben, von denen jedes ein Feld der Datenquelle 
+ definiert. Für jedes Feld kann die folgende Information übergeben werden:</span></p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">name (String) 
+ - Der Name des Feldes / der Spalte.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">type (Integer) 
+ - Der JDBC-Typ des Feldes / der Spalte (eine der java.sql.Types-Konstanten).</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">pki (Integer, 
+ optional) - Wenn das Feld Teil des Primärschlüssels der Ressource ist, 
+ seine Position in diesem Schlüssel (1, 2, ...). Wenn das Feld nicht Teil 
+ des Primärschlüssels ist, sollte pki bei der Feldinformation weggelassen 
+ oder mit 0 (Zahl Null) übergeben werden.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">ref (String, 
+ optional) - Wenn das Feld eine ausgehende Referenz (&quot;Foreign Key&quot;) 
+ zu einer anderen Datenquelle ist, sollte dieser String das als String 
+ in der Form &quot;table.field&quot; spezifizieren.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">titles 
+ (Array von Strings oder String, optional) - Spaltentitel zur Anzeige im 
+ Client. Wenn ein einzelner String, wird dieser Wert für alle Benutzersprachen 
+ verwendet. Wenn ein Array, definiert jedes Element die Title fr eine der 
+ Sprachen, die im Schema &quot;repository&quot; enthalten sind (Hinweis: 
+ Nicht im Schema, zu dem diese Datenquelle gehört!)</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">hints 
+ (Array von Strings oder String, optional) - Kurze Beschreibung des jeweiligen 
+ Feldes, ggf. in einem Tooltipp. Einstellungen der Sprachumgebung werden 
+ genauso verwendet wie für &quot;titles&quot;.</p>
+<p class="Liste_1 Liste_Level1" style="font-weight: bold; 
+											 text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: normal;">@</span>QueryMethod(name=&quot;name-of-the-data-source&quot;) 
+ <span style="font-weight: normal;">Verwalte die Methode, die aufgerufen 
+ werden soll, um die Daten abzurufen. Wird von der JSON-RPC-Methode &quot;select&quot; 
+ aufgerufen. Dabei werden die Inhalte ihrer &quot;query&quot;-Parameter 
+ an die &quot;query&quot;-Methode übergeben (&quot;resources&quot;, 
+ &quot;fields&quot;, &quot;relations&quot;, &quot;filter&quot;, &quot;sort&quot; 
+ etc.) Es wird keine Neubearbeitung dieser Parameter durchgeführt, ehe 
+ die query-Methode aufgerufen wird. Sie werden als JSON-kompatible Werte 
+ genauso übergeben, wie sie vom Client empfangen werden.</span></p>
+<h3 data-condition="Others:Deutsch"><a id="JavaScript"></a>JavaScript</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Skript-Dateien, die in JavaScript programmierte 
+ Datenquellen definieren, müssen im Unterverzeichnis &lt;scripts|customscripts&gt;/query/&lt;schemaname&gt;/ 
+ gespeichert sein.</p>
+
+
+</body></html>

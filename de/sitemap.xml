@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>__global_change_history_de.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/OP_Tips.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_Installation/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_System_Parameters/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_LC2/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_MDX_Manager/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_Procedures/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_LegatoSapientUserManual/Welcome.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/SysDoc_Extended_Operation/SysDoc.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Locale Language Config","type":"item","tilePath":"","description":"","url":"de/Sys_Inst/Locale_Language_Con/Locale_Language_Config.htm","tocid":"10_0"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

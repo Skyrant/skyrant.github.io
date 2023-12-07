@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen mit indirekten Scriptaufrufen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen mit indirekten Scriptaufrufen">
+        <span>Funktionen mit indirekten Scriptaufrufen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen mit indirekten Scriptaufrufen</h2>
+<h3 data-condition="Others:Deutsch"><a name="CompBitArray" id="CompBitArray"></a>CompBitArray</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: CompBitArray(block a, block b, long 
+ size,<br/>
+                          script 
+ x(long byteoffset, long bitoffset,<br/>
+                                   bool 
+ bitval))</p>
+<p class="BodyText" data-condition="Others:Deutsch">Block <b>a</b> wird mit Block <b>b</b> bitweise verglichen. 
+ Wird ein Unterschied festgestellt, wird das Script <b>x</b> aufgerufen. 
+ Die Parameter des Scripts <b>x</b> werden mit den Werten für den Byteoffset 
+ und den Bitoffset des Bits sowie dem Zustand <b>bitval</b> des Bits im 
+ Block a versorgt. Nach dem Aufruf von Script <b>x</b> wird das Bit im 
+ Block <b>b</b> auf den Zustand des Bits im Block <b>a</b> gesetzt. Array 
+ beginnt bei der Adressierung mit 0, d.h., Array[0] ist das erste Feld.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das aufgerufene Script <b>x</b> muss mit der festgelegten 
+ Parameterreihenfolge &quot;byteoffset&quot;, &quot;bitoffset&quot; und 
+ &quot;bitvalue&quot; vorhanden sein. Die Parameter des Scripts <b>x</b> 
+ werden automatisch versorgt und müssen beim Aufruf über &quot;CompBitArray&quot; 
+ nicht angegeben werden. Das Script <b>x</b> darf keine weiteren Parameter 
+ haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    a, b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">a := OPC.GOPS.PLC1.Alarmblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">CompBitArray(a,b,128,script.CompBit)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="ScanBitArray" id="ScanBitArray"></a>ScanBitArray</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: ScanBitArray(block b, long size, bool 
+ scanval,<br/>
+                          script 
+ x(long byteoffset, long bitoffset,<br/>
+                                   bool 
+ scanval))</p>
+<p class="BodyText" data-condition="Others:Deutsch">Block <b>b</b> wird bitweise auf den Zustand von <b>scanval</b> 
+ verglichen. Wird ein Bit gefunden, welches den gleichen Zustand wie <b>scanval</b> 
+ hat, wird das Script <b>x</b> aufgerufen. Die Parameter des Scripts <b>x</b> 
+ werden mit den Werten für den <b>Byteoffset</b> und den <b>Bitoffset</b> 
+ des Bits sowie dem Zustand des Bits versorgt. Array beginnt bei der Adressierung 
+ mit 0, d.h., Array[0] ist das erste Feld.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das aufgerufene Script <b>x</b> muss mit der festgelegten 
+ Parameterreihenfolge <b>byteoffset</b>, <b>bitoffset</b> und <b>scanval</b> 
+ vorhanden sein. Die Parameter des Scripts <b>x</b> werden automatisch 
+ versorgt und müssen beim Aufruf über &quot;ScanBitArray&quot; nicht angegeben 
+ werden. Das Script <b>x</b> darf keine weiteren Parameter haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     scanval</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := OPC.GOPS.PLC1.Alarmblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">scanval := true</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ScanBitArray(b, 128, scanval, Script.scanbit)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="ScanDir" id="ScanDir"></a>ScanDir</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: ScanDir(string dir, script x(block 
+ b))</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Suchpfad <b>dir</b> wird durchsucht. Bei Finden 
+ einer Datei wird das Script <b>x</b> aufgerufen. Der Parameter des Scripts 
+ <b>x</b> wird mit der Dateiinformation versorgt. Die Dateiinformation 
+ wird in einer Struktur wie folgt abgelegt:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">struct fi</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">begin</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    dwFileAttributes</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftCreationTimeHigh, 
+ ftCreationTimeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastAccessTimeHigh</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastAccessTimeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastWriteTimeHigh</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    ftLastWriteTimeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    nFileSizeHigh</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    nFileSizeLow</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    dwReserved0</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  dword    dwReserved1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  byte     cFileName[260]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  byte     cAlternateFileName[14]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ScanDir(&#39;c:\\*.tmp&#39;, script.FileFound)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="ScanNode"></a>ScanNode</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: ScanNode(string node, script x(string 
+ name, string fullname))</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Knoten <b>node</b> wird nach seinen Unterknoten 
+ durchsucht. Bei Finden eines Knotens wird das Script <b>x</b> aufgerufen. 
+ Die Parameter des Scripts <b>x</b> werden mit dem Namen des Unterknotens 
+ und dem gesamten Pfad des Unterknotens versorgt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ScanNode(&#39;OPC.GOPS&#39;, script.NodeFound)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="ScanNodeRec"></a>ScanNodeRec</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: ScanNodeRec(string node, script x(string 
+ name, string fullname), integer level)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Knoten <b>node</b> und seine Unterknoten bis zum 
+ angegebenen <span style="font-weight: bold;">Level</span> werden nach 
+ seinen Unterknoten durchsucht. Bei Finden eines Knotens wird das Script 
+ <b>x</b> aufgerufen. Die Parameter des Scripts <b>x</b> werden mit dem 
+ Namen des Unterknotens und dem gesamten Pfad des Unterknotens versorgt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ScanNodeRec(&#39;OPC.GOPS&#39;, script.NodeFound, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

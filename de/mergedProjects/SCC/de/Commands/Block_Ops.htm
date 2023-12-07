@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Blockoperationen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Blockoperationen">
+        <span>Blockoperationen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Blockoperationen</h2>
+<h3 data-condition="Others:Deutsch"><a name="Blocksize" id="Blocksize"></a>Blocksize</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long blocksize(block b)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Länge des Blockes b.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     size</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(1024)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">size := blocksize(b)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(LToStr(size,10))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="BlockToStr"></a>BlockToStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string BlockToStr(block b, pointer 
+ adr,<br/>
+                        long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest <span style="font-weight: bold;">size</span> 
+ Bytes aus dem Block <span style="font-weight: bold;">b</span> ab der Stelle 
+ <span style="font-weight: bold;">adr </span>und schreibt diese in einen 
+ String. Die Zählung beginnt mit 0. Nicht darstellbare Zeichen werden dabei 
+ durch &#39;.&#39; ersetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := OPC.GOPS.PLC1.Datenblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := BlockToStr(b, 0, 20)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="BlockToStrAscii"></a>BlockToStrAscii</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string BlockToStrAscii(block b, pointer 
+ adr,<br/>
+                        long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest <span style="font-weight: bold;">size</span> 
+ Bytes aus dem Block <span style="font-weight: bold;">b</span> ab der Stelle 
+ <span style="font-weight: bold;">adr </span>und schreibt diese in einen 
+ String. Die Zählung beginnt mit 0. Steuerzeichen werden dabei durch ihr 
+ Kürzel in spitzen Klammern ersetzt (z.B. 0x02 wird &lt;STX&gt;).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := OPC.GOPS.PLC1.Datenblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := BlockToStrAscii(b, 0, 20)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="BlockToStrHex"></a>BlockToStrHex</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string BlockToStrHex(block b, pointer 
+ adr,<br/>
+                        long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest <span style="font-weight: bold;">size</span> 
+ Bytes aus dem Block <span style="font-weight: bold;">b</span> ab der Stelle 
+ <span style="font-weight: bold;">adr </span>und schreibt diese in einen 
+ String. Die Zählung beginnt mit 0. Die Zeichen werden dabei in hexadezimaler 
+ Form dargestellt und durch Leerzeichen getrennt (z.B. &#39;00 01 02 0A&#39;).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := OPC.GOPS.PLC1.Datenblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := BlockToStrHex(b, 0, 20)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="BlockToVar" id="BlockToVar"></a>BlockToVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: BlockToVar(block b, pointer adr,<br/>
+                        long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert den Block <b>b</b> ab der Position 0 in den 
+ Variablenbereich des Scripts. <b>adr</b> gibt die Adresse der Variablen 
+ an, ab der die Daten geschrieben werden. <b>size</b> bezeichnet dabei 
+ die Anzahl der Bytes, die geschrieben werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">byte     data[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := OPC.GOPS.PLC1.Alarmblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">BlockToVar(b, &amp;data, 128)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Alle nach &quot;var&quot; liegenden Variablen, 
+ die im Bereich von &quot;size&quot; Bytes liegen, werden überschrieben! 
+ Dort dürfen keine Variablen vom Typ String oder Block definiert werden!</p>
+<h3 data-condition="Others:Deutsch"><a id="CopyBlock"></a>CopyBlock</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: CopyBlock(<span lang="EN-US">block 
+ from, long frompos, block to, long topos, long size</span>)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert Daten aus einem Block <span style="font-weight: bold;">from</span> 
+ ab der Position <span style="font-weight: bold;">frompos</span> in einen 
+ anderen Block <span style="font-weight: bold;">to</span> ab der Position 
+ <span style="font-weight: bold;">topos</span>. <span style="font-weight: bold;">size</span> 
+ bezeichnet dabei die Anzahl der Bytes, die kopiert werden sollen. Die 
+ Zählung für die Positionen beginnt bei 0.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block from</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block to</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">from := newblock(16)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">to := newblock(16)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblockstr(from, 0, 16, &#39;ABCDEFGHIJKLMNOP&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">copyblock(from, 0, to, 0, 4)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="FillBlock" id="FillBlock"></a>FillBlock</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: FillBlock(block b, long pos,<br/>
+                       long 
+ size, long fill)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Zeichen <b>fill</b> wird <b>size</b> mal in den 
+ Block <b>b</b> geschrieben. Der Schreibvorgang wird an der Position <b>pos</b> 
+ begonnen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">FillBlock(b, 0, 128, 0xFF)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetBlockNum" id="GetBlockNum"></a>GetBlockNum</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long GetBlockNum(block b, long pos,<br/>
+                              long 
+ size, bool sign)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest eine Integerzahl aus dem Block <b>b</b> ab der 
+ Position <b>pos</b>, wobei die Zählung bei 0 beginnt. <b>size</b> bezeichnet 
+ dabei die Anzahl der Bytes, die ausgelesen werden sollen und <b>sign</b>, 
+ ob die Zahl vorzeichenbehaftet ist. Gültige Formate sind:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenÜberschrift">Size</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenÜberschrift">Sign</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenÜberschrift">Typ</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">True</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Byte  -128 
+		 - +127</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">False</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Byte  0 
+		 – 255</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">True</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Integer  -32.768 
+		 - 32.767</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">False</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Word  0 
+		 - 65.535</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">True</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Long  -2.147.483.648 
+		 bis 2.147.483.647</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := &quot;OPC.GOPS.PLC1.Datablock&quot;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := GetBlockNum(b, 0, 2, false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetBlockStr(b, 2, l)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetBlockStr" id="GetBlockStr"></a>GetBlockStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string GetBlockStr(block b, long pos, 
+ long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest einen String aus dem Block <b>b</b> ab der Position 
+ <b>pos</b> wobei die Zählung bei 0 beginnt. <b>size</b> bezeichnet dabei 
+ die Anzahl der Bytes, die ausgelesen werden sollen. Der String wird automatisch 
+ mit einem Nullzeichen abgeschlossen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := &quot;OPC.GOPS.PLC1.Datablock&quot;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := GetBlockNum(b, 0, 2, false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetBlockStr(b, 2, l)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="MemCopy" id="MemCopy"></a>MemCopy</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: MemCopy(pointer from, pointer to, long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert Daten aus einem Variablenbereich des Scripts 
+ (<b>from</b>) in einen anderen (<b>to</b>). <b>size</b> bezeichnet dabei 
+ die Anzahl der Bytes, die kopiert werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">char  c1[128], c2[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">memcopy(&amp;c1, &amp;c2, 128)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="MemSet" id="MemSet"></a>MemSet</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: MemSet(pointer adr, long i, long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beschreibt Daten in dem Variablenbereich des Scripts 
+ (<b>adr</b>) mit dem Wert <b>i</b>. <b>size</b> bezeichnet dabei die Anzahl 
+ der Bytes, die beschrieben werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">char  c1[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">memset(&amp;c1, 32, 128)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="NewBlock" id="NewBlock"></a>NewBlock</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: block NewBlock(long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erstellt einen neuen Block mit <b>size</b> Bytes Länge. 
+ Kann der gewünschte Speicherplatz nicht zur Verfügung gestellt werden, 
+ wird ein Leerblock mit der Länge 0 erstellt. Die maximale Größe eines 
+ Blockes beträgt 65.496 Bytes.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := NewBlock(1024)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if BlockSize(b) = 0 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;No sufficient memory available&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetBlockNum" id="SetBlockNum"></a>SetBlockNum</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetBlockNum(block b, long pos,<br/>
+                         long 
+ size, bool sign,<br/>
+                         long 
+ x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt die Integerzahl <b>x</b> in den Block <b>b</b> 
+ ab der Position <b>pos</b>, wobei die Zählung bei 0 beginnt. <b>size</b> 
+ bezeichnet dabei die Anzahl der Bytes, die geschrieben werden sollen und 
+ <b>sign</b>, ob die Zahl vorzeichenbehaftet ist. Gültige Formate sind:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenÜberschrift">Size</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenÜberschrift">Sign</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenÜberschrift">Typ</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">true</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Byte  -128 
+		 - +127</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">false</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Byte 
+		 0 – 255</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">true</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Integer  -32.768 
+		 - 32.767</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">False</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Word  0 
+		 - 65.535</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="57"><p class="TabellenInhalt">True</p></td>
+		<td style="vertical-align: top;" width="420"><p class="TabellenInhalt">Long  -2.147.483.648 
+		 bis 2.147.483.647</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblocknum(b, 0, 1, false, 6)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblockstr(b, 1, 6, &#39;ABCDEF&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetBlockStr" id="SetBlockStr"></a>SetBlockStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetBlockStr(block b, long pos,<br/>
+                         long 
+ size, string x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>x</b> in den Block <b>b</b> 
+ ab der Position <b>pos</b>, wobei die Zählung bei 0 beginnt. <b>size</b> 
+ bezeichnet dabei die Anzahl der Bytes, die geschrieben werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblocknum(b, 0, 1, false, 6)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblockstr(b, 1, 6, &#39;ABCDEF&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrToBlock" id="StrToBlock"></a>StrToBlock</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: StrToBlock(string x)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es wird versucht, den String <b>x</b> als Folge von 
+ Zahlen zu interpretieren und diese in einen neuen Block zu schreiben. 
+ Die Zahlen können dezimal oder hexadezimal angegeben werden und durch 
+ Leerzeichen, Tabstopps oder Zeilenumbrüche getrennt sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := StrToBlock(&#39;00 01 02 03 04 05 06 07 08 09&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="VarToBlock" id="VarToBlock"></a>VarToBlock</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: block VarToBlock(pointer addr, long 
+ size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert Daten aus dem Variablenbereich des Scripts 
+ in den Rückgabeblock ab der Position 0. <b>addr</b> gibt die Adresse der 
+ Variable an, ab der die Daten gelesen werden. <b>size</b> bezeichnet dabei 
+ die Anzahl der Bytes, die kopiert werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">byte     data[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">OPC.GOPS.PLC1.Statusblock := VarToBlock(&amp;data,128)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DelBlockValue" id="DelBlockValue"></a>DelBlockValue</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: DelBlockValue(string folder, string 
+ name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht den durch <b>folder</b> und <b>name</b> angegebenen 
+ Blockwert aus dem Hauptspeicher.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird für <b>name</b> Leerstring übergeben (&#39;&#39;), werden 
+ alle Blockwerte aus dem Ordner <b>folder</b> im Hauptspeicher gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Werden für <b>folder</b> und <b>name</b> Leerstring 
+ übergeben (&#39;&#39;), werden alle Blockwerte im Hauptspeicher gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">DelBlockValue(&#39;Werte&#39;, &#39;Datenblock_1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LoadBlockValue" id="LoadBlockValue"></a>LoadBlockValue</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: block LoadBlockValue(string folder, 
+ string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Lädt den durch <b>folder</b> und <b>name</b> angegebenen 
+ Blockwert aus dem Hauptspeicher und gibt diesen als Returnwert zurück.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := LoadBlockValue(&#39;Werte&#39;, &#39;Datenblock_1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StoreBlockValue" id="StoreBlockValue"></a>StoreBlockValue</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: StoreBlockValue(string folder, string 
+ name, block b)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Speichert den Block <b>b</b> unter dem durch <b>folder</b> 
+ und <b>name</b> angegebenen Namen im Hauptspeicher.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(10)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetBlockStr(b, 0, 10, &#39;TEST_01234&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">StoreBlockValue(&#39;Werte&#39;, &#39;Datenblock_1&#39;, b)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

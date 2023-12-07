@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.3_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Set Environment Variables</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Set Environment Variables">
+        <span>Set Environment Variables</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Set Environment Variables</h1>
+<p class="BodyText" data-condition="Others:Englisch">We can now set the JAVA_HOME and CATALINA_HOME in order to put Java and Tomcat into the path of our users.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# JAVA_HOME=/usr/java/jdk1.7.0_45  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# export JAVA_HOME  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# PATH=$JAVA_HOME/bin:$PATH  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# export PATH  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# CATALINA_HOME=/usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# export CATALINA_HOME</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">To set the JAVA_HOME and CATALINA_HOME permanently, however, we need to add below to the ~/.bash_profile of the user (in this case, root).</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">We can also add it /etc/profile and then source it to give to all users.</p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_HOME=/usr/java/jdk1.7.0_45  </p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">export</span> JAVA_HOME  </p>
+<p class="TextCode" data-condition="Others:Englisch">PATH=$JAVA_HOME/bin:$PATH  </p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">export</span> PATH  </p>
+<p class="TextCode" data-condition="Others:Englisch">CATALINA_HOME=/usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">export CATALINA_HOME</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">Once you have added the above to ~/.bash_profile, you should log out, then log back in and check that the JAVA_HOME and CATALINA_HOME are set correctly.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]#  echo $JAVA_HOME  </p>
+<p class="TextCode" data-condition="Others:Englisch">/usr/java/jdk1.7.0_45  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]#  echo $CATALINA_HOME</p>
+<p class="TextCode" data-condition="Others:Englisch">/usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+
+
+</body></html>

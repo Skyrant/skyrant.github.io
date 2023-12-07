@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Debugging","type":"item","tilePath":"","description":"","url":"de/LGD/Debugging.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

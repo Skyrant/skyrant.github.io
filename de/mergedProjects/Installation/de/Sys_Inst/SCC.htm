@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+ <meta name="topic-status" content="Abgeschlossen" />
+<title>Sapient Cloud Connector</title>
+<link rel="stylesheet" href="..\Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h1>Sapient Cloud Connector</h1>
+<h2><a name="Installation_auf_einem_Windows_PC" id="Installation_auf_einem_Windows_PC"></a>Installation 
+ auf einem Windows PC</h2>
+<h3><a name="Systemvoraussetzungen" id="Systemvoraussetzungen"></a>Systemvoraussetzungen</h3>
+<?rh-placeholder type="snippet" ref="SCC_Win_de" ?>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett"><img src="..\..\02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Für den Betrieb unter Windows gilt die Einschränkung, 
+ dass aus Performancegründen und zur Gewährleistung eines stabilen Betriebsverhaltens, 
+ nicht mehr als 50 Verbindungen je Cloud Connector-PC angelegt werden sollen. 
+ Das ist bei der Projektierung des Gesamtsystems und Festlegung der erforderlichen 
+ Cloud Connector-PCs zu berücksichtigen. Für den Betrieb des Cloud Connectors 
+ auf UNIX-Plattformen gelten keine Einschränkungen.</p>
+<?rh-cbt_start condition="Classic_only" ?><h3><a name="Nur_Classic:_Zusätzlich"></a>Nur 
+ Classic: Zusätzlich</h3><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="BodyText">Oracle Client 
+ und Provider for OLE DB ab Version 11.2.0.1.0. 64-bit.</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="BodyText">Ab SCC 3.1 
+ wird auch ODAC 12.2.0.1.0 (64-bit) unterstützt (nur für Oracle 12.2!). 
+ Hierfür gelten folgende Besonderheiten:</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="BodyText">Falls der 
+ Rechnername einen Unterstrich &quot;_&quot; enthält, kann die Installation 
+ nicht abgeschlossen werden. Ändern Sie ggf. den Rechnernamen.</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="BodyText">Deaktivieren 
+ Sie im Schritt 4 der Installation folgende Default-Option: Oracle Services 
+ for Microsoft Transaction Server.</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="Textkörperfett"><img src="..\..\02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="TextkörperHinweis">Beim 
+ Oracle Client 11.2.0.3 kommt es gelegentlich zu Problemen, da der OLE 
+ DB Provider nicht korrekt installiert wird. Daher wird die Version 11.2.0.1 
+ empfohlen.</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="Textkörperfett"><img src="..\..\02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="TextkörperHinweis">Bei 
+ Cloud Connectors mit hohen Datendurchsatz wird empfohlen, die Datei sqlnet.ora 
+ vom Oracle Treiber zu suchen und dort den Parameter</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="TextkörperHinweis">Sqlnet.outbound_connect_timeout=5</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="TextkörperHinweis">zu 
+ setzen, damit auch im Fehlerfall der Ablauf gewährleistet bleibt.</p><?rh-cbt_end ?>
+<?rh-cbt_start condition="Classic_only" ?><p class="BodyText">Ab SCC 3.2 
+ wird auch ODAC 12.2.0.1.1 (64-bit) unterstützt (nur für Oracle 12.2!). 
+ Es gelten die gleichen Besonderheiten wie für ODAC 12.2.0.1.0.</p><?rh-cbt_end ?>
+<h3><a name="Installation_Sapient_Cloud_Connector"></a>Installation Sapient 
+ Cloud Connector</h3>
+<p class="BodyText">Die Installation des Sapient Cloud Connectors erfolgt 
+ über das Installationsprogramm <span style="font-weight: bold;">setupscc</span><b>.exe</b>. 
+ Nach dem Start der Exe kann die Sprache der Installation gewählt werden.</p>
+<h3><a name="Installation_OPC-Server_GOPS" id="Installation_OPC-Server_GOPS"></a>Installation 
+ OPC-Server GOPS</h3>
+<p class="BodyText">Wird die Cloud Connector Installation zur Laufzeit 
+ (online) als Win64-Cloud Connector betrieben, sind ggf. der OPC-Server 
+ GOPS und die zugehörigen Treiber ebenfalls am Cloud Connector PC zu installieren. 
+ Dies erfolgt über die Datei <b>GopsSetup.exe</b>. Es empfiehlt sich, die 
+ Installation von Cloud Connector und GOPS gegebenenfalls in einem Schritt 
+ durchzuführen.</p>
+<p class="BodyText">Zur Kopplung mit TIA (Totally Integrated Automation) 
+ steht außerdem der GTOPS von Gefasoft zur Verfügung. Dieser kann mithilfe 
+ der Datei <span style="font-weight: bold;">SetupGTOPS2.exe</span> installiert 
+ werden.</p>
+<p class="Textkörperfett"><img src="..\..\02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Wird im Projekt eine Kopplung über OPC gefordert, 
+ kann ausschließlich die Windows-Variante des Cloud Connectors eingesetzt 
+ werden. OPC wird von UNIX nicht unterstützt.</p>
+<h2 class="TextkörperHinweis"><span><a name="Installation_für_UNIX"></a>Installation 
+ für UNIX</span></h2>
+<h3><a name="Systemvoraussetzungen1" id="Systemvoraussetzungen1"></a>Systemvoraussetzungen</h3>
+<h4>Betriebssysteme</h4>
+<p class="BodyText">Der Cloud Connector ist als 64 Bit Applikation verfügbar.</p>
+<?rh-placeholder type="snippet" ref="SCC_Unix_de" ?>
+<p class="BodyText">&#160;</p>
+<h3><a name="Bibliotheken_Libraries" id="Bibliotheken_Libraries"></a>Bibliotheken 
+ / Libraries</h3>
+<p class="BodyText">Der Cloud Connector verwendet folgende Bibliotheken:</p>
+<h4>Linux 64 Bit</h4>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">linux-vdso.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">librt.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">librfccm.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libACE.so.6.3.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libACE_SSL.so.6.3.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libcrypto.so.1.0.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libssl.so.1.0.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libxml2.so.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libstdc++.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libm.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libgcc_s.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libpthread.so.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libc.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libdl.so.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libz.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">liblzma.so.5</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/lib64/ld-linux-x86-64.so.2</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Zur Installation des Cloud Connectors müssen die Bibliotheken, 
+ die nicht auf dem System ohnehin schon vorhanden sind, inkl. dem Cloud 
+ Connector Binary, in ein eigenes Verzeichnis kopiert werden (z.B. legato/bin) 
+ und die Ausführungsrechte gesetzt werden.</p>
+<p class="BodyText"><span>Der Bibliothekspfad muss das o. g. Installationsverzeichnis 
+ enthalten.</span></p>
+</body>
+</html>

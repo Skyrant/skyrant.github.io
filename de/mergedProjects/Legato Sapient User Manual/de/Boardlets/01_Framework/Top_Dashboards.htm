@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Topdashboards</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Topdashboards">
+        <span>Topdashboards</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Topdashboards</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Topdashboards</span> 
+ basiert auf einer generischen Tabelle und zeigt die Aktivitätsanalyse 
+ der Dashboards an (Tabelle sys_dashboard_activity).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Top_Dashboards.png" alt="" style="border: none;" border="0"/></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Topdashboards</span> 
+ stehen außerdem folgende Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Zeile bei Klick senden:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiv, wird die selektierte 
+ Spalte in der Tabelle bei Klick an eine Empfänger-Tabelle mit dem Platzhalter 
+ $detailinfo$ als Filterkriterium gesendet.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zu Filterstrings, siehe bitte <a href="../../Filter_Strings.htm">Filterstrings</a>, für Details zu 
+ Platzhaltern, siehe bitte <a href="../../Placeholders.htm">Platzhalter</a>.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Sortieren nach:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Name der Spalte, nach der sortiert werden soll. 
+ Spaltenname wie in Datenbank, klein geschrieben. Sofern die Tabelle im 
+ Client sortierbar ist, wird dieses Feld beim Sortieren auch automatisch 
+ befüllt.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Verbindung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Eingabe der Verbindung, aus der die Datenquelle 
+ stammt, die angezeigt werden soll, z.B. Legato oder Repository.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Seitenlimit:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Anzahl der Zeilen, die auf einmal geholt werden. 
+ Wird nur ausgewertet, wenn der Schieberegler <span class="Bold">Paging</span> 
+ aktiv ist. Sonst werden alle Datensätze geladen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Datenquelle:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Eingabe der Datenquelle, die angezeigt werden 
+ soll.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Spalten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier können die anzuzeigenden Spalten eingeschränkt 
+ werden. Keine Eingabe = alle Spalten, die im Model definiert sind, werden 
+ angezeigt. Ansonsten Eingabe der Spaltennamen aus der Datenbank als komma-separierte 
+ Liste ohne Leerzeichen, nur Kleinbuchstaben.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<table class="CodeTab" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">{&quot;db&quot;:&quot;display_name as name&quot;,&quot;sd&quot;:&quot;dashboard_id,activity,min_act,avg_act,max_act,views&quot;}</p></td>
+	</tr>
+</tbody></table>
+<p class="GUIControl" data-condition="Others:Deutsch">Alias:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann ein Alias für jede Tabelle definiert 
+ werden, z.B. &quot;gp_r_datasources als source&quot;. Dieser Alias kann 
+ dann verwendet werden, um die Tabelle in den Spalten-Definitionen zu referenzieren 
+ oder um Joins zu erstellen.</p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Der erste Alias muss der der Haupttabelle sein!</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Mehr Details zu diesem Thema finden Sie im Kapitel 
+ Joins.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<table class="CodeTab" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">{&quot;db&quot;:&quot;gp_r_dashboards&quot;,&quot;sd&quot;:&quot;sys_dashboard_activity&quot;}</p></td>
+	</tr>
+</tbody></table>
+<p class="GUIControl" data-condition="Others:Deutsch">Relationen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier können Relationen/Beziehungen definiert 
+ werden, um Daten von mehreren Tabellen abzufragen. Zum detaillierten Vorgehen, 
+ lesen Sie bitte das Kapitel Joins.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<table class="CodeTab" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">[{&quot;src&quot;:&quot;sd&quot;,&quot;dst&quot;:&quot;db&quot;,&quot;how&quot;:&quot;inner&quot;,&quot;on&quot;:[{&quot;src&quot;:&quot;dashboard_id&quot;,&quot;dst&quot;:&quot;id&quot;}]}]</p></td>
+	</tr>
+</tbody></table>
+<p class="GUIControl" data-condition="Others:Deutsch">Tabelle ist sortierbar in ...:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Auswahlliste, wo die Tabelle sortiert werden 
+ soll. Ist von Bedeutung, wenn Paging aktiviert ist.</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><span class="Bold">DB</span>: Das Sortierkriterium 
+	 wird in der Abfrage an die DB mitgegeben, es wird in der DB sortiert 
+	 und dann die festgelegte Anzahl Resultate zurückgeliefert. Beim Sortieren 
+	 über den Spaltenheader im Client wird keine neue Anfrage mehr geschickt, 
+	 sondern die bestehenden Ergebnisse lediglich anders sortiert. Beispiel: 
+	 Sort by ID liefert die ersten 50 Treffer aus der DB (IDs 1-50). Wird 
+	 danach im Client nach Name sortiert, werden trotzdem die Einträge 
+	 mit den IDs 1-50 angezeigt.</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">Client</span>: Die Sortierung 
+	 erfolgt im Client, d.h. jedes Sortieren über den Spaltenheader stößt 
+	 eine neue Query an und liefert andere Ergebnisse.</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">False</span>: Es erfolgt 
+	 keine Sortierung, z.B. weil alle Ergebnisse geholt werden.</p></li>
+</ul>
+<p class="GUIControl" data-condition="Others:Deutsch">Paginierung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ nur die oben eingetragene Anzahl Zeilen geholt werden sollen oder alle 
+ Ergebnisse. Wenn aktiv, wird die festgelegte Anzahl Zeilen so oft geholt, 
+ bis die sichtbare Tabelle voll ist. Danach werden weitere Ergebnisse geholt, 
+ wenn man an den unteren Rand scrollt. Wenn nicht aktiv, werden immer alle 
+ Ergebnisse geholt. Insbesondere bei Tabellen mit vielen Datensätzen empfiehlt 
+ sich hier eine Einschränkung, um eine gute Performance zu gewährleisten.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Spalten-Definitionen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Definition, wie die Spalten aussehen sollen. 
+ Hierfür steht ein Editor zur Verfügung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"><img src="../../../Bilder/JSON_Editor.png" alt="" style="border: none;" border="0"/></p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Klick auf <span class="Bold">+</span> fügt eine 
+ weitere Spalte hinzu. Der Eintrag besteht aus Wertepaaren mit folgender 
+ Bedeutung:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><span class="Bold">label</span> = Beschriftung 
+	 der Spalte</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">valuePath</span> = Spaltenname 
+	 in DB</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">width</span> = Spaltenbreite</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">sortable</span> = sortierbar? 
+	 Kann true oder false sein</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">component</span> = hier 
+	 muss &quot;sortable-table-header-component&quot; eingetragen werden, 
+	 damit zum Sortieren die Pfeile angezeigt werden.</p></li>
+</ul>
+<p class="ListBulletL1_Contd" data-condition="Others:Deutsch">Klick auf das Listen-Symbol öffnet Optionen, 
+ z.B. zum Löschen des Eintrags oder zur An- und Abwahl weiterer Parameter:</p>
+<p class="ListBulletL1_Contd" data-condition="Others:Deutsch"><img src="../../../Bilder/JSON_Options.png" alt="" style="border: none;" border="0"/></p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Layout"></a>Reiter Layout</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Tabellenbreite bestimmen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann festgelegt werden, wie die Tabellenbreite 
+ bestimmt wird; feste Breite oder automatisch.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Filtern nach ...</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Möglichkeit, die Ausgabe mittels eines Filterstrings 
+ mit Parametern zu filtern. Es können die Platzhalter $node$, $detailinfo$, 
+ $timeStart$ und $timeEnd$ verwendet werden.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zur Formatierung siehe bitte <a href="../../Filter_Strings.htm">Filterstrings</a>.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zur Bedeutung der einzelnen Platzhalter, 
+ siehe bitte <a href="../../Placeholders.htm">Platzhalter</a>.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Feld der Detailinformation:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Soll das Boardlet Empfänger von Daten aus einer 
+ anderen Generischen Tabelle sein, kann hier festgelegt werden, mit welchem 
+ Wert ein im Filter verwendeter Platzhalter $detailinfo$ aus der sendenden 
+ Tabelle ersetzt werden soll, z.B. name. Der Parametertyp sollte hier immer 
+ auf local gesetzt sein.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für weitere Infos zu Filterstrings, siehe bitte 
+ <a href="../../Filter_Strings.htm">Filterstrings</a>.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zur Bedeutung der einzelnen Platzhalter, 
+ siehe bitte <a href="../../Placeholders.htm">Platzhalter</a>.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">filterBy</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">sortBy</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">detailInfo</p></td>
+		<td><p class="TabellenInhalt">Object</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">detailInfoValue</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">connection</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">pageLimit</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">datasource</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">columns</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectWidth</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">sorted</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">paging</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">columnDefinitions</p></td>
+		<td><p class="TabellenInhalt">Object</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

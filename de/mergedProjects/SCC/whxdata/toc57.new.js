@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Funktionen der Filespoolverwaltung","type":"item","tilePath":"","description":"","url":"de/Commands/Funktionen_der_Filespoolverwaltung.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

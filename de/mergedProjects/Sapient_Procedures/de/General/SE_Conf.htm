@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Konfiguration der Legato Sapient Engine</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Konfiguration der Legato Sapient Engine">
+        <span>Konfiguration der Legato Sapient Engine</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Konfiguration der Sapient Engine</h2>
+<h3 data-condition="Others:Deutsch"><a name="Grundkonfiguration" id="Grundkonfiguration"></a>Grundkonfiguration</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Grundkonfiguration der Sapient Engine wird in der 
+ Datei sapieng.properties im Programmverzeichnis festgelegt. Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch">SeInstance=-2</p>
+<p class="TextCode" data-condition="Others:Deutsch">SeUser=-1</p>
+<p class="TextCode" data-condition="Others:Deutsch">jmx=true</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">db.url=jdbc:postgresql://localhost:5432/sapient</p>
+<p class="TextCode" data-condition="Others:Deutsch">#db.url=jdbc:oracle:thin:@localhost:1521/sapient</p>
+<p class="TextCode" data-condition="Others:Deutsch">db.user=sapient_server</p>
+<p class="TextCode" data-condition="Others:Deutsch">db.password=sapient_server</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch"># db.driverClassName=org.postgresql.Driver</p>
+<p class="TextCode" data-condition="Others:Deutsch"># db.driverClassName=oracle.jdbc.driver.OracleDriver</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Initialisierung"></a>Initialisierung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Initialisierung der SE funktioniert folgendermaßen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1. Der Eintrag &#39;jmx&#39; wird aus der .properties-Datei 
+ gelesen und ggf. werden die Management-Erweiterungen initialisiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">2. Die Einträge &#39;db.url&#39;, &#39;db.user&#39; und &#39;db.passwd&#39; 
+ (oder &#39;db.password&#39;) werden aus der .properties-Datei gelesen und die 
+ SE verbindet sich zu dieser Datenbank.</p>
+<p class="BodyText" data-condition="Others:Deutsch">3. Nun wird die Zeile mit task_id IS NULL und connection_id 
+ IS NULL aus der Tabelle se_dbpools gelesen, um die Default-Einstellungen 
+ für alle Datenbank-Verbindungspools zu lesen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">4. Dann werden alle Zeilen aus der Tabelle gp_r_connection_types 
+ gelesen und die Konfiguration aller Typen intern gespeichert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">5. Nun werden alle Zeilen aus der Tabelle gp_r_connections 
+ gelesen und die Konfiguration für jede Verbindung intern gespeichert. 
+ Für die Verbindung mit &#39;object_name&#39; = &#39;REPOSITORY&#39; wird die Konfiguration 
+ der Verbindung mit &#39;object_name&#39; = &#39;LEGATO&#39; als Default verwendet. Dies 
+ ermöglicht es dem Benutzer, nur die Einträge von &#39;REPOSITORY&#39; anzupassen, 
+ die sich tatsächlich von denen von &#39;LEGATO&#39; unterscheiden. </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">INFO:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">In der Spalte &quot;configuration&quot; der 
+ Connection &quot;REPOSITORY&quot; müssen die korrekten Verbindungsdaten 
+ zur Datenbank eingetragen werden (Pfad, Benutzer, Passwort). Das Passwort 
+ kann dabei als Klartext bzw. Jetty-Obfuscated eingegeben werden (password) 
+ oder mit Digest-Verschlüsselung (passwd). Die Eingabe als Jetty-Obfuscated 
+ wird empfohlen. Um das verschlüsselte Passwort zu erhalten, kann beispielsweise 
+ in der Konsole der Pfad zum SE Bin-Order eingegeben werden. Dann wird 
+ die SE mit dem Parameter &quot;pwHash&quot; und dem Passwort aufgerufen. 
+ Der Rückgabewert enthält das Passwort als Digest und OBF.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Beispiel Eingabe in cmd:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">C:\Progamme\SapiEng</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Sapieng pwHash Passwort1</p>
+<p class="BodyText" data-condition="Others:Deutsch">6. Die Konfiguration der Task &#39;root&#39; für die eigene 
+ SE-Instanz wird aus p_modules, se_tasks und se_dbpools eingelesen, sofern 
+ vorhanden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">7. Die initiale Verbindung zur Datenbank wird geschlossen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">8. Die Task &#39;root&#39; und ihre Datenbank-Verbindungspools 
+ wird erstellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">9. Die übrigen Tasks, die für die SE-Instanz konfiguriert 
+ wurden und alle von ihnen abhängige Tasks werden erstellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">10. Die Tasks werden gestartet.</p>
+<h3 data-condition="Others:Deutsch"><a id="Vorgehen_bei_der_Konfiguration"></a>Vorgehen bei der Konfiguration</h3>
+<p class="BodyText" data-condition="Others:Deutsch">1. Öffnen Sie die Datei sapieng.properties im Programmverzeichnis 
+ und geben Sie den korrekten Verbindungsstring zur Datenbank ein sowie 
+ User und Passwort.</p>
+<p class="BodyText" data-condition="Others:Deutsch">2. Geben Sie die korrekte ID Ihrer SE-Instanz ein. 
+ Die SE-Instanz kann im LC2 oder in der Datenbank in der Tabelle p_modules 
+ erstellt werden und muss vom Modultyp 3 Sapient Engine sein. Dies wird 
+ beim Starten der SE geprüft. Stimmt der Modultyp nicht, wird eine Fehlermeldung 
+ geloggt und die SE beendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">3. Legen Sie die benötigten Tasks für die SE-Instanz 
+ fest. Dies kann im LC2 oder in der Datenbank in der Tabelle se_tasks erfolgen. 
+ Zur Verwendung des LC2 wird z.B. die Task jsonrpc benötigt. Zur Verwendung 
+ der Webapplikation die Task webapp (die als abhängige Tasks zusätzlich 
+ webserver, jsonapi und jsonrpc lädt).</p>
+<p class="BodyText" data-condition="Others:Deutsch">4. Passen Sie ggf. die Eigenschaften der Tasks an.</p>
+<p class="BodyText" data-condition="Others:Deutsch">5. Legen Sie ggf. DbPools für die einzelnen Tasks fest.</p>
+<h3 data-condition="Others:Deutsch"><a id="Privilegierte_Verbindungen"></a>Privilegierte Verbindungen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um privilegierte Verbindungen zur Sapient Datenbank 
+ für die Verwendung von Prozeduren, die DDL Statements ausführen müssen 
+ (wie CREATE INDEX, CREATE TABLE etc.) zu erstellen: Schreiben Sie &quot;user 
+ = sapient_owner&quot; und die entsprechenden Credentials in die &quot;properties&quot; 
+ des Eintrags &quot;REPOSITORY&quot; in gp_r_connections. Konfigurieren 
+ Sie dann die DbPools für die Verbindung &quot;REPOSITORY&quot; für die 
+ Tasks, die DDL-Zugriff benötigen (z.B. &quot;jsonrpc&quot;).</p>
+
+
+</body></html>

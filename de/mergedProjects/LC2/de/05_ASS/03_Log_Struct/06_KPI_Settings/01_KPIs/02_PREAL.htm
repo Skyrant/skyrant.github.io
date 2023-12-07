@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "6.3.3.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Beschreibung der KPIs_Schnip.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Ist-Stückzahl (PREAL)</title>
+<link rel="stylesheet" href="../../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+A:visited {
+        color: #954F72;
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+<meta name="rh-index-keywords" content="Iststückzahl,PREAL,Ist-Stückzahl" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Ist-Stückzahl (PREAL)">
+        <span>Ist-Stückzahl (PREAL)</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Ist-Stückzahl (PREAL)</h2>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beschreibung</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die erreichte Iststückzahl wird nach Schichtende gespeichert und im WebClient in den KPI-Ansichten (z.B. KPI Knoten) für diesen Knoten angezeigt. Je nach gewähltem Zeitraum können die Iststückzahlen mehrerer Schichten in den KPI-Auswertungen in der WebApp gegenübergestellt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine Variable eines Knotens als DIE statistikrelevante Iststückzahl zu definieren, muss die Variable von der Art Iststückzahl angelegt sein (<a href="../../../02_Data_Exchange/04_Vars/01_Vars.htm">Datenaustausch | Module | Verbindungen | Variablen</a>). Im Knoten der Fertigungsstruktur muss diese Variable noch als statistikrelevant gekennzeichnet (Checkbox aktiv) sein, um dem System mitzuteilen, dass diese Variable (unter vielleicht mehreren Variablen der Art Iststückzahl in diesem Knoten) als Iststückzahl in die Statistiken eingehen soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sind mehrere Ist-Stückzähler als statistikrelevant gekennzeichnet, so wird die Summe aus diesen gebildet und bei weiteren Berechnungen (z.B. OEE) verwendet.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">INFO:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Ist der Systemparameter 130 &quot;Stückzähler zurücksetzen&quot; auf 1 gesetzt, wird der Zähler zum Ende jeder Schicht auf 0 zurückgesetzt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Quelle</p>
+<p class="BodyText" data-condition="Others:Deutsch">Stückzahlen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Formel</p>
+<p class="BodyText" data-condition="Others:Deutsch">Summe aller Variablen mit P_VALUE_TYPE = 2 am Knoten, die mit &quot;Statistikrelevant&quot; = 1 markiert sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Verwendung</p>
+<p class="BodyText" data-condition="Others:Deutsch">Verwendung bei: Gesamt-Verfügbarkeit stückzahlbasiert (AVP), Gesamt-Verfügbarkeit taktzeitbasiert (OEE), Ausbringung (PERR), Leistungsgrad (YR_MDA), Qualitätsrate (QR), OEE aus MDE (OEE_MDA), OEE Brutto aus MDE (OEEB_MDA), Anzahl Störungen pro 1000 Stück (CATPU), Dauer Störungen pro Stück (MADPU).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Voraussetzung</p>
+<p class="BodyText" data-condition="Others:Deutsch">Stückzähler.</p>
+
+
+</body></html>

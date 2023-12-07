@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "3.3.2.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Inkscape.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SVG in Inkscape importieren</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SVG in Inkscape importieren">
+        <span>SVG in Inkscape importieren</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SVG in Inkscape importieren</h2>
+<h3 data-condition="Others:Deutsch"><a id="SVG-Pfad_in_Sapient_auslesen"></a>SVG-Pfad in Sapient auslesen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um den Pfad einer SVG auszulesen, wird das Boardlet 
+ &quot;Einstellungen zum Knotenlayout&quot; benötigt. Wenn man nun auf 
+ eine SVG klickt erscheint im Einstellungsboardlet der dazugehörige Pfad.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Import/Inkscape-Dateien/image002.png" alt="" width="600" height="170" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="SVG_in_Inkscape_erstellen"></a>SVG in Inkscape erstellen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Als erstes muss ein beliebiges SVG Objekt erstellt 
+ werden, um einen Eintrag in der XML-Datei zu generieren. Dazu kann beispielsweise 
+ das Bézier-Tool verwendet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Import/Inkscape-Dateien/image004.png" alt="" width="605" height="525" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Der_XML-Editor"></a>Der XML-Editor</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der XML-Editor wird nun unter Bearbeiten -&gt; XML-Editor 
+ oder mit Umschalt+Strg+X geöffnet. Es erscheint folgendes Fenster:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Import/Inkscape-Dateien/image006.png" alt="" width="604" height="309" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Element hat ein Attribut d, in dem der Pfad hinterlegt 
+ ist. Dieser Pfad kann jetzt durch den SVG Pfad aus Sapient ersetzt werden. 
+ Der Pfad ist jetzt importiert und das Objekt kann bearbeitet werden.</p>
+
+
+</body></html>

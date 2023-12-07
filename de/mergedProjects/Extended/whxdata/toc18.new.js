@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Bindings für Dokumente, Ebenen, Gruppen und Elemente","type":"item","tilePath":"","description":"","url":"de/LGD/Bindings_für_Dokumente,_Ebenen,_Gruppen_und_Elemente.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

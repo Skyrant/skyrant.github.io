@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Allgemeine Funktionen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Allgemeine Funktionen">
+        <span>Allgemeine Funktionen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Allgemeine Funktionen</h2>
+<h3 data-condition="Others:Deutsch"><a name="AnsiToOem" id="AnsiToOem"></a>AnsiToOem</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string AnsiToOem(string text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den String <b>text,</b> führt eine Typkonvertierung 
+ der einzelnen Zeichen aus und liefert einen String mit Zeichen entsprechend 
+ den OEM-Konventionen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string TEXT</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">TEXT := AnsiToOem(&#39;Very similar&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="AnsiToUtf8"></a>AnsiToUtf8</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: string AnsiToUtf8(string text)</p>
+<p data-condition="Others:Deutsch">Liest den String <span style="font-weight: bold;">text</span>, führt 
+ eine Typkonvertierung der einzelnen Zeichen aus und liefert einen String 
+ mit Zeichen entsprechend der UTF8-Konventionen.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">string text_utf8</p>
+<p data-condition="Others:Deutsch">text_utf8  :=  AnsiToUtf8 (&#39;Schlüsselwort&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="ConvStr"></a>ConvStr</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: string ConvStr(string text, string fromcode, string tocode)</p>
+<p data-condition="Others:Deutsch">Liest den String <span style="font-weight: bold;">text</span>, interpretiert 
+ ihn nach den fromcode-Konventionen, führt eine Typkonvertierung der einzelnen 
+ Zeichen aus und liefert einen String mit Zeichen entsprechend der <span style="font-weight: bold;">tocode</span>-Konventionen.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">string text_source</p>
+<p data-condition="Others:Deutsch">string text_dest</p>
+<p data-condition="Others:Deutsch">text_source := @value</p>
+<p data-condition="Others:Deutsch">text_dest := ConvStr(text_source, &#39;MS-ANSI&#39;, &#39;UTF8&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Eval"></a>Eval</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Eval(string commandline)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Führt ein Skript, welches als String <span style="font-weight: bold;">commandline</span> 
+ übergeben wird, aus. Strings innerhalb von <span style="font-weight: bold;">commandline</span> 
+ müssen mit \&#39; angeführt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">eval(&#39;ScriptShow(\&#39;Hello world\&#39;)&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Exec" id="Exec"></a>Exec</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: exec(string command)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Startet eine andere Applikation. Der Dateiname, sowie 
+ optionale Parameter werden im String <b>command</b> übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">exec(&#39;notepad.exe info.txt&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="OemToAnsi" id="OemToAnsi"></a>OemToAnsi</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string OemToAnsi(string text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den String <b>text</b>, führt eine Typkonvertierung 
+ der einzelnen Zeichen aus und liefert einen String mit Zeichen entsprechend 
+ den ANSI-Konventionen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string TEXT</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">TEXT := OemToAnsi(&#39;Very similar&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Ping" id="Ping"></a>Ping</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool Ping(string host)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versucht maximal 4 Mal, den durch <b>host</b> spezifizierten 
+ Teilnehmer zu erreichen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn der Teilnehmer 
+ erreicht werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := ping(&#39;127.0.0.1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="PingEx" id="PingEx"></a>PingEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool PingEx(string host, long retry, 
+ long timeout, long wait)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versucht Anzahl <b>retry</b> Mal, den durch <b>host</b> 
+ spezifizierten Teilnehmer zu erreichen. Es wird Dauer <b>timeout</b> gewartet, 
+ ehe ein Timeout zurückgemeldet wird. Zwischen den Versuchen wird Dauer 
+ <b>wait</b> gewartet, bevor ein neuer Versuch gestartet wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zulässiger Bereich für <b>retry</b>: 1..10</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zulässiger Bereich für <b>timeout</b>: 500..10000 ms</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zulässiger Bereich für <b>wait</b>: 100..2000 ms</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert nur &quot;true&quot;, wenn alle 
+ Versuche erfolgreich waren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := pingEx(&#39;127.0.0.1&#39;, 4, 1000, 200)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Random" id="Random"></a>Random</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long random</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert einen Zufallswert im Bereich von 0 bis 32767.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(LToStr(random, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Return" id="Return"></a>Return</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: return [value]</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beendet das Script. Ist das Script mit einem Typ (ungleich 
+ &lt;NIL&gt;) erstellt, muss ein Rückgabewert <b>value</b> angegeben werden, 
+ der dem Typ des Scripts entspricht. Wird <b>Return</b> in einer bedingten 
+ Anweisungsfolge aufgerufen, muss trotzdem im absoluten Anweisungsteil 
+ ein <b>Return</b> stehen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if &quot;Value.Bool&quot; then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  OPC.GOPS.PLC1.MW100 := 10</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  return 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  OPC.GOPS.PLC1.MW100 := 20</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  return 0</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">return 0              // 
+ immer erforderlich !</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="ServiceStart"></a>ServiceStart</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool ServiceStart(string servicename)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Dienst mit dem Namen <span style="font-weight: bold;">servicename</span> 
+ wird gestartet. Ist der Dienst vorhanden, liefert die Funktion true.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold"><span style="mso-ansi-language: EN-US;">B</span>eispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok:= servicestart(&#39;smc_agl&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="System" id="System"></a>System</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long System(string cmd)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Führt das Kommando <b>cmd</b> aus und gibt den Returnwert 
+ in <b>rv</b> zurück.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rv := System(&#39;mkdir –p /tmp/test&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Utf8ToAnsi"></a>Utf8ToAnsi</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: string Utf8ToAnsi(string text)</p>
+<p data-condition="Others:Deutsch">Liest den String <span style="font-weight: bold;">text</span>, führt 
+ eine Typkonvertierung der einzelnen Zeichen aus und liefert einen String 
+ mit Zeichen entsprechend der ANSI-Konventionen.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">string text_ansi</p>
+<p data-condition="Others:Deutsch">string text_utf8</p>
+<p data-condition="Others:Deutsch">text_utf8 := @value</p>
+<p data-condition="Others:Deutsch">text_ansi := Utf8ToAnsi(text_utf8)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="_Scriptname"></a>@Scriptname</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string @Scriptname</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den einfachen Namen des Skripts.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">B</span>eispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">string s</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s:= @scriptname<br/>
+debug(&#39;my name is &#39;+s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="_Scriptfullname"></a>@Scriptfullname</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string @Scriptfullname</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den vollen Namen des Skripts.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">B</span>eispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">string s</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s:= @scriptfullname<br/>
+debug(&#39;my extended name is &#39;+s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

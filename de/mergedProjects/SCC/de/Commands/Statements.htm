@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Anweisungen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Anweisungen">
+        <span>Anweisungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Anweisungen</h2>
+<h3 data-condition="Others:Deutsch"><a name="If_Then_Else_Endif" id="If_Then_Else_Endif"></a>If ... Then 
+ ... Else ... Endif</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Anweisung <b>IF</b> muss ein boolescher Ausdruck 
+ folgen. Die Programmausführung wird in Abhängigkeit des Ergebnisses dieses 
+ Ausdruckes fortgeführt. Bei &quot;true&quot; wird der Anweisungsteil zwischen 
+ <b>THEN</b> und <b>ELSE</b> bearbeitet, bei &quot;false&quot; der Anweisungsteil 
+ zwischen <b>ELSE</b> und <b>ENDIF</b>. Die Verwendung von ELSE ist optional.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Bei Abfragen von booleschen Werten dürfen 
+ keine Vergleichsoperatoren (=, &gt;, &lt;,...) angegeben werden. Die Abfrage 
+ erfolgt direkt auf die Variable (Abfrage auf true) oder mit dem Operator 
+ NOT (Abfrage auf false).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     a, b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     c</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if a &gt; 0 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  b := 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  b := 2</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if c then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  b := 3</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Switch_Case_Default_End" id="Switch_Case_Default_End"></a>Switch 
+ ... Case ... Default ... End</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Anweisung <b>switch</b> muss ein numerischer Ausdruck 
+ vom Typ &quot;Int&quot;, &quot;Long&quot; oder &quot;Double&quot; folgen. 
+ Für String oder Bool-Werte kann <b>switch</b> nicht ausgeführt werden. 
+ Dieser Ausdruck wird mit den Konstanten, die jeweils einem <b>case</b>-Label 
+ folgen, verglichen. Ist ein Vergleich &quot;true&quot;, wird der Programmteil 
+ bis zum nächsten <b>case</b>, <b>default</b> oder <b>end</b> bearbeitet. 
+ Will man nach einem erfüllten Vergleich keine weiteren Abfragen mehr, 
+ muss am Ende des Anweisungsblocks der Befehl <b>break</b> stehen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Abfragen von booleschen Werten dürfen wie bei der 
+ Anweisung IF...THEN...ENDIF keine Vergleichsoperatoren (=, &gt;, &lt;,..) 
+ angegeben werden. Die Abfrage erfolgt direkt auf die Variable (Abfrage 
+ auf true) oder mit dem Operator NOT (Abfrage auf false).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Long     a</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">switch a</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  case 0:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    s := &#39;ZERO&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  case 1:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    s := &#39;ONE&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  default:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    s := &#39;TOO MANY&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="While_Do_Enddo" id="While_Do_Enddo"></a>While ... Do ... Enddo</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Anweisung <b>while</b> muss ein boolescher Ausdruck 
+ folgen. Der Anweisungsteil zwischen <b>do</b> und <b>enddo</b> wird solange 
+ ausgeführt, bis das Ergebnis dieses Ausdruckes den Wert false ergibt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Schleife kann durch den Befehl <b>break</b> abgebrochen 
+ werden. Der Befehl <b>continue</b> bewirkt, dass die Programmbearbeitung 
+ mit der Abfrage fortgesetzt wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Abfragen von booleschen Werten dürfen wie bei der 
+ Anweisung IF...THEN...ENDIF keine Vergleichsoperatoren (=, &gt;, &lt;,...) 
+ angegeben werden. Die Abfrage erfolgt direkt auf die Variable (Abfrage 
+ auf true) oder mit dem Operator NOT (Abfrage auf false).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     a, b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while a &lt; 10 do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  a := a + 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  if a mod 2 = 0 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    continue</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  endif  b := b + 3</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

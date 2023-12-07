@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "4.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Knoten und KPIs in Sapient konfigurieren</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Knoten und KPIs in Sapient konfigurieren">
+        <span>Knoten und KPIs in Sapient konfigurieren</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Knoten und KPIs in Sapient konfigurieren</h1>
+<p data-condition="Others:Deutsch">Die notwendige Konfiguration innerhalb von Sapient wird für den EpiK-Report 
+ wie in den folgenden Abschnitten beschrieben, eingerichtet:<br/>
+</p>
+<h2 data-condition="Others:Deutsch">Lieferung der Datenbasis in Sapient</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Daten müssen gesammelt und die KPIs für eine Engpassidentifikation 
+ berechnet werden, so dass die Datenbasis für den späteren Bericht konfiguriert 
+ werden kann.</p>
+<h3 data-condition="Others:Deutsch">Datenbasis für die Leerlaufzeiten</h3>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Es gibt eine Funktionalität, 
+	 die für jede Schicht berechnet, für wie viele Minuten ein Pufferwert 
+	 unter einem definierten Schwellenwert lag. Dieser Schwellenwert ist 
+	 für jede Puffervariable spezifisch.</li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"><img src="../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Verwenden Sie nicht den Wert <span style="font-weight: bold;">min_value</span>, 
+ da dieser Wert an anderer Stelle für eine andere Funktionalität benötigt 
+ wird.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Es wird zwischen 
+	 Puffertyp 1 und Puffertyp 2 unterschieden. </li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Es wird nicht 
+	 der Variablentyp verwendet, sondern eine erweiterte Eigenschaft (vergleichbar 
+	 mit dem VEMA-Flag). Diese Funktionalität muss automatisch ausgeführt 
+	 werden, wenn eine Schicht abgeschlossen ist.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Das Ergebnis wird 
+	 für diese Verschiebung gespeichert. Wenn der Schwellenwert geändert 
+	 wird, muss die Berechnung für jede Schicht der letzten 6 Monate neu 
+	 durchgeführt werden.</li>
+</ul>
+<h3 data-condition="Others:Deutsch"><br/>
+Vorgänger/Nachfolger-Beziehungen</h3>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><span>Vorgänger-Nachfolger-Beziehungen 
+	 zwischen Knoten können m mal n (m x n) modelliert werden. </span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><span>Beziehungen 
+	 unabhängig von der Knotenhierarchie mit </span><span style="font-weight: bold;">l_node_workflow_relations</span></li>
+</ul>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><span>Für Knoten 
+	 ist eine Klassifizierung möglich, falls sie Teil einer Hauptleitung 
+	 oder einer Nebenleitung sind (mehrere Unterzweige sind möglich): Mit 
+	 </span><span style="font-weight: bold;">l_workflow_relation_types</span></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><span>Puffervariablen 
+	 sind immer mit dem Knoten verknüpft, aus dem der Puffer gefüllt wird.<br/>
+	</span></li>
+</ul>
+<h2 data-condition="Others:Deutsch">Anpassung der KPI-Berechnung &quot;Pufferleerzeit&quot; an neue Anforderungen</h2>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Wenn ein Puffer Produktionseinheiten 
+ verschiedener Typen enthält, wird die Anzahl der enthaltenen Einheiten 
+ von der SPS als Werte separater &quot;Pufferebenen&quot;-Variablen gemeldet. 
+ Alle diese Variablen werden in Sapient demselben Pufferknoten zugewiesen.<br/>
+<br/>
+Wenn einem Pufferknoten mehr als eine &quot;buffer level&quot;-Variable 
+ zugewiesen ist, sollte die Auswertung wie folgt erfolgen:</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Für jede Variable 
+	 wird einzeln eine Menge von &quot;Leerzeiten&quot; berechnet.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Neu: Wenn eine 
+	 der oben genannten Mengen die gesamte Schicht abdeckt, wird sie verworfen.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Die verbleibenden 
+	 leeren Zeiten werden addiert, wobei sich überschneidende Zeiten nur 
+	 einmal gezählt werden.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Es kann eine einfache 
+	 Addition der Zeiten ohne Berücksichtigung von Überschneidungen geändert 
+	 werden und (optional) die resultierende Summe auf die Schichtdauer 
+	 begrenzt werden.</li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Außerdem gilt:</p>
+<p data-condition="Others:Deutsch">Die Berechnung für den KPI-Typ &quot;BET&quot; (Buffer Empty Time) wird 
+ geändert:</p>
+<ul style="list-style: disc; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn mehrere Pufferfüllstandsvariablen 
+	 für einen Puffer eingerichtet sind, werden sie einzeln ausgewertet 
+	 und die sich daraus ergebenden Leerzeiten unter Berücksichtigung von 
+	 Überschneidungszeiten addiert.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn die aus den 
+	 Werten einer Pufferebenenvariablen berechnete Leerzeit die gesamte 
+	 Schicht abdeckt, wird sie ignoriert.</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn die Leerzeiten 
+	 aller Pufferebenenvariablen ignoriert werden. Dies zeigt, dass der 
+	 Puffer nicht genügend Teile irgendeines Typs enthält. In diesem Fall 
+	 wird der Puffer für die gesamte Schicht als leer dargestellt.</li>
+</ul>
+
+
+</body></html>

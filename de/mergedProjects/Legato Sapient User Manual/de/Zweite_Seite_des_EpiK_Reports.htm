@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "4.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Zweite Seite des EpiK Reports</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Zweite Seite des EpiK Reports">
+        <span>Zweite Seite des EpiK Reports</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Zweite Seite des EpiK Reports</h1>
+<p data-condition="Others:Deutsch">Das Dashboard sollte die zweite Seite (Bewertungsseite) des EpiK-Berichts 
+ widerspiegeln.</p>
+<h2 data-condition="Others:Deutsch">Table Boardlet</h2>
+<p data-condition="Others:Deutsch">Mit dem Standard-Dashboard sollen beispielsweise die Pufferleerzeiten 
+ der Nebenlinien in einer Karosseriewerkstatt angezeigt, so dass Engpässe 
+ leichter erkannt werden können. D.h. das Tabellenboardlet in dem Standard-Dashboard 
+ zeigt die Puffervariablen auf den Knoten der Nebenlinie für alle Schichten 
+ der letzten 7 Tage an.</p>
+<p data-condition="Others:Deutsch">Im Table Boardlet wird Folgendes dargestellt:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Der Name 
+	 des Knotens und der Name der Puffervariable(n) einschließlich der 
+	 &quot;Leerschwelle&quot; (für jeden Puffer separat und mit einem Zeilenumbruch 
+	 zur Kennzeichnung der Verbindung zwischen Leerschwelle und Puffervariable).</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Die Leerzeiten 
+	 für jede der Produktivschichten.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Eine Summe 
+	 der Leerzeiten über alle angezeigten produktiven Schichten.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Eine Summe 
+	 über die produktiven Schichttypen (Summe der Früh-, Summe der Spät-, 
+	 Summe der Nachtschichten).</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Eine Summe 
+	 über die Gruppierungen (Puffergruppensymbol, falls konfiguriert) der 
+	 Pufferknoten.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Eine Summe 
+	 der Gruppenname anstelle von Knoten- und Variablennamen.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Es wird 
+	 der höchste Wert einer Schicht in jeder Spalte rot hervorgehoben.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Es wird 
+	 der zweithöchste Wert gelb hervorgehoben.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">D</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;">ie Anzahl der gelben/roten 
+	 Hervorhebungen wird gezählt und in zusätzlichen Spalten (häufigste) 
+	 und Spalten (zweithäufigste) angezeigt.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">D</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;">ie höchsten Werte 
+	 in den Spalten werden rot (häufigste rote), gelb (häufigste gelbe) 
+	 oder grau (Gruppierung mit der höchsten Leerzeit) hervorgehoben.</span></li>
+	<li><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Freie Schichten 
+	 werden ausgegraut dargestellt und gehen auch nicht in die Summierung 
+	 der Gruppen ein und werden bei der Einfärbung in rot/gelb nicht berücksichtigt 
+	 (oder lassen Sie diese ganz weg, wenn der Platz horizontal benötigt 
+	 wird.</span><br/>
+	</li>
+</ul>
+<h2 data-condition="Others:Deutsch">Line Chart Grouping</h2>
+<p data-condition="Others:Deutsch">Das Line Chart Grouping ist ein Liniendiagramm, das die Summe der Leerzeiten 
+ für jede gefundene Gruppierung mit</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">einer Zeile pro 
+	 Schichtart</li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;">einer Zeile für 
+	 die einige über alle Schichttypen*-*</li>
+</ul>
+<p data-condition="Others:Deutsch">darstellt.</p>
+<h2 data-condition="Others:Deutsch">Line Chart Buffers</h2>
+<p data-condition="Others:Deutsch">Das Standard-Dashboard zeigt beispielsweise Pufferleerzeiten (Buffer 
+ Empty Times) einer Nebenlinien in einer Karosseriewerkstatt an, so dass 
+ Engpässe leichter erkannt werden. Es ist ein Liniendiagramm, das die Leerzeiten 
+ für die einzelnen Knoten und Gruppierungen über die Schichten hinweg anzeigt.</p>
+<p data-condition="Others:Deutsch">Hierbei gilt: Die Linien werden unterbrochen, wenn eine Unproduktivität 
+ vorliegt/freie Schichten dazwischen liegen.</p>
+<p data-condition="Others:Deutsch"><img src="../Bilder/Line_Chart_Buffers.png" alt="" style="border: none;" border="0"/></p>
+
+
+</body></html>

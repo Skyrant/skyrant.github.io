@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Erweitert;Others:Deutsch" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Erweitert;Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Erweitert;Others:Deutsch"/>
+<title data-condition="Others:Erweitert;Others:Deutsch">Platzhalter im Meldetext</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Erweitert;Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Erweitert;Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Platzhalter im Meldetext">
+        <span>Platzhalter im Meldetext</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Erweitert;Others:Deutsch">Platzhalter im Meldetext</h2>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Meldungen können neben einem statischen Meldetext auch 
+ einen dynamisch angepassten Meldetext enthalten. Der dynamische Teil des 
+ Textes wird durch einen oder mehrere Begleitwerte bestimmt. Dabei geben 
+ im vordefinierten (statischen) Meldetext eingefügte Formatanweisungen 
+ an, wie der jeweilige Begleitwert zu interpretieren ist. Die Interpretation 
+ erfolgt gemäß der in Legato importierten Zuli (siehe auch Meldungsdefinitionen: 
+ Import-Einstellungen…)</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Für eine Meldung, die keinen Begleitwert enthält, kann 
+ der definierte Meldetext ohne weitere Verarbeitung verwendet werden.</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Meldetext: FG00 Schütz-Fehler Versorgung 400V Bänder 
+ Pos 650-690 M_+LS01-KF403 (M3005.3)</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Für eine Meldung mit Begleitwert muss der Meldetext 
+ analysiert werden und jede Formatanweisung mit dem entsprechenden Begleitwert 
+ interpretiert werden. Jedes Vorkommen einer Formatanweisung wird durch 
+ die Interpretation mit dem zugehörigen Begleitwert ersetzt.</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Beispiel: Meldetext mit interpretierter Formatanweisung 
+ für den Begleitwert &#39;11&#39;:</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Meldetext: FG01 SWE M_+6100-M2 Fehlercode @1X%4d@ @1X%tSWE@ 
+ (M3016.5)</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Begleitwert: 11</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Formatierter Meldetext: FG01 SWE M_+6100-M2 Fehlercode 
+ 11 Übertemperatur (M3016.5)</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<h2 data-condition="Others:Erweitert;Others:Deutsch">Begleitwert Formatanweisungen (PDIAG Formaloperanden)</h2>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Die Legato Formatanweisungen sind eine Erweiterung 
+ der PDIAG-Formaloperanden. Es werden alle (bekannten) PDIAG Formate unterstützt.</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Die verschiedenen Möglichkeiten werden im Folgenden 
+ kurz beschrieben. Für weitere Informationen zum Thema Begleitwerte, siehe 
+ bitte auch das entsprechende Kapitel im Dokument &quot;Legato_Database&quot;.</p>
+<h3 data-condition="Others:Erweitert;Others:Deutsch">Numerische Konvertierung</h3>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Der Begleitwert kann als Zahl formatiert werden. Das 
+ Schema für die numerische Konvertierung eines Begleitwerts kann wie folgt 
+ aussehen:</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">´@´BEGLEITWERTZAHL(´X´|´W´)´%´[STELLEN]FORMATZEICHEN´@´</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">BEGLEITWERTZAHL 
+ := Ganzzahl n, welche den n. Begleitwert bezeichnet, auf den sich das 
+ anschließendes Format bezieht</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">STELLEN 
+ := Ganzzahl i, welche die Anzahl Stellen des auszugebenden Nummernformates 
+ angibt.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">FORMATZEICHEN 
+ := ´d´|´u´|´X´|´b´</p>
+<p class="Aufzählung2" style="margin-left: 35.45pt;" data-condition="Others:Erweitert;Others:Deutsch">d:    Dezimal 
+ mit Vorzeichen mit i Stellen</p>
+<p class="Aufzählung2" style="margin-left: 35.45pt;" data-condition="Others:Erweitert;Others:Deutsch">u:    Dezimal 
+ ohne Vorzeichen mit i Stellen</p>
+<p class="Aufzählung2" style="margin-left: 35.45pt;" data-condition="Others:Erweitert;Others:Deutsch">X:    Hexadezimal 
+ mit i Stellen</p>
+<p class="Aufzählung2" style="margin-left: 35.45pt;" data-condition="Others:Erweitert;Others:Deutsch">b:    Binär 
+ mit i Stellen</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Beispiel: Der zweite Begleitwert wird hexadezimal mit 
+ 8 Stellen formatiert ausgegeben</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Formatstring:   @2W%8X@</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Begleitwerte:   5,31,&quot;Störung&quot;</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Ergebnis:       0000001F</p>
+<h3 data-condition="Others:Erweitert;Others:Deutsch">Textbibliothek nachschlagen</h3>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Für Zulis vom Typ PDiag xml und csv können die Textbibliotheken 
+ mit importiert werden. Für andere PDiag Zulis müssen die Textbibliotheken 
+ mit ihren Inhalten zum Teil manuell in den LC2 importiert werden (siehe 
+ &quot;Meldungsmanagement&quot; - &quot;Textbibliotheken&quot; - &quot;Inhalt 
+ der Textbibliothek&quot;).</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Der Begleitwert gibt einen Eintrag in einer Textbibliothek 
+ an, der an entsprechender Stelle eingesetzt werden soll. Das Schema sieht 
+ beispielsweise so aus:</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">´@´BEGLEITWERTZAHL(´X´|´W´)´%t#´BIBLIOTHEKNAME´@´</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">BEGLEITWERTZAHL 
+ := Ganzzahl n, welche den n. Begleitwert bezeichnet, auf den sich das 
+ anschließendes Format bezieht</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">BIBLIOTHEKNAME 
+ := Name der Bibliothek, in der der Eintrag mit dem Index des Begleitwertes 
+ nachgeschlagen werden muss</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Im unten stehenden Beispiel wird der erste Begleitwert 
+ zum Nachschlagen in der Textbibliothek Roboter verwendet, aus der der 
+ 5. Eintrag verwendet wird.</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Formatstring:   @1X%t#Roboter@</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Begleitwerte:   5,31,&quot;Störung&quot;</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Ergebnis:       Greifarm 
+ blockiert</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<h3 data-condition="Others:Erweitert;Others:Deutsch">Text ersetzen</h3>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Der Begleitwerttext kann ohne weitere Bearbeitung an 
+ gewünschter Stelle in den Meldetext eingesetzt werden.</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">´@´BEGLEITWERTZAHL[(´X´|´W´)´%t´]´@´</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Erweitert;Others:Deutsch">BEGLEITWERTZAHL 
+ := Ganzzahl n, welche den n. Begleitwert bezeichnet, auf den sich das 
+ anschließendes Format bezieht</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Beispiel: Der Formatstring wird direkt mit dem dritten 
+ Begleitwert ersetzt:</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Formatstring:   @3X%t @</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Begleitwerte:   5,31,&quot;Störung&quot;</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Ergebnis:       Störung</p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Beispiel: Zulässige abgekürzte Schreibweise für die 
+ Textersetzung:</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Formatstring:   @3@</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Begleitwerte:   5,31,&quot;Störung&quot;</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch">Ergebnis:       Störung</p>
+<p class="TextCode" data-condition="Others:Erweitert;Others:Deutsch"> </p>
+<h3 data-condition="Others:Erweitert;Others:Deutsch">Implizite Konvertierung</h3>
+<p class="BodyText" data-condition="Others:Erweitert;Others:Deutsch">Begleitwerte können auch ohne Formatanweisung in den 
+ Meldetext eingefügt werden. Diese implizite Konvertierung findet immer 
+ dann statt, wenn zwar Begleitwerte übergeben wurden, aber keine Formatanweisungen 
+ im Meldetext gefunden werden. In diesem Fall wird die Begleitwertliste 
+ als einfache CSV-Liste an den Meldetext angehängt.</p>
+<p class="Textkörperfett" data-condition="Others:Erweitert;Others:Deutsch"><img src="../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Erweitert;Others:Deutsch">Ausnahme bildet ein einzelner Begleitwert 
+ mit dem Wert 0. Eine 0 ohne Formatanweisung wird ignoriert und nicht angefügt.</p>
+
+
+</body></html>

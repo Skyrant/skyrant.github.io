@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Überblick","type":"item","tilePath":"","description":"","url":"de/05_ASS/01_Plants_ProdSects/01_Overview.htm"},{"name":"Werke","type":"item","tilePath":"","description":"","url":"de/05_ASS/01_Plants_ProdSects/02_Plants.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

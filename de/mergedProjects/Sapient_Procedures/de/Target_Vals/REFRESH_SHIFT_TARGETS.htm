@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "14.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">REFRESH_SHIFT_TARGETS</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="P_OUT_VALUES,Sollwert" data-condition="Others:Deutsch;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="REFRESH_SHIFT_TARGETS">
+        <span>REFRESH_SHIFT_TARGETS</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">REFRESH_SHIFT_TARGETS</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job dient zum Ausrollen der Sollwerte für Schichten. 
+ Im Detail macht der Job Folgendes:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">In einem ersten Schritt bestimmt der Job den Zeitraum, 
+ für den Sollwerte ausgerollt werden sollen (der Zeitraum beginnt mit dem 
+ Start des Jobs und dauert die Länge des Parameters &quot;leadtime&quot;). 
+ Er liest alle Zeilen aus p_out_values ein, die einen Zeitstempel innerhalb 
+ des Rollout-Zeitraums und einen Eintrag in der Spalte &quot;target_value_id&quot; 
+ haben (d.h., die Werte sind als Sollwerte konfiguriert).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Für jeden dieser Werte bestimmt der Job den Ziel-Knoten. 
+ Dies entspricht dem Default-Knoten der Verbindung, zu der der Wert konfiguriert 
+ wurde. Für alle diese Ziel-Knoten sucht der Job dann nach Schichten (im 
+ Schichtarchiv), die im Rollout-Zeitraum beginnen (der Zeitraum beginnt 
+ mit dem Start des Jobs und dauert die Länge des Parameters &quot;leadtime&quot;). 
+ Nur Schichten mit derselben Definition (t_shifts) wie die Sollwertvorlage 
+ des geplanten Sollwertes werden berücksichtigt (d.h., Variablen mit einem 
+ anderen Schichtbeginn werden übersprungen). Dann legt der Job für jeden 
+ solchen Schichtbeginn und Sollwert neue Zeilen in p_out_values an.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Für alle Sollwerte aus Vererbungsketten, die auf dem 
+ jeweiligen Sollwert basieren und Schichten haben (von ihrem jeweiligen 
+ Ziel-Knoten), die zur selben Zeit beginnen wie die des geplanten Sollwertes, 
+ werden ebenfalls Zeilen in p_out_values angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Die neuen Zeilen in p_out_values werden dann mit den 
+ bestehenden verglichen und die Unterschiede werden in die Datenbank geschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Der Job gibt die Anzahl der betroffenen Zeilen in p_out_values 
+ zurück (als Wert &quot;rows&quot;).</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Parametrierung</h6>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">REFRESH_TARGET_VALUES</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Schicht-Sollwerte 
+		 ausrollen</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="BodyText">/de/gefasoft/sapient/sapieng/jobs/targetvals/TargetValues/refresh 
+		 </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{&quot;leadtime&quot;: 
+		 &quot;1d 12h&quot;}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">0</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Trigger</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Trigger: Cron (-4)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Parameter: </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">{   &quot;cron&quot;: &quot;0 30 1 ? * *&quot;,</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">    &quot;crontype&quot;: &quot;quartz&quot;,</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">    &quot;timezone&quot;: &quot;Europe/Berlin&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">}</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">= Täglich um 01:30.</p>
+
+
+</body></html>

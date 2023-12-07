@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/General/SysDoc.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/02_Change_History.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/General/About.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Overview_SCC.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Data_Types.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Installation.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Installation_Linux_ITC_OTC.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Operation/Display.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Operation/Log.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Operation/Keyboard.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Operation/Menu.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Operation/Context_Menu.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Creation.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Names.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Format.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Props.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Planning_Proc.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Basic.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/DB_Con.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/SE_Con.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/OPC_Cons_Win.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/OPC_UA.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Schnittstelle_zu_AWS.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/PubSub.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/SendRecv_Cons.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Int_Vars.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Events.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Scripts.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Script_Examples.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Particul_UNIX.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/PP/Logging.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Troubleshooting.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Scripts/General.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Scripts/Gen_Scripts.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Scripts/Vars.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Statements.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Gen_Funct.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Indirect_Calls.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/User_Info.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Block_Ops.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Format_Cons.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Math_Functs.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/String_Ops.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Trigonometric.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Date_Time.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Element_Vars.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Control.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Con_Level.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/SQL_Tables.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/SQL_Fields.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/File_Funct_Gen.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/File_Funct_Bin.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/File_Funct_INI.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/control_external_processes.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Table_Funct_Int_DB.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Rec_Funct_Int_DB.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Log_Funct.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_Send_Recv.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_Perf_Mon.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_V_Info.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_SE.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_Command.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_Pub_Sub.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funct_JSON.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Commands/Funktionen_der_Filespoolverwaltung.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Comments.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Operators.htm</loc>
+      <lastmod>2023-09-11</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

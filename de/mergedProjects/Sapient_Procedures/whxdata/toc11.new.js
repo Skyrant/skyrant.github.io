@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Grundlagen der SE-Jobs","type":"item","tilePath":"","description":"","url":"de/General/Job_Basics.htm","tocid":"1_0"},{"name":"Übersicht der Jobs","type":"item","tilePath":"","description":"","url":"de/General/Übersicht_der_Jobs.htm","tocid":"1_1"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

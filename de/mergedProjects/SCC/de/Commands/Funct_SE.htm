@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.26";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen der Sapient Engine Schnittstelle</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen der Sapient Engine Schnittstelle">
+        <span>Funktionen der Sapient Engine Schnittstelle</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen der Sapient Engine Schnittstelle</h2>
+<h3 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Sapient Engine wird über eine TCP/IP Schnittstelle 
+ und das Protokoll HTTP1.1 angesprochen.</p>
+<h3 data-condition="Others:Deutsch"><a id="AddPost"></a>AddPost</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: AddPost(string id, string method, string 
+ param) </p>
+<p class="bodytext" data-condition="Others:Deutsch">Die Methode <span style="font-weight: bold;">method</span> 
+ wird dem Sendestapel der Sapient Engine hinzugefügt. Je nach Methode müssen 
+ die Parameter <span style="font-weight: bold;">param</span> versorgt werden. 
+ Der Stapel wird mit dem Befehl <a href="Funct_SE.htm#EndPost">EndPost</a> 
+ an die Sapient Engine gesendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string id</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string method</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string param</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">id := &#39;YDB_1&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">method := &#39;/de/gefasoft/sapient/db/Dbinfo/showinfo/.&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Param := &#39;&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Sapient.HTTP_JSON.con1.addpost(id, method, param)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="EndPost"></a>EndPost</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool EndPost</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der zuvor mit <a href="Funct_SE.htm#AddPost">AddPost</a> 
+ gefüllte Sendestapel wird an die Sapient Engine gesendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool   ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string id</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string method</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string param</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">id := &#39;YDB_1&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">method := &#39;/de/gefasoft/sapient/db/Dbinfo/showinfo/.&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Param := &#39;&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Sapient.HTTP_JSON.con1.addpost(id, method, param)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Sapient.HTTP_JSON.con1.endpost</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Get"></a>Get</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool get(string id, string source, 
+ string param, long timeout) </p>
+<p class="bodytext" data-condition="Others:Deutsch">Die Datenquelle <b style="mso-bidi-font-weight: normal;">source</b> 
+ wird in der Sapient Engine angefragt. Die gewünschten Felder und Filter 
+ sind im Parameter <b style="mso-bidi-font-weight: normal;">param</b> angegeben. 
+ Die Funktion kann synchron (<b style="mso-bidi-font-weight: normal;">timeout</b> 
+ &gt; 0) oder asynchron (<b style="mso-bidi-font-weight: normal;">timeout</b> 
+ = 0) aufgerufen werden. Bei der synchronen Variante kann nach erfolgreicher 
+ Ausführung (Rückgabewert = true) das Ergebnis mit Result abgefragt werden. 
+ Bei der asynchronen Variante wird das Ergebnis im Ereignis OnResult geliefert. 
+ Dabei dient <b style="mso-bidi-font-weight: normal;">id</b> zur Identifizierung 
+ des Ergebnisses.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel einer synchronen Abfrage: </p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">bool 
+ ok</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ id</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ param, fields, filter</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ method</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ dataset</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">id 
+ := &#39;p_connections&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">method 
+ := &#39;legato/p_connections&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">fields 
+ := &#39;fields=id,connection_symbol&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">filter 
+ := &#39;&amp;filter=[{&quot;field&quot;:&quot;id&quot;,&quot;op&quot;:&quot;gt&quot;,&quot;val&quot;:0},&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">filter 
+ := filter + &#39;&quot;AND&quot;,{&quot;field&quot;:&quot;parent&quot;,&quot;op&quot;:&quot;eq&quot;,&quot;val&quot;:&#39;+ltostr(parent,10)+&#39;}]&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">param 
+ := fields + filter</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">ok 
+ := Sapient.HTTP_JSON.get(id, method, param, 2000)</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">if 
+ ok then</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span style="mso-spacerun: yes;"> </span> dataset := Sapient.HTTP_JSON.result</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Post"></a>Post</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool post(string id, string method, 
+ string param, long timeout) </p>
+<p class="bodytext" data-condition="Others:Deutsch">Die Methode <b style="mso-bidi-font-weight: normal;">method</b> 
+ wird in der Sapient Engine ausgeführt. Je nach Methode müssen die Parameter 
+ <b style="mso-bidi-font-weight: normal;">param</b> versorgt werden. Die 
+ Funktion kann synchron (<b style="mso-bidi-font-weight: normal;">timeout</b> 
+ &gt; 0) oder asynchron (<b style="mso-bidi-font-weight: normal;">timeout</b> 
+ = 0) aufgerufen werden. Bei der synchronen Variante kann nach erfolgreicher 
+ Ausführung (Rückgabewert = true) das Ergebnis mit Result abgefragt werden. 
+ Bei der asynchronen Variante wird das Ergebnis im Ereignis OnResult geliefert. 
+ Dabei dient <b style="mso-bidi-font-weight: normal;">id</b> zur Identifizierung 
+ des Ergebnisses.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel einer asynchronen Abfrage: </p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">bool 
+ <span style="mso-tab-count: 1;">   </span> ok</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string<span style="mso-tab-count: 1;">  </span> id</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string<span style="mso-tab-count: 1;">  </span> method</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ <span style="mso-tab-count: 1;"> </span> param</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">id 
+ := &#39;YDB_1&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">method 
+ := &#39;/de/gefasoft/sapient/db/Dbinfo/showinfo/.&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">Param 
+ := &#39;&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Sapient.HTTP_JSON.post(id, method, param, 
+ 0) </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Result"></a>Result</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string Result </p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert das Ergebnis einer synchronen Get- oder Post 
+ Anfrage.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">bool 
+ ok</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ id</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ param, fields, filter</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ method</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">string 
+ dataset</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">id 
+ := &#39;p_connections&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">method 
+ := &#39;legato/p_connections&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">fields 
+ := &#39;fields=id,connection_symbol&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">filter 
+ := &#39;&amp;filter=[{&quot;field&quot;:&quot;id&quot;,&quot;op&quot;:&quot;gt&quot;,&quot;val&quot;:0},&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">filter 
+ := filter + &#39;&quot;AND&quot;,{&quot;field&quot;:&quot;parent&quot;,&quot;op&quot;:&quot;eq&quot;,&quot;val&quot;:&#39;+ltostr(parent,10)+&#39;}]&#39;</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">param 
+ := fields + filter</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">ok 
+ := Sapient.HTTP_JSON.get(id, method, param, 2000)</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">if 
+ ok then</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"><span style="mso-spacerun: yes;"> </span> dataset := Sapient.HTTP_JSON.result</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

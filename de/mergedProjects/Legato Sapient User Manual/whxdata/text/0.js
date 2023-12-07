@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Willkommen"]],"1":[["\n  "],["\n  ","\n  "," ","\n  "," ","\n  ","Willkommen zu Legato Sapient!","\n  "," ","\n  ","Diese Version beinhaltet neue Funktionen, Funktionsverbesserungen, Sicherheitsaktualisierungen und/oder Fehlerbehebungen. Weitere Informationen finden Sie auf unserer Release Notes-Seite.","\n\n"]],"2":[["Legato Sapient V 3.5.2.0"]],"id":"0"})

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.3.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Meldungszuordnung</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Meldung,Meldungszuordnung" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Meldungszuordnung">
+        <span>Meldungszuordnung</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Meldungszuordnung</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Fertigungsstruktur | Fertigungsknoten 
+ | Meldungszuordnungen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Siehe auch <a href="../02_Data_Exchange/05_Alarm_Defs/01_Alarm_Defs.htm">Datenaustausch 
+ - Meldungsdefinitionen</a></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Zuordnung von Störmeldungen 
+ und Texten zu einem Knoten. Wird in der Regel durch den Import der SPS-Zuordnungslisten 
+ automatisch generiert.</span></p>
+
+<p class="BodyText" data-condition="Others:Deutsch">Jede Meldung wird fest einem reellen Knoten der Fertigungsstruktur 
+ zugeordnet (entspricht standardmäßig dem &quot;Standardknoten&quot; der 
+ Verbindung). Auch einzelne Meldungen lassen sich gezielt mit Knoten verbinden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die zugeordneten Meldungen können hier nochmals geprüft 
+ und ggf. Meldungseigenschaften angepasst werden, z.B. Klasse oder Art.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Feldbeschreibung</p>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Verbindung</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Verbindung 
+		 aus dem Datenaustausch, für die die Meldung parametriert ist.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Knoten</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl des Knotens, 
+		 für den die Meldung parametriert ist. Wird automatisch befüllt 
+		 und kann geändert werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Meldungsnummer</p></td>
+		<td><p class="TabellenInhalt">Meldungsnummer. Muss innerhalb dieser 
+		 Verbindung eindeutig sein (z.B. Code des Störoperanden im Steuerungssystem).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Operand (optional)</p></td>
+		<td><p class="TabellenInhalt">SPS-Operand (falls Operandenbezug 
+		 vorhanden) der Meldung.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Symbol (optional)</p></td>
+		<td><p class="TabellenInhalt">SPS-Symbolik (falls Operandenbezug 
+		 vorhanden) der Meldung.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Text</p></td>
+		<td><p class="TabellenInhalt">Meldetext bis max. 80 Zeichen Länge.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Meldeklasse</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer vorhandenen 
+		 Klasse zur Klassifizierung der Meldung.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Meldeart</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer vorhandenen 
+		 Melde-Art. Meldearten sind ein weiteres Merkmal von Meldungen 
+		 und können entsprechend ausgewertet werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Default-Begründung (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup Liste, um eine Default-Begründung 
+		 für diese Meldungsdefinition auszuwählen. Wird hier ein Eintrag 
+		 ausgewählt, wird diese Begründung als Default für Meldungen dieser 
+		 Definition in der WebApp verwendet.</p>
+		<p class="TabellenInhalt"><img src="../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>: 
+		 In der WebApp können nur Einträge ohne weitere Untereinträge als 
+		 Filter verwendet werden, keine Parents, z.B. in der Pareto-Ansicht!</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Weiterleitungsart (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Weiterleitungsart 
+		 für den Funkruf (siehe Kapitel Funkruf).</p>
+		<p class="TabellenInhalt">Typische Weiterleitungsarten sind:</p>
+		<p class="TabellenInhalt">keine Weiterleitung</p>
+		<p class="TabellenInhalt">Erstwerterkennung (1. Meldung wird weitergeleitet, 
+		 Folgemeldungen werden ausgeblendet)</p>
+		<p class="TabellenInhalt">generelle Weiterleitung (alle Meldungen 
+		 werden weitergeleitet).</p>
+		<p class="TabellenInhalt">Überschreibt die indirekte (default) 
+		 Weiterleitungsart der zugewiesenen Meldeklasse (Defaulteinstellung 
+		 unter Meldungsmanagement | Meldeklassen – Spalte Weiterleitungsart).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Funkruf-Empfänger (optional)</p></td>
+		<td><p class="TabellenInhalt">Auswahlfeld zur Zuordnung eines im 
+		 Meldungsmanagement definierten Funkruf-Empfängers (siehe Abschnitt 
+		 Meldungsmanagement).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Funkruf-Priorität (optional)</p></td>
+		<td><p class="TabellenInhalt">Priorität der Meldung für den Funkruf 
+		 (unabhängig von der Meldungs-Priorität).</p></td>
+	</tr>
+	
+	
+	
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

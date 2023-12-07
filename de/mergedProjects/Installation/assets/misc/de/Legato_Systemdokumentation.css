@@ -1,0 +1,1082 @@
+﻿/*Erstellt mit Adobe RoboHelp 2017*/
+li.ListBullet1 {
+	font-family: "Palatino Linotype";
+	list-style: disc;
+	font-size: 11pt;
+	margin-top: 6pt;
+	margin-bottom: 0pt;
+}
+li.ListBullet1 p {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.ListBulletL1_Contd {
+	margin-right: 0cm;
+	text-align: justify;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 1.05cm;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+     color: RGB(0,64,255);
+    /* color: RGB(0,101,255); */
+	/* color: RGB(0,100,180); */
+    /* color: RGB(0,60,225);  */
+	text-decoration: none;
+    /* font-weight: bold;    */
+}
+a:hover {
+	text-decoration: underline;
+}
+a.HyperlinkSeeAlso {
+	color: #006b52;
+}
+/*Gefasoft green = #006b52 */
+a.HyperlinkSeeAlso,
+a.HyperlinkSeeAlso:visited,
+a.HyperlinkSeeAlso:hover,
+a.HyperlinkSeeAlso:active {
+	color: inherit;
+	text-decoration: none;
+}
+a.HyperlinkSeeAlso:hover {
+	text-decoration: underline;
+}
+table.CalloutTab {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	vertical-align: top;
+}
+#CalloutLetterWidth {
+	width: 30px;
+}
+/* #CalloutLetterWidth sets the width of the first column in the CalloutTab table style */
+table.TabelleBlank {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	vertical-align: top;
+}
+table.SeeAlsoTab {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	margin-bottom: 0.0pt;
+	margin-top: 0pt;
+}
+p.sah-SeeAlsoHeading {
+	font-family: "Palatino Linotype";
+	font-weight: bold;
+	margin-bottom: 0pt;
+	font-size: 9.5pt;
+	margin-top: 0pt;
+	color: #007f3f;
+}
+li.SeeAlsoListEntry {
+	font-family: "Palatino Linotype";
+	font-size: 9.5pt;
+	color: #006b52;
+	list-style: square;
+	font-weight: normal;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: -25px;
+	line-height: Normal;
+}
+/*Gefasoft green = #006b52 */
+table.ProcedureTab {
+	width: 480;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	vertical-align: top;
+	margin-top: 24.0pt;
+	margin-bottom: 24.0pt;
+}
+p.ph-ProcedureHeading {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 6pt;
+	font-weight: bold;
+}
+p.ps-ProcedureStep {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 0cm;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	text-align: left;
+}
+p.psn-ProcedureStepNum {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-weight: bold;
+	color: #004f00;
+}
+h1 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	margin-left: 21.6pt;
+	text-indent: -21.6pt;
+	line-height: normal;
+	font-size: 16.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	page-break-before: always;
+}
+h2 {
+	margin-right: 0cm;
+	margin-left: 42.55pt;
+	text-indent: -42.55pt;
+	line-height: normal;
+	font-size: 14.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-bottom: 6pt;
+	margin-top: 18pt;
+}
+h3 {
+	margin-right: 0cm;
+	line-height: 115%;
+	font-size: 12.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-left: 0pt;
+	margin-bottom: 12pt;
+	margin-top: 24pt;
+}
+h4 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	margin-left: 63.8pt;
+	text-indent: -63.8pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+}
+h5 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	margin-left: 70.9pt;
+	text-indent: -70.9pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+}
+h6 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	margin-left: 57.6pt;
+	text-indent: -57.6pt;
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: normal;
+}
+p.BodyText {
+	margin-right: 0cm;
+	margin-left: 0cm;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	text-align: left;
+	margin-bottom: 6pt;
+	margin-top: 6pt;
+}
+span.Hyperlink {
+	color: navy;
+	text-underline: single;
+	text-decoration: underline;
+}
+span.HyperlinkFollowed {
+	color: purple;
+	text-underline: single;
+	text-decoration: underline;
+}
+span.PlaceholderText {
+	color: gray;
+}
+p.Überschrift {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	margin-left: 0cm;
+	line-height: 115%;
+	font-size: 14.0pt;
+	font-family: Arial, sans-serif;
+}
+p.Verzeichnis {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 10.0pt;
+	margin-left: 0cm;
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+}
+p.ContentsHeading {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	margin-left: 0cm;
+	font-size: 16.0pt;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+p.TabellenInhalt {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 2.85pt;
+	margin-left: 0cm;
+	line-height: normal;
+	font-family: "Palatino Linotype", serif;
+	font-size: 10pt;
+}
+p.TabellenÜberschrift {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 2.85pt;
+	margin-left: 0cm;
+	line-height: normal;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	font-size: 10pt;
+}
+p.TextCode {
+	margin-top: 0cm;
+	margin-right: 19.85pt;
+	margin-bottom: 2.0pt;
+	margin-left: 19.85pt;
+	line-height: normal;
+	font-size: 10.0pt;
+	font-family: "Courier New";
+}
+p.TextkörperListHinweis {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	margin-left: 19.85pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+}
+p.AufzählungszeichenNum {
+	margin-top: 6.0pt;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 39.25pt;
+	margin-bottom: .0001pt;
+	text-indent: -18.0pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+}
+p.Inhalt {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 18.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+}
+p.Ansitext {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 2.0cm;
+	text-align: justify;
+	font-size: 14.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+}
+p.TextkörperAufzähl {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	text-align: justify;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-bottom: 0pt;
+	margin-left: 39px;
+}
+p.TextkörperAufzähl2 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	text-align: justify;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-left: 88px;
+}
+p.Textkörperfett {
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	margin-top: 0cm;
+}
+p.TextkörperHinweis {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 63.8pt;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+}
+p.TextkörperfettAufzähl {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	text-indent: 24px;
+}
+p.TextkörperHinweisAufzähl {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 99.25pt;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+}
+p.Aufzählung3 {
+	margin-top: 4.0pt;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 78.0pt;
+	margin-bottom: .0001pt;
+	text-indent: -21.3pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+}
+p.Listing {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 2.0pt;
+	margin-left: 19.85pt;
+	line-height: normal;
+	font-size: 9.0pt;
+	font-family: "Courier New";
+}
+span.ListingChar {
+	font-family: "Courier New";
+}
+p.Bildunterschrift {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 8.0pt;
+	margin-left: 0cm;
+	text-align: center;
+	line-height: normal;
+	font-size: 8.0pt;
+	font-family: Tahoma, sans-serif;
+	color: black;
+	font-weight: bold;
+}
+OL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+UL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+rh-list.Liste3 {
+	x-lvl-1-format: "<x>";
+	x-lvl-1-type: disc;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-text-indent: -24px;
+	x-lvl-2-type: bullet002;
+	x-lvl-3-format: "<x>";
+	x-lvl-3-text-indent: -24px;
+	x-lvl-3-type: bullet003;
+	x-lvl-4-type: bullet001;
+	x-lvl-4-text-indent: -24px;
+	x-lvl-4-format: "<x>";
+	x-lvl-5-type: bullet002;
+	x-lvl-5-text-indent: -24px;
+	x-lvl-5-format: "<x>";
+	x-lvl-6-text-indent: -24px;
+	x-lvl-6-type: bullet003;
+	x-lvl-6-format: "<x>";
+	x-lvl-7-format: "<x>";
+	x-lvl-7-type: bullet001;
+	x-lvl-7-text-indent: -24px;
+	x-lvl-8-type: bullet002;
+	x-lvl-8-text-indent: -24px;
+	x-lvl-8-format: "<x>";
+	x-lvl-9-type: bullet003;
+	x-lvl-9-text-indent: -24px;
+	x-lvl-9-format: "<x>";
+	x-level-count: 9;
+	x-lvl-1-margin: 70px;
+	x-lvl-1-text-indent: -24px;
+	x-lvl-1-p-class: Aufzählung3;
+	x-lvl-1-p-tag: p;
+}
+rh-list.Liste1 {
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-lvl-7-format: "<x>.";
+	x-lvl-7-margin: 120px;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+	x-lvl-1-type: disc;
+	x-lvl-2-type: disc;
+	x-lvl-1-format: "<x>";
+	x-lvl-1-p-class: Aufzählung1;
+	x-lvl-1-p-tag: p;
+	x-level-count: 9;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-class: Aufzählung1;
+	x-lvl-2-p-tag: p;
+}
+rh-list.ListeNum {
+	x-lvl-1-format: "<x>&c";
+	x-lvl-1-type: decimal;
+	x-lvl-2-format: "<x>.";
+	x-lvl-2-text-indent: -24px;
+	x-lvl-2-type: lower-alpha;
+	x-lvl-3-format: "<x>.";
+	x-lvl-3-text-indent: -12px;
+	x-lvl-3-type: lower-roman;
+	x-lvl-4-type: decimal;
+	x-lvl-4-text-indent: -24px;
+	x-lvl-4-format: "<x>.";
+	x-lvl-5-type: lower-alpha;
+	x-lvl-5-text-indent: -24px;
+	x-lvl-5-format: "<x>.";
+	x-lvl-6-text-indent: -12px;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "<x>.";
+	x-lvl-7-format: "<x>.";
+	x-lvl-7-type: decimal;
+	x-lvl-7-text-indent: -24px;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-text-indent: -24px;
+	x-lvl-8-format: "<x>.";
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-text-indent: -12px;
+	x-lvl-9-format: "<x>.";
+	x-level-count: 9;
+	x-lvl-1-margin: 42px;
+	x-lvl-1-text-indent: -24px;
+	x-lvl-1-p-class: Aufzählung1;
+	x-lvl-1-p-tag: p;
+}
+rh-list.Liste2 {
+	x-lvl-1-format: "<x>";
+	x-lvl-2-format: "<x>";
+	x-lvl-3-format: "<x>";
+	x-lvl-3-text-indent: -24px;
+	x-lvl-3-type: bullet003;
+	x-lvl-3-margin: 120px;
+	x-lvl-4-margin: 168px;
+	x-lvl-4-type: bullet001;
+	x-lvl-4-text-indent: -24px;
+	x-lvl-4-format: "<x>";
+	x-lvl-5-type: bullet002;
+	x-lvl-5-text-indent: -24px;
+	x-lvl-5-margin: 216px;
+	x-lvl-5-format: "<x>";
+	x-lvl-6-text-indent: -24px;
+	x-lvl-6-type: bullet003;
+	x-lvl-6-margin: 264px;
+	x-lvl-6-format: "<x>";
+	x-lvl-7-format: "<x>";
+	x-lvl-7-type: bullet001;
+	x-lvl-7-margin: 312px;
+	x-lvl-7-text-indent: -24px;
+	x-lvl-8-type: bullet002;
+	x-lvl-8-margin: 360px;
+	x-lvl-8-text-indent: -24px;
+	x-lvl-8-format: "<x>";
+	x-lvl-9-type: bullet003;
+	x-lvl-9-text-indent: -24px;
+	x-lvl-9-format: "<x>";
+	x-lvl-9-margin: 408px;
+	x-lvl-2-type: disc;
+	x-lvl-2-margin: 82px;
+	x-lvl-2-text-indent: -24px;
+	x-lvl-1-type: disc;
+	x-lvl-1-pfx-class: rls-1-Liste2;
+	x-level-count: 9;
+	x-lvl-1-margin: 44px;
+	x-lvl-1-text-indent: -24px;
+	x-lvl-1-p-class: Aufzählung2;
+	x-lvl-1-p-tag: p;
+}
+span.rls-1-Liste2 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+span.rls-3-Liste1 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+p.Aufzählung2 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-left: 36.0pt;
+	text-indent: -18.0pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-bottom: 0pt;
+}
+p.Aufzählung1 {
+	margin-top: 4.0pt;
+	margin-right: 0cm;
+	margin-bottom: .0001pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	text-indent: -22px;
+	margin-left: 39px;
+}
+table.AlternateGreyBlackHeaderRow {
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+	font-family: "Palatino Linotype";
+	font-size: 10pt;
+}
+table.AlternateGreyBlackHeaderRow td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+table.AlternateGreyBlackHeaderRow tr.t1Row td {
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	font-family: "Palatino Linotype";
+	font-size: 10pt;
+}
+table.AlternateGreyBlackHeaderRow tr.t2Row td {
+	background-color: #c0c0c0;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+}
+table.AlternateGreyBlackHeaderRow tr.t1st td {
+	background-color: #000000;
+	color: #ffffff;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	font-weight: bold;
+	font-family: "Palatino Linotype";
+	font-size: 10pt;
+}
+p.TextkörperAufzähl3 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 70px;
+	text-indent: 0px;
+}
+p.BodyText_Italic {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	font-style: italic;
+	margin-top: 6pt;
+}
+span.rls-1-Liste1 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+li.ListeNum1Level {
+	list-style: decimal;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-left: 0in;
+}
+table.AlternateGreyColoredGrid {
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	font-family: "Palatino Linotype";
+	font-size: 10pt;
+}
+table.AlternateGreyColoredGrid td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.AlternateGreyColoredGrid tr.t1Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	font-family: "Times New Roman";
+	font-size: 12pt;
+}
+table.AlternateGreyColoredGrid tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	background-color: #c0c0c0;
+}
+p.BodyTextGroß {
+	font-family: "Palatino Linotype";
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+}
+p.BodyTextZentriert {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	text-align: center;
+}
+span.rls-1-Liste1n {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+p.AufzählungList1 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-bottom: 0pt;
+	margin-top: 2pt;
+	text-indent: -22px;
+	margin-left: 39px;
+}
+li.Liste1Level {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	list-style: disc;
+	text-indent: -;
+	margin-left: 0px;
+}
+li.Liste2Level {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	list-style: disc;
+	margin-left: 0.5in;
+}
+table.TabelleBlank {
+	vertical-align: top;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+}
+table.SimpleGridBlack {
+	vertical-align: top;
+	padding: 0px;
+	border-top: Solid 1px #000000;
+	border-left: Solid 1px #000000;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	border-left-style: Solid 1px #000000;
+	border-left-color: #000000;
+	border-top-style: Solid 1px #000000;
+	border-top-color: #000000;
+	border-left-width: 1px;
+	border-right-style: none;
+	border-top-width: 1px;
+	border-bottom-style: none;
+}
+table.SimpleGridBlack td {
+	vertical-align: top;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.SimpleGridBlack tr.t1Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	font-family: "Times New Roman";
+	font-size: 12pt;
+}
+table.SimpleGridBlack tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+}
+rh-list.Liste1neu {
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-lvl-7-format: "<x>.";
+	x-lvl-7-margin: 120px;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+	x-lvl-1-type: disc;
+	x-lvl-2-type: disc;
+	x-lvl-1-format: "<x>";
+	x-lvl-1-p-class: Aufzählung1;
+	x-lvl-1-p-tag: p;
+	x-level-count: 9;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-class: Aufzählung1;
+	x-lvl-2-p-tag: p;
+}
+p.TextkörperTable {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 7pt;
+}
+p.TextkörperTablefett {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	font-weight: bold;
+	margin-top: 0pt;
+	margin-bottom: 7pt;
+}
+p.TextkörperTableEinrück {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 7pt;
+	margin-left: 65pt;
+}
+p.Header_left {
+	font-family: Tahoma;
+	font-weight: bold;
+	color: #808080;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.Kopfzeile_klein {
+	font-family: Tahoma;
+	font-size: 11pt;
+	color: #808080;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.Fußzeile_links {
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #808080;
+	margin-top: 3pt;
+	margin-bottom: 0pt;
+}
+p.Fußzeile_rechts {
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #808080;
+	text-align: right;
+	margin-top: 3pt;
+	margin-bottom: 0pt;
+}
+p.GUIControl {
+	margin-right: 0cm;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	margin-top: 12pt;
+	margin-bottom: 6pt;
+	x-next-class: GUIControlDescr;
+	x-next-type: p;
+}
+p.GUIControlDescr {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	margin-bottom: 6pt;
+	margin-left: 0.63cm;
+	x-next-class: GUIControl;
+	x-next-type: p;
+}
+span.Bold {
+	font-weight: bold;
+}
+span.Red {
+	color: #ff0000;
+}
+span.BoldRed {
+	font-weight: bold;
+	color: #ff0000;
+}
+table.CodeTab {
+	padding-top: 4pt;
+	text-align: Left;
+	font-family: Arial;
+	font-size: 10pt;
+	margin-bottom: 12pt;
+	background-color: #c0c0c0;
+}
+table.LastRow {
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	x-border-spacing: 0px;
+	x-last-row: 1;
+	x-last-row-name: last;
+	text-align: Right;
+	font-family: Arial;
+	font-size: 10pt;
+	margin-bottom: 12pt;
+}
+table.LastRow td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	font-family: Arial;
+	font-size: 10pt;
+}
+table.LastRow tr.last td {
+	text-align: left;
+	font-family: Arial;
+	font-size: 10pt;
+	background-color: #c0c0c0;
+}
+li.ListNum1 {
+	list-style: decimal;
+}
+rh-list.DescriptionSteps {
+	x-lvl-1-format: "Description:";
+	x-lvl-2-format: "Step <x>:";
+	x-lvl-3-type: lower-alpha;
+	x-lvl-2-type: Mine;
+	x-lvl-2-margin: 35px;
+	x-lvl-2-p-tag: P;
+	x-lvl-1-margin: 10px;
+	x-lvl-1-text-indent: -10px;
+	x-lvl-1-p-tag: H2;
+	x-lvl-3-format: "Note <x>:";
+	x-lvl-3-margin: 90px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-format: "Substep <x>:";
+	x-lvl-4-type: decimal;
+	x-lvl-4-margin: 60px;
+	x-level-count: 5;
+	x-lvl-5-format: "Note <x>:";
+	x-lvl-5-margin: 80px;
+}
+rh-seq.Mine {
+	x-count: 10;
+	x-1: One;
+	x-2: Two;
+	x-3: Three;
+	x-4: Four;
+	x-5: Five;
+	x-6: Six;
+	x-7: Seven;
+	x-8: Eight;
+	x-9: Nine;
+	x-10: Ten;
+}
+rh-list.Steps {
+	x-lvl-3-type: lower-alpha;
+	x-lvl-3-format: "Note <x>:";
+	x-lvl-3-margin: 90px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-format: "Substep <x>:";
+	x-lvl-4-type: decimal;
+	x-lvl-4-margin: 60px;
+	x-lvl-5-format: "Note <x>:";
+	x-lvl-5-margin: 80px;
+	x-lvl-1-format: "<x>";
+	x-lvl-1-type: ;
+	x-lvl-1-margin: 30px;
+	x-lvl-1-text-indent: -30px;
+	x-lvl-1-p-class: BodyText;
+	x-lvl-1-p-tag: p;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-type: ;
+	x-level-count: 5;
+	x-lvl-2-margin: 25px;
+	x-lvl-2-p-class: BodyText;
+	x-lvl-2-p-tag: p;
+}
+span.HeaderSmall {
+	font-family: Tahoma;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #808080;
+}
+p.ListBulletL1 {
+	font-family: "Palatino Linotype";
+	margin-top: 6pt;
+	font-size: 11pt;
+	margin-bottom: 0pt;
+	margin-left: 0cm;
+	x-next-class: ListBulletL1_Contd;
+	x-next-type: p;
+}
+p {
+	margin-bottom: 14pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 14pt;
+}
+p.HeaderTabAnchor {
+	margin-top: 0pt;
+	font-size: 6pt;
+	margin-bottom: 0pt;
+}
+p.FooterTabAnchor {
+	margin-top: 0pt;
+	font-size: 6pt;
+	margin-bottom: 0pt;
+}
+p.Header_right {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	text-align: right;
+	font-family: Tahoma;
+	color: #808080;
+}
+@media only print{
+	p.ListBulletL1_Contd {
+		margin-left: 1.25cm;
+	}
+	}
+
+h6.Ü2_Search {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-left: 42.55pt;
+	text-indent: -42.55pt;
+	line-height: normal;
+	font-size: 14.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-bottom: 16.5pt;
+}
+h6.Ü3_Search {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	line-height: 115%;
+	font-size: 12.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-bottom: 12pt;
+	margin-left: 57.6pt;
+}
+p.ColHeader_L {
+	margin-top: 3pt;
+	font-weight: bold;
+	margin-bottom: 3pt;
+	border-left-style: none;
+	border-top-style: none;
+}
+p.TblBodyText {
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+p.CalloutLetter {
+	font-weight: bold;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.CalloutText {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}

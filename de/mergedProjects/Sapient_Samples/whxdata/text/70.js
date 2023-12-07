@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Überblick"]],"1":[["\n"],["\n","Das Zeitmodell ist die Basis für viele weitere Funktionen \n in Sapient, beispielsweise die KPI-Berechnung. Im Folgenden werden die \n nötigen Parametrierungen beschrieben.","\n\n\n"]],"2":[["Überblick"]],"id":"70"})

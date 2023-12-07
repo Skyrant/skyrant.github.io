@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Extern - iFrame</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="$node$" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Extern - iFrame">
+        <span>Extern - iFrame</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Extern - iFrame</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Boardlet kann verwendet werden, um eine externe 
+ Webseite oder ein SVG einzubetten. Es kann auch ein Knotenbezug hergestellt 
+ werden und so je nach Knoten ein anderes Bild / eine andere Seite angezeigt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/iFrame.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Beispiel ist die Webseite www.w3schools.com eingebettet.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das iFrame-Boardlet stehen außerdem folgende Einstellungen 
+ zur Verfügung. </p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">URL:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">URL der anzuzeigenden Webseite oder Pfad zum 
+ SVG.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Enthält die URL den Platzhalter $loginToken$, 
+ wird die Prozedur User_getLoginToken aufgerufen und der zurückgegebene 
+ Wert eingefügt. Gibt die Prozedur einen Fehler zurück, wird ein Leerstring 
+ in den Platzhalter eingesetzt. Dies ermöglicht die Anmeldung an einer 
+ anderen Applikation mit dem User, der an der Sapient Web App angemeldet 
+ ist.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Um beispielsweise ein SVG aus Legato Classic 
+ anzuzeigen, muss der Pfad zunächst die Adresse der Classic-Webapplikation 
+ enthalten und kann zusätzlich um die Angabe des Views, eines Benutzers 
+ und ggf. einer Knoten-ID erweitert werden. Beispiel: http://legato.classic.de/Legato/visu.html?l_username=xxx&amp;l_password=xxx</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Welche Parameter zum Aufruf von Legato Classic 
+ übergeben werden können, kann in der Onlinehilfe der Classic-Anwendung 
+ nachgeschlagen werden (&quot;Direktaufruf von Ansichten über eine URL).</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Zusätzlich können die Platzhalter $node$ und 
+ $detailInfo$ verwendet werden. Diese dienen dazu, um abhängig von den 
+ Werten dieser Parameter andere Informationen anzuzeigen. Befüllt werden 
+ die Parameter durch die Boardlets <a href="../02_Basis/Navigation/Layout/Layout.htm">Knotenlayout</a> 
+ / <a href="../02_Basis/Navigation/Node_Tree.htm">Knotenbaum</a> und Generische 
+ Tabelle.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zu den Platzhaltern, siehe bitte 
+ <a href="../../Placeholders.htm">Platzhalter</a>.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Knoten-ID:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">ID des Knotens, der zuletzt im Layout-Boardlet 
+ / Knotenbaum selektiert wurde. Dieser Wert wird in den Parameter $node$ 
+ eingetragen und für die Abfrage verwendet.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Detailinfo:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Inhalt der selektierten Spalte, die in der Generische 
+ Tabelle als Detail-Info festgelegt wurde. Dieser Wert wird in den Parameter 
+ $detailInfo$ eingetragen und für die Abfrage verwendet.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zu Filterstrings, siehe bitte <a href="../../Filter_Strings.htm">Filterstrings</a>.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Feld der Detailinformation:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Soll das Boardlet Empfänger und nicht Sender 
+ sein, kann hier festgelegt werden, mit welchem Wert ein im Filter verwendeter 
+ Platzhalter $detailinfo$ aus der sendenden Tabelle ersetzt werden soll, 
+ z.B. name. Der Parametertyp sollte hier immer auf local gesetzt sein.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für weitere Infos zu Filterstrings, siehe bitte 
+ <a href="../../Filter_Strings.htm">Filterstrings</a>.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Für Details zur Bedeutung der einzelnen Platzhalter, 
+ siehe bitte <a href="../../Placeholders.htm">Platzhalter</a>.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Für dieses Boardlet müssen keine Daten im LC2 konfiguriert 
+ werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">url</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">detailInfo</p></td>
+		<td><p class="TabellenInhalt">Object</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">detailInfoValue</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

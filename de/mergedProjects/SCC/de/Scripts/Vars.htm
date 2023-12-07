@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "7.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Variablen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Variablen">
+        <span>Variablen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Variablen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;Variablennamen&quot; können aus Ziffern und Buchstaben 
+ in beliebiger Reihenfolge bestehen. Groß- und Kleinschreibung wird nicht 
+ unterschieden. Die Länge des Namens ist nicht vorgeschrieben.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Für den Namen gibt es keine Namenskonvention, 
+ es ist beispielsweise auch möglich, einen Namen mit Leerzeichen, Plus 
+ (+) oder Minus (-) zu vergeben. Allerdings werden diese Zeichen bei der 
+ Verwendung in einem Script nicht richtig erkannt, da der Scanner eine 
+ Trennung bei diesen Zeichen durchführt. Es sollte also im Namen auf diese 
+ Zeichen verzichtet werden. Alternativ kann die Variable im Script in doppelte 
+ Hochkommata gestellt werden, z.B. &quot;Value.Ich bin eine Variable&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Definition erfolgt durch Angabe des &quot;Typs&quot; 
+ gefolgt von dem &quot;Variablennamen&quot;. Es können auch mehrere Variablen 
+ des gleichen Typs hintereinander definiert werden. Dabei müssen die einzelnen 
+ Namen durch Komma getrennt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">string   name, path</p>
+<p class="TextCode" data-condition="Others:Deutsch">long     count</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Array" id="Array"></a>Array</h3>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;Variablen&quot; können auch als <b>Array</b> 
+ definiert werden. Dabei wird dem Namen die Arraygröße durch eckige Klammern 
+ eingegrenzt nachgestellt. Array beginnt bei der Adressierung mit 0, d.h., 
+ Array[0] ist das erste Feld. Beispielsweise zählt &quot;szTexts[10]&quot; 
+ von 0-9.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">long     numarr[16]</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Struct" id="Struct"></a>Struct</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Variablen können auch als Struct definiert werden. 
+ Dabei wird zuerst das Schlüsselwort <b>struct</b>, gefolgt von dem Namen 
+ der Struktur angegeben. Die einzelnen Mitglieder der Struktur werden durch 
+ <b>begin</b> und <b>end</b> eingegrenzt. Ein Array aus Strukturen kann 
+ nicht definiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">struct   textline</p>
+<p class="TextCode" data-condition="Others:Deutsch">begin</p>
+<p class="TextCode" data-condition="Others:Deutsch">  long nr</p>
+<p class="TextCode" data-condition="Others:Deutsch">  char data[256]</p>
+<p class="TextCode" data-condition="Others:Deutsch">end</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Static-Variablen" id="Static-Variablen"></a>Static-Variablen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Script-Variablen behalten ihren Wert nur während eines 
+ Durchlaufes. Beim nächsten Aufruf des Scripts werden die Variablen zunächst 
+ wieder auf Nullwerte gesetzt. Sollen Werte den ganzen Projektablauf über 
+ erhalten werden, so muss der Typangabe bei der Variablendeklaration das 
+ Schlüsselwort <b>static</b> vorangestellt werden. &quot;Static&quot;-Variablen 
+ werden nur bei Projektbeginn auf Nullwerte initialisiert:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">static long l1 // behält ihren Wert</p>
+<p class="TextCode" data-condition="Others:Deutsch">long   l2      /* 
+ wird bei jedem</p>
+<p class="TextCode" data-condition="Others:Deutsch">                  Durchlauf 
+ auf Null</p>
+<p class="TextCode" data-condition="Others:Deutsch">                  gesetzt</p>
+<p class="TextCode" data-condition="Others:Deutsch">               */</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Block" id="Block"></a>Block</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Block <b>block</b> besteht aus einer beliebigen 
+ Aneinanderreihung von numerischen Werten, Strings und Bool-Werten. Die 
+ maximale Länge eines solchen Blockes ist 65.496 Byte.</p>
+<h3 data-condition="Others:Deutsch"><a name="Bool" id="Bool"></a>Bool</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Typ <b>bool</b> kann zwei Zustände annehmen. Alle 
+ Werte ungleich null sind true, der Wert null false. Zur Eingabe von booleschen 
+ Konstanten sind die Worte &quot;true&quot; und &quot;false&quot; reserviert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Bei Abfragen von booleschen Werten z.B. mit 
+ IF...THEN...ENDIF dürfen keine Vergleichsoperatoren (=, &gt;, &lt;,…) 
+ angegeben werden. Die Abfrage erfolgt direkt auf die Variable (z.B. IF 
+ BOOL1 THEN..., Abfrage auf true) oder mit dem Operator NOT (z.B. IF NOT 
+ BOOL1 THEN..., Abfrage auf false).</p>
+<h3 data-condition="Others:Deutsch"><a name="Byte" id="Byte"></a>Byte</h3>
+<p class="BodyText" data-condition="Others:Deutsch">1-Byte Zahl ohne Vorzeichen.</p>
+<h3 data-condition="Others:Deutsch"><a name="Char" id="Char"></a>Char</h3>
+<p class="BodyText" data-condition="Others:Deutsch">1-Byte Zahl mit Vorzeichen.</p>
+<h3 data-condition="Others:Deutsch"><a name="Double" id="Double"></a>Double</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Gleitkommazahlen werden durch den Typ <b>double</b> 
+ festgelegt. Es handelt sich hierbei um eine 8-Byte IEEE Gleitkommazahl 
+ mit 15-stelliger Genauigkeit.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wertebereich   1.7 * 10 <sup>-308</sup> 
+ bis 1.7 * 10 <sup>+308</sup></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Gleitkommazahlen können in Dezimal- oder Exponentialschreibweise 
+ angegeben werden. Der Exponent wird durch <b>e</b> oder <b>E</b> eingeleitet. 
+ Die Zahl darf keine Leerzeichen enthalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">1.234, .015, -1.345E+3</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DWord" id="DWord"></a>DWord</h3>
+<p class="BodyText" data-condition="Others:Deutsch">4-Byte Zahl ohne Vorzeichen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Element-Variable" data-indexterm="Element-Variable"></a><a name="Elementvariablen" id="Elementvariablen"></a>Elementvariablen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Elementvariablen werden im Script im Klartext angegeben 
+ und müssen durch doppelte Hochkommata eingegrenzt werden, wenn der Variablenname 
+ Leerzeichen oder Sonderzeichen enthält. Der Variablenname wird in voller 
+ Länge angegeben:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">Value.Temp1        // 
+ Variable &quot;Temp1&quot; aus der Gruppe &quot;Value&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">&quot;Value.act temp 2&quot; // Variable &quot;act 
+ temp 2&quot; aus der Gruppe &quot;Value&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Int" id="Int"></a>Int</h3>
+<p class="BodyText" data-condition="Others:Deutsch">4-Byte Zahl mit Vorzeichen.</p>
+<h3 data-condition="Others:Deutsch"><a name="Long" id="Long"></a>Long</h3>
+<p class="BodyText" data-condition="Others:Deutsch">4-Byte Zahl mit Vorzeichen. Dieser Typ wird von den 
+ Variablen intern als Standard-Integerwert verwendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wertebereich   -2.147.483.648 bis 2.147.483.647.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Integer-Zahlenangaben können auch hexadezimal 
+ (vorangestelltes <b>0x</b>)  oder oktal (vorangestellte <b>0</b> 
+ (Null))  angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">long   i</p>
+<p class="TextCode" data-condition="Others:Deutsch">i := 0x1A // hexadezimal</p>
+<p class="TextCode" data-condition="Others:Deutsch">i := 035  // oktal</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Short" id="Short"></a>Short</h3>
+<p class="BodyText" data-condition="Others:Deutsch">2-Byte Zahl mit Vorzeichen.</p>
+<h3 data-condition="Others:Deutsch"><a name="String" id="String"></a>String</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein <b>String</b> ist eine Folge von null oder mehr 
+ ASCII-Zeichen. Der String kann eine Länge bis zu 65.498 Zeichen haben 
+ und wird durch ein Nullzeichen abgeschlossen. Wird ein konstanter String 
+ eingegeben, ist er durch einfache Hochkommata einzugrenzen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>:</p>
+<p class="TextCode" data-condition="Others:Deutsch">string s</p>
+<p class="TextCode" data-condition="Others:Deutsch">s := &#39;I am a string&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Soll ein String Zeichen enthalten, die nicht darstellbar 
+ sind (z.B. Zeilenvorschub), können Escape-Sequenzen eingegeben werden. 
+ Die Escape-Sequenzen beginnen mit einem Backslash (<b>\</b>).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Backslash in Kombination mit oktalen oder hexadezimalen 
+ Zahlen repräsentiert den ASCII oder Steuercode, der diesem Wert entspricht. 
+ Ein Carriage Return (Wagenrücklauf) kann z.B. durch &#39;\x0D&#39; dargestellt 
+ werden. Soll in dem String ein Backslash verwendet werden, muss dieser 
+ verdoppelt werden (<b>\\</b>). Dies ist z.B. bei Angabe von Verzeichnispfaden 
+ erforderlich. Die folgende Tabelle enthält alle erlaubten Escape-Sequenzen:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenÜberschrift">Sequenz</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenÜberschrift">Wert</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenÜberschrift">Zeichen</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenÜberschrift">Bedeutung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\a</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x07</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">BEL</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Alarmton</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\b</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x08</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">BS</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Backspace</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\f</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x0C</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">FF</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Seitenvorschub</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\n</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x0A</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">LF</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Zeilenvorschub</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\r</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x0D</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">CR</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Carriage 
+		 Return</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\t</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x09</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">HT</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Tabulator 
+		 horizontal</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\v</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x0B</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">VT</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Tabulator 
+		 vertikal</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\\</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x5C</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">\</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Backslash</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\&#39;</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x27</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">&#39;</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Hochkomma 
+		 einfach</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\&quot;</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x22</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">&quot;</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Hochkomma 
+		 doppelt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\?</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">0x3F</p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt">?</p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Fragezeichen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\0</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"> </p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt"> </p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Oktalzahl</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\x</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"> </p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt"> </p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Hexadezimalzahl</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">\X</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"> </p></td>
+		<td style="vertical-align: top;" width="94"><p class="TabellenInhalt"> </p></td>
+		<td style="vertical-align: top;" width="255"><p class="TabellenInhalt">Hexadezimalzahl</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Word" id="Word"></a>Word</h3>
+<p class="BodyText" data-condition="Others:Deutsch">2-Byte Zahl ohne Vorzeichen.</p>
+
+
+</body></html>

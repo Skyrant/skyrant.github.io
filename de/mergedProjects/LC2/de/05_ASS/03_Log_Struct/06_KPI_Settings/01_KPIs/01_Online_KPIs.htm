@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "6.3.3.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Beschreibung der KPIs_Schnip.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Online-KPIs</title>
+<link rel="StyleSheet" href="../../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Online-KPI,Online Delta,KPI Delta,Aggregierung,KPI" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Online-KPIs">
+        <span>Online-KPIs</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Online-KPIs</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Das Vorgehen zur Ermittlung von Online-KPIs ist wie 
+ folgt:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Aggregierung Stufe 1</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch">Ständige Summierung der Störzeiten (überlappungsbereinigt) 
+ je Verfügbarkeitstyp (Time Slice Types hängen entweder an der Meldeart 
+ oder an der Meldeklasse und regeln mit Hilfe von zugehörigen Prioritäten 
+ die überlappungsbereinigte Bildung von Störzeiten zur Verfügbarkeitsermittlung).</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Aggregierung Stufe 2</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch">Ständige Summierung der Störzeiten (überlappungsbereinigt) 
+ mit gleicher Prioritätsstufe (kann aus Stufe 1 abgeleitet werden).</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Aggregierung Stufe 3</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch">Ständige Summierung der Störzeiten (überlappungsbereinigt).</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Berechnung der Kennzahlen erfolgt über zyklische 
+ Jobs der ApplicationEngine mit Berücksichtigung der aggregierten (abgeschlossenen) 
+ und offenen Zustände. Mögliche Änderungen im Zuge der Meldungsbewertung 
+ in den online aggregierten Verfügbarkeitstypen werden berücksichtigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die ermittelten Online-KPIs werden über die zugeordneten 
+ Variablen (LC2) zur Verfügung gestellt und können z.B. in &quot;Berechneten 
+ Werten&quot; und SVG-Bildern weiterverarbeitet werden. Die Aktualisierung 
+ der Variablenwerte (und damit nachfolgend die der über Wertänderung getriggerten 
+ Prozesse) erfolgt dabei über ein wählbares Delta.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Online-KPIs werden je Knoten in Variablen gespeichert. 
+ Die Namen der Variablen setzen sich aus folgenden Teilen zusammen: Fester 
+ Teil &#39;online.&#39; + Kurzbezeichnung des Knotens (String) + Knoten-ID + &#39;.avtot&#39; 
+ (Kurzbezeichnung des Online-KPIs, hier als Beispiel &#39;Gesamtverfügbarkeit 
+ AVTOT&#39;).</p>
+
+
+</body></html>

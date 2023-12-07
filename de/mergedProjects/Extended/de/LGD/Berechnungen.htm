@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Berechnungen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Berechnungen">
+        <span>Berechnungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Berechnungen</h1>
+<h3 data-condition="Others:Deutsch"><a id="Überblick"></a>Überblick</h3>
+<p data-condition="Others:Deutsch">Berechnungen sind spezielle Datenobjekte für Vorgänge wie Werte hinzufügen 
+ oder Input-Werte mit besonderen Output-Werten abzubilden. Formeln sind 
+ vor allem für mathematische Vorgänge oder String-Vorgänge relativ leicht 
+ zu lesen und zu verwenden. Berechnungen führen manchmal zu besser lesbaren 
+ Ausdrücken (z. B. Abbildung von Werten).</p>
+<p data-condition="Others:Deutsch">Wenn das Rechenergebnis für verschiedene Bindings benötigt wird, können 
+ Sie im Datenquellenbereich des Bindings festgelegt werden. Es ist aber 
+ auch möglich, eine Rechnung einzufügen, wo auch immer ein Wert einer Eigenschaft 
+ zugeschrieben ist (kann wie eine Datenreferenz verwendet werden).</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n1&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n2&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n2&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;sum&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;function&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;name&quot;: 
+ &quot;sum&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;values&quot;: 
+ [</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                                &quot;ref&quot;: 
+ &quot;n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                                &quot;ref&quot;: 
+ &quot;n2&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    ]</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: 
+ &quot;sum&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

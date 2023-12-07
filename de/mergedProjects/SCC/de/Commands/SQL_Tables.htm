@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SQL-Funktionen mit Tabellen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SQL-Funktionen mit Tabellen">
+        <span>SQL-Funktionen mit Tabellen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SQL-Funktionen mit Tabellen</h2>
+<h3 data-condition="Others:Deutsch"><a name="Delete" id="Delete"></a>Delete</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool Delete(string filter)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löschen eines Datensatzes aus der Tabelle mit der Bedingung 
+ <b>filter</b></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Server.Table1.Delete(&#39;where id=1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="First" id="First"></a>First</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool first</p>
+<p class="BodyText" data-condition="Others:Deutsch">Geht zum ersten Datensatz der Ergebnismenge der zuvor 
+ mit &quot;select&quot; ausgeführten Abfrage (nur Cursortypen 1,2 und 3).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.Select(&#39;where 
+ PROJECT_ID = 1&#39;, 2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.First</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if ok then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;Data found for project_id = 
+ 1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;No data found for project_id 
+ = 1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Insert" id="Insert"></a>Insert</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool Insert(string filter)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Einfügen eines Datensatzes in die Tabelle. Die Angabe 
+ eines Filters <b>filter</b> ist bei &quot;Insert&quot; nicht sinnvoll, 
+ es muss aber mindestens ein Leerstring angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool err</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Legato.MyUserTable.Userdata := &#39;My new 
+ value&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">err := Database.Legato.MyUserTable.Insert(&#39;&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Last" id="Last"></a>Last</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool last</p>
+<p class="BodyText" data-condition="Others:Deutsch">Geht zum letzen Datensatz der Ergebnismenge der zuvor 
+ mit &quot;select&quot; ausgeführten Abfrage (nur Cursortypen 1,2 und 3).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.Select(&#39;where 
+ PROJECT_ID = 1&#39;, 2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.Last</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Next" id="Next"></a>Next</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool next</p>
+<p class="BodyText" data-condition="Others:Deutsch">Geht zum nächsten Satz der Ergebnismenge der zuvor 
+ mit &quot;select&quot; ausgeführten Abfrage (alle Cursortypen).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.Select(&#39;where 
+ PROJECT_ID = 1&#39;, 2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while ok do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  ok := Database.Legato.P_OUT_VALUES.Next</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(Database.Legato.P_OUT_VALUES.TIME_STARTED)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="NRows" id="NRows"></a>NRows</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long NRows</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert die Anzahl der Datensätze der Ergebnismenge 
+ der zuvor mit &quot;select&quot; ausgeführten Abfrage (nur Cursortypen 
+ 1,2 und 3).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     rows</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok   := Database.Legato.P_OUT_VALUES.Select(&#39;&#39;, 
+ 2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rows := Database.Legato.P_OUT_VALUES.nRows</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(&#39;Rows in P_OUT_VALUES: &#39; + LToStr(rows, 10))</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Prev" id="Prev"></a>Prev</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool prev</p>
+<p class="BodyText" data-condition="Others:Deutsch">Geht zum vorherigen Satz der Ergebnismenge der zuvor 
+ mit &quot;select&quot; ausgeführten Abfrage (nur Cursortypen 1,2 und 3).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.Select(&#39;where 
+ PROJECT_ID = 1 &#39; +</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                          &#39;order 
+ by TIME_STARTED&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                                          2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := Database.Legato.P_OUT_VALUES.Last</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while ok do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(Database.Legato.P_OUT_VALUES.TIME_STARTED)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  ok := Database.Legato.P_OUT_VALUES.Prev</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Select" id="Select"></a>Select</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool Select(string filter, long typ)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ausführen einer SQL-Abfrage mit der Bedingung <b>filter. 
+ typ</b> gibt den Cursortyp an:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="47"><p class="TabellenÜberschrift">Typ</p></td>
+		<td style="vertical-align: top;" width="208"><p class="TabellenÜberschrift">ODBC 
+		 Attribut</p></td>
+		<td style="vertical-align: top;" width="279"><p class="TabellenÜberschrift">Bedeutung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="47"><p class="TabellenInhalt">0</p></td>
+		<td style="vertical-align: top;" width="208"><p class="TabellenInhalt">SQL_CURSOR_FORWARD_ONLY</p></td>
+		<td style="vertical-align: top;" width="279"><p class="TabellenInhalt">Tabelle 
+		 kann nur vorwärts gescrollt werden; keine Abfrage mit NRows möglich, 
+		 schnelle Bearbeitung von großen Tabellen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="47"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="208"><p class="TabellenInhalt">SQL_CURSOR_KEYSET_DRIVEN</p></td>
+		<td style="vertical-align: top;" width="279"><p class="TabellenInhalt">Tabelle 
+		 kann vor- und rückwärts gescrollt werden; Abfrage mit Nrows möglich; 
+		 Datenänderungen durch andere Tasks werden teilweise erkannt (nur 
+		 Wertänderung, nicht Insert-Funktionen!).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="47"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="208"><p class="TabellenInhalt">SQL_CURSOR_DYNAMIC</p></td>
+		<td style="vertical-align: top;" width="279"><p class="TabellenInhalt">Tabelle 
+		 kann vor- und rückwärts gescrollt werden; Abfrage mit NRows möglich; 
+		 Datenänderungen durch andere Tasks werden erkannt</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="47"><p class="TabellenInhalt">3</p></td>
+		<td style="vertical-align: top;" width="208"><p class="TabellenInhalt">SQL_CURSOR_STATIC</p></td>
+		<td style="vertical-align: top;" width="279"><p class="TabellenInhalt">Tabelle 
+		 kann vor- und rückwärts gescrollt werden; Abfrage mit NRows möglich; 
+		 Datenänderungen durch andere Tasks werden nicht erkannt!</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Je nach Datenbank werden unterschiedliche Cursortypen 
+ unterstützt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Beim Win64-Cloud Connector darf in der abgefragten 
+ Tabelle kein Feld vom Typ &quot;BLOB&quot; oder &quot;CLOB&quot; vorhanden 
+ sein. Der Inhalt solcher Felder kann auch im Cloud Connector nicht behandelt 
+ werden. Die Ausführung des Selects führt zu einer schweren Ausnahme des 
+ Cloud Connector-Prozesses.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Müssen Tabellen dieser Art abgefragt werden, 
+ bestehen z.B. folgende Möglichkeiten:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Verwendung von &quot;Execute&quot; bzw. &quot;ExecuteEx&quot; 
+ oder</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Erstellen eines Views auf die Tabelle in der 
+ Datenbank und Abfrage der Daten mit &quot;Select&quot; auf den View. (Die 
+ Felder eines Views können wie bei einer Tabelle in das Cloud Connector 
+ importiert werden).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.Table1.Select(&#39;where id=1&#39;, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Update" id="Update"></a>Update</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool Update(string filter)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreiben von Daten in die Tabelle mit der Bedingung 
+ <b>filter</b></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datenbanktreiber liefern Fehlermeldungen wenn</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Felder vom Typ Identität (ID) importiert wurden, 
+ und über den Update-Befehl dieses Feld beschrieben werden soll</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ein zuvor ausgeführter SELECT-Befehl ohne weitere 
+ Datenbehandlung die Verbindung zur Datenbank blockiert</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">das Datenformat der UPDATE-Variablen inkompatibel 
+ zum Datenbankfeld ist (z.B. Stringlänge überschritten)</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool err</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Legato.MyUserTable.Userdata := &#39;My new 
+ value&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">err := Database.Legato.MyUserTable.Update(&#39;where 
+ id = 2&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

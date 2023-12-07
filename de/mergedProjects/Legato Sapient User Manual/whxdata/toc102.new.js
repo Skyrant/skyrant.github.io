@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Allgemein","type":"item","tilePath":"","description":"","url":"de/Boardlets/11_RecipeManagement/Web_App/User_Interface_der_WebApp/Rezeptliste.htm#Allgemein"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

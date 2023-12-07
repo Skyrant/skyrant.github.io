@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.3_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Modul-Funktionen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Modul-Funktionen">
+        <span>Modul-Funktionen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only"><span style="background: white;">Modul-Funktionen</span></h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">System-Administration | Benutzer | Modul-Funktionen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only"><span style="background: white;">Funktion</span></h6>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch;Others:Sapient_only"><span style="background: white;">Hier 
+ können Berechtigungen für Funktionen innerhalb des LC2 vergeben werden. 
+ Berechtigungen können von jedem Benutzer mit der entsprechenden Berechtigung 
+ vergeben werden. Die Tabelle selbst kann nur im System Developer Mode 
+ editiert werden. </span></p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch;Others:Sapient_only"><span style="background: white;">Die 
+ Tabelle enthält 4 Basis-Funktionen für den LC2:</span></p>
+<p class="Aufzählung1 ListeNum" style="background-color: #ffffff; text-indent: -24px; 
+	 margin-left: 42px;" data-condition="Others:Deutsch;Others:Sapient_only">&quot;LC2 benutzen&quot;: </p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Ermöglicht es dem entsprechenden Benutzer, 
+ den LC2 zu verwenden. Hat der Benutzer diese Berechtigung nicht, kann 
+ er sich nicht am LC2 anmelden - der LC2 wird geschlossen. Nachdem auch 
+ ältere LC2 Versionen diese Funktionen verwenden, wurde sicher gestellt, 
+ dass auch ältere LC2 Versionen sich nicht mit neueren Sapient-Systemen 
+ verbinden können, wenn die Berechtigung fehlt.</p>
+<p class="Aufzählung1 ListeNum" style="background-color: #ffffff; text-indent: -24px; 
+	 margin-left: 42px;" data-condition="Others:Deutsch;Others:Sapient_only">&quot;LC2 Developer Mode benutzen&quot;:</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Nach erfolgreicher Authentifizierung und dem 
+ Versuch, den LC2 im Developer Mode (Verbindungseinstellungen) zu öffnen, 
+ werden die entsprechenden Berechtigungen geprüft. Hat der Benutzer keine 
+ Berechtigung für diesen speziellen Mode, wird der Login beendet.</p>
+<p class="Aufzählung1 ListeNum" style="background-color: #ffffff; text-indent: -24px; 
+	 margin-left: 42px;" data-condition="Others:Deutsch;Others:Sapient_only"><span style="background-color: #ffffff;">&quot;LC2 
+ System Developer Mode benutzen&quot;:</span></p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Nach erfolgreicher Authentifizierung und dem 
+ Versuch, den LC2 im System Developer Mode (Verbindungseinstellungen) zu 
+ öffnen, werden die entsprechenden Berechtigungen geprüft. Hat der Benutzer 
+ keine Berechtigung für diesen speziellen Mode, wird der Login beendet.</p>
+<p class="Aufzählung1 ListeNum" style="background-color: #ffffff; text-indent: -24px; 
+	 margin-left: 42px;" data-condition="Others:Deutsch;Others:Sapient_only">&quot;SQL Fenster benutzen&quot;: </p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Der Ribbon-Button um den SQL-Screen zu öffnen 
+ wird abhängig von dieser Berechtigung angezeigt.</p>
+<p class="BodyText" style="background-color: #ffffff;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Um diese neuen Funktionen zu verwenden, müssen 
+ die Berechtigungen den Benutzern zugewiesen werden. Nachdem initial nach 
+ dem Update auf die aktuelle Version keine Berechtigungen existieren, kann 
+ sich nur der sapient_sys Benutzer am LC2 anmelden - dieser Benutzer kann 
+ den LC2 generell im Developer oder System Developer Mode benutzen. Er 
+ kann dann die &quot;LC2 benutzen&quot; Berechtigung für die gewünschten 
+ Benutzer vergeben.</p>
+
+
+</body></html>

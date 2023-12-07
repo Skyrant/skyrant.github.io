@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Einrichtung einer Autostart-Funktion für die Datenbank</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h2>Einrichtung einer Autostart-Funktion für die Datenbank</h2>
+<p class="BodyText">Eine Autostart-Funktion für das Datenbank-System (und den Listener) wird auf Linux-Systemen über den Daemon-Mechanismus eingerichtet. Oracle empfiehlt für die verschiedenen Versionen seines RDBMS verschiedene Einrichtungsvarianten (http://oracle-base.com/articles/linux/automating-database-startup-and-shutdown-on-linux.php). Hier wird nur die Einrichtung des automatischen Neustarts für Oracle in der Version 11gR2 beschrieben.</p>
+<p class="BodyText">Dazu wird eine Datei /etc/init.d/dbora neu erstellt und in den Autostart-Mechanismus von Linux eingehängt. Sämtliche der folgenden Aktionen werden mit dem User root ausgeführt.</p>
+<p class="TextCode"># cd /etc/init.d</p>
+<p class="TextCode"># vi dbora</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die Datei muss die in den vorhergehenden Abschnitten eingestellten Werte für das Oracle-Home-Verzeichnis exakt übernehmen:</p>
+<p class="TextCode">#!/bin/sh</p>
+<p class="TextCode"># chkconfig: 345 99 10</p>
+<p class="TextCode"># description: Oracle auto start-stop script.</p>
+<p class="TextCode">#</p>
+<p class="TextCode"># Set ORA_HOME to be equivalent to the $ORACLE_HOME</p>
+<p class="TextCode"># from which you wish to execute dbstart and dbshut;</p>
+<p class="TextCode">#</p>
+<p class="TextCode"># Set ORA_OWNER to the user id of the owner of the</p>
+<p class="TextCode"># Oracle database in ORA_HOME.</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">ORA_HOME=/u01/app/oracle/product/11.2.0/dbhome_1</p>
+<p class="TextCode">ORA_OWNER=oracle</p>
+<p class="TextCode">export ORACLE_UNQNAME=db12c</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">if [ ! -f $ORA_HOME/bin/dbstart ]</p>
+<p class="TextCode">then</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;echo "Oracle startup: cannot start"</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;exit</p>
+<p class="TextCode">fi</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode">case "$1" in</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;'start')</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start the Oracle databases:</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# The following command assumes that the oracle login</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# will not prompt the user for any values</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Remove "&amp;" if you don't want startup as a background process.</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;su $ORA_OWNER -c "$ORA_HOME/bin/dbstart $ORA_HOME" &amp;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;touch /var/lock/subsys/dbora</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;;;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;'stop')</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Stop the Oracle databases:</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# The following command assumes that the oracle login</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# will not prompt the user for any values</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;su $ORA_OWNER -c "$ORA_HOME/bin/dbshut $ORA_HOME"</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rm -f /var/lock/subsys/dbora</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;;;</p>
+<p class="TextCode">esac</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Anschließend werden die Datei-Rechte gesetzt und der Run-Level eingestellt:</p>
+<p class="TextCode"># chmod 750 /etc/init.d/dbora</p>
+<p class="TextCode"># chkconfig --add dbora</p>
+<p class="BodyText">Das Datenbank-System, die Instanz LEGATO (siehe vorhergehenden Abschnitt) und der Listener werden nun bei jedem Neustart des Linux-Servers mit gestartet.</p>
+</body>
+</html>

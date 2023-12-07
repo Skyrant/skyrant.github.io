@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Allgemeiner Überblick</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation18.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Allgemeiner Überblick">
+        <span>Allgemeiner Überblick</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Allgemeiner Überblick</h2>
+<div data-conref="../../assets/snippets/de_Hinweis_Daten.hts" data-condition="Others:Deutsch">
+<p class="Textkörperfett"><img src="../../Legato_LC2_DE_Format-Dateien/Allgemein/02_Hinweis_de.jpg" alt="" border="0"/>:</p>
+<p class="TextkörperHinweis">Seien Sie sorgfältig bei der Bearbeitung der 
+ Daten. Die Daten werden direkt in die Datenbank eingetragen. Bei mangelnder 
+ Sorgfalt oder fehlerhaften Eingaben kann es zu Fehlverhalten des Systems 
+ oder Datenverlust kommen.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Administration erfolgt im Legato Configuration 
+ Center LC2. Dieses ist das zentrale Werkzeug zur Parametrierung eines 
+ Legato-Projekts in der SQL-Datenbasis.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle benötigten Parameter und Werte werden dabei direkt 
+ in Tabellen der Datenbank eingetragen. Daraus ergibt sich, dass keine 
+ Parametrierdaten außerhalb der Datenbank in Dateien gehalten oder gespeichert 
+ werden, ein Menüpunkt wie &quot;Datei | Speichern&quot; existiert im LC2 
+ nicht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei einer laufenden Legato-Applikation ist dementsprechend 
+ jede Änderung sofort online verfügbar und wirksam. Paralleles Arbeiten, 
+ z.B. Neu-Parametrierung, mit dem LC2 auf verschiedenen Client-Rechnern 
+ ist damit ebenfalls möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Generell können für das System eine &quot;logische 
+ Struktur&quot; (Gliederung der Fertigung z.B. in Bereiche, Linien, Anlagen, 
+ Funktionsgruppen, etc.) und eine &quot;physikalische Struktur&quot; (die 
+ angeschlossenen Gateways und die daran gekoppelten Steuerungssysteme) 
+ definiert werden. Diese Gliederung verleiht dem System ein hohes Maß an 
+ Flexibilität und die Möglichkeit zur Abbildung beliebiger Fertigungsumgebungen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Standardansicht des Clients entsteht schließlich 
+ durch die Verknüpfung von Prozesswerten (aus der physikalischen Struktur) 
+ mit Elementen der Fertigungsstruktur. Diese Fertigungsstruktur wird in 
+ Form eines &quot;Navigationsbaumes&quot; im Client dargestellt. Durch 
+ Selektion eines Elementes (Knoten) in diesem Baum werden dann die zugeordneten 
+ Prozesswerte angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Oberfläche des LC2 steht in Deutsch und Englisch 
+ zur Verfügung.</p>
+<hr id="SeeAlsoSpacer" style="float: aligncenter; " data-condition="Others:Deutsch"/>
+<table class="SeeAlsoTab" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="sah-SeeAlsoHeading"><span data-keyref="SeeAlso_DE">Verwandte Themen:</span></p></td>
+		<td> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><ul class="SeeAlsoListEntry">
+			<li class="SeeAlsoListEntry"><a href="../02_Handling/02_Menues/02_Settings.htm">Einstellungen</a></li>
+		</ul></td>
+		<td> </td>
+		<td> </td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

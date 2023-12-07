@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.22";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Logbuchfunktionen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Logbuchfunktionen">
+        <span>Logbuchfunktionen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Logbuchfunktionen</h2>
+<h3 data-condition="Others:Deutsch"><a name="Debug" id="Debug"></a>Debug</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Debug(string text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> in das Logbuch.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if OPC.GOPS.PLC1.Pressure &gt; 100 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;WARNING: Pressure too high!&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DebugBlkDump" id="DebugBlkDump"></a>DebugBlkDump</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: DebugBlkDump(string text, block b, 
+ long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> und einen Hexdump ins 
+ Logbuch. Der Hexdump wird aus dem Block <b>b</b> ab Offset 0 mit der Länge 
+ von <b>size</b> Bytes ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long  l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := OPC.GOPS.PLC1.Alarmblock</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := BlockSize(b)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">DebugBlkDump(LToStr(l,10)+&#39; Byte(s) :&#39;, b, l)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DebugVarDump" id="DebugVarDump"></a>DebugVarDump</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: DebugVarDump(string text, pointer p, 
+ long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> und einen Hexdump ins 
+ Logbuch. Der Hexdump wird aus dem Variablenbereich des Scripts mit der 
+ Länge von <b>size</b> Bytes ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">char  c[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">MemSet(&amp;c, 33, 128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">DebugVarDump(&#39;128 Bytes :&#39;, &amp;c, 128)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogConfig" id="LogConfig"></a>LogConfig</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogConfig(long loghandle, long logmask)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Konfiguriert den durch <b>loghandle</b> angegebenen 
+ Logger. <b>Logmask</b> schaltet das Loggen der Klassen (1 - 32) ein / 
+ aus.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiele</span>:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Logmask 0xFFFFFFFF schaltet das Loggen 
+	 der Klassen 1 –32 ein</p></li>
+	<li><p class="ListBulletL1">Logmask 0xFFFF0000 schaltet das Loggen 
+	 der Klassen 1 –16 aus und 17 –32 ein</p></li>
+	<li><p class="ListBulletL1">Logmask 0x00000000 schaltet das Loggen 
+	 der Klassen 1 – 32 aus</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">LogConfig(loghandle, 0xFFFFFFFF)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogCreate" id="LogCreate"></a>LogCreate</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long LogCreate(string logname, string 
+ dir, long logfiles, long logfilesize, long errfiles, long errfilesize)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erzeugt im Verzeichnis <b>dir</b> die Logdatei <b>logname</b>.log 
+ und die Errordatei <b>logname</b>.err.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn die Größe einer Logdatei <b>logfilesize</b> überschreitet, 
+ werden die Logdateien <b>logname</b>.log.n in <b>logname</b>.log.n+1 umbenannt 
+ (dito für Errordateien beim Überschreiten der Größe von <b>errfilesize</b>).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn bereits <b>logfiles</b> Logdateien bzw. <b>errfiles</b> 
+ Errordateien existieren, wird die älteste Datei gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Logmeldungen aller Klassen werden in der Logdatei gespeichert. 
+ Fehler (Klasse 17 – 32) werden zusätzlich auch in der Errordatei gespeichert, 
+ sofern das Loggen der Klasse eingeschaltet ist (siehe auch LogConfig).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long logHandle</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logHandle := LogCreate(&#39;logxy&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       &#39;home/legato/log&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       20, 
+ 10 * 1024 * 1024,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       10,      1024 
+ * 1024</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                      )</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogDump" id="LogDump"></a>LogDump</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogDump(long logcls, string text, block 
+ b, long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> und einen Hexdump mit 
+ der Logklasse <b>logcls</b> ins Logbuch. Der Hexdump wird aus dem Block 
+ b ab Offset 0 mit der Länge von <b>size</b> Bytes ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblocknum(b, 0, 1, false, 26)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblockstr(b, 1, 26, &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">LogDump(0x07, &#39;LogDump: &#39;, b, 30)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogDumpEx" id="LogDumpEx"></a>LogDumpEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogDumpEx(long loghandle, long logcls, 
+ string text, block b, long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> und einen Hexdump mit 
+ der Logklasse <b>logcls</b> in das durch <b>loghandle</b> angegebene Logbuch. 
+ Der Hexdump wird aus dem Block b ab Offset 0 mit der Länge von <b>size</b> 
+ Bytes ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Den <b>loghandle</b> bekommt man, indem man durch den 
+ Aufruf von <b>LogCreate</b> ein Logbuch erzeugt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long logHandle</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logHandle := LogCreate(&#39;logxy&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       &#39;home/legato/log&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       20, 
+ 10 * 1024 * 1024,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       10,      1024 
+ * 1024</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                      )</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblocknum(b, 0, 1, false, 26)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblockstr(b, 1, 26, &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">LogDumpEx(logHandle, 0x40, &#39;LogDump: &#39;, b, 30)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogPrintf" id="LogPrintf"></a>LogPrintf</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogPrintf(int klasse, string format, 
+ ...)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl erzeugt einen String aus einem Formatstring 
+ <b>format</b> und einer beliebigen Anzahl Parameter und schreibt ihn ins 
+ Logbuch. Dabei wird nicht, wie bei Debug die Klasse 7, sondern die mit 
+ <b>klasse</b> übergebene Klasse verwendet. <b>klasse</b> ist bitcodiert, 
+ d.h. für Klasse 7 muss 0x40 übergeben werden. Die Parameter können Strings 
+ oder numerische Werte sein. Für den Formatstring gelten folgende Angaben:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenÜberschrift">Formatzeichen</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenÜberschrift">Interpretation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">u</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Dezimal 
+		 ohne Vorzeichen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">d</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Dezimal 
+		 mit Vorzeichen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">x</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Hexadezimal 
+		 Kleinschreibung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">X</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Hexadezimal 
+		 Großschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">s</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">String</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dem Formatzeichen muss ein &#39;%&#39; vorangestellt sein. 
+ Bei numerischen Formaten kann die Länge sowie führende Nullen parametriert 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die maximale Zeichenlänge für die Funktion beträgt 
+ 10.239 Zeichen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logprintf(0x01, &#39;String                        : 
+ %s&#39;, &#39;Text&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logprintf(0x02, &#39;Decimal without / with sign   : 
+ %u / %d&#39;, 12, -56)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logprintf(0x80000000, &#39;Hex 4 digits with leading 
+ zero: %04x&#39;, 123)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogPrintfEx" id="LogPrintfEx"></a>LogPrintfEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogPrintfEx(long logHandle, long klasse, 
+ string format, ...)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl erzeugt einen String aus einem Formatstring 
+ <b>format</b> und einer beliebigen Anzahl Parameter und schreibt ihn in 
+ das durch logHandle angegebene Logbuch. <b>klasse</b> ist bitcodiert, 
+ d.h. für Klasse 7 muss 0x40 übergeben werden. Die Parameter können Strings 
+ oder numerische Werte sein. Für den Formatstring gelten folgende Angaben:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenÜberschrift"> Formatzeichen</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenÜberschrift">Interpretation</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">u</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Dezimal 
+		 ohne Vorzeichen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">d</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Dezimal 
+		 mit Vorzeichen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">x</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Hexadezimal 
+		 Kleinschreibung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">X</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">Hexadezimal 
+		 Großschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="149"><p class="TabellenInhalt">s</p></td>
+		<td style="vertical-align: top;" width="385"><p class="TabellenInhalt">String</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dem Formatzeichen muss ein &#39;%&#39; vorangestellt sein. 
+ Bei numerischen Formaten kann die Länge sowie führende Nullen parametriert 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     logHandle</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logHandle := LogCreate(&#39;logxy&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       &#39;home/legato/log&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       20, 
+ 10 * 1024 * 1024,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       10,      1024 
+ * 1024</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                      )</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logPrintfEx(logHandle, 0x40, &#39;String %s&#39;, &#39;Text&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logPrintfEx(logHandle, 0x40, &#39;Dezimal %d&#39;, 123)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logPrintfEx(logHandle, 0x80000000, &#39;Hex %04x&#39;, 
+ 123)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogPuts" id="LogPuts"></a>LogPuts</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogPuts(int klasse, string text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> ins Logbuch. Dabei 
+ wird nicht, wie bei Debug die Klasse 7, sondern die mit <b>klasse</b> 
+ übergebene Klasse verwendet. <b>klasse</b> ist bitcodiert, d.h. für Klasse 
+ 7 muss 0x40 übergeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if OPC.GOPS.PLC1.Pressure &gt; 100 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  logputs(0x80000000, &#39;WARNING: Pressure 
+ too high!&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="LogPutsEx1" id="LogPutsEx1"></a>LogPutsEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: LogPutsEx(long logHandle, long klasse, 
+ string text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den String <b>text</b> in das durch logHandle 
+ angegebene Logbuch. <b>klasse</b> ist bitcodiert, d.h. für Klasse 7 muss 
+ 0x40 übergeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     logHandle</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logHandle := LogCreate(&#39;logxy&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       &#39;home/legato/log&#39;,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       20, 
+ 10 * 1024 * 1024,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                       10,      1024 
+ * 1024</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                      )</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">logPutsEx(logHandle, 0x80000000, &#39;Text xy&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Trace"></a>Trace</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Trace(string text) </p>
+<p class="BodyText" data-condition="Others:Deutsch">Sendet den String <b>text</b> an das Logfenster im 
+ Editor.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">if 
+ OPC.GOPS.PLC1.Pressure &gt; 100 then</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  trace(&#39;WARNING: Pressure too high!&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

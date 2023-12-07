@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Variablen</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Variable" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Variablen">
+        <span>Variablen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Variablen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Datenaustausch | Datenaustausch-Module 
+ | Verbindungen | Variablen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Wertgebundene Daten (Variablen) werden in dieser Tabelle 
+ parametriert. Variablen können von einem der Datentypen numerisch, String 
+ oder Bool sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für jede parametrierte Variable wird ein Eintrag in 
+ der Datenbank vorgenommen. Zur Laufzeit können dann für diese Variablen 
+ Werte aus dem Gateway übergeben und in der Datenbank abgelegt werden. 
+ Dabei können jeweils nur der letzte übergebene Wert (Versorgung der Übersicht) 
+ oder alle übergebenen Werte mit Zeitstempel (für eine Messwertanzeige) 
+ gespeichert werden. Umgekehrt ist es möglich Variablenwerte auch über 
+ das Gateway an den Prozess zu übergeben (Sollwerte).</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Verbindung</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Verbindung. 
+		 Wird automatisch befüllt und kann geändert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Variablensymbol (wie im GW)</p></td>
+		<td><p class="TabellenInhalt">Nur bei Modultyp &lt;Gateway&gt; 
+		 relevant.</p>
+		<p class="TabellenInhalt">Vollständiger Variablenname aus dem Gateway-Projekt. 
+		 Das Buchen von Werten vom Gateway in die Datenbank bzw. das Übergeben 
+		 von (Soll-)Werten von der Datenbank an ein Gateway erfolgt standardmäßig 
+		 über das Variablensymbol.</p>
+		<p class="TabellenInhalt">Das Variablensymbol ist mit dem vollständigen 
+		 Pfad der Variable im Gateway-Projekt anzugeben bzw. zu importieren</p>
+		<p class="TabellenInhalt">Beispiel einer OPC-Variable: OPC.GOPS.SPS_VMONT1.Istwert</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Frei wählbarer Name der Variablen. 
+		 Dieser Name wird für die Anzeige des Wertes im Webclient verwendet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung der Variablen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Parent</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Lookup-Liste 
+		 zur Auswahl eines übergeordneten Datensatzes. Wird zur Parametrierung 
+		 von abhängigen Werten verwendet (z.B. um eine Variable &quot;Taktzeit&quot; 
+		 in &quot;Anlaufzeit&quot;, &quot;Rüstzeit&quot;, &quot;Durchlaufzeit&quot; 
+		 zu splitten).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">SPS-Operand (optional)</p></td>
+		<td><p class="TabellenInhalt">SPS-Operand zur Adressierung der 
+		 Variable in der angebundenen Steuerung (wird abhängig vom verwendeten 
+		 Gateway-Projekt berücksichtigt).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Datentyp</p></td>
+		<td><p class="TabellenInhalt">Datentyp der Variable. Zulässige 
+		 Typen sind Numerisch, Boolean oder String.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Variablenart</p></td>
+		<td><p class="TabellenInhalt">Auswahlfeld für die Art der Variablen. 
+		 Die Art dient der Definition der Verwendung in der Applikation.<br/>
+		Die Art der Definition hat direkte Auswirkung auf die KPI-Berechnung 
+		 (Verfügbarkeit) !<br/>
+		statistikrelevant (KPI)     Iststückzahl<br/>
+		                                                Sollstückzahl<br/>
+		                                                Soll-Taktzeit</p>
+		<p class="TabellenInhalt">nicht statistikrelevant     Ist-Taktzeit<br/>
+		                                                Grenzwert<br/>
+		                                                Pufferzähler<br/>
+		                                                Geplante 
+		 Verfügbarkeit<br/>
+		                                                Trendstückzahl<br/>
+		                                                Sollstückzahl 
+		 aktuell<br/>
+		                                                Wartungszähler<br/>
+		                                                etc.</p>
+		<p class="TabellenInhalt">Die wählbaren Variablenarten sind unter 
+		 Grundkonfiguration | Allgemeine Anwendungen | Variablenarten festgelegt 
+		 (siehe auch dort).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Einheit (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Einheit, 
+		 die im WebClient mit dem Variablenwert angezeigt wird. Dargestellt 
+		 wird dabei jeweils die gewählte Kurzbezeichnung, z.B. °C, min, 
+		 s, Stk., etc.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Darstellungsformat (optional)</p></td>
+		<td><p class="TabellenInhalt">Normierung der Darstellung des Variablenwertes 
+		 im WebClient für numerische Variablen. Siehe auch das Unterkapitel 
+		 Darstellungsformate.</p>
+		<p class="TabellenInhalt">Hinweis: Bei numerischen Variablen sollte 
+		 hier immer ein Format vergeben werden, damit auch andere Anwendungen, 
+		 die mit den Variablen arbeiten korrekt funktionieren.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Weitergabe an GW (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, soll die Variable 
+		 bei Wertänderung dem Gateway zur Verfügung gestellt werden. Die 
+		 Variable wird dann in die Schnittstellentabelle P_OUT_VALUES der 
+		 Datenbank gebucht, statt in die Tabelle P_VALUES_CURRENT. Von 
+		 dort wird der Wert von der SPS abgeholt und in P_VALUES_CURRENT 
+		 geschrieben.</p>
+		<p class="TabellenInhalt">siehe auch Kapitel Gateway und Schnittstellentabelle.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Weitergabe optimieren (optional)</p></td>
+		<td><p class="TabellenInhalt">Nur bei Variablen mit Weitergabe 
+		 an GW = aktiv relevant.</p>
+		<p class="TabellenInhalt">Checkbox nicht aktiv: Jede Wertänderung 
+		 der Variable wird in die Schnittstellentabelle eingetragen.</p>
+		<p class="TabellenInhalt">Checkbox aktiv: Es wird eine Warteschlangenoptimierung 
+		 für die Weitergabe an das Gateway durchgeführt. Ist vor dem Eintrag 
+		 eines Wertes noch ein älterer Wert der gleichen Variablen im Übergabebereich 
+		 (Wert wurde noch nicht vom Gateway abgeholt), so wird kein neuer 
+		 Eintrag erstellt, sondern lediglich der Wert des vorhandenen Eintrags 
+		 aktualisiert.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Faktor</p></td>
+		<td><p class="TabellenInhalt">Faktor zur Berechnung der Variablen. 
+		 Wird vom Gateway für Berechnungen verwendet. Falls kein Gateway 
+		 angebunden ist, wird der Faktor nicht berücksichtigt (z.B. für 
+		 Verbindung &quot;Interne Werte). Default = 1.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Offset</p></td>
+		<td>
+		<p class="TabellenInhalt" data-condition="Others:Sapient_only">Gibt 
+		 das Wertbuchungs-Intervall der Variablen in Sekunden an. Mögliche 
+		 Werte sind 86.400 = Tag, 28.800 = Schicht (8 Stunden), 3.600 = 
+		 Stunde. Variablen, die hier einen Eintrag haben, werden im Boardlet 
+		 &quot;Periodenbezogene Wertbuchung&quot; angezeigt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Untere/Obere Warngrenze</p>
+		<p class="TabellenInhalt">Untere/Obere Alarmgrenze (optional)</p></td>
+		<td><p class="TabellenInhalt">Für die Alarm- und Warngrenzen eines 
+		 Wertes kann jeweils eine Variable (mit numerischen Wert) festgelegt 
+		 werden. Bei Erreichung einer dieser Wertegrenzen erhält der Prozesswert 
+		 in der Übersicht des Clientprogramms einen parametrierbaren Farbumschlag 
+		 und gleichzeitig wird vom System eine Störmeldung erzeugt, die 
+		 automatisch in das Störmeldesystem eingebucht wird.<br/>
+		Siehe auch Werksverwaltung | Meldungsmanagement | Meldeklassen.</p>
+		<p class="TabellenInhalt">Siehe auch VALUE_ALARMS.</p></td>
+	</tr>
+	
+	
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Archiv (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird die Variable 
+		 mit Historie im Wertarchiv gespeichert werden und steht somit 
+		 als Messwert zur Verfügung. Wertverlauf der Variable wird gespeichert, 
+		 jede Wertänderung wird mit dem Zeitstempel der Änderung archiviert.</p>
+		<p class="TabellenInhalt">Checkbox nicht aktiv: Variable wird mit 
+		 ihrem aktuellen Wert und Zeitstempel der letzten Änderung gespeichert.</p>
+		<p class="TabellenInhalt">Auf die Berechnung der KPIs hat diese 
+		 Checkbox keine Auswirkung.</p></td>
+	</tr>
+	
+	<tr class="t2Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Diskret?</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Checkbox: 
+		 1 = der Variablenwert soll diskret in der Messwertanzeige interpretiert 
+		 werden (z.B. geeignet für Stückzahlen mit ganzzahligen Werten). 
+		 0 = der Variablenwert soll als kontinuierlicher Verlauf angezeigt 
+		 werden (z.B. geeignet für Temperatur-Kurven).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Delta (optional)</p></td>
+		<td><p class="TabellenInhalt">Nur bei Variablen mit Archivieren 
+		 relevant.</p>
+		<p class="TabellenInhalt">Bei Angabe eines Wertes ungleich 0 wird 
+		 für die Messwerterfassung nur ein Wert gespeichert, wenn die Differenz 
+		 zum letzten gespeicherten Wert <span data-condition="Others:Sapient_only">größer 
+		 / gleich dem Delta </span>ist. Bei Delta = 0 oder &lt;leer&gt; 
+		 werden alle übergebenen Werte gespeichert. Die Voreinstellung 
+		 dieses Parameters ist 0.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Aktueller Wert</p></td>
+		<td><p class="TabellenInhalt">Hier wird der aktuelle Wert der Variablen 
+		 angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Letztes Update</p></td>
+		<td><p class="TabellenInhalt">Hier wird der Zeitstempel der letzten 
+		 Wertänderung der Variablen angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Aus Import</p></td>
+		<td><p class="TabellenInhalt">Checkbox: 1 = Variable wurde durch 
+		 den letzten Variablen-Import der AE angelegt/geändert.</p>
+		<p class="TabellenInhalt">0 / NULL = Variable war nicht Bestandteil 
+		 des letzten Variablen-Imports.</p>
+		<p class="TabellenInhalt">Die Spalte wird automatisch durch die 
+		 AE befüllt (ab Version 4.6.0.2). Sie dient lediglich zur Information 
+		 und ist schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Max. Wert (optional)</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Lookup-Liste 
+		 zur Auswahl einer anderen Variable, die den maximalen Wert vorgibt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Min. Wert (optional)</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Lookup-Liste 
+		 zur Auswahl einer anderen Variable, die den minimalen Wert vorgibt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Sollwert (optional)</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Lookup-Liste 
+		 zur Auswahl einer anderen Variable, die den Sollwert vorgibt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Farb-Klasse</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">FK 
+		 - Verweis auf eine Farbe, in der dieser Wert in Charts dargestellt 
+		 werden soll. Die Farbcodes selbst sind im jeweiligen CSS-File 
+		 definiert.</p>
+		<p class="TabellenInhalt">Wenn hier nicht spezifiziert, wird die 
+		 beim Wert-Typ definierte Farbe verwendet.</p></td>
+	</tr>
+	
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Auswirkung 
+ der Checkbox &quot;Diskret?&quot; auf die Chartdarstellung:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/de/01_discrete.gif" alt="" style="border: none;" border="0"/></span></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Kontextmenü</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Durch einen Klick mit der rechten Maustaste auf eine 
+ Variable entweder im Navigationsbaum oder am Anfang der Tabellenzeile 
+ öffnet sich ein Kontextmenü. Darüber kann der Wert der Variable gesetzt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Wert setzen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für Testzwecke kann der Wert einer Variablen gesetzt 
+ werden, damit er im WebClient sichtbar wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In dem erscheinenden Dialog kann der neue Wert der 
+ Variable eingegeben werden, die Syntax der Eingabe wird überwacht (z.B. 
+ keine Buchstaben bei num. Variablen). Durch Aktivieren der Checkbox &quot;Set 
+ Value to NULL&quot; wird der Wert der Variablen auf NULL gesetzt. Der 
+ derzeitige Wert der Variable ist im Eingabefeld vorbelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span>Wenn die Variable mit Weitergabe an Gateway parametriert 
+ ist, wird der geänderte Wert erst dann eingetragen, wenn die Übergabe 
+ des Wertes vom Gateway mit gw_val_transmitted quittiert wurde! (siehe 
+ dazu auch weiter unten den Abschnitt P_OUT_VALUES).</span></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Wert setzen (Multi)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hiermit kann der Wert mehrerer Variablen gleichen Datentyps 
+ gleichzeitig gesetzt werden. Haben die selektierten Variablen unterschiedliche 
+ Datentypen, wird eine Fehlermeldung ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In dem erscheinenden Dialog kann der neue Wert der 
+ Variablen eingegeben werden, die Syntax der Eingabe wird überwacht (z.B. 
+ keine Buchstaben bei num. Variablen). Durch Aktivieren der Checkbox &quot;Set 
+ Value to NULL&quot; wird der Wert aller Variablen auf NULL gesetzt. Der 
+ derzeitige Wert der zuletzt markierten Variable ist im Eingabefeld vorbelegt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Dem Default-Knoten zuordnen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Variable wird dem Default-Knoten der Verbindung 
+ direkt zugeordnet. Dieser Menüeintrag steht auch bei Mehrfachauswahl zur 
+ Verfügung.</p>
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch">Layout-Snippet 
+ erstellen (Liste)</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Erstellt 
+ ein Layout-Snippet mit den Databinding-Informationen der selektierten 
+ Variablen (Mehrfachauswahl möglich) und kopiert diese Info in die Zwischenablage. 
+ Es wird eine Zeile je selektierter Variable erstellt. Aus der Zwischenablage 
+ kann die Information in eine Visualisierung eingefügt werden, um Variablen 
+ anzubinden. Für weitere Informationen, siehe bitte Kapitel Erweiterte 
+ Bedienung - Legato Graphic Designer.</p>
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch">Layout-Snippet 
+ erstellen (Summe)</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Erstellt 
+ ein Layout-Snippet mit den Databinding-Informationen der selektierten 
+ Variablen (Mehrfachauswahl möglich) und kopiert diese Info in die Zwischenablage. 
+ Es wird die Summe der selektierten Variablen ausgegeben. Aus der Zwischenablage 
+ kann die Information in eine Visualisierung eingefügt werden, um Variablen 
+ anzubinden. Für weitere Informationen, siehe bitte Kapitel Erweiterte 
+ Bedienung - Legato Graphic Designer.</p>
+
+
+</body></html>

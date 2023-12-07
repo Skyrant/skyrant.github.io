@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">Job &#39;AggrPoller&#39;</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Aggregation" data-condition="Others:Deutsch;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job &#39;AggrPoller&#39;">
+        <span>Job &#39;AggrPoller&#39;</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">Job &#39;AggrPoller&#39;</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job durchsucht die Datenbank nach fälligen Aggregationen 
+ und plant diese zum Ablauf ein. Diese Aggregationen können im LC2 unter 
+ &quot;Application Structure Settings – Data Exchange – Variables – Compression/Aggregation&quot; 
+ parametriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Parametriert werden können die folgenden Aggregationszeiträume: 
+ Stunde, Tag, Woche, Monat und Jahr bzw. Schicht und Produktionstag. Außerdem 
+ ein beliebiges festes Zeitintervall mit Angabe der Minuten. </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Während der Aggregation wird ermittelt, ob die angeforderte 
+ Aggregation auf Basis einer schon existierenden Aggregation berechnet 
+ werden kann. Zum Beispiel für Tagesaggregation können Stundenaggregationen 
+ als Vorberechnungen verwendet werden. Wurde keine Stundenaggregation definiert, 
+ so wird die Tagesaggregation auf Basis von Rohdaten berechnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Die Ergebnisse dieser Aggregationen werden in der Tabelle 
+ P_VALUE_COMP_ARCHIVE gespeichert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Falls das Gateway gestoppt wurde und bereits Werte 
+ in p_value_archive für bereits berechnete Zeiträume existieren, werden 
+ diese nachaggregiert. Dies erfolgt mit einem Versatz nach dem Neustart 
+ des Gateways.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job"><img src="../../assets/images/02_Hinweis_de.jpg" style="border: none;" alt="" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Job">Die folgenden Spezialfälle sind in der aktuellen 
+ Version nicht umgesetzt:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Job">1. Handelt es sich bei dem Wert um den ersten 
+ Wert im berechneten Zeitraum und wurde die Aggregation mit einem der Interpolierungs-Typen 
+ &quot;after&quot; oder &quot;interpolate&quot; definiert, dann müssen 
+ alle Aggregationen dieser Definition von früheren Zeiträumen nachberechnet 
+ werden.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Job">2. Handelt es sich bei dem Wert um den letzten 
+ Wert im berechneten Zeitraum und wurde die Aggregation mit einem der Interpolierungs-Typen 
+ &quot;before&quot; oder &quot;interpolate&quot; definiert, dann müssen 
+ alle Aggregationen dieser Definition von früheren Zeiträumen nachberechnet 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Der Einsatz des Jobs ist unabhängig vom Einsatz eines 
+ bestimmten Legato-Moduls.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Log-Ausgaben dieses Jobs erfolgen in das Log-File der 
+ jeweiligen SE-Instanz unter dem Namen &#39;AggrPoller&#39;. Um die Ausführlichkeit 
+ der Log-Ausgaben getrennt von der anderer Jobs einzustellen, ist eine 
+ Zeile mit Inhalt &quot;logger.de.gefasoft.legato.sapient.sapieng.jobs.compressedval.AggrPoller 
+ = &lt;loglevel&gt;&quot; in die Logging-Konfiguration einzutragen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Laufende Aggregationen schreiben Log-Ausgaben in das 
+ Log-File der jeweiligen SE-Instanz unter dem Namen &#39;Aggregator&#39;. Um die 
+ Ausführlichkeit der Log-Ausgaben getrennt von der anderer Jobs einzustellen, 
+ ist eine Zeile mit Inhalt &quot;logger.de.gefasoft.legato.sapient.sapieng.jobs.compressedval.AggrPoller 
+ = &lt;loglevel&gt;&quot; in die Logging-Konfiguration einzutragen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Parametrierung</h6>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">AGGR_POLLER</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">AggrPoller</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">/de/gefasoft/sapient/sapieng/jobs/compressedval/AggrPoller/execute</p></td>
+	</tr>
+	<tr style="height: 21px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{</p>
+		<p class="TextkörperTable">&quot;queue&quot;: 25,</p>
+		<p class="TextkörperTable">&quot;maxPerRun&quot;: 10000</p>
+		<p class="TextkörperTable">}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Bedeutung der Parameter</h6>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">queue</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Limitiert die Größe der Abarbeitungs-Queue, die die 
+ Aggregations-Bearbeitungs-Threads beliefert. Defaultwert ist 25 Einträge 
+ pro Aggregations-Thread.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">maxPerRun</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Limitiert die Anzahl der Aggregationen, die pro Jobausführung 
+ bearbeitet werden. Defaultwert ist 10000.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Trigger</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Trigger: zyklisch (-1)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Intervall: {&quot;Interval&quot;: &quot;1m&quot;}</p>
+
+
+</body></html>

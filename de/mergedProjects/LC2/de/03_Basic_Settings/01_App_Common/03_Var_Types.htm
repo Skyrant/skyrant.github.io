@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Variablenarten</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Umweltrelevant,Statistik,Variablenart" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Variablenarten">
+        <span>Variablenarten</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Variablenarten</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Grundkonfiguration | Allgemeine Anwendungen 
+ | Variablenarten</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Liste aller Variablenarten (wird in der Variablenkonfiguration 
+ ausgewählt). Die Variablenart wird unterschiedlich verwendet. Beispielsweise 
+ gehen alle als statistikrelevant markierten &quot;Iststückzahl&quot;-Knotenvariablen 
+ automatisch in die Statistikberechnung ein. Genauso können für Variablenarten 
+ unterschiedliche Aufbewahrungszeiträume in der Datenbank realisiert werden 
+ (erfordert eine individuelle Anpassung der Table-Limits).</p>
+
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Name der Variablenart.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung der Variablenart.</p></td>
+	</tr>
+	
+	
+	<tr class="t1Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Zähler zurücksetzen?</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">1 
+		 = der Wert der Variable wird am Schichtende auf 0 zurückgesetzt 
+		 und beginnt dann von vorn. Vor allem relevant für Stückzähler.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">Farb-Klasse</p></td>
+		<td data-condition="Others:Sapient_only"><p class="TabellenInhalt">FK 
+		 - Verweis auf eine Farbe, in der dieser Wert in Charts dargestellt 
+		 werden soll. Die Farbcodes selbst sind im jeweiligen CSS-File 
+		 definiert.</p>
+		<p class="TabellenInhalt">Kann individuell für jede Variable überschrieben 
+		 werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Default-Einheit (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Einheit 
+		 für diese Variablenart.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Default-Format (optional)</p></td>
+		<td><p class="TabellenInhalt">Normierung der Darstellung des Variablenwertes 
+		 im WebClient für numerische Variablen. Siehe auch das Unterkapitel 
+		 <a href="../../05_ASS/02_Data_Exchange/04_Vars/03_Display_Formats.htm">Darstellungsformate</a>.</p>
+		<p class="TabellenInhalt">Hinweis: Bei numerischen Variablen sollte 
+		 hier immer ein Format vergeben werden, damit auch andere Anwendungen, 
+		 die mit den Variablen arbeiten korrekt funktionieren.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Variablenarten und Statistikfunktionen</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextCharCharCharCharCharChar">Das Auswahlfeld 
+ &#39;Value type&#39; der Variablentabelle unter</span> Anwendungsstruktur – Datenaustausch 
+ – Datenaustausch-Module – Verbindungen – Variablen <span class="TextCharCharCharCharCharChar">bietet 
+ Einträge zur Auswahl an, die unter</span> Grundkonfiguration | Allgemeine 
+ Anwendungen | Variablenarten <span class="TextCharCharCharCharCharChar">festgelegt 
+ wurden. Diese Tabelle kann beliebig</span> erweitert werden, um zusätzliche 
+ Unterscheidungsmerkmale für Variablen zu definieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die vorhandenen Einträge der Tabelle dürfen jedoch 
+ nicht verändert werden. Die Zuordnung ID – Funktion wird innerhalb des 
+ Systems wie voreingestellt erwartet und für verschiedene Auswertungen 
+ verwendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten wie Aktuellstückzahl, Sollstückzahl, 
+ Geplante Taktzeit, Taktzeit und Geplante Verfügbarkeit sind statistikrelevant, 
+ sofern diese Variablen einem Knoten zugewiesen werden und dabei auch als 
+ statistikrelevant gekennzeichnet wurden (siehe auch KPI).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine projektspezifische Anpassung der Berechnungen 
+ ist möglich. Wenden Sie sich dazu bitte an Ihren Vertriebspartner der 
+ Gefasoft GmbH.</p>
+<h6 class="Ü3_Search" data-condition="Others:Sapient_only;Others:Deutsch">Kontextmenü</h6>
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch">Layout-Snippet 
+ erstellen (knotenabhängiges Textfeld)</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Erstellt 
+ ein Layout-Snippet mit den Databinding-Informationen der selektierten 
+ Variablenart (Mehrfachauswahl möglich) und kopiert diese Info in die Zwischenablage. 
+ Es wird eine Zeile je selektierter Variablenart erstellt. Aus der Zwischenablage 
+ kann die Information in eine Visualisierung eingefügt werden, um Variablen 
+ anzubinden. Für weitere Informationen, siehe bitte Kapitel Erweiterte 
+ Bedienung - Legato Graphic Designer.</p>
+
+
+</body></html>

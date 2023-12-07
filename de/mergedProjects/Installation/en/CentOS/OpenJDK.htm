@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "10.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">OpenJDK 1.7 on CentOS</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="OpenJDK 1.7 on CentOS">
+        <span>OpenJDK 1.7 on CentOS</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Installation of OpenJDK 1.7 on CentOS</h1>
+<h2 data-condition="Others:Englisch"><a id="Update_the_System"></a>Update the System</h2>
+<p class="BodyText" data-condition="Others:Englisch">Login as root</p>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/CentOS/image4.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">Update the system using &quot;yum update&quot;.</p>
+<p class="TextCode" data-condition="Others:Englisch"># yum update</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">When you try to do yum update, you may get the following 
+ error:</p>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/CentOS/clip_image030.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">To resolve this,</p>
+<p class="BodyText" data-condition="Others:Englisch">1) Configure resolv.conf</p>
+<p class="BodyText" data-condition="Others:Englisch">Open file /etc/resolv.conf</p>
+<p class="TextCode" data-condition="Others:Englisch">vi /etc/resolv.conf</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">and insert</p>
+<p class="TextCode" data-condition="Others:Englisch">nameserver 208.67.222.222</p>
+<p class="TextCode" data-condition="Others:Englisch">nameserver 208.67.220.220</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">2) Configure Network</p>
+<p class="BodyText" data-condition="Others:Englisch">Open file /etc/sysconfig/network-scripts/ifcfg-eth0 
+ for edit</p>
+<p class="TextCode" data-condition="Others:Englisch">vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">and set</p>
+<p class="TextCode" data-condition="Others:Englisch">BOOTPROTO=dhcp</p>
+<p class="TextCode" data-condition="Others:Englisch">NM_CONTROLLED=no</p>
+<p class="TextCode" data-condition="Others:Englisch">ON_BOOT=yes</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<h2 data-condition="Others:Englisch"><a id="Install_OpenJDK_1.7_Using_yum"></a>Install OpenJDK 1.7 Using 
+ yum</h2>
+<p class="BodyText" data-condition="Others:Englisch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">Try 
+ the following to see if you have the proper repository installed.</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US;" data-condition="Others:Englisch"><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;"># 
+ yum search java | grep &#39;java-&#39;</span></p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">This 
+ is going to return a list of available packages that have java in the 
+ title. Specifically we are interested in the java- anything, as the jdk 
+ will typically be in &#39;java-version#&#39; type format.</span></p>
+<p class="BodyText" data-condition="Others:Englisch"><span style="mso-no-proof: yes;"><img src="../../Images/CentOS/clip_image031.jpg" alt="" width="605" height="373" border="0"/></span></p>
+<p class="BodyText" data-condition="Others:Englisch">Look for the correct version of OpenJDK Runtime Environment 
+ and OpenJDK Development Environment and install it.</p>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">We recommend installing the OpenJDK version 
+ 1.7 which is essential for the Legato installation.</p>
+<p class="TextCode" data-condition="Others:Englisch"># yum install java-1.7.0-openjdk.x86_64</p>
+<p class="TextCode" data-condition="Others:Englisch"># yum install java-1.7.0-openjdk-devel.x86_64</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/CentOS/clip_image031.jpg" alt="" border="0"/></p>
+
+
+</body></html>

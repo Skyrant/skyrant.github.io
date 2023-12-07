@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "17.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Logging von Tabellenänderungen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Log,SYS_CHANGE_LOG" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Logging von Tabellenänderungen">
+        <span>Logging von Tabellenänderungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Logging von Tabellenänderungen</h2>
+<h3 data-condition="Others:Deutsch"><a id="SYS_CHANGE_LOG"></a>SYS_CHANGE_LOG</h3>
+<p class="BodyText" data-condition="Others:Deutsch">DML-Änderungen werden mit folgenden Informationen in 
+ der Tabelle SYS_CHANGE_LOG geloggt:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">NAME</p></td>
+		<td><p class="TabellenÜberschrift">TYPE</p></td>
+		<td><p class="TabellenÜberschrift">NULLABLE</p></td>
+		<td><p class="TabellenÜberschrift">DEFAULT</p></td>
+		<td><p class="TabellenÜberschrift">COMMENT</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">SERIAL</p></td>
+		<td><p class="TabellenInhalt">N</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">PK: automatisch generierte ID.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">TABLE_NAME</p></td>
+		<td><p class="TabellenInhalt">VARCHAR(80)</p></td>
+		<td><p class="TabellenInhalt">N</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Name der Tabelle, an der die Änderung 
+		 stattgefunden hat.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">USER_NAME</p></td>
+		<td><p class="TabellenInhalt">VARCHAR(400)</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Name des Benutzers, der die Änderung 
+		 durchgeführt hat.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">ACTION_TSTAMP</p></td>
+		<td><p class="TabellenInhalt">TIMESTAMPTZ</p></td>
+		<td><p class="TabellenInhalt">N</p></td>
+		<td><p class="TabellenInhalt">current_timestamp</p></td>
+		<td><p class="TabellenInhalt">Zeitstempel, an dem die Änderung 
+		 stattgefunden hat.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ACTION</p></td>
+		<td><p class="TabellenInhalt">VARCHAR(1)</p></td>
+		<td><p class="TabellenInhalt">N</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Durchgeführte Änderungsaktion (nur 
+		 folgende Werte sind möglich: &#39;U&#39;-Update, &#39;I&#39;-Insert, &#39;D&#39;-Delete).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">ORIGINAL_DATA</p></td>
+		<td><p class="TabellenInhalt">CLOB</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Datenzustand vor der Änderung (NULL 
+		 bei Insert).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">NEW_DATA</p></td>
+		<td><p class="TabellenInhalt">CLOB</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Datenzustand nach der Änderung (NULL 
+		 bei Delete).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">QUERY</p></td>
+		<td><p class="TabellenInhalt">CLOB</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">SQL-Query der durchgeführten Änderung.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">CLIENT_ADDR</p></td>
+		<td><p class="TabellenInhalt">VARCHAR(80)</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">IP-Adresse des Clients.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">MODIFIED_ID</p></td>
+		<td><p class="TabellenInhalt">CLOB</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">ID des geänderten Datensatzes.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">APPLICATION_NAME</p></td>
+		<td><p class="TabellenInhalt">CLOB</p></td>
+		<td><p class="TabellenInhalt">Y</p></td>
+		<td><p class="TabellenInhalt"> </p></td>
+		<td><p class="TabellenInhalt">Name der Applikation, in der die 
+		 Änderung initiiert wurde. Kann im Client geändert werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch">Trigger</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In PostgreSQL können Tabellenänderungen durch Trigger 
+ mitgeloggt werden. Dazu wurde folgender Trigger erstellt:</p>
+<p class="TextCode" data-condition="Others:Deutsch">CREATE TRIGGER taudi_tablename</p>
+<p class="TextCode" data-condition="Others:Deutsch">AFTER INSERT OR UPDATE OR DELETE ON tablename</p>
+<p class="TextCode" data-condition="Others:Deutsch">FOR EACH ROW EXECUTE PROCEDURE if_modified_func();</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Aufruf_aus_J-LIW"></a>Aufruf aus J-LIW</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Aufruf funktioniert mit J-LIW erst ab Version 2.0.000RC3</p>
+<table class="TabelleBlank" style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 11.047%;"/>
+	<col style="width: 88.953%;"/>
+	</colgroup><tbody><tr style="height: 19px;">
+		<td><p class="TextkörperTable">LgtConfig</p></td>
+		<td><p class="TextkörperTable">-outDir=C:/SVN/legatodb/sapient/trunk/code/postgresql/trigger</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td><p class="TextkörperTable"> </p></td>
+		<td><p class="TextkörperTable">-triggerBody=if_modified_func()</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td><p class="TextkörperTable"> </p></td>
+		<td><p class="TextkörperTable">-isDBMS=postgresql;</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Aufruf kann auch mit der Option tables eingeschränkt 
+ werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold;">Beispiel</span>: -tables=P_*</p>
+<table class="TabelleBlank" style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 11.047%;"/>
+	<col style="width: 88.953%;"/>
+	</colgroup><tbody><tr style="height: 19px;">
+		<td><p class="TextkörperTable">LgtConfig</p></td>
+		<td><p class="TextkörperTable">-outDir=C:/SVN/legatodb/sapient/trunk/code/oracle/trigger</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td><p class="TextkörperTable"> </p></td>
+		<td><p class="TextkörperTable">-triggerBody=&#39;null&#39;</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td><p class="TextkörperTable"> </p></td>
+		<td><p class="TextkörperTable"><span style="mso-spacerun: yes;"> </span>-tables=P_*</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td><p class="TextkörperTable"> </p></td>
+		<td><p class="TextkörperTable">-isDBMS=oracle;</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

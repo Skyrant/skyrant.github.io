@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Publish-Subscribe-Schnittstelle</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="MQTT,Subscribe,Publish,Publish-Subscribe" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Publish-Subscribe-Schnittstelle">
+        <span>Publish-Subscribe-Schnittstelle</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Publish-Subscribe-Schnittstelle</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich zu den klassischen Kommunikationsmöglichkeiten 
+ über OPC, OPC-UA oder SendRecv-Telegrammschnittstelle nimmt der Datenaustausch 
+ über Publish-Subscribe Protokolle zu.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für diese Protokolle steht der Knoten PubSub zur Verfügung.</p>
+<h3 data-condition="Others:Deutsch"><a id="Verfügbare_Protokolle"></a>Verfügbare Protokolle</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Es sind Treiber für folgende Standardprotokolle verfügbar:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">MQTT</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Kafka</p>
+<h3 data-condition="Others:Deutsch"><a id="Anlegen_des_Verbindungselements"></a>Anlegen des MQTT-Verbindungselements</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie das Grundelement &quot;PubSub&quot; 
+ im Projektbaum und wählen Sie im Kontextmenü den Befehl &quot;Neues Item&quot;. 
+ Wählen Sie dann die MQTT-Verbindung aus.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/PubSub_Con.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der &quot;Name&quot; ist frei wählbar. Der &quot;Clientname&quot; 
+ dient der Anmeldung beim Broker. Er sollte so gewählt werden, dass er 
+ auf Broker-Seite eindeutig ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter &quot;URI&quot; muss der Verbindungsstring zum 
+ MQTT-Broker eingegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Bereich &quot;Connect parameters&quot; kann eine 
+ Authentifizierung für den Verbindungsaufbau definiert werden, falls notwendig 
+ oder gewünscht. In diesem Fall müssen ein Benutzer und ein Passwort eingegeben 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Soll beim Broker eine &quot;Last Will Nachricht&quot; 
+ für den Fall einer Verbindungsunterbrechung hinterlegt werden, muss diese 
+ im folgenden Menüpunkt aktiviert werden. Es können dann ein Thema für 
+ die Nachricht, der Inhalt der Nachricht sowie die Qualität der Nachricht 
+ definiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Soll der Broker nach Beendigung der Session alle Informationen 
+ aufräumen, muss &quot;Clean session&quot; aktiviert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter &quot;Keep Alive&quot; kann die Zeitdauer eingegeben 
+ werden, die der Broker die Verbindung aufrecht erhalten soll, wenn kein 
+ Telegramm vom Client gesendet wird. Die Hälfte dieser Zeit wird als Basis 
+ für das Lebendtelegramm (PINGREQ) auf Client-Seite verwendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;Timer Reconnect&quot; schließlich gibt an, nach 
+ welchem Zeitraum ein neuer Verbindungsaufbau nach einer Unterbrechung 
+ versucht wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist &quot;Variablenverbindung&quot; aktiviert, so kann 
+ darunter der Namensbereich eingegeben werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Neues_Modul"></a>Neues Modul</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Unter dem Element kann nun ein Topic Modul angelegt 
+ werden. Dies entspricht einem Sapient Maschinen-Client (SMC).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/PubSub_Mod.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf ... können die Details aus der .los-Datei 
+ geladen werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Neue_Gruppe"></a>Neue Gruppe</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Unter dem Modul kann nun eine Topic-Gruppe angelegt 
+ werden. Dies entspricht einer SPS.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/PubSub_Group.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach dem Anlegen können über rechte Maus - Importieren 
+ die Details aus der .los-Datei geladen werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Neuer_Wert"></a>Neuer Wert</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Unter der Gruppe können nun Werte angelegt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/PubSub_Val.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Name kann manuell eingegeben werden; Typ und Topic-Name 
+ können durch Klick auf ... aus der .los-Datei geladen werden. Dabei kann 
+ die .los-Datei durchsucht werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/PubSub_Search.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Es kann ein bestimmtes Suchmuster eingegeben werden. 
+ Durch Klick auf &quot;Alle&quot; werden alle in der .los-Datei vorhandenen 
+ Werte angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/PubSub_Result.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Anlegen_des_Kafka_Consumer_Elements"></a>Anlegen des Kafka 
+ Consumer Elements</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie das Grundelement &quot;PubSub&quot; 
+ im Projektbaum und wählen Sie im Kontextmenü den Befehl &quot;Neues Item&quot;. 
+ Wählen Sie dann die Kafka Consumer Verbindung aus.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Creating_Kafka_Consumer_Element.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der &quot;Name&quot; ist frei wählbar. Unter &quot;Broker 
+ list&quot; wird eine Liste der Broker angegeben, die über diese Verbindung 
+ angesprochen werden. Unter dem Verbindungselement können nun verschiedene 
+ Ereignisse angelegt werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Ereignis_OnConsumMsg"></a>Ereignis OnConsumMsg</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OnConsumMsg_Event.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Ereignis wird ausgelöst, wenn für ein unterschriebenes 
+ Topic ein neuer Wert empfangen wird. Das Topic wird durch &quot; @Consumer&quot; 
+ und &quot;@Topic&quot; spezifiziert. Der Wert wird als Datenblock (&quot;@Value&quot;) 
+ übergeben.</p>
+<h3 data-condition="Others:Deutsch"><a id="Ereignis_OnConsumErr"></a>Ereignis OnConsumErr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OnConsumErr_Event.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Ereignis wird ausgelöst, wenn ein Fehler in 
+ der Übertragung auftritt. &quot;Consumer&quot; liefert den Namen der Consumer 
+ Verbindung. Der Fehler wird als Fehlercode &quot;ErrNum&quot; und als 
+ Fehlertext &quot;ErrTxt&quot; zur Verfügung gestellt.</p>
+<h3 data-condition="Others:Deutsch"><a id="Ereignis_OnStatus"></a>Ereignis OnStatus</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/OnStatus_Event.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">OnStatus liefert den Verbindungsstatus als Integerwert:</p>
+<p class="BodyText" data-condition="Others:Deutsch">• 0 Verbindung ist Ok</p>
+<p class="BodyText" data-condition="Others:Deutsch">• 1 Verbindung wird aufgebaut</p>
+<p class="BodyText" data-condition="Others:Deutsch">• -1 Verbindung ist unterbrochen</p>
+
+
+</body></html>

@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Allgemein"]],"1":[["\n"],["\n","Mit dem Reiter Dynamics werden die Grafiken für Legato \n mit variablengesteuerten Änderungen versehen. Diese Änderungen zur Laufzeit \n werden z.B. genutzt, um Farbumschläge oder Messwerte darzustellen.","\n\n\n"]],"2":[["Allgemein"]],"3":[["Dynamic"]],"id":"19"})

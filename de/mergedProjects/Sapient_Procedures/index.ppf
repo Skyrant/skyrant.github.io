@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="Sapient_Procedures" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\General\SysDoc.htm">
+    
+    <topic>
+      de\General\ANSI.htm
+    </topic>
+    
+    <topic>
+      de\General\About.htm
+    </topic>
+    
+    <topic>
+      de\General\SE_Conf.htm
+    </topic>
+    
+    <topic>
+      de\General\DB_ConPools.htm
+    </topic>
+    
+    <topic>
+      de\General\HikariCP_als_optionaler_DB-Verbindungspool.htm
+    </topic>
+    
+    <topic>
+      de\General\Übersicht_der_Jobs.htm
+    </topic>
+    
+    <topic>
+      de\General\Übersicht_der_Task-Typen.htm
+    </topic>
+    
+    <topic>
+      de\General\Task_Types.htm
+    </topic>
+    
+    <topic>
+      de\General\Desc_Trigger_Types.htm
+    </topic>
+    
+    <topic>
+      de\General\Time_Zones.htm
+    </topic>
+    
+    <topic>
+      de\General\02_Dir_Structure.htm
+    </topic>
+    
+    <topic>
+      de\General\Con_Pool_Status.htm
+    </topic>
+    
+    <topic>
+      de\General\Call.htm
+    </topic>
+    
+    <topic>
+      de\General\Query\Introduction.htm
+    </topic>
+    
+    <topic>
+      de\General\Query\Querying_Data.htm
+    </topic>
+    
+    <topic>
+      de\General\Query\SELECT_Params.htm
+    </topic>
+    
+    <topic>
+      de\General\Query\SELECT_Return_Values.htm
+    </topic>
+    
+    <topic>
+      de\General\Query\Field_Lists.htm
+    </topic>
+    
+    <topic>
+      de\General\Query\Programmed_Datasources.htm
+    </topic>
+    
+    <topic>
+      de\General\Job_Basics.htm
+    </topic>
+    
+    <topic>
+      de\General\Paperclip_Printing.htm
+    </topic>
+    
+    <topic>
+      de\General\Paperclip_Configuration_Parameter.htm
+    </topic>
+    
+    <topic>
+      de\General\Task-Typen.htm
+    </topic>
+    
+    <topic>
+      de\General\Tasks2.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Overview\Introduction.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Overview\Custom_JavaScript.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Overview\JavaScript-Jobs.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Overview\JavaScript-Procs.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Overview\03_Ext_Functs.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Objects\01_Overview.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Objects\03_logger.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\02_file.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\03_DbCon.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\04_DbQuery.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\05_DbQueryBuilder.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\07_HttpCon.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\08_PrintWriter.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\09_JsonWriter.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\10_Reader.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\11_SaxInput.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\12_SaxReader.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\13_Process.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\14_SapientContext.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\15_SapientUser.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\20_MailMessage.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\21_MailSender.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\22_ThreadPool.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\23_BlockingQueue.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\24_BitSet.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\25_TimeRangeSet.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\TemplateHelper.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\TemplateAction.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\26_DependentTasksSolver.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\27_Repeat_Exec.htm
+    </topic>
+    
+    <topic>
+      de\JavaScript\Classes\28_Init_Tasks.htm
+    </topic>
+    
+    <topic>
+      de\Ext_Props.htm
+    </topic>
+    
+    <topic>
+      de\Basics\JOB_POLLER.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Task_dbtimesync.htm
+    </topic>
+    
+    <topic>
+      de\CompressedVal\AggrPoller.htm
+    </topic>
+    
+    <topic>
+      de\Housekeeping\TABLE_DELETE.htm
+    </topic>
+    
+    <topic>
+      de\Housekeeping\Del_Jobs.htm
+    </topic>
+    
+    <topic>
+      de\Housekeeping\Del_Jobs_Sample.htm
+    </topic>
+    
+    <topic>
+      de\KPIs\SHIFT_KPI.htm
+    </topic>
+    
+    <topic>
+      de\KPIs\TIMESLICES.htm
+    </topic>
+    
+    <topic>
+      de\KPIs\KPI_Mailing.htm
+    </topic>
+    
+    <topic>
+      de\Modules\MODULE_CONTROL_ALARM.htm
+    </topic>
+    
+    <topic>
+      de\Paging\RECEIVE_PAGING_EVENT.htm
+    </topic>
+    
+    <topic>
+      de\Shift\REFRESH_EVENT_LIST.htm
+    </topic>
+    
+    <topic>
+      de\Shift\HANDLE_EVENTS.htm
+    </topic>
+    
+    <topic>
+      de\SysMessages\JOB_GEN_AL_SHIFTCAL_MAINTENENCE.htm
+    </topic>
+    
+    <topic>
+      de\SysMessages\MODULE_CONTROL_ALARMS.htm
+    </topic>
+    
+    <topic>
+      de\SysMessages\VALUE_ALARMS.htm
+    </topic>
+    
+    <topic>
+      de\Target_Vals\REFRESH_SHIFT_TARGETS.htm
+    </topic>
+    
+    <topic>
+      de\Target_Vals\TARGETCHAINS_ONLINE.htm
+    </topic>
+    
+    <topic>
+      de\TPM\JOB_POLLER_TPM.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\01_ZuliImport.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\02_Zuli_Scripts.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\Register_Script.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\03_Functions_Scripts.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\04_Vars.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\Functions.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\05_Map_Structs.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\Special_Functions.htm
+    </topic>
+    
+    <topic>
+      de\Zuli\09_Creating_Zuli_Files.htm
+    </topic>
+    
+    <topic>
+      de\DB_Logging\Logging.htm
+    </topic>
+    
+    <topic>
+      de\General\SysDoc.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

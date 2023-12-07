@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Legato Grafik Designer</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Legato Grafik Designer">
+        <span>Legato Grafik Designer</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Legato Grafik Designer</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Legato Grafik Designer</span> 
+ zeigt mit draw.io erstellte Visualisierungen an. Dabei kann zwischen fester 
+ Visualisierung und Knoten-spezifischer Anzeige umgeschaltet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/WA_Visu.png" alt="" style="border: none;" border="0"/></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Legato Grafik Designer</span> 
+ stehen folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Dateiname:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann der Name der Datei angegeben werden, 
+ die angezeigt werden soll, z.B. design_new.xml. Die Datei muss unter folgendem 
+ Pfad gespeichert sein:</p>
+<table class="CodeTab" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">[Pfad zur SE]\web\app\custom\detail-layout</p></td>
+	</tr>
+</tbody></table>
+<p class="GUIControl" data-condition="Others:Deutsch">Knotenlayout laden:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Mit diesem Schieberegler kann auf knoten-spezifische 
+ Anzeige umgeschaltet werden. Dann wird je nach selektiertem Knoten ein 
+ anderes Bild angezeigt. Wenn aktiv, versucht das Boardlet zunächst das 
+ für den selektierten Knoten definierte Layout zu laden (Spalte &quot;LGD 
+ Dateipfad&quot; in l_nodes im LC2). Gibt es keine explizite Zuordnung 
+ einer Layout-Datei zu dem gewählten Knoten, wird die Datei des nächsthöheren 
+ Parent-Knotens geladen (&quot;Vererbung von Layout-Dateien&quot;). Diese 
+ Dateien müssen <span style="font-size: 11pt; font-variant-ligatures: normal; 
+						 font-variant-caps: normal; orphans: 2; widows: 2; 
+						 -webkit-text-stroke-width: 0px; text-decoration-style: initial; 
+						 text-decoration-color: initial;">unter folgendem 
+ Pfad abgelegt sein:</span></p>
+<table class="CodeTab" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">[Pfad zur SE]\web\app\custom\detail-layout</p></td>
+	</tr>
+</tbody></table>
+<p class="Note" data-condition="Others:Deutsch"><span style="font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; 
+						 font-weight: bold; color: #000000; font-style: normal; 
+						 font-variant-ligatures: normal; font-variant-caps: normal; 
+						 letter-spacing: normal; orphans: 2; text-transform: none; 
+						 white-space: normal; widows: 2; word-spacing: 0px; 
+						 -webkit-text-stroke-width: 0px; text-decoration-style: initial; 
+						 text-decoration-color: initial;"><span style="font-size: 11pt; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-transform: none; white-space: normal; 
+	 widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; 
+	 text-decoration-color: initial;">I</span>NFO:</span></p>
+<p class="NoteText" data-condition="Others:Deutsch">Ist der Filter &quot;Knotenlayout laden&quot; gesetzt, 
+ wird die Datei unter Boardlet-Settings ignoriert und immer die Datei node_layout_[Knoten-ID].xml 
+ geladen.</p>
+<h4 class="NoteText" data-condition="Others:Deutsch"><a id="Reiter_Layout"></a>Reiter Layout</h4>
+<div data-conref="../../../assets/snippets/de_background_colors.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Hintergrundfarbe:</p>
+<p class="GUIControlDescr">Wendet eine statische Hintergrundfarbe auf das 
+ Boardlet an. Die Hintergrundfarbe ist unabhängig vom aktuell gewählten 
+ Theme. Um eine Hintergrundfarbe anzugeben, haben Sie die folgenden Möglichkeiten:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1">Sie können die CSS Schlüsselwörter für 
+	 Farben verwenden, z.B. <span style="color: #ff0000;">red</span>, <span style="color: blue;">blue</span>, <span style="color: forestgreen;">forestgreen</span>, 
+	 <span style="color: slateblue;">slateblue</span> etc.</p></li>
+	<li><p class="ListBulletL1">Alternativ können Sie die hexadezimalen 
+	 Farbcodes verwenden, z.B. <span style="color: #cc00ff;">#CC00FF</span>, 
+	 <span style="color: #0040FF;">#0040FF</span>, <span style="color: #B30000;">#B30000</span> 
+	 etc.</p></li>
+</ul>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung"></a>Benötigte 
+ Parametrierung</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Details zur Erstellung von Bildern und zum Einbinden 
+ von Variablen sind unter &quot;Erweiterte Bedienung - Legato Graphic Designer&quot; 
+ beschrieben.</p>
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">fileName</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">loadLayoutForNode</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

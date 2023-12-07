@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.2_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+  <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+  <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+  <title data-condition="Others:Deutsch">Ändern von DB-Verbindungspools</title>
+  <link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Ändern von DB-Verbindungspools">
+        <span>Ändern von DB-Verbindungspools</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Others:Deutsch">Ändern von DB-Verbindungspools</h1>
+  <h2 data-condition="Others:Deutsch"><a id="Allgemeines"></a>Allgemeines</h2>
+  <p class="BodyText" data-condition="Others:Deutsch">Verbindungen zwischen der Sapient Engine und der Sapient Data Base werden über Verbindungspools hergestellt. Der als Standard konfigurierte Verbindungspooltyp ist HikariCP.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">Connection Pools können über Parametrisierung der <span style="font-weight:bold;">se_dbpools.properties</span> geändert werden, für mehr Informationen, siehe <a href="#Parametrisierung_im_LC2">Parametriesierung im LC2</a>.</p>
+    </li>
+  </ul>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">Connection Pools können als Standard konfiguriert werden, indem die Eigenschaft <span style="font-weight:bold;">dbConPoolType</span> in der Konfigurationstabelle auf den gewünschten Connection Pool Typ (<span style="font-weight:bold;">dbConPoolType=HikariCP</span>) gesetzt wird.</p>
+    </li>
+    <li>
+      <p class="BodyText">Connection Pools können für bestimmte SE-Aufgaben aktiviert werden, wie die Bearbeitung von Einträgen, die sich auf bestimmte Aufgaben beziehen.</p>
+    </li>
+    <li>
+      <p class="BodyText">Verbindungspools können in der LC2 als Standard konfiguriert werden, indem Einträge wie <span style="font-weight:bold;">se_task_id</span> und <span style="font-weight:bold;">rcon_id</span> festgelegt werden. Diese Einstellungen können auch über die LC2 in <span style="font-weight: bold; 
+														 color: #ff0000;">(1)</span> <span style="font-weight:bold;">System Administration</span> -&gt; <span style="font-weight: bold;">SE</span> <span style="font-weight: bold;">Jobs</span> -&gt; <span style="font-weight: bold;">Tasks</span> (beim Bearbeiten von DB-Pool-Eigenschaften für bestimmte SE-Aufgaben) oder über <span style="font-weight: bold; color: #ff0000;">(2)</span> <span style="font-weight:bold;">S</span><span style="font-weight: bold;">ystem</span> <span style="font-weight: bold;">Administration</span> -&gt; <span style="font-weight: bold;">SE</span> <span style="font-weight: bold;">Jobs</span> -&gt; <span style="font-weight: bold;">DBPools Default </span>angepasst werden.<br/>
+        <br/>
+        <img alt="" border="0" src="../../assets/images/LC2_SystemAdmin_SE_Jobs_Tasks_EN.png" style="border: none;"/>
+      </p>
+    </li>
+    <li>
+      <p class="BodyText">Wenn <span style="font-weight: bold;">dbConPoolType</span> auf &#39;<span style="font-weight: bold;">HikariCP</span>&#39; (<span style="font-weight: bold;">dbConPoolType=<span style="font-weight: bold;">HikariCP</span></span>) gesetzt ist oder aber gar nicht angegeben wird, verwendet die Sapient Engine wie bisher HikariCP<span style="font-weight: bold;"> </span>als DB-Verbindungspool.</p>
+    </li>
+    <li>
+      <p class="BodyText">Wenn Sie versuchen, HikariCP <span style="font-weight: bold; 
+	 color: #ff0000;">und</span> MDX 3.15.0 oder höher verwenden, ist es empfehlenswert, den Wert bei <span style="font-weight: bold;">maxWaitMillis</span> nicht auf -1 (unendliche Wartezeit), sondern auf einen Wert von ungefähr 30.000 ms -&gt; 30 s zu setzen.  </p>
+    </li>
+  </ul>
+  <p class="BodyText" data-condition="Others:Deutsch">Warum wird HikariCP eingesetzt?</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">DBCP2 weißt ein bekanntes ungültiges Verhalten bei der Behandlung von Szenarien auf, bei denen die Datenbank nicht erreichbar ist. Wenn DBCP2 versucht, eine Verbindung zu einer nicht erreichbaren Datenbank herzustellen, z.B. aufgrund von Netzwerkproblemen oder weil die Datenbank ausgefallen ist, hängt/pausiert die Ausführung bis zum TCP-Timeout-Limit des Betriebssystems (DBCP2 verwendet lediglich ein Zeitlimit, das auf Betriebssystemebene konfiguriert wird). Auf Linux-basierten Systemen können die TCP-Timeout-Werte sehr hoch sein, sie variieren standardmäßig von 15 bis 30 Minuten. HikariCP agiert korrekt und beachtet den maxWaitMillis-Parameter. Dies ist ein Beispiel für Probleme mit dem TCP-Timeout. Mit diesen Fällen, in denen die Verbindungen für einige Zeit blockiert sind, konnte die alte Bibliothek nicht damit umgehen.</p>
+    </li>
+  </ul>
+  <h2 data-condition="Others:Deutsch"><a id="Parametrisierung_im_LC2"></a>Parametrisierung im LC2</h2>
+  <p class="BodyText" data-condition="Others:Deutsch">Gehen Sie wie folgt vor, um im LC2 die Parametrisierung durchzuführen:</p>
+  <ol style="list-style: decimal;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">Navigieren Sie auf <span style="font-weight: bold;">System Administration</span> --&gt; <span style="font-weight: bold;">SE Jobs</span> --&gt; <span style="font-weight: bold;">DbPools Default</span>.</p>
+    </li>
+    <li>
+      <p class="BodyText">Wählen Sie in der Spalte <span style="font-weight: bold;">Eigenschaften</span> im Dropdown-Menü die gewünschten Parameter aus und ändern Sie die Werte. Für mehr Informationen zu den entsprechenden Parametern siehe <a href="#Connection_Pool_Parameter">Connection Pool Parameter</a>.<br/>
+        <br/>
+        <img alt="" border="0" height="709" src="../../assets/images/LC2_DbPools_Default_EN.png" style="border: none; cursor: nesw-resize;" width="1229"/>
+      </p>
+    </li>
+    <li>
+      <p class="BodyText">Wenn Sie nur HikariCP für einige spezifische Engine-Tasks aktivieren möchten, dann navigieren Sie im LC2 zu den <span style="font-weight: bold;">Tasks</span> (<span style="font-weight: bold;">System Administration --&gt; SE Jobs --&gt; Tasks</span>).</p>
+    </li>
+    <br/>
+     
+  </ol>
+  <p class="BodyText" data-condition="Others:Deutsch">Beispiel <span style="font-weight: bold;">jsonrpc</span>:</p>
+  <p class="BodyText" data-condition="Others:Deutsch"><img alt="" border="0" src="../../assets/images/LC2_SystemAdmin_SE_Jobs_Tasks_jasonrpc_EN.png" style="border: none;"/></p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Die Default-Settings können überschrieben werden.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h2 data-condition="Others:Deutsch"><a id="Connection_Pool_Parameter"></a>Connection Pool Parameter</h2>
+  <h3 data-condition="Others:Deutsch"><a id="DBCP2_und_HikariCP"></a>DBCP2 und HikariCP</h3>
+  <p class="BodyText" data-condition="Others:Deutsch">Diese Parameter werden von <span style="font-weight: bold;">DBCP2 und HikariCP</span> verwendet:</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">dbConPoolType,</p>
+    </li>
+    <li>
+      <p class="BodyText">user,</p>
+    </li>
+    <li>
+      <p class="BodyText">password,</p>
+    </li>
+    <li>
+      <p class="BodyText">url,</p>
+    </li>
+    <li>
+      <p class="BodyText">driverClassName,</p>
+    </li>
+    <li>
+      <p class="BodyText">connectionProperties.</p>
+    </li>
+    <li>
+      <p class="BodyText">defaultReadOnly,</p>
+    </li>
+    <li>
+      <p class="BodyText">defaultTransactionIsolation,</p>
+    </li>
+    <li>
+      <p class="BodyText">defaultCatalog,</p>
+    </li>
+    <li>
+      <p class="BodyText">maxTotal,</p>
+    </li>
+    <li>
+      <p class="BodyText">minIdle,</p>
+    </li>
+    <li>
+      <p class="BodyText">maxWaitMillis,</p>
+    </li>
+    <li>
+      <p class="BodyText">maxConnLifetimeMillis,</p>
+    </li>
+    <li>
+      <p class="BodyText">connectionInitSqls.</p>
+    </li>
+  </ul>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h3 data-condition="Others:Deutsch"><a id="DBCP2"></a>DBCP2</h3>
+  <p class="BodyText" data-condition="Others:Deutsch">Diese Parameter werden nur von <span style="font-weight: bold;">DBCP2</span> verwendet:</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">defaultQueryTimeout,</p>
+    </li>
+    <li>
+      <p class="BodyText">rollbackOnReturn,</p>
+    </li>
+    <li>
+      <p class="BodyText">maxIdle,</p>
+    </li>
+    <li>
+      <p class="BodyText">validationQuery,</p>
+    </li>
+    <li>
+      <p class="BodyText">validationQueryTimeout,</p>
+    </li>
+    <li>
+      <p class="BodyText">testOnCreate,</p>
+    </li>
+    <li>
+      <p class="BodyText">testOnBorrow,</p>
+    </li>
+    <li>
+      <p class="BodyText">testOnReturn,</p>
+    </li>
+    <li>
+      <p class="BodyText">testWhileIdle,</p>
+    </li>
+    <li>
+      <p class="BodyText">timeBetweenEvictionRunsMillis,</p>
+    </li>
+    <li>
+      <p class="BodyText">numTestsPerEvictionRun,</p>
+    </li>
+    <li>
+      <p class="BodyText">minEvictableIdleTimeMillis,</p>
+    </li>
+    <li>
+      <p class="BodyText">softMiniEvictableIdleTimeMillis,</p>
+    </li>
+    <li>
+      <p class="BodyText">lifo,</p>
+    </li>
+    <li>
+      <p class="BodyText">poolPreparedStatements,</p>
+    </li>
+    <li>
+      <p class="BodyText">maxOpenPreparedStatements,</p>
+    </li>
+    <li>
+      <p class="BodyText">accessToUnderlyingConnectionAllowed,</p>
+    </li>
+    <li>
+      <p class="BodyText">removeAbandonedOnMaintenance,</p>
+    </li>
+    <li>
+      <p class="BodyText">removeAbandonedOnBorrow,</p>
+    </li>
+    <li>
+      <p class="BodyText">removeAbandonedTimeout,</p>
+    </li>
+    <li>
+      <p class="BodyText">logAbandoned,</p>
+    </li>
+    <li>
+      <p class="BodyText">abandonedUsageTracking,</p>
+    </li>
+    <li>
+      <p class="BodyText">fastFailValidation,</p>
+    </li>
+    <li>
+      <p class="BodyText">disconnectionSqlCodes.</p>
+    </li>
+  </ul>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h3 data-condition="Others:Deutsch"><a id="HikariCP"></a>HikariCP</h3>
+  <p class="BodyText" data-condition="Others:Deutsch">Diese Parameter werden nur von HikariCP verwendet:</p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText">leakDetectionThreshold (default value: 600,000ms -&gt; 10min),</p>
+    </li>
+    <li>
+      <p class="BodyText">idleTimeout (default value: 600,000ms -&gt; 10min),</p>
+    </li>
+    <li>
+      <p class="BodyText">keepaliveTime (default value: 0),</p>
+    </li>
+    <li>
+      <p class="BodyText">initializationFailTimeout (default value: 1),</p>
+    </li>
+    <li>
+      <p class="BodyText">isolateInternalQueries (default value: false),</p>
+    </li>
+    <li>
+      <p class="BodyText">allowPoolSuspension (default value: false),</p>
+    </li>
+    <li>
+      <p class="BodyText">validationTimeout (default value: 5,000ms -&gt; 5s).</p>
+    </li>
+  </ul>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <h3 data-condition="Others:Deutsch"><a id="HikariCP_Log-Dateien"></a>HikariCP Log-Dateien</h3>
+  <p class="BodyText" data-condition="Others:Deutsch"><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+							 font-size: 11pt; font-weight: normal;">Bei der Verwendung von HikariCP ist es möglich, eine hohe Anzahl an Aktionen loggen zu lassen. Jedoch können dadurch die Logdateien (unnötigerweise) zu umfangreich werden.<br/>
+      <br/>
+      Daher kann die Protokollierungsebene in der (Konfigurations-)Datei</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;"> log4j2.xml</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+						 font-size: 11pt; font-weight: normal;"> angepasst werden. Dazu können die folgenden Zeilen im Abschnitt &quot;</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;">Loggers</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt; font-weight: normal;">&quot; verwendet und somit der jeweilige Level angepasst werden:</span></p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.HikariConfig&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.HikariDataSource&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.pool.HikariPool&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.pool.PoolBase&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.pool.PoolEntry&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.pool.ProxyConnection&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.pool.ProxyLeakTask&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.util.ConcurrentBag&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch">        &lt;AsyncLogger name=&quot;com.zaxxer.hikari.util.DriverDataSource&quot; level=&quot;error&quot;/&gt;</p>
+  <p class="BodyText" style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;" data-condition="Others:Deutsch"> </p>
+  <ul style="list-style: disc;" data-condition="Others:Deutsch">
+    <li>
+      <p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;, serif; 
+			 font-size: 11pt;">Die Level(-angaben) können hierbei z.B. <span style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;">trace</span> (Ablaufmeldung), <span style="font-family: &#39;Courier New&#39;, monospace; 
+							 font-size: 10pt;">debug</span> (Fehlersuche),<span style="font-family: &#39;Courier New&#39;, monospace; font-size: 10pt;"> info, warning, error</span> oder <span style="font-family: &#39;Courier New&#39;, monospace; 
+										 font-size: 10pt;">fatal</span> sein.</p>
+    </li>
+    <li>
+      <p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;, serif; 
+			 font-size: 11pt;">Die Level(-angaben) entsprechen hierbei einer Filterfunktion.</p>
+    </li>
+    <li>
+      <p class="BodyText" style="font-family: &#39;Palatino Linotype&#39;, serif; 
+			 font-size: 11pt;">Bei dem Level <span style="font-family: &#39;Courier New&#39;, monospace; 
+													 font-size: 10pt;">error</span> werden z.B. alle Meldungen, die kategorisch unterhalb von <span style="font-family: &#39;Courier New&#39;, monospace; 
+	 font-size: 10pt;">error</span> stehen, nicht ausgegeben und somit herausgefiltert. Beim Level <span style="font-family: &#39;Courier New&#39;, monospace; 
+										 font-size: 10pt;">trace</span> wird alles geloggt.</p>
+    </li>
+  </ul>
+
+</body></html>

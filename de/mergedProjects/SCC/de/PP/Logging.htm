@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Logging (WIN64 und UNIX)</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Log" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Logging (WIN64 und UNIX)">
+        <span>Logging (WIN64 und UNIX)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Logging (WIN64 und UNIX)</h2>
+<h3 data-condition="Others:Deutsch"><a id="Überblick"></a>Überblick</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Das Logging bietet die Möglichkeit, den Ablauf eines 
+ Cloud Connector Projekts mitzuverfolgen und hilft, Fehler im Projekt oder 
+ im Datenaustausch schnell zu finden. Es wird grundsätzlich in Dateien 
+ geloggt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es gibt bis zu 16 Hauptklassen mit bis zu 4 Unterklassen. 
+ Die erste Unterklasse stellt dabei immer Fehlermeldungen dar, die weiteren 
+ drei Klassen sind unterschiedlich belegt.</p>
+<h3 data-condition="Others:Deutsch"><a id="Aufzeichnen_von_Meldungen_in_eine_Logdatei"></a>Aufzeichnen 
+ von Meldungen in eine Logdatei</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Meldung werden in eine frei wählbare Textdatei 
+ geschrieben, die, wenn die Meldungsanzahl nicht begrenzt wird (siehe unten), 
+ eine beliebige Größe erreichen kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Jede Meldung wird im gleichen Format ausgegeben:</p>
+<p class="TextCode" data-condition="Others:Deutsch">Datum / Zeit             Benutzer           Klasse: 
+ Meldungstext</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Datum / Zeit im Format JJ.MM.TT HH:MM:SS:Hundertstel.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Als Benutzer wird der Name des Moduls angezeigt, 
+ das die Meldung erzeugt hat.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Die Meldeklasse der Meldung kann zwischen 0 und 
+ 31 liegen und gibt Auskunft über die Art der Meldung. Über die Klasse 
+ K00 werden z.B. Initialisierungsmeldungen beim Projektstart geloggt.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Der Meldungstext wird im Klartext ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Zeilen haben eine einheitliche Länge und ein einheitliches 
+ Format. Damit wird der Import der aufgezeichneten Meldungen in andere 
+ Programme erleichtert (Import-Format &quot;ASCII fixed&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über die Menüfunktion &quot;Logging | Log-Einstellungen 
+ Editor&quot; kann der Name und Speicherort der Logdatei für den Editor 
+ eingestellt werden. Außerdem kann über die Logmaske festgelegt werden, 
+ welche Klassen geloggt werden sollen. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Für den Service werden diese Angaben unter &quot;Datei 
+ | Servicekonfiguration&quot; vorgenommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span>Außerdem gibt es unter &quot;Logging | Log-Einstellungen 
+ Service&quot; die Möglichkeit, die aufzuzeichnenden Klassen des Dienstes 
+ zu ändern, ohne den Service neu starten zu müssen.</span></p>
+<h3 data-condition="Others:Deutsch"><a name="Logklassen" id="Logklassen"></a>Logklassen</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Log_Classes_Rt.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist in der linken Auswahlliste kein Eintrag selektiert, 
+ wirken die Funktionstasten auf alle Klassen. Somit können einfach alle 
+ Klassen an/abgewählt werden. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist in der linken Auswahlliste ein Eintrag selektiert, 
+ können rechts die Unterklassen an/abgewählt werden. Die Funktionstasten 
+ wirken nur auf diese Klasse.</p>
+<h3 data-condition="Others:Deutsch"><a name="Logdateien" id="Logdateien"></a>Logdateien</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Logdateien erhalten die Extension &quot;.log&quot;, 
+ Errorfiles die Extension &quot;.err&quot;. Der Name wird über den Kommandozeilenparameter 
+ <b>–n</b> angegeben. Logdateien haben eine maximale Größe von 10 MB, Errordateien 
+ haben eine maximale Größe von 1 MB. Pro Programminstanz werden maximal 
+ 20 Logdateien und 10 Errordateien auf Platte gespeichert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Name der Logdatei <b>gw_plc</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Somit heißt die aktuelle Logdatei <b>gw_plc.log</b>, 
+ die aktuelle Errordatei <b>gw_plc.err</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn die Größe einer Logdatei 10 MB überschreitet, 
+ werden die Logdateien <b>gw_plc.log.n</b> in <b>gw_plc.log.n+1</b> umbenannt 
+ (dto. für Errordateien beim Überschreiten der Größe von 1MB).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn bereits 20 Logdateien bzw. 10 Errordateien existieren, 
+ wird die älteste Datei gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Somit ist pro Programminstanz</p>
+<p class="BodyText" data-condition="Others:Deutsch">            20 
+ * 10 MB + 10 * 1 MB = 210 MB</p>
+<p class="BodyText" data-condition="Others:Deutsch">Plattenplatz erforderlich. Dies gilt auch für die anderen 
+ Programminstanzen wie Telegrammhandler.</p>
+<h3 data-condition="Others:Deutsch"><a id="Logfilezipper1" data-indexterm="Logfilezipper"></a><a id="Logfilezipper"></a>Logfilezipper</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Da die Anzahl der gespeicherten Logbücher begrenzt 
+ ist, ist der einzusehende Zeitraum bei vielen Ereignissen relativ kurz 
+ (bei großen Konfigurationen im Minutenbereich). Eine eventuell notwendige 
+ Fehleranalyse ist dann kaum möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine große Menge an Logdaten archivieren zu können, 
+ gibt es den Logfilezipper. Mit diesem werden die ältesten Logbücher komprimiert 
+ und in ein eigenes Verzeichnis gespeichert. Die Anzahl der komprimierten 
+ Logbücher kann parametriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Unix werden entsprechende Prozesse konfiguriert 
+ und vor dem Cloud Connector gestartet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Windows können entsprechende Service Instanzen 
+ konfiguriert werden. Zum Vorgehen siehe bitte hier: <a href="../Installation.htm#Logfilezipper">Logfilezipper</a>.</p>
+
+
+</body></html>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Überblick</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Projektierungsvorlage" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Überblick">
+        <span>Überblick</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Sapient_only">Überblick</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Projektierungsvorlagen stellen eine schnelle Möglichkeit 
+ dar, viele gleichartige Daten in Legato Sapient zu parametrieren. Da zum 
+ Beispiel häufig gleiche Steuerungen mit gleichem Aufbau vorkommen, kann 
+ für so einen Fall eine Vorlage erstellt werden, die dann für die einzelnen 
+ Steuerungen instanziiert wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Es ist möglich, jede beliebige Tabelle über Projektierungsvorlagen 
+ zu befüllen. Dazu wird eine JavaScript-Datei erstellt und im Verzeichnis 
+ C:\SapiEng\src\dist\scripts\configurationtemplates abgelegt. Für weitere 
+ Details, siehe bitte <a href="Script_Overview.htm">Skript-Überblick</a>. 
+ Dieses Skript wird dann in der Tabelle Projektierungsvorlagen in der Spalte 
+ &quot;Eigenschaften&quot; referenziert (z.B. {&quot;script&quot;:&quot;create_node&quot;}).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In der Spalte &quot;Parameter&quot; der Projektierungsvorlagen 
+ werden dann als JSON-String die einzutragenden Parameter notiert:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">{</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;parent_node&quot;: {&quot;caption&quot;: 
+ &quot;Parent node&quot;, &quot;dataType&quot;: &quot;Int32&quot;, &quot;lookupTable&quot;: 
+ &quot;l_nodes&quot;, &quot;required&quot;: true},</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;short_name&quot;: {&quot;caption&quot;: 
+ &quot;Short name&quot;, &quot;dataType&quot;: &quot;String&quot;, &quot;maxLength&quot;: 
+ 80},</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;name&quot;: {&quot;caption&quot;: 
+ &quot;Name&quot;, &quot;dataType&quot;: &quot;String&quot;, &quot;maxLength&quot;: 
+ 80, &quot;required&quot;: true}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für jeden hier eingetragenen Parameter wird zur unterliegenden 
+ Tabelle &quot;Instanzen&quot; eine Spalte hinzugefügt, in der der Parameter 
+ mit dem gewünschten Wert per Instanz versehen werden kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Das Anlegen einer neuen Instanz führt noch nicht zum 
+ Anlegen irgendwelcher Daten. In der schreibgeschützten Spalte &quot;Parameterwerte&quot; 
+ der Instanz wird in einem String angezeigt, welche Werte beim Ausführen 
+ des Updates gesetzt werden. Ein Häkchen in der Checkbox &quot;Aktualisierung 
+ empf.&quot; indiziert, dass nicht ausgeführte Änderungen vorgemerkt sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Im Kontextmenü der Instanz kann nun zunächst das Update 
+ (oder das Löschen) der Instanz evaluiert werden. Es wird ein Testlauf 
+ durchgeführt, ohne die Daten wirklich zu schreiben. Der Dialog zeigt an, 
+ ob der Test erfolgreich war und wie viele Änderungen durchgeführt werden. 
+ Mouseover über das Ergebnis zeigt genau an, welche Spalten mit welchen 
+ Werten geschrieben werden. Diese Funktionen können auch auf eine Mehrfachselektion 
+ angewendet werden. Die Aktion wird dann für alle markierten Einträge in 
+ eine Warteschlange aufgerufen und ein Ausführungsfenster eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/CT_1.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Aktionen werden via RPC in der Sapient Engine aufgerufen. 
+ Im Normalfall ist das Ergebnis nach Ausführung in diesem Fenster ersichtlich 
+ - dauert eine Aktion ungewöhnlich lange, kann hier als Fehler ein Timeout 
+ angezeigt werden. Trotzdem läuft die Funktion im Normalfall auf dem Server 
+ weiter. In jedem Fall wird für jede Instanz die Instanz-Info (und das 
+ Feld &quot;Update Recommended&quot;) aktualisiert. Das Ausführungsergebnis 
+ ist dann auch nachträglich aus dem Ausführungs-Protokoll (CT_EXECUTIONS) 
+ ersichtlich. Das Ausführungsfenster kann auch während der Ausführung geschlossen 
+ werden - die Ausführung wird im Hintergrund trotzdem weiter ausgeführt. 
+ Mit dem Button &quot;Anstehende Aktionen überspringen&quot; kann die Ausführung 
+ aller nicht gestarteten Aufrufe zurückgezogen werden. Der aktuell laufende 
+ Aufruf wird dabei nicht abgebrochen!</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nachdem die Funktion ausgeführt wurde, kann das Dialogfenster 
+ geschlossen werden. In der Tabelle &quot;Ausführungen&quot; ist nun ein 
+ neuer Eintrag mit der eben ausgeführten Aktion zu finden. Hier kann das 
+ Ergebnis jederzeit wieder aufgerufen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Einschränkungen:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Es können nur Tabellen innerhalb des Legato-Schemas 
+ verwendet werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Es können nur Tabellen verwendet werden, die einen 
+ serverseitig verwalteten numerischen PrimaryKey besitzen (Feldname verbindlich 
+ &quot;ID&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Icon im LC2 zu Projektierungsvorlagen:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Ein Icon wird vor jeder Zeile im LC2 angezeigt, 
+	 wenn der Datensatz über eine Vorlage erstellt wurde.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Symbol_Änderungen_Vorlageninstanz_DE.png" alt="" style="border: none;" border="0"/></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Das Icon zeigt beim Mouse Over die Warnung 
+	 &quot;Vorlageninstanz: Änderungen werden bei der nächsten Aktualisierung 
+	 der Instanz überschrieben.&quot;</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><br/>
+<img src="../../../assets/images/Symbol_Änderungen_Vorlageninstanz_2_DE.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Beachten Sie den Menüeintrag &quot;Vorlage 
+	 (Proxy) im Navigationsbaum finden&quot; im Kontextmenü. Wenn Datensätze 
+	 über Projektierungsvorlagen erstellt wurden, kann über diesen Menüeintrag 
+	 der zugehörige Vorlageninstanz-Proxy im Navigationsbaum auf einfache 
+	 Art gefunden werden.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/Locate_Template_Item_in_Navigation_Tree_DE.png" alt="" style="border: none;" width="550" height="616" border="0"/></p>
+
+
+</body></html>

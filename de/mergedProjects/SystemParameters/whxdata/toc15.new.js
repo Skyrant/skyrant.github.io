@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Tage bis zur Anonymisierung","type":"item","tilePath":"","description":"","url":"de/05_DB/08_Anonym/Tage_bis_zur_Anonymisierung.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

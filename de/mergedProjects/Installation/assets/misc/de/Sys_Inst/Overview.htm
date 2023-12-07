@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Überblick</title>
+<link rel="stylesheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h1 style="margin-left: 27px;">Überblick</h1>
+<h2><a name="Über_dieses_Dokument"></a>Über dieses Dokument</h2>
+<p class="BodyText">Dieses Dokument beschreibt die Installation eines Legato-Basissystems 
+ in den am häufigsten anzutreffenden Varianten.</p>
+<p class="BodyText">Im Dokument werden folgende Symbole und Formatierungen 
+ verwendet:</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" 
+								 border="0" />:</p>
+<p class="TextkörperHinweis">Stellt einen Sicherheitshinweis dar. Die folgenden 
+ Informationen warnen vor möglichem Sachschaden, z.B. Datenverlust oder 
+ mangelnder Funktionalität bei unsachgemäßer Handhabung. Beachten Sie diese 
+ Hinweise unbedingt!</p>
+<p class="Textkörperfett">INFO:</p>
+<p class="TextkörperHinweis">Hier finden Sie wichtige Informationen über 
+ die Funktionsweise des Systems. Diese Informationen können Sie dabei unterstützen, 
+ die Konfiguration korrekt vorzunehmen.</p>
+<p class="Textkörperfett">TIPP:</p>
+<p class="TextkörperHinweis">Hier finden Sie hilfreiche Tipps zur Anwendung.</p>
+<h2><a name="Übersicht_über_die_Komponenten"></a>Übersicht über die Komponenten</h2>
+<p class="BodyText">Die Installationen der einzelnen Komponenten werden 
+ teilweise über Setup-Programme und teilweise manuell durchgeführt.</p>
+<p class="BodyText">Für ein komplettes Legato System müssen folgende Hauptkomponenten 
+ eingerichtet werden:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legato Datenbankgateway (bis Version 4.7.2.4)</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Gateway 
+ mit Send / Receive und OPC-Clientschnittstelle</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">GEFASOFT 
+ OPC-Server GOPS (bei Bedarf)</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Treiber 
+ zur Anbindung der SPS-Ebene (in Verbindung mit dem OPC-Server)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Sapient Cloud Connector (als Nachfolge-Tool des 
+ Datenbank-Gateways)</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Gateway 
+ mit Send / Receive und OPC_UA-Clientschnittstelle</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">SQL-Datenbank</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">SQL-Datenbank 
+ (Oracle)</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Datenmodell 
+ mit Tabellen und Prozeduren</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Application Engine-Instanz(en) für verschiedene 
+ ergänzende, zyklische Datenbankjobs</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legato Configuration Center (LC2) auf einer oder 
+ mehreren Workstations mit Datenbankverbindung</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Webapplikation</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Web-Application-Server 
+ (z.B. Tomcat)</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Servlet-basierende 
+ Webanwendung</p><?rh-list_end ?>
+<h2 class="Aufzählungszeichen22"><a name="Inhalt_des_Produkt-Verzeichnisses"></a>Inhalt 
+ des Produkt-Verzeichnisses</h2>
+<p class="BodyText">Folgende Basisdaten für die Installation sind im Auslieferungsverzeichnis 
+ vorhanden:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">SQL-Skripte für die Installation der Legato-Datenbank</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">WAR-File für die Legato-Webapplikation</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LeAppEng (Legato ApplicationEngine) mit allen 
+ benötigten Komponenten (es existiert kein automatisches Setup)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Treiber zur Anbindung der SPS-Ebene (in Verbindung 
+ mit dem OPC-Server)</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Folgende Setup-Programme und Installer sind&#160;im 
+ Auslieferungsverzeichnis vorhanden:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legato Datenbank-Installer (LegatoDB) für die 
+ Ausführung der Datenbank-Installationsskripte</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Konfigurationstool für die Webapplikation</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">GatewaySetup für das&#160;Legato-Datenbankgateway</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">setupscc.exe für den Sapient Cloud Connector</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">GopsSetup für den Gefasoft OPC-Server (nur in 
+ Verbindung mit dem Datenbankgateway)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LC2Setup für das Legato Configuration Center (LC2)</p><?rh-list_end ?>
+</body>
+</html>

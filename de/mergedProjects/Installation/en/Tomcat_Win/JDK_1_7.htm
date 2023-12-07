@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "12.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_Win_en.docx" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Installation of JDK 1.7</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Installation of JDK 1.7">
+        <span>Installation of JDK 1.7</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Installation of JDK 1.7</h1>
+<p class="BodyText" data-condition="Others:Englisch">Start the downloaded jdk-7xxx-windows-x64.exe to install 
+ the Java SE Runtime Environment. The following Steps will guide through 
+ the Installation of JDK.</p>
+<h2 data-condition="Others:Englisch">Step 1 – Setup Wizard</h2>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_Win/image006.jpg" alt="" width="502" height="376" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">Please click &quot;Next&quot;.  </p>
+<h2 data-condition="Others:Englisch">Step 2 – Custom Setup</h2>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_Win/image007.jpg" alt="" width="500" height="376" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">Please click &quot;Next&quot; with the already pre-selected 
+ features for the Installation.</p>
+<h2 data-condition="Others:Englisch">Step 3 – Destination Folder</h2>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_Win/image008.jpg" alt="" width="500" height="374" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">The destination folder is already pre-selected. Please 
+ click &quot;Next&quot;.</p>
+<h2 data-condition="Others:Englisch">Step 4 – Complete</h2>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_Win/image009.jpg" alt="" width="499" height="376" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">After successful installation, click &quot;Next&quot; 
+ to complete the Java installation.  </p>
+<h2 data-condition="Others:Englisch"><a id="Configure_Environment_Variables"></a>Configure Environment 
+ Variables</h2>
+<p class="BodyText" data-condition="Others:Englisch">Before installing Tomcat, you should ensure that your 
+ environment variables are set correctly, so that Tomcat will be able to 
+ find your Java libraries.</p>
+<h3 data-condition="Others:Englisch">Step 1 - Locate the JDK Installation Directory</h3>
+<p data-condition="Others:Englisch"><span style="font-size: 11.0pt; font-family: &#39;Palatino Linotype&#39;, serif;">If 
+ you already know the installation path for the Java Development Kit, go 
+ to <em><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-style: normal;">Step 
+ 2</span></em> below. Otherwise, find the installation path by following 
+ these instructions:</span></p>
+<p class="BodyText" data-condition="Others:Englisch">1. If you didn&#39;t change the installation path for the 
+ Java Development Kit during installation, it will be in a directory under 
+ C:\Program Files\Java. Using Explorer, open the directory C:\Program Files\Java.</p>
+<p class="BodyText" data-condition="Others:Englisch">2. Inside that path will be one or more subdirectories 
+ such as C:\Program Files\Java\jdk1.7.0_21. </p>
+<h3 data-condition="Others:Englisch">Step 2 - Set the JAVA_HOME Variable</h3>
+<p data-condition="Others:Englisch"><span style="font-size: 11.0pt; font-family: &#39;Palatino Linotype&#39;, serif;">Once 
+ you have identified the JDK installation path:</span></p>
+<p class="BodyText" data-condition="Others:Englisch">1. Right-click the My Computer icon on your desktop 
+ and select Properties.</p>
+<p class="BodyText" data-condition="Others:Englisch">2. Click the Advanced tab.</p>
+<p class="BodyText" data-condition="Others:Englisch">3. Click the Environment Variables button.</p>
+<p class="BodyText" data-condition="Others:Englisch">4. Under System Variables, click New.</p>
+<p class="BodyText" data-condition="Others:Englisch">5. Enter the variable name as JAVA_HOME.</p>
+<p class="BodyText" data-condition="Others:Englisch">6. Enter the variable value as the installation path 
+ for the Java Development Kit for example, C:\Program Files\Java\jdk1.7.0_21.</p>
+<p class="BodyText" data-condition="Others:Englisch">7. Click OK.</p>
+<p class="BodyText" data-condition="Others:Englisch">8. Click Apply Changes.</p>
+<h3 data-condition="Others:Englisch">Step 3 - Set Java in System PATH Variable</h3>
+<p class="BodyText" data-condition="Others:Englisch">1. Right-click the My Computer icon on your desktop 
+ and select Properties.</p>
+<p class="BodyText" data-condition="Others:Englisch">2. Click the Advanced tab.</p>
+<p class="BodyText" data-condition="Others:Englisch">3. Click the Environment Variables button.</p>
+<p class="BodyText" data-condition="Others:Englisch">4. Under System Variables, click Path.</p>
+<p class="BodyText" data-condition="Others:Englisch">5. In the Edit windows, modify Path by adding the location 
+ of the Java bin folder to the value for Path for example, C:\Program Files\Java\jdk1.7.0_21\bin.</p>
+<p class="BodyText" data-condition="Others:Englisch"> </p>
+
+
+</body></html>

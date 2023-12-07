@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.3.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Besonderheiten beim Löschen von Knoten und Verbindungen</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Besonderheiten beim Löschen von Knoten und Verbindungen">
+        <span>Besonderheiten beim Löschen von Knoten und Verbindungen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">Besonderheiten beim Löschen von Knoten und Verbindungen</h3>
+<p data-condition="Others:Deutsch">Beim Löschen von Knoten und Verbindungen mit dem LC2 gibt es Besonderheiten, 
+ die Sie beachten müssen: </p>
+<p data-condition="Others:Deutsch"><span style="background-color: #ffffff; background: white;">D</span><span style="background: white;">as Löschen der Knoten und Verbindungen, 
+ die eine große Anzahl an Referenzen haben, führt zu einem</span><span style="background: white; font-weight: bold;"> sehr hohen Ressourcenverbrauch</span><span style="background: white;"> auf dem Datenbankserver. Der Produktivbetrieb 
+ des Systems wird hierdurch </span><span style="background: white; font-weight: bold;">massiv</span><span style="background: white;"> behindert. </span><span style="background-color: #ffffff;">Beim 
+ Löschen von mehreren Tausend Meldungen und Messwertarchiveinträgen, die 
+ zu Knoten und Verbindungen gehören und gespeichert sind, sollte der Vorgang 
+ in einem </span><span style="background-color: #ffffff; font-weight: bold;">Wartungsfenster</span><span style="background-color: #ffffff;"> ausgeführt werden. Die Dauer des 
+ Vorganges variiert je nach System und muss von einem erfahrenen Nutzer 
+ bewertet werden. Es gibt keine Möglichkeit, gelöschte Daten wie z.B. das 
+ Meldearchiv oder die KPI-Werte wiederherzustellen. Damit Knoten für Benutzer 
+ nicht mehr sichtbar sind, kann man diese Knoten beispielsweise an einen 
+ Altablagen-Ort verschieben.</span></p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><span style="background: white;"><img src="../../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" width="71" height="19" border="0"/>:</span></p>
+<p class="TextkörperHinweis" style="font-size: 11pt; background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;">Löschen Sie aufgrund des möglicherweisen 
+ sehr hohen Ressourcenverbrauchs </span><span style="background: white; 
+												 font-weight: bold; color: #ff0000;">keine 
+ Knoten und Verbindungen während der Produktionszeiten</span><span style="background: white;">!</span></p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Analyse von Referenzen</h6>
+<p style="margin: 0in; mso-spacerun: yes; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Beim Löschen von Elementen im LC2 erscheint stets 
+ eine Warnmeldung. Wenn Sie Knoten und Verbindungen, die <span>mit dem 
+ LC2 verknüpft sind löschen möchten, wird diese Warnmeldung erweitert:</span></p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><img src="../../../../assets/images/message_deletion_nodes_DE.png" alt="" style="border: none;" border="0"/></p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">Die 
+ Warnmeldung weist beim Löschen von Knoten und Verbindungen ausdrücklich 
+ darauf hin, dass diese Aktion den produktiven Betrieb der Applikation 
+ erheblich beeinträchtigen kann und nur von einem Key User oder von einem 
+ Mitarbeiter von Gefasoft durchgeführt werden darf. <span style="background-color: #ffffff;">Wenn 
+ Sie die Warnmeldung durch Klicken auf die Schaltfläche Ja bestätigen, 
+ werden die Knoten und Verbindungen unwiderruflich gelöscht. </span></p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt; 
+	 background-color: #ffffff;" data-condition="Others:Deutsch"><span style="background: white;">Wenn 
+ Sie die Knoten und Verbindungen löschen möchten, ist es empfehlenswert, 
+ vor dem Löschen die Referenzen zu analysieren (Analyze References-Funktion). 
+ Klicken Sie hierzu auf die Schaltfläche Referenzen Analysieren. Mit der 
+ Analyze References-Funktion erhalten Sie einen Überblick, welche Elemente 
+ referenziert und verbunden sind. Es werden alle Referenzen analysiert, 
+ die entfernt werden müssen, um den Datensatz löschen zu können. Das Löschen 
+ ist nur möglich, wenn alle Referenzen auf das zu löschende Ele</span><span style="background: white; background-color: #ffffff;">ment entfernt 
+ werden.</span></p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">Für 
+ allgemeine Informationen zum Löschen von Referenzen siehe <a href="../../../02_Handling/04_Operating/16_Analyze_Refs.htm">Referenzen 
+ analysieren und löschen</a>.</p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">TIPP:</p>
+<p class="Textkörperfett" style="margin-left: 40px; font-size: 11pt;" data-condition="Others:Deutsch">Um 
+ die Last und Dauer einzelner Löschvorgänge zu verteilen empfiehlt es sich, 
+ angezeigte Referenzen manuell vom Ende der Referenzketten zu löschen.</p>
+<p class="Textkörperfett" style="margin-left: 40px; font-size: 11pt;" data-condition="Others:Deutsch">Zusätzlich 
+ ist es ist empfehlenswert mit dem Löschvorgang am Ende der Referenzkette 
+ (Knoten ohne Unterknoten) zu beginnen.</p>
+<p style="margin: 0in; font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Für weitere Details, siehe <a href="04_Delete.htm">Verschieben und Löschen 
+ von Knoten</a>.</p>
+
+
+</body></html>

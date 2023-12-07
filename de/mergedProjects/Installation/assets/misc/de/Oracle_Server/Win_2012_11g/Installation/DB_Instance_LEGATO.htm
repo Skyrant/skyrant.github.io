@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Einrichtung einer Datenbankinstanz &quot;LEGATO&quot;</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Einrichtung einer Datenbankinstanz &quot;LEGATO&quot;</h2>
+<p class="BodyText">In diesem Schritt wird eine neue Datenbankinstanz für 
+ LEGATO eingerichtet. Weitere Hinweise hierzu findet man auch in unserer 
+ Legato-Installationsdokumentation.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image049.png" 
+						 alt="" width="576" height="647" border="0" /></p>
+<p class="BodyText">Um die Datenbankinstanz zu erstellen, brauchen wir 
+ den Database Configuration Assistenten. Dieser kann im Windows Start-Menü 
+ unter Oracle … / Configuration .. / Database Configuration Assistant gestartet 
+ werden oder auch in einer DOS-Konsole mit dem Befehl: dbca</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image051.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Es öffnet sich der Welcome-Screen des Database Configuration 
+ Assistant. Klicken Sie &quot;Next&quot;, um zu beginnen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image053.png" 
+						 alt="" width="700" height="499" border="0" /></p>
+<p class="BodyText">Im Datenbank Assistenten wählen wir nun "Create a database" 
+ und klicken auf "Next".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image055.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 2: Als Vorlage (template) wählen wir nun eine 
+ "Custom Database".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image057.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 3 (Globalen Datenbanknamen wählen): Man kann 
+ nun einen Datenbanknamen vergeben. Im Beispiel wählen wir den Namen: "LEGATO" 
+ und klicken auf "Next".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image059.png" 
+						 alt="" width="700" height="499" border="0" /></p>
+<p class="BodyText">Schritt 4a: Entfernen Sie den Haken in der Checkbox 
+ &quot;Configure Enterprise Manager&quot;. Dieser funktioniert nicht zuverlässig.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image061.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 4b: Wir wechseln nun in den Reiter &quot;Automatic 
+ Maintenance Tasks&quot;.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Oracle empfiehlt, die Checkbox &quot;Enable 
+ automatic maintenance tasks&quot; anzuhaken. Wie im Text auf dem Tabfolder 
+ erläutert, werden als Wartungsaufgaben u. a. diverse Optimizer-Statistiken 
+ und automatische Hinweis-Reports für das proaktive Performance-Tuning 
+ durchgeführt. Dadurch soll vor allem die Performance von Datenbankabfragen 
+ verbessert werden.</p>
+<p class="TextkörperHinweis">Zu beachten ist aber, dass diese automatischen 
+ Wartungsaufgaben selber wieder Ressourcen verbrauchen (vor allem CPU-Leistung), 
+ selbst wenn die CPU-Leistung dafür gedrosselt wird, und damit einen eventuell 
+ stattfindenden regulären Produktivbetrieb stark behindern oder sogar zum 
+ Erliegen bringen können. Ist das System während einer Nachtschicht aktiv, 
+ dann hilft auch das vorgegebene Wartungsfenster (von 22 Uhr abends bis 
+ 2 Uhr morgens) nicht.</p>
+<p class="TextkörperHinweis">Falls die automatischen Wartungsaufgaben den 
+ Produktivbetrieb auch nachts (voraussichtlich) zu stark behindern, kann 
+ mithilfe des Enterprise Manager das Wartungsfenster auf eine andere, tatsächlich 
+ produktionsfreie oder zumindest ruhigere Zeit gelegt werden, z. B. auf 
+ den Sonntag. Ist auch das nicht möglich, weil der Produktivbetrieb das 
+ System 24/7 (fast) das ganze Jahr über zu stark auslastet, dann kann die 
+ Performance-Optimierung entweder nur von Hand angestoßen werden oder es 
+ muss eventuell sogar vollständig auf sie verzichtet werden.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image063.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 5: Hier werden nun die wichtigsten Passwörter 
+ der Systembenutzer vergeben. Es gibt die Möglichkeit, für alle Systembenutzer 
+ unterschiedliche Passwörter zu verwenden oder das gleiche. Auf jeden Fall 
+ sollten die Passwörter sicher gewählt und auch sicher abgelegt werden.</p>
+<p class="BodyText">Wenn dem Assistenten die gewählten Passwörter nicht 
+ sicher genug erscheinen, erfolgt dieser Warnhinweis:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image065.png" 
+						 alt="" width="446" height="252" border="0" /></p>
+<p class="BodyText">Man kann nun noch einmal die Passwörter korrigieren 
+ oder diesen Warnhinweis ignorieren mit "Yes".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image066.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 6 (Auswahl der Speicherorte): Nun kann man 
+ eine geeignete Lokation für die Datenbankdateien auswählen. Wenn möglich, 
+ sollte diese auf einer separaten Partition liegen, also nicht in der Systempartition. 
+ Das Verzeichnis darf auch auf RAID-Systemen abgelegt werden. Dateien, 
+ für die das Ablegen auf RAID-Systemen nicht zu empfehlen ist, werden in 
+ einem späteren Abschnitt gesondert behandelt. In unserem Beispiel haben 
+ wir das Verzeichnis "c:\oracle\oradata" gewählt.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image068.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 7 (Auswahl der Wiederherstellungsoptionen): 
+ In dieser Maske kann man den Ort und die Größe des Fast Recovery Bereichs 
+ bestimmen.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Wählen Sie eine ausreichende Größe, da bei 
+ Engpässen die Datenbank keine weiteren Transaktionen durchführen kann. 
+ Die Datenbank ist damit nicht mehr verfügbar!</p>
+<p class="BodyText">Welche Größe im Einzelfall für den Fast Recovery Bereich 
+ anzugeben ist, ist vom Datenbank-Administrator festzulegen.</p>
+<p class="BodyText">Mit der zweiten Auswahl in dieser Maske kann man bestimmen, 
+ ob überhaupt archivierte REDO-Logdateien angelegt werden oder nicht. Mit 
+ diesen Dateien ist auch innerhalb von Backups eine sehr gute Wiederherstellung 
+ gewährleistet. Dies sollte man jedoch nur für sensible Produktionsumgebungen 
+ wählen. Für reine Testumgebungen kann dies auch ausgeschaltet bleiben.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Bei der Installation und dem Import deaktivieren 
+ Sie das Archivieren. Sonst läuft der Speicher zu schnell voll. Aktivieren 
+ Sie für sensible Produktionsumgebungen das Archivieren, nachdem die Installation 
+ abgeschlossen ist (siehe Kapitel &quot;Archiving aktivieren&quot;).</p>
+<p class="BodyText">Klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image070.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 8a: Auf dieser Seite lassen sich nun die Komponenten 
+ auswählen: Es können alle Haken entfernt werden.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image072.png" 
+						 alt="" width="700" height="502" border="0" /></p>
+<p class="BodyText">Schritt 8b: Im Reiter &quot;Custom Scripts&quot; sind 
+ keine Eingaben notwendig.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image074.png" 
+						 alt="" width="700" height="500" border="0" /></p>
+<p class="BodyText">Schritt 9 (Speicher): Als nächstes wird die Größe des 
+ physikalischen Hauptspeichers bestimmt, die für diese Datenbank-Instanz 
+ reserviert werden soll. Hier muss man bedenken, dass dem Betriebssystem 
+ und anderen Applikationen bzw. auch anderen Datenbank-Instanzen genug 
+ Platz gelassen werden sollte (also hier zum Beispiel keine Werte einrichten, 
+ die mehr als 80% des gesamten Speichers bedeuten würde).</p>
+<p class="BodyText">Es empfiehlt sich jedoch, für jede Instanz mindestens 
+ 4 GB zu reservieren (dies ist ausreichend für ein Pilot-Projekt). Für 
+ mittelgroße Firmen empfehlen wir eine Größe von 12 GB. In unserem Beispiel 
+ geht dies leider nicht, weil das Testsystem nur 2 GB hat und dieser Instanz 
+ davon 25% zugewiesen werden.</p>
+<p class="BodyText">Mit der Einstellung "Use automatic memory management" 
+ kümmert sich Oracle selbst darum, wie der Speicher dann intern in der 
+ Instanz aufgeteilt wird. Es wird empfohlen, diese Einstellung zu setzen.</p>
+<p class="BodyText">Danach bitte auf den Reiter "Character Sets" klicken, 
+ um die Zeichensätze auszuwählen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image076.png" 
+						 alt="" width="70" height="50" border="0" /></p>
+<p class="BodyText">Schritt 9 (Zeichensätze): Bitte wählen Sie hier den 
+ Zeichensatz UTF8 aus. Dazu muss man zunächst auf die manuelle Auswahl 
+ "choose from list..." klicken und dann noch die Option "show recommended 
+ character sets only" ausschalten, denn sonst findet man den UTF8-Zeichensatz 
+ nicht in der Liste.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image078.png" 
+						 alt="" width="764" height="547" border="0" /></p>
+<p class="BodyText">Schritt 9 (Größenanpassungen): Wählen Sie bitte die 
+ Standard-Blockgröße von 8192 Bytes und ca. 200 bis 300 Prozesse auf dieser 
+ Seite.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image080.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Schritt 9 (Verbindungs-Modus): Hier kann die Default-Einstellung 
+ übernommen werden.</p>
+<p class="BodyText">Öffnen Sie anschließend den Dialog mit den INI-Parametern, 
+ indem Sie auf den Button "All Initialization Parameters" klicken. Aktivieren 
+ Sie außerdem die Anzeige aller Parameter durch Klick auf den Button &quot;Show 
+ Advanced Parameters&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image082.png" 
+						 alt="" width="551" height="651" border="0" /></p>
+<p class="BodyText">Schritt 9 (Initialisierungs-Parameter): Ändern Sie 
+ nun direkt die Oracle Initialisierungs-Parameter, wie zum Beispiel den 
+ Parameter: nls_length_semantics auf CHAR. Bitte beachten Sie hierzu die 
+ aktuellen Hinweise in der Dokumentation Systeminstallation.</p>
+<p class="BodyText">Bitte zusätzlich beachten, dass versteckte Parameter 
+ mit _... hier noch nicht eingetragen werden können. Dies kann erst nach 
+ Erstellung der Instanz erfolgen.</p>
+<p class="BodyText">Schließen Sie den Dialog über &quot;Close&quot; und 
+ klicken Sie dann auf &quot;Next&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image083.png" 
+						 alt="" width="700" height="500" border="0" /></p>
+<p class="BodyText">Schritt 10: Nachfolgend werden die Angaben für die 
+ Tablespaces und Datenbankdateien vorgenommen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image085.png" 
+						 alt="" width="700" height="499" border="0" /></p>
+<p class="BodyText">Schritt 10 (Controlfiles): Damit sind die Steuerdateien 
+ der Instanz gemeint. Diese Dateien sind sehr wichtig, denn wenn diese 
+ zerstört sind, wird es schwierig sein die Instanz zu starten, wenn nicht 
+ gar unmöglich. Hiervon sollten also mehrere Kopien eingetragen werden. 
+ Eine Kopie erzeugt man automatisch, indem man hier eine weitere Zeile 
+ hinzufügt. In diesem Beispiel sind es drei Kopien. Sicherheitshalber sollten 
+ diese sogar auf unterschiedlichen Festplatten oder RAID-Systemen liegen.</p>
+<p class="BodyText">Bitte ergänzen Sie auch den Namen der Instanz vor dem 
+ Dateinnamen (also LEGATO).</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image087.png" 
+						 alt="" width="700" height="499" border="0" /></p>
+<p class="BodyText">Schritt 10 (Tablespaces): In der Liste der Tablespaces 
+ sollten diese fünf erscheinen. Bitte klicken Sie auf "Create", um einen 
+ weiteren Tablespace zu definieren. Für weitere Informationen zu den Tablespaces 
+ siehe bitte auch die Dokumentation Systeminstallation.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image089.png" 
+						 alt="" width="487" height="548" border="0" /></p>
+<p class="BodyText">Danach erscheint eine neue Maske zum Anlegen des neuen 
+ Tablespaces. Bitte tragen Sie als Namen "LEGATO_DAT" und beim Filenamen 
+ "legato_dat.dbf" ein und ändern Sie die Anfangsgröße auf 1000 MB. Anschließend 
+ muss noch ein Doppel-Klick auf die Datendatei gemacht werden, um die nachfolgende 
+ Maske zu öffnen:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image090.png" 
+						 alt="" width="409" height="452" border="0" /></p>
+<p class="BodyText">Bitte wechseln Sie hier auf den Reiter "Storage" und 
+ aktivieren Sie die Option "Automatically extend datafile when full (AUTOEXTEND)"</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image091.png" 
+						 alt="" width="409" height="452" border="0" /></p>
+<p class="BodyText">Damit wird ein automatisches Anwachsen des Tablespaces 
+ aktiviert. Wählen Sie als Erweiterung immer mindestens 64 Megabytes.</p>
+<p class="BodyText">Zusätzlich wird hier die Maximalgröße definiert, indem 
+ man einen &quot;Maximum Size Value&quot; einträgt. In diesem Beispiel 
+ sind dies 20.000 Megabytes.</p>
+<p class="BodyText">Das heißt, dieser Tablespace kann zwar wachsen, aber 
+ nur bis 20.000 Megabytes.</p>
+<p class="Textkörperfett"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image001.jpg" 
+								 alt="" width="71" height="19" border="0" />:</p>
+<p class="TextkörperHinweis">Achten Sie darauf, als Einheit M Bytes auszuwählen. 
+ Defaultmäßig sind hier K Bytes eingestellt. Falls jedoch der Wert bei 
+ &quot;Maximum Size&quot; kleiner ist als die &quot;File Size&quot; im 
+ vorigen Screen, kommt es bei Abschluss der Installation zu einem Fehler.</p>
+<p class="BodyText">Klicken Sie anschließend OK und wiederholen Sie diese 
+ Schritte für den Tablespace LEGATO_IDX.</p>
+<p class="BodyText">Es sollten danach die folgenden sieben Tablespaces 
+ in der Liste erscheinen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image092.png" 
+						 alt="" width="700" height="501" border="0" /></p>
+<p class="BodyText">Bitte wechseln Sie nun zu &quot;Datafiles&quot; links 
+ im Baum.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image094.png" 
+						 alt="" width="700" height="397" border="0" /></p>
+<p class="BodyText">Schritt 10 (Datendateien): Klicken Sie auf die Datendateien 
+ "datafiles" und ergänzen Sie manuell bei allen den Instanznamen, also 
+ in diesem Fall "legato". Die anderen Einstellungen von den System-Tablespaces 
+ sollten nicht verändert werden.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image096.png" 
+						 alt="" width="700" height="397" border="0" /></p>
+<p class="BodyText">Schritt 10 (Redo-Log-Gruppen): Bitte erstellen Sie 
+ nun mindestens fünf Redo-Loggruppen mit jeweils zwei Mitgliedern. Ändern 
+ Sie die Dateinamen auf "legato_redo01a.rdo". Dies ist sicherer als diese 
+ bei ".log" zu belassen, da *.log Dateien gern gelöscht werden.</p>
+<p class="BodyText">Bitte beachten Sie, dass alle Log-Gruppen die gleiche 
+ Größe haben müssen!</p>
+<p class="BodyText">Außerdem wird empfohlen, die Kopie der Logdateien immer 
+ auf unterschiedlichen Laufwerken zu speichern.</p>
+<p class="BodyText">Klicken Sie nun bitte auf "Next", um zum letzten Schritt 
+ zu kommen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image098.png" 
+						 alt="" width="700" height="397" border="0" /></p>
+<p class="BodyText">Schritt 11: Hier sollte man immer die Optionen "Save 
+ as DB Template" und "Generate Scripts" einschalten, damit man ein Template 
+ für spätere Verwendung hat und die Skripte für Fehlerfälle. Somit kann 
+ man später gegebenenfalls fehlerhafte Installationen noch einmal stückweise 
+ nachkorrigieren.</p>
+<p class="BodyText">Klicken Sie dann bitte auf "Finish".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image100.png" 
+						 alt="" width="609" height="716" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image101.png" 
+						 alt="" width="609" height="716" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image102.png" 
+						 alt="" width="609" height="716" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image103.png" 
+						 alt="" width="609" height="717" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image104.png" 
+						 alt="" width="609" height="717" border="0" /></p>
+<p class="BodyText">Zusammenfassung: Kontrollieren Sie anschließend noch 
+ einmal sehr sorgfältig die Zusammenfassung und drücken Sie erst dann "OK" 
+ wenn Sie keine Fehler mehr entdecken konnten, denn anschließend beginnt 
+ die Einrichtung der Datenbank-Instanz.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image105.png" 
+						 alt="" width="399" height="173" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image106.png" 
+						 alt="" width="375" height="173" border="0" /></p>
+<p class="BodyText">Es folgen dann zwei Erfolgsmeldungen für die Erstellung 
+ des Templates und der Skripte, die man mit "OK" bestätigt.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image107.png" 
+						 alt="" width="610" height="425" border="0" /></p>
+<p class="BodyText">Anschließend folgt die Maske mit dem Fortschrittsbalken 
+ der Instanz-Erstellung.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image108.png" 
+						 alt="" width="553" height="540" border="0" /></p>
+<p class="BodyText">Nach der Installation sollte dann folgende Erfolgsmeldung 
+ erscheinen.</p>
+</body>
+</html>

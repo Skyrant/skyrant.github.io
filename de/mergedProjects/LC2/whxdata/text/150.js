@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Überblick"]],"2":[["\n"],["\n","Hier werden Daten parametriert, die zur Verwaltung \n der Werke benötigt werden. Diese sind beispielsweise Arbeitszeit-Einstellungen, \n Meldungsmanagement.","\n\n\n"]],"3":[["Überblick"]],"id":"150"})

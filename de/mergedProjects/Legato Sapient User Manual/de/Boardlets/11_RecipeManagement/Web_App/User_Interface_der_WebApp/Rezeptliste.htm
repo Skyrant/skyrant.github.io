@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "9.11.1.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Rezeptliste</title>
+<link rel="StyleSheet" href="../../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rezeptliste">
+        <span>Rezeptliste</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Rezeptliste</h1>
+<h2 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h2>
+<p data-condition="Others:Deutsch">Für ausgewählte Knoten kann eine Rezeptliste abgerufen werden.</p>
+<p data-condition="Others:Deutsch">Die Rezeptliste ist eine Übersicht über alle konfigurierten Rezepte 
+ in den Anlagen (gefiltert nach Knoten). Wenn Sie einen Knoten auswählen, 
+ können Sie alle Rezepte sehen, die mit diesem Knoten verknüpft sind (ein 
+ Rezept ist mit einer SPS-Verbindung verbunden; der betreffende Knoten 
+ ist der &quot;Standardknoten&quot; dieser Verbindung). Außerdem können 
+ Sie auch die Rezepte sehen, die mit einem Elternteil dieses Knotens verbunden 
+ sind.</p>
+<p data-condition="Others:Deutsch">Die Rezepte sind Zeilen aus der Tabelle RM_RECIPES (siehe <a href="../../LC2/Datenmodell.htm">Datenmodell</a> 
+ für weitere Informationen zur Tabelle RM_RECIPES).</p>
+<p data-condition="Others:Deutsch">Das <span style="font-weight: bold;">Rezeptliste</span>-Boardlet (Sprache: 
+ Englisch) sieht wie folgt aus:</p>
+<p data-condition="Others:Deutsch"><img src="../../../../Bilder/Boardlet_Rezeptliste.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 3.681%;"/>
+	<col style="width: 47.762%;"/>
+	<col style="width: 48.573%;"/>
+	</colgroup><tbody><tr>
+		<td bgcolor="#C0C0C0"> </td>
+		<td bgcolor="#C0C0C0"><p style="font-weight: bold; font-family: &#39;Palatino Linotype&#39;, serif;">Spalte</p></td>
+		<td bgcolor="#C0C0C0"><p style="font-weight: bold; font-family: &#39;Palatino Linotype&#39;, serif;">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold; color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+				 font-size: 11pt; text-align: center;">(1)</p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">name</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Rezeptname 
+		 (in der gewählten Sprache)</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(2)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">symbol</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Rezeptsymbol 
+		 (in der SPS verwendet)</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(3)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">connection</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">SPS-Verbindung</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(4)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">last_upload</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Letzter 
+		 Upload (Zeitstempel)</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(5)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">upload_status</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Upload-Status 
+		 (OK, / Upload läuft gerade / NOK [Fehlernummer])</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(6)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">last_download</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Letzter 
+		 Download (Zeitstempel, Fehler oder Download läuft gerade)</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(7)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">download_status</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Download-Status 
+		 (OK, / Download läuft gerade / NOK [Fehlernummer])</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(8)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">last_change</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Letzte 
+		 Änderung (Zeitstempel der letzten Änderung eines Wertes)</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(9)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">mode</p></td>
+		<td><p class="BodyText">•	Upload von der SPS zum MES</p>
+		<p class="BodyText">•	Download vom MES zur SPS</p>
+		<p class="BodyText">Modus (der Modus eines Rezepts kann automatisch 
+		 von SCC oder manuell eingestellt werden)</p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold; 
+												 color: #ff0000; font-family: &#39;Palatino Linotype&#39;, serif; 
+												 font-size: 11pt;">(10)</span></p></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">plc_match</p></td>
+		<td><p class="BodyText"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Zeigt 
+		 an, ob die Rezeptwerte in Legato mit den Werten in der SPS übereinstimmen.</span></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Über die Schaltfläche <span style="font-weight: bold; font-size: 14pt;">...</span> 
+ im <span style="font-weight: bold;">Rezeptlisten</span>-Boardlet können 
+ Sie die angezeigten Elemente der Liste ein- und einblenden. Klicken Sie 
+ hierzu im geöffneten Menü auf <span style="font-weight: bold;">Sichtbare 
+ Spalten.</span></p>
+<p data-condition="Others:Deutsch"><img src="../../../../Bilder/Boardlet_Rezeptliste_Menue_DE.png" alt="" style="border: none;" border="0"/> </p>
+
+
+</body></html>

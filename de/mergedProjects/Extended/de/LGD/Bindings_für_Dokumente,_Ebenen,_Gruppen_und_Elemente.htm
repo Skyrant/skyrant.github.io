@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.8.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Bindings für Dokumente, Ebenen, Gruppen und Elemente</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bindings für Dokumente, Ebenen, Gruppen und Elemente">
+        <span>Bindings für Dokumente, Ebenen, Gruppen und Elemente</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Bindings für Dokumente, Ebenen, Gruppen und Elemente</h1>
+<p data-condition="Others:Deutsch">In den meisten Fällen werden Bindings direkt für Elemente definiert, 
+ z. B. um Elementeigenschaften/-stile festzulegen oder auf Events zu reagieren. 
+ Es ist außerdem möglich, Bindings für Elementgruppen, Ebenen und das Dokument 
+ selbst zu definieren, wobei jedes davon besondere Eigenschaften hat.</p>
+<p data-condition="Others:Deutsch">Im Gegensatz zu Elementen unterstützen Gruppen keine Stile, z. B. für 
+ Rahmen- oder Schriftart. Typische Ziele für Gruppen sind Position, Rotation, 
+ Größe und Sichtbarkeit.</p>
+<p data-condition="Others:Deutsch">Ebenen sind eine besondere Art von Gruppe und es kann über DOM und das 
+ Ebenenfenster darauf zugegriffen werden. Im Ebenenfenster können die Bindings 
+ der aktuell ausgewählten Ebene über den zugehörigen Button bearbeitet 
+ werden.</p>
+<p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><img src="../../Bilder/layers_binding.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US;"><span style="mso-fareast-language: DE;">D</span>as einzige Bindingziel ist 
+ die Sichtbarkeit einer Ebene – ein typischer Anwendungsfall ist eine Legendenebene, 
+ die Erklärungen zu einzelnen Teilen einer Zeichnung enthält, die mithilfe 
+ der Sichtbarkeit der Ebene angezeigt werden können (z. B. durch Drücken 
+ eines Buttons).</span></p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch">Das Dokument selbst unterstützt keinerlei 
+ Bindingziele oder Mausaktionen, aber es ist das einzige Element, das die 
+ Nutzung von onLoad und onUnload Aktionen gestattet, normalerweise um Variablen 
+ während des Ladevorgangs oder beim Schließen eines Dokuments festzulegen. 
+ Falls eine Zeichnung die gleichen Variablen oder Rechenergebnisse an unterschiedlichen 
+ Stellen benötigt (z. B. für Überprüfungen um spezielle Nutzeraktionen 
+ abhängig von der Berechtigung und dem Maschinenstatus zu (de)aktivieren), 
+ kann es nützlich sein, sie auf Dokumentenlevel zu übermitteln– so können 
+ sie in jedem Element innerhalb der Zeichnung genutzt werden.</p>
+<p data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

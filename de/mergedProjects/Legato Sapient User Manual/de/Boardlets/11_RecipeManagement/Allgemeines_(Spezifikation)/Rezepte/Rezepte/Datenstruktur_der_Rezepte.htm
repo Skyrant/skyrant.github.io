@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../../..";
+    gCommonRootRelPath = "../../../../../..";
+    gTopicId = "9.11.2_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Datenstruktur der Rezepte</title>
+<link rel="StyleSheet" href="../../../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Datenstruktur der Rezepte">
+        <span>Datenstruktur der Rezepte</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Rezeptstruktur</h1>
+<h2 data-condition="Others:Deutsch"><a id="Rezeptstruktur"></a>Rezeptstruktur</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Folgende Daten werden je Rezept in Legato <span class="misspell-word">Sapient</span> 
+ gespeichert:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText"><span class="misspell-word">Rezeptname</span></p></li>
+	<li><p class="BodyText">Beschreibung</p></li>
+	<li><p class="BodyText">Bezug des <span class="misspell-word">Fertigungsknotens</span></p></li>
+	<li><p class="BodyText"><span class="misspell-word">Masterflag</span><br/>
+	Pro Rezept gibt es ein sog. <span class="misspell-word">Masterflag</span>. 
+	 Solang das <span class="misspell-word">Masterflag</span> nicht gesetzt 
+	 ist, werden die <span class="misspell-word">Parameterwerte</span> 
+	 aus der Steuerung in <span class="misspell-word">Sapient</span> übernommen. 
+	 <br/>
+	Mit gesetztem <span class="misspell-word">Masterflag</span> werden 
+	 keine Änderungen aus der Steuerung mehr übernommen, Legato <span class="misspell-word">Sapient</span> 
+	 nimmt für dieses Rezept die Masterrolle ein.</p></li>
+	<li><p class="BodyText">Letzte erfolgreiche Übertragung</p></li>
+	<li><p class="BodyText">Verweis auf das <span class="misspell-word">Änderungsjournal</span> 
+	 für dieses Rezept</p></li>
+	<li><p class="BodyText">Auftrag zur Übertragung</p></li>
+	<li><p class="BodyText"><span class="misspell-word">Parameterstruktur</span></p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Rezeptstruktur_bearbeiten"></a>Rezeptstruktur bearbeiten</h2>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="Textkrper">Es muss für jedes Rezept eine vorgegebene 
+	 Struktur existieren. </p></li>
+	<li><p class="Textkrper">Diese kann für jedes Rezept im LC2 angelegt 
+	 und bearbeitet werden.</p></li>
+	<li><p class="Textkrper">Für die definierten Parametertypen sind vordefinierte 
+	 Felder zum Aufbau der <span class="misspell-word">Rezeptstruktur</span> 
+	 vorhanden, so dass eine <span class="misspell-word">Rezeptstruktur</span> 
+	 schnell und leicht erstellt werden kann. Hierfür dienen die Kopierfunktionen.</p></li>
+</ul>
+<p class="Textkrper" data-condition="Others:Deutsch"><img src="../../../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="Textkrper" style="font-family: &#39;Palatino Linotype&#39;, serif; text-decoration: none; " data-condition="Others:Deutsch">Beachten 
+ Sie weitere Informationen zum Bearbeiten der Rezeptstruktur im Kapitel 
+ <a href="../../../LC2/Rezeptvorlage.htm">Rezeptvorlagen</a>.</p>
+
+
+</body></html>

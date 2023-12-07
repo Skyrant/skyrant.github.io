@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Rechteverwaltung</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="rh-index-keywords" content="Benutzer" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rechteverwaltung">
+        <span>Rechteverwaltung</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Rechteverwaltung in Legato Sapient</h2>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Konzept"></a>Konzept</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In Sapient sind die Benutzer in Gruppen organisiert. 
+ Rechte werden ausschließlich für Gruppen vergeben, nicht für einzelne 
+ Benutzer. Die Benutzer werden in der Tabelle U_USERS gepflegt, die Gruppen 
+ in U_USER_GROUPS.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die von Benutzern ausführbaren Aktionen (z.B. &quot;bearbeiten&quot;, 
+ &quot;lesen&quot;) werden in der Tabelle U_ACTIONS definiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Außerdem gibt es eine Tabelle mit den Elementen, mit 
+ Bezug zu denen Rechte vergeben werden können (z.B. &quot;Knoten&quot;, 
+ &quot;Verbindungen&quot;, &quot;Zeitschemata&quot;, &quot;Dashboards&quot;) 
+ --&gt; U_PERM_TARGETS.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Eine Rechte-Zuweisung verbindet nun die folgenden Angaben:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Benutzergruppe / Rolle (&quot;wer&quot;)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Berechtigung (&quot;was&quot;)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">auf ein entsprechendes Objekt (&quot;worauf&quot;)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Zuordnungen werden in einer Tabelle namens U_PERMISSIONS 
+ abgelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nun wird für jedes Einzelelement der Permission Targets 
+ (z.B. Knoten, Verbindungen, Zeitschemata, Dashboards) ein Eintrag in einer 
+ Stellvertreter-Tabelle U_PERMISSIONS_PROXY angelegt. Diese ID wird dann 
+ beim betreffenden Objekt (also z.B. als zusätzliches Feld in L_NODES) 
+ und in allen Rechte-Zuweisungen darauf (in U_PERMISSIONS) vermerkt. </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Berechtigungen werden in Legato Sapient nicht bei 
+ der Auswertung vererbt (z.B. über Knoten-Hierarchie). Stattdessen sind 
+ die Berechtigungen in der Datenbank immer &quot;ausgerollt&quot;: Soll 
+ z.B. einer Gruppe &quot;Maint&quot; das Recht &quot;Meldungen bearbeiten&quot; 
+ auf einem bestimmten Knoten erteilt werden, trägt der LC2 nicht nur einen 
+ Datensatz für den betreffenden Knoten in U_PERMISSIONS ein, sondern auch 
+ je einen für jeden Unterknoten davon.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Datenmodell"></a>Datenmodell</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/01_Users/both/Datamodel.png" alt="" style="border: none;" width="700" height="398" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERM_TARGETS:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Gibt an, ob auf einer Tabelle (einem Target) überhaupt 
+ irgendwelche Aktionen ausführbar sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_ACTIONS:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Alle möglichen Aktionen. Enthält Standardaktionen wie 
+ Lesen, Schreiben, Editieren, sowie spezielle Aktionen für bestimmte Teile 
+ des Datenmodells, z.B. AL_QUIT (Meldung quittieren). Die speziellen Aktionen 
+ haben ein Präfix, das Aufschluss darüber gibt, für welchen Bereich diese 
+ Aktionen möglich sind.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMTARG_ACTION_RELS:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Verbindung zwischen Aktionen und Targets. Spezifiziert, 
+ welche Aktion auf welcher Tabelle ausführbar ist. Nur wenn hier ein entsprechender 
+ Eintrag vorhanden ist, greift ein vergebenes Recht auch (z.B. kann das 
+ Recht AL_QUIT nur für das Target L_NODES oder P_CONNECTIONS vergeben werden, 
+ nicht für T_MODEL_PATTERNS).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS_PROXY:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Register mit IDs für alle möglichen Rechte mit Target-Bezug.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Matrix aller ausgerollten Benutzerrechte für die Benutzergruppen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">L_NODES.PERMISSION:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Spalte &quot;Permission&quot; in allen Tabellen, die 
+ als Einschränkung für Rechte dienen können (z.B. L_NODES für knotenbezogene 
+ Rechte, GP_R_DASHBOARDS für Dashboard-bezogene Rechte).</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Vorgehen_beim_Vergeben_von_Rechten"></a>Vorgehen beim Vergeben 
+ von Rechten</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Rechte können vergeben werden für alle Elemente der 
+ Tabellen, die in U_PERM_TARGETS aufgeführt sind (wenn dort z.B. L_NODES 
+ und P_CONNECTIONS eingetragen sind, können für alle Einträge in L_NODES 
+ sowie für alle Einträge in P_CONNECTIONS Rechte vergeben werden). Die 
+ Einzelelemente werden über die Tabelle U_PERMISSIONS_PROXY referenziert. 
+ Die ID aus Proxy wird dabei in die Spalte &quot;Permission&quot; der jeweiligen 
+ Tabelle (z.B. L_NODES) eingetragen.</p>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">Beispiel 1: Recht Knoten editieren für bestimmten Knoten</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Benutzer aus der Gruppe A möchte für Knoten mit ID 
+ 101 das Recht zum Editieren (Action ID 110) dieses Knotens für die Gruppe 
+ BG1 (ID = 50) einfügen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">1. Prüfung, ob der angemeldete Benutzer das Recht zum 
+ Ausrollen von Rechten auf dem entsprechenden Zielobjekt hat:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_GROUPS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">NAME_0</p></td>
+		<td><p class="TabellenÜberschrift">SYMBOL</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">Admin</p></td>
+		<td><p class="TabellenInhalt">A</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">50</p></td>
+		<td><p class="TabellenInhalt">Benutzergruppe 1</p></td>
+		<td><p class="TabellenInhalt">BG1</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERM_TARGETS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">TARGET_NAME</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">12</p></td>
+		<td><p class="TabellenInhalt">L_NODES</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_ACTIONS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">SYMBOL</p></td>
+		<td><p class="TabellenÜberschrift">NAME_0</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">100</p></td>
+		<td><p class="TabellenInhalt">ADM</p></td>
+		<td><p class="TabellenInhalt">Administrieren</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">110</p></td>
+		<td><p class="TabellenInhalt">EDI</p></td>
+		<td><p class="TabellenInhalt">Editieren</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMTARG_ACTREL</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">ACTION</p></td>
+		<td><p class="TabellenÜberschrift">TARGET</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1000</p></td>
+		<td><p class="TabellenInhalt">100</p></td>
+		<td><p class="TabellenInhalt">12</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">1001</p></td>
+		<td><p class="TabellenInhalt">110</p></td>
+		<td><p class="TabellenInhalt">12</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Vorprüfung, ob die Aktion Administrieren oder Editieren 
+ auf dem Objekt L_NODES erlaubt ist --&gt; Ja.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">2. Prüfung, ob die Benutzergruppe A die Aktion Administrieren 
+ auf dem Zielobjekt L_NODES durchführen darf:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERM_TARGETS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">TARGET_NAME</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">11</p></td>
+		<td><p class="TabellenInhalt">GP_R_DATASOURCES</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">12</p></td>
+		<td><p class="TabellenInhalt">L_NODES</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nun bekommt jeder Datensatz aus der Tabelle GP_R_DATASOURCES 
+ eine eigenen Proxy:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS_PROXY</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">TARGET</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">11</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">3</p></td>
+		<td><p class="TabellenInhalt">11</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">So sehen die Einträge in der GP_R_DATASOURCES nun aus:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">GP_R_DATASOURCES</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">OBJECT_NAME</p></td>
+		<td><p class="TabellenÜberschrift">PERMISSIONS</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">20</p></td>
+		<td><p class="TabellenInhalt">L_NODES</p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">21</p></td>
+		<td><p class="TabellenInhalt">P_CONNECTIONS</p></td>
+		<td><p class="TabellenInhalt">3</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Proxy für L_NODES ist also 2.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Damit der Benutzer aus Gruppe A (ID = 1) überhaupt 
+ Rechte für Knoten vergeben darf, benötigt die Gruppe A Admin-Rechte auf 
+ dem Knoten. In der U_PERMISSIONS muss also folgender Eintrag zu finden 
+ sein:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">USER_GROUP</p></td>
+		<td><p class="TabellenÜberschrift">ACTION</p></td>
+		<td><p class="TabellenÜberschrift">PROXY</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">100</p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nun wird das Recht Editieren auf den Datensatz 101 
+ in der L_NODES für die Gruppe BG1 ausgerollt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Falls der Knoten ID 101 noch keine Rechte besitzt, 
+ muss zunächst ein neuer Proxy erstellt werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERM_TARGETS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">TARGET_NAME</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">11</p></td>
+		<td><p class="TabellenInhalt">GP_R_DATASOURCES</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">12</p></td>
+		<td><p class="TabellenInhalt">L_NODES</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS_PROXY</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">TARGET</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">11</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">3</p></td>
+		<td><p class="TabellenInhalt">11</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">4</p></td>
+		<td><p class="TabellenInhalt">12</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der entsprechende Eintrag in L_NODES sieht nun so aus:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">L_NODES</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">ID</p></td>
+		<td><p class="TabellenÜberschrift">PERMISSIONS</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">101</p></td>
+		<td><p class="TabellenInhalt">4</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zu guter Letzt muss noch das Recht Editieren für den 
+ Knoten 101 für die Gruppe BG1 in U_PERMISSIONS geschrieben werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">USER_GROUP</p></td>
+		<td><p class="TabellenÜberschrift">ACTION</p></td>
+		<td><p class="TabellenÜberschrift">PROXY</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">100</p></td>
+		<td><p class="TabellenInhalt">2</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">50</p></td>
+		<td><p class="TabellenInhalt">110</p></td>
+		<td><p class="TabellenInhalt">4</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">Beispiel 2:</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel Recht &quot;Meldung quittieren&quot; für Knoten 
+ mit ID 47 und untergeordnete (IDs 50 und 51):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Folgende Daten müssen vorhanden sein:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">U_ACTIONS: Eintrag &quot;Meldung Quittieren&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSION_TARGETS: Eintrag für &quot;AL_ARCHIVE&quot; 
+ (--&gt; der &quot;Ort&quot;, an dem die Meldungen quittiert werden dürfen) 
+ und Eintrag für &quot;L_NODES&quot; (wegen der Einschränkung des Rechts 
+ auf bestimmte Knoten)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMTARG_ACTION_REL: Eintrag mit Verweis auf &quot;AL_ARCHIVE&quot; 
+ als Target und &quot;Meldung quittieren&quot; als Action</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS_PROXY: je ein Eintrag für die Knoten 
+ mit den IDs 47, 50 und 51</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">L_NODES: Spalte Permission: ID von Proxy-Einträgen 
+ für Knoten 47, 50, 51</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">U_PERMISSIONS: je ein Eintrag mit der ID aus der U_PERMTARG_ACTION_REL 
+ und den Proxys der 3 Knoten.</p>
+
+
+</body></html>

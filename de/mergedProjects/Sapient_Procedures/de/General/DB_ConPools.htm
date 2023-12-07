@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+  <meta name="OriginalFile" content="Legato_System_Installation_de.docx" data-condition="Others:Deutsch"/>
+  <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+  <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+  <title data-condition="Others:Deutsch">DB Verbindungspools</title>
+  <link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+  <style type="text/css" data-condition="Others:Deutsch">
+    /*<![CDATA[*/
+    body {
+      background-color: #ffffff;
+    }
+    A:visited {}
+    A:link {}
+    /*]]>*/
+  </style>
+  <meta name="rh-index-keywords" content="Pool" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DB Verbindungspools">
+        <span>DB Verbindungspools</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h2 data-condition="Others:Deutsch">DB Verbindungs-Pools</h2>
+  <p data-condition="Others:Deutsch">Verbindungspools werden verwendet, um Verbindungen zwischen der Sapient Engine und bestimmten Datenbanken herzustellen. Ein Verbindungspool enthält mehrere Einzelverbindungen in Bereitschaft, um auf Anfrage Verbindungen aufzubauen.  Verbindungspools sind nur in der Lage, so viele Verbindungen gleichzeitig aufzubauen, wie die maximale Anzahl von Verbindungen im ausgewählten Pool festgelegt ist. Diese begrenzte Ressourcennutzung erhöht die Leistung der ausgewählten Datenbank erheblich und führt zu stabileren Datenbankverbindungen.</p>
+  <p data-condition="Others:Deutsch">Datenbankverbindungspools können über das Legato Configuration Center LC2 geändert und konfiguriert werden. Der standardmäßig eingestellte Verbindungspool für Legato Sapient ist HikariCP.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextkörperfettAufzähl" data-condition="Others:Deutsch"><img alt="" border="0" src="../../assets/images/02_Hinweis_de.jpg" style="border: none; cursor: nwse-resize;"/>:</p>
+  <p class="TextkörperHinweisAufzähl" data-condition="Others:Deutsch">Für mehr weiterführende Informationen beachten Sie das Kapitel <a href="HikariCP_als_optionaler_DB-Verbindungspool.htm">Ändern von DB-Verbindungspools</a>.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch">Die Konfigurationen der einzelnen Datenbankverbindungs-Pools weisen einige gleiche Teile auf, die entsprechend auch gemeinsam konfiguriert werden können. Hierfür können die Eigenschaften des DB-Pools verwendet werden, der standardmäßig mit ausgeliefert wird. Diese Angaben können bei Bedarf auch angepasst werden.</p>
+  <p class="BodyText" data-condition="Others:Deutsch">Der Default-Pool hat folgende Eigenschaften:</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="TextCode" data-condition="Others:Deutsch"># defaults for all DBCP database connection pools</p>
+  <p class="TextCode" data-stringify-type="pre" data-condition="Others:Deutsch">dbConPoolType=HikariCP<br/>
+    defaultReadOnly=false<br/>
+    defaultTransactionIsolation=READ_COMMITTED<br/>
+    maxWaitMillis=-1<br/>
+    validationQueryTimeout=1500<br/>
+    testOnCreate=false<br/>
+    testOnBorrow=true<br/>
+    testOnReturn=false<br/>
+    testWhileIdle=false<br/>
+    timeBetweenEvictionRunsMillis=-1<br/>
+    numTestsPerEvictionRun=3<br/>
+    minEvictableIdleTimeMillis=1800000<br/>
+    removeAbandonedOnBorrow=true<br/>
+    removeAbandonedOnMaintenance=false<br/>
+    removeAbandonedTimeout=600<br/>
+    logAbandoned=true<br/>
+    abandonedUsageTracking=true<br/>
+    poolPreparedStatements=false<br/>
+    maxOpenPreparedStatements=-1<br/>
+    accessToUnderlyingConnectionAllowed=false<br/>
+    defaultBatchSize=500</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="Textkörperfett" data-condition="Others:Deutsch">Gemeinsame Angaben für alle Datenbankverbindungen</p>
+  <p class="BodyText" data-condition="Others:Deutsch"><span>Exemplarisch sind einige der Einstellungen hier beschrieben:</span></p>
+  <p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight:bold;">maxWaitMillis</span> - die maximale Dauer in Millisekunden, die ein Thread auf eine Verbindung warten darf, bevor der Pool einen Fehler meldet, indem er eine Ausnahme auslöst. Der Standardwert <span style="font-style:italic;">-1</span> bedeutet &quot;ewig&quot;, d.h. der Thread wartet so lange, bis eine Verbindung verfügbar wird.</p>
+  <p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight:bold;">testOnBorrow</span> - gibt an, ob Verbindungen vor dem Ausleihen aus dem Pool getestet werden sollen, also bevor sie einer Funktion der Sapient Engine zur Benutzung übergeben werden. Mit dem Standardwert <span style="font-style:italic;">true</span> wird dies eingeschaltet.</p>
+  <p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"> </p>
+  <p class="TextkörperfettAufzähl" data-condition="Others:Deutsch"><img alt="" border="0" src="../../assets/images/02_Hinweis_de.jpg" style="border: none;"/>:</p>
+  <p class="TextkörperHinweisAufzähl" data-condition="Others:Deutsch">Wir empfehlen dringend, <span style="font-weight:bold;">testOnBorrow</span> zu aktivieren, da die Datenbank abgebrochene Verbindungen nicht automatisch erkennt. Die Deaktivierung von <span style="font-weight:bold;">testOnBorrow</span> zwingt die Sapient Engine dazu, zu versuchen, Verbindungen herzustellen, die möglicherweise abgebrochen wurden, was dazu führen kann, dass die Sapient Engine neu gestartet werden muss, um die Verbindungen wiederherzustellen.</p>
+  <p class="TextkörperHinweisAufzähl" data-condition="Others:Deutsch"> </p>
+  <p class="TextkörperTablefett" data-condition="Others:Deutsch">Angaben für DBCP2</p>
+  <p data-condition="Others:Deutsch"><span style="font-weight:bold;">testOnReturn</span> - gibt an, ob Verbindungen bei der Rückgabe an den Pool getestet werden sollen, also wenn die ausleihende Funktion der Sapient Engine die Verbindung wieder in den Pool zurücklegt. Standardmäßig ausgeschaltet, weil der Test beim Ausleihen ausreicht.</p>
+  <p class="BodyText" data-condition="Others:Deutsch"> </p>
+  <p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight:bold;">testWhileIdle</span> - gibt an, ob im Pool befindliche Verbindungen in einem Hintergrund-Thread periodisch getestet werden sollen. Dieser Test kann nur ausgeführt werden, wenn freie Verbindungen überhaupt überwacht werden. Standardmäßig ausgeschaltet.</p>
+
+</body></html>

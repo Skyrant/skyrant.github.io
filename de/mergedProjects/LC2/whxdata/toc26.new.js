@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"KPI Einstellungen","type":"item","tilePath":"","description":"","url":"de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPI_Settings.htm"},{"name":"Beschreibung der KPIs","type":"book","tilePath":"","key":"toc27"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

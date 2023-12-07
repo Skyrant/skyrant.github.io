@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.29";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen zur Behandlung von JSON Objekten</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen zur Behandlung von JSON Objekten">
+        <span>Funktionen zur Behandlung von JSON Objekten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen zur Behandlung von JSON Objekten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Mit diesen Funktionen können JSON Objektbäume ausgewertet 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Funktionen kann in einem Script eine Variable 
+ vom Typ JSON deklariert werden. Alle weiteren Funktionen werden dann mit 
+ dem Namen der Variablen, einem Punkt und dem Namen der Funktion gemeinsam 
+ angesprochen. </p>
+<h3 data-condition="Others:Deutsch"><a id="Init"></a>Init</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: json.init(string source)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der JSON Objektbaum wird angelegt und mit den Daten 
+ aus <span style="font-weight: bold;">source</span> aufgebaut.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   src</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json     js</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\temp\\list.txt&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">src := f.readln</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(src)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Csv"></a>Csv</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.csv(&amp;string csv)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der JSON Objektbaum wird in einen String im CSV-Format 
+ konvertiert (soweit möglich). Diese Funktion ermöglicht es, alte Scripte 
+ zur Auswertung zu verwenden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string csv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := js.csv(&amp;csv) </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Type"></a>Type</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: int json.type</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Typ des übergebenen JSON Objektes. Der 
+ Typ wird als Zahl geliefert und ist wie folgt zu interpretieren:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1 Boolean</p>
+<p class="BodyText" data-condition="Others:Deutsch">2 Ganzzahl</p>
+<p class="BodyText" data-condition="Others:Deutsch">3 Fließkomma</p>
+<p class="BodyText" data-condition="Others:Deutsch">4 String</p>
+<p class="BodyText" data-condition="Others:Deutsch">9 JSON Objekt</p>
+<p class="BodyText" data-condition="Others:Deutsch">10 JSON Array</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="line-height: 105%;"><span style="mso-bidi-font-family: &#39;Courier New&#39;;">json 
+ js</span></span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: &#39;Courier New&#39;;">int<span style="mso-spacerun: yes;"> </span>typ</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: &#39;Courier New&#39;;">js.init(@Value)</span></p>
+<p class="TextCodeGray" style="mso-bidi-font-family: &#39;Courier New&#39;;" data-condition="Others:Deutsch">typ 
+ := js.type</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Name"></a>Name</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string json.name</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Namen des übergebenen JSON Objektes.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="line-height: 105%;"><span style="mso-bidi-font-family: &#39;Courier New&#39;;">json 
+ js</span></span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: &#39;Courier New&#39;;">string 
+ name</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="mso-bidi-font-family: &#39;Courier New&#39;;">js.init(@Value)</span></p>
+<p class="TextCodeGray" style="mso-bidi-font-family: &#39;Courier New&#39;;" data-condition="Others:Deutsch">name 
+ := js.name</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Bool"></a>Bool</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.bool</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert des übergebenen JSON Objektes als 
+ Boolean.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool bit</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int zahl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double nummer</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string ascii</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">typ := js.type // Typ abfragen</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if typ &lt; 9 then // Typ kleiner 9 ist Grundtyp</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  switch typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 1:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      bit := js.bool</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break    </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 2:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      zahl := js.int</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 3:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      nummer := js.double</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 4:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      ascii := js.string</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Int"></a>Int</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: int json.int</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert des übergebenen JSON Objektes als 
+ Ganzzahl.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool bit</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int zahl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double nummer</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string ascii</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">typ := js.type // Typ abfragen</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if typ &lt; 9 then // Typ kleiner 9 ist Grundtyp</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  switch typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 1:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      bit := js.bool</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break    </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 2:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      zahl := js.int</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 3:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      nummer := js.double</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 4:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      ascii := js.string</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Double"></a>Double</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double json.double</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert des übergebenen JSON Objektes als 
+ Fließkommazahl.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool bit</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int zahl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double nummer</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string ascii</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">typ := js.type // Typ abfragen</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if typ &lt; 9 then // Typ kleiner 9 ist Grundtyp</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  switch typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 1:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      bit := js.bool</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break    </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 2:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      zahl := js.int</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 3:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      nummer := js.double</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 4:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      ascii := js.string</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="String"></a>String</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string json.string</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert den Wert des übergebenen JSON Objektes als 
+ Zeichenfolge.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool bit</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int zahl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double nummer</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string ascii</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">typ := js.type // Typ abfragen</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if typ &lt; 9 then // Typ kleiner 9 ist Grundtyp</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  switch typ</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 1:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      bit := js.bool</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break    </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 2:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      zahl := js.int</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 3:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      nummer := js.double</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">    case 4:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      ascii := js.string</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      break </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Next"></a>Next</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.next(json obj)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert das nächste JSON Objekt. Ist kein Nachfolger 
+ vorhanden, wird <span style="font-weight: bold;">false</span> zurückgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js, js1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := js.next(js1)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Ptr"></a>Ptr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.ptr(json obj)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert das erste JSON Objekt innerhalb eines verschachtelten 
+ Objektes oder Arrays. Ist kein Objekt vorhanden, wird <span style="font-weight: bold;">false</span> 
+ zurückgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js, js1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">js.init(@Value)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if js.type = 9 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  ok := js.ptr(js1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Find"></a>Find</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.find(string name, json obj)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht nach dem Objekt mit dem angegebenen Namen <span style="font-weight: bold;">name</span> und erzeugt das neue Objekt 
+ <span style="font-weight: bold;">obj</span>. Ist kein Objekt vorhanden, 
+ wird <span style="font-weight: bold;">false</span> zurückgegeben. Diese 
+ Funktion kann nur auf das Root-Objekt angewendet werden!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js, js1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if not js.find(&#39;root.jsonrpc&#39;, js1) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;Datei hat nicht JsonRpc Format!&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  return </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="FindEx"></a>FindEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.findex(string name, int typ, 
+ json obj)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sucht nach dem Objekt mit dem angegebenen Namen <span style="font-weight: bold;">name</span> und und dem vorgegebenen Typ 
+ <span style="font-weight: bold;">typ</span> und erzeugt das neue Objekt 
+ <span style="font-weight: bold;">obj</span>. Ist kein Objekt vorhanden, 
+ wird <span style="font-weight: bold;">false</span> zurückgegeben. Diese 
+ Funktion kann nur auf das Root-Objekt angewendet werden!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json js, js1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if not js.findex(&#39;root.jsonrpc&#39;, string, js1) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;Datei hat nicht JsonRpc Format!&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  return </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Valid"></a>Valid</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool json.valid</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüft, ob die übergebene Variable ein gültiges JSON 
+ Objekt ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json  js, js1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := js.next(&amp;js1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := js1.valid</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Size"></a>Size</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: int json.size</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt die Größe des JSON Objekts zurück. Diese Funktion 
+ liefert nur bei Arrays einen gültigen Wert!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">json  js, js1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int    size</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := js.next(&amp;js1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if ok and js1.type = 10 then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  size := js1.size</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

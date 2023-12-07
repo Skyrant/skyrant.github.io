@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Das SVG-Format</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Das SVG-Format">
+        <span>Das SVG-Format</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Das SVG-Format</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dem GefasoftDesigner können Visualisierungsansichten 
+ komfortabel durch Point &amp; Klick-Tools erstellt werden. Erfahrungen 
+ haben jedoch ergeben, dass grundlegende Kenntnisse in SVG das Erstellen 
+ der Grafiken erheblich erleichtern und beschleunigen. Der folgende Abschnitt 
+ soll die wichtigsten Grundlagen kurz beleuchten. Für eine vertiefte Auseinandersetzung 
+ mit dem Thema SVG sei an dieser Stelle auf die Workshops der GEFASOFT 
+ GmbH zu diesem Thema verwiesen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dateiformat: *.svg</p>
+<p class="BodyText" data-condition="Others:Deutsch">Vektororientiert - Positionierung über Koordinaten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Quelltext in normalen Text, kein Binärcode.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Renderreihenfolge (Darstellung) beginnt am Anfang 
+ der Datei und geht von oben nach unten. Daher liegen Elemente, die später 
+ in der Datei folgen, über Elementen, die weiter vorn in der Datei stehen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Standardmaßeinheit sind Pixel (Zahlenangaben ohne Zusatz). 
+ Es sind jedoch auch andere Angaben wie mm, cm, pt usw. möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die X-Achse des Koordinatensystems verläuft von links 
+ nach rechts, die Y-Achse von oben nach unten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Bezugspunkt für die meisten Elemente (Rechteck, 
+ Gruppen, Images, Punkte, …) ist die linke obere Ecke des Objektes. Für 
+ Texte wird die Baseline als Bezugspunkt genutzt, bei Kreis und Ellipse 
+ der Mittelpunkt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Jedes Element kann eine ID bekommen (der GefasoftDesigner 
+ vergibt diese automatisch beim Erzeugen des Elements). Diese ID muss dokumentenweit 
+ eindeutig sein, da es sonst zu Fehlern kommen kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">SVG-Elemente werden sind in zwei Varianten aufgebaut:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">&lt;[Elementname] [Attribute] /&gt;</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">&lt;[Elementname] [Attribute]&gt;<br/>
+                [Inhalt]<br/>
+&lt;/[Elementname]&gt;</p>
+<h3 data-condition="Others:Deutsch"><a id="Element" data-indexterm="Element"></a><a id="Elemente"></a>Elemente</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Es folgt eine Liste der möglichen SVG-Elemente. Die 
+ Einträge mit &quot;Zur Zeit nicht unterstützt&quot; werden in der vorliegenden 
+ Version des GefasoftDesigner nicht angeboten:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="73"><p class="TabellenÜberschrift">SVG-Tag</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenÜberschrift">Name</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenÜberschrift">Bemerkung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;a&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Link</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Link 
+		 auf ein externes Dokument. Vgl. Link in HTML.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;animate&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Animation</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Zurzeit 
+		 nicht unterstützt.</b><br/>
+		Animation (Farbwechsel, Bewegung usw.) der Grafik.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;circle&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Kreis</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Zurzeit 
+		 nicht unterstützt.</b><br/>
+		Einfacher Kreis durch Mittelpunkt und Radius.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;defs&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Definition</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Definitionsteil 
+		 innerhalb des Dokumentes. Elemente können mit &lt;use&gt; eingebunden 
+		 werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;ellipse&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Ellipse</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Ellipse 
+		 durch Angabe von zwei Radien.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;filter&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Filter</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Zurzeit 
+		 nicht unterstützt.</b><br/>
+		Grafikfilter wie z.B. Unschärfe, Farbinvertierung usw.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;g&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Gruppe</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Strukturierung 
+		 von Elementen. Attributsvererbung (Positionierung).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;gradient&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Gradient</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Zurzeit 
+		 nicht unterstützt.</b><br/>
+		Farbverlauf für ein Element.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;image&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Bild</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Einbinden 
+		 von externen Grafiken vom Format JPG, GIF, PNG oder SVG.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;line&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Linie</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Zwei-Punkt-Linie. 
+		 Über die Eigenschaft MarkerEnd oder MarkerStart kann ein Punkt 
+		 oder Pfeil-Element ausgewählt werden, das als End- oder Startpunkt 
+		 der Linie angezeigt wird. Dieser Marker wird in der Zeichenoberfläche 
+		 nicht angezeigt, sondern nur in der Vorschau und natürlich im 
+		 Browser.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;marker&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Marker</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Zurzeit 
+		 nicht unterstützt.</b><br/>
+		Element, das an das Ende einer Linie gesetzt werden kann, z.B. 
+		 zur Realisierung von Pfeilspitzen. Kann über die Attribute MarkerEnd 
+		 und MarkerStart bei den Elementen &lt;line&gt; und &lt;polyline&gt; 
+		 umgesetzt werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;path&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Pfad</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Teilweise 
+		 unterstützt.</b><br/>
+		Komplexes Linien-Konstrukt (Bögen, Bézier-Kurven); kann andere 
+		 Elemente nachbilden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;pattern&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Muster</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt"><b>Zurzeit 
+		 nicht unterstützt.</b><br/>
+		Füllmuster für ein Element.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;polygon&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Polygon</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">n-Eck, 
+		 vgl. Polygon; wird automatisch geschlossen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;polyline&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Polylinie</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Mehr-Punkt-Linie. 
+		 Über die Eigenschaft MarkerEnd oder MarkerStart kann ein Punkt 
+		 oder Pfeil-Element ausgewählt werden, das als End- oder Startpunkt 
+		 der Linie angezeigt wird. Dieser Marker wird in der Zeichenoberfläche 
+		 nicht angezeigt, sondern nur in der Vorschau und natürlich im 
+		 Browser.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;rect&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Rechteck</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Einfaches 
+		 Rechteck.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;script&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Skript</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Einbindung 
+		 von Skripten (JavaScript), mit denen die Grafik zur Laufzeit verändert 
+		 werden kann.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;svg&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">SVG</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Starttag 
+		 für ein SVG-Dokument. Kann auch innerhalb des Dokuments nochmals 
+		 verwendet werden. Ebenfalls Strukturierungs- und Positionierungsfunktion.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;symbol&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Symbol</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Definition 
+		 eines Objektes, das mit &lt;use&gt; referenziert werden kann.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;text&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Text</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Element 
+		 zur Einbindung von Text.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;title&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Titel</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Titel 
+		 der Datei (wird im Browser angezeigt).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;tspan&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Umbruch</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Umbruch 
+		 innerhalb eines Textes, Neuformatierung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">&lt;use&gt;</p></td>
+		<td style="vertical-align: top;" width="85"><p class="TabellenInhalt">Referenzierung</p></td>
+		<td style="vertical-align: top;" width="298"><p class="TabellenInhalt">Referenzierung 
+		 (Einbindung) eines Symbols oder einer Definition.</p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Attribute_/_Positionierung" data-indexterm="Attribute / Positionierung"></a><a id="Attribute___Positionierung"></a>Attribute / Positionierung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Das Aussehen der SVG-Elemente wird über Attribute (auch 
+ Styling) geregelt. Auch die Positionierung ist an die Angabe der Attribute 
+ angelehnt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Attribute können auf zwei Arten angegeben werden. 
+ Die Positionierung kann nur auf die erste Art definiert werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">[Attribut]=&quot;[Wert]&quot;</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">style=&quot;[Attribut]:[Wert]&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Es folgt eine Liste möglicher Attribute (nicht vollständig):</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="101"><p class="TabellenÜberschrift">Attribut</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">class</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Referenzierung 
+		 einer Styling-Klasse (css).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">cx</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">X-Position 
+		 eines Mittelpunkts.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">cy</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Y-Position 
+		 eines Mittelpunkts.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">d</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Angabe 
+		 des Verlauf eines Pfads (mögliche Angaben: M/m, L/l, H/h, V/v, 
+		 Z/z, A/a, C/c, S/s, Q/q und T/t).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">display</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Sichtbarkeit.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">dx</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Bei 
+		 Texten; Differenz zur letzten X-Position.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">dy</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Bei 
+		 Texten; Differenz zur letzten Y-Position.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">fill</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Füllfarbe.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">fill-opacity</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Deckkraft 
+		 der Füllung.</p></td>
+	</tr>
+	<tr style="height: 3.5pt;">
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">font-family</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Schriftart.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">font-size</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Schriftgröße.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">font-style</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Kursiv, 
+		 fett oder unterstrichen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">font-weight</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Dicke 
+		 der Schrift.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">height</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Höhe.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">id</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Dokumentweit 
+		 eindeutiger Name eines Elements. Ist die Option &quot;Ensure element 
+		 IDs conforming to the XML standard&quot; in den &quot;Preferences&quot; 
+		 aktiviert, so wird die ID entsprechend geändert, wenn ein ungültiges 
+		 Zeichen eingegeben wird (z.B. Prüfung <span style="font-family: Wingdings;">à</span> 
+		 Pr_fung). Es erscheint ein Logeintrag mit einem entsprechenden 
+		 Hinweis. Erlaubt sind &#39;A&#39;..&#39;Z&#39;, &#39;a&#39;..&#39;z&#39;, &#39;0&#39;..&#39;9&#39;, &#39;_&#39;, &#39;-&#39;, 
+		 &#39;.&#39;. Nicht erlaubt sind Umlaute, Sonderzeichen, Leerzeichen. Außerdem 
+		 darf die ID nicht mit einer Zahl beginnen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">image-rendering</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Unschärfe 
+		 für ein ganzes Objekt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">opacity</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Deckkraft 
+		 für das ganze Objekt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">points</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Angabe 
+		 von mehreren Punkten in der Form: x,y.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">r</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Radius 
+		 bei einem Kreis.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">rx</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">X-Radius 
+		 bei einer Ellipse und Abrundung einer Ecke bei einem Rechteck.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">ry</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Y-Radius 
+		 bei einer Ellipse und Abrundung einer Ecke bei einem Rechteck.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">shape-rendering</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Unschärfe 
+		 für die Umrandung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">stroke</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Farbe 
+		 der Umrandung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">stroke-dasharray</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Strichlierung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">stroke-opacity</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Deckkraft 
+		 der Umrandung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">stroke-width</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Linienstärke 
+		 der Umrandung.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">target</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Ziel 
+		 eines Links.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">text-anchor</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Ausrichtung 
+		 von Text (rechtsbündig, linksbündig oder zentriert).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">text-decoration</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Definition 
+		 einer Linie für einen Text, ähnlich wie eine Unterstreichung (darunter, 
+		 darüber, dazwischen, keine).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">transform</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Transformation 
+		 (mögliche Werte: translate, rotate, scale, skew, matrix).</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">viewBox</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Angabe 
+		 eines zusätzlichen Koordinatensystems für ein SVG-Element.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">visibility</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Sichtbarkeit.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">width</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Breite.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">x</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">X-Position.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">xlink:href</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Externer 
+		 Link.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">y</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Y-Position.</p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Farbe" data-indexterm="Farbe"></a><a id="Farben"></a>Farben</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Farben können auf drei Arten angegeben werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Farbwort (existiert nur für bestimmte typische 
+ Farben)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bsp.: red, black, blue</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Hexadezimale Angabe</p>
+<p class="BodyText" data-condition="Others:Deutsch">Form: #RRGGBB*</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bsp.: #FF05AC</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Dezimale Angabe</p>
+<p class="BodyText" data-condition="Others:Deutsch">Form: RGB(red,green,blue)*</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bsp.: RGB(102,104,69)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der GefasoftDesigner nutzt standardmäßig die dezimale 
+ Angabe. In den entsprechenden Dialogen können aber auch die anderen Arten 
+ genutzt werden. Diese werden anschließend automatisch auf den RGB-Wert 
+ umgerechnet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">*              RR 
+ = Wert für Rot-Anteil<br/>
+                GG 
+ = Wert für Grün-Anteil<br/>
+                BB 
+ = Wert für Blau-Anteil<br/>
+                Jeder 
+ Anteil kann von 0 bis 255 bzw. FF gehen</p>
+<h3 data-condition="Others:Deutsch"><a id="Transformation" data-indexterm="Transformation"></a><a id="Transformationen"></a>Transformationen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Transformationen dienen dazu, Elemente oder ganze Gruppen 
+ weiter zu bearbeiten. Das meistgenutzte Beispiel ist eine nachträgliche 
+ Verschiebung. Für das Attribut &quot;transform&quot; gibt es verschiedene 
+ Optionen, die auch beliebig kombiniert werden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zurzeit unterstützt der GefasoftDesigner nur die Matrix-Transformation, 
+ die jedoch alle anderen Transformationen abbilden kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Matrix wird in der Form matrix(x1,y1,x2,y2,x,y) 
+ geschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bsp.: Für eine Verschiebung wird die Matrix in der 
+ Form matrix(1,0,0,1,40,-200) geschrieben. Diese Transformation bewirkt, 
+ dass das Element um 40 Pixel nach rechts und um 200 Pixel nach oben verschoben 
+ wird.</p>
+<h3 data-condition="Others:Deutsch"><a id="Skripting_/_Animation" data-indexterm="Skripting / Animation"></a><a id="Skripting___Animation"></a>Skripting / Animation</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Animationen dienen dazu, Dynamik in die ansonsten statischen 
+ Bilder zu bringen. Hierfür können zwei Wege genutzt werden: JavaScript 
+ oder Animationen. Da Animationen in technisch ausgerichteten Grafiken 
+ keine große Bedeutung haben, wurde dieser Aspekt im GefasoftDesigner nicht 
+ berücksichtigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">JavaScript-Funktionen werden durch Events gesteuert. 
+ Beim Eintreffen dieser Events (z.B. Mausklick) für die einzelnen Objekte 
+ wird das parametrierte JavaScript ausgeführt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="92"><p class="TabellenÜberschrift">Event</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnActivate</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn ein Element durch Klick oder Tastatureingabe aktiviert 
+		 wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnClick</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn ein Element mit der Maus angeklickt wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnFocusIn</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn ein Element den Fokus bekommt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnFocusOut</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn ein Element den Fokus verliert.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnLoad</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn das Element vollständig eingeladen wurde.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnMouseDown</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn die Maustaste über dem Element gehalten wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnMouseMove</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn die Maus über einem Element bewegt wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnMouseOut</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn die Maus ein Element verlässt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnMouseOver</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn die Maus ein Element berührt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnMouseUp</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn die Maustaste über einem Element losgelassen wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnAbort</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn der Ladevorgang des Browsers abgebrochen wird, bevor 
+		 das Element geladen wurde.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnError</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn ein Fehler auftritt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnResize</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn das root-SVG größenmäßig angepasst wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnScroll</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn eine viewBox verschoben wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnUnload</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn die SVG-Grafik verlassen wird.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="92"><p class="TabellenInhalt">OnZoom</p></td>
+		<td style="vertical-align: top;" width="364"><p class="TabellenInhalt">Tritt 
+		 ein, wenn in einer Grafik gezoomt wird.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Fragen bezüglich JavaScript-Einbindung und Hilfsstellungen 
+ für die Grafiken können jederzeit beim Support-Team der GEFASOFT GmbH 
+ eingeholt werden.</p>
+
+
+</body></html>

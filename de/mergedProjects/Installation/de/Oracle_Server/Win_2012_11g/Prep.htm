@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_Oracle_Server_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Vorbereitung zur Installation</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Vorbereitung zur Installation">
+        <span>Vorbereitung zur Installation</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Vorbereitung zur Installation</h1>
+<h2 data-condition="Others:Deutsch"><a name="Systemvoraussetzung" id="Systemvoraussetzung"></a>Systemvoraussetzung</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Als erste Voraussetzung muss das Windows Server System 
+ ordnungsgemäß installiert sein. Die folgenden Windows Server Systeme sind 
+ von Gefasoft freigegeben, jeweils in der 64-Bit Version:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Windows Server 2008</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Windows Server 2008 R2</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Windows Server 2012</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem müssen die Netzwerkeinstellungen richtig konfiguriert 
+ sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Installation muss mit einem Benutzer erfolgen, 
+ der Administrationsrechte auf dem Server hat.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Weitere Hinweise zum benötigten Festplattenplatz und 
+ den Hardware- und Software-Voraussetzungen können der Oracle-Installationsdokumentation 
+ entnommen werden.</p>
+<h2 data-condition="Others:Deutsch"><a name="Version_downloaden" id="Version_downloaden"></a>Version downloaden</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Unterstützt wird aktuell die Oracle-Version 11gR2.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Dokumentation wird vom Einsatz der Enterprise-Edition 
+ ausgegangen. Diese Version ist für den Betrieb von Legato empfohlen und 
+ kann kostenpflichtig bei Oracle erworben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prinzipiell ist es jedoch auch möglich, Legato mit 
+ einer Standard-Oracle-Version zu betreiben. Hier sind allerdings einige 
+ empfohlene Features nicht verfügbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Einige Oracle-Versionen können kostenlos heruntergeladen 
+ werden unter:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><a href="https://edelivery.oracle.com/">https://edelivery.oracle.com/</a></p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/Oracle_Server/Win_2012_11g/image002.png" alt="" width="700" height="410" border="0"/></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:    </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Hier sind nicht die neuesten Versionen vorhanden. 
+ So ist dort zum Beispiel die Version 11.2.0.1.0 vorhanden, allerdings 
+ nicht die von Oracle empfohlene Version 11.2.0.3.0 des Oracleservers. 
+ Diese Versionen findet man im kostenpflichtigen Oracle Metalink (siehe 
+ nächste Seite).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Oracle Metalink können Service Requests gestellt 
+ werden, neueste Software-Updates geholt werden oder auch nach Hilfen gesucht 
+ werden. Der Metalink ist jedoch nur für Oracle-Partner zugänglich und 
+ grundsätzlich kostenpflichtig. Wir empfehlen den Zugang zum Metalink, 
+ um stets die aktuellsten Versionen verfügbar zu haben. Für diese Anleitung 
+ wird ebenfalls von einem Zugang zum Metalink ausgegangen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Oracle Metalink ist zu erreichen unter <a href="http://support.oracle.com/">http://support.oracle.com</a></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextkörperZchn"><img src="../../../Images/Oracle_Server/Win_2012_11g/image004.png" alt="" width="700" height="410" border="0"/> </span></p>
+<h2 data-condition="Others:Deutsch"><a name="Installationspakete_lokal_entpacken" id="Installationspakete_lokal_entpacken"></a>Installationspakete 
+ lokal entpacken</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Software-Installationspakete von Oracle sollten 
+ lokal auf einer internen Festplatte gespeichert und entpackt werden. Dabei 
+ ist es auch wichtig, dass alle Pakete in einem Verzeichnis entpackt werden, 
+ sollten mehrere Pakete zu einem Produkt vorhanden sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist wichtig, dass der Verzeichnisname auch keine 
+ Sonderzeichen oder Leerzeichen enthält. Im gezeigten Beispiel ist dies 
+ das Verzeichnis &quot;C:\Users\Administrator\Desktop\Oracle\Windows 64 
+ Bit\11gR2\11_2_0_3_0_64bit&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/Oracle_Server/Win_2012_11g/image006.png" alt="" width="700" height="269" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Oft sind nicht alle Pakete von einem Produkt erforderlich. 
+ Man kann sich vorher in den Installationsdokumentationen von Oracle erkundigen, 
+ welche Pakete nötig sind, denn es macht keinen Sinn, unnötigerweise alle 
+ Pakete herunter zu laden, da diese zum Teil recht groß sein können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Fall werden die Pakete 1, 2 und 7 von insgesamt 
+ sieben Paketen benötigt. Die Pakete 1 und 2 enthalten die Installationsprogramme 
+ für den Server und das Paket 7 ein Deinstallationspaket. Beim Entpacken 
+ der Pakete im gleichen Verzeichnis erstellen diese Pakete dann die Unterverzeichnisse 
+ &quot;database&quot; und &quot;deinstall&quot;.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Die Windows Scheduler Jobs sollten alle deaktiviert 
+ sein, da diese während der Installation stören können.</p>
+
+
+</body></html>

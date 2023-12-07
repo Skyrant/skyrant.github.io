@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Nur Legato-Classic: Datenbankverbindung</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Datenbankverbindung,ODBC" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Nur Legato-Classic: Datenbankverbindung">
+        <span>Nur Legato-Classic: Datenbankverbindung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Nur Legato-Classic: Datenbankverbindung</h2>
+<h3 data-condition="Others:Deutsch"><a name="ODBC_Treiber_installieren_und_Verbindung_einrichten" id="ODBC_Treiber_installieren_und_Verbindung_einrichten"></a>ODBC 
+ Treiber installieren und Verbindung einrichten</h3>
+<h4 data-condition="Others:Deutsch"><a name="Microsoft_SQL-Server" id="Microsoft_SQL-Server"></a>Microsoft 
+ SQL-Server</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Ist noch kein ODBC-Treiber auf dem PC installiert, 
+ auf dem der Cloud Connector installiert wurde, so ist ein geeigneter Treiber 
+ zu installieren.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Bei der Installation des Datenbank-Treibers 
+ ist darauf zu achten, dass die ODBC-Konnektivität des Datenbank-Treibers 
+ mit installiert wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Verbindung zur Datenbank wird über eine neue Computerdatenquelle 
+ eingerichtet:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Als Datenquellentyp &quot;Systemdatenquelle&quot; 
+ einstellen.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Als Treiber anschließend SQL-Server wählen. Über 
+ die Schaltfläche &quot;Fertigstellen&quot; gelangt man anschließend zur 
+ Parametrierung des Treibers.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Der Name und die Beschreibung der Datenquelle 
+ können frei gewählt werden. Der Treiber bietet die im Netzwerk vorhandenen 
+ Server zur Wahl an. Wenn der PC nicht mit dem Netzwerk verbunden ist, 
+ muss der Name des Datenbankservers eingeben werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Im folgenden Dialog wird die Authentifizierung 
+ auf SQL-Server umgestellt und der Benutzer des SQL-Servers mit Kennwort 
+ für die Datenbankanmeldung eingetragen.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Der Datenbankbenutzer für den Cloud Connector 
+ muss Lese- und Schreibrechte besitzen.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Die Standarddatenbank für die Verbindung muss 
+ auf die Legato-Datenbasis (Defaultname = Legato) umgestellt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter Umständen erscheint bei der Erstanmeldung ein 
+ Dialog, in dem &quot;Vertrauenswürdige Verbindung verwenden&quot; angewählt 
+ ist und auch der aktuelle Windows-Benutzer eingetragen wurde. Die SQL-Server-Anmeldung 
+ ist dann zu ändern:</p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;Vertrauenswürdige Verbindung verwenden&quot; 
+ deselektieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei &quot;Benutzername/Kennwort&quot; die entsprechende 
+ Anmeldung für die Datenbank eintragen.</p>
+<h4 data-condition="Others:Deutsch"><a name="Oracle" id="Oracle"></a>Oracle</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Der Oracle-ODBC-Treiber wird mit der Installation eines 
+ Oracle-Clients am PC eingerichtet. Die Software gehört im Normalfall zum 
+ Lieferumfang der Datenbanklizenz oder kann über die Homepage der Fa. Oracle 
+ per Download geholt werden. Es ist zu beachten, dass die Version des ODBC-Treibers 
+ zur Version der aktuell eingesetzten Datenbank kompatibel ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Der ODBC-Treiber benötigt einen konfigurierten 
+ &quot;Service&quot; für die Funktion. Nachdem die Oracle Client-Software 
+ am PC installiert wurde, kann ein Assistent zur Einrichtung der Verbindung 
+ über das Startmenü gestartet werden:</p>
+<p class="TextCode" data-condition="Others:Deutsch">Programme \ Oracle – OraHome81 \ Network Administration 
+ \ Net8 Configuration Assistant</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die weitere Vorgehensweise zur Konfiguration eines 
+ Service ist ausführlich im Kapitel &quot;Installation – Ausführen der 
+ GW-exe als Dienst&quot; beschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Cloud Connectors mit hohen Datendurchsatz wird 
+ empfohlen, die Datei sqlnet.ora vom Oracle Treiber zu suchen und dort 
+ den Parameter</p>
+<p class="TextCode" data-condition="Others:Deutsch">      Sqlnet.outbound_connect_timeout=5</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">zu setzen, damit auch im Fehlerfall der zeitnahe Scriptablauf 
+ gewährleistet bleibt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Die eigentliche Verbindung zur Datenbank wird 
+ über eine neue Computerdatenquelle eingerichtet.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Als Datenquellentyp eine Systemdatenquelle einstellen.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Als Treiber wird anschließend Oracle ODBC Driver 
+ gewählt. Über die Schaltfläche &quot;Fertigstellen&quot; gelangt man anschließend 
+ in einen Dialog für die Parametrierung des Treibers. Hier kann der Name 
+ und die Beschreibung der Datenquelle frei gewählt werden. Unter &quot;Data 
+ Source&quot; muss der konfigurierte Service Name angegeben werden. Die 
+ User-ID wird ebenfalls im Service festgelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Danach kann die Datenbankanmeldung mit der Eingabe 
+ des Kennwortes (ebenfalls im Service festgelegt) abgeschlossen werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Prozedur" data-indexterm="Prozedur"></a><a name="Tabellen_und_Prozeduren_anlegen" id="Tabellen_und_Prozeduren_anlegen"></a>Tabellen 
+ und Prozeduren anlegen</h3>
+<h4 data-condition="Others:Deutsch"><a name="Anlegen_des_Verbindungselements" id="Anlegen_des_Verbindungselements"></a>Anlegen 
+ des Verbindungselements</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie das Grundelement &quot;Database&quot; 
+ im Projektbaum und wählen Sie &quot;Neue Verbindung&quot;. Im folgenden 
+ Dialog werden die Verbindungsdaten zur Datenbank eingestellt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/DB_Con.png" alt="" border="0"/> 
+ </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der &quot;Verbindungsname&quot; ist frei wählbar, sollte 
+ aber eindeutig sein, weil Datenbankelemente aus Scripten etc. unter anderem 
+ mit dem Verbindungsnamen angesprochen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;User-ID&quot; und &quot;Passwort&quot; als Zugangskennungen 
+ für die Datenbank sind entsprechend der Datenbankuser-Richtlinien des 
+ Unternehmens anzugeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei der Angabe von &quot;Connectstring&quot; kann eine 
+ Übersicht der ODBC-Datenquellen aufgerufen und die gewünschte Datenquelle 
+ gewählt werden. Die Datenquelle sollte als Computerdatenquelle im Dialog 
+ der ODBC-Datenquellen gespeichert werden. Der ODBC-Dialog unter Windows 
+ ist auch über die Systemsteuerung erreichbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Anlegen der Datenbankverbindung ist damit abgeschlossen. 
+ Auf die Datenbank kann bereits jetzt von einem Script aus über den &quot;Execute&quot; 
+ Befehl zugegriffen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für viele Funktionen ist jedoch ein Zugriff auf Tabellen 
+ oder Prozeduren notwendig. Dazu müssen noch die benötigten Strukturen 
+ angelegt oder importiert werden.</p>
+<h4 data-condition="Others:Deutsch"><a name="Anlegen_von_Tabellenelementen" id="Anlegen_von_Tabellenelementen"></a>Anlegen 
+ von Tabellenelementen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Ist das Verbindungselement selektiert, kann über das 
+ Kontextmenü entweder ein neues Tabellenelement angelegt werden oder eine 
+ oder mehrere Tabellendefinitionen importiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit &quot;Neue Tabelle&quot; erscheint ein Dialog, 
+ in dem der Name der Tabelle innerhalb des Cloud Connector Projekts und 
+ der Tabellenname aus der verbundenen Datenbank angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dem Browse-Button wird eine Liste der Datenbanktabellen 
+ erzeugt, aus der die gewünschte Tabelle ausgewählt und das Tabellenelement 
+ importiert werden kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird im Kontextmenü der Verbindung &quot;Import&quot; 
+ gewählt, können mehrere Tabellen gleichzeitig importiert werden. Der Name 
+ der angelegten Elemente entspricht dabei den Tabellennamen in der Datenbank.</p>
+<h4 data-condition="Others:Deutsch"><a name="Import_von_Tabellendefinitionen" id="Import_von_Tabellendefinitionen"></a>Import 
+ von Tabellendefinitionen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">In der Liste werden alle Tabellen aufgeführt, auf die 
+ zugegriffen werden kann. Es können mehrere Einträge zugleich selektiert 
+ werden. Nach Betätigen von &quot;Import&quot; wird für jeden selektierten 
+ Eintrag ein Element im Cloud Connector angelegt. Der Name des Elements 
+ entspricht dabei dem Tabellennamen der Datenbank.</p>
+<h4 data-condition="Others:Deutsch"><a name="Anlegen_von_Datenbankfeldern" id="Anlegen_von_Datenbankfeldern"></a>Anlegen 
+ von Datenbankfeldern</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Ist ein Tabellenelement selektiert, kann über das Kontextmenü 
+ entweder eine neue Variable angelegt werden oder eine oder mehrere Felddefinitionen 
+ importiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird bereits im Kontextmenü der Tabelle &quot;Import&quot; 
+ gewählt, können mehrere Variablen gleichzeitig importiert werden. Der 
+ Name der angelegten Elemente entspricht dabei den Feldnamen der Tabelle 
+ in der Datenbank. Der &quot;Typ&quot; wird in diesem Fall automatisch 
+ vorbelegt.</p>
+<h4 data-condition="Others:Deutsch"><a name="Importieren_von_Felddefinitionen" id="Importieren_von_Felddefinitionen"></a>Importieren 
+ von Felddefinitionen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">In der Liste werden alle Felder der Tabelle aufgeführt. 
+ Es können mehrere Einträge zugleich selektiert werden. Nach Betätigen 
+ von &quot;Import&quot; wird für jeden selektierten Eintrag der Tabelle 
+ ein Element im Cloud Connector angelegt. Der Name des Elements entspricht 
+ dabei dem Feldnamen. Der &quot;Typ&quot; wird mit einem dem SQL-Typ entsprechenden 
+ Format vorbelegt.</p>
+<h4 data-condition="Others:Deutsch"><a id="Prozedur1" data-indexterm="Prozedur"></a><a name="Importieren_von_Prozeduren" id="Importieren_von_Prozeduren"></a>Importieren 
+ von Prozeduren</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Prozeduren werden analog Tabellen importiert. Wird 
+ im Kontextmenü &quot;Import Prozeduren&quot; gewählt, erscheint ein Dialog. 
+ In der Liste werden alle Prozeduren aufgeführt, auf die zugegriffen werden 
+ kann. Es können mehrere Einträge zugleich selektiert werden. Nach Betätigen 
+ von &quot;Import&quot; wird für jeden selektierten Eintrag ein Element 
+ angelegt. Der Name des Elements entspricht dabei dem Prozedurnamen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet man für ein selektiertes Prozedurelement im 
+ Baum das Kontextmenü und anschließend &quot;Eigenschaften&quot;, werden 
+ die &quot;Prozedurparameter&quot; angezeigt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Bei Import von Prozeduren des Microsoft SQL-Server 
+ wird automatisch ein Parameter @RETURN_VALUE angelegt. Dieser Parameter 
+ ist aber in der Prozedur nicht vorhanden und kann dementsprechend auch 
+ keinen Rückgabewert liefern. Es empfiehlt sich daher, diesen einen Parameter 
+ zu löschen. Die restlichen Parameter sollten unverändert übernommen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Optionale Parameter der Datenbank-Prozedur oder –Funktion 
+ können weggelassen werden, wenn sie im Projekt nicht verwendet werden. 
+ Dabei darf die Parameterliste nur von unten nach oben gekürzt werden. 
+ Die Parameter-Reihenfolge muss lückenlos erhalten bleiben.</p>
+<h4 data-condition="Others:Deutsch"><a name="Abschneiden_der_Nachkommastellen_bei_Auslesen_eines_Feldes_vom_Typ__Number__als_Double" id="Abschneiden_der_Nachkommastellen_bei_Auslesen_eines_Feldes_vom_Typ__Number__als_Double"></a>Abschneiden 
+ der Nachkommastellen bei Auslesen eines Feldes vom Typ &quot;Number&quot; 
+ als Double</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn man in der Oracle ODBC Driver Configuration (unter 
+ Verwaltung - Datenquellen - System-DNS) die Numeric Settings auf &#39;Use 
+ US settings&#39; einstellt, werden die als Double ausgelesenen Variablen nicht 
+ hinter dem Komma abgeschnitten, sondern normal wie in der Datenbank angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird dort als Einstellung &#39;Use Oracle NLS settings&#39; 
+ verwendet, so werden im Cloud Connector tatsächlich die Nachkommastellen 
+ beim Auslesen von einer Numeric auf eine Double Variable abgeschnitten. 
+ Dies kann aber durch den Befehl Database.Legato.Execute (&#39;alter session 
+ set nls_numeric_characters = \&#39;.,\&#39;&#39;) (Achtung: Reihenfolge der Zeichen 
+ ausschlaggebend, es funktioniert nur &#39;.,&#39; nicht &#39;,.&#39;) im auszuführenden 
+ Skript umgangen werden, so dass als Ergebnis der normale Wert wie in der 
+ Datenbank angezeigt wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Verwendet man die Einstellung &#39;Use Microsoft regional 
+ settings&#39;, so werden immer die Nachkommastellen abgeschnitten, auch durch 
+ den oben genannten Befehl ändert sich nichts.</p>
+
+
+</body></html>

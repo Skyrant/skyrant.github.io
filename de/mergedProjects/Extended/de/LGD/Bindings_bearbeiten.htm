@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Bindings bearbeiten</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bindings bearbeiten">
+        <span>Bindings bearbeiten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Bindings bearbeiten</h1>
+<h3 data-condition="Others:Deutsch">Binding-Dialog</h3>
+<p data-condition="Others:Deutsch">Der Binding-Dialog kann über das Kontextmenü Item <span style="font-style: italic;">Sapient 
+ Bindings bearbeiten</span> (Alt+Shift+B) angezeigt werden.</p>
+<p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><img src="../../Bilder/The_binding_dialog.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US;"><span style="mso-fareast-language: DE;">D</span>er Binding-Dialog ermöglicht 
+ das Bearbeiten von Bindings in einem JSON-Editor. Binding-Ausdrücke können 
+ komplett neu erstellt werden. Es ist allerdings effektiver, ein vorbereitetes 
+ Binding-Snippet auszuwählen und zu bearbeiten.</span></p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch">TIPP</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">• Halten Sie die STRG-Taste gedrückt und führen 
+ Sie einen Rechtsklick im Editor aus, um das Snippet-Menü zu öffnen. Wählen 
+ Sie ein Snippet, um es an der momentanen Position des Cursors einzufügen.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">• Verwenden Sie den Shortcut STRG+Alt+K um 
+ einen Binding-Ausdruck zu formatieren.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Bereiche/Objekte können über das Dreieck-Symbol am Zeilenbeginn eingeklappt 
+ werden:</p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><img src="../../assets/images/image2.png" alt="" style="border: none;" border="0"/></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p style="mso-ansi-language: EN-US;">Es ist möglich, ein eingeklapptes 
+	 Objekt auszuwählen, zu kopieren und wieder einzufügen!</p></li>
+	<li><p>Wenn der Cursor direkt hinter einer Klammer gesetzt wird, wird 
+	 die jeweilige öffnende / schließende Klammer hervorgehoben.</p></li>
+</ul>
+<h3 data-condition="Others:Deutsch"><a id="Meist_genutzte_Bindings___Variablenwerte_anzeigen_und_festlegen"></a>Meist 
+ genutzte Bindings – Variablenwerte anzeigen und festlegen</h3>
+<p data-condition="Others:Deutsch">Die folgenden Beispiele sollen einen Einblick in das Arbeiten mit Bindings 
+ geben. Dafür werden Bindings kreiert, um eine Legato Variable in einem 
+ Element anzuzeigen und ihren Wert ändern zu können.</p>
+<h4 data-condition="Others:Deutsch">Legato und HMI Variablen adressieren</h4>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch">Jede Variable in Legato kann über 
+ einen Symbolnamen adressiert werden. Legato Sapient ermöglicht es, Variablen 
+ zu definieren und übernimmt ihren Wert in die Datenbank („Legato Variablen“). 
+ Um die Beispiele in dieser Beschreibung direkt auszuprobieren, müssen 
+ womöglich die folgenden Variablen über LC2 konfiguriert werden:</p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"> </p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../Bilder/address_legato_and_HMI_variables.png" alt="" style="border: none;" border="0"/></span></p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"> </p>
+<p style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="TextkörperHinweisAufzähl">Während des Verbindungsvorgangs 
+	 zu SPSen werden HMI-Variablen normalerweise direkt während des Prozesses 
+	 ausgetauscht. Diese Variablen können an dem Präfix # erkannt werden, 
+	 z. B. <span style="font-family: &#39;Courier New&#39;, monospace; color: #008080;">#PLCXXYY.R2.TEMP33</span>. 
+	 Vor der Variablenkennung steht ein #, gefolgt von der SPS-Kennung 
+	 und – getrennt durch einen Punkt – einem eindeutigen Symbolnamen des 
+	 SPS-Elements.</p></li>
+	<li><p class="TextkörperHinweisAufzähl">Alle Variablenkennungen fangen 
+	 normalerweise mit einer Verbindungskennung und einem beliebigen, aber 
+	 eindeutigen Symbol innerhalb dieser Verbindung an. Die verschiedenen 
+	 Abschnitte sind immer durch einen Punkt getrennt. Die Verbindungskennungen 
+	 enthalten möglicherweise keine Punkte.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch">Beispiel: Eine Variable mit dem Text eines Elements verbinden</h4>
+<p data-condition="Others:Deutsch">• Fügen Sie jedes beliebige Element zu einer Zeichnung hinzu, die über 
+ ein Anwendungsmenü aufrufbar ist. Öffnen Sie den Binding-Dialog.</p>
+<p data-condition="Others:Deutsch">• Öffnen Sie das Snippet-Menü (STRG + Rechtsklick).</p>
+<p data-condition="Others:Deutsch">• Wählen Sie Beispiele|Text aus.</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><img src="../../Bilder/Example_bind_variable.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch">• Ein voll funktionsfähiges Binding 
+ wird eingefügt, um eine Server- (oder HMI-)Variable an den Elementtext 
+ zu binden.</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><img src="../../Bilder/fully_functional_binding.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch">• Ersetzen Sie den Platzhalter für 
+ das Variablensymbol mit einem bereits vorhandenen, z. B. eine Reihe von 
+ Beispielvariablen wie oben abgebildet.</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><img src="../../Bilder/variable_symbol_binding.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="mso-list: l0 level1 lfo1;">• 
+ Schließen Sie den Binding-Dialog (Anwenden). Speichern Sie die Änderungen 
+ in der Zeichnung.</span></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch">• Wechseln Sie zu Laufzeit, öffnen 
+ Sie die Zeichnung, z. B. in einem Dashboard, das das Visualisierungslaufzeit 
+ Boardlet enthält, oder in der HMI-Anwendung  der Wert der Variablen wird 
+ angezeigt werden.</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><img src="../../Bilder/visualization_runime_boardlet.png" alt="" style="border: none;" border="0"/></p>
+<h4 data-condition="Others:Deutsch">Beispiel: Eine Variable durch Anklicken eines Elements ändern</h4>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="mso-list: l0 level1 lfo1;">• 
+ Fügen Sie ein weiteres Element zur Zeichnung hinzu.</span></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch">• Verwenden Sie das Snippet Beispiele|Legatovar 
+ Wert festlegen.</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch">• Ersetzen Sie das Variablensymbol, 
+ um die gleiche Variable wie im vorherigen Beispiele zu adressieren. Ersetzen 
+ Sie den Platzhalter-Wert durch einen String. Der Platzhalter ist ein numerischer 
+ Wert – den String zu ersetzen bedeutet auch den Platzhalter 10 durch einen 
+ individuellen Textstring mit Anführungszeichen zu ersetzen, z. B. „HALLO!“.</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><img src="../../Bilder/examples_set_legatovar_value_binding.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch">• Apply binding. Save drawing. Update 
+ Runtime…</p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><img src="../../Bilder/Apply_binding.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"> </p>
+<h4 style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Beispiel: Dem Nutzer ermöglichen 
+ jeglichen Wert durch Anklicken eines Elements einzugeben</h4>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">•</span> Kopieren 
+ Sie den Button um die Variable vom letzten Beispiel zu setzen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">• Entfernen Sie das Attribut „Wert“ von der <span style="font-weight: bold;">setValue</span> 
+ Funktion.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/remove_attribute_setValue.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">• Wenden Sie das Binding an, speichern Sie die Zeichnung 
+ und testen Sie es…  Die Sidebar erscheint, sodass der Nutzer einen Wert 
+ eingeben kann.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/add_value_binding.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Struktur_von_Binding-Ausdrücken"></a>Struktur von Binding-Ausdrücken</h3>
+<p data-condition="Others:Deutsch">Bei genauerer Betrachtung der Beispiele wird bereits die grundlegende 
+ Struktur von Bindings ersichtlich.</p>
+<p data-condition="Others:Deutsch">Ein Binding besteht aus drei (optinalen) Haupt“blocks“:</p>
+<p data-condition="Others:Deutsch">• datasources: Eine Liste von Datenobjekten, die im Binding-Ausdruck 
+ verwendet werden.</p>
+<p data-condition="Others:Deutsch">• bindings: “Binding Ziele” = Elementeigenschaften oder -stile, die 
+ an jegliches Datenobject gebunden werden.</p>
+<p data-condition="Others:Deutsch">• events: Events wie Nutzerinteraktion mit Elementen, die Aktionen ausführen.</p>
+<h4 data-condition="Others:Deutsch">Datenquellen</h4>
+<p data-condition="Others:Deutsch">Eine Liste von Datenobjekten, die alle über einen Eigenschaftsnamen 
+ (Key) benannt werden. Es gibt einige Datenanbieter / Datenquellen. Die 
+ Struktur von Datenobjekten ist einheitlich – jedes Datenobjekt hat die 
+ Eigenschaft source um den Anbieter zu spezifizieren (Legatovariable, Session/lokale 
+ Variable, Alarm, Berechtigungen, etc.). Das Param-Objekt ist abhängig 
+ vom Anbieter, da das Adressieren spezifischer Informationen auch vom Anbieter 
+ abhängt.</p>
+<p data-condition="Others:Deutsch">Beispiele mit einer Liste von definierten Datenobjekten, einige mit 
+ unterschiedlichen „Quellen“ und entsprechenden individuellen Parametern:</p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;datasources&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;n1&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.n1&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;n2&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.n2&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;n3&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.n3&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;sum&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;formula&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;formula&quot;: &quot;SUM(n1, 
+ n2, n3)&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;alarm&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;alarm&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;conSym&quot;: &quot;con&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;extCode&quot;: -6</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;bindings&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> ...</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"> </p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Die Referenz 
+ enthält alle verfügbaren Datenanbieter. Im Folgenden werden die üblichsten 
+ als Beispiele gezeigt.</span></p>
+<p class="MsoBodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Legato-Variable: 
+ Eine Variable befindet sich auf dem Server. Alle Klienten sehen den gleichen 
+ Wert. Im HMI-Kontext werden diese Variablen üblicherweise mit einer verbundenen 
+ SPS ausgetauscht.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;">&quot;</span></span><span lang="EN-US" xml:lang="EN-US">var&quot;: {</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;varSym&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Session-Variable: Eine Variable ist in der gesamten App zugänglich (da 
+ der Wert mit allen Zeichnungen in der App ausgetauscht wird, ist er in 
+ der Session gleichbleibend).</p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US">&quot;sessionvar&quot;: 
+ {</span></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;sessionvar&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;xyz&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"> </p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Lokale Variable: Eine Variable mit 
+ dem Umfang der Zeichnung.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;">&quot;</span><span lang="EN-US" xml:lang="EN-US">localvar&quot;: {</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;localvar&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;xxx&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p style="mso-ansi-language: EN-US; mso-fareast-language: DE;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Alarm: Alarmstatus.</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;">&quot;</span>alarm&quot;: 
+ {</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;alarm&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;conSym&quot;: &quot;con&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;extCode&quot;: -6</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Formeln: Der Wert wird mit einer Formel 
+ ausgerechnet.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span lang="EN-US" xml:lang="EN-US" style="mso-fareast-language: DE;">&quot;</span><span lang="EN-US" xml:lang="EN-US">formula&quot;: {</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;formula&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;formula&quot;: &quot;SUM(1,1)&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">TIP:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Verwenden Sie Snippets, um einzelne Datenobjekte 
+ einzufügen. Ändern Sie lediglich den Key des neuen Eintrags und die Params 
+ um das Datenobjekt zu adressieren.</p>
+<p data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch">Bindings</h4>
+<p data-condition="Others:Deutsch">Die Bindingssektion (Objekt) enthält eine Liste mit allen Bindingzielen. 
+ Ziele definieren Elementeigenschaften oder -stile, die dynamische Daten 
+ während der Laufzeit erhalten. Die geläufigsten Bindingziele sind Text, 
+ Füllfarbe, Rahmenfarbe, Schriftfarbe oder Sichtbarkeit eines Elements. 
+ Einem Ziel kann ein fester Wert zugeschrieben werden oder sich auf ein 
+ Datenobjekt beziehen. Das einfachste, erwähnenswerte Binding:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;bindings&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;text&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;value&quot;: 
+ <b style="mso-bidi-font-weight: normal;">&quot;A static text&quot;</b></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Dem Binding-Objekt für den Text wird einfach ein statischer String zu 
+ seinem Wert hinzugefügt. Ein typischerer Anwendungsfall ist es, ein Datenobjekt 
+ zu referenzieren, um es als Wert zu verwenden. Die Struktur bleibt die 
+ gleiche, nur dass der Wert ein Objekt bekommt – in diesem Fall, eine Datenreferenz. 
+ Und es muss natürlich ein Datenobjekt existieren, das referenziert werden 
+ kann:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;someVar&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.str1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: 
+ &quot;someVar&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;defaultValue&quot;: 
+ &quot;/&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Eine Datenreferenz hat die gleiche Basisstruktur 
+ wie jedes andere Datenobjekt.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Es ist sogar möglich, eine Berechnung oder Formel für einen Wert direkt 
+ zu definieren.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;datasources&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;n1&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.n1&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;n2&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.n2&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">    </span><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;bindings&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;text&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;value&quot;: 
+ <b style="mso-bidi-font-weight: normal;">{</b></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;formula&quot;,</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;formula&quot;: &quot;SUM(n1, 
+ n2)&quot;</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Das Konzept ist für alle Ziele genau gleich, z. B. eine statische Füllfarbe:</p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;bindings&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;fillColor&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;value&quot;: 
+ <b style="mso-bidi-font-weight: normal;">&quot;red&quot;</b></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Ein typisches Beispiel: eine Farbe, die vom Wert abhängig ist:</p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;datasources&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;n1&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.n1&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;bindings&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;fillColor&quot;: 
+ <b style="mso-bidi-font-weight: normal;">{</b></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;value&quot;: {</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;formula&quot;,</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;formula&quot;: &quot;IF(n1 
+ &gt; 5, &#39;red&#39;, &#39;green&#39;)&quot;</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="Code" style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></span></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Das Bindings-Objekt kann jegliche Bindingziele 
+ enthalten, die durch Kommata voneinander abgegrenzt sind. Es gibt Snippets 
+ für die am meisten verwendeten Bindingziele, um sie in ein Bindings-Objekt 
+ einzufügen.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beispiel:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span><span style="color: #008000;">{</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n1&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;text&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: 
+ &quot;n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;fillColor&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;formula&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;formula&quot;: 
+ &quot;IF(n1 &gt; 5, &#39;red&#39;, &#39;green&#39;)&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p class="Code" data-condition="Others:Deutsch"> </p>
+<p class="Code" style="mso-ansi-language: EN-US; font-weight: bold;" data-condition="Others:Deutsch">TIPP:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Bei den meisten Eigenschaftswerten ist es 
+ möglich, einen statischen Wert in einem Binding durch eine Datenreferenz 
+ oder ein Datenobjekt zu ersetzen. Der Variablenname einer Definition für 
+ ein Variablendatenobjekt kann sogar an ein anderes Datenobjekt gebunden 
+ werden, z. B. dynamisches Erstellen eines Variablensymbols während der 
+ Laufzeit.</p>
+<p data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch">Events</h4>
+<p data-condition="Others:Deutsch">Events können verwendet werden, um zu reagieren, z. B. wenn ein Element 
+ angeklickt wird. Jedes Event kann eine oder mehrere Aktionen ausführen. 
+ Wie bereits gezeigt – die Aktion Wert festlegen:</p>
+<p class="TextCode" style="mso-fareast-language: DE; color: #008000;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE; color: #008000;"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">{</span></span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;datasources&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;someVar&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.str1&quot;</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;events&quot;: {</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;onClick&quot;: [</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> {</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;action&quot;: &quot;setValue&quot;,</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;target&quot;: {</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;dataref&quot;,</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                           </span><span lang="EN-US" xml:lang="EN-US"> &quot;ref&quot;: &quot;someVar&quot;</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                       </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> },</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;value&quot;: &quot;HELLO!!!&quot;</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><b><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> ]</span></p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Weitere Aktionen, die ausgeführt werden:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n1&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;n2&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;examples.n2&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;events&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;onClick&quot;: 
+ [</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;action&quot;: 
+ &quot;setValue&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;target&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;ref&quot;: 
+ &quot;n1&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;value&quot;: 
+ 7</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;action&quot;: 
+ &quot;setValue&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;target&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                            &quot;ref&quot;: 
+ &quot;n2&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;value&quot;:8</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        ]</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Die folgenden Events werden zur Interaktion genutzt:</p>
+<p data-condition="Others:Deutsch">• onClick: Wird ausgeführt, wenn der Nutzer das Element mit der Maus 
+ anklickt.</p>
+<p data-condition="Others:Deutsch">• onMouseDown: Wird ausgeführt, wenn der Nutzer die Maustaste über einem 
+ Element klickt.</p>
+<p data-condition="Others:Deutsch">• onMouseUp: Wird ausgeführt, wenn der Nutzer die Maustaste über einem 
+ Element loslässt.</p>
+<p data-condition="Others:Deutsch">• onMouseEnter / onMouseLeave: Wird ausgeführt, wenn der Mauscursor 
+ in einen Elementbereich hinein-/hinausgeführt wird. Dies ist z. B. für 
+ Funktionalitäten wie Tooltips nützlich. </p>
+<p data-condition="Others:Deutsch">Die Events onLoad and onUnload werden verwendet um Aktionen aufzurufen, 
+ wenn eine Zeichnung geladen oder geschlossen wird. Dies wird z. B. verwendet, 
+ um während des Ladevorgangs Variablen für einen anfänglichen Wert zu setzen 
+ oder die Variablen zurückzusetzen, wenn die Zeichnung geschlossen wird.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p class="Code" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Die Events onLoad und onUnload können nur 
+ für das Dokument selbst verwendet werden.</p>
+<p data-condition="Others:Deutsch">Das Event onChange kann verwendet werden, um auf Wertänderungen zu reagieren, 
+ und stellt die einzige Ausnahme mit einer etwas anderen Übermittlung dar. 
+ Details zur Nutzung können in der Referenz gefunden werden.</p>
+<h4 data-condition="Others:Deutsch"><a id="Actions"></a>Actions</h4>
+<p data-condition="Others:Deutsch">Die Einzelaktionen werden in der Referenz detaillierter erklärt. Eine 
+ wichtige Eigenschaft, die für jede Aktion genutzt werden kann, sollte 
+ hier allerdings bereits erwähnt werden: die enabled Eigenschaft, die die 
+ Ausführung von Aktionen verhindert, die auf irgendein Datenobjekt angewiesen 
+ sind. Ein typischer Anwendungsfall wäre es, bestimmte Aktionen abhängig 
+ von den Berechtigungen des momentanen Nutzers zu ermöglichen.</p>
+<p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;" data-condition="Others:Deutsch"><span style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;datasources&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;someVar&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;var&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;examples.str1&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;isAdmin&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;permission&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;actions&quot;: [</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;ADMIN&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> ]</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;events&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;onClick&quot;: [</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;action&quot;: &quot;setValue&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;target&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;dataref&quot;,</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                           </span><span lang="EN-US" xml:lang="EN-US"> &quot;ref&quot;: &quot;someVar&quot;</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">        </span><span lang="EN-US" xml:lang="EN-US"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; 
+													 mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> <b style="mso-bidi-font-weight: normal;">&quot;enabled&quot;: {</b></span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;dataref&quot;,</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;ref&quot;: &quot;isAdmin&quot;</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">                   </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">               </span><span lang="EN-US" xml:lang="EN-US"> }</span></b></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">       </span><span lang="EN-US" xml:lang="EN-US"> ]</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-spacerun: yes;">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+<p class="MsoBodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

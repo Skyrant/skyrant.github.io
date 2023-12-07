@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SysParam -300: New layout","type":"item","tilePath":"","description":"","url":"de/06_WA/28_Layout_Option/SysParam__-300.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

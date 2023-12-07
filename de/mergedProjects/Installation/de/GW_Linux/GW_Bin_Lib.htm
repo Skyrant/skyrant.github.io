@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "7.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Gateway Binary und Bibliotheken</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Linux,Gateway" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gateway Binary und Bibliotheken">
+        <span>Gateway Binary und Bibliotheken</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Gateway Binary und Bibliotheken</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Nach dem Compilieren/Linken muss in dem vom Kunden vorgegebenen Verzeichnis (dieses wird im Folgenden als &lt;APP_DIR&gt; bezeichnet) das Unterverzeichnis bin erstellt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Gateway 32 Bit</p>
+<p class="BodyText" data-condition="Others:Deutsch">In das Verzeichnis &lt;APP_DIR&gt;/bin müssen nun folgende Dateien kopiert werden:</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/GatewayIx/gateway</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">$ACE_ROOT/ace/libACE.so.6.2.0</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX/lib/librfccm.so</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><b style="mso-bidi-font-weight: normal;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">Gateway 64 Bit</ins></span></b></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">In das Verzeichnis &lt;APP_DIR&gt;/bin müssen nun folgende Dateien kopiert werden:</ins></span></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/GatewayIx/gateway_64</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">$ACE_ROOT/ace/libACE.so.6.3.0</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX_64/lib/librfccm.so</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Pfad &lt;APP_DIR&gt;/bin muss in die Umgebungsvariable LD_LIBRARY_PATH aufgenommen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abhängig von der Kundenanforderung und des/der verwendeten Gatewayprojekts/Gatewayprojekte müssen weitere Verzeichnisse für Logdateien, Skripten, Gatewayprojekte… angelegt werden. Da dies z. T. sehr unterschiedlich ist, ist dies Teil des jeweiligen Projekts und nicht dieser Dokumentation.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Entsprechend der jeweiligen Projektanforderung können folgende Gatewayrechner als Beispiel dienen:</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">audibxug0010.bx.audi.prod.vwg (Audi Brüssel Montage)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">audibxug0015.bx.audi.prod.vwg (Audi Brüssel KB)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">vwsmmovmo305 (VW Zwickau KB)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">vwskbaubav24 (VW Bratislava)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">vwlegato001 (VWGTO Silao)</ins></span></p>
+
+
+
+</body></html>

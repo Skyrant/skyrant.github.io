@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">MailMessage</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="MailMessage">
+        <span>MailMessage</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">MailMessage</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dient zusammen mit MailSender dazu, E-Mails aus JavaScript-Jobs 
+ zu versenden. Dazu stellt das Skript alle Teile der zu sendenden Nachricht 
+ wie Empfänger (direkt, CC und BCC), Absender, Text (einfach und/oder HTML) 
+ und Anhänge in einem MailMessage-Objekt zusammen, das es dann über ein 
+ MailSender-Objekt versendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Typ MailMessage hat folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">from (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Absender der E-Mail (String, der eine Email-Adresse 
+ enthält)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">to (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der oder die Empfänger der E-Mail. Entweder ein einzelner 
+ String oder ein Array von Strings, die jeder eine Email-Adresse enthalten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">cc (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wie to, aber die hier aufgeführten Empfänger erscheinen 
+ als CC (&quot;carbon copy&quot;) in der E-Mail.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">bcc (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wie to und cc, aber die hier aufgeführten Empfänger 
+ erscheinen nur als BCC (&quot;blind carbon copy&quot;) in der E-Mail.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">subject (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Betreffzeile der E-Mail (String)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">text (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Reintext-Inhalt der E-Mail. (String)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">html (readwrite, optional):</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTML-Inhalt der E-Mail (String). Sollte möglichst nicht 
+ alleine, sondern immer zusätzlich zu text angegeben werden, weil die meisten 
+ Mail-Server Nachrichten, deren Inhalt nur aus HTML ohne Reintext besteht 
+ ablehnen oder als Spam behandeln.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">attachments (readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine oder mehrere Dateien, die als Anhang der E-Mail 
+ mit gesendet werden sollen. Ein einzelnes File- oder String-Objekt oder 
+ ein Array davon.</p>
+
+
+</body></html>

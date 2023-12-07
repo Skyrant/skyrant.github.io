@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "16.1_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">Verfügbare Funktionen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Verfügbare Funktionen">
+        <span>Verfügbare Funktionen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Job">Verfügbare (Hilfs-)Funktionen</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Da der Job komplett in JavaScript implementiert wurde, 
+ können (theoretisch) alle Funktionen direkt aufgerufen werden. Beschrieben 
+ sind hier nur die Funktionen, deren Verwendung als sinnvoll erachtet wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Alle im Standard verwendeten Hilfsfunktionen beginnen 
+ mit einem &#39;_&#39;.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">(Sinnvolle) Hilfsfunktionen (alle diese Hilfsfunktionen 
+ sind in der Datei &#39;ZuliImp_Utils.js&#39; angesiedelt):</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td><p class="TabellenInhalt">_trim(s)</p></td>
+		<td><p class="TabellenInhalt">Rückgabewert String, entfernt alle 
+		 Leerzeichen vor dem ersten und nach dem letzten Zeichen von String 
+		 &#39;s&#39;</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_S5OpToOpCode(operand)</p></td>
+		<td><p class="TabellenInhalt">Rückgabewert Long, wandelt S5-Operanden 
+		 wie z.B. M 127.0 in eine Zahl</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_S7OpToOpCode(operand)</p></td>
+		<td><p class="TabellenInhalt">Rückgabewert Long, wandelt S7-Operanden 
+		 wie z.B. M 127.0 in eine Zahl</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_getImportLine(headLine, importFile_Line, 
+		 vh)</p></td>
+		<td><p class="TabellenInhalt">Rückgabewert Map, kombiniert die 
+		 übergebene Kopfzeile mit den übergebenen Werten der Importdatei-Zeile</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_getNullLine()</p></td>
+		<td><p class="TabellenInhalt">Rückgabewert Map, liefert eine Map 
+		 zur Übergabe an _saveLine(...), als Wert wird immer = null übergeben</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_logLine(vh, line)</p></td>
+		<td><p class="TabellenInhalt">loggt die übergebene Zeile mit dem 
+		 Aufbau von _getNullLine()</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_saveLine(storeLine)</p></td>
+		<td><p class="TabellenInhalt">speichert (inserted oder updated) 
+		 die übergebenen Map-Werte in der Datenbank</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">_saveListLine(storeLine)</p></td>
+		<td><p class="TabellenInhalt">speichert (inserted oder updated) 
+		 die übergebenen Werte der Zeile in der Datenbank</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+
+
+</body></html>

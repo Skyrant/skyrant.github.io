@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Arbeitsschritte","type":"book","tilePath":"","description":"","url":"de/Boardlets/04_CIP/Measure_Actions.htm","key":"toc52"},{"name":"Maßnahmen Übersicht","type":"book","tilePath":"","description":"","url":"de/Boardlets/04_CIP/Measures.htm","key":"toc53"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

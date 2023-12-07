@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Grundkonfiguration","type":"item","tilePath":"","description":"","url":"de/General/SE_Conf.htm#Grundkonfiguration"},{"name":"Initialisierung","type":"item","tilePath":"","description":"","url":"de/General/SE_Conf.htm#Initialisierung"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

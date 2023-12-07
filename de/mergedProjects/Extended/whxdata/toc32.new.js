@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Einleitung","type":"book","tilePath":"","key":"toc33"},{"name":"Layout erstellen","type":"book","tilePath":"","key":"toc34"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

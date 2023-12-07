@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.10.7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Produktionseinheiten</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Produktionseinheiten">
+        <span>Produktionseinheiten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Produktionseinheiten</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Produktionseinheiten</span> 
+ zeigt alle verfügbaren Produktionseinheiten (Production Units bzw. PUs) 
+ an. Es werden verschiedene Informationen angeboten, beispielsweise den 
+ Zeitpunkt und Ort der letzten Identifikation, den aktuellen Zustand etc.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Spalte &quot;Letzte Identifizierung&quot; zeigt 
+ den Zeitstempel der letzten Identifizierung der PU an, unabhängig vom 
+ Identifikationspunkt. Die Spalte &quot;Ident-Zeit&quot; zeigt den Zeitstempel 
+ der Identifizierung an einem bestimmten, über den Filter selektierten 
+ Identifikationspunkt an.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/PU_View.png" alt="" style="border: none;" border="0"/></p>
+<div data-conref="../../../assets/snippets/Boardlets/de_Sort_Column.hts" data-condition="Others:Deutsch">
+<p class="BodyText" style="max-width: 1000px;">Mittels Drag &amp; Drop 
+ lassen sich die Breite oder Position der Spalten einfach verändern. Durch 
+ Klick auf eine Zeilenüberschrift wird nach dieser Spalte sortiert. <br/>
+Nach welcher Spalte sortiert ist, und ob auf- oder absteigend sortiert 
+ ist, wird durch die dreieckigen Symbole angezeigt: </p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Defaultmäßig ist die Ansicht nach PU-ID sortiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über das Suchfeld in der Menüleiste des Boardlets kann 
+ nach einer PU-ID gesucht werden. Eine Dropdown-Liste zeigt alle Einträge, 
+ die zu den eingegebenen Buchstaben passen.</p>
+<h3 data-condition="Others:Deutsch"><a id="PU-Details"></a>PU-Details</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf eine Zeile öffnet sich eine Unteransicht 
+ mit Details zu dieser PU:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/PU_Detail.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">In einer neuen Tabelle werden alle Identifikationsereignisse 
+ und Statusänderungen mit Zeitstempel aufgelistet. Ist die Einstellung 
+ &quot;Detailansicht gruppieren&quot; gesetzt, so werden Ereignisse am 
+ selben Identifikationspunkt in einer Zeile zusammengefasst, sonst wird 
+ pro Ereignis eine eigene Zeile angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei nicht-gruppierter Anzeige öffnet sich durch Klick 
+ auf einen Eintrag darunter ein Dialog zum Ansehen der Daten bzw. zum Erfassen 
+ / Ändern von Zustand und Q-Zustand.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hat man einen Eintrag ausgewählt, bei dem für den Q-Zustand 
+ ein Dokument hinzugefügt wurde, so erscheint in der Menüleiste des Boardlets 
+ ein Symbol zum Öffnen dieses Dokuments <img src="../../../Bilder/PU_Doc.png" alt="" style="border: none;" border="0"/>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Klick auf <img src="../../../Bilder/Icons/history_black_18dp.png" alt="" style="border: none;" border="0"/> 
+ öffnet die Split-Historie der selektierten PU in dieser Ansicht. Für weitere 
+ Details, siehe <a href="Split_History.htm">Split-Historie</a>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf <img src="../../../Bilder/Icons/arrow_back_black_18dp.png" alt="" style="border: none;" border="0"/> 
+ kann man zur Gesamtübersicht zurückkehren.</p>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/add_circle_black_18dp.png" alt="" style="border: none;" border="0"/> kann 
+		 ein neues Identifikationsereignis für diese PU erfasst werden. 
+		 Es öffnet sich ein entsprechender Dialog in der rechten Seitenleiste: 
+		 ---&gt;&gt;</p>
+		<p class="BodyText">Über das Kalendersymbol kann das Datum des 
+		 Ereignisses ausgewählt werden. Mithilfe der Dropdown-Listen kann 
+		 ein Zustand, ein Q-Zustand sowie ein Identifikationspunkt selektiert 
+		 werden. Mindestens der Identifikationspunkt muss eingegeben werden.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/PU_New_Ident.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/edit_black_18dp.png" alt="" style="border: none;" border="0"/> kann 
+		 ein neues Attribut hinzugefügt werden. Es öffnet sich ein entsprechender 
+		 Dialog in der rechten Seitenleiste:</p>
+		<p class="BodyText">Mithilfe der Dropdown-Listen kann ein Attribut, 
+		 ein Attributwert sowie ein Identifikationspunkt selektiert werden. 
+		 Darunter kann der Zeitpunkt eingegeben werden.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/PU_Add_Attr.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a></h6>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Produktionseinheiten</span> 
+ stehen folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Detailansicht gruppieren:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ die Detailansicht gruppiert angezeigt werden soll oder nicht. Gruppiert 
+ bedeutet, es werden alle Ereignisse am selben Identifikationspunkt zusammengefasst 
+ und es werden keine weiteren Details zur Ansicht/Bearbeitung mehr angezeigt. 
+ Nicht gruppiert bedeutet, dass pro Ereignis eine eigene Zeile angezeigt 
+ wird und durch Klick darauf weitere Details zur Ansicht/Bearbeitung angeboten 
+ werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Filter:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Schieberegler für jedes einzelne Filterkriterium. 
+ Nur die, die hier aktiviert sind, stehen nach dem Speichern als Filter 
+ zur Verfügung.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Archivierte Identifikation (Equipment):</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiv, so wird der 
+ Filter durch Auswahl eines Knotens automatisch gesetzt.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Zeitauswahl vom Dashboard übernehmen (letzte Identifikation):</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ die Zeitauswahl des Dashboards für das Boardlet übernommen werden soll 
+ (Filter auf letztes Identifikationsereignis) oder ob alle PUs angezeigt 
+ werden sollen (ohne Zeitfilter).</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zeitauswahl vom Dashboard übernehmen (archivierte 
+ Identifikation):</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ die Zeitauswahl des Dashboards für das Boardlet übernommen werden soll 
+ (Filter auf archivierte Identifikationsereignisse) oder ob alle PUs angezeigt 
+ werden sollen (ohne Zeitfilter).</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Produktionseinheiten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann nach den PU-IDs gefiltert werden. 
+ Nach Eingabe mindestens eines Buchstabens in das Feld wird eine Drop Down 
+ Liste mit allen PUs geladen, die diesen Buchstaben enthalten. Durch Klick 
+ auf eine PU wird diese als Auswahl eingetragen. Mehrfachauswahl ist möglich.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Produktgruppe:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann nach Produktgruppen 
+ gefiltert werden, denen das Produkt, das der PU zugeordnet ist, angehört.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Produkte:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann nach Produkten 
+ gefiltert werden, die den angezeigten PUs zugeordnet sind.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Varianten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann nach Varianten 
+ gefiltert werden, die den angezeigten PUs zugeordnet sind.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Letzte Identifikation (Equipment):</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann der Identifikationspunkt 
+ ausgewählt werden, an dem die PU zuletzt identifiziert wurde.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Archivierter Knoten - mit Unterknoten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann auf die ID eines Knotens gefiltert 
+ werden, an dessen Identifikationspunkten die PU irgendwann identifiziert 
+ wurde.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Archivierte Identifikation (Equipment):</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann der Identifikationspunkt 
+ ausgewählt werden, an dem die PU in der Vergangenheit identifiziert wurde. 
+ Diese Auswahl kann auch durch Selektion eines Identifikationspunkts im 
+ Lesestellen-Boardlet erfolgen.</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Wird hier etwas ausgewählt, so wird in der PU-Ansicht 
+ in der Zeile &quot;Ident-Zeit&quot; der Zeitstempel angezeigt, an dem 
+ die PU an diesem Equipment identifiziert wurde.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Aktueller Zustand:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann auf aktuelle Zustände 
+ gefiltert werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Aktueller Qualitätszustand:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann auf aktuelle Qualitätszustände 
+ gefiltert werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Archivierter Qualitätszustand:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann auf archivierte 
+ Qualitätszustände gefiltert werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Aktueller Arbeitsgang:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann nach Arbeitsgängen 
+ gefiltert werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Aktuelles Transportmittel:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann nach Transportmitteln 
+ gefiltert werden.</p>
+
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Identifikationspunkte werden im <span class="Bold">LC2</span> 
+	 unter dem zugehörigen Knoten der Fertigungsstruktur unter <span class="Bold">Anwendungsstruktur</span> 
+	 <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+	 <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Knoten</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Identifikationspunkt</span> 
+	 angelegt.</p></li>
+	<li><p class="ListBulletL1">PU-Zustände werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Produktionsmanagement</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Tracking 
+	 &amp; Tracing</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">PU-Zustände</span> gepflegt.</p></li>
+	<li><p class="ListBulletL1">PU-Qualitätszustände werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Produktionsmanagement</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Tracking 
+	 &amp; Tracing</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">PU Qualitätszustände</span> gepflegt.</p></li>
+	<li><p class="ListBulletL1">Attributbeschreibung für PUs werden im 
+	 <span class="Bold">LC2</span> unter <span class="Bold">Produktionsmanagement</span> 
+	 <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Tracking &amp; Tracing</span> 
+	 <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Attributbeschreibung</span> 
+	 für PUs gepflegt.</p></li>
+</ul>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">takeTime</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">takeTimeArch</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">productionUnits</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">productGroupVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">productGroup</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">rootNode</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">products</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">variantsVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">variants</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">lastIdentVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">lastIdent</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">archivedNodeShouldIncludeSubnodes</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">archivedIdentVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">archivedIdent</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">currentStateVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">currentState</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">currentQStateVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">currentQState</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">archivedQStateVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">archivedQState</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">currentOperationVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">currentOperation</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedOperation</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectedOperationPUs</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">currentCarrierVisibility</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">currentCarrier</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletPUs</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletColor</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletColorArray</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectedQualitySupervisorBoardletShiftTimeRange</p></td>
+		<td><p class="TabellenInhalt">Object</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">attributesFilter</p></td>
+		<td><p class="TabellenInhalt">Array</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectedProductionUnit</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">groupView</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">groupViewColumns</p></td>
+		<td><p class="TabellenInhalt">Array</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">datasourceForPUBoardlet</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">detailInfo</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

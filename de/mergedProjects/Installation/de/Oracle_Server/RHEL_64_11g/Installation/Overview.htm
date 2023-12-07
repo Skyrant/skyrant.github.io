@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.3.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Übersicht über die Installation</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Übersicht über die Installation">
+        <span>Übersicht über die Installation</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Übersicht über die Installation</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Ziel der Installation des Oracle-Serversystems ist 
+ ein laufendes RDBMS inklusive Listener, aber <i>ohne</i> Datenbankinstanz. 
+ Dazu wird der Installationsprozess in den folgenden Einzelschritten durchgeführt:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1.<span style="font: 7.0pt &#39;Times New Roman&#39;;">  </span>Pre-Installation 
+ (Anbindung des Oracle-Repository, Pre-Installation-Programm herunterladen 
+ und ausführen)</p>
+<p class="BodyText" data-condition="Others:Deutsch">2.<span style="font: 7.0pt &#39;Times New Roman&#39;;">  </span>Installation 
+ des RDBMS (Herunterladen der Installationsdateien, Vorbereitung von Verzeichnissen 
+ und Systemdateien, grafische Installation)</p>
+<p class="BodyText" data-condition="Others:Deutsch">3.<span style="font: 7.0pt &#39;Times New Roman&#39;;">  </span>Konfiguration 
+ der Login-Datei und Starten des Listeners</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unterstützt wird aktuell die Oracle-Version 11gR2.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Dokumentation wird vom Einsatz der Enterprise-Edition 
+ ausgegangen. Diese Version ist für den Betrieb von Legato empfohlen und 
+ kann kostenpflichtig bei Oracle erworben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prinzipiell ist es jedoch auch möglich, Legato mit 
+ einer Standard-Oracle-Version zu betreiben. Hier sind allerdings einige 
+ empfohlene Features nicht verfügbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Einige Oracle-Versionen können kostenlos heruntergeladen 
+ werden unter:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><a href="https://edelivery.oracle.com/">https://edelivery.oracle.com/</a></p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image002.png" alt="" width="700" height="410" border="0"/></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Hier sind nicht die neuesten Versionen vorhanden. 
+ So ist dort zum Beispiel die Version 11.2.0.1.0 vorhanden, allerdings 
+ nicht die von Oracle empfohlene Version 11.2.0.3.0 des Oracleservers. 
+ Diese Versionen findet man im kostenpflichtigen Oracle Metalink (siehe 
+ nächste Seite).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Oracle Metalink können Service Requests gestellt 
+ werden, neueste Software-Updates geholt werden oder auch nach Hilfen gesucht 
+ werden. Der Metalink ist jedoch nur für Oracle-Partner zugänglich und 
+ grundsätzlich kostenpflichtig. Wir empfehlen den Zugang zum Metalink, 
+ um stets die aktuellsten Versionen verfügbar zu haben. Für diese Anleitung 
+ wird ebenfalls von einem Zugang zum Metalink ausgegangen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Oracle Metalink ist zu erreichen unter <a href="http://support.oracle.com/">http://support.oracle.com</a></p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image004.png" alt="" width="700" height="410" border="0"/></p>
+
+
+</body></html>

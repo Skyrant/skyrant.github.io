@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.2.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">AE Service verwalten</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AE Service verwalten">
+        <span>AE Service verwalten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Application Engine Service verwalten</h2>
+<h3 data-condition="Others:Deutsch"><a id="Service-Status_anzeigen"></a>Service-Status anzeigen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um detaillierte Informationen über eine Serviceeinheit 
+ (entspricht einem Systemdienst)anzuzeigen, geben Sie folgenden Befehl 
+ in die Shell-Eingabeaufforderung ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl status Leappeng_LEGATO.service </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/AE_systemd/image8.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Befehl zeigt den Namen der gewählten Diensteinheit, 
+ gefolgt von der Kurzbeschreibung. Dann folgen ein oder mehrere Felder 
+ der Tabelle &quot;Verfügbare Informationen über Diensteinheiten&quot; 
+ und, falls der Befehl durch den Root-Benutzer ausgeführt wurde, die letzten 
+ Logeinträge.</p>
+<h3 data-condition="Others:Deutsch"><a id="Verfügbare_Informationen_über_Diensteinheiten"></a>Verfügbare 
+ Informationen über Diensteinheiten</h3>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Loaded</p></td>
+		<td><p class="TabellenInhalt">Geladen. Information, ob die Diensteinheit 
+		 geladen wurde, der absolute Pfad zur Einheits-Datei und ein Hinweis, 
+		 ob die Einheit aktiv ist.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Active</p></td>
+		<td><p class="TabellenInhalt">Aktiv. Information, ob die Dienst-Einheit 
+		 läuft, gefolgt von einem Zeitstempel.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Main PID</p></td>
+		<td><p class="TabellenInhalt">Haupt-PID. Die PID des entsprechenden 
+		 Systemdienstes gefolgt von seinem Namen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Status</p></td>
+		<td><p class="TabellenInhalt">Status. Zusätzliche Information über 
+		 den entsprechenden Systemdienst.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Process</p></td>
+		<td><p class="TabellenInhalt">Prozess. Zusätzliche Information 
+		 über zugehörige Prozesse.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">CGroup</p></td>
+		<td><p class="TabellenInhalt">C-Gruppe. Zusätzliche Informationen 
+		 über zugehörige Kontroll-Gruppen (CGroups).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Um nur sicherzustellen, dass eine bestimmte Diensteinheit 
+ läuft, führen Sie folgenden Befehl aus:</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl is-active Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Um herauszufinden, ob eine bestimmte Diensteinheit 
+ aktiviert ist, geben Sie folgenden Befehl ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl is-enabled Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Einen_Dienst_aktivieren"></a>Einen Dienst aktivieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine Diensteinheit (entspricht einem Systemdienst) 
+ so zu konfigurieren, dass sie beim Systemstart automatisch startet, geben 
+ Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl enable Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" style="border: none;" alt="" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Für die Installation der Legato Application 
+ Engine empfiehlt es sich, den Dienst zu aktivieren, so dass der Dienst 
+ beim Systemstart automatisch gestartet werden kann. Standardmäßig ist 
+ der Dienst deaktiviert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Befehl liest den [Install] Bereich der gewählten 
+ Diensteinheit und erstellt entsprechende symbolische Links zur Datei  /usr/lib/systemd/system/name.service file 
+ im Verzeichnis /etc/systemd/system/ und Unterverzeichnissen. 
+ Dieser Befehl überschreibt allerdings keine bereits existierenden Links. 
+ Um sicherzustellen, dass die symbolischen Links neu erstellt werden, führen 
+ Sie folgenden Befehl als Root aus:</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl reenable Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Befehl deaktiviert die gewählte Diensteinheit 
+ und aktiviert sie sofort wieder.</p>
+<h3 data-condition="Others:Deutsch"><a id="Einen_Dienst_deaktivieren"></a>Einen Dienst deaktivieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um zu verhindern, dass eine Diensteinheit (entspricht 
+ einem Systemdienst) automatisch beim Systemstart gestartet wird, geben 
+ Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl disable Leappeng_LEGATO.service </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Einen_Dienst_starten"></a>Einen Dienst starten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine Diensteinheit (entspricht einem Systemdienst) 
+ zu starten, geben Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung 
+ ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo systemctl start Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Befehl startet die gewählte Diensteinheit in 
+ der aktuellen Sitzung.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüfen Sie, ob der Dienst erfolgreich gestartet wurde, 
+ indem Sie den Status überprüfen.</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl status Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüfen Sie, ob die Logdateien leappeng.log und leappeng.err 
+ im Logverzeichnis /var/log/leappeng erstellt wurden. </p>
+<h3 data-condition="Others:Deutsch"><a id="Einen_Dienst_stoppen"></a>Einen Dienst stoppen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine Diensteinheit  (entspricht einem Systemdienst) 
+ zu stoppen, geben Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung 
+ ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo systemctl stop Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Befehl stoppt die gewählte Diensteinheit in 
+ der aktuellen Sitzung.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüfen Sie, ob der Dienst erfolgreich gestoppt wurde, 
+ indem Sie den Status überprüfen.</p>
+<p class="TextCode" data-condition="Others:Deutsch">systemctl status Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Einen_Dienst_neu_starten"></a>Einen Dienst neu starten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine Diensteinheit (entspricht einem Systemdienst) 
+ neu zu starten, geben Sie folgenden Befehl als Root in die Shell-Eingabeaufforderung 
+ ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo restart Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Befehl stoppt die gewählte Diensteinheit in 
+ der aktuellen Sitzung und startet sie sofort wieder.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" style="border: none;" alt="" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Wenn die gewählte Diensteinheit nicht läuft, 
+ wird sie durch diesen Befehl trotzdem gestartet.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfiguration_aktualisieren"></a>Konfiguration aktualisieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Führen Sie folgende Befehle als Root aus, um die Konfiguration 
+ nach den Änderungen an der Datei &quot;Leappeng_LEGATO.service&quot; neu 
+ zu laden. So werden die Änderungen an den Einheiten-Dateien übernommen, 
+ ohne dass das System neu gestartet werden muss.</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo systemctl daemon-reload</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Option &quot;daemon-reload&quot; aktualisiert 
+ alle Einheiten-Dateien und erstellt den gesamten Abhängigkeitsbaum neu. 
+ Dies wird benötigt, um Änderungen an einer Einheiten-Datei sofort zu übernehmen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn die geänderte Einheiten-Datei zu einem laufenden 
+ Dienst gehört, z.B. hier zu &quot;Leappeng_LEGATO.service&quot;, muss 
+ dieser Dienst ebenfalls neu gestartet werden, um die Änderungen zu übernehmen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo systemctl restart Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_Database_de1.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Über ...</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="JSON-RPC,Rückgabewerte,Zeitzone" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Über ...">
+        <span>Über ...</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Über_dieses_Dokument"></a>Über dieses Dokument</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Dokument beschreibt aufrufbare Methoden von 
+ Javaklassen, die dazu verwendet werden können, Daten in die Sapient Datenbank 
+ zu buchen. Die Buchung kann dabei von einem Gateway, der Sapient Engine 
+ oder dem Client erfolgen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem werden die Jobs der Sapient Engine beschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Beschreibung richtet sich an den Legato Support, 
+ an Datenbankadministratoren sowie an im Umgang mit Datenbankprozeduren 
+ geschulte Key-User.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Dokument werden folgende Symbole und Formatierungen 
+ verwendet:</p>
+<div data-conref="../../assets/snippets/de_Hinweis_allg.hts" data-condition="Others:Deutsch">
+<p class="Textkörperfett"><img src="../../Legato_LC2_DE_Format-Dateien/Allgemein/02_Hinweis_de.jpg" alt="" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis">Stellt einen Sicherheitshinweis dar. Die folgenden 
+ Informationen warnen vor möglichem Sachschaden, z.B. Datenverlust oder 
+ mangelnder Funktionalität bei unsachgemäßer Handhabung. Beachten Sie diese 
+ Hinweise unbedingt!</p>
+
+
+</div>
+<div data-conref="../../assets/snippets/de_Info_allg.hts" data-condition="Others:Deutsch">
+<p class="Textkörperfett">INFO:</p>
+<p class="TextkörperHinweis">Hier finden Sie wichtige Informationen über 
+ die Funktionsweise des Systems. Diese Informationen können Sie dabei unterstützen, 
+ die Konfiguration korrekt vorzunehmen.</p>
+
+
+</div>
+<div data-conref="../../assets/snippets/de_Tipp_allg.hts" data-condition="Others:Deutsch">
+<p class="Textkörperfett">TIPP:</p>
+<p class="TextkörperHinweis">Hier finden Sie hilfreiche Tipps zur Anwendung.</p>
+
+
+</div>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü2_Search" data-condition="Others:Deutsch"><a id="Allgemeines"></a>Allgemeines</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die Buchungsprozeduren sind in Java erstellt. Es gibt 
+ verschiedene Klassen, innerhalb denen wiederum verschiedene Methoden aufgerufen 
+ werden können.</p>
+<h3 data-condition="Others:Deutsch"><a id="Zeitzone"></a>Zeitzone</h3>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Wird bei einer Prozedur keine explizite Zeitzone 
+ übergeben, erwarten ALLE Prozeduren die Zeitstempel in UTC.</p>
+<h3 data-condition="Others:Deutsch"><a id="Rückgabewerte"></a>Rückgabewerte</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Schnittstelle zum Gateway können sowohl JSON-RPC 
+ als auch JSON-API Daten verwendet werden. Dabei gibt es folgende Einschränkung: 
+ in einem Response Objekt darf kein Array eingebettet sein (ein Array von 
+ Response Objekten ist natürlich möglich).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es gibt folgende Vereinbarung, wie Rückgabewerte aufgebaut 
+ sein sollen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fehler</p>
+<p class="TextCode" data-condition="Others:Deutsch">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:6,&quot;error&quot;:{&quot;code&quot;:-32603,&quot;message&quot;:&quot;JSON-RPC: 
+ Internal server error.: Pending alarm for id: null, connection: 10, ext_code: 
+ 1 not found!,FunctionPath [de/gefasoft/sapient/db/alarms/Alarms/alarm_leaving]&quot;}}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Erfolgreich (ohne Info im Script)</p>
+<p class="TextCode" data-condition="Others:Deutsch">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:3,&quot;result&quot;:{&quot;id&quot;:2}}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Erfolgreich (mit Info im Script)</p>
+<p class="TextCode" data-condition="Others:Deutsch">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:3,&quot;result&quot;:{&quot;id&quot;:2}}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="JSON-RPC-Prozeduren_aus_externen_Anwendungen_verwenden"></a>JSON-RPC-Prozeduren 
+ aus externen Anwendungen verwenden</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die Sapient Engine stellt ihre Dienste via JSON-RPC 
+ anderen Anwendungen (sowohl Sapient Anwendungen wie der Sapient Web-Applikation, 
+ SCC, LC2 etc. und Fremd-Anwendungen) zur Verfügung. Dadurch wird ein leichtes 
+ Protokoll zur Durchführung von RPC (remote procedure call) via HTTP(s) 
+ POST Anfragen mittel JSON (JavaScript Object Notation) als Datenformat 
+ sowohl für Anfrage- als auch Rückgabe-Daten festgelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Da die meisten Aufrufe einen angemeldeten Benutzer 
+ verlangen, der autorisiert ist, die entsprechende Aktion auszuführen, 
+ müssen sich Client-Anwendungen an der Sapient Engine &quot;anmelden&quot;, 
+ ehe sie deren Dienste verwenden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Interaktive Clients (wie die Sapient Web-Applikation) 
+ zeigen das Login-Formular der Sapient Engine an und fordern den Benutzer 
+ auf, sich anzumelden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nicht-interaktive Clients (wie der SCC) brauchen einen 
+ eigenen Sapient Benutzer und verwenden üblicherweise HTTP Basic Authentication 
+ bei der ersten HTTP Anforderung, um sich an der Sapient Engine anzumelden. 
+ Die Sapient Engine verwendet immer HTTP-Sessions, die durch einen &quot;Session 
+ Cookie&quot; namens &quot;JSESSIONID&quot; aufgebaut wurden und merkt 
+ sich den angemeldeten Benutzer für jede Session. Client-Anwendungen, die 
+ Dienste der Sapient Engine verwenden, wird dringend empfohlen, ebenfalls 
+ diesen HTTP-Session-Mechanismus zu verwenden anstatt sich via HTTP Basic 
+ Authentication HTTP Header bei jedem Aufruf anzumelden. Die Verwendung 
+ der angebotenen Sessions ist sowohl schneller (weil so nicht für jeden 
+ Aufruf die Berechtigungen des Benutzers in der Datenbank nachgeschlagen 
+ werden müssen) und spart Ressourcen auf der Sapient Engine ein (da nicht 
+ verwendete Sessions relativ lange im Speicher verbleiben).</p>
+<h3 data-condition="Others:Deutsch"><a id="JSON-RPC_Aufrufe_abbrechen"></a>JSON-RPC Aufrufe abbrechen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Manchmal wird ein JSON-RPC Aufruf überflüssig, ehe 
+ er vollständig ausgeführt wurde. Dies geschieht beispielsweise, wenn sich 
+ ein Benutzer durch Teiler der WebApplikation klickt, ohne darauf zu warten, 
+ dass die Daten vollständig geladen sind. Solche Datenabfragen können eine 
+ signifikante Last auf der Sapient Engine und der Datenbank verursachen, 
+ ohne irgendetwas zu bewirken.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Daher wurde eine neue JSON-RPC Prozedur <span style="font-weight: bold;">cancelRPC</span> 
+ in die Sapient Engine integriert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Prozedur erwartet einen einzigen Parameter <span style="font-weight: bold;">IDS</span>, der die ID des abzubrechenden 
+ RPC Aufrufs enthält. Es ist auch möglich, mehrere IDs als Array zu übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Prozedur ist dazu gedacht, als JSON-RPC Notification 
+ (die kein Ergebnis zurückliefert) aufgerufen zu werden. Sie kann aber 
+ auch als Funktion aufgerufen werden. In diesem Fall wird ein Ergebnis-Objekt 
+ mit einem einzigen Element, &quot;rows&quot;, zurückgegeben, das die Anzahl 
+ der abgebrochenen RPC Aufrufe enthält.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Bitte beachten Sie, dass diese Prozedur nur 
+ RPC Aufrufe abbricht, die vom gleichen Client in der gleichen HTTP-Session 
+ gestartet wurden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nachdem dies auch bedeutet, dass keine Aufrufe anderer 
+ Benutzer abgebrochen werden können, benötigt die Prozedur keine speziellen 
+ Benutzerrechte.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die SQLExceptions, die erstellt werden, wenn ein SQL-Statement 
+ abgebrochen wird, werden in SapientError Exceptions mit einem spezifischen 
+ Fehlercode umgewandelt. Der Fehlercode hängt nicht mit dem Datenbanktyp 
+ zusammen (PostgreSQL oder Oracle). Die Fehler werden von der Sapient Engine 
+ geloggt.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Skripte_auf_Updates_überprüfen"></a>Skripte 
+ auf Updates überprüfen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Wann immer die Sapient Engine nach Updates in Konfigurationstabellen 
+ der Datenbank sucht, sucht sie auch nach Updates in allen Datenquellen-Skripten. 
+ Gab es Updates seitdem die aktuelle Version des Repository geladen wurde, 
+ wird das Repository neu geladen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Überprüfung der Datenquellen-Skripte auf Updates 
+ wird auch durchgeführt, wenn ein &quot;reload repository if stale&quot; 
+ mittels reloadRepository(true) via JMX oder JSON-RPC angefordert wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die durchgeführte Überprüfung kann jedoch keine neuen 
+ Skripte entdecken, die in den jeweiligen Verzeichnissen deployt wurden. 
+ Um diese zu laden, muss ein Neuladen des Repositories erzwungen werden, 
+ indem man reloadRepository(false) entweder via JMX oder JSON-RPC aufruft.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Überprüfung von Skripten auf Updates erhöht die 
+ Aktivität auf dem Dateisystem. In produktiven Umgebungen kann sie daher 
+ deaktiviert werden, indem man den Parameter &quot;updateCheckSeconds&quot; 
+ der Task &quot;functions&quot; auf einen Wert kleiner/gleich 0 setzt.</p>
+
+
+</body></html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="Sapient_Total" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\SysDoc.htm">
+    
+    <topic>
+      de\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\Overview.htm
+    </topic>
+    
+    <topic>
+      __global_change_history_de.htm
+    </topic>
+    
+    <topic>
+      de\OP_Tips.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_Installation\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_System_Parameters\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_LC2\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_MDX_Manager\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_Procedures\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_LegatoSapientUserManual\Welcome.htm
+    </topic>
+    
+    <topic>
+      de\SysDoc_Extended_Operation\SysDoc.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

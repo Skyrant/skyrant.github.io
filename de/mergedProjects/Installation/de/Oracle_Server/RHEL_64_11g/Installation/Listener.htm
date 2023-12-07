@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.3.3.1_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Einrichten des Listeners</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Einrichten des Listeners">
+        <span>Einrichten des Listeners</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Einrichten des Listeners</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Nun muss der Listener eingerichtet werden. Dies wird mit dem User oracle vorgenommen.</p>
+<p class="TextCode" data-condition="Others:Deutsch"># su oracle</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ ORACLE_HOME=/u01/app/oracle/product/11.2.0/dbhome_1</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ export ORACLE_HOME</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ cd $ORACLE_HOME/bin</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ ./netca</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> Der Oracle Net-Konfigurationsassistent öffnet sich.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image041.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie &quot;Listener-Konfiguration&quot; und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image042.png" alt="" width="599" height="399" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie &quot;Hinzufügen&quot; und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image043.png" alt="" width="601" height="402" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Übernehmen Sie den vorbelegten Namen &quot;LISTENER&quot; und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image044.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Belassen Sie die Vorauswahl des gewählten Protokolls auf &quot;TCP&quot; und klicken Sie &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image045.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ganz wichtig ist nun die Vergabe eines sinnvollen Ports für die Kommunikation. Dieser Port muss auch hinterher in Firewall freigeschaltet sein. Der Standard-Port ist hier die 1521, er kann jedoch hier geändert werden. In dieser Beispielinstallation belassen wir diesen Wert jedoch und klicken auf &quot;Next&quot;. Danach ist der Listener konfiguriert und es erfolgt folgende Frage:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image046.png" alt="" width="600" height="402" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie bei der Abfrage &quot;Nein&quot; und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image047.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die erfolgreiche Konfiguration wird bestätigt. Ein Klick auf &quot;Weiter&quot; führt wieder zum Hauptmenü des Assistenten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image048.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Als nächstes müssen wir die Methoden benennen, mit denen man sich an den Instanzen anmelden kann. Dazu wählen wir den Punkt &quot;Konfiguration der Benennungsmethoden&quot; und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image049.png" alt="" width="599" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie die Benennungsmethoden &quot;Lokale Benennung&quot; für TNSNAMES und &quot;Easy-Connect Benennung&quot; und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die erfolgreiche Konfiguration wird bestätigt und ein Klick auf &quot;Weiter&quot; führt zurück zum Startdialog.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image048.png" alt="" width="600" height="400" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Klicken Sie nun auf &quot;Beenden&quot;, um den Konfigurationsassistenten zu beenden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Damit ist die Installation des Oracle-RDBMS und des Listeners beendet. Weiter geht es im nächsten Kapitel mit der Einrichtung einer Datenbank-Instanz.</p>
+
+
+</body></html>

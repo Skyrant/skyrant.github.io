@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.5.1_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Job-Trigger</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Trigger" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job-Trigger">
+        <span>Job-Trigger</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch;Others:Sapient_only">Job-Trigger</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">System-Administration | SE-Jobs | SE-Jobs | 
+ Job-Trigger</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only"><span style="background: white;">Funktion</span></h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Relations-Tabelle, welche Trigger für einen Job verwendet 
+ werden<span class="TextkörperZchnTextkörperCharCharCharZchnTextkörperCharCharCharCharZchnTextkörperCharCharZchn">. 
+ Um auch komplexe Zeitpläne abzubilden, können jedem Job auch mehrere Trigger 
+ zugeordnet werden (z.B. einen für jeden Werktag und einen anderen fürs 
+ Wochenende).</span></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col width="73"/>
+	<col width="524"/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Symbol</p></td>
+		<td><p class="TabellenInhalt">Eindeutiges Symbol der Beziehung.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Job</p></td>
+		<td><p class="TabellenInhalt">FK - Verweis auf den SE Job, für 
+		 den dieser Trigger verwendet wird.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Trigger-Typ</p></td>
+		<td><p class="TabellenInhalt">FK - Verweis auf einen Trigger-Typ.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Parameter (optional)</p></td>
+		<td><p class="TabellenInhalt">JSON String mit den Parametern des 
+		 Triggers.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Gültig ab (optional)</p></td>
+		<td><p class="TabellenInhalt">Zeitstempel, ab wann dieser Trigger 
+		 gültig ist.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Gültig bis (optional)</p></td>
+		<td><p class="TabellenInhalt">Zeitstempel, bis wann dieser Trigger 
+		 gültig ist.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Inaktiv ab (optional)</p></td>
+		<td><p class="TabellenInhalt">Zeitstempel, ab wann dieser Trigger 
+		 pausieren soll.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Inaktiv bis (optional)</p></td>
+		<td><p class="TabellenInhalt">Zeitstempel, ab wann dieser Trigger 
+		 wieder aktiv werden soll.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Feiertage ausschließen (optional)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = Feiertage werden ausgeschlossen 
+		 (d.h., der Job wird dann nicht getriggert); 0 = Job wird an allen 
+		 Tagen getriggert.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+
+
+</body></html>

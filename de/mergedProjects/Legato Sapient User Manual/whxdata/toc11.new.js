@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Dashboard-Suche","type":"item","tilePath":"","description":"","url":"de/Search.htm#Dashboard-Suche1"},{"name":"Boardlet-Suche","type":"item","tilePath":"","description":"","url":"de/Search.htm#Boardlet-Suche"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

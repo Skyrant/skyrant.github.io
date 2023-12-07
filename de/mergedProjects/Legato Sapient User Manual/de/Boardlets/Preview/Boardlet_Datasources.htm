@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Boardlet Datenquellen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Boardlet Datenquellen">
+        <span>Boardlet Datenquellen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch"><a name="TopicBoardletDatasources" id="TopicBoardletDatasources"></a>Datenquellen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">In der WebApp wird das Datenquellen-Konzept mithilfe 
+ des Boardlets <span class="Bold">Super-Generic-Table</span> umgesetzt. 
+ Für dieses Boardlet steht der zusätzliche Reiter <span class="Bold">Datenquellen</span> 
+ im <a href="../../Edit_Mode/General.htm">Bearbeitungsmodus</a> zur Verfügung.</p>
+<p class="Note" data-condition="Others:Deutsch">INFO: </p>
+<p class="NoteText" data-condition="Others:Deutsch">In diesem Topic sollen alle Features auf dem Reiter 
+ <span class="Bold">Datenquellen</span> beschrieben werden. Nicht alle 
+ Boardlets haben den Reiter <span class="Bold">Datenquellen</span>. Und 
+ für Boardlets mit dem Reiter <span class="Bold">Datenquellen</span> steht 
+ jeweils nur ein Teil der Features zur Verfügung.<br/>
+Mit den nachfolgend beschriebenen Schritten können Sie in der Legato Sapient 
+ WebApp leicht herausfinden, welche Features für ein bestimmtes Boardlet 
+ verfügbar sind. </p>
+<table class="ProcedureTab" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col valign="top"/>
+	<col valign="top"/>
+	</colgroup><tbody><tr>
+		<td colspan="2"><p class="ph-ProcedureHeading">So erhalten Sie 
+		 einen Überblick über die Features auf dem Reiter Datenquellen 
+		 für ein bestimmtes Boardlet:</p></td>
+		
+	</tr>
+	<tr>
+		<td id="StepNumSpacer"><p class="psn-ProcedureStepNum">1</p></td>
+		<td><p class="ps-ProcedureStep">Rufen Sie den Bearbeitungsmodus 
+		 für ein Dashboard auf. [<a href="../../Edit_Mode/EnterEditMode.htm">so 
+		 geht&#39;s</a>]</p></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">2</p></td>
+		<td><p class="ps-ProcedureStep">Klicken Sie auf das gewünschte 
+		 Boardlet.</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Das ausgewählte Boardlet wird durch 
+			 einen <span class="EditModeFrame">blauen Rahmen</span> hervorgehoben.</p></li>
+			<li><p class="ListBulletL1">Wenn für das Boardlet der Reiter 
+			 <span class="Bold">Datenquellen</span> verfügbar ist, dann 
+			 erscheint das folgende Reiter-Symbol in der Seitenleiste rechts: 
+			 <br/>
+			<img src="../../../Bilder/Icons/datasources_icon.png" alt="" style="border: none;" border="0"/></p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p class="psn-ProcedureStepNum">3</p></td>
+		<td><p class="ps-ProcedureStep">Klicken Sie auf den Reiter <span class="Bold">Datenquellen</span>.</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Die Features für das ausgewählte 
+			 Boardlet werden dynamisch aufgelistet.</p></li>
+			<li><p class="ListBulletL1">Die Feature-Beschreibungen finden 
+			 Sie im folgenden Hilfeabschnitt.</p></li>
+		</ul></td>
+	</tr>
+</tbody></table>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><h3><a id="Reiter_Datasources"></a>Reiter Datenquellen</h3>
+		<p class="BodyText">Der Reiter ist in mehrere Abschnitte gegliedert:</p>
+		<h4>Allgemein</h4>
+		<p class="BodyText">Ganz oben kann aus einer Dropdown-Liste das 
+		 Datenquellen-Model selektiert werden, das verwendet werden soll.</p>
+		<p class="GUIControl">Neu laden:</p>
+		<p class="GUIControlDescr">Über den Schieberegler <span class="Bold">Aktualisieren</span> 
+		 kann festgelegt werden, ob das Boardlet in einem regelmäßigen 
+		 Intervall aktualisiert werden soll oder nicht. Dies ist z.B. bei 
+		 anstehenden Meldungen sinnvoll, um immer die aktuellsten Daten 
+		 anzuzeigen.</p>
+		<p class="GUIControl">Sortieren:</p>
+		<p class="GUIControlDescr">Über <span class="Bold">Sortieren</span> 
+		 wird festgelegt, nach welcher Spalte die angezeigten Daten defaultmäßig 
+		 sortiert werden.</p></td>
+		<td><h3> </h3>
+		<p><img src="../../../Bilder/boardlet_datasources_toolbar.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><h3> </h3>
+		<p><img src="../../../Bilder/boardlet_datasources_cropped_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Alarm classes:</p>
+		<p class="GUIControlDescr">Filterdefinition für Meldeklassen. Die 
+		 erste Dropdown-Liste zeigt die Bedingung, die auf die aktuell 
+		 gewählte Filterdefinition in der zweiten Dropdown-Liste angewendet 
+		 wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTablefett"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				 <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. AlarmClasses</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Meldeklassen</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4>  </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_alarm_classes_en.PNG" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Alarm Duration greater:</p>
+		<p class="GUIControlDescr">Filterdefinition für &quot;alarm duration 
+		 greater&quot;. Die erste Dropdown-Liste zeigt die Bedingung, die 
+		 auf die aktuell gewählte Filterdefinition in der zweiten Dropdown-Liste 
+		 angewendet wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				 <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. DurationGrossGreater</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Nur Alarme mit einer Bruttodauer 
+				 von mehr als</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_alarm_duration_greater_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Node:</p>
+		<p class="GUIControlDescr">Filterdefinition für Knoten. Die Dropdown-Liste 
+		 zeigt die aktuell gewählte Definition. </p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTablefett"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				  <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. NodeList</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Selektierte Knoten</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_node_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Time:</p>
+		<p class="GUIControlDescr">Filterdefinition für Zeitstempel. Die 
+		 Dropdown-Liste zeigt die aktuell gewählte Definition. </p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTablefett"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				  <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. TimeFrame</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Zeitbereich</p></td>
+			</tr>
+		</tbody></table>
+		<p class="GUIControl">Explicit: </p>
+		<p class="GUIControlDescr">Legt fest, welche Operatoren in der 
+		 Filterdefinition für Zeitstempel verwendet werden. </p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">an: größer gleich (<span class="BoldRed">&gt;=</span>), 
+			 kleiner gleich (<span class="BoldRed">&lt;=</span>)</p></li>
+			<li><p class="ListBulletL1">aus: größer als (<span class="BoldRed">&gt;</span>), 
+			 kleiner als (<span class="BoldRed">&lt;</span>)</p></li>
+		</ul></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_time_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Alarm text:</p>
+		<p class="GUIControlDescr">Filterdefinition für Meldetexte. Die 
+		 erste Dropdown-Liste zeigt die Bedingung, die auf die aktuell 
+		 gewählte Filterdefinition in der zweiten Dropdown-Liste angewendet 
+		 wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTablefett"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				 <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">(none)</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Meldungstext</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_alarm_text_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Top alarms count:</p>
+		<p class="GUIControlDescr">Filterdefinition für &quot;top alarms 
+		 count&quot;. Die erste Dropdown-Liste zeigt die Bedingung, 
+		 die auf die aktuell gewählte Filterdefinition in der zweiten Dropdown-Liste 
+		 angewendet wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTablefett"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				  <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. Top alarms count</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Top alarms count</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_top_alarms_count_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Alarm types:</p>
+		<p class="GUIControlDescr">Filterdefinition für Meldearten. Die 
+		 erste Dropdown-Liste zeigt die Bedingung, die auf die aktuell 
+		 gewählte Filterdefinition in der zweiten Dropdown-Liste angewendet 
+		 wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTablefett"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				  <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. AlarmTypes</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Meldearten</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_alarm_types_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Alarm Duration less:</p>
+		<p class="GUIControlDescr">Filterdefinition für &quot;alarm duration 
+		 less&quot;. Die erste Dropdown-Liste zeigt die Bedingung, die 
+		 auf die aktuell gewählte Filterdefinition in der zweiten Dropdown-Liste 
+		 angewendet wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				  <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">e.g. DurationGrossLess</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Nur Alarme mit einer Bruttodauer 
+				 von weniger als</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_alarm_duration_less_en.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">Alarm symbol:</p>
+		<p class="GUIControlDescr">Filterdefinition für Meldesymbole. Die 
+		 erste Dropdown-Liste zeigt die Bedingung, die auf die aktuell 
+		 gewählte Filterdefinition in der zweiten Dropdown-Liste angewendet 
+		 wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				 <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">(none)</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Meldesymbolik</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><p class="GUIControl"> </p></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_alarm_symbol_en.png" alt="" style="border: none;" border="0"/></p>
+		</td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab">NodeName:</p>
+		<p class="GUIControlDescr">Filterdefinition für Knotennamen. Die 
+		 erste Dropdown-Liste zeigt die Bedingung, die auf die aktuell 
+		 gewählte Filterdefinition in der zweiten Dropdown-Liste angewendet 
+		 wird.</p>
+		<p class="GUIControlDescr">Die Filterdefinition, die auf dem Reiter 
+		 <span class="Bold">Datenquellen</span> gewählt wurde, bestimmt 
+		 das Verhalten des jeweiligen Boadlet-Filters auf dem Reiter <span class="Bold">Filter</span>.</p>
+		<table class="LightGray" style="margin-left: 0.63cm;" cellspacing="0" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col width="185"/>
+			<col/>
+			<col width="185"/>
+			</colgroup><tbody><tr class="t1Row" style="height: 0px;">
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/datasources_icon_gray.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Datenquellen 
+				 <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Filterdefinition:</p>
+				<p class="TblBodyText">(none)</p></td>
+				<td style="padding: 0px;"><p class="TextkörperTable"><img src="../../../Bilder/Icons/filters_icon.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TextkörperTablefett">Reiter Filter <br/>
+				<img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Boardlet-Filter:</p>
+				<p class="TblBodyText">Knoten</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><h4 class="TblBodyText"> </h4></td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="FirstGUIControlInTab"><img src="../../../Bilder/boardlet_datasources_nodename_en.png" alt="" style="border: none;" border="0"/></p>
+		</td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" style="vertical-align: top;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="30"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><h4>Felder</h4>
+		<p class="BodyText">Hier werden alle Felder angezeigt, die von 
+		 der Datenquelle abgefragt werden können. Die im Code der Datenquelle 
+		 als <span class="Bold">Benötigt</span> festgelegten Einträge sind 
+		 entsprechend markiert. Diese Felder können nicht deaktiviert werden.</p>
+		<p class="BodyText">Für alle anderen Felder kann über den Schieberegler 
+		 rechts festgelegt werden, ob die Daten von der DB abgefragt werden 
+		 sollen oder nicht.</p>
+		<p class="Note">INFO:</p>
+		<p class="NoteText">Dies hat KEINEN Einfluss darauf, ob das Feld 
+		 im Boardlet angezeigt wird. Es geht lediglich darum, ob die Daten 
+		 abgefragt werden.</p>
+		<p class="BodyText">Durch Klick auf das <img src="../../../Bilder/Icons/add_black_gray.png" alt="" style="border: none;" border="0"/> in einer 
+		 Zeile wird der Eintrag aufgeklappt und bietet nun die Möglichkeit, 
+		 dieses Feld mit einem zuvor angelegten Parameter zu verknüpfen. 
+		 </p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Erste Dropdown-Liste: Hier werden 
+			 die möglichen Operatoren angezeigt. Abhängig davon, ob der 
+			 Schieberegler <span class="Bold">Array</span> an oder aus 
+			 ist, unterscheiden sich die Einträge. </p></li>
+		</ul>
+		<p class="ListBulletL1_Contd">An: in, not in.</p>
+		<p class="ListBulletL1_Contd">Aus: greater or equal, less or equal, 
+		 equal, not equal, greater than, less than.</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Zweite Dropdown-Liste: Hier werden 
+			 dann abhängig vom gewählten Operator die zur Verfügung stehenden 
+			 Boardlet-Parameter angezeigt. Zum genauen Vorgehen beim Anlegen 
+			 eines neuen Parameters, siehe bitte <a href="Boardlet_Datasources.htm#Reiter_Filter___Parameter">Reiter 
+			 Filter / Parameter</a>.</p></li>
+		</ul></td>
+		<td><h4>  </h4></td>
+		<td><h4> </h4>
+		<p class="BodyText"><img src="../../../Bilder/boardlet_datasources_fields_collapsed_de.png" alt="" style="border: none;" border="0"/></p>
+		<p class="BodyText"><img src="../../../Bilder/boardlet_datasources_fields_collapsed2_de.png" alt="" style="border: none;" border="0"/></p>
+		<h4 class="TblBodyText"><img src="../../../Bilder/boardlet_datasources_fields_de.png" alt="" style="border: none;" border="0"/></h4>
+		<p class="BodyText">- oder - </p>
+		<p class="BodyText"><img src="../../../Bilder/boardlet_datasources_fields_2_de.PNG" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="30"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><h4>Aktionen</h4>
+		<p class="BodyText">Hier können die im Datenquellen-Model definierte 
+		 Aktionen für den Endanwender an- bzw. abgewählt werden. Nach Doppelklick 
+		 auf einen Tabelleneintrag in einem Meldungs-Boardlet hat der Endanwender 
+		 Zugriff auf diese Aktionen in der Seitenleiste <span class="Bold">Meldungen</span>. 
+		 </p>
+		<p class="BodyText">Im Abschnitt <span class="Bold">Aktionen</span> 
+		 haben Sie die folgenden Konfigurationsmöglichkeiten:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Neusortieren der Felder mit Drag 
+			 und Drop.</p></li>
+			<li><p class="ListBulletL1">Umbenennen von Feldern</p></li>
+			<li><p class="ListBulletL1">Festlegen von Pflichtfeldern und 
+			 optionalen Feldern</p></li>
+			<li><p class="ListBulletL1">Anzeigen von Datenquellenfeldern 
+			 auf der Seitenleiste <span class="Bold">Meldungen</span></p></li>
+		</ul>
+		<p class="BodyText">Die Beschreibungen der Konfigurationsoptionen 
+		 finden Sie unten.</p>
+		<p class="GUIControl"><a name="ToggleNewAlarm" id="ToggleNewAlarm"></a>Neue 
+		 Meldung:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Blendet die Spalten <span class="Bold">Verfügbare 
+			 Felder</span> und <span class="Bold">Ausgewählte Felder</span> 
+			 auf dem Reiter <span class="Bold">Datenquellen</span> ein/aus.</p></li>
+			<li><p class="ListBulletL1">Wenn die Spalten verborgen sind, 
+			 dann ist das <img src="../../../Bilder/Icons/add_black_2_18dp.png" alt="" style="border: none;" border="0"/> 
+			 Symbol auf der Menüleiste eines Meldungs-Boardlets mit Tabelleneinträgen 
+			 ebenfalls verborgen. Somit können Endanwender keine neuen 
+			 Meldungen anlegen.</p></li>
+		</ul>
+		<p class="GUIControlDescr">Nur die Felder in der Spalte <span class="Bold">Ausgewählte 
+		 Felder</span> werden in der Seitenleiste <span class="Bold">Meldungen</span> 
+		 angezeigt, wenn Endanwender eine neue Meldung anlegen.<br/>
+		Siehe beliebiges Meldungs-Boardlet mit Tabelleneinträgen <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> <img src="../../../Bilder/Icons/add_black_2_18dp.png" alt="" style="border: none;" border="0"/> 
+		 Symbol <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Seitenleiste 
+		 <span class="Bold">Meldungen.</span> </p>
+		<p class="GUIControl"><a name="AvailableFields" id="AvailableFields"></a>Verfügbare 
+		 Felder:</p>
+		<p class="GUIControlDescr">Listet die Felder auf, die auf der Seitenleiste 
+		 <span class="Bold">Meldungen</span> für ein Meldungs-Boardlet 
+		 mit Tabelleneinträgen bereitgestellt werden können. </p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Um ein Feld zur Seitenleiste <span class="Bold">Meldungen</span> <span style="text-decoration: underline; ">hinzuzufügen</span>, 
+			 ziehen Sie es von der Spalte <span class="Bold">Verfügbare 
+			 Felder</span> in die Spalte <span class="Bold">Ausgewähle 
+			 Felder</span>.</p></li>
+			<li><p class="ListBulletL1">Um ein Felder von der Seitenleiste 
+			 <span class="Bold">Meldungen</span> zu <span style="text-decoration: underline; ">entfernen</span>, 
+			 ziehen Sie es von der Spalte <span class="Bold">Ausgewähle 
+			 Felder</span> in die Spalte <span class="Bold">Verfügbare 
+			 Felder</span>. </p></li>
+		</ul>
+		<p class="GUIControl"><a name="SelectedFields" id="SelectedFields"></a>Ausgewählte 
+		 Felder:</p>
+		<p class="GUIControlDescr">Nur die Felder in dieser Spalte werden 
+		 in der Seitenleiste <span class="Bold">Meldungen</span> eines 
+		 Meldungs-Boardlets mit Tabelleneinträgen dargestellt. Sie können 
+		 die Sortierreihenfolge der Felder mit Drag-und-Drop ändern. Mit 
+		 dem Stift-Symbol <img src="../../../Bilder/pen_icon.png" alt="" style="border: none;" border="0"/> können 
+		 Sie ein Feld umbenennen. Außerdem gibt es zwei Arten von Checkboxen 
+		 in der Spalte <span class="Bold">Ausgewählte Felder</span>:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Schreibgeschützte Checkboxen für 
+			 Felder, die im Code der Datenquelle als <span class="Bold">Benötigt</span> 
+			 definiert wurden, z.B. das Feld <span class="Bold">Meldeklasse</span>.</p></li>
+			<li><p class="ListBulletL1">Checkboxen, die Sie aktivieren 
+			 oder deaktivieren können, z.B. das Feld <span class="Bold">Begründung/Ursache</span>.</p></li>
+		</ul>
+		<p class="GUIControlDescr">Durch das Aktivieren der Checkbox rechts 
+		 wird ein Feld zum Pflichtfeld. Pflichtfelder werden mit einem 
+		 Ausrufezeichen gekennzeichnet, das bei Meldungs-Boardlets mit 
+		 Tabelleneinträgen auf der Seitenleiste <span class="Bold">Meldungen</span> 
+		 erscheint.</p>
+		<p class="GUIControlDescr"><span class="Bold">Beispiel</span>: 
+		 Boardlet <span class="Bold">Aktuelle Meldungen</span> <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Eintrag doppelklicken 
+		 <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> die Seitenleiste 
+		 <span class="Bold">Meldungen </span>öffnet sich.<br/>
+		<img src="../../../Bilder/pending_alarms_sidebar_reason_mandatory_de.PNG" alt="" style="border: none;" border="0"/></p>
+		<p class="GUIControlDescr"> </p>
+		<p class="GUIControlDescr" style="text-decoration: none; ">Felder 
+		 haben keine Checkboxen, wenn:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Das Feld als Schieberegler implementiert 
+			 ist (an/aus).</p></li>
+			<li><p class="ListBulletL1">Das Feld als Dropdown-Liste implementiert 
+			 ist, über die je nach Auswahl des Endanwender Pflichtfelder 
+			 auf der Seitenleiste <span class="Bold">Meldungen</span> vorausgefüllt 
+			 werden.</p></li>
+		</ul>
+		<p class="GUIControlDescr">In diesen Fällen ist eine Checkbox für 
+		 die Kennzeichnung als Pflichtfeld nicht sinnvoll und wurde daher 
+		 weggelassen. </p></td>
+		<td><h4>  </h4></td>
+		<td><h4> </h4>
+		<p class="BodyText"><img src="../../../Bilder/boardlet_datasources_actions_new_alarm_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="30"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="FirstGUIControlInTab"><a name="ToggleEditAlarm" id="ToggleEditAlarm"></a>Meldung 
+		 bearbeiten: </p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">Blendet die Spalten <span class="Bold">Verfügbare 
+			 Felder</span> und <span class="Bold">Ausgewählte Felder</span> 
+			 auf dem Reiter <span class="Bold">Datenquellen</span> ein/aus.</p></li>
+			<li><p class="ListBulletL1">Wenn die Spalten verborgen sind, 
+			 dann ist das <img src="../../../Bilder/Icons/edit_black_2_18dp.png" alt="" style="border: none;" border="0"/> 
+			 Symbol auf der Menüleiste eines Meldungs-Boardlets mit Tabelleneinträgen 
+			 ebenfalls verborgen. Somit können die Endanwender keine bestehenden 
+			 Meldungen bearbeiten.</p></li>
+		</ul>
+		<p class="GUIControlDescr">Nur die Felder in der Spalte <span class="Bold">Ausgewählte 
+		 Felder</span> werden in der Seitenleiste <span class="Bold">Meldungen</span> 
+		 angezeigt, wenn Endanwender eine bestehende Meldung bearbeiten.<br/>
+		Siehe beliebiges Meldungs-Boardlet mit Tabelleneinträgen <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Eintrag wählen <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> <img src="../../../Bilder/Icons/edit_black_2_18dp.png" alt="" style="border: none;" border="0"/> 
+		 Symbol <img src="../../../Bilder/Icons/clickstream_ls_arrow.png" alt="" style="border: none;" border="0"/> Seitenleiste 
+		 <span class="Bold">Meldungen.</span> </p>
+		<p class="GUIControl">Verfügbare Felder:</p>
+		<p class="GUIControlDescr">Siehe <a href="#AvailableFields">oben</a>.</p>
+		<p class="GUIControl">Ausgewählte Felder:</p>
+		<p class="GUIControlDescr">Siehe <a href="#SelectedFields">oben</a>.</p></td>
+		<td>  </td>
+		<td><p class="FirstGUIControlInTab"> </p>
+		<p class="GUIControl"><img src="../../../Bilder/boardlet_datasources_actions_edit_alarm_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="30"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="GUIControl">Neue aktuelle Meldung: </p>
+		<p class="GUIControlDescr"><span>See <a href="#ToggleNewAlarm">Neue 
+		 Meldung</a>.</span></p>
+		<p class="GUIControl">Aktuelle Meldung bearbeiten: </p>
+		<p class="GUIControlDescr"><span>See <a href="#ToggleEditAlarm">Meldung 
+		 bearbeiten</a>.</span></p></td>
+		<td>  </td>
+		<td><h4><span><img src="../../../Bilder/boardlet_datasources_actions_new_pending_alarm_de.png" alt="" style="border: none;" border="0"/></span></h4></td>
+	</tr>
+</tbody></table>
+<hr align="center" data-condition="Others:Deutsch"/>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="30"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="GUIControl">Meldung aufteilen</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">an: Aktiviert die Funktion <span class="Bold">Meldung aufteilen</span>. Dieses Symbol <img src="../../../Bilder/Icons/split_black_18dp.png" alt="" style="border: none;" border="0"/> ist dann auf der Menüleiste des Boardlets sichtbar. 
+			 </p></li>
+			<li><p class="ListBulletL1">aus: Deaktiviert die Funktion.</p></li>
+		</ul>
+		<p class="GUIControlDescr">Zu Informationen über die Funktion siehe 
+		 <a href="../06_Alarms/Archived_Alarms.htm#Meldung_aufteilen">Meldung 
+		 aufteilen</a>.</p>
+		<p class="GUIControl">Meldung zusammenführen</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">an: Aktiviert die F&#39;unktion <span class="Bold">Meldungen zusammenführen</span>. Dieses Symbol 
+			 <img src="../../../Bilder/Icons/merge_black_18dp.png" alt="" style="border: none;" border="0"/> ist dann auf der 
+			 Menüleiste des Boardlets sichtbar.</p></li>
+			<li><p class="ListBulletL1">aus: Deaktiviert die Funktion.</p></li>
+		</ul>
+		<p class="GUIControlDescr">Zu Informationen über die Funktion siehe 
+		 Meldungen 
+		 zusammenführen.</p>
+		<p class="GUIControl">Meldung löschen</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">an: Aktiviert die Funktion <span class="Bold">Meldung löschen</span>. Dieses Symbol <img src="../../../Bilder/Icons/trash_black_18dp.png" alt="" style="border: none;" border="0"/> ist dann auf der 
+			 Menüleiste des Boardlets sichtbar. Somit können Endanwender 
+			 Meldungen löschen, die manuell erstellt wurden. </p></li>
+			<li><p class="ListBulletL1">aus: Deaktiviert die Funktion.</p></li>
+		</ul>
+		<p class="GUIControl">Meldung Funkruf-Ablauf</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1">an: Aktiviert die Funktion <span class="Bold">Funkruf-Ablauf</span>. Dieses Symbol <img src="../../../Bilder/Icons/paging_history.png" alt="" style="border: none;" border="0"/> ist dann auf der 
+			 Menüleiste des Boardlets sichtbar.</p></li>
+			<li><p class="ListBulletL1">aus: Deaktiviert die Funktion.</p></li>
+		</ul>
+		<p class="GUIControl">Ausgabe, Feld, Parameter</p>
+		<p class="GUIControlDescr">Über die Aktion <span class="Bold">Ausgabe</span> 
+		 können Detail-Ansichten definiert werden, die per Klick dann den 
+		 Wert als Parameter erhalten. Hier stehen alle Felder zur Verfügung, 
+		 die von der DB geholt werden. Hierzu muss im Reiter Filter / Parameter 
+		 der entsprechende Eintrag beim Startboardlet auf &quot;out&quot; 
+		 und beim Zielboardlet auf &quot;in&quot; gesetzt werden.</p>
+		<p class="GUIControlDescr"><span class="Bold">Anwendungsbeispiel</span><span>: 
+		 Master – Detail Dashboard: Selektion einer Zeile in der Master-Tabelle 
+		 setzt automatisch einen Filter in einer Detailtabelle, um zugehörige 
+		 Datensätze anzuzeigen.</span></p></td>
+		<td><h4> </h4></td>
+		<td><h4><span><img src="../../../Bilder/boardlet_datasources_actions_rest_de.png" alt="" style="border: none;" border="0"/></span></h4></td>
+	</tr>
+</tbody></table>
+
+
+
+
+
+
+<h3 data-condition="Others:Deutsch"><a id="Reiter_Filter___Parameter"></a>Reiter Filter / Parameter</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Hier werden zum einen die im Datasource-Model definierten 
+ Filter angezeigt (üblicherweise mindestens Knoten und Zeit).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf &quot;Parameter hinzufügen&quot; können 
+ weitere Parameter oder Filter für dieses Boardlet festgelegt werden. Über 
+ den Reiter Datasources – Fields kann der neue Parameter dann mit einem 
+ bestimmten Datenbankfeld verknüpft werden. Alternativ ist es natürlich 
+ auch möglich, einfach einen bestimmten Wert an ein anderes Boardlet im 
+ Dashboard zu übergeben, das einen Parameter mit dem gleichen Namen enthält, 
+ ohne eine Referenz auf die Datenbank.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/AddParam.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier kann ein frei wählbarer Name für den Parameter 
+ vergeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aus der Dropdown-Liste muss nun die Art des Parameters 
+ gewählt werden. Zur Verfügung stehen alle im Datasource-Model definierten 
+ Filter sowie: </p>
+<table class="SimpleGridBlack" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 15.253%;"/>
+	<col style="width: 84.747%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyText">NumberArray</p></td>
+		<td><p class="TblBodyText">Ermöglicht die Eingabe mehrerer Zahlen 
+		 kommagetrennt als Array. Kann z.B. mit der ID-Spalte einer Tabelle 
+		 verknüpft werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText">StringArray</p></td>
+		<td><p class="TblBodyText">Ermöglicht die Eingabe mehrerer Strings 
+		 kommagetrennt als Array. Kann z.B. mit einer Text-Spalte einer 
+		 Tabelle verknüpft werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText">LookupTable</p></td>
+		<td><p class="TblBodyText">Ermöglicht eine Mehrfachauswahl aus 
+		 einer Tabelle. Dazu muss in einem dritten Feld der Name der Tabelle 
+		 und die zu holenden Spaltennamen angegeben werden, z.B. al_classes, 
+		 id, name.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText">Number</p></td>
+		<td><p class="TblBodyText">Ermöglicht die Eingabe einer Zahl. Kann 
+		 z.B. mit der ID-Spalte einer Tabelle verknüpft werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText">String</p></td>
+		<td><p class="TblBodyText">Ermöglicht die Eingabe eines Strings. 
+		 Kann z.B. mit einer Text-Spalte einer Tabelle verknüpft werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText">Boolean</p></td>
+		<td><p class="TblBodyText">Ermöglicht das Umschalten eines Schiebereglers 
+		 zwischen true und false.</p>
+		<p class="Note">INFO:</p>
+		<p class="NoteText">Für Datenbank-Einträge wird Boolean aktuell 
+		 nicht unterstützt. Hier muss immer Number verwendet werden (für 
+		 1 oder 0).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die neuen Parameter können auf den gewünschten Parametertyp 
+ (local, in, out, in/out) gesetzt oder gelöscht werden.</p>
+<p class="Note" data-condition="Others:Deutsch">INFO:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Vergessen Sie nicht, den neuen Parameter mit einem 
+ Feld zu verknüpfen!</p>
+<h3 data-condition="Others:Deutsch"><a id="Reiter_Tabelleneinstellungen"></a>Reiter Tabelleneinstellungen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Reiter können für alle Spalten, die von der 
+ Datenbank geholt werden, Einstellungen hinsichtlich ihres Verhaltens getroffen 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/Columns2.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Zunächst wird die entsprechende Spalte selektiert. 
+ Darunter kann ein individueller Name eingegeben werden, der als Spaltenüberschrift 
+ verwendet werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Schieberegler bestimmen das Verhalten 
+ der Spalte in der Tabelle. Sie kann sortierbar, größenveränderbar, verschiebbar 
+ und sichtbar sein. Außerdem kann eine bestimmte Breite der Spalte festgelegt 
+ werden. Ist der Schieberegler Komponente aktiv, kann die Art der Spalte 
+ selektiert werden, z.B. Zeitangabe. Darunter kann die gewünschte Formatierung 
+ als JSON-String eingegeben werden. Grüne Häkchen am Ende der Zeilen zeigen 
+ an, ob der Inhalt sinnvoll ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für weitere Details, siehe bitte <a href="..\..\Settings\Table_Settings.htm">Tabelleneinstellungen 
+ für Boardlets</a>.</p>
+
+
+</body></html>

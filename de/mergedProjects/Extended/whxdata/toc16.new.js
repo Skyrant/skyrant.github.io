@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Berechnungen","type":"item","tilePath":"","description":"","url":"de/LGD/Berechnungen.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

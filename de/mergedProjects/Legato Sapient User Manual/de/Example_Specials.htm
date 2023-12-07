@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Beispiel Generische Tabelle mit Filter</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="$detailinfo$" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Beispiel Generische Tabelle mit Filter">
+        <span>Beispiel Generische Tabelle mit Filter</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Beispiel: Generische Tabelle mit Filter auf $detailinfo$</h2>
+<h3 data-condition="Others:Deutsch"><a id="Ziel"></a>Ziel</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Es sollen alle Variablen mit einer bestimmen Einheit 
+ angezeigt werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Vorgehen"></a>Vorgehen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zwei Generische Tabellen (Modell) in ein Dashboard 
+ ziehen.</p>
+<h4 data-condition="Others:Deutsch">Tabelle 1 - Sender</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Als sendende Tabelle wird SYS_UNITS benötigt, da die 
+ Variablen ja nach der Einheit gefiltert werden sollen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es werden also folgende Einstellungen bei der ersten 
+ Generischen Tabelle (Modell) vorgenommen:</p>
+<h5 data-condition="Others:Deutsch">Reiter Settings </h5>
+<p class="GUIControl" data-condition="Others:Deutsch">Verbindung: </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">legato</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Datenquelle: </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">sys-unit</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Spaltendefinitionen: </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">[{&quot;label&quot;: &quot;ID&quot;, &quot;valuePath&quot;: 
+ &quot;id&quot;,  &quot;width&quot;: &quot;100px&quot;,  &quot;sortable&quot;: 
+ &quot;true&quot;, &quot;component&quot;: &quot;sortable-table-header-component&quot;},{ 
+ &quot;label&quot;: &quot;Name&quot;, &quot;valuePath&quot;: &quot;name&quot;,  &quot;width&quot;: 
+ &quot;100px&quot;,  &quot;sortable&quot;: &quot;true&quot;, 
+ &quot;component&quot;: &quot;sortable-table-header-component&quot;}] </p>
+<h5 data-condition="Others:Deutsch">Reiter Filter</h5>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">keine Angaben; die Parametertypen sind folgendermaßen 
+ eingestellt:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Selektierte Knoten: in/out</p></li>
+	<li><p class="ListBulletL1">Detailinformationen: out</p></li>
+	<li><p class="ListBulletL1">Startdatum: out</p></li>
+	<li><p class="ListBulletL1">Enddatum: out</p></li>
+</ul>
+<h4 data-condition="Others:Deutsch">Tabelle 2 - Empfänger</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Als empfangende Tabelle wird P_VALUES_CONFIG benötigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es werden folgende Einstellungen bei der zweiten Generischen 
+ Tabelle (Modell) vorgenommen:</p>
+<h5 data-condition="Others:Deutsch">Reiter Settings </h5>
+<p class="GUIControl" data-condition="Others:Deutsch">Verbindung: </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">legato</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Datenquelle: </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">p-values-config</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Spaltendefinitionen: </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">[{&quot;label&quot;: 
+ &quot;ID&quot;, &quot;valuePath&quot;: &quot;id&quot;,</span><span style="mso-spacerun: yes;"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;width&quot;: 
+ &quot;100px&quot;,</span><span style="mso-spacerun: yes;"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;sortable&quot;: 
+ &quot;true&quot;, &quot;component&quot;: &quot;sortable-table-header-component&quot;},{ 
+ &quot;label&quot;: &quot;Name&quot;, &quot;valuePath&quot;: &quot;name&quot;,</span><span style="mso-spacerun: yes;"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;width&quot;: 
+ &quot;100px&quot;,</span><span style="mso-spacerun: yes;"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;sortable&quot;: 
+ &quot;true&quot;, &quot;component&quot;: &quot;sortable-table-header-component&quot;},{ 
+ &quot;label&quot;: &quot;Unit&quot;, &quot;valuePath&quot;: &quot;unit&quot;,</span><span style="mso-spacerun: yes;"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;width&quot;: 
+ &quot;100px&quot;,</span><span style="mso-spacerun: yes;"> </span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;"> &quot;sortable&quot;: 
+ &quot;true&quot;, &quot;component&quot;: &quot;sortable-table-header-component&quot;}]</span> 
+ </p>
+<h5 data-condition="Others:Deutsch">Reiter Filter</h5>
+<p class="GUIControl" data-condition="Others:Deutsch">Selektierte Knoten: in/out</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">keine Angabe</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Filtern nach ...</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">{&quot;field&quot;:&quot;unit&quot;,&quot;op&quot;:&quot;eq&quot;,&quot;val&quot;:&quot;$detailInfo$&quot;}</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Das Feld &quot;Einheit&quot; mit Operand &quot;Equal&quot; 
+ soll dem Wert des Parameters &quot;Detailinfo&quot; entsprechen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Detailinformation:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Wird automatisch mit den Werten aus SYS_UNITS 
+ befüllt</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Feld der Detailinformation: local</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">id</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Das heißt, der Platzhalter &quot;$detailinfo$&quot; 
+ im Filterstring soll durch den Wert der Spalte ID der Sender-Tabelle SYS_UNITS 
+ ersetzt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Startdatum: out</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">keine Angabe</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Enddatum: out</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">keine Angabe </p>
+<h3 data-condition="Others:Deutsch"><a id="Ergebnis"></a>Ergebnis</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zunächst wird die Empfänger-Tabelle P_VALUES_CONFIG 
+ leer angezeigt, weil der Filterstring noch nicht durch eine Auswahl in 
+ der Sender-Tabelle befüllt wurde. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/Gen_Table1.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach Klick auf die Zeile -14 Minuten in der Sender-Tabelle 
+ SYS_UNITS werden alle Variablen mit der Einheit &quot;Minuten&quot; in 
+ der Empfänger-Tabelle geladen: </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/Gen_Table2.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Über die eingeblendete Spalte &quot;Unit&quot; lässt 
+ sich das Ergebnis auch verifizieren.</p>
+
+
+</body></html>

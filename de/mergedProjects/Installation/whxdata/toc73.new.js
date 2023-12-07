@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Kommandozeile","type":"item","tilePath":"","description":"","url":"de/MediaServer/Overview.htm#Kommandozeile"},{"name":"Logklassen","type":"item","tilePath":"","description":"","url":"de/MediaServer/Overview.htm#Logklassen"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

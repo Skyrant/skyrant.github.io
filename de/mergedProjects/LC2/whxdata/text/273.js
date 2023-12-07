@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Überblick"]],"1":[["Systeminfo"]],"2":[["\n"],["\n","Die Tabellen unter Systeminfo dienen rein der Information. \n Sie sind schreibgeschützt und können nicht geändert werden.","\n\n\n"]],"3":[["Überblick"]],"id":"273"})

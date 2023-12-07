@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.4.3.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Installation mit dem grafischen Installer</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Installation mit dem grafischen Installer">
+        <span>Installation mit dem grafischen Installer</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Installation mit dem grafischen Installer</h2>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Dann wird (vorübergehend) 
+ der X Window-Zugang für alle Hosts geöffnet:</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"># xhost +</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="background: white;">Für die eigentliche 
+ Installation wird zum User oracle gewechselt. Dieser wurde durch das Pre-Install 
+ Script angelegt. Der User oracle setzt die Variable DISPLAY und startet 
+ runInstaller:</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"># su oracle</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ export DISPLAY=:0.0</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ cd /tmp/OracleInstaller/database/</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ ./runInstaller</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Installation startet mit der Anzeige des Oracle-Installer-Startdialogs 
+ und dort mit der Nachfrage nach der Installation von Sicherheitsupdates:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image012.png" alt="" width="700" height="524" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Checkbox vor &quot;Ich möchte Sicherheitsupdates über 
+ My Oracle Support erhalten&quot; wird weggeklickt und auch die Nachfrage mit 
+ &quot;Ja&quot; bestätigt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image014.png" alt="" width="514" height="188" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Als Installationsoption wird &quot;Nur Datenbanksoftware 
+ installieren&quot; ausgewählt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image015.png" alt="" width="700" height="524" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei den &quot;Grid-Installationsoptionen&quot; wird der Unterpunkt 
+ &quot;Datenbankinstallation mit nur einer Instanz&quot; gewählt:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Die Installation von Legato auf Oracle Real 
+ Application Clusters (RAC) wird nicht unterstützt!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image017.png" alt="" width="700" height="527" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die &quot;Produktsprachen&quot; Deutsch und Englisch werden ausgewählt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image019.png" alt="" width="700" height="523" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Auf der nächsten Maske wird als Datenbank-Edition die 
+ &quot;Enterprise Edition&quot; eingestellt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image021.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Als Oracle Base- und Oracle Home-Verzeichnisse werden 
+ die wie oben beschriebenen, gemäß OFA erstellten Verzeichnisse ausgewählt. 
+ Das Softwareverzeichnis muss /dbhome_1 sein:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image023.png" alt="" width="700" height="525" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Das so genannte Bestandsverzeichnis (oraInventory) 
+ wird direkt unterhalb der Oracle Base eingerichtet:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image025.png" alt="" width="700" height="523" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Als &quot;Berechtigte Betriebssystemgruppe&quot; wird auf der 
+ nächsten Maske in fast allen Zeilen &quot;dba&quot; als Datenbankadministrator-Gruppe 
+ eingetragen (vorausgewählt). Nur in der Zeile darunter (Datenbankoperator-Gruppe, 
+ optional) bleibt das Feld leer.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image027.png" alt="" width="700" height="525" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach dem Drücken von &quot;Next&quot; werden auf der 
+ nächsten Maske (&quot;Prerequisite Checks&quot;) die Installationsvoraussetzungen 
+ überprüft. Hier ist alles in Ordnung:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es folgt der &quot;Überblick&quot; über die auszuführenden Aktionen:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image029.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Klick auf &quot;Installieren&quot; startet die 
+ Installation.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image031.png" alt="" width="700" height="524" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Kurz vor dem Abschluss der Installation erscheint ein 
+ Pop-up Dialog mit der Aufforderung, zwei Skripte (in der angegebenen Reihenfolge) 
+ mit root-Rechten auszuführen:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image033.png" alt="" width="550" height="389" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Folgen Sie dazu der Anleitung im Dialog.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim zweiten Skript wird ein Pfad abgefragt; überprüfen 
+ Sie diesen und bestätigen oder ändern Sie die Vorauswahl.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image034.png" alt="" width="700" height="345" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Sobald die Skripte durchgelaufen sind, klickt man auf 
+ &quot;OK&quot;, und das Ende der Installation wird angezeigt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image036.png" alt="" width="700" height="525" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Klick auf &quot;Schließen&quot; beendet den Installations-Dialog.</p>
+
+
+</body></html>

@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.7.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Language" content="de-DE"/>
+  <meta name="topic-status" content="In Bearbeitung"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Event Bindings</title>
+  <link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Event Bindings">
+        <span>Event Bindings</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Event Bindings</h1>
+  <h2>Events</h2>
+  <h3><a id="onClick"></a>onClick</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn ein Element angeklickt wird.</p>
+  <h3><a id="onMouseDown"></a>onMouseDown</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn die Maustaste auf einem Element gedrückt wird.</p>
+  <h3><a id="onMouseUp"></a>onMouseUp</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn die Maus auf einem Element losgelassen wird.</p>
+  <h3><a id="onMouseEnter"></a>onMouseEnter</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn der Mauscursor in die Grenzen eines Elements hineinbewegt wird.</p>
+  <h3><a id="onMouseLeave"></a>onMouseLeave</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn der Mauscursor aus den Grenzen eines Elements hinausbewegt wird.</p>
+  <h3><a id="onLoad"></a>onLoad</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn ein Dokument geladen wird. Dieses Event kann nur im Binding-Ausdruck eines Dokuments verwendet werden.</p>
+  <h3><a id="onUnload"></a>onUnload</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn ein Dokument geschlossen wird. Dieses Event kann nur im Binding-Ausdruck eines Dokuments verwendet werden.</p>
+  <h3><a id="onChange"></a>onChange</h3>
+  <p class="MsoBodyText">Wird ausgeführt, wenn sich ein Wert ändert.</p>
+  <p class="MsoBodyText">Beispiel:</p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;lv1&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;localvar&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;test&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        },</p>
+  <p class="TextCode" style="color: #008000;">        &quot;lvtrigger&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;localvar&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;trigger&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    },</p>
+  <p class="TextCode" style="color: #008000;">    &quot;events&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;onChange&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">            {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;trigger&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;ref&quot;: &quot;lvtrigger&quot;</p>
+  <p class="TextCode" style="color: #008000;">                    }</p>
+  <p class="TextCode" style="color: #008000;">                },</p>
+  <p class="TextCode" style="color: #008000;">                &quot;actions&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">                    {</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;action&quot;: &quot;incrementValue&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                            &quot;target&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                                    &quot;ref&quot;: &quot;lv1&quot;</p>
+  <p class="TextCode" style="color: #008000;">                                }</p>
+  <p class="TextCode" style="color: #008000;">                            }</p>
+  <p class="TextCode" style="color: #008000;">                        }</p>
+  <p class="TextCode" style="color: #008000;">                    }</p>
+  <p class="TextCode" style="color: #008000;">                ]</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        ]</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText">Angenommen, dass der Trigger, der umgeschaltet wird, ein boolischer Wert ist, wird er als Trigger für die onChange Funktion verwendet – das bedeutet, dass das Event ausgeführt wird, wann immer sich eine Variable ändert. Eine andere Variable (test) wird als Aktion inkrementiert.</p>
+  <p class="MsoBodyText">Wie für alle Aktionen kann eine Liste von Aktionen festgelegt werden. Jede Aktion kann eine optionale, aktivierte Eigenschaft haben.</p>
+  <p class="MsoBodyText">In vielen Fällen sollten einige Aktionen für einen Wertewechsel nur unter bestimmten Konditionen ausgeführt werden. Um das oben gezeigte Beispiel so zu ändern, dass nur die Aktion ausgeführt wird, wenn der Trigger-Wert auf wahr gesetzt ist, ist die einfachste Lösung, ausschließlich die Aktion zu aktivieren, wenn der Trigger gesetzt ist:</p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;lv1&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;localvar&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;test&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        },</p>
+  <p class="TextCode" style="color: #008000;">        &quot;lvtrigger&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;localvar&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;trigger&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    },</p>
+  <p class="TextCode" style="color: #008000;">    &quot;events&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;onChange&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">            {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;trigger&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;ref&quot;: &quot;lvtrigger&quot;</p>
+  <p class="TextCode" style="color: #008000;">                    }</p>
+  <p class="TextCode" style="color: #008000;">                },</p>
+  <p class="TextCode" style="color: #008000;">                &quot;actions&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">                    {</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;action&quot;: &quot;incrementValue&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                            &quot;target&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                                    &quot;ref&quot;: &quot;lv1&quot;</p>
+  <p class="TextCode" style="color: #008000;">                                }</p>
+  <p class="TextCode" style="color: #008000;">                            }</p>
+  <p class="TextCode" style="color: #008000;">                        },</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;enabled&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                            &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                                &quot;ref&quot;: &quot;lvtrigger&quot;</p>
+  <p class="TextCode" style="color: #008000;">                            }</p>
+  <p class="TextCode" style="color: #008000;">                        }</p>
+  <p class="TextCode" style="color: #008000;">                    }</p>
+  <p class="TextCode" style="color: #008000;">                ]</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        ]</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText"> </p>
+  <p class="MsoBodyText"><img alt="" border="0" src="../../assets/images/02_Hinweis_de.jpg" style="border: none;"/></p>
+  <p class="TextkörperHinweis">Anstatt direkt eine Variable für die aktivierte Eigenschaft zu verwenden, kann jedes andere Datenobjekt oder -ergebnis einer Berechnung oder Formel verwendet werden.</p>
+  <p class="MsoBodyText"> </p>
+  <h2>Aktionen</h2>
+  <h3><a id="Navigation"></a>Navigation</h3>
+  <h4><a id="loadSubView"></a>loadSubView</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">Ermöglicht den Wechsel zu einer anderen Zeichnung.</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;loadSubView&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;fileName&quot;: &quot;hmi/ws0/drawing2.xml&quot;</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <h4><a id="loadHomeView"></a>loadHomeView</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">N</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">ach dem Wechsel zu einer anderen Zeichnung kann diese Aktion verwendet werden, um wieder zur ursprünglich geladenen Zeichnung zu wechseln.</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="color: #008000;">&quot;action&quot;: &quot;loadHomeView&quot;</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <h4><a id="prevView__nextView"></a>prevView, nextView</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Die Zeichnungen, die nacheinander mit der loadSubView-Aktion aufgerufen werden, werden in einer Liste gespeichert. Die prevView-Aktion kann die zuvor angezeigte Zeichnung laden, nextView geht wieder vorwärts in der Liste.</span></p>
+  <p class="TextCode" style="color: #008000;"><span style="mso-ansi-language: EN-US; 
+													 mso-fareast-language: DE;">in der Liste weiter.</span>{</p>
+  <p class="TextCode" style="color: #008000;">&quot;action&quot;: &quot;prevView&quot;</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE; 
+	 color: #008000;"> </p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></p>
+  <p class="TextCode" style="color: #008000;">&quot;action&quot;: &quot;nextView&quot;</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <h4><a id="changeDashboard"></a>changeDashboard</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Wird meist für Zeichnungen verwendet, die in einem Dashboard der Standard-Sapient-App verwendet werden, um ein anderes Dashboard zu laden. Die Dashboard-ID wird verwendet, um das Dashboard zu identifizieren. Optional<br/>
+    kann ein bestimmtes Dashboard-Profil geladen werden. Beide Identifier können einfach aus der URL der Sapient-App kopiert werden, wenn das gewünschte Dashboard und Profil geöffnet wird:</p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US"><img alt="" border="0" src="../../Bilder/change_dashboard_binding.png" style="border: none;"/></span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;changeDashboard&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;dashboardId&quot;: &quot;6d50e746-552f-416c-ab79-de43350f86f3&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;profileId&quot;: &quot;753f0d6d-6e0c-442c-95a3-b3b7fcfea243&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;dashboardParameters&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;node&quot;: 90,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;nodeList&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">                90</p>
+  <p class="TextCode" style="color: #008000;">            ],</p>
+  <p class="TextCode" style="color: #008000;">            &quot;RECIPE_ID&quot;: 80</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <h4><a id="openDashboardInNewTab"></a>openDashboardInNewTab</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">Ö</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">ffnet die Sapient-Anwendung in einem separaten Browserfenster und lädt das angegebene Dashboard und optional das Profil.</span></p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;openDashboardInNewTab&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;dashboardId&quot;: &quot;6d50e746-552f-416c-ab79-de43350f86f3&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;profileId&quot;: &quot;753f0d6d-6e0c-442c-95a3-b3b7fcfea243&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;parameters&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;node&quot;: 90,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;nodeList&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">                90</p>
+  <p class="TextCode" style="color: #008000;">            ],</p>
+  <p class="TextCode" style="color: #008000;">            &quot;RECIPE_ID&quot;: 80</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code"> </p>
+  <h4><a id="openDrawingInWorkarea"></a>openDrawingInWorkarea</h4>
+  <p class="Code"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+						 mso-fareast-language: DE;" xml:lang="EN-US">I</span>m Grunde ähnlich wie loadSubView, öffnet die Zeichnung aber immer im Hauptbereich einer HMI-Anwendung, unabhängig davon, wo sie aufgerufen wird. Ein typischer Anwendungsfall <span lang="EN-US" style="mso-ansi-language: EN-US; 
+						 mso-fareast-language: DE;" xml:lang="EN-US">für diese Aktion ist das Hinzufügen von Verknüpfungen zu wichtigen Ansichten in der Fußzeile.</span></p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;events&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;onClick&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">            {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;action&quot;: &quot;openDrawingInWorkarea&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;fileName&quot;: &quot;hmi/ws0/detail/drawing2.xml&quot;</p>
+  <p class="TextCode" style="color: #008000;">                }</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        ]</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code"> </p>
+  <h4><a id="openLinkInWorkarea"></a>openLinkInWorkarea</h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">E</span><span style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: DE;">rmöglicht das Öffnen einer externen Website oder eines Dokuments im Hauptbereich der HMI-Anwendung. Über den optionalen Parameter newTab wird der Link in einem neuen Browser-Tab geöffnet. </span></p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;openlinkinworkarea&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;url&quot;: &quot;http://www.gefasoft.de&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;newTab&quot;: true</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <h3><a id="Values"></a>Values</h3>
+  <h4><a id="setValue"></a>setValue</h4>
+  <p class="Code" style="mso-ansi-language: EN-US;"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+														 mso-fareast-language: DE;" xml:lang="EN-US">D</span><span style="mso-ansi-language: EN-US;">ient zum Setzen eines Variablenwertes (Legato-Variable, Session- oder lokale Variable). Wenn ein Wert direkt für die Aktion definiert ist, wird der Wert direkt gesetzt, andernfalls wird der Benutzer aufgefordert, einen Wert über die Seitenleiste einzugeben.</span></p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;someVar&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;var&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;sym&quot;: &quot;examples.str1&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    },</p>
+  <p class="TextCode" style="color: #008000;">    &quot;events&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;onClick&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">            {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;action&quot;: &quot;setValue&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;target&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                            &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;">                        }</p>
+  <p class="TextCode" style="color: #008000;">                    },</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;value&quot;: &quot;HELLO!!!&quot;</p>
+  <p class="TextCode" style="color: #008000;">                }</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        ]</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code"> </p>
+  <p class="MsoBodyText">Um die Erfolgsmeldung (&quot;Toast&quot;) nach dem erfolgreichen Schreiben des Wertes zu deaktivieren, setzen Sie die Eigenschaft showUserFeedback auf false.</p>
+  <p class="MsoBodyText">Weitere optionale Eigenschaften werden nur bei der Eingabe eines Wertes über die Seitenleiste verwendet, um z.B. die Eingabe von numerischen Werten innerhalb eines bestimmten Bereichs zu gewährleisten:</p>
+  <ul style="list-style: disc;">
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">type</i>: </span>einen Datentyp (irrelevant für Legato-Variablen - für diese ist der Typ bereits serverseitig definiert) <span style="text-indent: -18.0pt; mso-list: l0 level1 lfo1;">auf der Server-Seite definiert. Empfohlen für lokale und Session-Variablen).</span></p>
+    </li>
+  </ul>
+  <p class="MsoBodyText" style="margin-left: 72.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level2 lfo1;"><span lang="EN-US" style="font-family: &#39;Courier New&#39;; 
+										 mso-fareast-font-family: &#39;Courier New&#39;; 
+										 mso-ansi-language: EN-US; mso-list: Ignore;" xml:lang="EN-US">o  </span> <span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US">str: String Wert</span></p>
+  <p class="MsoBodyText" style="margin-left: 72.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level2 lfo1;"><span lang="EN-US" style="font-family: &#39;Courier New&#39;; 
+										 mso-fareast-font-family: &#39;Courier New&#39;; 
+										 mso-ansi-language: EN-US; mso-list: Ignore;" xml:lang="EN-US">o  </span> <span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US">int: Integer Wert</span></p>
+  <p class="MsoBodyText" style="margin-left: 72.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level2 lfo1;"><span lang="EN-US" style="font-family: &#39;Courier New&#39;; 
+										 mso-fareast-font-family: &#39;Courier New&#39;; 
+										 mso-ansi-language: EN-US; mso-list: Ignore;" xml:lang="EN-US">o  </span> <span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US">float: Float Wert</span></p>
+  <p class="MsoBodyText" style="margin-left: 72.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level2 lfo1;"><span lang="EN-US" style="font-family: &#39;Courier New&#39;; 
+										 mso-fareast-font-family: &#39;Courier New&#39;; 
+										 mso-ansi-language: EN-US; mso-list: Ignore;" xml:lang="EN-US">o  </span> <span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US">bool: Boolean Wert</span></p>
+  <ul style="list-style: disc;">
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">min</i>: Untergrenze für den eingegebenen Wert</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">max</i>: Obergrenze für den eingegebenen Wert</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">caption</i>: Beschriftung für das Eingabefeld in der Seitenleiste</span></p>
+    </li>
+  </ul>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Beispiel:</p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;setValue&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;target&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;ref&quot;: &quot;somevar&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        },</p>
+  <p class="TextCode" style="color: #008000;">        &quot;type&quot;: &quot;int&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;min&quot;: 3,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;max&quot;: 10,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;caption&quot;: &quot;Value [3..10]&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;showUserFeedback&quot;: false</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code"> </p>
+  <p class="Code"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+						 mso-fareast-language: DE;" xml:lang="EN-US">D</span>amit der Benutzer einen Wert auswählen kann, indem er einen Eintrag aus einer Nachschlageliste wählt, kann eine Schlüssel-Wert-Liste</p>
+  <p class="Code"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+						 mso-fareast-language: DE;" xml:lang="EN-US">Liste an die Parameterelemente übergeben werden.</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;datasources&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;lookupList&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;localvar&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;lookuplist&quot;</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;key&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;localvar&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;sym&quot;: &quot;lookupkey&quot;</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> &quot;events&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> &quot;onClick&quot;: [</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;action&quot;: &quot;setValue&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;target&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;dataref&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                           </span><span lang="EN-US" xml:lang="EN-US"> &quot;ref&quot;: &quot;key&quot;</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> },</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> &quot;items&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;source&quot;: &quot;dataref&quot;,</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                       </span><span lang="EN-US" xml:lang="EN-US"> &quot;params&quot;: {</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                           </span><span lang="EN-US" xml:lang="EN-US"> &quot;ref&quot;: &quot;lookupList&quot;</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                       </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">                   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">               </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">           </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">       </span><span lang="EN-US" xml:lang="EN-US"> ]</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-spacerun: yes;" xml:lang="EN-US">   </span><span lang="EN-US" xml:lang="EN-US"> }</span></p>
+  <p class="TextCode" style="color: #008000;"><span lang="EN-US" xml:lang="EN-US">}</span></p>
+  <p class="Code"> </p>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Der Aufruf dieser Aktion zeigt eine Dropdown-Box in der Seitenleiste an, aus der ein Element ausgewählt werden kann. Intern wird der entsprechende Schlüssel gesetzt (Parameter target).</span></p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><img alt="" border="0" src="../../Bilder/values_binding.png" style="border: none;"/></p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <h4><a id="toggleValue"></a>toggleValue</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Schaltet den Wert der referenzierten Variablen um (false --&gt; true, true --&gt; false).</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000; mso-fareast-language: DE;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;toggleValue&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;target&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><img alt="" border="0" src="../../assets/images/02_Notice_en.jpg" style="border: none;"/></span></p>
+  <p class="TextkörperHinweis"><span lang="EN-US" xml:lang="EN-US">D</span>iese Aktion funktioniert nur bei lokalen und Session-Var zuverlässig. Insbesondere bei der Verwendung dieser Aktion für Legato-Variablen in einem onLoad-Ereignis - die Variable könnte noch in einem undefinierten Zustand sein, wenn die Aktion ausgeführt wird, da neu abonnierte Variablen <span lang="EN-US" xml:lang="EN-US">ihre Werte asynchron gesendet bekommen.</span></p>
+  <h4><a id="incrementValue__decrementValue"></a>incrementValue, decrementValue</h4>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">Erhöht den Wert einer numerischen Variablen.</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;incrementvalue&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;target&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;ref&quot;: &quot;someVar&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US;"><span style="mso-fareast-language: DE;">Optional können ein Bereich und ein Delta definiert werden:</span></p>
+  <ul style="list-style: disc;">
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: DE;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">delta</i>: Das Inkrement (default: 1)</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: DE;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">min</i>: Startwert</span></p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: DE;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">max</i>: Maximaler Wert - </span>bei Erreichen des Wertes beginnt der Wert bei Null oder dem angegebenen Mindestwert</p>
+    </li>
+  </ul>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><img alt="" border="0" src="../../assets/images/02_Notice_en.jpg" style="border: none;"/></span></span></p>
+  <p class="TextkörperHinweis"><span lang="EN-US" xml:lang="EN-US">D</span>iese Aktion funktioniert nur bei lokalen und Session-Var zuverlässig. Insbesondere bei der Verwendung dieser Aktion für Legato-Variablen in einem onLoad-Ereignis - die Variable könnte noch in einem undefinierten Zustand sein, wenn die Aktion ausgeführt wird, da neu abonnierte Variablen <span lang="EN-US" xml:lang="EN-US">ihre Werte asynchron gesendet bekommen.</span></p>
+  <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;"> </p>
+  <h4><a id="changeNode__changeNodes"></a>changeNode, changeNodes</h4>
+  <p style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">W</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">ird typischerweise für Zeichnungen in einem Dashboard in der Standard-Sapient-App verwendet, um die aktuelle nodeSelection zu ändern.</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;changeNode&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;node&quot;: 90</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p style="mso-ansi-language: EN-US; color: #008000;"> </p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;changeNode&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;nodes&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">            1,</p>
+  <p class="TextCode" style="color: #008000;">            3,</p>
+  <p class="TextCode" style="color: #008000;">            90</p>
+  <p class="TextCode" style="color: #008000;">        ]</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code"> </p>
+  <h3><a id="Sidebar"></a>Sidebar</h3>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">Z</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">eichnungen können in der Seitenleiste angezeigt werden, um Vorgänge zu steuern oder einfach nur um bestimmte Detailinformationen. Es können mehrere Zeichnungen gleichzeitig in der Seitenleiste angezeigt werden - optional in separaten Registerkarten organisiert.</span></p>
+  <h4><span lang="EN-US" xml:lang="EN-US"><a id="openDrawingInSidebar"></a>openDrawingInSidebar</span></h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">Öffnet eine Zeichnung in der Sidebar.</span></p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;openDiagramInSidebar&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;fileName&quot;: &quot;hmi/examples/sidebar2_sb1.xml&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;id&quot;: &quot;SB1&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;preventDuplicates&quot;: true,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;tabId&quot;: 1,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;tabIcon&quot;: &quot;icon-view-list&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;prop1&quot;: &quot;xy&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;prop2&quot;: 12</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code"> </p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US;"><span style="mso-fareast-language: DE;">Die id kann übergeben werden, um der Zeichnung in der Seitenleiste eine ID zuzuweisen. Dies ist notwendig, um die Zeichnung zu identifizieren, um sie mit der Aktion removeDrawingFromSidebar zu entfernen, entfernt werden kann. Zusätzlich, um optional sicherzustellen, dass die Zeichnung nur einmal angezeigt wird (preventDuplicates = true).<br/>
+      <br/>
+      <br/>
+      Die folgenden Parameter fügen die Zeichnung optional zu einer bestimmten Registerkarte der Seitenleiste hinzu:</span></p>
+  <ul style="list-style: disc;">
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: DE;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">tabId</i>: Identifier</span>, um Zeichnungen in der Seitenleiste auf derselben Registerkarte hinzufügen zu können.</p>
+    </li>
+    <li>
+      <p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+			 mso-list: l0 level1 lfo1;"><span lang="EN-US" style="mso-ansi-language: EN-US; 
+												 mso-fareast-language: DE;" xml:lang="EN-US"><i style="mso-bidi-font-style: normal;">tabIcon</i>: </span>Icon, das für die Registerkarte angezeigt werden soll. Die verfügbaren Icons sind auf der Seite <span lang="EN-US" style="mso-ansi-language: EN-US; 
+								 mso-fareast-language: DE;" xml:lang="EN-US"><a href="http://serverurl/app/assets/icons/demo.html">http://<i style="mso-bidi-font-style: normal;">serverurl</i>/app/assets/icons/demo.html</a> aufgelistet. </span><span style="text-indent: -18.0pt;"><span style="mso-list: l0 level1 lfo1;">(Symbolnamen, die Unterstriche enthalten, können nicht verwendet werden)</span></span></p>
+    </li>
+  </ul>
+  <p class="MsoBodyText">Die Eigenschaften in params werden direkt an die Zeichnungsinstanz weitergegeben und können über den Pseudoparameter extra zugegriffen werden.</p>
+  <p class="MsoBodyText">Beispiel für eine Bindung mit extra Parametern:</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;datasources&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;prop1&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;source&quot;: &quot;parameter&quot;,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;path&quot;: &quot;extra.value.prop1&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    },</p>
+  <p class="TextCode" style="color: #008000;">    &quot;bindings&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;text&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;value&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;source&quot;: &quot;dataref&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;ref&quot;: &quot;prop1&quot;</p>
+  <p class="TextCode" style="color: #008000;">                },</p>
+  <p class="TextCode" style="color: #008000;">                &quot;defaultValue&quot;: &quot;/&quot;</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p> </p>
+  <h4><a id="clearSidebar"></a>clearSidebar</h4>
+  <p style="mso-ansi-language: EN-US;">Entfernt alle Zeichnungen aus der Seitenleiste und schließt die Seitenleiste.</p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;clearSidebar&quot;</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <h4 style="mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US"><a id="removeDrawingFromSidebar"></a>removeDrawingFromSidebar</span></h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Entfernt eine Zeichnung mit der angegebenen ID aus der Seitenleiste.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;removeDrawingFromSidebar&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;id&quot;: &quot;SB1&quot;</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code" style="mso-ansi-language: EN-US;"> </p>
+  <h4><a id="setSidebarProperties"></a>setSidebarProperties</h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">L</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">egt bestimmte Eigenschaften der Seitenleiste fest - vor allem, um die Seitenleiste auf eine Breite einzustellen, die für die anzuzeigende Zeichnung. </span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;setSidebarProperties&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;width&quot;: &quot;large&quot;  small, medium, large, or spec. width e.g. 200px</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">D</span>ie Breite kann eine bestimmte Breite in Pixel sein oder die vordefinierten Breiten <span style="font-style: italic;">klein</span>, <span style="font-style: italic;">medium</span>, <span style="font-style: italic;">groß</span>.</p>
+  <h4><span lang="EN-US" xml:lang="EN-US"><a id="resetSidebarProperties"></a>resetSidebarProperties</span></h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;">Setzt alle Eigenschaften der Seitenleiste auf die für den aktuellen Benutzer eingerichteten Eigenschaften zurück.</p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span lang="EN-US" style="mso-fareast-language: DE;" xml:lang="EN-US">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;resetsidebarproperies&quot;</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <h3><a id="Sonstige_Aktionen"></a>Sonstige Aktionen</h3>
+  <h4><a id="callRpc"></a>callRpc</h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">E</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">rmöglicht den Aufruf einer Prozedur der Sapient Engine. Parameter für den Prozeduraufruf werden über das params-Objekt übergeben.</span></p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;callRpc&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;method&quot;: &quot;de/gefasoft/sapient/db/values/Current/num_in&quot;,</p>
+  <p class="TextCode" style="color: #008000;">        &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">            &quot;ID&quot;: 7500,</p>
+  <p class="TextCode" style="color: #008000;">            &quot;VALUE_NUM&quot;: 13</p>
+  <p class="TextCode" style="color: #008000;">        }</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <h4><a id="confirmExecution"></a>confirmExecution</h4>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span lang="EN-US" style="mso-ansi-language: EN-US; mso-fareast-language: DE;" xml:lang="EN-US">E</span><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;">rmöglicht es, die Ausführung von Aktionen durch den Benutzer bestätigen zu lassen. Wenn der Benutzer abbricht, werden die folgenden Aktionen übersprungen.</span></p>
+  <p class="TextCode" style="mso-ansi-language: EN-US; color: #008000;"><span style="mso-fareast-language: DE;">{</span></p>
+  <p class="TextCode" style="color: #008000;">    &quot;action&quot;: &quot;confirmExecution&quot;,</p>
+  <p class="TextCode" style="color: #008000;">    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;message&quot;: &quot;This action might have serious consequences!&quot;</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="Code" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"> </p>
+  <p class="MsoBodyText" style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><span style="mso-ansi-language: EN-US; mso-fareast-language: DE;"><img alt="" border="0" src="../../assets/images/02_Notice_en.jpg" style="border: none;"/></span></p>
+  <p class="TextkörperHinweis"><span lang="EN-US" xml:lang="EN-US">Diese Aktion muss die erste in der Liste der Aktionen sein.</span></p>
+  <p> </p>
+  <h3><a id="playAudio_de"></a>playAudio</h3>
+  <p> </p>
+  <p>Die Aktion <span style="font-family: &#39;Courier New&#39;, monospace;">playAudio</span> akzeptiert zwei Parameter <span style="font-family: &#39;Courier New&#39;, monospace;">file</span> und <span style="font-family: &#39;Courier New&#39;, monospace;">loop</span>. Audiodateien werden im gemeinsamen Verzeichnis  <span style="font-family: &#39;Courier New&#39;, monospace;">detail-layout\audio</span> abgelegt.</p>
+  <p style="font-family: &#39;Palatino Linotype&#39;, serif;"> </p>
+  <ul style="list-style: disc;">
+    <li style="font-family: &#39;Palatino Linotype&#39;, serif;">Ist der Parameter <span style="font-family: &#39;Courier New&#39;, monospace;">file</span> leer, wird das Abspielen der aktuellen Audiodatei gestoppt.</li>
+    <li style="font-family: &#39;Palatino Linotype&#39;, serif;"><span style="font-family: &#39;Courier New&#39;, monospace;">loop</span> legt fest, dass Audio in Schleife abgespielt werden soll. Der Standardwert ist <span style="font-family: &#39;Courier New&#39;, monospace;">false</span>.</li>
+  </ul>
+  <p>Example:</p>
+  <p> <span class="code-keyword" style="color: rgb(145, 0, 145);"></span><span style="color:#009100;">{         </span></p>
+  <p class="TextCode"><span style="color:#009100;"><span class="code-quote">    &quot;events&quot;</span>: {                </span></p>
+  <p class="TextCode"><span style="color:#009100;">        <span class="code-quote">&quot;onClick: </span>[ </span></p>
+  <p class="TextCode"><span style="color:#009100;">            {</span></p>
+  <p class="TextCode"><span style="color:#009100;"><span class="code-quote">                &quot;action&quot;</span>: <span class="code-quote">&quot;playAudio&quot;</span>, </span></p>
+  <p class="TextCode"><span style="color:#009100;"><span class="code-quote">                &quot;params&quot;</span>: {<span class="code-quote"></span></span></p>
+  <p class="TextCode"><span style="color:#009100;"><span class="code-quote">                    &quot;file&quot;</span>: <span class="code-quote">&quot;wilhe<span style="font-family:&#39;Courier New&#39;">lmsc</span>ream.mp3&quot;</span>,</span></p>
+  <p class="TextCode"><span style="color:#009100;"><span class="code-quote">                        &quot;loop&quot;</span>: <span style="color:#910091;"><span class="code-keyword">false</span>   </span></span></p>
+  <p class="TextCode"><span style="color:#009100;">                    }</span></p>
+  <p class="TextCode"><span style="color:#009100;">               }</span></p>
+  <p class="TextCode"><span style="color:#009100;">           ]         </span></p>
+  <p class="TextCode"><span style="color:#009100;">       }</span></p>
+  <p class="TextCode"><span style="color:#009100;">  }</span></p>
+  <p class="TextCode"><span style="color:#009100;"></span></p>
+  <p><img alt="" border="0" src="../../assets/images/02_Notice_en.jpg" style="border: none;"/></p>
+  <p class="TextkörperHinweis">Browsers do not play sounds without user interaction by default. Please consider to set up your browser accordingly, e.g. for chrome use  &quot;chrome.exe --autoplay-policy=no-user-gesture-required&quot;. Also, check if your browser is capable to do so.</p>
+  <p> </p>
+  <h4 style="font-weight: bold;"><a id="httpPost"></a>httpPost</h4>
+  <p class="BodyText">Sendet eine HTTP-Anfrage an eine bestimmte URL. Es kann jeweils nur eine Anfrage gestellt werden. Akzeptiert sind drei Parameter:</p>
+  <p class="BodyText"> </p>
+  <ul style="list-style: disc;">
+    <li>
+      <p class="BodyText">url</p>
+    </li>
+    <li>
+      <p class="BodyText">bodyType - json (Standard) oder Form</p>
+    </li>
+    <li>
+      <p class="BodyText">params -</p>
+    </li>
+  </ul>
+  <p class="BodyText"> </p>
+  <p class="TextCode" style="color: #008000;">{</p>
+  <p class="TextCode" style="color: #008000;">    &quot;events&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">        &quot;onClick&quot;: [</p>
+  <p class="TextCode" style="color: #008000;">            {</p>
+  <p class="TextCode" style="color: #008000;">                &quot;action&quot;: &quot;httpPost&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;url&quot;: &quot;http://localhost:808&quot;,</p>
+  <p class="TextCode" style="color: #008000;">                    &quot;params&quot;: {</p>
+  <p class="TextCode" style="color: #008000;">                        &quot;key&quot;:&quot;value&quot;</p>
+  <p class="TextCode" style="color: #008000;">                    }</p>
+  <p class="TextCode" style="color: #008000;">                }</p>
+  <p class="TextCode" style="color: #008000;">            }</p>
+  <p class="TextCode" style="color: #008000;">        ]</p>
+  <p class="TextCode" style="color: #008000;">    }</p>
+  <p class="TextCode" style="color: #008000;">}</p>
+  <p class="BodyText"> </p>
+  <p class="BodyText"> </p>
+  <p class="BodyText"><span style="font-weight: bold;"><a id="cancelCurrenHttpRequest"></a>cancelCurrentHttpRequest</span> </p>
+  <p class="BodyText">Storniert die aktuell anstehende Anfrage.</p>
+
+</body></html>

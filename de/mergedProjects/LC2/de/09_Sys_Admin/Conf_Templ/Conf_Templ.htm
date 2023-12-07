@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Projektierungsvorlagen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Projektierungsvorlage" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Projektierungsvorlagen">
+        <span>Projektierungsvorlagen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Projektierungsvorlagen</h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">System-Administration | Projektierungsvorlagen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In dieser Tabelle werden die verfügbaren Projektierungsvorlagen 
+ referenziert. Die Vorlagen selbst sind als JavaScript-Dateien im entsprechenden 
+ SE-Verzeichnis abgelegt.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td>Symbol</td>
+		<td>Eindeutiges Symbol der Vorlage.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Name</td>
+		<td>Name der Vorlage.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Beschreibung (optional)</td>
+		<td>Beschreibung der Vorlage.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Eigenschaften</td>
+		<td><p class="TabellenInhalt">Eigenschaften der Vorlage, z.B. Link 
+		 zur zugehörigen Skript-Datei im Format: {&quot;script&quot;:&quot;create_node&quot;}. 
+		 Die Skripten müssen im SE-Verzeichnis C:\SapiEng\src\dist\scripts\configurationtemplates 
+		 abgelegt sein.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td>Parameter</td>
+		<td>Parameter der Vorlage, entsprechen den zu befüllenden Spalten 
+		 der Zieltabelle. Für jeden der hier eingetragenen Parameter wird 
+		 in der Tabelle &quot;Instanzen&quot; eine Spalte angezeigt, die 
+		 mit dem jeweiligen Wert befüllt werden kann / muss (bei &quot;required&quot;: 
+		 true). 
+		Beispiel siehe unten.</td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Parameterdefinition"></a>Parameterdefinition</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zu jedem Parameter können folgende Zusatzinformationen 
+ erfasst werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">caption: Spaltentitel, der für den Parameter in 
+ der Tabelle &quot;Vorlagen-Instanzen&quot; angezeigt wird.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">dataType: Datentyp des Parameters (z.B. String, 
+ Int32, Int64, Double, Boolean). Die Tabellenfelder zeigen die Parameterwerte 
+ dementsprechend an und validieren die Eingabe gegebenenfalls (für Boolean-Werte 
+ wird z.B. eine Checkbox angezeigt, für lange Strings ein Dropdown-Eingabefeld).</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">maxLength: (nur für Strings). Längenbegrenzung 
+ des Stringwertes.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">required: true = Eingabe für diesen Parameter 
+ ist erforderlich; false = Eingabe ist optional.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">lookupTable: Zieltabelle, sofern der Parameter 
+ eine andere Tabelle referenziert. In diesem Fall ist keine direkte Eingabe 
+ eines Wertes möglich, sondern es öffnet sich die entsprechende Lookup-Tabelle 
+ zur Auswahl eines Eintrags.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel-Eintrag:</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">{</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;parent_node&quot;: {&quot;caption&quot;: 
+ &quot;Parent node&quot;, &quot;dataType&quot;: &quot;Int32&quot;, &quot;lookupTable&quot;: 
+ &quot;l_nodes&quot;},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;parent_con&quot;: {&quot;caption&quot;: 
+ &quot;Parent connection&quot;, &quot;dataType&quot;: &quot;Int32&quot;, 
+ &quot;lookupTable&quot;: &quot;p_connections&quot;},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;stringparam1&quot;: {&quot;caption&quot;: 
+ &quot;String param 1&quot;, &quot;dataType&quot;: &quot;String&quot;, 
+ &quot;maxLength&quot;: 16, &quot;required&quot;: true},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;stringparam2&quot;: {&quot;caption&quot;: 
+ &quot;String param 2&quot;, &quot;dataType&quot;: &quot;String&quot;},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">  &quot;stringparam3&quot;: {&quot;caption&quot;: 
+ &quot;String param 3&quot;},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">   &quot;intparam1&quot;: {&quot;caption&quot;: 
+ &quot;Int param 1&quot;, &quot;dataType&quot;: &quot;Int64&quot;},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">   &quot;doubleparam1&quot;: {&quot;caption&quot;: 
+ &quot;Double param 1&quot;, &quot;dataType&quot;: &quot;Double&quot;},</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">   &quot;boolparam1&quot;: {&quot;caption&quot;: 
+ &quot;Bool param 1&quot;, &quot;dataType&quot;: &quot;Boolean&quot;}</p>
+<p class="TabellenInhalt" data-condition="Others:Deutsch;Others:Sapient_only">}</p>
+
+
+</body></html>

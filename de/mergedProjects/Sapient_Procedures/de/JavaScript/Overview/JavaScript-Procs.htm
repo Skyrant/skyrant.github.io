@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Besonderheiten für JavaScript-Prozeduren</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Prozedur" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Besonderheiten für JavaScript-Prozeduren">
+        <span>Besonderheiten für JavaScript-Prozeduren</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Besonderheiten für JavaScript-Prozeduren</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Über JSON-RPC aufgerufene JS-Funktionen haben ebenfalls 
+ die beiden Parameter &quot;<a href="../Classes/14_SapientContext.htm">SapientContext</a>&quot; 
+ und &quot;params&quot;. Letzteres enthält die vom Remote-Aufrufer angegebenen 
+ Parameter entweder als Array oder als JS-Objekt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Beide Fälle müssen also in den jeweiligen 
+ Funktionen berücksichtigt werden!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um als Array angegebene Parameter in das Objekt-Format 
+ zu wandeln, kann die Funktion &quot;jsonRpcArgsHash()&quot; aus &quot;scripts/common/jsutils.js&quot; 
+ verwendet werden.</p>
+<p class="TextCode" data-condition="Others:Deutsch">/** Helper for JSON-RPC functions. Those may either 
+ be called with their </p>
+<p class="TextCode" data-condition="Others:Deutsch"> * parameters passed by position, if the caller 
+ passes them as an JSON array</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * or by name,  if the caller passes 
+ them as a JSON object.&lt;p&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * A JSON-RPC function may call this function 
+ to ...</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * </p>
+<p class="TextCode" data-condition="Others:Deutsch"> * @param args The arguments object of the JSON-RPC 
+ function.  The 1st argument</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * is the Sapient context,  the 2nd 
+ is either a Object containing parameters</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * passed by name or the 1st parameter passed 
+ by position</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * @param names An array containing the names 
+ of the parameters expected by the</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * RPC function</p>
+<p class="TextCode" data-condition="Others:Deutsch"> * @returns An Object with properties for </p>
+<p class="TextCode" data-condition="Others:Deutsch"> */</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">function jsonRpcArgsHash(args, names)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Rückgabewert: Falls eine Prozedur ein Ergebnis liefern 
+ soll (d.h., es handelt sich um eine Funktion), kann dies auf zwei Arten 
+ erfolgen:</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">Rückgabe 
+ der gewünschten Daten als JavaScript-Objekt</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">&quot;Streamen&quot; 
+ der Daten als JSON an den Client, indem &quot;context.jsonOut&quot; verwendet 
+ wird.</p>
+
+
+</body></html>

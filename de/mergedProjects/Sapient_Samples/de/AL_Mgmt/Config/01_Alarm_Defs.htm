@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Meldungsdefinitionen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Meldungsdefinitionen">
+        <span>Meldungsdefinitionen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Meldungsdefinitionen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Datenaustausch | Datenaustausch-Module 
+ | Verbindungen | Meldungsdefinitionen</p>
+<p class="BodyText" data-condition="Others:Deutsch">Siehe auch <a href="04_Alloc_Alarms.htm">Fertigungsstruktur 
+ - Meldungszuordnung</a>.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextCharCharCharCharCharChar">Das Meldungsmanagement 
+ (näheres siehe eigener Abschnitt) erlaubt die Erfassung von Meldungen 
+ aus den Steuerungssystemen über verschiedene Methoden. Die Funktion der 
+ Datenbank ist aber für alle Erfassungsmethoden identisch: Aus dem Gateway 
+ wird eine eindeutige ID je Meldung</span> mit Zeitstempel je Ereignis 
+ (getrennt für &quot;kommend&quot; und &quot;gehend&quot;) an die Datenbank 
+ übergeben. In der Datenbank werden dann aus einer Zuordnungstabelle der 
+ Text der Meldung und andere Informationen zugefügt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Meldungen und deren Eigenschaften können manuell 
+ freigegeben werden, oder werden über eine Importfunktion aus anderen Datenquellen 
+ übernommen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Verbindung</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Verbindung. 
+		 Wird automatisch befüllt und kann geändert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Knoten</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Knotens 
+		 aus der Fertigungsstruktur. Die Zuordnung der Meldung zu einem 
+		 Knoten erlaubt die gefilterte Darstellung der Meldungen im Client 
+		 (bezogen auf einen Knoten und seine Unterelemente) und ist auch 
+		 die Grundlage für alle knotenbezogenen Statistikfunktionen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Meldungsnummer</p></td>
+		<td><p class="TabellenInhalt">Meldungsnummer. Muss innerhalb dieser 
+		 Verbindung eindeutig sein (z.B. Code des Störoperanden im Steuerungssystem).</p>
+		<p class="TabellenInhalt">Die Auslösung einer Störmeldung erfolgt 
+		 mit Übergabe der Meldungsnummer vom Gateway an die Datenbank.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Operand (optional)</p></td>
+		<td><p class="TabellenInhalt">SPS-Operand (falls Operandenbezug 
+		 vorhanden) der Meldung.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Symbol (optional)</p></td>
+		<td><p class="TabellenInhalt">SPS-Symbol (falls Operandenbezug 
+		 vorhanden) der Meldung.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Text</p></td>
+		<td><p class="TabellenInhalt">Meldetext bis max. 80 Zeichen Länge.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Meldeklasse</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer vorhandenen 
+		 Melde-Klasse (siehe Abschnitt Meldungsmanagement) zur Klassifizierung 
+		 der Meldung. Die Klasse regelt die Verarbeitung und Darstellung 
+		 einer Meldung. Die Klassen Unterer / Oberer Grenzwert, Untere 
+		 / Obere Warngrenze, Verbindungsstörung, Modul-Verbindungsstörung 
+		 und Unbekannte Meldung sind fest im System vorhanden. Andere Klassen 
+		 können bei der Definition des Meldesystems beliebig durch den 
+		 Anwender erstellt werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Meldeart</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer vorhandenen 
+		 Melde-Art (siehe Abschnitt Meldungsmanagement). Meldearten sind 
+		 eine weiteres Merkmal von Meldungen und können entsprechend ausgewertet 
+		 werden.<br/>
+		Typische Arten sind:</p>
+		<p class="TabellenInhalt">                technisch<br/>
+		                organisatorisch<br/>
+		                systembedingt<br/>
+		                Kalenderpflege</p>
+		<p class="TabellenInhalt">                Zyklische 
+		 Meldungen<br/>
+		                Unterer/Oberer 
+		 Grenzwert<br/>
+		                Untere/Obere 
+		 Warngrenze<br/>
+		                Verbindungsstörung<br/>
+		                Modul-Verbindungsstörung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Weiterleitungsart (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Weiterleitungsart 
+		 für den Funkruf (siehe Kapitel Funkruf).</p>
+		<p class="TabellenInhalt">Typische Weiterleitungsarten sind:</p>
+		<p class="TabellenInhalt">keine Weiterleitung</p>
+		<p class="TabellenInhalt">Erstwerterkennung (1. Meldung wird weitergeleitet, 
+		 Folgemeldungen werden ausgeblendet)</p>
+		<p class="TabellenInhalt">generelle Weiterleitung (alle Meldungen 
+		 werden weitergeleitet).</p>
+		<p class="TabellenInhalt">Überschreibt die indirekte (default) 
+		 Weiterleitungsart der zugewiesenen Meldeklasse (Defaulteinstellung 
+		 unter Meldungsmanagement | Meldeklassen – Spalte Weiterleitungsart).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Default-Begründung (optional)</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Lookup 
+		 Liste, um eine Default-Begründung für diese Meldungsdefinition 
+		 auszuwählen. Wird hier ein Eintrag ausgewählt, wird diese Begründung 
+		 als Default für Meldungen dieser Definition in der WebApp verwendet.</p>
+		<p class="TabellenInhalt"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0" data-condition="Others:Classic_only"/>: In der WebApp können nur Einträge 
+		 ohne weitere Untereinträge als Filter verwendet werden, keine 
+		 Parents, z.B. in der Pareto-Ansicht!</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Funkruf-Empfänger (optional)</p></td>
+		<td><p class="TabellenInhalt">Auswahlfeld zur Zuordnung eines im 
+		 Meldungsmanagement definierten Funkruf-Empfängers (siehe Abschnitt 
+		 Meldungsmanagement).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Funkruf-Priorität (optional)</p></td>
+		<td><p class="TabellenInhalt">Priorität der Meldung für den Funkruf 
+		 (unabhängig von der Meldungs-Priorität).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Konfig nicht komplett</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Checkbox. 
+		 1 = Meldung wurde dynamisch angelegt; die Konfiguration ist möglicherweise 
+		 nicht komplett und muss kontrolliert und ggf. angepasst werden. 
+		 Die Konfig kann beim Einbuchen von Meldungen dynamisch geändert 
+		 werden.</p>
+		<p class="TabellenInhalt">0 = Konfiguration ist komplett; keine 
+		 dynamische Änderung möglich.</p>
+		<p class="TabellenInhalt">Wird z.B. beim automatischen Anlegen 
+		 von Meldungsdefinitionen gesetzt, um Einträge zu markieren, deren 
+		 Konfiguration geprüft werden muss. Wenn = 1, dann können die Werte 
+		 für Meldetext, Meldeklasse und Meldeart beim Einbuchen noch geändert 
+		 werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">ID im Archiv</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Eindeutige 
+		 Identifikationsnummer dieser Störmeldung mit allen Kennungen im 
+		 Meldearchiv (wird vom System vergeben). FK: Bei der ersten Verwendung 
+		 einer Meldungsdefinition wird der Eintrag in die Tabelle AL_MESSAGE_ARCHIVE 
+		 umgebucht und hier der Verweis auf diesen Datensatz gespeichert. 
+		 Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Vorlagenreferenz</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Vorlagenreferenz. 
+		 Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Kontextmenü</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Über die Liste der projektierten Meldungen kann eine 
+ Simulation von Meldeeinträgen durchgeführt werden. Selektiert man eine 
+ Meldung im Navigationsbaum oder in der Tabelle und betätigt die rechte 
+ Maustaste, erscheint ein Kontextmenü mit folgenden Funktionen:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Meldung 
+ auslösen: <span class="FormatvorlageAufzählung1CharChar10pt">Erzeugt ein</span> 
+ Kommend<span class="FormatvorlageAufzählung1CharChar10pt">-Ereignis der 
+ Meldung.</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Meldung 
+ zurücksetzen: <span class="FormatvorlageAufzählung1CharChar10pt">Erzeugt 
+ einen</span> Gehend<span class="FormatvorlageAufzählung1CharChar10pt">-Ereignis 
+ der Meldung.</span></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Siehe auch <a href="02_Wild_Cards.htm">Platzhalter 
+ im Meldetext</a> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Soll eine Meldungsdefinition gelöscht werden, so wird 
+ zuerst geprüft, dass keine Meldung dafür mehr ansteht. Nur dann kann die 
+ Meldungsdefinition gelöscht werden; andernfalls wird eine Fehlermeldung 
+ ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">ERWEITERTE ZUORDNUNGEN</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Jede Alarmdefinition ist einem Knoten zugeordnet (siehe 
+ <span style="font-style: italic;">Einstellungen der Anwendungsstruktur 
+ | Datenaustausch | Module | Verbindungen | Alarmdefinitionen</span>). 
+ Darüber hinaus kann jede Alarmdefinition weiteren Knoten zugewiesen werden. 
+ Dies ist möglich unter <span style="font-style: italic;">Anwendungsstruktureinstellungen 
+ | Logische Struktur | Knoten | Erweiterte Alarm-/Knotenzuordnungen</span>. 
+ Dort kann man einem Knoten eine beliebige Alarmdefinition zuordnen. Wenn 
+ ein Alarm gesetzt wird, erscheint dieser nicht nur für den Knoten, der 
+ in der Alarmdefinition zugeordnet ist, sondern auch für jeden Knoten, 
+ für den eine erweiterte Alarmzuordnung für diesen Alarm existiert. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die erweiterten Zuweisungen ändern nicht das Verhalten 
+ des durch seine Alarmdefinition definierten Alarms, d.h. der Alarm wird 
+ auf allen Knoten entsprechend der Vererbungseinstellung seiner Alarmklasse 
+ gesetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">ALARMVERERBUNG FÜR ERWEITERTE ALARM-/KNOTENZUWEISUNGEN</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Für jede erweiterte Alarm-/Knotenzuordnung muss der 
+ gewünschte Vererbungstyp eingestellt werden. Der Standardtyp ist &quot;keine 
+ Vererbung&quot;, d.h. der Alarm wird nur für die Knoten gesetzt, denen 
+ er zugewiesen ist (und für alle Knoten, die von den Einstellungen der 
+ Alarmklasse betroffen sind).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Jeder andere Vererbungstyp führt dazu, dass ein gesetzter 
+ Alarm zusätzlich zu der in den Einstellungen der Alarmklasse geforderten 
+ Vererbung auch für übergeordnete und/oder untergeordnete Knoten angezeigt 
+ wird. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist möglich, dass die bestehende Alarm/Knoten-Zuordnung 
+ denselben Zweig der logischen Struktur abdeckt. Obwohl die Vererbungseinstellungen 
+ nahelegen könnten, dass ein Alarm mehrfach auf einem einzigen Knoten erscheint, 
+ verhindert das System dies. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dem Feld &#39;Knotenhierarchieebene&#39; ist es möglich, 
+ die Vererbung auf eine bestimmte Knotenebene zu beschränken. Die durch 
+ die Alarmklasse definierte Vererbung kann durch diese Einstellung nicht 
+ beeinflusst werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ausnahme: Wenn der Funktion alarm_coming eine Liste 
+ von Knoten übergeben wird, wird für diesen Alarm keine Vererbung durchgeführt!</p>
+
+
+</body></html>

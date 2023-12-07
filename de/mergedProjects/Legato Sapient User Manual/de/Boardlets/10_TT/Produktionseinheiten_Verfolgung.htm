@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.10.9.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Produktionseinheiten Verfolgung</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Produktionseinheiten Verfolgung">
+        <span>Produktionseinheiten Verfolgung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Produktionseinheiten Verfolgung</h1>
+<p data-condition="Others:Deutsch">Das Boardlet <span style="font-weight: bold;">Produktionseinheiten Verfolgung</span> 
+ zeigt</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">eine Liste von Produktionseinheiten</p></li>
+	<li><p class="BodyText">zeigt alle Attribute der Produktionseinheit 
+	 (als Spalten) sowie erweiterte Eigenschaften</p></li>
+	<li><p class="BodyText">eine Filterung nach Identpoint und nach Identitäten 
+	 eines Zeitraums des Identpoints (Verfolgungssequenz in einer Zeitspanne 
+	 dieses Identpoints)</p></li>
+	<li><p class="BodyText">die Anzahl der abgefragten Produktionseinheiten 
+	 kann der Tabelle entnommen werden, ohne dass man bis zum Ende der 
+	 Tabelle scrollen muss.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Weitere Informationen</h6>
+<p data-condition="Others:Deutsch">Mit dem Boardlet Produktionseinheiten Verfolgung ist es möglich, Produktionseinheiten 
+ zu verfolgen/zu tracken. Produktionseinheiten, die für einen bestimmten 
+ Identpunkt innerhalb einer bestimmten Zeitspanne verfolgt werden, können 
+ gesehen werden. Alle Einheiten werden in der Reihenfolge ihres Auftretens 
+ aufgelistet. Es ist möglich, alle aktuellen Zustände und Attribute (einschließlich 
+ benutzerdefinierte), anzuzeigen.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/PU_tracking.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Die Standard-Spalten sind:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p>PU-ID</p></li>
+	<li><p>Produkt</p></li>
+	<li><p>Identpoint</p></li>
+	<li><p>Knoten</p></li>
+	<li><p>Ident time</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Standardmäßig werden die PU-IDs nach der neuesten PU-ID sortiert. Zum 
+ Ändern der Sortierung, können Sie auf den Pfeil in der Kopfzeile der Spalte 
+ &quot;Ident time&quot; anklicken.</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/PU_sorting.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Darüberhinaus sind folgende Filter sind verfügbar:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p>Knoten (inkl. sub-node switch)</p></li>
+	<li><p>Timestamp</p></li>
+	<li><p>PUs</p></li>
+	<li><p>Identpoint</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Wenn das Boardlet nach Identpoint gefiltert 
+ ist, wird der Knotenfilter ignoriert. </p>
+
+
+</body></html>

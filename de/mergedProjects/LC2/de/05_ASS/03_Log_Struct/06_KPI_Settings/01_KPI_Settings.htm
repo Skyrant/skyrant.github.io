@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.3.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">KPI Einstellungen</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Schicht-KPI,Online-Variable,Online Delta,KPI Delta,KPI" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="KPI Einstellungen">
+        <span>KPI Einstellungen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">KPI Einstellungen</h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Fertigungsstruktur | Fertigungsknoten 
+ | KPIs</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Statistische Kennzahlen (KPIs) werden in Legato knotenbezogen 
+ und standardmäßig schichtweise berechnet. Die Berechnungen werden nach 
+ Schichtende angestoßen und in die Schichtarchive gespeichert. Zusätzlich 
+ gibt es &quot;Online-KPIs&quot;, die im Schichtverlauf berechnet werden 
+ können. Für manche KPIs ist sowohl schichtweise als auch online Berechnung 
+ möglich, für andere nur eine der beiden Optionen. Dies wird angezeigt 
+ durch die entsprechenden anwählbaren Checkboxen in den Spalten &quot;Schicht-KPI&quot; 
+ und &quot;Online-KPI&quot;. Die Berechnung erfolgt durch Jobs der ApplicationEngine.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die anwählbaren Optionen werden jeweils für diesen 
+ Knoten ausgeführt und hängen naturgemäß von der Durchgängigkeit der Parametrierung 
+ ab. D.h. es können keine stückzahlbasierten Kennzahlen berechnet werden, 
+ wenn für den ausgewählten Knoten keine Stückzahlen parametriert sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zur Berechnung der KPIs können verschiedene Formeln 
+ zugrunde gelegt werden. Die Sichtweisen sind in verschiedenen Projekten 
+ durchaus unterschiedlich. Im Folgenden werden die standardmäßig implementierten 
+ Berechnungsgrundlagen und Kennwerte erläutert. Für projektspezifische 
+ Anpassungen wenden Sie sich bitte an Ihren Vertriebspartner der Gefasoft 
+ GmbH.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zu jedem KPI werden eine Quelle und ein Berechnungsziel 
+ angegeben. Die meisten KPI-Werte werden schichtbezogen gespeichert und 
+ ausgewertet. Andere Ziele sind z.B. Lieferanten, Produktionsbereiche oder 
+ Produkte. Die Quelldaten sind beispielsweise Schichtzeiten, Stückzahlen, 
+ Meldungen oder Taktzeiten. In den meisten Fällen ist die Quelle eines 
+ KPI-Werts eindeutig, manchmal kommen aber auch verschiedene Berechnungsgrundlagen 
+ in Frage. In diesem Fall wird der KPI für jede mögliche Quelle einmal 
+ aufgeführt. Im Normalfall ist es sinnvoll, nur eine Quelle zu aktivieren. 
+ Werden mehrere Quellen ausgewählt, werden entsprechende Einzel-KPIs berechnet 
+ – bei der Auswertung wird dann der Mittelwert ausgegeben. Statistikrelevante 
+ Quellen sind Stückzahlen (für die KPIs PREAL, PSCRAP, PTARG) und Taktzeiten 
+ (für KPI CTARG). Hierfür muss bei der jeweiligen Quelle die Checkbox &quot;statistikrelevant&quot; 
+ aktiviert sein. Gibt es im Projekt mehrere Anlagen (Quellen), werden die 
+ statistikrelevanten Werte (Ist-, Soll-Stückzahlen, Soll-Taktzeiten) für 
+ die Berechnungen addiert (wenn das Flag &#39;statistikrelevant&#39; gesetzt ist).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Tabelle der KPIs ist prinzipiell schreibgeschützt; 
+ es können keine neuen KPIs hinzugefügt werden. Über die Checkboxen in 
+ den Spalten &quot;Shift-KPI&quot; und &quot;Online-KPI&quot; kann selektiert 
+ werden, ob und auf welche Weise ein KPI berechnet werden soll. In der 
+ Spalte &quot;Online Delta&quot; kann ein Delta für Online-KPIs eingegeben 
+ werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="95"/>
+	<col width="1056"/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Knoten</p></td>
+		<td><p class="TabellenInhalt">Knoten der Fertigungsstruktur, für 
+		 den der KPI berechnet wird.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Typ</p></td>
+		<td><p class="TabellenInhalt">KPI-Typ.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Schicht-KPI</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird dieser 
+		 KPI nach dem Ende jeder Schicht berechnet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Online-KPI</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, wird dieser 
+		 KPI online (d.h. während einer laufenden Schicht) berechnet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Online-Delta</p></td>
+		<td><p class="TabellenInhalt">Eingabe eines Deltas für die Berechnung 
+		 von Online KPIs. Dieses Delta wird von der AppEngine verwendet. 
+		 Das Delta bezieht sich auf den Wert des KPIs, d.h. bei einem Delta 
+		 von 5 wird der Online-KPI berechnet, wenn sich sein Wert um 5 
+		 oder mehr erhöht hat.</p>
+		<p class="TabellenInhalt">Default ist abhängig vom KPI-Typ: bei 
+		 Stück ONLINE_DELTA = 0,5; bei Zeiten ONLINE_DELTA = 5 Sek.; bei 
+		 Prozent ONLINE_DELTA = 1.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Quelle</p></td>
+		<td><p class="TabellenInhalt">Datenquelle des KPIs, z.B. Stückzahlen, 
+		 Schicht, Meldungen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Klasse</p></td>
+		<td><p class="TabellenInhalt">KPI-Klasse. Bezeichnet einen Oberbegriff 
+		 zum KPI wie z.B. &quot;OEE&quot;, der dann aus verschiedenen Berechnungsgrundlagen 
+		 (Quellen) abgeleitet werden kann und somit eine unabhängige Kennzahl 
+		 ergibt (z.B. &quot;OEEPT&quot;, OEECT&quot;, &quot;OEEFT&quot;, 
+		 &quot;OEE_MDA&quot;).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Ziel</p></td>
+		<td><p class="TabellenInhalt">Berechnungsziel des KPI, üblicherweise 
+		 Schicht.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Spaltentitel</p></td>
+		<td><p class="TabellenInhalt">Spaltenbeschriftung zur Anzeige dieses 
+		 KPIs in der WebApp.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Name des KPI.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung des KPI.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Einheit</p></td>
+		<td><p class="TabellenInhalt">Einheit des KPI-Typs, z.B. Stück 
+		 oder Sekunden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Online-Variable</p></td>
+		<td><p class="TabellenInhalt">Wird ein KPI als Online-KPI aktiviert, 
+		 so wird automatisch eine Variable angelegt, in der der Wert gespeichert 
+		 wird. Diese wird hier angezeigt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Aktueller Wert</p></td>
+		<td><p class="TabellenInhalt">Hier wird der aktuelle Wert der Variablen 
+		 angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Letztes Update</p></td>
+		<td><p class="TabellenInhalt">Hier wird der Zeitstempel der letzten 
+		 Wertänderung der Variablen angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Kontextmenü</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Durch rechten Mausklick auf &quot;KPIs&quot; im Navigationsbaum 
+ kann das Kontextmenü geöffnet werden. Es bietet folgende Zusatzfunktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">KPI Einstellungen kopieren</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert die KPI Einstellungen des Knotens in die Zwischenablage.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">KPI Einstellungen übernehmen...</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es öffnet sich ein Dialog zum Übernehmen der KPI Einstellungen 
+ aus der Zwischenablage auf einen anderen Knoten. Befinden sich keine KPI 
+ Einstellungen in der Zwischenablage, wird eine Fehlermeldung angezeigt. 
+ Befinden sich KPI Einstellungen in der Zwischenablage, öffnet sich folgender 
+ Dialog:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Legato_LC2_DE_Format-Dateien/05_ASS/both/KPI_Settings.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die KPI Einstellungen können entweder für den selektierten 
+ Knoten übernommen werden oder für dessen Unterknoten (ohne den selektierten). 
+ Sollen die KPI Einstellungen für die Unterknoten übernommen werden, kann 
+ weiter eingeschränkt werden. Die Einstellungen können z.B. nur für Knoten 
+ einer bestimmten Hierarchiestufe übernommen werden, nur für reelle oder 
+ nur für virtuelle Knoten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über eine Checkbox kann in jedem Fall festgelegt werden, 
+ ob die gesamten KPI Einstellungen überschrieben werden sollen oder nur 
+ weitere KPIs aktiviert werden sollen, ohne bereits aktivierte zu deaktivieren.</p>
+
+
+</body></html>

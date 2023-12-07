@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "8.1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Überblick</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Tracking &amp; Tracing,Produktionseinheit,PU,Transportmittel,Carrier" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Überblick">
+        <span>Überblick</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Überblick</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Buchungsfunktionen des Moduls &quot;Tracking &amp; 
+ Tracing&quot; werden durch Aufruf von Prozeduren<span data-condition="Others:Sapient_only"> 
+ durch die Sapient Engine</span> durchgeführt. Diese Prozeduren sind 
+ in einer eigenständigen Dokumentation beschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zur Ausführung der Prozeduren werden Produktionseinheiten 
+ (PUs) oder Transportmittel (Carrier) zur Identifikation benötigt. Die 
+ grundlegenden Daten hierfür werden im LC2 gepflegt.</p>
+<h3 data-condition="Others:Deutsch"><a id="Produktionseinheiten"></a>Produktionseinheiten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die PRODUCTION_UNIT (Produktionseinheit = PU) ist eine 
+ vom eigentlichen Auftrag unabhängige definierte Menge eines Produktes. 
+ Beispiele dafür sind ein Los oder eine Charge (in der Serienfertigung) 
+ oder ein Batch bzw. Ansatz (in verfahrenstechnischen Prozessen).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Begründung zur Produktion in Losen oder Chargen 
+ liegt entweder in verfahrenstechnischen Anforderungen (z.B. wenn ein Prozess 
+ auf die Größe eines Reaktionsgefäßes optimiert wurde) oder auch in wirtschaftlichen 
+ Aspekten (z.B. die Reduzierung von Rüstzeiten). Eine PU kann somit mehrere 
+ Aufträge beinhalten und umgekehrt kann sich ein Auftrag über mehrere PUs 
+ erstrecken.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die PU erhält eine vom Auftrag unabhängige Identifikation 
+ (z.B. Losnummer, Seriennummer, Chargennummer oder eindeutige ID eines 
+ Produktes) die mit dem / den daraus abgeleiteten Auftrag / Aufträgen verknüpft 
+ wird. Damit dient sie vor allem als Basis für das &quot;Tracking &amp; 
+ Tracing&quot; aller produktionsspezifischen Daten. Ist die PU &quot;ein 
+ Stück&quot; (diskrete Einzelfertigung) entspricht die PU einem bestimmten 
+ Endprodukt, das in der Regel auch über alle Arbeitsgänge eindeutig identifizierbar 
+ ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch">PUs können hierarchisch organisiert werden. Z.B. kann 
+ eine übergeordnete PU &quot;Charge&quot; in mehrere Chargen aufgeteilt 
+ werden, die sich aus der Größe eines Reaktionsbehälters ergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Löschen_von_Produktionseinheiten"></a>Löschen von Produktionseinheiten 
+ (Löschen von Tracking &amp; Tracing Daten)</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="line-height: normal; mso-outline-level: 1; 
+							 background-color: #ffffff;">PUs werden nach 
+ Ablauf der Haltedauer gelöscht. Das Löschen erledigt ein Löschjob für 
+ die Tabelle <span style="font-weight: bold;">PU_RODUCTION_UNITS</span>, 
+ Spalte <span style="font-weight: bold;">EXPIRE_DATE</span>. Die Haltedauer 
+ lässt sich für jeden PU-Status einzeln einstellen. Sie bezieht sich auf 
+ den Zeitstempel der letzten Identifikation.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird eine PU gelöscht, dann werden alle zugehörigen 
+ Daten mitgelöscht. Zu diesen Daten gehören:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Attributwerte</p></li>
+	<li><p class="BodyText"><span style="line-height: normal; mso-outline-level: 1;">PU-Verfolgung 
+	 (Tracking)</span></p></li>
+	<li><p class="BodyText">Statushistorie</p></li>
+	<li><p class="BodyText">Qualitätsstatushistorie</p></li>
+	<li><p class="BodyText">Aggregierte Daten der PU</p></li>
+	<li><p class="BodyText">Historie der Transportmittelbelegung (Carrier) 
+	 durch die PU</p></li>
+	<li><p class="BodyText">Materialverbrauch der PU</p></li>
+	<li><p class="BodyText">Information zu Produktvarianten der PU</p></li>
+	<li><p class="BodyText">Schichtbucheinträge zu der PU</p></li>
+	<li><p class="BodyText">Lagerplätze der PU</p></li>
+	<li><p class="BodyText">der PU zugeordnete archivierte Messwerte<span style="font-weight: bold; font-size: 14pt;">*</span></p></li>
+	<li><p class="BodyText">der PU zugeordnete archivierte Meldungen<span style="font-weight: bold; font-size: 14pt;">*</span></p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; mso-outline-level: 1; 
+	 background-color: #ffffff;" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"><span style="font-weight: bold; font-size: 14pt;">*</span><span style="line-height: normal; mso-outline-level: 1;">Ist die eingestellte 
+ Haltedauer für archivierte Messwerte oder archivierte Meldungen länger 
+ als die Haltedauer der PU, dann werden die archivierten Messwerte/Meldungen 
+ erst nach Ablauf dieser Haltefrist gelöscht. Das Löschen der archivierten 
+ Messwerte/Meldungen wird in jedem Fall von den Löschjobs für archivierte 
+ Messwerte bzw. archivierte Meldungen durchgeführt. Sie müssen wie unten 
+ angegeben konfiguriert sein.</span></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p class="TextkörperHinweis" style="line-height: normal; mso-outline-level: 1;" data-condition="Others:Deutsch">Beachten 
+ Sie im Zusammenhang zum Löschen von Produktionseinheiten das Kapitel <a href="../../09_Sys_Admin/Del_Jobs.htm">Lösch-Jobs im Bereich System-Administration</a>.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<h4 data-condition="Others:Deutsch">Löschen archivierter Messwerte</h4>
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; mso-outline-level: 1; 
+	 background-color: #ffffff;" data-condition="Others:Deutsch">Das Löschen der archivierten Messwerte 
+ erledigt ein Löschjob für die Tabelle <span style="font-weight: bold;">P_VALUE_ARCHIVE</span>, 
+ Spalte <span style="font-weight: bold;">EXPIRE_DATE</span>. Die Haltedauer 
+ für archivierte Messwerte wird bei diesem Löschjob angegeben.</p>
+<h4 data-condition="Others:Deutsch">Löschen archivierter Meldungen</h4>
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; mso-outline-level: 1; 
+	 background-color: #ffffff;" data-condition="Others:Deutsch">Das Löschen der archivierten Meldungen 
+ erledigt ein Löschjob für die Tabelle <span style="font-weight: bold;">AL_ARCHIVE</span>, 
+ Spalte <span style="font-weight: bold;">EXPIRE_DATE</span>. Die Haltedauer 
+ für archivierte Meldungen wird bei diesem Löschjob angegeben.</p>
+<h4 data-condition="Others:Deutsch">Löschen der Transportmittelverfolgung (Carrier Tracking)</h4>
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; mso-outline-level: 1; 
+	 background-color: #ffffff;" data-condition="Others:Deutsch">Für belegte Transportmittel wird die Verfolgung 
+ mit den darauf transportierten PUs gelöscht. Diese Aufgabe übernimmt der 
+ Löschjob für PUs. Die Verfolgung leerer Transportmittel wird durch einen 
+ Löschjob für die Tabelle <span style="font-weight: bold;">CAP_EMPTY_CARRIER_TRACKING</span>, 
+ Spalte <span style="font-weight: bold;">IDENT_TIME</span> gelöscht. Die 
+ Haltedauer für leere Transportmittel wird bei diesem Löschjob angegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Transportmittel"></a>Transportmittel</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><em><span style="font-style: normal;">Transportmittel</span></em> 
+ (CARRIER) und <em><span style="font-style: normal;">Verpackungen</span></em> 
+ (PACKAGES) sind wie <em><span style="font-style: normal;">Equipments</span></em> 
+ oder Mitarbeiter planbare Ressourcen bzw. &quot;Fertigungshilfsmittel&quot;. 
+ Zurzeit werden CARRIER und PACKAGES nur im Modul &quot;Tracking &amp; 
+ Tracing&quot; verwendet und werden bei Bedarf auch unter diesem Menüpunkt 
+ angelegt. </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">INFO:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">CARRIER werden nur benötigt, sofern beim Tracking 
+ der CARRIER anstelle der PU identifiziert werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die maximale Anzahl von CARRIERN (je Typ) im Umlauf 
+ kann beschränkt werden (Wie viele CARRIER kann das System überhaupt aufnehmen?) 
+ bzw. eine minimal erforderliche Anzahl kann festgelegt werden (Wie viele 
+ CARRIER sind mindestens für einen Produktionsbetrieb erforderlich?).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><em><span style="font-style: normal;">CARRIER</span></em> 
+ können zyklisch wiederverwendet werden. Die Anzahl der Umläufe wird für 
+ statistische Zwecke und zur vorbeugenden Wartung (zulässige Maximalzahl 
+ der Umläufe) erfasst.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><em><span style="font-style: normal;">CARRIER</span></em> 
+ können für die Verwendung im Produktionsprozess gesperrt werden. Eine 
+ Sperre kann z.B. durch Überschreitung der maximalen Anzahl von Umläufen 
+ automatisch oder manuell gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><em><span style="font-style: normal;">PACKAGES</span></em> 
+ werden nur einmalig verwendet. In Bezug auf Lagerverwaltung und &quot;Materialeinsatz&quot; 
+ im <em><span style="font-style: normal;">Arbeitsgang</span></em>, werden 
+ PACKAGES wie ein Kauf-Produkt behandelt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Produktionsprozess können CARRIER gewechselt werden. 
+ Eine PU kann also mit mehreren CARRIERN verknüpft werden (entweder geplanter 
+ Wechsel beim Übergang in eine andere Produktionsstufe oder ungeplanter 
+ Wechsel auf Grund eines Defekts). Die Belegung der <em><span style="font-style: normal;">CARRIER</span></em> 
+ im Laufe des Produktionsprozesses mit einer PU <em><span style="font-style: normal;">werden 
+ </span></em>erfasst und archiviert, um folgende Auskunftsfunktionen zu 
+ ermöglichen:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Auf welchem 
+ CARRIER (wo) befindet sich die PU aktuell?</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch">Welche 
+ CARRIER wurden durch die PU belegt?</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><em><span style="font-style: normal;">CARRIER / PACKAGES</span></em> 
+ können für unterschiedliche Produkte eingesetzt werden (m:n). Die Kapazität 
+ (= Menge des Produkts, die aufgenommen werden kann) eines CARRIERS/ eines 
+ PACKAGES kann je Produkt unterschiedlich sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><em><span style="font-style: normal;">CARRIER / PACKAGES</span></em> 
+ können andere <em><span style="font-style: normal;">CARRIER / PACKAGES</span></em> 
+ enthalten. Eine &quot;Verschachtelung&quot; ist in beliebiger Tiefe möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die grundlegenden Daten wie PU- bzw. Carrier-Definitionen 
+ und mögliche Status, die zur Ausführung der Prozeduren 
+ nötig sind, werden hier parametriert.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Voraussetzungen</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Teil müssen Daten, die für das Modul Tracking &amp; 
+ Tracing benötigt werden, an anderer Stelle im LC2 parametriert werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">ID Formate</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für bestimmte Funktionen werden ID-Formate benötigt. 
+ Diese müssen für alle benötigten PU-Definitionen angelegt worden sein. 
+ ID-Formate werden unter <span data-condition="Others:Sapient_only"> 
+ Produktionsmanagement | Tracking &amp; Tracing | PU ID-Formate</span> 
+ parametriert. Das Format legt die Syntax des ID-Strings fest.</p>
+
+
+<p class="Textkörperfett" data-condition="Others:Deutsch">Produkte / Variantensets</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine PU verweist immer auf ein Produkt / ein Variantenset. 
+ Deshalb müssen unter <a href="../../04_Master_Data/04_Products/06_Prod_Var_Sets.htm">Stammdatenverwaltung 
+ | Produkte | Produkte / Variantensets</a> angelegt werden, für die ein 
+ Tracking &amp; Tracing benötigt wird.</p>
+
+
+<p class="Textkörperfett" data-condition="Others:Sapient_only;Others:Deutsch">Lesestellen</p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Die Identifikation 
+ der PUs geschieht mit örtlicher Zuordnung zu einer Lesestelle. Lesestellen 
+ werden für Fertigungsknoten parametriert (unter <a href="../../05_ASS/03_Log_Struct/Identpoints.htm">Anwendungsstruktur 
+ | Fertigungsstruktur | Fertigungsknoten | Lesestellen</a>).</p>
+
+
+</body></html>

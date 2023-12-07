@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx"/>
+<meta http-equiv="Content-Language" content="de-DE"/>
+<meta name="condition-tags" content="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Installation des Legato Datenmodells mit J-LIW</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css"/>
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Installation des Legato Datenmodells mit J-LIW (für alle DB-Typen)</h2>
+<h3><a name="Systemvoraussetzungen" id="Systemvoraussetzungen"></a>Systemvoraussetzungen</h3>
+<p class="BodyText">Java 8 und ein geeigneter JDBC-Treiber (wird mit der 
+ Application Engine bzw. Sapient Engine mit ausgeliefert oder kann beim 
+ DB-Update mit heruntergeladen werden). Gegebenenfalls muss die Umgebungsvariable 
+ JAVA_HOME noch erstellt und auf den korrekten Pfad gesetzt werden (Systemsteuerung 
+ - Systemumgebungsvariablen bearbeiten - neue Variable erstellen).</p>
+<p class="BodyText">PC mit graphischer Oberfläche (X-Window), zum Beispiel 
+ Windows 10.</p>
+<p class="BodyText">Die graphische Benutzeroberfläche (GUI) zum Installieren 
+ und Updaten der Datenbank kann über LDBsetup.exe gestartet werden.</p>
+<p class="Textkörperfett" data-condition="Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Sapient_only">Für 
+ alle Updates ab Sapient 2.3.001 muss zwingend die J-LIW Version 2.3.001 
+ verwendet werden! Diese enthält einen neuen Befehl &quot;WbDataCleanup&quot;, 
+ der JSON-Felder konvertiert.</p>
+<p class="TextkörperHinweis" data-condition="Others:Sapient_only">Für 
+ alle Updates ab Sapient 2.4.2 muss zwingend die J-LIW Version 2.4.002 
+ verwendet werden! Mit dieser werden Oracle-Constraints auf eine andere 
+ Weise erstellt.</p>
+<h4 data-condition="Others:Sapient_only">Bei Oracle zusätzlich</h4>
+<p class="BodyText" data-condition="Others:Sapient_only">Bei der Verwendung 
+ von Oracle müssen bei der Installation des DB-Servers bereits folgende 
+ Einstellungen getroffen worden sein:</p>
+<p class="BodyText" data-condition="Others:Sapient_only">1. DBTIMEZONE 
+ muss auf UTC (entspricht +00:00) gestellt sein.</p>
+<p class="BodyText" data-condition="Others:Sapient_only">Ist dies 
+ nicht der Fall, kommt es in J-LIW beim Schritt &quot;Datenbank-Installation 
+ prüfen&quot; zu einer Fehlermeldung: &quot;[FAILURE] Your Database timezone 
+ setting is incorrect! It is &#39;+01:00&#39;, but should be &#39;00:00&#39;&quot;. Führen 
+ Sie in diesem Fall folgenden Befehl als sysdba aus:</p>
+<p class="TextCode" data-condition="Others:Sapient_only">alter database 
+ set TIME_ZONE = &#39;+00:00&#39;;</p>
+<p class="TextCode" data-condition="Others:Sapient_only">-- RESTART 
+ YOUR DATABASE !!</p>
+<p class="TextCode" data-condition="Others:Sapient_only">shutdown 
+ immediate;</p>
+<p class="TextCode" data-condition="Others:Sapient_only">startup;</p>
+<p class="TextCode" data-condition="Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Sapient_only">2. COMPATIBLE 
+ MODE muss auf 12.1 gestellt sein.</p>
+<p class="BodyText" data-condition="Others:Sapient_only">Ist dies 
+ nicht der Fall, kommt es in J-LIW beim Schritt &quot;Datenbank-Installation 
+ prüfen&quot; zu einer Fehlermeldung: &quot;[FAILURE] Your Database compatible 
+ mode is incorrect! It is &#39;11.2.0.0.0&#39;, but should start with &#39;12.1.&#39;&quot; 
+ Führen Sie in diesem Fall folgenden Befehl als sysdba aus:</p>
+<p class="TextCode" data-condition="Others:Sapient_only">alter system 
+ set COMPATIBLE = &#39;12.1.0.2.0&#39; scope=spfile;</p>
+<p class="TextCode" data-condition="Others:Sapient_only">-- RESTART 
+ YOUR DATABASE !!</p>
+<p class="TextCode" data-condition="Others:Sapient_only">shutdown 
+ immediate;</p>
+<p class="TextCode" data-condition="Others:Sapient_only">startup;</p>
+<p class="TextCode"> </p>
+<h3><a id="Überblick"></a>Überblick</h3>
+<p class="BodyText">Das Datenmodell für eine Instanz wird mit Hilfe der 
+ LDBsetup.exe eingerichtet.</p>
+<p class="BodyText">Der Installer wird sowohl für eine Neuinstallation 
+ als auch für die Installation von Updates, unabhängig vom Datenbanktyp, 
+ verwendet.</p>
+<p class="Textkörperfett">INFO:</p>
+<p class="TextkörperHinweis">Ab J-LIW Version 2.5.0 können mehrere Updates 
+ in einem Durchlauf installiert werden.</p>
+<p class="BodyText">Die wichtigsten Angaben für den Installer wie z.B. 
+ der Datenbanktyp und die Reihenfolge der auszuführenden Scripte sind 
+ in der Datei SetupLDB.ini festgehalten. Das J-LIW Command wandelt die 
+ Datei in das benötigte XML-Format um.</p>
+<h3><a id="Beispiel_für_SetupLDB.ini"></a>Beispiel für SetupLDB.ini</h3>
+<p class="TextCode" data-condition="Others:Classic_only">[SETUPLDB]</p>
+<p class="TextCode" data-condition="Others:Classic_only">DBTYPE=ORACLE</p>
+<p class="TextCode" data-condition="Others:Classic_only">[INFOTEXT]</p>
+<p class="TextCode" data-condition="Others:Classic_only">Bitte überprüfen 
+ Sie, ob alle Clients, die auf die Datenbank zugreifen, vor Beginn der 
+ Installation deaktiviert wurden:</p>
+<p class="TextCode" data-condition="Others:Classic_only">- Webapplikation</p>
+<p class="TextCode" data-condition="Others:Classic_only">- Daemonprozesse</p>
+<p class="TextCode" data-condition="Others:Classic_only">- AppEngineprozesse</p>
+<p class="TextCode" data-condition="Others:Classic_only">- Gateways</p>
+<p class="TextCode" data-condition="Others:Classic_only">- DB-Jobs</p>
+<p class="TextCode" data-condition="Others:Classic_only">[MANUAL]</p>
+<p class="TextCode" data-condition="Others:Classic_only">#OPERATIVE_DB</p>
+<p class="TextCode" data-condition="Others:Classic_only">00=Installationsvoraussetzungen 
+ prüfen,Standard\test_install_prerequisites.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%</p>
+<p class="TextCode" data-condition="Others:Classic_only">05=#Datenbankuser 
+ pro Komponente anlegen,Standard\create_leg_comp_users.sql,connect SYSTEM/%SYSTEMPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">10=Sequenzen 
+ anpassen,Standard\sequences.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">15=Tabellen 
+ anpassen,Standard\struct.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">20=Typen 
+ anpassen,Standard\types.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">25=Prozeduren 
+ anpassen,Standard\procedures.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">30=Views 
+ anpassen,Standard\views.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">40=Trigger 
+ anpassen,Standard\triggers.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">#41=Systemtrigger 
+ anpassen,Standard\create_system_triggers.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">50=Berechtigungen 
+ erteilen,Standard\grants.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">55=Synonyms 
+ für legato_read erstellen,Standard\synonyms.txt,connect %LEGATO_READ_USR%/%LEGATO_READ_USRPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">56=Synonyms 
+ für legato_write erstellen,Standard\synonyms.txt,connect %LEGATO_WRITE_USR%/%LEGATO_WRITE_USRPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">57=#Synonyms 
+ für DB-User LEGATO_AE_USR erstellen,Standard\synonyms.txt,connect %LEGATO_AE_USR%/%LEGATO_AE_PW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">58=#Synonyms 
+ für DB-User LEGATO_GW_USR erstellen,Standard\synonyms.txt,connect %LEGATO_GW_USR%/%LEGATO_GW_PW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">59=#Synonyms 
+ für DB-User LEGATO_LC2_USR erstellen,Standard\synonyms.txt,connect %LEGATO_LC2_USR%/%LEGATO_LC2_PW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">60=#Synonyms 
+ für DB-User LEGATO_WA_USR erstellen,Standard\synonyms.txt,connect %LEGATO_WA_USR%/%LEGATO_WA_PW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">70=Objekte 
+ legato_owner kompilieren und prüfen,Standard\recompile_all_objects.txt,connect 
+ %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,select object_name from user_objects 
+ where status = &#39;INVALID&#39; and substr(object_name~, 1~, 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">71=Objekte 
+ legato_read kompilieren und prüfen,Standard\recompile_all_objects_read.txt,connect 
+ %LEGATO_READ_USR%/%LEGATO_READ_USRPW%@%LEGATO_SID%,select object_name 
+ from user_objects where status = &#39;INVALID&#39; and substr(object_name~, 1~, 
+ 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">72=Objekte 
+ legato_write kompilieren und prüfen,Standard\recompile_all_objects_write.txt,connect 
+ %LEGATO_WRITE_USR%/%LEGATO_WRITE_USRPW%@%LEGATO_SID%,select object_name 
+ from user_objects where status = &#39;INVALID&#39; and substr(object_name~, 1~, 
+ 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">73=#Objekte 
+ des DB-User LEGATO_AE_USR kompilieren und prüfen,Standard\recompile_all_objects_write.txt,connect 
+ %LEGATO_AE_USR%/%LEGATO_AE_PW%@%LEGATO_SID%,select object_name from user_objects 
+ where status = &#39;INVALID&#39; and substr(object_name~, 1~, 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">74=#Objekte 
+ des DB-User LEGATO_GW_USR kompilieren und prüfen,Standard\recompile_all_objects_write.txt,connect 
+ %LEGATO_GW_USR%/%LEGATO_GW_PW%@%LEGATO_SID%,select object_name from user_objects 
+ where status = &#39;INVALID&#39; and substr(object_name~, 1~, 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">75=#Objekte 
+ des DB-User LEGATO_LC2_USR kompilieren und prüfen,Standard\recompile_all_objects_write.txt,connect 
+ %LEGATO_LC2_USR%/%LEGATO_LC2_PW%@%LEGATO_SID%,select object_name from 
+ user_objects where status = &#39;INVALID&#39; and substr(object_name~, 1~, 4) 
+ != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">76=#Objekte 
+ des DB-User LEGATO_WA_USR kompilieren und prüfen,Standard\recompile_all_objects_write.txt,connect 
+ %LEGATO_WA_USR%/%LEGATO_WA_PW%@%LEGATO_SID%,select object_name from user_objects 
+ where status = &#39;INVALID&#39; and substr(object_name~, 1~, 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">#CONFIG_DATA</p>
+<p class="TextCode" data-condition="Others:Classic_only">80=FK und 
+ Trigger ausschalten,Standard\disable_constraints_triggers.txt,connect 
+ %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">90=Basisdaten 
+ anpassen,Standard\configdata.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,commit;</p>
+<p class="TextCode" data-condition="Others:Classic_only">91=#Sprachtexte 
+ aktualisieren,Standard\configdata_lang.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,commit;</p>
+<p class="TextCode" data-condition="Others:Classic_only">100=FK und 
+ Trigger einschalten,Standard\enable_constraints_triggers.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,select 
+ constraint_name from user_constraints c~, user_tables t where c.table_name 
+ = t.table_name and c.status != &#39;ENABLED&#39; and t.IOT_TYPE is null and substr(c.constraint_name~, 
+ 1~, 4) != &#39;BIN$&#39;;</p>
+<p class="TextCode" data-condition="Others:Classic_only">110=Sequenzen 
+ neugenerieren,Standard\recreate_sequences.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">#FINAL_SCRIPTS</p>
+<p class="TextCode" data-condition="Others:Classic_only">130=Tasks 
+ nach Update/Install,Standard\post_tasks.txt,connect %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">140=Versionierung,Standard\set_objectversion.txt,connect 
+ %LEGATO_OWNER%/%LEGATO_OWNERPW%@%LEGATO_SID%,</p>
+<p class="TextCode" data-condition="Others:Classic_only">[TRANSLATION]</p>
+<p class="TextCode" data-condition="Others:Classic_only">#02=Standard\configdata.mld 
+ nur bei Bedarf, wenn zu übersetzende Texte in struct.txt enthalten sind</p>
+<p class="TextCode" data-condition="Others:Classic_only">90=Standard\configdata.mld</p>
+<p class="TextCode" data-condition="Others:Classic_only">91=Standard\configdata.mld</p>
+<p class="TextCode" data-condition="Others:Classic_only">[REPLACE]</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Tablespaces</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Tablespaces 
+ Operative</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_DATA_M%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_DATA_S%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_DATA_L%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_INDX_S%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_INDX_M%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_INDX_L%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Users and 
+ initial Passwords</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_OWNER%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_OWNERPW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_READ_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_READ_USRPW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WRITE_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WRITE_USRPW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_RPT_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%AES128LEGATO_RPT_USRPW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_RPT_USRARC%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%AES128LEGATO_RPT_USRARCPW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_AE_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_AE_PW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_GW_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_GW_PW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_LC2_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_LC2_PW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WA_USR%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WA_PW%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Reports</p>
+<p class="TextCode" data-condition="Others:Classic_only">%SCHEMA_PROD%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%SCHEMA_ARC%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%JDBC_URL_ARC%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Roles</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_READ_ROLE%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WRITE_ROLE%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Version</p>
+<p class="TextCode" data-condition="Others:Classic_only">%MASTER_VERSION%=LEGATO 
+ 4.7.1.001</p>
+<p class="TextCode" data-condition="Others:Classic_only">%PREVVERSION%=LEGATO 
+ 4.7.1.000</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Indexe</p>
+<p class="TextCode" data-condition="Others:Classic_only">%degree%=degree 
+ 1</p>
+<p class="TextCode" data-condition="Others:Classic_only">#DB</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_SID%=</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_RFRGRP_LNODEREL%=LEGATO_RFRGRP_LNODEREL</p>
+<p class="TextCode" data-condition="Others:Classic_only">[DESCRIPTION]</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Tablespaces</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_DATA_M%=Tablespace 
+ Operativ-DB f. mittlere Tabellen</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_DATA_S%=Tablespace 
+ Operativ-DB f. kleine Tabellen</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_DATA_L%=Tablespace 
+ Operativ-DB f. große Tabellen</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_INDX_S%=Tablespace 
+ Operativ-DB f. kleine Indizes</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_INDX_M%=Tablespace 
+ Operativ-DB f. mittlere Indizes</p>
+<p class="TextCode" data-condition="Others:Classic_only">%TS_LEGATO_INDX_L%=Tablespace 
+ Operativ-DB f. große Indizes</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Users and 
+ initial Passwords</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_OWNER%=Benutzername 
+ des Besitzers der LEGATO Datenbank</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_OWNERPW%=Passwort 
+ des Besitzers der LEGATO Datenbank</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_READ_USR%=Benutzername 
+ des LEGATO Benutzers mit Leserechten</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_READ_USRPW%=Passwort 
+ des LEGATO Benutzers mit Leserechten</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WRITE_USR%=Benutzername 
+ des LEGATO Benutzers mit Schreibrechten</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WRITE_USRPW%=Passwort 
+ des LEGATO Benutzers mit Schreibrechten</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_RPT_USR%=Benutzername 
+ des LEGATO Benutzers für den BIRT-Designer</p>
+<p class="TextCode" data-condition="Others:Classic_only">%AES128LEGATO_RPT_USRPW%=Passwort 
+ des LEGATO Benutzers für den BIRT-Designer</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_RPT_USRARC%=Benutzername 
+ des LEGATO Benutzers für den BIRT-Designer Archiv-DB (bei 1-DB leer)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%AES128LEGATO_RPT_USRARCPW%=Passwort 
+ des LEGATO Benutzers für den BIRT-Designer Archiv-DB (bei 1-DB leer)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_AE_USR%=Benutzername 
+ des LEGATO Benutzers für die Komponente App-Engine (AE)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_AE_PW%=Passwort 
+ des LEGATO Benutzers für die Komponente App-Engine (AE)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_GW_USR%=Benutzername 
+ des LEGATO Benutzers für die Komponente Gateway (GW)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_GW_PW%=Passwort 
+ des LEGATO Benutzers für die Komponente Gateway (GW)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_LC2_USR%=Benutzername 
+ des LEGATO Benutzers für die Komponente Configuration Center (LC2)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_LC2_PW%=Passwort 
+ des LEGATO Benutzers für die Komponente Configuration Center (LC2)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WA_USR%=Benutzername 
+ des LEGATO Benutzers für die Komponente Web-Applikation (WA)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WA_PW%=Passwort 
+ des LEGATO Benutzers für die Komponente Web-Applikation (WA)</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Reports</p>
+<p class="TextCode" data-condition="Others:Classic_only">%SCHEMA_PROD%=Schema 
+ für Produktiv-DB (wird größtenteils nicht verwendet)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%SCHEMA_ARC%=Schema 
+ für Produktiv-DB (wird größtenteils nicht verwendet und bei 1-Db leer)</p>
+<p class="TextCode" data-condition="Others:Classic_only">%JDBC_URL_ARC%=JDBC 
+ Verbindungsstring zur Archiv-DB (bei 1-DB leer)</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Roles</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_READ_ROLE%=Rollenname 
+ f. Rolle mit Leserechten auf LEGATO</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_WRITE_ROLE%=Rollenname 
+ f. Rolle mit Schreibrechten auf LEGATO</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Version</p>
+<p class="TextCode" data-condition="Others:Classic_only">%MASTER_VERSION%=Versionstand 
+ der Legato DB</p>
+<p class="TextCode" data-condition="Others:Classic_only">%PREVVERSION%=vorausgesetzter 
+ Versionstand der Legato DB</p>
+<p class="TextCode" data-condition="Others:Classic_only">#Indexe</p>
+<p class="TextCode" data-condition="Others:Classic_only">%degree%=Paraleller 
+ Grad für Indexe (CPU-Anzahl - 1, jedoch minimum 1)</p>
+<p class="TextCode" data-condition="Others:Classic_only">#DB</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_SID%=SID 
+ der Datenbank</p>
+<p class="TextCode" data-condition="Others:Classic_only">%LEGATO_RFRGRP_LNODEREL%=Name 
+ der Refreshgruppe für L_NODE_RELATIONS</p>
+<p class="TextCode"> </p>
+<p class="TextCode" data-condition="Others:Sapient_only">[SETUPLDB]</p>
+<p class="TextCode" data-condition="Others:Sapient_only">PRODUCT_VERSION_NAME=SAPIENT</p>
+<p class="TextCode" data-condition="Others:Sapient_only">[MANUAL]</p>
+<p class="TextCode" data-condition="Others:Sapient_only">01=Datenbank 
+ Benutzer erstellen,create_users_postgresql.sql,connect %SYSTEM_DBA_USR%/%SYSTEM_DBA_USRPW%@%SAPIENT_URL%,</p>
+<p class="TextCode" data-condition="Others:Sapient_only">10=Tabellen 
+ anlegen,tables_create.sql,connect %SAPIENT_OWNER%/%SAPIENT_OWNERPW%@%SAPIENT_URL%,</p>
+<p class="TextCode" data-condition="Others:Sapient_only">11=Tabellen-Referenzen 
+ anlegen,tables_refs.sql,connect %SAPIENT_OWNER%/%SAPIENT_OWNERPW%@%SAPIENT_URL%,</p>
+<p class="TextCode" data-condition="Others:Sapient_only">12=Views 
+ anlegen,views.sql,connect %SAPIENT_OWNER%/%SAPIENT_OWNERPW%@%SAPIENT_URL%,</p>
+<p class="TextCode" data-condition="Others:Sapient_only">20=Konfigurationsdaten 
+ anlegen,configdata.sql,connect %SAPIENT_OWNER%/%SAPIENT_OWNERPW%@%SAPIENT_URL%,</p>
+<p class="TextCode" data-condition="Others:Sapient_only">[TRANSLATION]</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#41=Standard\configdata.mld</p>
+<p class="TextCode" data-condition="Others:Sapient_only">[REPLACE]</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Tablespaces</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_DATA_M%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_DATA_S%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_DATA_L%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_INDX_S%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_INDX_M%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_INDX_L%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Users and 
+ initial Passwords</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_OWNER%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_OWNERPW%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_CLIENT_USR%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_CLIENT_USRPW%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_SERVER_USR%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_SERVER_USRPW%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SYSTEM_DBA_USR%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SYSTEM_DBA_USRPW%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Roles</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_APP_ROLE%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Version</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%MASTER_VERSION%=SAPIENT 
+ 2.0.000</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Indexe</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%degree%=degree 
+ 1</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#DB</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_SID%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_URL%=</p>
+<p class="TextCode" data-condition="Others:Sapient_only">[DESCRIPTION]</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Tablespaces</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_DATA_M%=Daten-Tablespace 
+ für mittlere Tabellen</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_DATA_S%=Daten-Tablespace 
+ für kleine Tabellen</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_DATA_L%=Daten 
+ Tablespace für große Tabellen</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_INDX_S%=Index-Tablespace 
+ für kleine Tabellen</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_INDX_M%=Index-Tablespace 
+ für mittlere Tabellen</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%TS_LEGATO_INDX_L%=Index-Tablespace 
+ für große Tabellen</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Users and 
+ initial Passwords</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_OWNER%=Benutzername 
+ des Besitzers der SAPIENT Datenbank</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_OWNERPW%=Passwort 
+ des Besitzers der SAPIENT Datenbank</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_CLIENT_USR%=Benutzername 
+ des SAPIENT für Client-Anwendungen (wie LC2)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_CLIENT_USRPW%=Passwort 
+ des DB-User für Client-Anwendungen (wie LC2)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_SERVER_USR%=Benutzername 
+ des SAPIENT für Server-Anwendungen (wie Web-App)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_SERVER_USRPW%=Passwort 
+ des DB-User für Server-Anwendungen (wie Web-App)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SYSTEM_DBA_USR%=DB-Superuser 
+ mit besonderen System-Rechten</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SYSTEM_DBA_USRPW%=Passwort 
+ für DB-Superuser</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Roles</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_APP_ROLE%=Rollenname 
+ für Applikationsuser (SAPIENT_CLIENT_USR, SAPIENT_SERVER_USR)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Version</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%MASTER_VERSION%=Versionstand 
+ der Legato DB</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#Indexe</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%degree%=Paraleller 
+ Grad für Indexe (CPU-Anzahl - 1, jedoch minimum 1)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">#DB</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_SID%=Name 
+ der SAPIENT-Datenbank (SID)</p>
+<p class="TextCode" data-condition="Others:Sapient_only">%SAPIENT_URL%=URL 
+ zur SAPIENT-Datenbank</p>
+<h3><a id="Ausführung_des_Setups"></a>Ausführung des Setups</h3>
+<h4>Aufruf</h4>
+<p class="BodyText">Zuerst wird die Datei LDBsetup.exe geöffnet. Darin 
+ wird dann die gewünschte Setup-Datei (setupldb.ini aus DB-Verzeichnis) 
+ sowie die zugehörige Properties-Datei geladen.</p>
+<h4>Treiber</h4>
+<p class="BodyText">Die benötigten Treiber werden üblicherweise automatisch 
+ geladen. Wird allerdings die Workbench gestartet, bevor LDBSetup gestartet 
+ wird, klappt dies unter Umständen nicht. Die Treiber können dann auch 
+ manuell eingetragen werden. Klick auf &quot;File - Manage Drivers&quot; 
+ öffnet folgenden Dialog:</p>
+<p class="BodyText"><img src="../../../Bilder/DB_Drivers.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText">Wählen Sie aus der Liste links Ihren Datenbank-Typ 
+ aus (Oracle oder PostgreSQL). Rechts werden dann die Treiber angezeigt 
+ und können durch Klick auf OK gespeichert werden.</p>
+<h4>INI-Datei laden</h4>
+<p class="BodyText">Die INI-Datei enthält Platzhalter (%???%), die zur 
+ Laufzeit vom Installer durch die vom Benutzer festgelegten Werte ersetzt 
+ werden.</p>
+<p class="Textkörperfett" data-condition="Others:Classic_only"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0" data-condition="Others:Classic_only"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Oracle_only;Others:Classic_only"><span data-condition="Others:Classic_only">Die 
+ Platzhalter für die Legato-Benutzer LEGATO_OWNER, LEGATO_READ, LEGATO_WRITE, 
+ LEGATO_LC2, LEGATO_GW, LEGATO_AE und LEGATO_WA dürfen nicht &quot;Legato&quot; 
+ genannt werden. Andernfalls kommt es zu Fehlern, da &quot;Legato&quot; 
+ auch der Name eines DB-Packages ist. Auch die Namen anderer DB-Packages 
+ dürfen nicht für Datenbank-Benutzer verwendet werden.</span></p>
+<p class="Textkörperfett"><b>Die INI-Datei wird von GEFASOFT erstellt und 
+ ausgeliefert. Anpassungen sollten nur nach Rücksprache durchgeführt werden, 
+ um Fehler zu vermeiden.</b></p>
+<p class="BodyText">Der eigentliche Installationsvorgang wird durch SQL-Skripte 
+ gesteuert, die durch den Installer interpretiert und ausgeführt werden. 
+ Auf diese Skripte wird im Abschnitt [MANUAL] der INI-Datei verwiesen. 
+ </p>
+<p class="BodyText" data-condition="Others:Classic_only"><img src="../../../Bilder/DB_1.png" alt="" style="border: none;" width="700" height="521" border="0"/></p>
+<p class="BodyText" data-condition="Others:Sapient_only"><img src="../../../Bilder/DB_1S.png" alt="" style="border: none;" width="700" height="426" border="0"/></p>
+<p class="BodyText">Durch Laden der setupldb.ini wird automatisch das gewünschte 
+ Produkt (Legato Classic oder Sapient) gewählt. Bei Sapient sind bis zu 
+ 5 Sprachen möglich, zumindest die 1. Systemsprache muss festgelegt werden.</p>
+<p class="BodyText">Dann müssen die jeweiligen Parameterwerte eingegeben 
+ werden. Nachdem die Installationsparameter einmal eingegeben wurden, kann 
+ durch Aktivieren der Checkbox &quot;Save PRM-File&quot; ein Parameter-File 
+ (Dateiendung .prm) lokal abgespeichert werden. Für weitere Installationen 
+ kann man das PRM-File dann durch Klick auf &quot;File - Load PRM file 
+ ...&quot; wieder laden und muss nicht alle Parameter erneut eingeben.</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Es wird hier nicht geprüft, ob alle benötigten 
+ Parameterwerte eingegeben wurden. Dies wird erst beim Ausführen geprüft.</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Wie im Screen erwähnt, müssen alle Clients, 
+ die auf die Datenbank zugreifen, vor Beginn der Installation deaktiviert 
+ werden.</p>
+<h4>Ausführung</h4>
+<p class="BodyText">Klick auf &quot;Next&quot; führt zum nächsten Dialog, 
+ in dem die auszuführenden Schritte festgelegt werden können.</p>
+<p class="BodyText" data-condition="Others:Classic_only"><img src="../../../Bilder/DB_2.png" alt="" style="border: none;" width="700" height="510" border="0"/></p>
+<p class="BodyText" data-condition="Others:Sapient_only"><img src="../../../Bilder/DB_2S.png" alt="" style="border: none;" width="700" height="426" border="0"/></p>
+<p class="BodyText">Insbesondere die Aktion &quot;Sprachtexte aktualisieren&quot; 
+ sollte für jeden Patch aktiviert werden. Die Aktion &quot;Synonyms für 
+ DB-User xxx erstellen&quot; muss nur für den letzten (höchsten) Patch 
+ aktiviert werden und nicht jedes mal ausgeführt werden.</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Wenn die Datenbankuser noch nicht angelegt 
+ sind, muss die Checkbox &quot;Validate Connections&quot; deaktiviert werden, 
+ sonst kommt es zu Fehlermeldungen.</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Klick auf &quot;Back&quot; setzt bereits geänderte 
+ Checkboxen wieder auf den Default zurück.</p>
+<p class="BodyText">Es empfiehlt sich, einen Testlauf durchzuführen, um 
+ mögliche Fehler vorab zu beheben. Dies kann durch Klick auf den Button 
+ &quot;Write&quot; erfolgen.</p>
+<h4>Validierung</h4>
+<p class="BodyText">Vor jeder Ausführung (beim Klick auf &quot;Execute&quot; 
+ oder &quot;Write&quot;) wird das Setup validiert. <span data-condition="Others:Old">Die 
+ Validierung kann auch mit folgendem Befehl separat aufgerufen werden:</span></p>
+<p class="TextCode" data-condition="Others:Old">LgtDbSetup <span class="o" style="font-weight: bold;" data-condition="Others:Old">-</span>setup<span class="o" style="font-weight: bold;" data-condition="Others:Old">=</span><span class="k" style="font-weight: bold;" data-condition="Others:Old">C</span><span class="p">:</span><span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>Projekte<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>Legato<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>WebApp<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>J<span class="o" style="font-weight: bold;" data-condition="Others:Old">-</span>LIW<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>test<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>resources<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>TEST_SETUP_DIR_1</p>
+<p class="TextCode" data-condition="Others:Old">           <span class="o" style="font-weight: bold;" data-condition="Others:Old">-</span>loadVars<span class="o" style="font-weight: bold;" data-condition="Others:Old">=</span><span class="k" style="font-weight: bold;" data-condition="Others:Old">C</span><span class="p">:</span><span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>SVN<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>legatodb<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>env<span class="o" style="font-weight: bold;" data-condition="Others:Old">/</span>DB_Modell_Install_Compare<span class="o" style="font-weight: bold;" data-condition="Others:Old">-</span><span class="mi" style="color: rgb(0, 153, 153);" data-condition="Others:Old">56</span><span class="p">.</span>prm</p>
+<p class="TextCode" data-condition="Others:Old">           <span class="o" style="font-weight: bold;" data-condition="Others:Old">-</span>lang0<span class="o" style="font-weight: bold;" data-condition="Others:Old">=</span>de</p>
+<p class="TextCode" data-condition="Others:Old">           <span class="o" style="font-weight: bold;" data-condition="Others:Old">-</span>validate<span class="p">;</span></p>
+<p class="TextCode"> </p>
+<p class="BodyText"><span class="p">Bei der Validierung wird Folgendes 
+ geprüft:</span></p>
+<p class="BodyText"><span class="p">1. Sind alle Dateien vorhanden?</span></p>
+<p class="BodyText">2. Sind alle Platzhalter vorhanden?</p>
+<p class="BodyText">3. Falls Übersetzungen benötigt werden (mindestens 
+ ein Schritt ist als &quot;translate&quot; angegeben):</p>
+<p class="Aufzählung1">a) Ist die Primärsprache (lang0) angegeben?</p>
+<p class="Aufzählung1">b) Ist die Sprachdatei vorhanden?</p>
+<p class="BodyText"> </p>
+<p class="BodyText">Wurden Fehler gefunden, so können diese nun behoben 
+ werden. Dies erfolgt in der Workbench:</p>
+<h4>Workbench</h4>
+<p class="BodyText">Zum Öffnen der Workbench, klicken Sie auf Tools - Open 
+ Workbench. </p>
+<p class="BodyText">Dort muss zunächst die Verbindung angegeben werden, 
+ die analysiert / bearbeitet werden soll:</p>
+<p class="BodyText"><img src="../../../Bilder/DB_Workbench.png" alt="" style="border: none;" width="700" height="482" border="0"/></p>
+<p class="BodyText">Klick auf &quot;Test&quot; prüft die Verbindungsdaten.</p>
+<p class="BodyText">Um diese Verbindung zu speichern, klicken Sie oben 
+ in der Bedienzeile auf das Diskettensymbol.</p>
+<p class="BodyText">Unter &quot;Workspace - Load Workspace&quot; kann nun 
+ der Arbeitsbereich geladen werden. Dieser ist üblicherweise unter C:\Users\Username\.sqlworkbench\Default.wksp 
+ gespeichert. Außerdem wurde mit J-LIW bereits ein vorbereiteter Workspace 
+ mit einer Installations-Checkliste ausgeliefert.<span data-condition="Others:Classic_only"> 
+ Diesen finden Sie im entpackten J-LIW-Verzeichnis unter \workspaces\LegatoSystem.wksp.</span><span data-condition="Others:Sapient_only"> 
+ Diesen finden Sie im entpackten J-LIW-Verzeichnis unter \workspaces\SapientSystem.wksp.</span></p>
+<p class="BodyText">Laden Sie den Workspace LegatoSystem.wksp und selektieren 
+ Sie Tab 1 &quot;Update Checklist&quot;. Hier finden Sie vorgefertigte 
+ SQLs zum Beispiel zum Kompilieren von invaliden Objekten oder dem Stoppen 
+ der User-Jobs:</p>
+<p class="BodyText"><img src="../../../Bilder/wksp.png" alt="" style="border: none;" width="700" height="461" border="0"/></p>
+<p class="BodyText">Durch Klick auf das &quot;Play&quot;-Symbol oben links 
+ werden die Befehle abgearbeitet. Im unteren Teil werden eventuell auftretende 
+ Meldungen angezeigt.</p>
+<h4>Installation</h4>
+<p class="BodyText">Danach kann man zur LDBSetup zurückkehren und dort 
+ durch Klick auf &quot;Execute&quot; die DB-Installation starten.</p>
+<p class="BodyText">Es werden folgende Punkte abgearbeitet:</p>
+<p class="Aufzählung1 Liste1neu">alle Platzhalter werden durch die konkreten Werte 
+ ersetzt</p>
+<p class="Aufzählung1 Liste1neu">alle Übersetzungen werden eingesetzt</p>
+<p class="Aufzählung1 Liste1neu">die einzelnen Schritte werden ausgeführt</p>
+<p class="BodyText"> </p>
+<p class="BodyText">Ein <img src="../../../Bilder/DBSetup1.png" alt="" style="border: none;" border="0"/> in der 
+ Spalte &quot;Status&quot; bezeichnet den Schritt, der gerade bearbeitet 
+ wird. <img src="../../../Bilder/DBSetup2.png" alt="" style="border: none;" border="0"/> zeigt einen Fehler an, <img src="../../../Bilder/DBSetup3.png" alt="" style="border: none;" border="0"/> 
+ einen Hinweis, <img src="../../../Bilder/DBSetup4.png" alt="" style="border: none;" border="0"/> eine erfolgreich durchgeführte Aktion. 
+ Bei einem Fehler wird die Installation abgebrochen. Nach der Fehlerbehebung 
+ kann die Installation an dieser Stelle fortgesetzt werden (vorherige Schritte 
+ können abgewählt werden).</p>
+<p class="BodyText">Kam es bei einer Aktion zu einem Problem, so können 
+ genauere Informationen dem Logfile entnommen werden.</p>
+<p class="BodyText">Die Installation ist ausgeführt, wenn alle Schritte 
+ erfolgreich bearbeitet wurden.</p>
+<h4>Passwort-Verschlüsselung für LC2-User</h4>
+<p class="BodyText">Bei einer Neuinstallation wird auch das verschlüsselte 
+ Passwort für den LC2-User angelegt. </p>
+<p class="BodyText">Ab J-LIW Version 2.5.2 kann dies mit Hilfe von: </p>
+<p class="TextCode">LgtDbSetup -encryptLC2Key=yourkey</p>
+<p class="TextCode"> </p>
+<p class="BodyText">erfolgen. Dazu muss jedoch ein JRE mit &#39;Java Cryptography 
+ Extension (JCE) Unlimited Strength Jurisdiction Policy Files&#39; installiert 
+ sein.</p>
+<p class="BodyText">Bis J-LIW Version 2.5.2 ist die Verschlüsselung nicht 
+ mit Standard-Java-Mitteln möglich, es wird eine Extension dafür benötigt. 
+ J-LIW gibt dann folgenden Warnhinweis aus:</p>
+<p class="TextCode">ERROR: Your Java cannot encrypt key used for LC2. Please 
+ update the &#39;Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction 
+ Policy Files&#39;. These files can be downloaded at Java SE download page 
+ (http://www.oracle.com/technetwork/java/javase/downloads/index.html) and 
+ extract them into folder &#39;${java.home}/jre/lib/security/&#39;.</p>
+<p class="TextCode"> </p>
+<p class="BodyText">In diesem Fall muss also die JCE wie in der Fehlermeldung 
+ beschrieben aktualisiert werden.</p>
+<p class="BodyText">Ob J-LIW das LC2-Passwort verschlüsseln kann, kann 
+ mit folgender Anweisung geprüft werden:</p>
+<p class="TextCode">LgtDbSetup -canEncryptLC2Key;</p>
+<p class="TextCode"> </p>
+<h3><a id="Log-Ausgabe"></a>Log-Ausgabe</h3>
+<p class="BodyText">Über den Menüpunkt &quot;Help &gt; Show Log&quot; kann 
+ die Log-Ausgabe der Workbench angezeigt werden. Das Log selbst liegt normalerweise 
+ im User-Verzeichnis unter &quot;.sqlworkbench&quot;. Darunter legt der 
+ neue DB-Installer einen neuen Ordner jliw_log an, in dem sich die Logs 
+ pro Installation im CSV-Format befinden.</p>
+<p class="Textkörperfett">TIPP:</p>
+<p class="TextkörperHinweis">Das Log sollte am besten für jedes Update 
+ (d.h. wenn eine dbsetup.xml ausgewählt wurde) neu erstellt werden. So 
+ können Fehler besser nachvollzogen werden.</p>
+<h3><a id="Sprachtexte_verwalten"></a>Sprachtexte verwalten</h3>
+<p class="BodyText">Für J-LIW wurde eine neue Extension namens J-PET (Java 
+ Property Editor for Translations) entwickelt, mit der die Sprachtexte 
+ angezeigt, editiert, exportiert und importiert werden können. Rufen Sie 
+ dazu die Datei Jpet.exe auf. Über &quot;File - Open...&quot; kann die 
+ gewünschte Properties-Datei gewählt werden. Die Datei configdata.properties 
+ enthält die Daten für alle Systemsprachen, die übrigen Dateien enthalten 
+ jeweils die in der Endung angegebene Sprache (z.B. configdata_de.properties 
+ Deutsch).</p>
+<p class="BodyText"><img src="../../../Bilder/Jpet.png" alt="" style="border: none;" width="700" height="497" border="0"/> </p>
+<h3><a id="Known_Issues"></a>Known Issues</h3>
+<p class="Aufzählung1 Liste1neu">Umlaute werden manchmal bei den einzelnen Schritten 
+ nicht korrekt dargestellt --&gt; kann ignoriert werden.</p>
+<p class="Aufzählung1 Liste1neu">Beim Ausführen von Multi-Update (zusammengesetztes 
+ Update aus mehreren Update-Schritten) wird bei jedem Update der Schritt 
+ &quot;Installationsvoraussetzungen prüfen&quot; ausgeführt. Dieser schlägt 
+ fehl, da Ausgangs- und Zielversion nicht übereinstimmen --&gt; kann ignoriert 
+ werden.</p>
+<p class="Aufzählung1 Liste1neu">Beim Schritt &quot;Synonyms für legato_read erstellen&quot; 
+ erscheint manchmal der Fehler &quot;ORA-04068: existing state of packages 
+ has been discarded&quot;. Workaround: Statement über Button &quot;Retry&quot; 
+ erneut ausführen.</p>
+<h3 data-condition="Others:Oracle_only"><a id="Nur_Oracle-DB:_Besonderheit_für_fremdsprachige_Texte_mit_Sonderzeichen_außerhalb_dem_jeweiligen_Standardzeichensatz_des_DB-Servers"></a>Nur 
+ Oracle-DB: Besonderheit für fremdsprachige Texte mit Sonderzeichen außerhalb 
+ dem jeweiligen Standardzeichensatz des DB-Servers</h3>
+<p class="BodyText" data-condition="Others:Oracle_only">Um in LEGATO 
+ fremdsprachige Texte mit Sonderzeichen außerhalb dem jeweiligen Standardzeichensatz 
+ des DB-Servers installieren zu können, müssen bestimmte Einstellungen 
+ in der Datenbank vorgenommen werden. Andernfalls kommt es zu Problemen 
+ bei der Darstellung der Sonderzeichen. Beispielsweise muss für Installationen 
+ im westeuropäischem Standardzeichensatz (z.B. DE) für Sprachen aus demselben 
+ Sprachraum (z.B. Französisch), nichts beachtet werden. Soll nun aber z.B. 
+ eine deutsche Installation auf einem Server mit US-Einstellung installiert 
+ werden, so muss auch für DE der NLS_LANG Parameter gesetzt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Oracle_only"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Oracle_only">Fremdsprachige 
+ Texte werden nicht korrekt in die standardmäßig ausgelieferte Legato Datenbank 
+ übernommen, solange diese Einstellungen nicht vorgenommen wurden.</p>
+<p class="BodyText" data-condition="Others:Oracle_only">Der Oracle-Parameter 
+ NLS_LANG (für den Zeichencode) muss auf den entsprechenden Wert gesetzt 
+ werden, damit die Datenbank die fremden Sonderzeichen aufnehmen kann. 
+ Grundsätzlich gibt es dafür drei Möglichkeiten (siehe auch<br data-condition="Others:Oracle_only"/>
+ <a href="../../../assets/misc/de" data-condition="Others:Oracle_only">http://www.oracle.com/technetwork/products/globalization/nls-lang-099431.html#_Toc110410543</a>):</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Oracle_only;Others:Oracle_only">den Datenbank-Parameter NLS_LANG bzw. NLS_LANGUAGE 
+ setzen</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Oracle_only;Others:Oracle_only">den Datenbankinstanz-Parameter NLS_LANG bzw. NLS_LANGUAGE 
+ setzen</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Oracle_only;Others:Oracle_only">den Database Session-Parameter NLS_LANG setzen</p>
+<p class="BodyText" data-condition="Others:Oracle_only"> </p>
+<p class="BodyText" data-condition="Others:Oracle_only">Die Einstellung 
+ des Session-Parameters überlagert den Datenbankinstanz-Parameter und dieser 
+ wiederum den Parameter auf Datenbankebene.</p>
+<p class="BodyText" data-condition="Others:Oracle_only">Da weder die 
+ Datenbank insgesamt noch die eine Legato-Instanz dauerhaft umgestellt 
+ werden sollen, ist das (vorübergehende) Setzen des Session-Parameters 
+ das Mittel der Wahl. Der Session-Parameter wird auf Betriebssystem-Ebene 
+ gesetzt.</p>
+<p class="BodyText" data-condition="Others:Oracle_only">Am einfachsten 
+ wird dazu vor dem Starten der SetupLDB.ini in einer DOS-Box (auf Windows) 
+ die Umgebungsvariable NLS_LANG gesetzt:</p>
+<p class="TextCode" data-condition="Others:Oracle_only">C:\Aufrufverzeichnis\&gt;set 
+ NLS_LANG=[gewünschter Zeichensatz]</p>
+<p class="TextCode" data-condition="Others:Oracle_only">C:\Aufrufverzeichnis\&gt;setupldb</p>
+<p class="TextCode" data-condition="Others:Oracle_only"> </p>
+<p class="BodyText" data-condition="Others:Oracle_only">In den Parametern 
+ des Legato DB Setup-Tool wird dann als eine Sprache (z. B. &quot;Language 
+ 1&quot;) die entsprechende Sprache (z.B. Chinesisch (&quot;Chinese, Simplified&quot;)) 
+ eingestellt. Anschließend können die Texte eingespielt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Oracle_only"><img src="../../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Oracle_only">Diese 
+ Einstellung muss vor der Ausführung jeder einzelnen SetupLDB erfolgen, 
+ falls mehrere in Folge installiert werden müssen.</p>
+<p class="BodyText" data-condition="Others:Oracle_only">Wenn aus einem 
+ Tool (insbesondere SQL*Plus, PL/SQL Developer und Legato DB Setup) fremdsprachige 
+ Texte in die Datenbank geschrieben werden sollen, dann müssen sie in Umgebungen 
+ gestartet werden, in denen der Session-Parameter NLS_LANG gesetzt ist.</p>
+<p class="BodyText" data-condition="Others:Oracle_only">Folgende Werte 
+ müssen dem Parameter NLS_LANG gegebenenfalls zugewiesen werden:</p>
+<table class="TabelleBlank" cellspacing="0" data-condition="Others:Oracle_only" style="border-collapse:collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 29.167%;"/>
+	<col style="width: 70.833%;"/>
+	</colgroup><tbody><tr>
+		<td>für Chinesisch:</td>
+		<td>SIMPLIFIED CHINESE_CHINA.UTF8 (sic!; inklusive Leerzeichen!)</td>
+	</tr>
+	<tr>
+		<td>für Polnisch:</td>
+		<td>POLISH_POLAND.EE8MSWIN1250</td>
+	</tr>
+	<tr>
+		<td>für Ungarisch:</td>
+		<td>HUNGARIAN_HUNGARY.EE8MSWIN1250</td>
+	</tr>
+	<tr>
+		<td>für Slowakisch:</td>
+		<td>SLOVAK_SLOVAKIA.UTF8</td>
+	</tr>
+	<tr>
+		<td>für Deutsch:</td>
+		<td>GERMAN_GERMANY.WE8ISO8859P15</td>
+	</tr>
+</tbody></table>
+<p class="BodyText"> </p>
+
+
+</body></html>

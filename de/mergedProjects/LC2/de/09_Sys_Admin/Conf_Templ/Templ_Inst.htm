@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Vorlagen-Instanzen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Projektierungsvorlage" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Vorlagen-Instanzen">
+        <span>Vorlagen-Instanzen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch;Others:Sapient_only">Vorlagen-Instanzen</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">System-Administration | Projektierungsvorlagen 
+ | Vorlagen-Instanzen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Direkt unter der jeweiligen Projektierungsvorlage können 
+ Instanzen dafür erstellt werden. Jeder Parameter der Vorlage wird als 
+ eigene Spalte angezeigt und kann pro Instanz mit einem Wert versehen werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td>Vorlage</td>
+		<td>Lookup-Liste zur Auswahl der Vorlage, zu der diese Instanz 
+		 gehört. Wird automatisch befüllt und kann geändert werden.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Instanz-Schlüssel (optional)</td>
+		<td>Eindeutiger Schlüssel der Instanz innerhalb der Vorlage, z.B. 
+		 für Instanziierung aus dem SCC heraus.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Name</td>
+		<td>Name der Vorlagen-Instanz.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Beschreibung (optional)</td>
+		<td>Beschreibung der Vorlagen-Instanz.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Parameterwerte</td>
+		<td><p class="TabellenInhalt">Zusammenfassung der übergebenen Werte 
+		 für die Parameter der Instanz als JSON-String. </p>
+		<p class="TabellenInhalt">Beispiel:</p>
+		<p class="TabellenInhalt">{&quot;akz&quot;:&quot;plc181&quot;,&quot;plcname&quot;:&quot;Anlage 
+		 18&quot;,&quot;varcnt&quot;:3,&quot;parent_node&quot;:1}</p>
+		<p class="TabellenInhalt">Nur zur Information, schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td>Aktualisierung empf.</td>
+		<td><p class="TabellenInhalt">Diese Checkbox wird bei jeder Überprüfung 
+		 der Instanz auf 1 gesetzt, sofern bei der Aktualisierung Änderungen 
+		 durchgeführt würden. Sind alle Werte der Instanz aktuell, so wird 
+		 die Checkbox auf 0 gesetzt. Das Setzen der Checkbox erfolgt durch 
+		 das System, die Spalte ist schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td>Instanz-Info</td>
+		<td><p class="TabellenInhalt">Kurze Information über den Status 
+		 der Instanz, z.B. wie viele Änderungen beim Update ausgeführt 
+		 werden. Nur zur Information, schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td>Letzte Aktualisierung</td>
+		<td><p class="TabellenInhalt">Zeitstempel, wann die Instanz-Info 
+		 zuletzt aktualisiert wurde. Nur zur Information, schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td>Parameter</td>
+		<td><p class="TabellenInhalt">Für jeden Parameter der Vorlage (Spalte 
+		 &quot;Parameter&quot; der Tabelle &quot;Projektierungsvorlage&quot;) 
+		 wird hier eine eigene Spalte angezeigt, die mit dem entsprechenden 
+		 Wert befüllt werden kann.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Kontextmenü</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Durch Klick mit der rechten Maustaste auf eine oder 
+ mehrere Vorlagen-Instanzen kann das Kontextmenü geöffnet werden (im Baum 
+ oder in der Tabelle). Neben den allgemeinen Optionen finden sich dort 
+ die folgenden Aktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">&quot;Instanz aktualisieren&quot; evaluieren</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Es wird eine Prüfung durchgeführt, ob und falls ja, 
+ welche Änderungen bei einer Aktualisierung der Instanz durchgeführt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Instanz aktualisieren</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die anstehenden Änderungen der Instanz werden übertragen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">&quot;Elemente löschen&quot; evaluieren</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Es wird eine Prüfung durchgeführt, welche Änderungen 
+ beim Löschen der Instanz durchgeführt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Elemente der Instanz löschen</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Alle durch die Instanz angelegten Elemente werden gelöscht, 
+ sofern möglich. Wurden bereits Datensätze erstellt, die die Instanz-Elemente 
+ referenzieren (z.B. Werte für Variablen gebucht), so ist ein Löschen nicht 
+ möglich. In diesem Fall wird eine entsprechende Fehlermeldung ausgegeben 
+ und der Benutzer hat die Möglichkeit, diese Elemente manuell zu löschen, 
+ z.B. über die LC2-Funktion &quot;Referenzen analysieren&quot;. Diese Elemente 
+ bleiben in der Tabelle Instanz-Proxys stehen und werden mit dem Flag &quot;Gedroppt?&quot; 
+ = 1 versehen. </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für alle Aktionen öffnet sich ein Fenster, in dem der 
+ Fortschritt verfolgt werden kann (Aktionsdialog). Nach Beendigung der 
+ Aktion wird das Ergebnis angezeigt. Durch Mouseover werden alle durchgeführten 
+ Änderungen eingeblendet. Das Ergebnis wird außerdem als neuer Eintrag 
+ in der Tabelle &quot;Ausführungen&quot; eingetragen und kann dort auch 
+ später nachgelesen werden. Der Aktionsdialog, der für alle Aktionen angezeigt 
+ wird, sieht folgendermaßen aus:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../Legato_LC2_DE_Format-Dateien/09_System_Admin/CT_2.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Durch Mouseover über die jeweilige Zeile wird deren 
+ Ergebnis komplett eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Durch Klick auf &quot;erledigte Elemente löschen&quot; 
+ wird die Liste des Dialogs geleert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Durch Klick auf &quot;Anstehende Elemente überspringen&quot; 
+ wird die Ausführung aller noch nicht gestarteten Aktionen zurückgezogen. 
+ Die aktuell laufende Aktion wird fertiggestellt, sie wird nicht abgebrochen.</p>
+
+
+</body></html>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Visualisierung - Zeichnungen","type":"item","tilePath":"","description":"","url":"de/LGD/Visualisierungszeichnungen_und_Designer.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

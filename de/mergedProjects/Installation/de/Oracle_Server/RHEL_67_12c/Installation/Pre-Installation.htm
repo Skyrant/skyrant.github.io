@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.4.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Pre-Installation</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Pre-Installation">
+        <span>Pre-Installation</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Pre-Installation</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Installationsanleitung in diesem Abschnitt stützt 
+ sich auf den technischen Artikel &quot;How I Simplified Oracle Database 
+ 12c and 11g Installation on Oracle Linux 6&quot; (<a href="http://www.oracle.com/technetwork/articles/servers-storage-admin/ginnydbinstallonlinux-488779.html">http://www.oracle.com/technetwork/articles/servers-storage-admin/ginnydbinstallonlinux-488779.html</a>). 
+ Alle Schritte der automatisierten Installation (mithilfe des Oracle-preInstaller-Skripts) 
+ sind im Folgenden beschrieben und werden mit dem root-User ausgeführt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Hierfür wird eine registrierte Red Hat (oder Oracle 
+ Linux) Verbindung benötigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zunächst muss das Oracle-Repository angebunden werden:</p>
+<p class="TextCode" data-condition="Others:Deutsch"># cd /etc/yum.repos.d</p>
+<p class="TextCode" data-condition="Others:Deutsch"># wget <a href="http://public-yum.oracle.com/public-yum-ol6.repo">http://public-yum.oracle.com/public-yum-ol6.repo</a></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">TIPP:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Das Repository heißt &quot; OL6.REPO&quot;, 
+ nicht &quot;O16.REPO&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">In der soeben heruntergeladenen Datei wird überprüft, 
+ ob tatsächlich das neueste Repository eingeschaltet und ansprechbar ist:</p>
+<p class="TextCode" data-condition="Others:Deutsch"># vi public-yum-ol6.repo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In der letzten Zeile der beiden unten genannten Abschnitte 
+ muss enabled=1 stehen. Ist dies nicht der Fall, muss auf diesen Wert geändert 
+ werden:</p>
+<p class="TextCode" data-condition="Others:Deutsch">[ol6_latest]</p>
+<p class="TextCode" data-condition="Others:Deutsch">name=Oracle Linux $releasever Latest ($basearch)</p>
+<p class="TextCode" data-condition="Others:Deutsch">baseurl=http://public-yum.oracle.com/repo/OracleLinux/OL6/latest/$basearch/</p>
+<p class="TextCode" data-condition="Others:Deutsch">gpgkey=http://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol6</p>
+<p class="TextCode" data-condition="Others:Deutsch">gpgcheck=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">enabled=1</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">...</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[ol6_UEK_latest]</p>
+<p class="TextCode" data-condition="Others:Deutsch">name=Latest Unbreakable Enterprise Kernel for Oracle 
+ Linux $releasever ($basearch)</p>
+<p class="TextCode" data-condition="Others:Deutsch">baseurl=http://public-yum.oracle.com/repo/OracleLinux/OL6/UEK/latest/$basearch/</p>
+<p class="TextCode" data-condition="Others:Deutsch">gpgkey=http://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol6</p>
+<p class="TextCode" data-condition="Others:Deutsch">gpgcheck=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">enabled=1</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Das so angebunden Repository kann nun zur Installation 
+ genutzt werden:</p>
+<p class="TextCode" data-condition="Others:Deutsch"># yum install oracle-rdbms-server-12cR1-preinstall</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Vorgang kann einige Minuten dauern. Nach der 
+ Prüfung erfolgt eine Information über die Download-Größe sowie eine Abfrage, 
+ ob die Installation der Packages starten soll. Diese muss mit &quot;y&quot; 
+ (Yes, Ja) bestätigt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image006.png" alt="" width="700" height="484" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Danach werden die benötigten Dateien heruntergeladen 
+ bzw. aktualisiert und das Pre-Install Skript läuft durch. Hier folgen 
+ wieder einige Abfragen, die alle mit &quot;y&quot; (Yes, Ja) bestätigt 
+ werden müssen.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image008.png" alt="" width="700" height="500" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn das Skript erfolgreich durchgelaufen ist, sind 
+ die Vorbereitungen abgeschlossen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">TIPP:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Sollte das Skript nicht erfolgreich durchgelaufen 
+ sein und die Fehlermeldung</p>
+<p class="TextCode" data-condition="Others:Deutsch">GPG key retrieval failed: [Errno 14] Could not open/read 
+ <a href="file://C:/etc/pki/rpm-gpg/RPM-GPG-KEY-oracle">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle</a></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">erscheinen, (s. Screenshot)</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image010.png" alt="" width="700" height="483" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">so kann man den Fehler folgendermaßen beheben:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie folgenden Befehl ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch">wget<span class="appleconvertedspace"> </span><a href="https://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol6"><span style="color: windowtext; text-underline: none; text-decoration: none; ">https://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol6</span></a><span class="appleconvertedspace"> </span>-O /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Es erscheinen erneut zwei Abfragen, die beide mit &quot;y&quot; 
+ (Yes, Ja) bestätigt werden müssen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls auch das fehlschlägt mit der Meldung</p>
+<p class="TextCode" data-condition="Others:Deutsch">ERROR: no certificate subject alternative name matches</p>
+<p class="TextCode" data-condition="Others:Deutsch">requested host name &quot;public-yum.oracle.com&quot;.</p>
+<p class="TextCode" data-condition="Others:Deutsch">To connect to public-yum.oracle.com insecurely, use 
+ `--no-check-certificate´.</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">dann hilft gemäß dem Hinweis der Aufruf mit Zusatz:</p>
+<p class="TextCode" data-condition="Others:Deutsch">wget<span class="appleconvertedspace"> </span><a href="https://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol6"><span style="color: windowtext; text-underline: none; text-decoration: none; ">https://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol6</span></a><span class="appleconvertedspace"> </span>-O /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle 
+ --no-check-certificate</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Danach wird das Pre-Install Skript erneut ausgeführt 
+ und sollte nun zum Erfolg führen. Das Pre-Install-Skript legt u. a. auch 
+ den neuen User &quot;oracle&quot; in der neuen User-Group &quot;oinstall&quot; 
+ an.</p>
+
+
+</body></html>

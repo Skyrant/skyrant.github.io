@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.8.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Histogramm</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Histogramm">
+        <span>Histogramm</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Histogramm</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Histogramm</span> basiert 
+ auf dem Balken- und Liniendiagramm. Es dient der Visualisierung der Anzahl 
+ von jeweils gleichen Taktzeiten, also z.B. wie oft trat die Taktzeit 7,5 
+ Sekunden auf:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">X-Achse: Klassen der Taktzeiten (Klassenbreite 
+	 wird i.d.R. automatisch durch Legato Sapient berechnet, kann aber 
+	 auch manuell eingestellt werden)</p></li>
+	<li><p class="ListBulletL1">Y-Achse: Anzahl der aufgetretenen Taktzeiten</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Neben der Darstellung der Taktzeiten als Balken können 
+ Zusatzinformationen, wie z.B. mittlere Taktzeit, häufigste Taktzeit oder 
+ Median in Form von vertikalen Linien in das Diagramm eingeblendet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich wird eine Tabelle mit Zusatzinformationen 
+ unter dem Histogramm eingeblendet, hier werden Informationen zur Prozessqualität 
+ dargestellt (Standardabweichung, Prozessfähigkeit cp/cpk, etc.) </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/BCT_Histogram.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei Mouseover über einen Balken wird die Häufigkeit 
+ des Wertes eingeblendet.</p>
+<div data-conref="../../../assets/snippets/de_Hide-value.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Durch Klick auf den Namen eines Wertes unten in der 
+ Legende kann dieser aus- bzw. wieder eingeblendet werden. Ausgeblendete 
+ Werte werden in der Legende hellgrau dargestellt.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/de_Zoom.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Durch Klicken und Ziehen mit gedrückter linker Maustaste 
+ kann in den Zeitbereich hineingezoomt werden. Es wird dann ein Button 
+ eingeblendet, über den der Zoom wieder zurückgesetzt werden kann.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Histogramm </span>stehen 
+ außerdem folgende Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Layout"></a>Layout</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Diagrammtyp:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann der gewünschte 
+ Diagrammtyp selektiert werden, z.B. Balken- oder Liniendiagramm.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Hilfslinie:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Aus der Dropdown-Liste können Werte ausgewählt 
+ werden, die als vertikale Linien zusätzlich im Histogramm angezeigt werden 
+ sollen, z.B. Best Cycle Time, Min und Max.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Klassenbreite manuell setzen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Klassenbreite wird eingestellt, in 
+ welchem Bereich die Taktzeiten zusammengefasst dargestellt werden sollen. 
+ Dementsprechend werden die Taktzeiten bei einer Klassenbreite von z.B. 
+ 0,1 immer für 0,1 Sekunden zusammengefasst. Üblicherweise wird die Klassenbreite 
+ automatisch berechnet; durch Aktivieren dieses Schiebereglers kann sie 
+ aber auch manuell gesetzt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Visualisierung der kumulierten Taktzeiten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dieser Schieberegler legt fest, ob Taktzeiten, 
+ die außerhalb der Grenzen (minimale und maximale Taktzeit ohne Störung) 
+ liegen, kumuliert in jeweils einem Balken dargestellt werden oder nicht. 
+ </p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zu ignorierende Anzahl von Werten am Anfang:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Wieviele Werte am Anfang des Zeitraums für die 
+ Berechnung ignoriert werden sollen (weil sie möglicherweise das Ergebnis 
+ verfälschen könnten).</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zu ignorierende Anzahl von Werten am Ende:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Wieviele Werte am Ende des Zeitraums für die 
+ Berechnung ignoriert werden sollen (weil sie möglicherweise das Ergebnis 
+ verfälschen könnten).</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Visualisierung der Prozessinformationen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird gesteuert, ob 
+ die Tabelle mit den Prozessinformationen unterhalb des Histogramms angezeigt 
+ werden soll oder nicht.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<div data-conref="../../../assets/snippets/Filter/de_Value_Types.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Variablenarten:</p>
+<p class="GUIControlDescr">Filter auf Variablenarten. Für alle Variablen 
+ der hier definierten Variablenarten, die dem oben selektierten Knoten 
+ zugeordnet sind, werden die Werte im Diagramm angezeigt. Die Variablenarten 
+ können aus einer Dropdown-Liste ausgewählt werden. Leer = kein Filter, 
+ alle Variablenarten werden angezeigt.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_types.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablenarten werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Grundkonfiguration</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Allgemeine Anwendungen</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Variablenarten</span> parametriert.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/LC2/de_p_values_config.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablen werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Anwendungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Datenaustausch</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Modul] 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ [Verbindung] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Variablen</span> 
+ gepflegt. Hier wird auch die Einheit festgelegt.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Hier muss das Flag &quot;Archivieren&quot; auf 1 gesetzt 
+ sein, damit die Werte der Variable im Archiv gespeichert werden.</p>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_relations.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Knoten] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Variablenzuordnungen</span> werden die Variablen dem 
+ Knoten zugeordnet, für den sie angezeigt werden sollen. Hier muss das 
+ Flag &quot;Anzeigen&quot; auf 1 gesetzt sein, damit die Variable angezeigt 
+ wird. Die Sortiernummer legt fest, in welcher Reihenfolge die Variablen 
+ angezeigt werden.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">chartType</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">verticalLines</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">autoCalculationClassWidth</p></td>
+		<td><p class="TabellenInhalt">Double</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">visuCumulatedCycleTimes</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">numValuesToIgnoreBeginning</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">numValuesToIgnoreEnd</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">visuProcessInformation</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">node</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">valueId</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

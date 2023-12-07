@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Beispiel Datasource Model</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Beispiel Datasource Model">
+        <span>Beispiel Datasource Model</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Beispiel Datasource Model</h1>
+<h2 data-condition="Others:Deutsch">Archived Alarms (gekürzt)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;actions&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                  &quot;archive-alarms&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      &quot;isPending&quot;: 
+ false,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      &quot;id&quot;: 
+ &quot;al_archive/id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      &quot;reset&quot;: 
+ &quot;al_archive/time_end&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      &quot;reason&quot;: 
+ &quot;al_reasons/id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      &quot;reasoncomment&quot;: 
+ &quot;al_reason_archive/annotation&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      &quot;manual&quot;: 
+ &quot;al_archive/manual_insert&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                     }</p>
+<p class="TextCode" data-condition="Others:Deutsch">                 },</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">       &quot;style&quot;: 
+  {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                   &quot;name&quot;: 
+ &quot;alarms&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                   &quot;params&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                               &quot;fieldMappings&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                                 &quot;class&quot;: 
+ &quot;al_archive/al_class&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                                 &quot;timeEnd&quot;: 
+ &quot;al_archive/time_end&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                                 &quot;pendingId&quot;: 
+ &quot;al_archive/pending_id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                                 &quot;quittingInfo&quot;: 
+ &quot;al_archive/quitting_info&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                                 &quot;recognitionInfo&quot;: 
+ &quot;al_archive/recognition_info&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                                }</p>
+<p class="TextCode" data-condition="Others:Deutsch">                              }</p>
+<p class="TextCode" data-condition="Others:Deutsch">                },</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;resources&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;resource&quot;: 
+ &quot;ds_se_alarms&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;requiredFields&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/al_class&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;defaultFields&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/time_start&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/time_end&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;l_nodes/name&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_classes/name&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/fmt_text&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;blacklistedFields&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/attr_jsonb&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_archive/symbol_0&quot;, 
+ &quot;al_archive/symbol_1&quot;, &quot;al_archive/symbol_2&quot;, &quot;al_archive/symbol_3&quot;, 
+ &quot;al_archive/symbol_4&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_types/attr_jsonb&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;al_reason_archive/attr_jsonb&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;staticFilter&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;left&quot;: 
+ &quot;isPending&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;op&quot;: 
+ &quot;EQ&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;right&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;val&quot;: 
+ false</p>
+<p class="TextCode" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ],</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">  &quot;filter&quot;: [</p>
+<p class="TextCode" data-condition="Others:Deutsch">    {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;name&quot;: 
+ &quot;Node&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;type&quot;: 
+ &quot;NumberArray&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;field&quot;: 
+ &quot;al_archive/node&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;required&quot;: 
+ true,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;explicit&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;op&quot;: 
+ &quot;IN&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;toType&quot;: 
+ &quot;Nodes&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" data-condition="Others:Deutsch">  ]</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Grundsätzlich kann dieses Datasource alle Meldungen 
+ aus al_archive liefern.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Folgenden werden die einzelnen Abschnitte erläutert.</p>
+
+
+</body></html>

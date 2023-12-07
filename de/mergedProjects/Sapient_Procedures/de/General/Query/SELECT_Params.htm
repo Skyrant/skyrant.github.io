@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.5.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SELECT Parameter</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="SELECT" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SELECT Parameter">
+        <span>SELECT Parameter</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SELECT Parameter</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Aufruf der &quot;Abfrage-Prozedur&quot; über JSON-RPC 
+ sind folgende Parameter anzugeben:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">schema</p>
+<p class="BodyText" data-condition="Others:Deutsch">(String) - Name der Repository-Verbindung / des Datenbank-Schemas 
+ (GP_R_CONNECTIONS), auf der die Abfrage durchgeführt werden soll.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">query</p>
+<p class="BodyText" data-condition="Others:Deutsch">(JSON-Objekt) - Die Definition, was abgefragt werden 
+ soll (siehe unten).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">pre</p>
+<p class="BodyText" data-condition="Others:Deutsch">(JSON-Array, optional) - Eine oder mehrere Voraussetzungen, 
+ die vor der Ausführung der Abfrage geprüft werden sollen. Ergeben sie NULL, FALSE, 0 oder 
+ einen Leerstring, wird die Abfrage nicht durchgeführt und ein Fehler-Ergebnis &quot;failed 
+ precondition&quot; zurückgegeben. Noch nicht implementiert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">newer</p>
+<p class="BodyText" data-condition="Others:Deutsch">(optional) - Ein Zeitstempel, der benutzt wird, um 
+ nur Datensätze zu liefern, die neuer sind als dieser Zeitstempel. Ist 
+ dieser Parameter angegeben, fragt der Server von allen in der Abfrage 
+ vorkommenden Tabellen deren Feld mit dem letzten Änderungs-Zeitpunkt mit 
+ ab (sofern vorhanden). Er liefert dann nur Ergebnis-Zeilen in &quot;data&quot;, 
+ wo mindestens ein solcher Zeitpunkt später oder gleich dem Angegebenen 
+ ist. Von den restlichen (unveränderten, aber nach wie vor vorhandenen) 
+ Datensätzen liefert er nur die IDs in einem Array &quot;keep&quot;, 
+ das im Ergebnis auf gleicher Ebene wie &quot;data&quot; liegt. 
+ Noch nicht implementiert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">timeout</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Integer, optional) - Wenn vom Aufrufer angegeben, 
+ enthält dieser Parameter die ganzzahlige Anzahl Sekunden, die jede Datenbankabfrage 
+ dauern darf, die von dieser &quot;Select&quot;-Prozedur ausgeführt wird. 
+ Die WebApp übergibt ein Default-Timeout bei jedem Aufruf der JSON-RPC 
+ &quot;Select&quot;-Methode. Die &quot;Select&quot;-Prozedur verwendet 
+ dieses Timeout für alle generischen SQL-Abfragen, die sie selbst ausführt 
+ und gibt es auch an alle geskripteten Datenquellen weiter.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein spezieller Fehlercode SQL_TIMEOUT (-1002) wurde 
+ eingeführt für JSON-RPC Fehlermeldungen, die von Abfrage-Timeouts verursacht 
+ werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="query"></a>query</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Eine <span style="font-weight: bold;">query</span> 
+ kann entweder</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">ein 
+ einzelnes <span style="font-weight: bold;">query</span>-Objekt sein (siehe 
+ unten) oder</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">ein 
+ Array von <span style="font-weight: bold;">query</span>-Objekten und Strings, 
+ der einen Ausdruck unter Verwendung von Unter-Abfragen, Operatoren (&quot;UNION&quot;, 
+ &quot;UNION ALL&quot;, &quot;INTERSECT&quot;, or &quot;MINUS&quot;) und 
+ Klammern definiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein <span style="font-weight: bold;">query</span>-Objekt 
+ besteht aus folgenden Elementen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">resources</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array oder ein einzelnes <span style="font-weight: bold;">resource</span>-Objekte) 
+ - Die Datenquellen (wie im Sapient Repository angegeben), die abgefragt 
+ werden sollen. Handelt es sich um eine geskriptete Datenquelle, darf dies 
+ die einzige angefragte Datenquelle sein, da der Aufruf direkt an die entsprechende 
+ Java- oder JavaScript-Funktion weitergegeben wird. Bei Abfragen über mehrere 
+ Datenbank-Ressourcen (Tabellen oder Unterabfragen) erscheinen diese im 
+ SQL-Ergebnis in derselben Reihenfolge wie hier angegeben.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">fields</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array von <span style="font-weight: bold;">field</span>-Angaben 
+ oder String) - Welche &quot;field(s)&quot; der übergebenen &quot;resources&quot; 
+ abgefragt werden sollen. Felder können entweder als JSON-Objekte oder 
+ als Strings in der Form &quot;&lt;res-alias&gt;.&lt;field-name&gt;&quot; 
+ angegeben werden. String-Angaben können als Komma-getrennte Liste verknüpft 
+ werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">relations</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array von <span style="font-weight: bold;">relation</span>-Objekten) 
+ - Angaben, wie die übergebenen &quot;resources&quot; miteinander zu verknüpfen 
+ sind. Entfällt, wenn nur eine einzige &quot;resource&quot; abgefragt wird. 
+ Enthält <span style="font-weight: bold;">resources</span> mehrere Einträge 
+ (Tabellen oder Unterabfragen), dann muss für jeden dieser Einträge außer 
+ dem 1. eine <span style="font-weight: bold;">relation</span> angegeben 
+ werden, deren <span style="font-weight: bold;">dst</span> auf diesen Eintrag 
+ verweist. Jede dieser <span style="font-weight: bold;">relations</span> 
+ darf nur auf Quellen (<span style="font-weight: bold;">src</span>) verweisen, 
+ die vor ihrem Ziel (<span style="font-weight: bold;">dst</span>) im Ressourcen-Array 
+ stehen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">filter</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array, optional) - Definiert Einschränkungen für die 
+ zurückgegebenen Ergebnis-Zeilen. Kann Folgendes enthalten:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">filter</span>-Objekte, die Bedingungen 
+ angeben, die diese Zeilen erfüllen müssen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Bool&#39;sche 
+ Operatoren (Strings &quot;AND&quot; oder &quot;OR&quot;), um diese Bedingungen 
+ zu verknüpfen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Klammern 
+ (Strings &quot;(&quot; oder &quot;)&quot;), um diese Ausdrücke zu gruppieren 
+ und die Priorität festzulegen</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">sort</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array von <span style="font-weight: bold;">sort</span>-Objekten, 
+ optional) - Wie die zurückgegebenen Ergebnis-Zeilen sortiert werden sollen. 
+ Wird nur ein einzelnes Kriterium angegeben, kann die Array-Notation weggelassen 
+ werden. Mehrere Sortier-Kriterien werden in absteigender Priorität behandelt, 
+ d.h. alle Zeilen werden nach dem ersten Kriterium sortiert, dann werden 
+ die Gruppen von Zeilen mit gleicher Sortierung gemäß diesem ersten Kriterium 
+ nach dem zweiten Kriterium sortiert und so weiter.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">groupby</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array oder String, optional) - Eine oder mehrere Feld-Referenzen, 
+ nach der die Datenbank-Zeilen gruppiert werden sollen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">offset</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Number, optional) - Anzahl der Datensätze, die am 
+ Anfang der Ergebnisse übersprungen (nicht im Ergebnis zurückgegeben) werden 
+ sollen. Wird für Paginierung benötigt. Offset 0 bedeutet &quot;keine&quot; 
+ und somit das gleiche, wie den Parameter wegzulassen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">limit</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Number, optional) - Maximale Anzahl zu liefernder 
+ Datensätze. Die restlichen Datensätze werden stillschweigend verworfen. 
+ Falls nicht angegeben, werden alle Datensätze geliefert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">distinct</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Boolean, optional) - Falls angegeben und true, 
+ werden nur eindeutige Datensätze abgefragt. Eindeutige Datensätze haben 
+ ungleiche Werte in mindestens einem Feld.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">hierarchy</p>
+<p class="BodyText" data-condition="Others:Deutsch">Noch nicht implementiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Statt einem einzelnen &quot;query&quot;-Objekt 
+ kann auch ein Array aus query-Objekten, Mengen-Operatoren (UNION, UNION 
+ ALL, INTERSECT und MINUS) und Klammern übergeben werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="resource"></a>resource</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein <span style="font-weight: bold;">resource</span>-Objekt 
+ kann entweder eine Datenbank-Tabelle sein (aus GP_R_DATASOURCES) oder 
+ eine Unterabfrage. Um dies zu unterstützen, kann ein <span style="font-weight: bold;">resource</span> 
+ JSON-Objekt folgende Elemente haben:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">resource</p>
+<p class="BodyText" data-condition="Others:Deutsch">(String) - Der Objektname (in Kleinbuchstaben), der 
+ in GP_R_DATASOURCES eingetragen ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">query</p>
+<p class="BodyText" data-condition="Others:Deutsch">(JSON-Objekt) - Die Unterabfrage.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">as</p>
+<p class="BodyText" data-condition="Others:Deutsch">(String) - Alias-Name, der in anderen Teilen der Abfrage 
+ verwendet wird, um auf diese Datenbank-Tabelle oder Unterabfrage zu verweisen. 
+ Für Unterabfragen verpflichtend, für Tabellen optional.</p>
+<h3 data-condition="Others:Deutsch"><a id="field"></a>field</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein <span style="font-weight: bold;">field</span> kann 
+ auf mehrere Arten angegeben werden:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Spalte 
+ von einer der Ressourcen. Diese kann spezifiziert werden durch:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">Einen 
+ String-Wert in der Form [resource.][column][ AS name], z.B. &quot;a.name 
+ as aname&quot;.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">Ein JSON-Objekt 
+ mit den folgenden Elementen: </p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">resource</span> (String) - Alias oder Name 
+ der Tabelle oder Unter-Abfrage aus den für diese Abfrage definierten &quot;resources&quot;.</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">field</span> (String) - Name der entsprechenden 
+ Tabellenspalte. Falls aus einer Unter-Abfrage stammend und falls die Unter-Abfrage 
+ einen Alias für das fragliche Feld definiert hat, dieser Alias.</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">as</span> (String, optional) - Alias, der 
+ verwendet werden soll, um dieses Feld in den Ergebnis-Zeilen oder in Abfragen 
+ von außerhalb zu referenzieren (falls diese Definition in einer Unter-Abfrage 
+ ist.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">Unter-Abfrage 
+ - Ein JSON-Objekt mit den folgenden Elementen:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">query</span> (JSON-Objekt) - Ein Query-Objekt, 
+ das die Unter-Abfrage definiert.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">as</span> (String) - Alias, der verwendet 
+ werden soll, um dieses Feld in den Ergebnis-Zeilen oder in anderen Teilen 
+ der Abfrage zu referenzieren.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">Aufruf 
+ einer SQL-Funktion - Ein JSON-Objekt mit folgenden Elementen:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">function</span> (String) - Name der SQL-Funktion. 
+ Aktuell werden folgende Funktionen unterstützt: ABS, MOD, CEIL, FLOOR, 
+ ROUND, EXP, LN, LOG, POWER, SIGN, SQRT, SIN, ASIN, COS, ACOS, TAN, ATAN, 
+ ATAN2, LENGTH, CONCAT, UPPER, LOWER, LTRIM, RTRIM, SUBSTR, TO_CHAR, TO_NUMBER, 
+ TO_DATE, TO_TIMESTAMP. Nicht alle diese Funktionen werden von allen Datenbank-Servertypen 
+ unterstützt und nicht alle nutzen dieselbe Semantik (Parameter und -typen, 
+ Default-Werte, Rückgabetypen etc.) Daher ist bei Verwendung dieses Features 
+ Vorsicht geboten.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">params</span> (Array) - Array von field-Referenzen 
+ oder Buchstabensymbolen, die als Argumente an die SQL-Funktion übergeben 
+ werden sollen. </p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">as</span> (String) - Alias, der verwendet 
+ werden soll, um dieses Feld in den Ergebnis-Zeilen oder in anderen Teilen 
+ der Abfrage zu referenzieren.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">Expression:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">expression</span> (Array) - Ein Ausdruck 
+ mit den field-Referenzen, SQL-Funktionsaufrufen, Operatoren und Klammern, 
+ um den Wert zu berechnen, der für dieses Feld zurückgegeben werden soll. 
+ Field-Referenzen können als Strings oder als field-Objekte definiert werden. 
+ Operatoren oder Klammern als String-Elemente des Arrays. Die folgenden 
+ Operatoren werden unterstützt:</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;+&quot; 
+ - Addition</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;-&quot; 
+ - Subtraktion</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;*&quot; 
+ - Multiplikation</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;/&quot; 
+ - Division</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;%&quot; 
+ - Rest</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;^&quot; 
+ - Potenzierung</p>
+<p class="Liste_3 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 90px;" data-condition="Others:Deutsch">&quot;||&quot; 
+ - String-Verkettung</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">as (String) 
+ - Alias, der verwendet werden soll, um dieses Feld in den Ergebnis-Zeilen 
+ oder in anderen Teilen der Abfrage zu referenzieren.</p>
+<h3 data-condition="Others:Deutsch"><a id="relations"></a>relations</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein <span style="font-weight: bold;">relation</span>-Objekt 
+ definiert, wie zwei &quot;resources&quot; miteinander verknüpft werden 
+ sollen. Das JSON-Objekt zum Definieren einer <span style="font-weight: bold;">relation</span> 
+ kann folgende Elemente haben:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">src</span> (String) - Name oder Alias 
+ der Quell-Tabelle, die verknüpft werden soll.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">dst</span> (String) - Name oder Alias der 
+ Ziel-Tabelle, die verknüpft werden soll.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">how</span> (String) - Art der Verknüpfung. 
+ Muss einer der folgenden Werte sein (unabhängig von Groß- / Kleinschreibung):</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">I - Für 
+ inner Join (alle Zeilenpaare von &quot;src&quot; und &quot;dst&quot;, 
+ die die Join-Bedingung erfüllen. Zeilen einer Ressource, die keine Entsprechung 
+ in der anderen Ressource haben, werden vom Ergebnis ausgeschlossen).</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">L - Für 
+ left Join (alle Zeilen von &quot;src&quot; werden mit den entsprechenden 
+ Zeilen von &quot;dst&quot; gejoint).</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">R - Für 
+ right Join (alle Zeilen von &quot;dst&quot; werden mit den entsprechenden 
+ Zeilen von &quot;src&quot; gejoint).</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">F - Für 
+ full Join (alle Zeilenpaare von &quot;src&quot; und &quot;dst&quot;, die 
+ die Join-Bedingung erfüllen und alle Zeilen von einer Ressource, die keine 
+ Entsprechung in der anderen Ressource haben).</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">C - Für 
+ cross Join (alle Zeilen von &quot;src&quot;, jeweils gepaart mit jeder 
+ Zeile von &quot;dst&quot;).</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch">Eine (und 
+ nur genau eine) der folgenden Relations-Arten:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">on</span> - Ein onconstraint-Objekt 
+ oder ein Array von onconstraint-Objekten, boole&#39;schen Verknüpfungen 
+ (AND oder OR) und runden Klammern.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">rel</span> - Ein field-Objekt 
+ aus einer der beiden Tabellen, das eine Relation zur anderen Tabelle darstellt 
+ (z.B. { &quot;resource&quot;: &quot;n&quot;, &quot;field&quot;: &quot;parent&quot; 
+ }).</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">using</span> - Ein oder mehrere Namen 
+ von Feldern, die in beiden Tabellen vorhanden sind und gleiche Werte haben 
+ sollen.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">natural</span> - Wert beliebig. Falls 
+ angegeben, werden alle gleichnamigen Felder in beiden Tabellen auf gleiche 
+ Werte geprüft. </p>
+<h3 data-condition="Others:Deutsch"><a id="filter"></a>filter</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein &quot;filter&quot; JSON-Objekt definiert eine Bedingung, 
+ um Abfrage-Ergebnisse einzuschränken oder Paare von abgefragten Ressourcen 
+ zu verknüpfen (joinen). Es kann folgende Elemente haben:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">left</span> (String oder JSON-Objekt) - 
+ Entweder eine String-Referenz, ein Feld von einer Ressource, ein JSON-Objekt 
+ <span style="font-weight: bold;">val</span>, das ein Buchstabensymbol 
+ enthält oder ein JSON-Objekt <span style="font-weight: bold;">query</span>.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">op</span> (String) - Einer der folgenden 
+ Vergleichsoperatoren:</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;nl&quot; 
+ oder &quot;nn&quot; - Für &quot;IS NULL&quot; oder &quot;IS NOT NULL&quot;. 
+ Für diesen Operator ist kein Wert für &quot;right&quot; erlaubt.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;eq&quot; 
+ oder &quot;ne&quot; - Für &quot;equal to&quot; oder &quot;not equal to&quot;. 
+ &quot;right&quot; muss ein einzelner Wert oder eine Feld-Referenz sein.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;lt&quot; 
+ oder &quot;le&quot; - Für &quot;less than&quot; oder &quot;less or equal&quot;. 
+ &quot;right&quot; muss ein einzelner Wert oder eine Feld-Referenz sein.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;gt&quot; 
+ oder &quot;ge&quot; - Für &quot;greater than&quot; oder &quot;greater 
+ or equal&quot;. &quot;right&quot; muss ein einzelner Wert oder eine Feld-Referenz 
+ sein.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;lk&quot; 
+ oder &quot;ul&quot; - Für &quot;like&quot; oder &quot;not like&quot;. 
+ Sowohl &quot;left&quot; als auch &quot;right&quot; müssen String-Werte 
+ oder Referenzen auf String-Felder sein.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;in&quot; 
+ oder &quot;ni&quot; - Für &quot;in&quot; oder &quot;not in&quot; einer 
+ Liste von Werten. &quot;right&quot; muss ein Array von mindestens einem 
+ Wert oder einer Feld-Referenz sein.</p>
+<p class="Liste_2 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 60px;" data-condition="Others:Deutsch">&quot;bw&quot; 
+ oder &quot;nb&quot; - Für &quot;between&quot; oder &quot;not between&quot;. 
+ &quot;right&quot; muss ein Array mit genau zwei Werten sein.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; 
+											 margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">right</span> (String, JSON-Objekt oder 
+ Array) - Rechte Seite des Vergleichs/der Bedingung. Abhängig vom verwendeten 
+ Operator (<span style="font-weight: bold;">op</span> oben), entweder kein, 
+ ein oder ein Array von Feld-Referenzen,  <span style="font-weight: bold;">val</span>- 
+ oder <span style="font-weight: bold;">query</span>-Objekten.</p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="val"></a>val</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Buchstabensymbol, das in einem Ausdruck (für Felder, 
+ Filter, etc.) oder als Parameter in einer Funktion verwendet werden soll. 
+ Hat ein einzelnes Element:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">val</span> (any) - das Buchstabensymbol, 
+ das verwendet werden soll.</p>
+<h3 data-condition="Others:Deutsch"><a id="sort"></a>sort</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ein <span style="font-weight: bold;">sort</span>-Objekt 
+ kann folgende Elemente spezifizieren:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">field</span> (String) - eine Feld-Referenz.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">desc</span> (Boolean, optional) - ob die 
+ Ergebnisse absteigend sortiert werden sollen. Defaultmäßig werden die 
+ Ergebnisse in aufsteigender Reihenfolge sortiert.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">nullsfirst</span> (Boolean, optional) - 
+ ob NULL-Werte zu Beginn der Ergebnisliste einsortiert werden sollen. Defaultmäßig 
+ werden Zeilen mit NULL-Werten für die abgefragten Felder ans Ende der 
+ Ergebnisliste sortiert. </p>
+
+
+</body></html>

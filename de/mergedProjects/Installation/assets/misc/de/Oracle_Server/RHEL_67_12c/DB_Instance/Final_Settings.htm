@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Abschließende Einstellungen</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Abschließende Einstellungen</h2>
+<h3><a name="Parameter_anpassen"></a>Parameter anpassen</h3>
+<p class="BodyText">Nun müssen noch einige Parameter überprüft und angepasst 
+ werden.</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: 'Palatino Linotype', serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;"><span style="font-size: 11pt; font-family: 'Palatino Linotype', serif; 
+											 color: #000000; font-style: normal; 
+											 font-variant-ligatures: normal; 
+											 font-variant-caps: normal; 
+											 font-weight: normal; letter-spacing: normal; 
+											 orphans: 2; text-transform: none; 
+											 white-space: normal; widows: 2; 
+											 word-spacing: 0px; -webkit-text-stroke-width: 0px;">Öffnen 
+ Sie ein Terminal und verbinden sich als Systemadministrator mit der neuen 
+ Datenbank-Instanz. In unserem Fall lautet der Befehl hierfür:</span></p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: 'Courier New'; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">sqlplus<span class="Apple-converted-space">&#160;</span><a 
+	 href="mailto:sys/system@LEGATO" style="">sys/system@LEGATO</a><span 
+	 class="Apple-converted-space">&#160;</span>as sysdba</p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: 'Courier New'; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">&#160;</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: 'Palatino Linotype', serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/params1.png" 
+											 alt="" style="border: none;" 
+											 border="0" /></p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: 'Palatino Linotype', serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">Anschließend kann man sehen, ob die 
+ Instanz hochgefahren wurde. Mit select * from dual; kann man auch einen 
+ Test ausführen.</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: 'Palatino Linotype', serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">Nun können die Oracle-Initparameter 
+ überprüft werden, zum Beispiel mit dem Aufruf: show parameter nls_length_semantics. 
+ Bitte richten Sie sich immer nach den aktuellen Hinweisen hierzu in unserer 
+ Legato-Systeminstallation.</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: 'Palatino Linotype', serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">An dieser Stelle können wir nun auch 
+ den versteckten Parameter b_tree_bitmap_plans setzen. Wichtig hierbei 
+ ist, dass bei versteckten Parametern immer die doppelten Anführungszeichen 
+ benutzt werden müssen. Der komplette Befehl lautet dann:</p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: 'Courier New'; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">alter system set &quot;_b_tree_bitmap_plans&quot; 
+ = false scope = both;</p>
+<p class="TextCode" style="margin: 0cm 19.85pt 2pt; line-height: normal; 
+	 font-size: 10pt; font-family: 'Courier New'; color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;">&#160;</p>
+<p class="BodyText">An dieser Stelle muss auch noch der Parameter OPTIMIZER_FEATURES_ENABLE 
+ auf 11.2.0.1 gesetzt werden.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Wird dieser Wert nicht auf 11.2.0.1 geändert, 
+ sondern verbleibt wie voreingestellt auf 12.1.0.2, so kommt es insbesondere 
+ bei 1-DB Systemen zu massiven Performance-Einbußen!</p>
+<p class="BodyText">Der Befehl zum Ändern des Parameters lautet:</p>
+<p class="TextCode">alter system set optimizer_features_enable='11.2.0.1'</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/optimizer.png" 
+						 alt="" style="border: none;" border="0" /></p>
+<h3><a name="Autostart_für_Instanz"></a>Autostart für Instanz</h3>
+<p class="BodyText">Die soeben erstellte Datenbank-Instanz LEGATO ist in 
+ der Datei /etc/oratab eingetragen worden. Der User oracle kann diese Datei 
+ zum Editieren öffnen:</p>
+<p class="TextCode">$ vi /etc/oratab</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image115.png" 
+						 alt="" width="700" height="411" border="0" /></p>
+<p class="BodyText">Wie an dem abschließenden N (für "no") in der Zeile, 
+ die mit "LEGATO" beginnt (hier: die vorletzte Zeile), erkennbar, wird 
+ die Instanz per Default <b>nicht</b> zusammen mit dem Datenbanksystem 
+ gestartet. Dieses Verhalten kann geändert werden, indem das N durch ein 
+ Y (für "yes") ersetzt wird. Nach dieser letzten Änderung sind Datenbank 
+ und Instanz voll funktionsfähig. Allerdings müssten bei einem Neustart 
+ des Servers sowohl das Datenbank-System als auch der Listener &quot;von 
+ Hand&quot; neu gestartet werden. Nicht zwingend notwendig, aber äußerst 
+ sinnvoll ist deshalb die Erstellung einer Autostart-Funktionalität für 
+ Datenbank. Diese wird im folgenden Abschnitt beschrieben.</p>
+</body>
+</html>

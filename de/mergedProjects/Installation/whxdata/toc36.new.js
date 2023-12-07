@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Einleitung","type":"item","tilePath":"","description":"","url":"de/OracleClient/Overview.htm#Einleitung"},{"name":"Voraussetzungen","type":"item","tilePath":"","description":"","url":"de/OracleClient/Overview.htm#Voraussetzungen"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

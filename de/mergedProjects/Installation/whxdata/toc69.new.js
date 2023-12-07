@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Kommandozeile","type":"item","tilePath":"","description":"","url":"de/MediaConfig/Overview.htm#Kommandozeile"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

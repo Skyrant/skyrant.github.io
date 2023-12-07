@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "2.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Script</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Script" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Script">
+        <span>Script</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Script</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Ansicht ermöglicht die Eingabe von JavaScript.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Neben internen Skripten können auch externe Skripte 
+ betrachtet und verändert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Kopfbereich dieses Tabs bietet eine Drop-Down-Box 
+ an, die sämtliche JavaScript-Quellen auflistet. Prinzipiell kann eine 
+ SVG-Datei beliebig viele externe und interne Skripte referenzieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ist keine Quelle in dem Bild vorhanden, steht nur der 
+ Eintrag &quot;Main&quot; zur Verfügung. Dort eingetragener Code wird in 
+ den Header des SVG-Quellcodes geschrieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Je nach Auswahl wird im unteren Bereich der Inhalt 
+ der Skript-Quelle angezeigt. Änderungen werden in den jeweiligen Quellen 
+ nachgezogen, sobald diese Ansicht verlassen wird, oder der Speichern-Button 
+ betätigt wird. Bei externen Quellen wird nochmals explizit nachgefragt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Verwaltung (löschen, neu anlegen) der Quellen muss 
+ noch von Hand im Sourcecode erfolgen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Externe Quellen werden dadurch gekennzeichnet, dass 
+ die Checkbox &quot;External Script&quot; aktiviert ist. Wird der Haken 
+ entfernt, wird die externe Referenzierung entfernt und der JavaScript-Code 
+ in die Datei eingefügt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Andersherum kann aus einer lokalen Quelle durch Anhaken 
+ dieser Option eine externe Quelle gemacht werden. Jedoch geht dabei der 
+ Code der lokalen Quelle verloren, da nur bereits bestehende Quellen eingelesen 
+ werden können.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei externen Quellen kann es vorkommen, dass die Datei 
+ vom Designer nicht gefunden werden kann. Dann wird die Code-Ansicht ausgeblendet, 
+ der Link bleibt jedoch erhalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch den Designer wird kein Debugging durchgeführt, 
+ das heißt etwaige Fehler treten frühestens in der Preview auf.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Als Fenster wird in diesem Dialog nur der DOM angeboten, 
+ jedoch ohne die Möglichkeit zur Interaktivität.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Tastaturabkürzungen entsprechen den angeführten Abkürzungen 
+ des Source-Editors.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Syntax der Java-Skripten kann immer mittels Syntax 
+ Check (F8) geprüft werden (siehe auch Seite 15).</p>
+
+
+</body></html>

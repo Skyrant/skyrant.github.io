@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">DbQuery</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DbQuery">
+        <span>DbQuery</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">DbQuery</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte dieses Typs dienen zur Ausführung von Datenbank-Abfragen 
+ (SELECT, UPDATE, INSERT, DELETE) und zum Aufruf von Datenbank-Prozeduren 
+ oder -Funktionen. Die SQL-Statements können Parameter enthalten, die zwischen 
+ mehreren Ausführungen des DB-Aufrufs geändert werden können (es muss kein 
+ neues DbQuery-Objekt erzeugt werden). Aufrufe von DB-Prozeduren und -Funktionen 
+ können auch Ausgabe-Parameter haben, über die sie Werte an das Script 
+ zurückliefern.</p>
+<p class="BodyText" data-condition="Others:Deutsch">DbQuery-Objekte werden durch den Konstruktor <b>DbQuery(dbcon, 
+ sql, param_infos, autokeynames)</b> angelegt:</p>
+<ul data-condition="Others:Deutsch">
+	<li style="list-style: disc;"><p class="ListBulletL1">dbcon muss ein 
+	 vorher erzeugtes DbCon-Objekt sein</p></li>
+	<li style="list-style: disc;"><p class="ListBulletL1">sql ist ein String, 
+	 der das SQL-Statement enthält</p></li>
+	<li style="list-style: disc;"><p class="ListBulletL1">param_infos ist 
+	 optional und kann benutzt werden, um die Typen und die &quot;Richtung&quot; 
+	 der SQL-Parameter anzugeben, wenn diese nicht automatisch bestimmt 
+	 werden können (wie es bei Oracle entgegen der Dokumentation leider 
+	 der Fall ist). Es sollte ein Array von so vielen Objekten sein, wie 
+	 das SQL-Statement Parameter enthält und jedes dieser Objekte sollte 
+	 die drei Eigenschaften &quot;type&quot; (Zahl), &quot;input&quot; 
+	 (Boolean) und &quot;output&quot; (Boolean) haben.</p></li>
+	<li style="list-style: disc;"><p class="ListBulletL1">autokeynames 
+	 ist ein optionaler Array (JavaScript), der die Spaltennamen von automatisch 
+	 generierten Key-Feldern enthält, die vom Insert zurückgegeben werden 
+	 sollten.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">DbQuery-Objekte haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">params</p>
+<p class="BodyText" data-condition="Others:Deutsch">Array mit den Werten von Abfrage-Parametern. Der erste 
+ Parameter hat darin den Index 1 (DB-Konvention, nicht JavaScript-Konvention).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">paramTypes</p>
+<p class="BodyText" data-condition="Others:Deutsch">Array mit den Typ-IDs (siehe die konstanten Eigenschaften 
+ von DbQuery oben) von Abfrage-Parametern (Array beginnt bei Index 1).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">inParams</p>
+<p class="BodyText" data-condition="Others:Deutsch">Werte der Eingabe-Parameter des SQL-Statements. Array 
+ beginnt mit Index 1 und enthält alle im SQL aufgeführten Parameter. Die 
+ Werte reiner Ausgabe-Parameter (solche, bei deren Definition &quot;input&quot; 
+ false und &quot;output&quot; true angegeben wurde) werden bei der Ausführung 
+ ignoriert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">outParams</p>
+<p class="BodyText" data-condition="Others:Deutsch">Werte der Ausgabe-Parameter des SQL-Statements. Array 
+ beginnt mit Index 1 und enthält alle im SQL aufgeführten Parameter.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">rowFieldCase</p>
+<p class="BodyText" data-condition="Others:Deutsch">Einer der Werte &quot;asis&quot;, &quot;lower&quot; 
+ oder &quot;upper&quot;, je nachdem, ob die Feldnamen in Ergebnis-Zeilen 
+ so geliefert werden sollen, wie sie der Datenbankbetreiber angibt, oder 
+ ob sie zu Klein- oder Großbuchstaben gewandelt werden sollen. Standardwert 
+ ist &quot;lower&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">DbQuery-Objekte haben die folgenden Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">query()</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array): Dient zum Lesen von Daten (SELECT). Liefert 
+ ein Array mit den Werten aller Felder des ersten abgefragten Datensatzes 
+ als Ergebnis oder null, falls die Abfrage keinen Datensatz gefunden hat.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">next()</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Array): Dient zum Lesen weiterer Datensätze nach einer 
+ Abfrage mittels query(). Liefert wie diese ein Array mit den Werten aller 
+ Felder des ersten abgefragten Datensatzes als Ergebnis oder null, falls 
+ es keine weiteren Datensätze zu lesen gibt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">execute()</p>
+<p class="BodyText" data-condition="Others:Deutsch">(Zahl): Führt eine SQL-Anweisung aus, die keine Datensätze 
+ liefert. Bei Anweisungen, die Datensätze ändern (UPDATE, INSERT, DELETE) 
+ liefert sie als Ergebnis die Anzahl der geänderten Datensätze, ansonsten 
+ 0.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">setParamInfo(index, type, input, output):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kann benutzt werden, um Parameter zu definieren, falls 
+ beim Anlegen der DbQuery der 3. Parameter (param_infos) nicht angegeben 
+ wurde.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clearParameters():</p>
+<p class="BodyText" data-condition="Others:Deutsch">setzt die Werte aller Parameter zurück (auf undefined).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clearResults():</p>
+<p class="BodyText" data-condition="Others:Deutsch">gibt die intern für query()/next() allozierten Datenstrukturen 
+ zurück. Sollte nach query()/next() aufgerufen werden, wenn keine weiteren 
+ Zeilen gelesen werden sollen, um Ressourcen zu sparen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">close():</p>
+<p class="BodyText" data-condition="Others:Deutsch">schließt die Datenbank-Abfrage.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><a id="addBatch"></a>addBatch():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt das SQL-Statement mit den aktuellen Parametern 
+ zur Batch-Ausführung hinzu. Die Funktion liefert keinen Rückgabewert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><strong><a id="executeBatch"></a>executeBatch():</strong></p>
+<p class="BodyText" style="font-weight: normal;" data-condition="Others:Deutsch">Schickt den Batch an Kommandos 
+ zur Datenbank. Liefert ein Array mit einem Ganzzahlergebnis für jedes 
+ SQL-Statement im Batch zurück. Bedeutung der Rückgabewerte:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="200"/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyTextBold"><strong>DbQuery.SUCCESS_NO_INFO</strong></p></td>
+		<td><p class="TblBodyText">Das SQL-Satement wurde erfolgreich ausgeführt, 
+		 aber die Anzahl Reihen konnte nicht ermittelt werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyTextBold"><strong>DbQuery.EXECUTE_FAILED</strong></p></td>
+		<td><p class="TblBodyText">Das SQL-Satement wurde nicht erfolgreich 
+		 ausgeführt, aber die Datenbank hat die Ausführung der nächsten 
+		 SQL-Statements im Batch fortgesetzt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyTextBold"><strong>&gt;= 0</strong></p></td>
+		<td><p class="TblBodyText">Anzahl der Datenbankreihen, die vom 
+		 SQL-Statement betroffen sind.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" style="font-weight: normal;" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Zu beachten ist, dass die Arrays, die sich auf Datenbank-Parameter 
+ oder Feldwerte beziehen, entsprechend den JDBC-Konventionen bei Index 
+ 1 beginnen, nicht wie in JavaScript üblich bei Index 0 (der Eintrag an 
+ Index 0 ist immer &quot;undefined&quot;). Dies gilt nicht für das optional 
+ an den Konstruktor zu übergebende Array mit Parameter-Definitionen: Dies 
+ wird in der Regel inline beim Aufruf angegeben (siehe Beispiel unten) 
+ und da wäre es unschön, immer erst ein leeres Element an den Anfang stellen 
+ zu müssen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die von den Funktionen query() und next() gelieferten 
+ Arrays enthalten die gleichen Werte, die zusätzlich zum numerischen Index 
+ (1..n) auch über den Feldnamen indiziert sind (in Großbuchstaben und ohne 
+ Tabellenpräfix), es ist also z.B. möglich, den gleichen Feldwert als row[1] 
+ oder als row[&#39;ID&#39;] auszulesen. Da Feldnamen nicht eindeutig sein müssen, 
+ ist das Auslesen über den numerischen Index allerdings sicherer.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel für den Datenbank-Zugriff:</p>
+<p class="TextCode" data-condition="Others:Deutsch">// list all Jobs for Application Engine instances 4711 
+ and 1</p>
+<p class="TextCode" data-condition="Others:Deutsch">var con = new DbCon(&quot;main&quot;, &quot;dboper&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">try {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    var qry = new DbQuery(con,</p>
+<p class="TextCode" data-condition="Others:Deutsch">         &quot;select 
+ * from ae_cyc_jobs where ae_inst = ?&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">         [ 
+ { type: con.INTEGER, input: true, output: false} ]);</p>
+<p class="TextCode" data-condition="Others:Deutsch">    try {</p>
+<p class="TextCode" data-condition="Others:Deutsch">         qry.params[1] 
+ = 4711;</p>
+<p class="TextCode" data-condition="Others:Deutsch">         for 
+ (var row = qry.query(); row; row = qry.next()) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">            logger.info(&quot;--- 
+ new row ---&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">            for 
+ (var i = 1; i &lt; row.length; ++i) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                logger.info(&quot;  field[&quot; 
+ + i + &quot;]: &quot; +</p>
+<p class="TextCode" data-condition="Others:Deutsch">                   typeof(row[i]) 
+ + (&#39; = &#39; + row[i]));</p>
+<p class="TextCode" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" data-condition="Others:Deutsch">         }</p>
+<p class="TextCode" data-condition="Others:Deutsch">         qry.clearParams();</p>
+<p class="TextCode" data-condition="Others:Deutsch">         qry.params[1] 
+ = 1;</p>
+<p class="TextCode" data-condition="Others:Deutsch">         for 
+ (var row = qry.query(); row; row = qry.next()) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">            logger.info(&quot;--- 
+ new row ---&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">            for 
+ (var i = 1; i &lt; row.length; ++i) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                logger.info(&quot;  field[&quot; 
+ + i + &quot;]: &quot; +</p>
+<p class="TextCode" data-condition="Others:Deutsch">                   typeof(row[i]) 
+ + (&#39; = &#39; + row[i]));</p>
+<p class="TextCode" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" data-condition="Others:Deutsch">         }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    } finally {</p>
+<p class="TextCode" data-condition="Others:Deutsch">         qry.close();</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">} finally {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    con.close();</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

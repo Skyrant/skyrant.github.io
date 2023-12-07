@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "7.1.2.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Sollwerte-Benutzerrechte</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Sollwerte-Benutzerrechte">
+        <span>Sollwerte-Benutzerrechte</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Sollwerte-Benutzerrechte</h2>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Das Bearbeiten von Sollwerten über das Target Values Boardlet (Sollwerte-Boardlet) 
+ alleine ist nicht möglich. Es müssen auch im LC2 Änderungen vorgenommen 
+ werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../../Legato_LC2_DE_Format-Dateien/01_Allgemein/02_Hinweis_de.jpg" alt="" width="71" height="19" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">De Konfiguration von Sollwerte-Benutzerrechten 
+ ist nicht auf Knotenebene durchzuführen. Eine solche Konfiguration muss 
+ auf dem Zeitschemata-Level für den Knoten erfolgen.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Um Sollwerte zu bearbeiten, müssen außerdem 
+ die Berechtigungen richtig konfiguriert werden:</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only">Das folgende Beispiel zeigt, dass die Konfiguration von Sollwerte-Benutzerrechten 
+ nicht auf Knotenebene durchzuführen ist. Eine solche Konfiguration muss 
+ auf dem Zeitschemata-Level für den jeweiligen Knoten erfolgen. Im folgenden 
+ Beispiel muss für die 17 ausgewählten Zeitschemata die Erlaubnis &quot;Zielwerte 
+ bearbeiten [-61]&quot; den jeweiligen Benutzergruppen zugewiesen werden.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../../assets/images/target_values_user_rights.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für das Editieren der Sollwerte mit dem Standardboardlet 
+ <span style="font-style: italic;">Sollwerte Kalender</span> (Dashbaord 
+ <span style="font-style: italic;">Schichtkalender</span> - <span style="font-style: italic;">Neu</span>) 
+ müssen auch Berechtigungen geändert werden. Wie im Beispiel gezeigt, kann 
+ dies durch das Recht <span style="font-style: italic;">Zielwerte bearbeiten</span> 
+ für die Zeitschemata erfolgen. Das muss für die Benutzergruppe festgelegt 
+ werden, die für die Einstellung/Festlegung der Zielwerte verantwortlich 
+ ist (siehe oben).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Sollwerte können bearbeitet werden, wenn die drei 
+ folgenden notwendigen Berechtigungen gewährt/erteilt sind:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Der Schalter &quot;Messwerte änderbar&quot; 
+	 muss im Boardlet-Layout aktiviert sein:<br/>
+	<img src="../../../../assets/images/Boardlet_Layout.png" alt="" style="border: none;" border="0"/></p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Der Benutzer benötigt die Berechtigung Werte 
+	 im ausgewählten Knoten im LC2 zu ändern:<br/>
+	<img src="../../../../assets/images/Node_groups_permissions_Variablenwert_setzen.png" alt="" style="border: none;" border="0"/></p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch;Others:Sapient_only">
+	<li><p class="BodyText">Das Kontrollkästchen &quot;Änderungen erlauben&quot; 
+	 in &quot;Allocated Variables&quot; der ausgewählten Knoten muss aktiviert 
+	 werden:<br/>
+	<img src="../../../../assets/images/Allocated_Variables_activated.png" alt="" style="border: none;" border="0"/></p></li>
+</ul>
+
+
+</body></html>

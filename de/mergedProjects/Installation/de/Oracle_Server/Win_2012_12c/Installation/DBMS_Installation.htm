@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_Windows_2012R2_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Durchführung der DBMS-Installation</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Durchführung der DBMS-Installation">
+        <span>Durchführung der DBMS-Installation</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Durchführung der DBMS-Installation</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Nach den Vorbereitungen kann nun die Installation durchgeführt 
+ werden. Dazu wechselt man zunächst in das Verzeichnis &quot;database&quot; 
+ und führt dort das Programm &quot;setup.exe&quot; aus.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image007.png" alt="" width="700" height="458" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Damit wird das Java-Installationsprogramm gestartet 
+ und es erscheint die folgende Maske:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image009.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 1: In dieser Maske kann die E-Mail-Adresse 
+ zu einem gültigen Metalink-Zugang eingetragen werden, um über Updates 
+ zu diesem Server automatisch benachrichtigt zu werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Beispiel tragen wir hier nichts ein und deaktivieren 
+ die Auswahlbox für die Security Updates.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Da man keine gültige E-Mail-Adresse angegeben hat, 
+ erfolgt die folgende Warnmeldung, die man jedoch ignorieren kann, indem 
+ man auf &quot;Yes&quot; klickt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image011.png" alt="" width="526" height="202" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image012.png" alt="" width="700" height="527" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 2: Die Maske mit dem automatischen Download 
+ von Software-Paketen kann unausgefüllt bleiben, sofern man keinen gültigen 
+ Metalink-Zugang hat, indem man den Radiobutton &quot;Skip software updates&quot; 
+ aktiviert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image014.png" alt="" width="700" height="524" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 3: Bei dieser Maske wählen wir die Option, 
+ dass nur die Datenbanksoftware installiert werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image016.png" alt="" width="700" height="524" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 4: Hier bitte die Option &quot;Single Instance 
+ Database&quot; auswählen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Die Installation von Legato auf Oracle Real 
+ Application Clusters (RAC) wird nicht unterstützt!</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image018.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 5: Bitte wählen Sie die gewünschten Sprachen 
+ der Datenbanksoftware.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image020.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 6: Bei der Auswahl der Edition wählen wir die 
+ Enterprise Edition.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image022.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 7: Im Gegensatz zu früheren Oracle-Versionen 
+ benötigt Oracle 12c einen eigenen Windows-Account (Windows-User), um zu 
+ laufen. Dieser wird jetzt neu angelegt, falls notwendig</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das gewählte Passwort muss der Windows System Policy 
+ entsprechen, sonst erscheint der folgende Warnhinweis:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image024.png" alt="" width="530" height="305" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls ein passender User schon vorher angelegt worden 
+ ist, kann er natürlich hier genutzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image025.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Schritt 8: Auswahl der Verzeichnisse – Bitte wählen 
+ Sie hier sehr hohe Verzeichnisse, damit die Verzeichnisstruktur nicht 
+ so tief wird, zum Beispiel das Verzeichnis &quot;C:\oracle&quot;. (Ein 
+ vollständiger Pfadname in Windows – inklusive Dateiname – darf nicht länger 
+ als 255 Zeichen sein.)</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image027.png" alt="" width="700" height="527" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Schritt 9 werden alle Voraussetzungen von der Installationssoftware 
+ überprüft.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image029.png" alt="" width="700" height="525" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Sofern alles in Ordnung ist, erfolgt dann eine Zusammenfassung 
+ im Schritt 10. Diese Zusammenfassung kann man sich lokal abspeichern.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um fortzufahren, dann bitte den &quot;Install-Button&quot; 
+ klicken.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image031.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Schritt 11 wird die Oracle Software-Installation 
+ durchgeführt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image033.png" alt="" width="700" height="526" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach der Installation erscheint dann erwartungsgemäß 
+ die obige Meldung. Damit ist die DBMS Installation erfolgreich durchgeführt. 
+ Das Fenster kann mit dem &quot;Close&quot;-Button geschlossen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ergebnisse der Installation können in dem Logfile &quot;installActions.log&quot; 
+ nachgelesen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine spätere eventuelle Deinstallation erfolgt ebenfalls 
+ über das Installationsprogramm. Dafür sollte der Ordner mit den Installationsdateien 
+ auf dem System vorgehalten werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In den nächsten Kapiteln folgen die Einrichtung eines 
+ Listeners und die Installation einer Datenbankinstanz für die spätere 
+ LEGATO-Installation.</p>
+
+
+</body></html>

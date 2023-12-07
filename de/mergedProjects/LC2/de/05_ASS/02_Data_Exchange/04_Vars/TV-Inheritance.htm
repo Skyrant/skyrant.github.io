@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.2.1.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <title data-condition="Others:Deutsch;Others:Sapient_only">Sollwert-Vererbung</title>
+  <link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+  <style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">
+    /*<![CDATA[*/
+    A:visited {}
+    A:link {
+      color: blue;
+    }
+    /*]]>*/
+  </style>
+  <meta name="rh-index-keywords" content="Sollwert" data-condition="Others:Deutsch;Others:Sapient_only"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Sollwert-Vererbung">
+        <span>Sollwert-Vererbung</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h2 data-condition="Others:Deutsch;Others:Sapient_only">Sollwert-Vererbung</h2>
+  <p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">Anwendungsstruktur | Datenaustausch | Datenaustausch-Module | Verbindungen | Variablen | Sollwert-Vererbung</p>
+  <h3 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Funktion</h3>
+  <p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Hier kann pro Variable die Sollwert-Vererbung parametriert werden. Für weitere Informationen bzgl. Sollwerten, siehe bitte <a href="../../../06_Plant_Mgmt/02_WTS/03_Time_Schemes/07_TV_Patterns.htm">Sollwertvorlagen</a>.</p>
+  <h3 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Feldbeschreibung</h3>
+  <p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+  <table cellpadding="1" cellspacing="0" class="AlternateGreyBlackHeaderRow" style="border-collapse:collapse;" width="100%" data-condition="Others:Deutsch;Others:Sapient_only">
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p class="TabellenÜberschrift">Feld</p>
+        </td>
+        <td>
+          <p class="TabellenÜberschrift">Beschreibung</p>
+        </td>
+      </tr>
+      <tr class="t2Row">
+        <td>
+          <p class="TabellenInhalt">ID</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Eindeutige Identifikationsnummer. Wird vom System vergeben. Schreibgeschützt.</p>
+        </td>
+      </tr>
+      <tr class="t1Row">
+        <td>
+          <p class="TabellenInhalt">Variable</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Variable. Wenn die Spalte &quot;Parent-Variable&quot; = NULL ist, ist dies hier die &quot;führende&quot; Variable, die auf die abhängigen vererbt wird.</p>
+        </td>
+      </tr>
+      <tr class="t2Row">
+        <td>
+          <p class="TabellenInhalt">Parent-Variable</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Variable, von der der Wert geerbt werden soll.</p>
+        </td>
+      </tr>
+      <tr class="t1Row">
+        <td>
+          <p class="TabellenInhalt">Parent-Offset</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Offset der Parent-Variable.</p>
+        </td>
+      </tr>
+      <tr class="t2Row">
+        <td>
+          <p class="TabellenInhalt">Offset</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Offset der abhängigen Variable</p>
+        </td>
+      </tr>
+      <tr class="t1Row">
+        <td>
+          <p class="TabellenInhalt">Berechn. nach Anteil?</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Checkbox. 1 = Berechnung erfolgt nach Anteilen, nicht nach Faktor.</p>
+          <p class="TabellenInhalt">0 = Berechnung erfolgt nach Faktor.</p>
+        </td>
+      </tr>
+      <tr class="t2Row">
+        <td>
+          <p class="TabellenInhalt">Berechnungs-Faktor</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Faktor für die Berechnung. Wird nur berücksichtigt, wenn Berechn. nach Anteil = 0</p>
+        </td>
+      </tr>
+      <tr class="t1Row">
+        <td>
+          <p>Berechnungs-Anteil</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Anteil für die Berechnung. Wird nur berücksichtigt, wenn Berechn. nach Anteil = 1</p>
+        </td>
+      </tr>
+      <tr class="t2Row">
+        <td>
+          <p class="TabellenInhalt">Parent-Faktor</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Faktor der Parent-Variable.</p>
+        </td>
+      </tr>
+      <tr class="t1Row">
+        <td>
+          <p class="TabellenInhalt">Rundungs-Art</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Rundungs-Art.</p>
+        </td>
+      </tr>
+      <tr class="t2Row">
+        <td>
+          <p class="TabellenInhalt">Rundungs-Genauigkeit</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Numerischer Wert zwischen 0 und 10, der die Rundungs-Genauigkeit angibt (0 = auf Integer runden, 1 = auf 1 Nachkommastelle runden, 2 = Nachkommastellen runden, etc.)</p>
+        </td>
+      </tr>
+      <tr class="t1Row">
+        <td>
+          <p class="TabellenInhalt">Sortiernummer</p>
+        </td>
+        <td>
+          <p class="TabellenInhalt">Sortiernummer, die die relative Reihenfolge von Variablen mit dem gleichen Parent angibt.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+  <h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Berechnungs-Grundlagen"></a>Berechnungs-Grundlagen</h3>
+  <h4 data-condition="Others:Deutsch;Others:Sapient_only">Berechnung nach Faktor</h4>
+  <ul style="margin: 10px 0px 0px; list-style-type: disc; color: rgb(51, 51, 51); 
+		 font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Noto Sans&#39;, Ubuntu, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif; 
+		 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+		 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+		 text-decoration-style: initial; text-decoration-color: initial;" data-condition="Others:Deutsch;Others:Sapient_only">
+    <li>
+      <p class="BodyText">Diese Methode wird verwendet, wenn die Spalte &quot;Berechn. nach Anteil?&quot; auf 0 gesetzt ist. Zur Berechnung der Werte, die vererbt werden, wird ein Faktor und zwei Offsets verwendet. Die Formel gestaltet sich wie folgt:</p>
+    </li>
+    <li>
+      <p class="BodyText">Variable = (Parent-Variable + Parent-Offset) * Faktor + Offset</p>
+    </li>
+    <li>
+      <p class="BodyText">Soll der Wert der Parent-Variable auf mehrere Variablen verteilt werden und ist eine Rundungs-Art selektiert (z.B. für diskrete Stückfertigung), kann dies zu fehlerhaften Ergebnissen führen. Beispiel: Ein Wert soll in drei gleiche Teile geteilt werden, die alle auf Ganzzahl gerundet werden sollen. Die Summe dieser Teile kann dann höher oder niedriger als der Wert der Parent-Variable sein (10/3 = 3.33, gerundet auf 3, 3*3 = 9.  11/3 = 3,67, gerundet auf 4, 3*4 = 12). Um diese Situation abzubilden, wird der folgende Algorithmus zur Verhinderung der Fehler-Verbreitung verwendet:</p>
+    </li>
+  </ul>
+  <p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">abhängige Werte werden in einer vorgegebenen Reihenfolge berechnet (Sortiernummer)</p>
+  <p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">nach jeder Berechnung wird dieselbe Berechnung &quot;rückwärts&quot; auf den Rundungsfehler durchgeführt und das Ergebnis wird dem Wert der Parent-Variable hinzugefügt</p>
+  <p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">dieser angepasste Wert der Parent-Variable wird dann verwendet, um den nächsten abhängigen Wert zu berechnen.</p>
+  <p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+  <h4 data-condition="Others:Deutsch;Others:Sapient_only">Berechnung nach Anteil</h4>
+  <p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Methode wird verwendet, wenn die Spalte &quot;Berechn. nach Anteil?&quot; auf 1 gesetzt ist. Hier kann der Benutzer Werte wie &quot;10-10-15&quot; eingeben, um ein Ziel auf 3 Maschinen zu verteilen, von denen eine 1,5 mal so schnell arbeiten kann wie die anderen, anstatt die entsprechenden Faktoren von &quot;0.2857-0,2857-0.4286&quot; eingeben zu müssen.</p>
+  <p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Damit dies als vollumfänglicher Ersatz für die Verteilung via Faktor dient, wurde ein zusätzlicher Parent-Faktor eingeführt, mit dem Faktor der Parent-Wert multipliziert wird. Andernfalls könnte der Benutzer keine Ziele übergeben, bei denen die Summe der benötigten Teile ein Vielfaches des Parent-Werts ist (z.B. &quot;produziere 2 Ohren pro Kopf&quot;).</p>
+  <p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Berechnung nach Anteil/Parent-Faktor erfolgt so:</p>
+  <p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch;Others:Sapient_only">alle Anteils-Werte der abhängigen Variablen einer Vererbungskette summieren, um einen Gesamtanteil zu erhalten.</p>
+  <p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch;Others:Sapient_only">für jeden abhängigen Wert wird (((Parent-Variable * Parent-Faktor + Parent-Offset) * Anteil) / Gesamtanteil) + Offset berechnet</p>
+  <p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch;Others:Sapient_only">wenn alle abhängigen Variablen denselben Parent-Faktor und Parent-Offset haben oder wenn sie gar keinen haben, und wenn alle abhängigen Variablen dieselbe Rundungs-Genauigkeit haben, dann wird die letzte abhängige Variable als Restwert berechnet, um Parent-Variable * Parent-Faktor + Parent-Offset zu vervollständigen. Dabei werden etwaige depd_offsets von vorangegangenen abhängigen Variablen nicht berücksichtigt. Ein einfaches Beispiel: Mit Anteilen von &quot;1-1-1&quot;, kein Parent-Faktor, keine Offsets jedweder Art und Integer-Rundung würde ein Parent-Wert von 100 folgendermaßen verteilt &quot;33-33-34&quot;.</p>
+
+</body></html>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "4.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">DOM</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+ <meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="DOM" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DOM">
+        <span>DOM</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">DOM</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Grafische Baumdarstellung des DOM (Document Object 
+ Models) der SVG Datei.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Elemente werden entsprechend ihrer Reihenfolge 
+ im Dokument und eingerückt nach Hierarchieebene dargestellt. Jedes Element 
+ wird dabei durch ein Symbol, der ID und den Tag-Namen dargestellt. Gruppen, 
+ Layers oder Links können durch das Plus bzw. Minus auf- und zugeklappt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der DOM erlaubt es, durch Drag&amp;Drop die Elemente 
+ zu verschieben. Dabei wird die Restriktion bezüglich Layers nicht beachtet. 
+ Zu beachten ist hierbei, dass entstehende leere Gruppen nach Rückfrage 
+ gelöscht werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird ein Element im DOM selektiert, wird es auch in 
+ der GUI markiert. Auf diese Weise können auch Elemente in Gruppen einzelnen 
+ verschoben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch STRG können mehrere einzelne Elemente bzw. durch 
+ SHIFT ein Bereich im DOM selektiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Interaktivität des DOMs steht nur im Designer zur 
+ Verfügung. Code-Ansichten unterstützen dies nicht.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="73"><p class="TabellenÜberschrift">Button</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Refresh</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Aktualisiert 
+		 den DOM</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Move 
+		 Up</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Verschiebt 
+		 ein Element nach oben (die Hierarchieebene kann nicht verlassen 
+		 werden)</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="73"><p class="TabellenInhalt">Move 
+		 Down</p></td>
+		<td style="vertical-align: top;" width="383"><p class="TabellenInhalt">Verschiebt 
+		 ein Element nach unten (die Hierarchieebene kann nicht verlassen 
+		 werden)</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

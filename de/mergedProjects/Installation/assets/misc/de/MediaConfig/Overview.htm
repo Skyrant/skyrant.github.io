@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="build tags" content="Deutsch" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Überblick</title>
+<link rel="StyleSheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+</head>
+<body>
+<h1>Überblick</h1>
+<p class="BodyText">Das Programm MediaConfig beinhaltet folgende Funktionalität:</p>
+<p class="BodyText">Anlegen / Löschen von Gruppen</p>
+<p class="BodyText">Zuordnung der Takte zu Gruppen</p>
+<p class="BodyText">Zuordnung der Takte zu Gruppen</p>
+<p class="BodyText">Konfiguration Melodie abspielen pro Takt (notwendig für MediaClient)</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Diese Informationen werden in der Datenbanktabelle RC_CONFIG gespeichert.</p>
+<p class="BodyText">Die Tabelle besitzt folgende Spalten:</p>
+<p class="BodyText">&#160;</p>
+<table class="SimpleGridBlack" cellspacing="0">
+<tr class="t1Row">
+<td>
+<p class="TextkörperTablefett">Spalte</p>
+</td>
+<td>
+<p class="TextkörperTablefett">Typ</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TextkörperTable">LINE</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TextkörperTable">SECTION</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TextkörperTable">GRP</p>
+</td>
+<td>
+<p class="TextkörperTable">VARCHAR2(8)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TextkörperTable">TACT</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TextkörperTable">MELODY</p>
+</td>
+<td>
+<p class="TextkörperTable">NUMBER</p>
+</td>
+</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Darüber hinaus kann mit dem Programm MediaConfig einer Gruppe eine Melodie zugeordnet werden, welche vom MediaClient abgespielt wird. Diese Information wird in der Konfigurationsdatei WavFilesRel.cfg (befindet sich im Konfigurationsverzeichnis) abgespeichert.</p>
+<h2 style="mso-list: l0 level2 lfo1; mso-bookmark: _Toc367452384;"><a name="Kommandozeile" id="Kommandozeile"></a>Kommandozeile</h2>
+<p class="BodyText">Das Programm MediaConfig erwartet in der Kommandozeile die Angabe des Konfigurationsverzeichnisses (Beispiel: C:\RC-BRASIL\Config), in dem sich die allgemeinen Konfigurationsdateien befinden (notwendig für Datenbank Connect und Anzeige der Baumstruktur der Montagelinien, siehe auch Dokumentation MediaServer).</p>
+</body>
+</html>

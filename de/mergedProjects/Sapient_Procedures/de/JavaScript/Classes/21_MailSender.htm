@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">MailSender</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="MailSender">
+        <span>MailSender</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">MailSender</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dient zusammen mit MailMessage dazu, E-Mails aus JavaScript-Jobs 
+ zu versenden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Senden von E-Mails erfordert Kommunikation über 
+ Netzwerk, gegebenenfalls Kodieren von Anhängen und ähnlich aufwändige 
+ Operationen. Somit kann es sich als nützlich erweisen, das Senden asynchron 
+ über einen ThreadPool (s.u.) durchzuführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein MailSender enthält alle Konfigurationsdaten zum 
+ Versenden von Mails über einen gegebenen Mail-Server. Diese sind als Eigenschaften 
+ abgebildet:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">host (String, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Name oder IP-Adresse des Mail-Servers.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">port (Number, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">TCP-Port, auf dem der Mail-Server Mails entgegennimmt. 
+ In der Regel entweder Port 25 (SMTP) oder 587 (SUBMISSION). Falls kleiner 
+ gleich 0 wird entsprechend der Konfiguration ein Standard-Port gewählt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">auth (Boolean, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob der Mail-Server eine Anmeldung mit Benutzername 
+ und Kennwort erfordert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">user (String, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Benutzername zum Anmelden beim Mail-Server.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">password (String, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kennwort zum Anmelden beim Mail-Server.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">security (String, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob und wie die Verbindung zum Mail-Server verschlüsselt 
+ und gesichert werden soll. Einer der folgenden Werte:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">none – Unverschlüsselte und ungesicherte Verbindung</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">tls_optional – Verbindung mittels TLS verschlüsseln, 
+ sofern der Server das unterstützt. Identität des Servers nicht prüfen, 
+ sondern jedes beliebiges vom Server präsentierte Zertifikat akzeptieren.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">tls_trust_all – Nur TLS-verschlüsselte Verbindungen 
+ aufbauen, aber die Identität des Servers nicht prüfen, sondern jedes beliebige 
+ von ihm präsentierte Zertifikat akzeptieren.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">tls_trust_host – Nur TLS-verschlüsselte Verbindungen 
+ aufbauen, aber jedes vom Server präsentierte Zertifikat akzeptieren, das 
+ auf den zum Verbindungsaufbau benutzten Rechnernamen (siehe Eigenschaft 
+ host) ausgestellt ist.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">tls_required – Nur TLS-verschlüsselte Verbindungen 
+ aufbauen und die Identität des Mail-Servers mit den für die Java-VM konfigurierten 
+ Mitteln prüfen.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">tls_strict – Nur TLS-verschlüsselte Verbindungen 
+ aufbauen und die Identität des Mail-Servers mit allen in RFC2595 definierten 
+ Mitteln überprüfen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">debug (Boolean, readwrite):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kann auf true gesetzt werden, um Fehler beim Mail-Versand 
+ zu untersuchen. Die Klassen der JavaMail-Bibliothek geben dann Ablaufmeldungen 
+ und alle übertragenen Texte auf der Standard-Ausgabe (i.d.R. Konsole) 
+ aus.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">MailSender bietet zwei Methoden zum Versenden von Mails:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">boolean sendText(from, to, subject, text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versendet einfache Reintext-Mails mit Absender from 
+ an einen einzelnen Empfänger to. Die Mail hat den Betreff subject und 
+ enthält den Text text. Das Ergebnis gibt Erfolg (true) oder Misserfolg 
+ des Mail-Versands an.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">boolean send(message)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versendet eine als MailMessage-Objekt definierte Mail. 
+ Konnte die Nachricht an alle darin angegebenen Empfänger gesendet werden, 
+ ist das Ergebnis der Funktion true. Beim ersten Empfänger, an den die 
+ Nachricht nicht versendet werden kann, bricht die Funktion ab und liefert 
+ als Ergebnis false. Der Erfolg des Versendens bezieht sich nur auf die 
+ Übergabe an den im MailSender definierten Server. Später auftretende Fehler, 
+ z.B., wenn dieser Server die Nachricht nicht zustellen kann, werden nicht 
+ erfasst.</p>
+
+
+</body></html>

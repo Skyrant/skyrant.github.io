@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.6_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Paperclip Konfigurationsparameter</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Paperclip Konfigurationsparameter">
+        <span>Paperclip Konfigurationsparameter</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Paperclip Konfigurationsparameter</h1>
+<h2 data-condition="Others:Deutsch">Service</h2>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch">Der Dienst hat eine 
+ strikte Trennung von Konfiguration und Code. Die Konfiguration <span style="font-family: &#39;Palatino Linotype&#39;, serif;">kann 
+ von Installation zu Installation stark variieren, der Code jedoch nicht.</span></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Erstellen Sie 
+	 eine .env-Datei und fügen Sie umgebungsspezifische Variablen in neuen 
+	 Zeilen in der Form von NAME=VALUE. </p></li>
+	<li><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Zeilen, die 
+	 mit # beginnen, sind Kommentare und werden zur Laufzeit ignoriert. 
+	 </p></li>
+	<li><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn möglich, 
+	 sollten Sie leere Werte vermeiden, da die Standardwerte in diesem 
+	 Fall möglicherweise nicht nicht richtig angewendet werden. Um den 
+	 Standardwert zu verwenden, entfernen Sie entweder die Zeile oder kommentieren 
+	 Sie sie aus.</p></li>
+</ul>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">P</span>ASSWORD</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">TARGET_HOST</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">TARGET_PORT</span>= </p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">HTTPS</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">LOCALE</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">CHROME_FLAGS</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">MAX_CONCURRENT_SESSIONS</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"># DEBUG=</p>
+<p class="TextCode" data-condition="Others:Deutsch"># QUEUE_MAX_WAIT_MS=</p>
+<p class="TextCode" data-condition="Others:Deutsch"># QUEUE_MAX_WAITING_ITEMS=</p>
+<p class="TextCode" data-condition="Others:Deutsch"># HTML_MIN_STABLE_SIZE_ITERATIONS=</p>
+<p class="TextCode" data-condition="Others:Deutsch"># CHECK_ITERATIONS=</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 33.333%;"/>
+	<col style="width: 33.333%;"/>
+	<col style="width: 33.333%;"/>
+	</colgroup><tbody><tr>
+		<td><p style="font-weight: bold; font-family: &#39;Palatino Linotype&#39;, serif;">Umgebungsvariable</p></td>
+		<td><span style="font-weight: bold; font-family: &#39;Palatino Linotype&#39;, serif;">Beschreibung</span></td>
+		<td><span style="font-weight: bold; font-family: &#39;Palatino Linotype&#39;, serif;">default</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">PASSWORD</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Geheimes 
+		 Token für die Authentifizierung</p></td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">TARGET_HOST</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Hostname 
+		 der web app </span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">localhost</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">TARGET_PORT</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Teil 
+		 der web app </span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">80 for 
+		 HTTP<br/>
+		443 for HTTPS</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">HTTPS</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn HTTPS 
+		 für den Zugriff auf die Webanwendung verwendet werden soll:</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">0= no</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">1= yes</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">0</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">LOCALE</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Sprache 
+		 für die Datumsformatierung in der Fußzeile:</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">en-US</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">de</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">en-US</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">CHROME_FLAGS</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Zusätzliche 
+		 Chrome-Flags, getrennt durch ;<br/>
+		Bei der Bereitstellung in Containern kann es hilfreich sein<span style="font-family: &#39;Palatino Linotype&#39;, serif;"> --disable-dev-shm-usage 
+		 zu verwenden, um die Nutzung des gemeinsamen Speichers zu verhindern, 
+		 der eine Standardgröße von 64MB hat und zu unerwarteten Chromium-Abstürzen 
+		 führen kann (siehe: Fehlerbehebung).</span></p></td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">DEBUG</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Ausführlichkeit 
+		 der Protokollierung wird erhöht</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">true, 1 = yes</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">jeder andere 
+		 Wert = no</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Disabled</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">MAX_CONCURRENT_SESSIONS</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Begrenzen 
+		 Sie die Anzahl der gleichzeitigen Sitzungen. </p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">10</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">QUEUE_MAX_WAIT_MS</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Die 
+		 Zeit (in Millisekunden), die eine Anfrage in der Warteschlange 
+		 bleiben darf. Eine Anfrage wird<br/>
+		eine Anfrage in der Warteschlange, wenn die Anzahl der Anfragen, 
+		 die gerade bearbeitet werden, mit<br/>
+		MAX_CONCURRENT_SESSIONS übersteigt. Wird die Anfrage nicht innerhalb 
+		 der vorgegebenen Zeit abgebaut, wird die Anforderung mit dem Statuscode 
+		 503 (Service Unavailable) und dem Grund<br/>
+		&quot;Aufgabe wurde nicht rechtzeitig aus der Warteschlange entfernt&quot;.</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Unlimited</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">QUEUE_MAX_WAITING_ITEMS</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Die maximal 
+		 zulässige Anzahl von Aufgaben, die gleichzeitig in die Warteschlange 
+		 gestellt werden können. Berücksichtigt die Prioritäten der aktuell 
+		 wartenden Tasks.<br/>
+		<br/>
+		<br/>
+		Wenn dieser Wert beispielsweise auf 5 gesetzt ist und sich bereits 
+		 5 Aufgaben mit der Priorität=0<br/>
+		in der Warteschlange stehen, dann werden neu eingehende Anfragen 
+		 mit einer Priorität von 0 oder niedriger sofort verworfen.<br/>
+		<br/>
+		<br/>
+		In demselben Szenario würde jedoch eine eingehende Anfrage mit 
+		 einer Priorität von z. B. 1 nicht abgelehnt werden.<br/>
+		</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Unlimited</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">HTML_MIN_STABLE_SIZE_ITERATIONS</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Minimale 
+		 Iterationen, bei denen der Inhalt eine stabile Größe hat. Jede 
+		 Iteration wird <span style="font-family: &#39;Palatino Linotype&#39;, serif;">jede 
+		 Sekunde ausgeführt und vergleicht die HTML-Größe mit der Größe 
+		 der vorherigen Iteration. Der Druck wird gestartet, sobald der 
+		 Inhalt für die angegebenen minStableSizeIterations in einer Zeile 
+		 stabilen Inhalt erreicht.</span></p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">3</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">CHECK_ITERATIONS</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Anzahl 
+		 der Iterationen, in denen der Dienst nach dem Dashboard-Service 
+		 sucht und den Status von <span style="font-family: &#39;Palatino Linotype&#39;, serif;">isDashboardLoaded, 
+		 bevor der Druck gestartet wird. Entschärft Nebeneffekte auf Systemen, 
+		 bei denen das anfängliche Laden der Anwendung mehr Zeit als üblich 
+		 in Anspruch nahm, so dass der Bericht bereits gedruckt wurde bevor 
+		 die Anwendung vollständig geladen war.</span></p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">10</span></td>
+	</tr>
+</tbody></table>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch">Sapient</h2>
+<p class="TextCode" style="font-family: &#39;Palatino Linotype&#39;, serif; font-size: 12pt;" data-condition="Others:Deutsch">Richten 
+ Sie die folgenden Eigenschaften in der Tabelle se_tasks für den Aufgabentyp 
+ print ein:</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">paperclip</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">paperclipDomain</span>=</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span style="color: #ff0000;">paperclipPort</span>=</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 33.333%;"/>
+	<col style="width: 33.333%;"/>
+	<col style="width: 33.333%;"/>
+	</colgroup><tbody><tr>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;">Objekt</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;">Beschreibung</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;">default</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclip</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn Paperclip 
+		 verwendet werden soll</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">false= no</p>
+		<p style="font-family: &#39;Palatino Linotype&#39;, serif;">true= yes</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">false</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclipDomain</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Host</span></td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclipPort</span></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Port</span></td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclipTimeout</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Wie lange 
+		 die Sapient Engine auf eine Antwort von Paperclip warten soll. 
+		 Ausgedrückt in Sekunden.</p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">600 
+		 seconds<br/>
+		(10 minutes)</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclipRetryCount</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Wenn eine 
+		 Anfrage an Paperclip fehlschlägt, versuchen Sie es mehrere Male. 
+		 Wenn eine Anfrage erfolgreich ist, aber <span style="font-family: &#39;Palatino Linotype&#39;, serif;">der 
+		 Versuch, die E-Mail-Benachrichtigung zu senden, fehlschlägt (geplanter 
+		 Druck), versuchen Sie, die E-Mail-Nachricht so oft zu senden. 
+		 Null bedeutet, dass nichts erneut versucht wird.</span></p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">0</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclipPrioritySchedule</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Anfänglicher 
+		 Prioritätswert für vom Druckplaner initiierte Anfragen. Höhere 
+		 Werte bedeuten eine <span style="font-family: &#39;Palatino Linotype&#39;, serif;">höhere 
+		 Priorität. Wenn paperclipRetryCount größer als 0 ist, wird bei 
+		 jedem nachfolgenden Wiederholungsversuch  ein um 1 erhöhter 
+		 Prioritätswert verwendet.</span></p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">0</span></td>
+	</tr>
+	<tr>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">paperclipPriorityAdHoc</span></td>
+		<td><p style="font-family: &#39;Palatino Linotype&#39;, serif;">Ursprünglicher 
+		 Prioritätswert für den Ad-hoc-Druck (manuell). </p></td>
+		<td><span style="font-family: &#39;Palatino Linotype&#39;, serif;">0</span></td>
+	</tr>
+</tbody></table>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Falls 
+ noch nicht vorhanden, erstellen Sie einen Sapient-Benutzer mit dem Namen 
+ paperclip. Dieser Benutzer muss ein Mitglied der Benutzergruppe sys sein. 
+ Prüfen Sie, ob die Eigenschaften topToolbar und theme als Teil der Benutzereinstellungen 
+ korrekt sind. Beispiel:</span></p>
+<p class="TextCode" data-condition="Others:Deutsch">{&quot;newLayoutActive&quot;:false,&quot;headerActive&quot;:true,&quot;topToolbar&quot;:false,&quot;topToolbarBoardlets&quot;:[],&quot;leftToolbar&quot;:false,&quot;leftToolbarBoardlets&quot;:[],&quot;bottomToolbar&quot;:false,&quot;bottomToolbarBoardlets&quot;:[],&quot;theme&quot;:&quot;legato-sapient&quot;,&quot;logLevel&quot;:&quot;info&quot;,&quot;locale&quot;:&quot;de-DE&quot;,&quot;sidebarViewMode&quot;:&quot;sidebar&quot;,&quot;sidebarSize&quot;:&quot;small&quot;,&quot;favorites&quot;:[],&quot;debounceNavigation&quot;:500,&quot;activeNodesDescription&quot;:false,&quot;dashboardsFontSize&quot;:10}</p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<p style="font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Stellen 
+ Sie sicher, dass die Eigenschaft upload.storage.path in der Tabelle se_tasks 
+ für den Aufgabentyp webserver gültig ist.</span></p>
+
+
+</body></html>

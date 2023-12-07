@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Archiving Status prüfen, Archiving aktivieren / deaktivieren</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Archiving Status prüfen, Archiving aktivieren / deaktivieren</h2>
+<h3><a name="Allgemein"></a>Allgemein</h3>
+<p class="BodyText">Für sensible Produktionsumgebungen kann nun das Archivieren 
+ von Redo-Logs aktiviert werden. Archivierte Redo-Log-Dateien (Archivelogs) 
+ sind Offline-Kopien der Redo-Log Dateien und können mit Hilfe eines Backups 
+ der Datenbank verwendet werden, um im Fehlerfall eine vollständige Reparatur 
+ der Datenbank zu gewährleisten.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Wird das Archiving aktiviert, so muss sichergestellt 
+ werden, dass die Log-Files regelmäßig gelöscht werden. Sonst läuft die 
+ Festplatte bzw. die Fast Recovery Area über!</p>
+<p class="BodyText">Außerdem ist es aus Gründen der Ausfallsicherheit und 
+ der Performance sinnvoll, die Archivdateien auf einer anderen Platte oder 
+ Partition abzulegen.</p>
+<h3><a name="Archive_Log_Status_überprüfen"></a>Archive Log Status überprüfen</h3>
+<p class="BodyText">Prüfen Sie zuerst den Status des Archive Logs. Gehen 
+ Sie folgendermaßen vor:</p>
+<p class="TextCode">sqlplus / as sysdba</p>
+<p class="TextCode">archive log list;</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Falls der Befehl sqlplus / as sysdba nicht funktioniert, 
+ melden Sie sich wie folgt an:</p>
+<p class="TextCode">sqlplus &lt;SYSUSER&gt;/&lt;SYSPWD&gt;[@&lt;DBNAME&gt;] 
+ as sysdba</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Nun wird Information über den Datenbank-Log-Modus ausgegeben. 
+ Ist das Archiving bereits aktiviert, sieht die Antwort in etwa so aus:</p>
+<p class="TextCode">Datenbank-Log-Modus&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Archive-Modus</p>
+<p class="TextCode">Automatische Archivierung&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Aktiviert</p>
+<p class="TextCode">Archivierungsziel&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;D:\oracle\oradata\IDDB2\archive</p>
+<p class="TextCode">Älteste Online-Log-Sequenz&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;11160</p>
+<p class="TextCode">Nächste Log-Sequenz ins Archiv&#160;&#160;&#160;&#160;&#160;11163</p>
+<p class="TextCode">Aktuelle Log-Sequenz&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;11163</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Ist das Archiving ausgeschaltet, so sieht die Antwort 
+ in etwa folgendermaßen aus:</p>
+<p class="TextCode">Datenbank-Log-Modus&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NoArchive-Modus</p>
+<p class="TextCode">Automatische Archivierung&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Deaktiviert</p>
+<p class="TextCode">Archivierungsziel&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/srv/oracle/product/11.2.0/dbhome_2/dbs/arch</p>
+<p class="TextCode">Älteste Online-Log-Sequenz&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;514409</p>
+<p class="TextCode">Aktuelle Log-Sequenz&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;514415</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Mount-Phase_anstoßen"></a>Mount-Phase anstoßen</h3>
+<p class="BodyText">Die Änderung des ARCHIVELOG-Modus ist nur in der Mount-Phase 
+ möglich. Gehen Sie folgendermaßen vor:</p>
+<p class="TextCode">sqlplus / as sysdba</p>
+<p class="TextCode">shutdown immediate;</p>
+<p class="TextCode">startup mount;</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Archiving_aktivieren"></a>Archiving aktivieren</h3>
+<p class="BodyText">Zum Aktivieren des ARCHIVE_LOG-Modus folgenden Befehl 
+ absetzen:</p>
+<p class="TextCode">alter database archivelog;</p>
+<p class="TextCode">alter database open;</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Archiving_deaktivieren"></a>Archiving deaktivieren</h3>
+<p class="BodyText">Zum Deaktivieren des ARCHIVE_LOG-Modus lautet der Befehl:</p>
+<p class="TextCode">alter database noarchivelog;</p>
+<p class="TextCode">alter database open;</p>
+<p class="TextCode">&#160;</p>
+</body>
+</html>

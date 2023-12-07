@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Werterfassung Chart","type":"item","tilePath":"","description":"","url":"de/Boardlets/02_Basis/Werterfassung_Chart_eSFM_v2.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

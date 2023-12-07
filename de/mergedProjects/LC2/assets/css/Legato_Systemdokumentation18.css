@@ -1,0 +1,1706 @@
+/*Erstellt mit Adobe RoboHelp 2017*/
+span.LSVERSION::after {
+    content: "3.0.0.0";
+    color: black;
+}
+div.LSVERSION {
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+#TopicWidth {
+	max-width: 1000px;
+}
+#SeeAlsoSpacer {
+    margin-top: 24pt;
+    margin-bottom: -2pt;
+    background-color: #006b52;
+}
+/*Gefasoft green = #006b52 */
+hr {
+    height:1px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+}
+span.EditModeFrame {
+	border-radius: 4px;
+	display: inline;
+	width: auto;
+	height: 22px;
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	border: 2px solid RGB(78, 159, 176);
+}
+span.EditModeDashedLine {
+	border-radius: 4px;
+	display: inline;
+	width: auto;
+	height: 22px;
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	border: 2px #505050;
+    border-style: dashed;
+}
+div.TopicWidth {
+	max-width: 1000px;
+}
+li.ListBullet1 p {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.ListBulletL1_Contd {
+	margin-right: 0cm;
+	text-align: justify;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 1.05cm;
+}
+/* a) blue for hyperlinks in the text, b) Gefasoft green for hyperlinks in */
+/* the Related Topics blocks                                               */
+/* In both cases, the underline appears only on mouse-over.                */
+a,a:visited,a:hover,a:active {
+	color: RGB(0, 64, 255);
+	text-decoration: none;
+}
+/* hyperlink blue colors: */
+/* color: RGB(0,101,255); */
+/* color: RGB(0,100,180); */
+/* color: RGB(0,60,225);  */
+/* font-weight: bold;     */
+li.SeeAlsoListEntry a {
+	color: #006b52;
+}
+/*Gefasoft green = #006b52 */
+li.SeeAlsoListEntry a:visited {
+	color: #006b52;
+}
+/*Gefasoft green = #006b52 */
+li.SeeAlsoListEntry a:hover {
+	color: #006b52;
+}
+/*Gefasoft green = #006b52 */
+li.SeeAlsoListEntry a:active {
+	color: #006b52;
+}
+/*Gefasoft green = #006b52 */
+a:hover {
+	color: RGB(0, 64, 255);
+	text-decoration: underline;
+}
+/* NOTE: the hyperlink blue must be repeated in the a:hover block above! */
+li.SeeAlsoListEntry a:hover {
+	text-decoration: underline;
+}
+table.CalloutTab {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	vertical-align: top;
+}
+#CalloutLetterWidth {
+	width: 30px;
+}
+/* #CalloutLetterWidth sets the width of the first column in the CalloutTab table style */
+#IconColWidth {
+	width: 50px;
+}
+/* #IconColWidth sets the width of the first column in any table explaining icons       */
+table.TabelleBlank {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	vertical-align: top;
+}
+table.SeeAlsoTab {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	margin-bottom: 0.0pt;
+	margin-top: 0pt;
+}
+p.sah-SeeAlsoHeading {
+	font-family: "Palatino Linotype";
+	font-weight: bold;
+	margin-bottom: 0pt;
+	font-size: 9.5pt;
+	margin-top: 0pt;
+	color: #007f3f;
+}
+/*Gefasoft green = #006b52 */
+table.ProcedureTab {
+	max-width: 1000px;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+	vertical-align: top;
+	margin-top: 24.0pt;
+	margin-bottom: 24.0pt;
+}
+p.ph-ProcedureHeading {
+    max-width: 480px;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	font-weight: bold;
+	margin-bottom: 2pt;
+}
+p.ps-ProcedureStep {
+	white-space: normal;
+	max-width: 480px;
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-left: 0cm;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	text-align: left;
+	margin-bottom: 6pt;
+}
+p.psn-ProcedureStepNum {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-weight: bold;
+	color: #004f00;
+	vertical-align: top;
+	margin-right: 0px;
+}
+/* width: 30px; */
+#StepNumSpacer {
+	border-right: 17px Solid #ffffff;
+}
+h1 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-left: 21.6pt;
+	text-indent: -21.6pt;
+	line-height: normal;
+	font-size: 16.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	page-break-before: always;
+	margin-bottom: 12pt;
+	x-next-class: BodyText;
+	x-next-type: p;
+}
+h2 {
+	margin-right: 0cm;
+	margin-left: 42.55pt;
+	text-indent: -42.55pt;
+	line-height: normal;
+	font-size: 14.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-bottom: 6pt;
+	margin-top: 18pt;
+	x-next-class: BodyText;
+	x-next-type: p;
+}
+h3 {
+	margin-right: 0cm;
+	line-height: 115%;
+	font-size: 12.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-left: 0pt;
+	margin-bottom: 12pt;
+	margin-top: 24pt;
+}
+h4 {
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-left: 0pt;
+	x-next-class: BodyText;
+	x-next-type: p;
+	margin-top: 18pt;
+}
+h5 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	margin-left: 70.9pt;
+	text-indent: -70.9pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+}
+h6 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.0pt;
+	margin-left: 57.6pt;
+	text-indent: -57.6pt;
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: normal;
+}
+p.BodyText {
+	margin-right: 0cm;
+	margin-left: 0cm;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	text-align: left;
+	margin-bottom: 6pt;
+	margin-top: 6pt;
+}
+span.Hyperlink {
+	color: navy;
+	text-underline: single;
+	text-decoration: underline;
+}
+span.HyperlinkFollowed {
+	color: purple;
+	text-underline: single;
+	text-decoration: underline;
+}
+span.PlaceholderText {
+	color: gray;
+}
+p.Überschrift {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	margin-left: 0cm;
+	line-height: 115%;
+	font-size: 14.0pt;
+	font-family: Arial, sans-serif;
+}
+p.Verzeichnis {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 10.0pt;
+	margin-left: 0cm;
+	line-height: 115%;
+	font-size: 11.0pt;
+	font-family: Tahoma, sans-serif;
+}
+p.ContentsHeading {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	margin-left: 0cm;
+	font-size: 16.0pt;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+p.TabellenInhalt {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 2.85pt;
+	margin-left: 0cm;
+	line-height: normal;
+	font-family: "Palatino Linotype", serif;
+	font-size: 10pt;
+}
+p.TabellenÜberschrift {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 2.85pt;
+	margin-left: 0cm;
+	line-height: normal;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	font-size: 10pt;
+}
+p.TextCode {
+	margin-top: 0cm;
+	margin-right: 19.85pt;
+	margin-bottom: 2.0pt;
+	margin-left: 19.85pt;
+	line-height: normal;
+	font-size: 10.0pt;
+	font-family: "Courier New";
+}
+p.TextkörperListHinweis {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	margin-left: 19.85pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+}
+p.AufzählungszeichenNum {
+	margin-top: 6.0pt;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 39.25pt;
+	margin-bottom: .0001pt;
+	text-indent: -18.0pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+}
+p.Inhalt {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 18.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+}
+p.Ansitext {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 2.0cm;
+	text-align: justify;
+	font-size: 14.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+}
+p.TextkörperAufzähl {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	text-align: justify;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-bottom: 0pt;
+	margin-left: 39px;
+}
+p.TextkörperAufzähl2 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 6.0pt;
+	text-align: justify;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-left: 88px;
+}
+p.Textkörperfett {
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	margin-top: 0cm;
+}
+p.TextkörperHinweis {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 63.8pt;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+}
+p.TextkörperfettAufzähl {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	text-indent: 24px;
+}
+p.TextkörperHinweisAufzähl {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.95pt;
+	margin-left: 99.25pt;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+}
+p.Aufzählung3 {
+	margin-top: 4.0pt;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 78.0pt;
+	margin-bottom: .0001pt;
+	text-indent: -21.3pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+}
+p.Listing {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 2.0pt;
+	margin-left: 19.85pt;
+	line-height: normal;
+	font-size: 9.0pt;
+	font-family: "Courier New";
+}
+span.ListingChar {
+	font-family: "Courier New";
+}
+p.Bildunterschrift {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 8.0pt;
+	margin-left: 0cm;
+	text-align: center;
+	line-height: normal;
+	font-size: 8.0pt;
+	font-family: Tahoma, sans-serif;
+	color: black;
+	font-weight: bold;
+}
+ol {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+span.rls-1-Liste2 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+span.rls-3-Liste1 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+p.Aufzählung2 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-left: 36.0pt;
+	text-indent: -18.0pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	margin-bottom: 0pt;
+}
+p.Aufzählung1 {
+	margin-top: 4.0pt;
+	margin-right: 0cm;
+	margin-bottom: .0001pt;
+	line-height: normal;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	color: black;
+	text-indent: -22px;
+	margin-left: 39px;
+}
+table.AlternateGreyBlackHeaderRow {
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	x-border-spacing: 0px;
+	x-row-pat-count: 2;
+	x-1st-row: 1;
+	font-family: "Palatino Linotype";
+	font-size: 10pt;
+}
+p.TextkörperAufzähl3 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 70px;
+	text-indent: 0px;
+}
+p.BodyText_Italic {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	font-style: italic;
+	margin-top: 6pt;
+}
+span.rls-1-Liste1 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+table.AlternateGreyColoredGrid {
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	x-border-spacing: 0px;
+	x-row-pat-count: 2;
+	font-family: "Palatino Linotype";
+	font-size: 10pt;
+}
+p.BodyTextGroß {
+	font-family: "Palatino Linotype";
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+}
+p.BodyTextZentriert {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	text-align: center;
+}
+span.rls-1-Liste1n {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+p.AufzählungList1 {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-bottom: 0pt;
+	margin-top: 2pt;
+	text-indent: -22px;
+	margin-left: 39px;
+}
+table.TabelleBlank {
+	vertical-align: top;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	x-border-spacing: 0px;
+}
+table.LightGray {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+	vertical-align: top;
+}
+table.SimpleGridBlack {
+	border: 1px solid;
+	border-collapse: collapse;
+	vertical-align: top;
+	padding: 0px;
+	x-border-spacing: 0px;
+	x-row-pat-count: 2;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+}
+/* border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000; */
+/* border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000; */
+p.TextkörperTable {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 7pt;
+}
+p.TextkörperTablefett {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	font-weight: bold;
+	margin-top: 0pt;
+	margin-bottom: 7pt;
+}
+p.TextkörperTableEinrück {
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 7pt;
+	margin-left: 65pt;
+}
+p.Header_left {
+	font-family: Tahoma;
+	font-weight: bold;
+	color: #808080;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.Kopfzeile_klein {
+	font-family: Tahoma;
+	font-size: 11pt;
+	color: #808080;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.Fußzeile_links {
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #808080;
+	margin-top: 3pt;
+	margin-bottom: 0pt;
+}
+p.Fußzeile_rechts {
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #808080;
+	text-align: right;
+	margin-top: 3pt;
+	margin-bottom: 0pt;
+}
+p.GUIControl {
+	margin-right: 0cm;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	margin-top: 12pt;
+	margin-bottom: 6pt;
+	x-next-class: GUIControlDescr;
+	x-next-type: p;
+}
+p.FirstGUIControlInTab {
+	margin-right: 0cm;
+	margin-left: 0cm;
+	text-align: justify;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 6pt;
+	x-next-class: GUIControlDescr;
+	x-next-type: p;
+}
+p.GUIControlDescr {
+	margin-right: 0cm;
+	font-size: 11.0pt;
+	font-family: "Palatino Linotype", serif;
+	margin-bottom: 6pt;
+	margin-left: 0.63cm;
+	margin-top: 6pt;
+	x-next-class: GUIControl;
+	x-next-type: p;
+	text-align: left;
+}
+span.Bold {
+	font-weight: bold;
+}
+span.Red {
+	color: #ff0000;
+}
+span.BoldRed {
+	font-weight: bold;
+	color: #ff0000;
+}
+table.CodeTab {
+	padding-top: 4pt;
+	text-align: Left;
+	font-family: Arial;
+	font-size: 10pt;
+	margin-bottom: 12pt;
+	background-color: #c0c0c0;
+}
+table.LastRow {
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	x-border-spacing: 0px;
+	x-last-row: 1;
+	text-align: Right;
+	font-family: Arial;
+	font-size: 10pt;
+	margin-bottom: 12pt;
+}
+span.HeaderSmall {
+	font-family: Tahoma;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #808080;
+}
+p.ListBulletL1 {
+	font-family: "Palatino Linotype";
+	margin-top: 6pt;
+	font-size: 11pt;
+	margin-bottom: 0pt;
+	margin-left: 0cm;
+}
+p {
+	margin-bottom: 14pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	font-family: "Palatino Linotype";
+	font-size: 11pt;
+	margin-top: 14pt;
+}
+p.HeaderTabAnchor {
+	margin-top: 0pt;
+	font-size: 6pt;
+	margin-bottom: 0pt;
+}
+p.FooterTabAnchor {
+	margin-top: 0pt;
+	font-size: 6pt;
+	margin-bottom: 0pt;
+}
+p.Header_right {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	text-align: right;
+	font-family: Tahoma;
+	color: #808080;
+}
+@media only print{
+	p.ListBulletL1_Contd {
+		margin-left: 1.25cm;
+	}
+	}
+
+h6.Ü2_Search {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-left: 42.55pt;
+	text-indent: -42.55pt;
+	line-height: normal;
+	font-size: 14.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-bottom: 16.5pt;
+	x-next-class: BodyText;
+	x-next-type: p;
+}
+h6.Ü3_Search {
+	margin-right: 0cm;
+	line-height: 115%;
+	font-size: 12.0pt;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	margin-bottom: 12pt;
+	margin-left: 57.6pt;
+	margin-top: 18pt;
+}
+p.ColHeader_L {
+	margin-top: 3pt;
+	font-weight: bold;
+	margin-bottom: 3pt;
+	border-left-style: none;
+	border-top-style: none;
+}
+p.TblBodyText {
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+p.CalloutLetter {
+	font-weight: bold;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+p.CalloutText {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+summary {
+    margin-top: -5pt; 
+    font-size: 9pt; 
+    color: gray; 
+    cursor: pointer;
+}
+
+span.DontTranslate {
+	background-color: #ffff00 rh-only;
+}
+span.DontTranslateBold {
+	background-color: #ffff00 rh-only;
+	font-weight: bold;
+}
+dont-translate {
+	display: inline;
+}
+ul.ListBullet1 {
+    list-style: disc;
+}
+ul.ListBullet1>li {
+    font-family: "Palatino Linotype";
+    font-size: 11pt;
+    margin-top: 6pt;
+    margin-bottom: 0pt;
+}
+ul.SeeAlsoListEntry {
+    list-style: square;
+}
+ul.SeeAlsoListEntry>li {
+    font-family: "Palatino Linotype";
+    font-size: 9.5pt;
+    color: #006b52;
+    font-weight: normal;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    margin-left: -25px;
+    line-height: Normal;
+    margin-right: +25px;
+}
+ol.Liste3 {
+    list-style: disc;
+    padding-left: 26.0px;
+    margin-left: 44px;
+}
+ol.Liste3>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: -96px;
+}
+ol.Liste3>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste3>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste3>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste3>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste3>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste3>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste3>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste1 {
+    list-style: disc;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste1>li>ol {
+    list-style: disc;
+    padding-left: 26.0px;
+    margin-left: -6px;
+}
+ol.Liste1>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item3;
+    padding-left: 31.4px;
+    margin-left: -11.4px;
+}
+ol.Liste1>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li:before {
+    counter-increment: item3;
+    content: counter(item3, lower-roman)")";
+    text-align: right;
+    position: absolute;
+    left: -35.4px;
+    margin-right: 4px;
+    width: 31.4px;
+    overflow: hidden;
+}
+ol.Liste1>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item4;
+    padding-left: 36.7px;
+    margin-left: -16.7px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item4;
+    content: "("counter(item4, decimal)")";
+    text-align: right;
+    position: absolute;
+    left: -40.7px;
+    margin-right: 4px;
+    width: 36.7px;
+    overflow: hidden;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item5;
+    padding-left: 36.7px;
+    margin-left: -16.7px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item5;
+    content: "("counter(item5, lower-roman)")";
+    text-align: right;
+    position: absolute;
+    left: -40.7px;
+    margin-right: 4px;
+    width: 36.7px;
+    overflow: hidden;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item6;
+    padding-left: 36.7px;
+    margin-left: -16.7px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item6;
+    content: "("counter(item6, lower-roman)")";
+    text-align: right;
+    position: absolute;
+    left: -40.7px;
+    margin-right: 4px;
+    width: 36.7px;
+    overflow: hidden;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item7;
+    padding-left: 30.0px;
+    margin-left: -10px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item7;
+    content: counter(item7, decimal)".";
+    text-align: right;
+    position: absolute;
+    left: -34px;
+    margin-right: 4px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item8;
+    padding-left: 30.0px;
+    margin-left: -10px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item8;
+    content: counter(item8, lower-alpha)".";
+    text-align: right;
+    position: absolute;
+    left: -34px;
+    margin-right: 4px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item9;
+    padding-left: 30.0px;
+    margin-left: -10px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item9;
+    content: counter(item9, lower-roman)".";
+    text-align: right;
+    position: absolute;
+    left: -34px;
+    margin-right: 4px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum {
+    list-style: none;
+    counter-reset: item1;
+    padding-left: 31.4px;
+    margin-left: 10.6px;
+}
+ol.ListeNum>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li:before {
+    counter-increment: item1;
+    content: counter(item1, decimal)")";
+    text-align: right;
+    position: absolute;
+    left: -55.4px;
+    margin-right: 24px;
+    width: 31.4px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol {
+    list-style: none;
+    counter-reset: item2;
+    padding-left: 30.0px;
+    margin-left: -72px;
+}
+ol.ListeNum>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li:before {
+    counter-increment: item2;
+    content: counter(item2, lower-alpha)".";
+    text-align: right;
+    position: absolute;
+    left: -54px;
+    margin-right: 24px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item3;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li:before {
+    counter-increment: item3;
+    content: counter(item3, lower-roman)".";
+    text-align: right;
+    position: absolute;
+    left: -42px;
+    margin-right: 12px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item4;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item4;
+    content: counter(item4, decimal)".";
+    text-align: right;
+    position: absolute;
+    left: -54px;
+    margin-right: 24px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item5;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item5;
+    content: counter(item5, lower-alpha)".";
+    text-align: right;
+    position: absolute;
+    left: -54px;
+    margin-right: 24px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item6;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item6;
+    content: counter(item6, lower-roman)".";
+    text-align: right;
+    position: absolute;
+    left: -42px;
+    margin-right: 12px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item7;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item7;
+    content: counter(item7, decimal)".";
+    text-align: right;
+    position: absolute;
+    left: -54px;
+    margin-right: 24px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item8;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item8;
+    content: counter(item8, lower-alpha)".";
+    text-align: right;
+    position: absolute;
+    left: -54px;
+    margin-right: 24px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item9;
+    padding-left: 30.0px;
+    margin-left: 10px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.ListeNum>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item9;
+    content: counter(item9, lower-roman)".";
+    text-align: right;
+    position: absolute;
+    left: -42px;
+    margin-right: 12px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.Liste2 {
+    list-style: none;
+    counter-reset: item1;
+    padding-left: 26.0px;
+    margin-left: 18px;
+}
+ol.Liste2>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste2>li:before {
+    counter-increment: item1;
+    content: counter(item1, disc);
+    font-family: "Palatino Linotype";
+    font-size: 11pt;
+    text-align: right;
+    position: absolute;
+    left: -50px;
+    margin-right: 24px;
+    width: 26.0px;
+    overflow: hidden;
+}
+ol.Liste2>li>ol {
+    list-style: disc;
+    padding-left: 26.0px;
+    margin-left: 12px;
+}
+ol.Liste2>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 12px;
+}
+ol.Liste2>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 22px;
+}
+ol.Liste2>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 22px;
+}
+ol.Liste2>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 22px;
+}
+ol.Liste2>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 22px;
+}
+ol.Liste2>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 22px;
+}
+ol.Liste2>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 22px;
+}
+ol.ListeNum1Level {
+    list-style: decimal;
+}
+ol.ListeNum1Level>li {
+    font-family: "Palatino Linotype";
+    font-size: 11pt;
+    margin-left: 0in;
+}
+ul.Liste1Level {
+    list-style: disc;
+}
+ul.Liste1Level>li {
+    font-family: "Palatino Linotype";
+    font-size: 11pt;
+    text-indent: -;
+    margin-left: 0px;
+}
+ul.Liste2Level {
+    list-style: disc;
+}
+ul.Liste2Level>li {
+    font-family: "Palatino Linotype";
+    font-size: 11pt;
+    margin-left: 0.5in;
+}
+ol.Liste1neu {
+    list-style: disc;
+    padding-left: 26.0px;
+    margin-left: 14px;
+}
+ol.Liste1neu>li>ol {
+    list-style: disc;
+    padding-left: 26.0px;
+    margin-left: -6px;
+}
+ol.Liste1neu>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item3;
+    padding-left: 31.4px;
+    margin-left: -11.4px;
+}
+ol.Liste1neu>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li:before {
+    counter-increment: item3;
+    content: counter(item3, lower-roman)")";
+    text-align: right;
+    position: absolute;
+    left: -35.4px;
+    margin-right: 4px;
+    width: 31.4px;
+    overflow: hidden;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item4;
+    padding-left: 36.7px;
+    margin-left: -16.7px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item4;
+    content: "("counter(item4, decimal)")";
+    text-align: right;
+    position: absolute;
+    left: -40.7px;
+    margin-right: 4px;
+    width: 36.7px;
+    overflow: hidden;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item5;
+    padding-left: 36.7px;
+    margin-left: -16.7px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item5;
+    content: "("counter(item5, lower-roman)")";
+    text-align: right;
+    position: absolute;
+    left: -40.7px;
+    margin-right: 4px;
+    width: 36.7px;
+    overflow: hidden;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item6;
+    padding-left: 36.7px;
+    margin-left: -16.7px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item6;
+    content: "("counter(item6, lower-roman)")";
+    text-align: right;
+    position: absolute;
+    left: -40.7px;
+    margin-right: 4px;
+    width: 36.7px;
+    overflow: hidden;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item7;
+    padding-left: 30.0px;
+    margin-left: -10px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item7;
+    content: counter(item7, decimal)".";
+    text-align: right;
+    position: absolute;
+    left: -34px;
+    margin-right: 4px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item8;
+    padding-left: 30.0px;
+    margin-left: -10px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item8;
+    content: counter(item8, lower-alpha)".";
+    text-align: right;
+    position: absolute;
+    left: -34px;
+    margin-right: 4px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item9;
+    padding-left: 30.0px;
+    margin-left: -10px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Liste1neu>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item9;
+    content: counter(item9, lower-roman)".";
+    text-align: right;
+    position: absolute;
+    left: -34px;
+    margin-right: 4px;
+    width: 30.0px;
+    overflow: hidden;
+}
+ol.ListNum1 {
+    list-style: decimal;
+}
+ol.DescriptionSteps {
+    list-style: none;
+    counter-reset: item1;
+    padding-left: 79.1px;
+    margin-left: -69.1px;
+}
+ol.DescriptionSteps>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.DescriptionSteps>li:before {
+    counter-increment: item1;
+    content: "Description:";
+    text-align: right;
+    position: absolute;
+    left: -89.1px;
+    margin-right: 10px;
+    width: 79.1px;
+    overflow: hidden;
+}
+ol.DescriptionSteps>li>ol {
+    list-style: none;
+    counter-reset: item2;
+    padding-left: 62.9px;
+    margin-left: -37.9px;
+}
+ol.DescriptionSteps>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.DescriptionSteps>li>ol>li:before {
+    counter-increment: item2;
+    x-count: 10;
+    x-2: Two;
+    x-3: Three;
+    x-4: Four;
+    x-5: Five;
+    x-6: Six;
+    x-7: Seven;
+    x-8: Eight;
+    x-9: Nine;
+    x-10: Ten;
+    content: "Step ""One"":";
+    text-align: right;
+    position: absolute;
+    left: -66.9px;
+    margin-right: 4px;
+    width: 62.9px;
+    overflow: hidden;
+}
+ol.DescriptionSteps>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item3;
+    padding-left: 65.6px;
+    margin-left: -10.6px;
+}
+ol.DescriptionSteps>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.DescriptionSteps>li>ol>li>ol>li:before {
+    counter-increment: item3;
+    content: "Note "counter(item3, lower-alpha)":";
+    text-align: right;
+    position: absolute;
+    left: -69.6px;
+    margin-right: 4px;
+    width: 65.6px;
+    overflow: hidden;
+}
+ol.DescriptionSteps>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item4;
+    padding-left: 85.2px;
+    margin-left: -115.2px;
+}
+ol.DescriptionSteps>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.DescriptionSteps>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item4;
+    content: "Substep "counter(item4, decimal)":";
+    text-align: right;
+    position: absolute;
+    left: -89.2px;
+    margin-right: 4px;
+    width: 85.2px;
+    overflow: hidden;
+}
+ol.DescriptionSteps>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item5;
+    padding-left: 65.6px;
+    margin-left: -45.6px;
+}
+ol.DescriptionSteps>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.DescriptionSteps>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item5;
+    content: "Note "counter(item5, lower-roman)":";
+    text-align: right;
+    position: absolute;
+    left: -69.6px;
+    margin-right: 4px;
+    width: 65.6px;
+    overflow: hidden;
+}
+ol.Steps {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: 4px;
+}
+ol.Steps>li>ol {
+    list-style: decimal;
+    padding-left: 26.0px;
+    margin-left: -31px;
+}
+ol.Steps>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item3;
+    padding-left: 65.6px;
+    margin-left: -0.6px;
+}
+ol.Steps>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Steps>li>ol>li>ol>li:before {
+    counter-increment: item3;
+    content: "Note "counter(item3, lower-alpha)":";
+    text-align: right;
+    position: absolute;
+    left: -69.6px;
+    margin-right: 4px;
+    width: 65.6px;
+    overflow: hidden;
+}
+ol.Steps>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item4;
+    padding-left: 85.2px;
+    margin-left: -115.2px;
+}
+ol.Steps>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Steps>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item4;
+    content: "Substep "counter(item4, decimal)":";
+    text-align: right;
+    position: absolute;
+    left: -89.2px;
+    margin-right: 4px;
+    width: 85.2px;
+    overflow: hidden;
+}
+ol.Steps>li>ol>li>ol>li>ol>li>ol {
+    list-style: none;
+    counter-reset: item5;
+    padding-left: 65.6px;
+    margin-left: -45.6px;
+}
+ol.Steps>li>ol>li>ol>li>ol>li>ol>li {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ol.Steps>li>ol>li>ol>li>ol>li>ol>li:before {
+    counter-increment: item5;
+    content: "Note "counter(item5, lower-roman)":";
+    text-align: right;
+    position: absolute;
+    left: -69.6px;
+    margin-right: 4px;
+    width: 65.6px;
+    overflow: hidden;
+}
+table.TabelleBlank td {vertical-align: top;
+}
+table.ProcedureTab td {vertical-align: top;
+}
+table.ProcedureTab tr {vertical-align: top;
+}
+table.ProcedureTab li {margin-left: -25px;
+}
+table.ProcedureTab p.ListBulletL1 {max-width: 480px;
+}
+table.AlternateGreyBlackHeaderRow td {padding-left: 10px;padding-right: 10px;padding-top: 3px;padding-bottom: 3px;
+}
+table.AlternateGreyBlackHeaderRow tr:nth-child(odd) td {border-bottom-style: Solid;border-bottom-width: 1px;border-bottom-color: #000000;font-family: "Palatino Linotype";font-size: 10pt;
+}
+table.AlternateGreyBlackHeaderRow tr:nth-child(even) td {background-color: #c0c0c0;border-bottom-style: Solid;border-bottom-width: 1px;border-bottom-color: #000000;
+}
+table.AlternateGreyBlackHeaderRow tr:first-child td {background-color: #000000;color: #ffffff;border-left-style: Solid;border-left-width: 1px;border-left-color: #000000;border-top-style: Solid;border-top-width: 1px;border-top-color: #000000;font-weight: bold;font-family: "Palatino Linotype";font-size: 10pt;
+}
+table.AlternateGreyColoredGrid td {padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;
+}
+table.AlternateGreyColoredGrid tr:nth-child(odd) td {border-right-style: Solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: Solid;border-bottom-width: 1px;border-bottom-color: #000000;font-family: "Times New Roman";font-size: 12pt;
+}
+table.AlternateGreyColoredGrid tr:nth-child(even) td {border-right-style: Solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: Solid;border-bottom-width: 1px;border-bottom-color: #000000;background-color: #c0c0c0;
+}
+table.LightGray td {border: 1px solid #ddd;border-collapse: collapse;vertical-align: top;border-collapse: collapse;vertical-align: top;padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;
+}
+table.SimpleGridBlack td {border-collapse: collapse;vertical-align: top;padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;border-top-style: Solid;border-top-width: 1px;border-top-color: #000000;border-right-style: Solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: Solid;border-bottom-width: 1px;border-bottom-color: #000000;border-left-style: Solid;border-left-width: 1px;border-left-color: #000000;
+}
+table.SimpleGridBlack tr:nth-child(odd) td {font-family: "Times New Roman";font-size: 12pt;
+}
+table.SimpleGridBlack tr:nth-child(even) td {}
+table.LastRow td {border-right-style: Solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: Solid;border-bottom-width: 1px;border-bottom-color: #000000;font-family: Arial;font-size: 10pt;
+}
+table.LastRow tr:last-child td {text-align: left;font-family: Arial;font-size: 10pt;background-color: #c0c0c0;
+}

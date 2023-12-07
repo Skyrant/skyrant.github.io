@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Schnittstelle zu Amazon Web Services (LINUX)</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Schnittstelle zu Amazon Web Services (LINUX)">
+        <span>Schnittstelle zu Amazon Web Services (LINUX)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Schnittstelle zu Amazon Web Services (LINUX)</h2>
+<h3 data-condition="Others:Deutsch"><a id="Überblick"></a>Überblick</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Im Cloud Connector Editor des UNIX Cloud Connectors 
+ wird im Projektbaum ein Knoten AWS angelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/AWS_Overview.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Anlegen_der_SQS-Verbindung"></a>Anlegen der SQS-Verbindung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Selektieren Sie das Grundelement &quot;AWS&quot; im 
+ Projektbaum und wählen Sie im Kontextmenü den Befehl &quot;Neues Item&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Creating_SQS connection.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie SQS connections aus und legen Sie mit &quot;OK&quot; 
+ ein neues Element an.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/AWS_SQS_connections.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der &quot;Name&quot; ist frei wählbar. Das SQS-Element 
+ dient nur zur übersichtlichen Strukturierung und Abgrenzung zu eventuell 
+ weiteren AWS-Schnittstellen. Unter der SQS-Verbindung können jetzt Recv 
+ (Empfangen von Nachrichten) oder/und Send Verbindungen (Senden von Nachrichten) 
+ angelegt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Select_SQS_Element.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Anlegen_der_SQS_Recv-Verbindung"></a>Anlegen der SQS Recv-Verbindung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Über eine Rec-Verbindung können Nachrichten empfangen 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Configure_receive.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Für eine Recv-Verbindung sind folgende Angaben erforderlich:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Name (Name des Knotens)</p></li>
+	<li><p class="BodyText">Queuename (Name der SQS Queue)</p></li>
+	<li><p class="BodyText">Queuetyp (Standard oder FIFO)</p></li>
+	<li><p class="BodyText">Max. Nachrichten pro Receive</p></li>
+	<li><p class="BodyText">Receive Timer (maximale Dauer des Recv-Aufrufs)</p></li>
+	<li><p class="BodyText">Nachricht löschen (Haken gesetzt: Nachricht 
+	 wird aus Queue gelöscht, ...)</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter einer Recv-Verbindung können die Items OnValue 
+ und OnStatus angelegt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">OnValue dient zum Empfang von Nachrichten. Damit kann 
+ dann ein entsprechendes Skript zur Verarbeitung der empfangenen Nachricht 
+ getriggert werden. @Value hat das Format String.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">OnStatus wird zurzeit nicht verwendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Anlegen_der_SQS_Send-Verbindung"></a>Anlegen der SQS Send-Verbindung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Über eine Send-Verbindung können Nachrichten versendet 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Configure_send.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Für eine Send-Verbindung sind folgende Angaben erforderlich:</p>
+<p class="BodyText" data-condition="Others:Deutsch">• Name (Name des Knotens)</p>
+<p class="BodyText" data-condition="Others:Deutsch">• Queuename (Name der SQS Queue)</p>
+<p class="BodyText" data-condition="Others:Deutsch">• Queuetyp (Standard oder FIFO)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Unter einer Send Verbindung kann das Item OnStatus 
+ angelegt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Item beinhaltet in @Value die ID, die beim Send 
+ übergeben wurde, wenn das Senden mittels Skriptbefehl SendMsg erfolgreich 
+ war. Falls das Senden nicht erfolgreich war, wird ebenfalls die ID übergeben 
+ und zusätzlich das 64. Bit (0x8000000000000000) gesetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine Nachricht senden zu können, steht der Befehl 
+ SendMsg zur Verfügung.</p>
+
+
+</body></html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.1.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Individuelles Änderungsprotokoll</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Individuelles Änderungsprotokoll">
+        <span>Individuelles Änderungsprotokoll</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Individuelles Änderungsprotokoll</h1>
+<p data-condition="Others:Deutsch">Das Boardlet <span style="font-weight: bold;">Individuelles</span> <span style="font-weight: bold;">Änderungsprotokoll</span> stellt Informationen 
+ zu Änderungen am Fertigungsprozess dar. Es ist möglich, auf ein Protokoll 
+ aller Änderungen von z.B. Prozessparametern oder ein Protokoll anderer 
+ benutzerdefinierter Daten zuzugreifen.</p>
+<p data-condition="Others:Deutsch">Bei den Daten kann es sich um Konfigurationsparameter für den Prozess 
+ oder um dynamische Daten handeln, die z. B. mit den Produktionseinheiten 
+ zusammenhängen.</p>
+<p data-condition="Others:Deutsch">Im Boardlet kann man nach Änderungen, nach Zeitpunkt, Tabelle und Benutzernamen 
+ suchen. Darüberhinaus ist es möglich, nach bestimmten Werten in den Daten 
+ zu filtern.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beachten Sie Folgendes:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p>Die neue Audit-Tabelle <span style="font-weight: bold;">sys_change_log_prj</span> 
+	 dient zur Protokollierung von Änderungen an projektspezifischen Tabellen. 
+	 Alle Spalten von <span style="font-weight: bold;">sys_change_log_prj</span> 
+	 können angezeigt werden.</p></li>
+	<li><p>Es kann nach <span style="font-weight: bold;">action_tstamp</span>, 
+	 <span style="font-weight: bold;">table_name</span>, <span style="font-weight: bold;">user</span>, 
+	 <span style="font-weight: bold;">modified_id</span> gefiltert werden.</p></li>
+	<li><p>Ein Dashboard mit den benutzerdefinierten <span style="font-weight: bold;">sgt 
+	 boardlet</span> kann erstellt werden. Darüberhinaus kann eine Zeile 
+	 ausgewählt und nach dem Element gefiltert werden, um die entsprechenden 
+	 Änderungen anzuzeigen.</p></li>
+	<li><p>Alle Werte und Spalten der benutzerdefinierten Tabelle pro Protokolleintrag 
+	 können angezeigt werden.</p></li>
+	<li><p>Es kann auf einen beliebigen Wert gefiltert werden.</p></li>
+	<li><p>Der Zugriff auf diese Daten wird durch ein neues Recht gesteuert.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Konfiguration</h6>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p>Um Ä<span style="font-family: &#39;Palatino Linotype&#39;, serif;">nderungen 
+	 an der Tabelle </span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+								 font-weight: bold;">PRJ_ABC</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;"> zu protokollieren, 
+	 muss ein Dummy-Trigger in dieser Tabelle mit dem Namen </span><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: bold;">PRJ_TL_ABC</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;"> erstellt werden. 
+	 Der Triggername muss mit</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+											 font-weight: bold;"> PRJ_TL</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;"> beginnen.</span></p></li>
+	<li><p><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Aufruf 
+	 der Datenbankprozedur </span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+										 font-weight: bold;">sys_refresh_prj_audit_triggers()</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;">: Diese Prozedur 
+	 erstellt alle Trigger neu, die den Namen</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+															 font-weight: bold;"> 
+	 PRJ_TL%</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;"> 
+	 tragen.</span></p></li>
+	<li><p><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Für Tabellen, 
+	 die Konfigurationsdaten und Live-Daten enthalten, kann es notwendig 
+	 sein, Ausnahmen für einige Spalten zu definieren, damit Änderungen 
+	 an diesen Spalten nicht protokol</span>liert werden. Für diese Ausnahmen 
+	 müssen der Tabellennamen und der Spaltennamen in die Tabelle <span style="font-weight: bold;">SYS_EXCEPTIONS_FOR_TRG_COLS</span> eingetragen 
+	 werden. Diese Ausnahmen werden von der Prozedur <span style="font-weight: bold;">sys_refresh_prj_audit_triggers()</span> 
+	 verarbeitet.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Es ist notwendig, dass die Berechtigung auf 
+ die Datenquelle (die entsprechende Tabelle) mit der Aktion -110 gesetzt 
+ wird.<br/>
+Es müssen jene Trigger in jeder Kundentabelle konfiguriert werden, welche 
+ die Änderungslogs in die Tabelle <span style="font-weight: bold;">sys_change_log_prj</span> 
+ einfügen.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beispiel Boardlet Custom change log (Individuelles Änderungsprotokoll):</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/custom_log_boardlet.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Mit dem Klick auf &quot;<span style="font-weight: bold;">Show</span> 
+ <span style="font-weight: bold;">details</span>&quot; werden die Werte 
+ (&quot;old value&quot; und &quot;new value&quot;) angezeigt, d.h. die 
+ alten Werte (&quot;orginal data&quot;) und die neuen Werte (&quot;new 
+ data&quot;) können verglichen werden.</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/custom_log_boardlet_show_details.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Im Boardlet können auch komplexere Syntax bei den Boardlet-Filter verwendet 
+ werden:</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/boardlet_filters_custom_log.png" alt="" style="border: none;" border="0"/></p>
+
+
+</body></html>

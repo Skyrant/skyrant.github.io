@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.12.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Energieverbräuche</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Energieverbräuche">
+        <span>Energieverbräuche</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Energieverbräuche</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Das <span style="font-weight: bold;">Energieverbräuche</span> 
+ Boardlet ist Teil des Standard-Dashboards. Mit diesem Boardlet kann der 
+ Benutzer den Energieverbrauch der letzten vier abgeschlossenen Wochen 
+ eines Knoten, den er auswählt, vergleichen. Die Zielwerte erscheinen im 
+ Diagramm als Liniendiagramm. Außerdem kann der Benutzer nach einem Variablentyp 
+ filtern, um die Art der Daten auszuwählen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Mit dem <span style="font-weight: bold;">Energieverbräuche</span> 
+ Dashboard ist Folgendes möglich:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Ein Vergleich des Energieverbrauchs eines Knotens 
+	 über die letzten 4 Wochen hinweg.</p></li>
+	<li><p class="BodyText">Es kann ein Filter gesetzt werden für einen 
+	 Variablentyp, um auszuwählen, welche Art der Energiedaten geladen 
+	 werden soll.</p></li>
+	<li><p class="BodyText">Es kann die Art des Verbrauchs und des Knotens 
+	 angezeigt werden.</p></li>
+	<li><p class="BodyText">Der Zielwert wird als Liniendiagramm angezeigt.</p></li>
+	<li><p class="BodyText">Der Benutzer kann eine andere Zeitspanne wählen, 
+	 es werden dann die letzten 4 abgeschlossenen Wochen vor dem Endzeitpunkt 
+	 werden dann verwendet.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/energy_consumption.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Aus dem Boardlet-Filter muss der Werttyp <span style="font-weight: bold;">Energieverbrauch (kWh)</span> ausgewählt 
+ werden.<br/>
+<br/>
+<img src="../../../Bilder/energy_consumption_Filter.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Parameterisierung</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgende Parameterisierung ist zu beachten:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Variablen müssen pro Schicht aggregiert werden. 
+	 </p></li>
+	<li><p class="BodyText">Die Quelle der Daten ist <span style="font-weight: bold;">p_value_comp_archive</span>.</p></li>
+	<li><p class="BodyText"><span style="font-weight: bold;">comp_type</span> 
+	 in der Definitionstabelle für spezifische Daten muss den <span style="font-weight: bold;">Typ 
+	 -6</span> haben (--&gt; es handelt sich um eine Aggregation pro Schicht, 
+	 da -6 für Schichten steht).</p></li>
+	<li><p class="BodyText">Der Zielwert basiert auf <span style="font-weight: bold;">p_value_archive</span> 
+	 für einen bestimmten Zeitstempel (der letzte Wert vor dem Ende der 
+	 Schicht).</p></li>
+	<li><p class="BodyText">Außerdem müssen die Daten den <span style="font-weight: bold;">Typ 
+	 -103</span> (energy consumption target) entsprechen. Die Wahl anderer 
+	 Werttypen für den Zielwert ist zunächst nicht möglich.</p></li>
+</ul>
+
+
+</body></html>

@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Autofill"]],"2":[["\n"],["\n","Öffnet eine Ansicht mit Optionen zum Autovervollständigen \n der Tabelle. Zur Bedienung, siehe das Kapitel \"","Autofill","\".","\n\n\n"]],"3":[["Autofill"]],"id":"21"})

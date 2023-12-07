@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Konfiguration der Aggregierung für Produktdatenreport und Produktdatendiagramm","type":"item","tilePath":"","description":"","url":"de/Boardlets/10_TT/Konfiguration_in_LC2_für_Produktdaten.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

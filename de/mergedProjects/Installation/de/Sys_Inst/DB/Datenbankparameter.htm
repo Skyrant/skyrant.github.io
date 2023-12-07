@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Datenbankparameter</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/Legato_Systemdokumentation.css" />
+</head>
+<body>
+  <h1>Datenbankparameter</h1>
+  <p> </p>
+  <h6 class="Ü3_Search"><a id="Parameter_für_Neuinstallationen"></a>Parameter für Neuinstallationen</h6>
+  <p><span class="Bold">Rollen</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader">Name</p>
+        </td>
+        <td>
+          <p class="TblColHeader">Beschreibung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_READ_ROLE</td>
+        <td>Rolle, die nur Leserechte für Datenbanktabellen vergibt</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_WRITE_ROLE</td>
+        <td>Rolle, die Lese- und Schreibrechte für Datenbanktabellen vergibt</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br />
+    <span class="Bold">User und initiale Passwörter</span>
+  </p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:30%" />
+      <col style="width:40%" />
+      <col style="width:30%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>
+          <p class="TblColHeader"><span style="float:left;"> <span class="Bold">Name</span></span></p>
+        </th>
+        <th>
+          <p class="TblColHeader"><span style="float:left;"> <span class="Bold">Beschreibung</span></span></p>
+        </th>
+        <th>
+          <p class="TblColHeader"><span style="float:left;"> <span class="Bold">Zugeschriebene Rolle</span></span></p>
+        </th>
+      </tr>
+      <tr>
+        <td>SYSTEM_DBA_USR</td>
+        <td>DB-Superuser. Benötigt, um weitere DB-User anzulegen</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SYSTEM_DBA_USRPW</td>
+        <td>Passwort für SYSTEM_DBA_USR</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_OWNER</td>
+        <td>Name des SAPIENT Schema-Owners. Für Installationen und Updates mit J-LIW</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_OWNERPW</td>
+        <td><span>Passwort für den SAPIENT_OWNER</span></td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_READ_USR</td>
+        <td>Standard Datenbank-User ausschließlich mit Leserechten ausgestattet</td>
+        <td>SAPIENT_READ_ROLE</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_READ_USRPW</td>
+        <td>Passwort für SAPIENT_READ_USR</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_CLIENT_USR</td>
+        <td><span>Für LC2, SCC, Workbench, WA, e.g.</span></td>
+        <td>SAPIENT_WRITE_ROLE</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_CLIENT_USRPW</td>
+        <td>Passwort für SAPIENT_WRITE_ROLE</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_SERVER_USR</td>
+        <td><span>Für Sapient Engine und Serverprozesse</span></td>
+        <td>SAPIENT_WRITE_ROLE</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_SERVER_USRPW</td>
+        <td>Passwort für SAPIENT_SERVER_USR</td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><img src="../../../assets/images/02_Hinweis_de.jpg" /></p>
+  <p class="NoteText">Setzen Sie definierte Verbindungsgrenzen für erstellte DB-Benutzer, um zu verhindern, dass die Sapient-Engine durch zu wenige Verbindungen zur Datenbank behindert wird.</p>
+  <p><span class="Bold">Datenbank</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:50%" />
+      <col style="width:50%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader"><span class="Bold">Name</span></p>
+        </td>
+        <td>
+          <p class="TblColHeader"><span class="Bold">Beschreibung</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td>DB_TYPE</td>
+        <td>Typus der Datenbank - ORACLE oder POSTGRESQL</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_DEFAULT_SYSTEM_PWD</td>
+        <td><span>Passwort für den Sapient Application-User &quot;sapient_sys&quot;</span></td>
+      </tr>
+      <tr>
+        <td>SAPIENT_DEFAULT_PRINT_PWD</td>
+        <td><span>Passwort für den Sapient Application-User &quot;print&quot;</span></td>
+      </tr>
+      <tr>
+        <td>SAPIENT_DEFAULT_PAPERCLIP_PWD</td>
+        <td><span><span>Passwort für den Sapient Application-User &quot;paperclip&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td>SAPIENT_WEB_URL</td>
+        <td>URL der Web-Applikation</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_WEB_PORT</td>
+        <td>Port der Web-Applikation</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_SID</td>
+        <td><span>Name der Sapient Datenbank (SID)</span></td>
+      </tr>
+      <tr>
+        <td>SAPIENT_URL</td>
+        <td><span>URL der Sapient Datenbank (server:port/SID)</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span class="Bold">Tablespaces</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader"><span class="Bold">Name</span></p>
+        </td>
+        <td style="">
+          <p class="TblColHeader"><span class="Bold">Beschreibung</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_DATA_S</td>
+        <td style=""><span>Tablespace für kleine Tabellen</span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_DATA_M</td>
+        <td style=""><span>Tablespace <span>für mittelgroße Tabellen</span></span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_DATA_L</td>
+        <td style=""><span>Tablespace <span>für große Tabellen</span></span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_INDX_S</td>
+        <td style=""><span>Tablespace für Indizes kleiner Tabellen</span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_INDX_M</td>
+        <td style=""><span>Tablespace <span>für Indizes mittelgroßer Tabellen</span></span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_INDX_L</td>
+        <td style=""><span>Tablespace <span>für Indizes großer Tabellen</span></span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><b>Sprachen</b></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader"><span class="Bold">Name</span></p>
+        </td>
+        <td>
+          <p class="TblColHeader">Beschreibung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_0</td>
+        <td>Definiert die Systemsprache,  unterstütze Sprachen sind<span>: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_1</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_2</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_3</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_4</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h6 class="Ü3_Search"><a id="Parameter_für_Updates"></a>Parameter für Updates </h6>
+  <p><span class="Bold">Rollen</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader">Name</p>
+        </td>
+        <td>
+          <p class="TblColHeader">Beschreibung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_READ_ROLE</td>
+        <td>Rolle, die nur Leserechte für Datenbanktabellen vergibt</td>
+      </tr>
+      <tr>
+        <td>SAPIENT_WRITE_ROLE</td>
+        <td>Rolle, die Lese- und Schreibrechte für Datenbanktabellen vergibt</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span class="Bold">User und initiale Passwörter</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:30%" />
+      <col style="width:40%" />
+      <col style="width:30%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <th><span style="float:left;">Name</span></th>
+        <th><span style="float:left;">Beschreibung</span></th>
+        <th><span style="float:left;">Zugeschriebene Rolle</span></th>
+      </tr>
+      <tr>
+        <td>SAPIENT_OWNER</td>
+        <td>Name des Sapient Schema-Owner. Für Installationen und Updates mit J-LIW</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_OWNERPW</td>
+        <td><span>Passwort für den SAPIENT_OWNER</span></td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span class="Bold">Tablespaces</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; width: 100%;">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader">Name</p>
+        </td>
+        <td style="">
+          <p class="TblColHeader">Beschreibung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_DATA_S</td>
+        <td style=""><span>Tablespace für kleine Tabellen</span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_DATA_M</td>
+        <td style=""><span>Tablespace für mittelgroße Tabellen</span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_DATA_L</td>
+        <td style=""><span>Tablespace für große Tabellen</span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_INDX_S</td>
+        <td style=""><span>Tablespace <span>für Indizes kleiner Tabellen</span></span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_INDX_M</td>
+        <td style=""><span>Tablespace <span>für Indizes mittelgroßer Tabellen</span></span></td>
+      </tr>
+      <tr>
+        <td>TS_LEGATO_INDX_L</td>
+        <td style=""><span>Tablespace <span>für Indizes großer Tabellen</span></span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span class="Bold">Datenbank</span></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader">Name</p>
+        </td>
+        <td>
+          <p class="TblColHeader">Beschreibung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>SAPIENT_SID</td>
+        <td><span> <span>Port der Sapient Datenbank </span>(SID)</span></td>
+      </tr>
+      <tr>
+        <td>SAPIENT_URL</td>
+        <td><span> <span>URL der Sapient Datenbank </span>(server:port/SID)</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><b>Sprachen</b></p>
+  <table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse; width:100%">
+    <colgroup>
+      <col style="width:25%" />
+      <col style="width:75%" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+          <p class="TblColHeader"><span class="Bold">Name</span></p>
+        </td>
+        <td>
+          <p class="TblColHeader">Beschreibung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_0</td>
+        <td>Definiert die Systemsprache, unterstütze Sprachen sind<span>: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_1</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_2</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_3</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+      <tr>
+        <td>LANGUAGE_4</td>
+        <td><span>unterstütze Sprachen sind: de, en, en-GB, es, es-MX, fr, hu, nl, pl, pt, pt-PT, sk, zh</span></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

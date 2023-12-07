@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Voraussetzung und Empfehlung für die Server-Umgebung</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Voraussetzung und Empfehlung für die Server-Umgebung</h2>
+<h3><a name="Java_Plattform" id="Java_Plattform"></a>Java Plattform</h3>
+<?rh-placeholder type="snippet" ref="WA_Java_de" ?>
+<h3><a name="Tomcat_als_WA_Server" id="Tomcat_als_WA_Server"></a>Tomcat 
+ als Web-Application-Server</h3>
+<?rh-placeholder type="snippet" ref="WA_Tomcat_de" ?>
+<p class="BodyText">&#160;Tomcat gilt als Referenzimplementierung eines 
+ Servlet-Containers für J2EE-Webanwendungen. Mit ihm kann die Legato Webanwendung 
+ betrieben werden. Er bietet allerdings nicht die umfassenden Möglichkeiten 
+ eines Web-Application-Server Kaufprodukts. Nachteile zeigen sich z.B. 
+ im Komfort der Konfiguration oder des Monitorings.</p>
+<p class="Textkörperfett"><img src="../../../Images/Sys_Inst/image014.jpg" 
+								 alt="" width="71" height="19" border="0" />:</p>
+<p class="TextkörperHinweis">Für die Verwendung mit Legato ist Tomcat 9 
+ &#160;freigegeben.</p>
+<p class="Textkörperfett"><img src="../../../Images/Sys_Inst/image014.jpg" 
+								 alt="" width="71" height="19" border="0" />:</p>
+<p class="TextkörperHinweis">Es wird empfohlen, eine zur Tomcat Version 
+ passende JDK Version zu verwenden, also für Tomcat 9 JDK 9.</p>
+<p class="Textkörperfett"><img src="../../../Images/Sys_Inst/image014.jpg" 
+								 alt="" width="71" height="19" border="0" />:</p>
+<p class="TextkörperHinweis">Wird Tomcat installiert, so muss auf einem 
+ Windows-Server der standardmäßig aktivierte IIS (Web-Application-Server) 
+ deaktiviert werden.</p>
+<p class="BodyText">Unter Unix-Servern ist im Allgemeinen der Headless 
+ Mode von Java zu nutzen, d.h. im Aufruf der JVM sollte jeweils ein Eintrag 
+ <span class="ListingChar"><span style="font-size: 9.0pt;">-Djava.awt.headless=true</span></span> 
+ vorhanden sein.</p>
+<p class="BodyText">Eine genaue Installationsanleitung für Tomcat finden 
+ Sie in den separaten Dokumenten Legato_Installation_TomCat_Win_EN und 
+ Legato_Installation_TomCat_RHEL_EN.</p>
+<h3><a name="Empfohlener_Speicherplatz_für_die_Java_VM"></a>Empfohlener 
+ Speicherplatz für die Java VM</h3>
+<p class="BodyText">Folgender Speicher sollte zum Betrieb von Legato der 
+ Java VM zur Verfügung gestellt werden:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">xmx/Maximum memory pool: 4096 MB</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">bezeichnet den maximalen Speicherplatz, auf 
+ den die Java VM zugreifen kann.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">PermGen size/initial memory pool: 512 MB</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">bezeichnet den maximalen Speicherplatz, auf 
+ den PermGen zugreifen kann.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Der Wert des PermGen sollte insbesondere überprüft 
+ werden, wenn java.lang.OutOfMemoryError: PermGen space Fehlermeldungen 
+ im WebApp Log auftreten.</p>
+<p class="BodyText">Für Tomcat Installationen unter Windows können diese 
+ Einstellungen in der Tomcat7w Monitor Application vorgenommen werden:</p>
+<p class="BodyText"><img src="../../../Images/Sys_Inst/image025.png" alt="" 
+						 width="424" height="463" border="0" /></p>
+<p class="BodyText">Für Tomcat Installationen unter Linux kann dies in 
+ der Datei /etc/init.d/tomcat unter JAVA_OPTS erfolgen. Dort ist folgender 
+ Eintrag vorzunehmen:</p>
+<p class="TextCode">JAVA_OPTS=&quot;-Xmx4096m -Xms256m <strong><span courier="" 
+	 style="font-family: ;">-XX:MaxPermSize=512m</span></strong>&quot;</p>
+<p class="TextCode">export JAVA_OPTS</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Oracle_JDBC_Treiber" id="Oracle_JDBC_Treiber"></a>Oracle JDBC 
+ Treiber</h3>
+<p class="BodyText">Bevor die WebApp installiert werden kann, wird zusätzlich 
+ der Oracle JDBC Treiber benötigt. Dieser ist im Installationspaket der 
+ ApplicationEngine enthalten.</p>
+<p class="BodyText">Kopieren Sie die Dateien ojdbc*.jar und orai18n*.jar 
+ (* = aktuelle Version) aus dem Verzeichnis LegatoAppEng\lib in das Verzeichnis 
+ tomcat*\lib. Die verwendete Version muss mindestens ojdbc7.jar (für Java 
+ 1.8) oder höher sein.</p>
+<p class="BodyText">Für den Fall, dass Sie diese Dateien nicht finden können, 
+ können Sie sie auch von der Oracle Homepage herunterladen.</p>
+<p class="BodyText">Sind diese beiden Dateien nicht im tomcat*\lib Verzeichnis 
+ vorhanden, so erscheint eine Fehlermeldung beim Versuch, die WebApp zu 
+ starten (&quot;Cannot load JDBC driver class 'oracle.jdbc.driver.OracleDriver'&quot;).</p>
+<h3><a name="Zusatzdateien" id="Zusatzdateien"></a>Zusatzdateien</h3>
+<p class="BodyText">Zusätzlich werden weitere Dateien benötigt, um Tomcat 
+ als WebApplication Server für Legato zu verwenden. Diese sind die Datei 
+ &quot;NoJarScanner-tomcat8.0.jar&quot; und eine Vorlage für die &quot;context.xml&quot;. 
+ Diese Dateien finden sich im Jenkins-Projektordner &quot;TomcatAddons&quot;. 
+ Entpacken Sie die Datei &quot;NoJarScanner-tomcat8.0.jar&quot; ins Tomcat 
+ lib Verzeichnis ($CATALINA_HOME\lib). Die &quot;context.xml&quot; kann 
+ als Beispiel zum Aufbau einer Verbindung zur Datenbank genutzt werden 
+ und sollte bei Bedarf ins Verzeichnis META-INF kopiert werden. Findet 
+ der Tomcat dort beim Start einer neuen WA eine xml-Datei, so verwendet 
+ er diese und benennt sie so, wie die Applikation heißt (z.B. Legato.xml). 
+ Legt man die xml-Datei selbst im Verzeichnis conf\catalina\localhost ab, 
+ so ist darauf zu achten, sie ebenso wie die jeweilige Applikation zu benennen.</p>
+</body>
+</html>

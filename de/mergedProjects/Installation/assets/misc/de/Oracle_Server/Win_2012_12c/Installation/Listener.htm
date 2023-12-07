@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_Windows_2012R2_Oracle_Server_12c_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Einrichtung des Listeners</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Einrichtung des Listeners</h2>
+<p class="BodyText">Nachdem die DBMS-Software installiert wurde, stehen 
+ noch keine Oracle Dienste im System zur Verfügung. Daher sollte nun zunächst 
+ ein Listener konfiguriert werden. Der Listener wird benötigt, um die Kommunikation 
+ zwischen den Oracle Clients und dem Oracle Server herzustellen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image035.png" 
+						 alt="" width="567" height="641" border="0" /></p>
+<p class="BodyText">Im Start-Menü von Windows sollte nun bei den Programmen 
+ ein neuer Ordner für das Oracle Home hinzugefügt worden seien. Dort starten 
+ wir nun den Net Configuration Assistant. Er kann auch gestartet werden, 
+ indem man in einer DOS-Konsole den Befehl "netca" eingibt.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image036.png" 
+						 alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Der Net Configuration Assistent wird gestartet. Hier 
+ wählen wir zunächst die Listener Konfiguration und klicken auf "Next".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image037.png" 
+						 alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Wählen Sie hier &quot;Add&quot; aus und klicken Sie 
+ auf &quot;Next&quot;.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image038.png" 
+						 alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Im nächsten Schritt wird der Name des Listeners eingetragen. 
+ Hier kann der Default-Name "Listener" stehen bleiben. Außerdem muss das 
+ Passwort des Oracle Home Users (hier: des Users &quot;oracle&quot;) eingetragen 
+ werden.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image039.png" 
+						 alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Bei den Protokollen kann ebenfalls die Default-Einstellung 
+ "TCP" übernommen werden.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image040.png" 
+						 alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Ganz wichtig ist nun die Vergabe eines sinnvollen Ports 
+ für die Kommunikation. Dieser Port muss auch hinterher in Firewall freigeschaltet 
+ sein. Der Standard-Port ist hier die 1521, er kann jedoch hier geändert 
+ werden. In dieser Beispielinstallation belassen wir diesen Wert jedoch 
+ und klicken auf "Next". Danach ist der Listener konfiguriert und es erfolgt 
+ folgende Frage:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image041.png" 
+						 alt="" width="601" height="400" border="0" /></p>
+<p class="BodyText">Diese können wir verneinen und es folgt dann noch folgende 
+ Erfolgsmeldung:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image042.png" 
+						 alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Mit &quot;Next&quot; kommen wir in das Hauptmenü des 
+ Assistenten zurück.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image043.png" 
+						 alt="" width="700" height="405" border="0" /></p>
+<p class="BodyText">In den Systemdiensten finden wir nun auch den Listener, 
+ der schon erfolgreich gestartet wurde.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image045.png" 
+						 alt="" width="601" height="401" border="0" /></p>
+<p class="BodyText">Als nächstes müssen wir die Methoden benennen, mit 
+ denen man sich an den Instanzen anmelden kann. Dazu wählen wir den Punkt 
+ "Naming Methods configuration" und klicken dann auf "Next".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image046.png" 
+						 alt="" width="600" height="468" border="0" /></p>
+<p class="BodyText">Hier sollte man die Methoden &quot;Local Naming&quot; 
+ für TNSNAMES und &quot;Easy Connect Naming&quot; auswählen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image047.png" 
+						 alt="" width="601" height="469" border="0" /></p>
+<p class="BodyText">Damit ist die Konfiguration des Listeners abgeschlossen. 
+ Kontrollieren lässt sich dies zusätzlich in einer DOS-Box mit dem Kommando: 
+ lsnrctl status</p>
+<p class="BodyText">Dies sollte dann folgendermaßen aussehen:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_12c/image048.png" 
+						 alt="" width="700" height="317" border="0" />Weitere 
+ Hinweise können in den Logdateien "netca.log" oder "listener.log" nachgelesen 
+ werden.</p>
+</body>
+</html>

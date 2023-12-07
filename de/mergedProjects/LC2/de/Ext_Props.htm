@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Projektspezifische Felder - Erweiterte Eigenschaften</title>
+<link rel="stylesheet" href="../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Projektspezifische Felder,Erweiterte Eigenschaft" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Projektspezifische Felder - Erweiterte Eigenschaften">
+        <span>Projektspezifische Felder - Erweiterte Eigenschaften</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Projektspezifische Felder / Erweiterte Eigenschaften</h2>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Funktion"></a>Funktion</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Allen Daten-Tabellen können projektspezifische Felder 
+ wie erweiterte Eigenschaften zugewiesen werden, z.B. eine Kostenstelle 
+ oder eine Farbe. Diese projektspezifischen Felder werden dann als eigene 
+ Spalten an die jeweilige Tabelle angehängt und können dort mit Werten 
+ versehen werden. Außerdem können diese projektspezifischen Felder auch 
+ in der WebApp abgefragt oder als Filter verwendet werden.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Definition_von_projektspezifischen_Feldern"></a>Definition 
+ von projektspezifischen Feldern</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Um die projektspezifischen Felder pflegen zu können, 
+ werden Customize-Berechtigungen benötigt und der LC2 muss im System-Developer 
+ Mode gestartet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Dies vorausgesetzt, wird bei den Tabellen, die projektspezifische 
+ Felder unterstützen, ein neuer Menüpunkt Projektspezifische Felder unter 
+ Einstellungen - Anpassen angeboten:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../assets/images/ExtProps.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Ein Klick auf diesen Menüpunkt öffnet eine Tabelle, 
+ in der die projektspezifischen Felder für die selektierte Datenquelle 
+ / Tabelle angelegt werden können.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Feldbeschreibung"></a>Feldbeschreibung</h3>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Vom System vergebene, eindeutige 
+		 ID. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Kategorie (optional)</p></td>
+		<td><p class="TabellenInhalt">Kategorie, der diese Spalte zugeordnet 
+		 ist. Default &quot;Erweitert&quot;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Datenquelle</p></td>
+		<td><p class="TabellenInhalt">FK - Datenquelle, für die diese erweiterte 
+		 Eigenschaft / projektspezifische  Spalte erstellt wird. Ist 
+		 automatisch mit der Tabelle vorbelegt, die gepflegt wird.</p>
+		<p class="TabellenInhalt">Sollen erweiterte Eigenschaften für eine 
+		 Tabelle gepflegt werden, die nicht im LC2 eingebunden ist, kann 
+		 dies unter Systemtabellen - Projektspezifische  Felder erfolgen. 
+		 Hier werden die projektspezifischen Felder für alle Datenquellen 
+		 angezeigt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Feldname</p></td>
+		<td><p class="TabellenInhalt">Name des projektspezifischen Feldes. 
+		 Wird nicht angezeigt. Wird für Zuordnung der Eigenschaften dieses 
+		 Felds benötigt. Der Wert wird immer in Kleinbuchstaben gespeichert. 
+		 Leerzeichen und Sonderzeichen sind nicht erlaubt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Angezeigter Name (optional)</p></td>
+		<td><p class="TabellenInhalt">Angezeigter Name der Spalte.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Tipp (optional)</p></td>
+		<td><p class="TabellenInhalt">Tooltipp, der beim Mouseover angezeigt 
+		 wird.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Anzeige-Nummer (optional)</p></td>
+		<td><p class="TabellenInhalt">Definiert, an welcher Stelle die 
+		 Spalte im LC2 dargestellt wird. Default ist 100, also am Ende 
+		 der Tabelle.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Default-Wert (optional)</p></td>
+		<td><p class="TabellenInhalt">Default-Wert, mit dem dieses Feld 
+		 automatisch belegt wird.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pflichtfeld</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = Eingabe verpflichtend; 
+		 0 = Eingabe optional.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Sichtbar</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = Spalte ist sichtbar; 
+		 0 = Spalte ist ausgeblendet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">JSON Eigenschaft</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = dies ist eine JSON 
+		 Eigenschaft. Default ist 1.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Datentyp</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl des Datentyps 
+		 der Eigenschaft. Die Feldeingabe wird auf diesen Datentyp geprüft. 
+		 Wird ein Eintrag in Lookup-Eigenschaften vorgenommen, so muss 
+		 der passende Datentyp für die Einträge in der Werteliste gewählt 
+		 werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Max. Länge (optional)</p></td>
+		<td><p class="TabellenInhalt">Maximale Länge für Werte vom Datentyp 
+		 STRING.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Lookup-Eigenschaften (optional)</p></td>
+		<td><p class="TabellenInhalt">Definition einer Lookup-Tabelle oder 
+		 einer Werteliste. Bei Lookup-Tabellen muss der Datentyp auf INTEGER 
+		 gesetzt sein!</p>
+		<p class="TabellenInhalt">Beispiele:</p>
+		<p class="TabellenInhalt">DataSourceSettings.ObjectName=&quot;L_NODES&quot;;</p>
+		<p class="TabellenInhalt">LookupList = [&quot;xy&quot;, &quot;zz&quot;];</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Schema-Info</p></td>
+		<td><p class="TabellenInhalt">Schema-Info für dieses Feld (Datentyp, 
+		 Eigenschaft, etc.). Wird automatisch befüllt und dient nur zur 
+		 Information.</p></td>
+	</tr>
+</tbody></table>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Befüllen_von_projektspezifischen_Feldern"></a>Befüllen von 
+ projektspezifischen Feldern</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nachdem die projektspezifischen Felder definiert wurden, 
+ werden sie als neue Spalten bei der Tabelle angezeigt. Je nach Konfiguration 
+ können die Felder nun befüllt werden, z.B. durch Auswahl eines Eintrags 
+ aus einer Werteliste oder durch Eingabe eines Strings. Zum Befüllen werden 
+ keine Customize-Berechtigungen benötigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Einträge werden im Feld &quot;Erw. Eigenschaft&quot; 
+ (attr_jsonb) automatisch als JSON-String zusammengefasst und können dann 
+ von der SE abgefragt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">{&quot;ksta1&quot;: 100, &quot;ksta2&quot;: &quot;test_attr&quot;, 
+ &quot;ksta3&quot;: 2}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+
+
+</body></html>

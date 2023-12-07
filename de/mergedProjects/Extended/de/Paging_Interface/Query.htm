@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "4.4_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funkrufe mittels Polling abfragen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funkrufe mittels Polling abfragen">
+        <span>Funkrufe mittels Polling abfragen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funkrufe mittels Polling abfragen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Es wurde eine neue Java Datenquelle &quot;ds_m_sendlist&quot; 
+ implementiert, die die relevanten Informationen über einen Funkruf liefert, 
+ der an ein Paging-System weitergeleitet werden soll. Diese Datenquelle 
+ kann mit Hilfe der JSON-RPC Prozedur &quot;select&quot; abgefragt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datenquelle liefert die folgenden Felder:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_id - 
+ M_ARCHIVE.ID</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_alarm_id 
+ - M_ARCHIVE.ALARM_ID</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_break_id 
+ - M_ARCHIVE.BREAK_ID</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_manual 
+ - M_ARCHIVE.MANUAL</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_messaging_state 
+ - M_ARCHIVE.MESSAGING_STATE (-1 oder -4, Zeilen mit anderen Werten werden 
+ herausgefiltert)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_node 
+ - M_ARCHIVE.NODE</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_prod_group 
+ - M_ARCHIVE.PROD_GROUP</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_shift_group 
+ - M_ARCHIVE.SHIFT_GROUP</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_shift_id 
+ - M_ARCHIVE.SHIFT_ID</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_text 
+ - M_ARCHIVE.TEXT</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_time_end 
+ - M_ARCHIVE.TIME_END</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">m_time_start 
+ - M_ARCHIVE.TIME_START</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">r_rec_code 
+ - M_RECIPIENTS.REC_CODE</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">r_server_addr 
+ - M_RECIPIENTS.SERVER_ADDR</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">a_al_class 
+ - AL_ARCHIVE.AL_CLASS</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">a_al_type 
+ - AL_ARCHIVE.AL_TYPE</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">a_operand 
+ - AL_ARCHIVE.OPERAND</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">a_symbol 
+ - AL_ARCHIVE.SYMBOL</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">c_connection_symbol 
+ - P_CONNECTIONS.CONNECTION_SYMBOL</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">c_name 
+ - P_CONNECTIONS.NAME</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">n_description 
+ - L_NODES.DESCRIPTION</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">n_name 
+ - L_NODES.NAME</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">n_short_name 
+ - L_NODES.SHORT_NAME</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">g_group_symbol 
+ - T_SHIFT_GROUPS.GROUP_SYMBOL</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">p_name 
+ - T_PGROUPS.NAME</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">s_shift_type 
+ - T_SHIFTS.SHIFT_TYPE</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">b_break_type 
+ - T_BREAKS.BREAK_TYPE</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">t_model_pattern_symbol 
+ - T_MODEL_PATTERN.MODEL_PATTERN_SYMBOL</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Clients können (und sollten) eine eingeschränkte Anzahl 
+ Felder für jeden Datensatz empfangen, indem sie eine Feldliste (&quot;fields&quot;) 
+ mit ihrer Anfrage übergeben. Diese Datenquelle akzeptiert Strings mit 
+ einem oder mehreren Komma-getrennten Feldnamen oder einen Array solcher 
+ Strings als &quot;fields&quot;-Parameter.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datenquelle unterstützt Paginierung durch Verwendung 
+ der Parameter &quot;limit&quot; und &quot;offset&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die aktuelle Implementierung hat folgende Einschränkungen:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Filter 
+ auf M_RECIPIENTS.SERVER_ADDR wird nicht unterstützt</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Mehrsprachige 
+ Felder (wie Meldetext und die verschiedenen Namen und Beschreibungen) 
+ werden wie in allgemeinen Datenquellen behandelt, d.h., nur der Wert in 
+ der Sprachumgebung des Abfragenden wird zurückgegeben. Für Funkruf-Systeme, 
+ die Lokalisierung intern verarbeiten, müssen möglicherweise alle Übersetzungen 
+ übergeben werden.</p>
+
+
+</body></html>

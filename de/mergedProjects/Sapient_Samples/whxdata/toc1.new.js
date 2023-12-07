@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Anzeige von Dashboards im Webclient","type":"item","tilePath":"","description":"","url":"de/General/Basic-Perms.htm#Anzeige_von_Dashboards_im_Webclient"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

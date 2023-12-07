@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "7.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Erstellen von Scripten</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Script" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Erstellen von Scripten">
+        <span>Erstellen von Scripten</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Erstellen von Scripten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Anlegen eines Scriptelements wird der &quot;Ergebnistyp&quot; 
+ des Scripts, der Name des Scripts sowie die &quot;Namen&quot; und &quot;Typen&quot; 
+ der &quot;Parameter&quot; (soweit erforderlich) festgelegt. Nach Anklicken 
+ des Scriptelements mit der rechten Maustaste oder der Menütaste der Windows-Tastatur 
+ kann im Kontextmenü der Script-&quot;Editor&quot; aufgerufen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Einfügen von Elementen wie Variablen oder anderen 
+ Scripten in das Script empfiehlt es sich, über das Kontextmenü des gewünschten 
+ Elements - Knotennamen kopieren den gesamten Pfad in die Zwischenablage 
+ zu holen. Von dort kann der Knotenpfad dann an der gewünschten Stelle 
+ im Script eingefügt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Arbeiten im Textfenster stellt das Kontextmenü 
+ (rechte Maustaste) folgende Funktionen zur Verfügung:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Rückgängig:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Macht 
+		 die letzte Aktion rückgängig.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Ausschneiden:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Schneidet 
+		 den markierten Text aus und speichert ihn in die Zwischenablage.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Kopieren:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Kopiert 
+		 den markierten Text und speichert ihn in die Zwischenablage.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Einfügen:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Kopiert 
+		 den Text aus der Zwischenablage ein.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Löschen:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Löscht 
+		 den markierten Text.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Suchen:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Es 
+		 wird der Windows-Standarddialog für Textsuche geöffnet.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Ersetzen:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Es 
+		 wird der Windows-Standarddialog für Suchen &amp; Ersetzen geöffnet.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Weitersuchen:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Der 
+		 zuletzt ausgeführte Suchen- oder Ersetzen-Befehl wird wiederholt.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Hilfe:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Befindet 
+		 sich der Cursor in einem Wort, wird die Hilfe geöffnet und dieses 
+		 Wort als Suchbegriff eingegeben.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Verfügbare 
+		 Parameter:</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Hier 
+		 erhält man eine Auswahlliste sämtlicher Parameter, die dem Script 
+		 übergeben werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Kompilieren 
+		 (F7):</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Es 
+		 wird ein Übersetzungslauf gestartet. Syntaktische Fehler werden 
+		 in der Statuszeile angezeigt. Bei erfolgreicher Übersetzung erscheint 
+		 &quot;Script OK&quot;.</p>
+		<p class="TextkörperTableFett"><img src="../../SCC_Dateien/image003.jpg" alt="Hinweis_klein" width="71" height="19" border="0"/>:</p>
+		<p class="TextkörperTableEinrück">Beim Editieren von Scripten zur 
+		 Laufzeit sollte man die nötige Vorsicht walten lassen. Enthält 
+		 ein Script einen Fehler, so kann es nicht ausgeführt werden. Dies 
+		 führt zu Fehlermeldungen.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

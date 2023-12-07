@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.23";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen der Send/Recv-Schnittstelle</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="SendRecv" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen der Send/Recv-Schnittstelle">
+        <span>Funktionen der Send/Recv-Schnittstelle</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen der Send/Recv-Schnittstelle</h2>
+<h3 data-condition="Others:Deutsch"><a name="SendBlk" id="SendBlk"></a>SendBlk</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SendBlk(string name, long id, block 
+ data, long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sendet einen Datenblock <b>data</b> mit der Länge <b>size</b> 
+ Bytes über die Verbindung <b>name</b>. Die <b>id</b> wird in der Variable 
+ &quot;SendStatus&quot; der Verbindung wieder zurückgespiegelt, wenn der 
+ Sendevorgang beendet ist. Trat beim  Senden ein Fehler auf, 
+ wird zusätzlich ein Fehlerbit übergeben. Der Wert von &quot;SendStatus&quot; 
+ ist dann 0x80000000 + <b>id</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl kann auch direkt an den Verbindungsnamen 
+ im Script angehängt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := newblock(128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SendRecv.DriverSerial.ConnectionScanner.SendBlk(1, 
+ b, 128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">oder…</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SendBlk(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;, 
+ 1, b, 128)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SendStr" id="SendStr"></a>SendStr</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SendStr(string name, long id, string 
+ data)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sendet einen String <b>data</b> über die Verbindung 
+ <b>name</b>. Die Sendelänge ist mit der Länge des Strings identisch. Die 
+ <b>id</b> wird in der Variable &quot;SendStatus&quot; der Verbindung wieder 
+ zurückgespiegelt, wenn der Sendevorgang beendet ist. Trat beim  Senden 
+ ein Fehler auf wird zusätzlich ein Fehlerbit übergeben. Der Wert von &quot;SendStatus&quot; 
+ ist dann 0x80000000 + <b>id</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl kann auch direkt an den Verbindungsnamen 
+ im Script angehängt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := &#39;Teststring &#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SendRecv.DriverSerial.ConnectionScanner.SendStr(1, 
+ s)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">oder …</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SendBlk(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;, 
+ 1, s)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SendVar" id="SendVar"></a>SendVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SendVar(string name, long id, address 
+ data, long size)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sendet einen Variablenbereich mit der Adresse <b>data</b> 
+ über die Verbindung <b>name</b>. Die Sendelänge wird mit <b>size</b> spezifiziert. 
+ Die <b>id</b> wird in der Variable &quot;SendStatus&quot; der Verbindung 
+ wieder zurückgespiegelt, wenn der Sendevorgang beendet ist. Trat beim 
+ Senden ein Fehler auf, wird zusätzlich ein Fehlerbit übergeben. Der Wert 
+ von &quot;SendStatus&quot; ist dann 0x80000000 + <b>id</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Befehl kann auch direkt an den Verbindungsnamen 
+ im Script angehängt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">struct data</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">begin</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  long l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  char c[80]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">data.l := 26</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SetVarStr(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;, &amp;data.c, 
+ 26)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SendRecv.DriverSerial.ConnectionScanner.SendVar(1, 
+ &amp;data, 30)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">oder …</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">SendVar(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;, 
+ 1, &amp;data, 30)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="SequenceBlk"></a>SequenceBlk</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: SequenceBlk(string 
+ name, long id, block data, long size, long timeoutrecv, long timeoutterminate, 
+ long modeterminate)<br style="mso-special-character: line-break;"/>
+</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Sendet einen 
+ Datenblock <b>data</b> mit der Länge <b>size</b> Bytes über die Verbindung 
+ <b>name</b>. Die Verbindung wird aufgebaut, sofern sie noch nicht aktiv 
+ war. Nach dem Senden der Daten wird auf eine Antwort gewartet. Die Daten 
+ der Antwort werden über das Event <b style="mso-bidi-font-weight: normal;">OnValue</b> 
+ übergeben.</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Die <b>id</b> 
+ wird im Event <b style="mso-bidi-font-weight: normal;">OnSend</b> der 
+ Verbindung wieder zurückgespiegelt, wenn der Ablauf beendet ist.<br/>
+<br/>
+Trat beim Senden ein Fehler auf, oder wird innerhalb der Zeit <b style="mso-bidi-font-weight: normal;">timeoutrecv</b> 
+ keine Antwort erhalten, wird zusätzlich ein Fehlerbit übergeben. Der Wert 
+ von <b style="mso-bidi-font-weight: normal;">OnSend</b> ist dann 0x80000000 
+ + <b>id</b>.</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;"><br/>
+Ist der Ablauf beendet, wird das Verhalten über <b style="mso-bidi-font-weight: normal;">modeterminate</b> 
+ festgelegt:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;"><br/>
+0<span style="mso-tab-count: 1;">            </span> die 
+ Verbindung bleibt aufgebaut, keine weitere Aktion.<br/>
+1<span style="mso-tab-count: 1;">            </span> die 
+ Verbindung wird sofort abgebaut<br/>
+2<span style="mso-tab-count: 1;">            </span> es 
+ wird die Zeit <b style="mso-bidi-font-weight: normal;">timeoutterminate</b> 
+ abgewartet, ob ein weiterer Sendebefehl ansteht.<span style="mso-tab-count: 1;">              </span></span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Beispiel:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">block    b</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">b := newblock(128)</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">SequenceBlk(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;, 
+ 1, b, 128, 2000, 2000, 0)</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><a id="SequenceStr_"></a>SequenceStr 
+ </span></h3>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></span><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: SequenceStr(string 
+ name, long id, string data, long timeoutrecv, long timeoutterminate, long 
+ modeterminate)<br style="mso-special-character: line-break;"/>
+<br style="mso-special-character: line-break;"/>
+</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Sendet einen 
+ String <b>data</b> über die Verbindung <b>name</b>. Die Sendelänge ist 
+ mit der Länge des Strings identisch. Die Verbindung wird aufgebaut, sofern 
+ sie noch nicht aktiv war. Nach dem Senden der Daten wird auf eine Antwort 
+ gewartet. Die Daten der Antwort werden über das Event <b style="mso-bidi-font-weight: normal;">OnValue</b> 
+ übergeben.</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Die <b>id</b> 
+ wird im Event <b style="mso-bidi-font-weight: normal;">OnSend</b> der 
+ Verbindung wieder zurückgespiegelt, wenn der Ablauf beendet ist.<br/>
+<br/>
+Trat beim Senden ein Fehler auf, oder wird innerhalb der Zeit <b style="mso-bidi-font-weight: normal;">timeoutrecv</b> 
+ keine Antwort erhalten, wird zusätzlich ein Fehlerbit übergeben. Der Wert 
+ von <b style="mso-bidi-font-weight: normal;">OnSend</b> ist dann 0x80000000 
+ + <b>id</b>.</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;"><br/>
+Ist der Ablauf beendet, wird das Verhalten über <b style="mso-bidi-font-weight: normal;">modeterminate</b> 
+ festgelegt:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;"><br/>
+0</span><span style="mso-tab-count: 1;">            </span><span style="mso-ansi-language: DE;"> die Verbindung bleibt aufgebaut, 
+ keine weitere Aktion.<br/>
+1</span><span style="mso-tab-count: 1;">            </span><span style="mso-ansi-language: DE;"> die Verbindung wird sofort abgebaut<br/>
+2</span><span style="mso-tab-count: 1;">            </span><span style="mso-ansi-language: DE;"> es wird die Zeit <b style="mso-bidi-font-weight: normal;">timeoutterminate</b> 
+ abgewartet, ob ein weiterer Sendebefehl ansteht.</span><span style="mso-tab-count: 1;">        </span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">string   s</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">s := &#39;Teststring 
+ &#39;</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">SequenceStr(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;, 
+ 1, s, 2000, 2000, 1)</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-tab-count: 1;"> <span style="mso-ansi-language: DE;">      </span></span></p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="SequenceVar"></a>SequenceVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></span><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: SequenceVar(string 
+ name, long id, address data, long size, long timeoutrecv, long timeoutterminate, 
+ long modeterminate)<br style="mso-special-character: line-break;"/>
+<br style="mso-special-character: line-break;"/>
+</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Sendet einen 
+ Variablenbereich mit der Adresse <b>data</b> über die Verbindung <b>name</b>. 
+ Die Sendelänge wird mit <b>size</b> spezifiziert. Die Verbindung wird 
+ aufgebaut, sofern sie noch nicht aktiv war. Nach dem Senden der Daten 
+ wird auf eine Antwort gewartet. Die Daten der Antwort werden über das 
+ Event <b style="mso-bidi-font-weight: normal;">OnValue</b> übergeben.</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Die <b>id</b> 
+ wird im Event <b style="mso-bidi-font-weight: normal;">OnSend</b> der 
+ Verbindung wieder zurückgespiegelt, wenn der Ablauf beendet ist.<br/>
+<br/>
+Trat beim Senden ein Fehler auf, oder wird innerhalb der Zeit <b style="mso-bidi-font-weight: normal;">timeoutrecv</b> 
+ keine Antwort erhalten, wird zusätzlich ein Fehlerbit übergeben. Der Wert 
+ von <b style="mso-bidi-font-weight: normal;">OnSend</b> ist dann 0x80000000 
+ + <b>id</b>.</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;"><br/>
+Ist der Ablauf beendet, wird das Verhalten über <b style="mso-bidi-font-weight: normal;">modeterminate</b> 
+ festgelegt:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;"><br/>
+0<span style="mso-tab-count: 1;">            </span> die 
+ Verbindung bleibt aufgebaut, keine weitere Aktion.<br/>
+1<span style="mso-tab-count: 1;">            </span> die 
+ Verbindung wird sofort abgebaut<br/>
+2<span style="mso-tab-count: 1;">            </span> es 
+ wird die Zeit <b style="mso-bidi-font-weight: normal;">timeoutterminate</b> 
+ abgewartet, ob ein weiterer Sendebefehl ansteht.<span style="mso-tab-count: 1;">              </span></span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">struct data</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">begin</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">long l</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">char c[80]</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">end</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">data.l := 26</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">SetVarStr(&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;, 
+ &amp;data.c, 26)</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">SequenceVar(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;, 
+ 1, &amp;data, 30, 2000, 2000, 2)</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="SequenceState"></a>SequenceState</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></span><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: long 
+ SequenceState(string name)<br style="mso-special-character: line-break;"/>
+<br style="mso-special-character: line-break;"/>
+</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">Prüft den Sequenzstatus 
+ der Verbindung <b style="mso-bidi-font-weight: normal;">name</b>. Der 
+ Status kann folgen de Werte annehmen:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">-1<span style="mso-tab-count: 1;">          </span> die 
+ Verbindung <b style="mso-bidi-font-weight: normal;">name</b> existiert 
+ nicht</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">0<span style="mso-tab-count: 1;">            </span> Verbindung 
+ vorhanden und frei; keine Sequenz aktiv</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span style="mso-ansi-language: DE;">1<span style="mso-tab-count: 1;">            </span> es 
+ läuft eine Sequenz auf der Verbindung</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">long state</span></p>
+<p class="MsoNormal" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">state := SequenceState(&#39;SendRecv.DriverSerial.ConnectionScanner&#39;)</span></p>
+
+
+</body></html>

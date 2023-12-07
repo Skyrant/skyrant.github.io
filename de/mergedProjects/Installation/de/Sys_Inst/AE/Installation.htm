@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Installation</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Installation</h2>
+<h3><a name="Voraussetzungen" id="Voraussetzungen"></a>Voraussetzungen</h3>
+<?rh-placeholder type="snippet" ref="AE_de" ?>
+<?rh-placeholder type="snippet" ref="AE_add_de" ?>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Versionen der AE und der Legato-Datenbank 
+ müssen gleich sein, sonst kommt es zu Fehlern.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Für diverse Jobs fragt die AE die Datenbank 
+ ab. Damit es hier zu keinen Problemen kommt, muss die Java-VM eine korrekte 
+ Konfiguration der Zeitzone haben. Ob überhaupt eine Zeitzonen-Einstellung 
+ vorliegt, kann über Putty mit &quot;echo $LANG&quot; geprüft werden. Besteht 
+ kein Zugriff auf die Installation der Java-VM, kann die Zeitzone auch 
+ im Startskript der AE (in der Datei dosvc.cmd) gesetzt werden. Dazu muss 
+ die Umgebungs-Variable JAVA_OPTS um die Angabe &quot;-Duser.timezone=CET&quot; 
+ ergänzt werden (ggf. ist CET durch die korrekte Zeitzone zu ersetzen).</p>
+<h3><a name="Installation_unter_Windows" id="Installation_unter_Windows"></a>Installation 
+ unter Windows</h3>
+<p class="BodyText">Unter Windows kann die Legato Application Engine mit 
+ Hilfe von Programmen der Apache Foundation (aus dem Projekt &quot;Jakarta 
+ Commons Daemon&quot;) als Dienst installiert werden. Zur Installation 
+ gehen Sie bitte folgendermaßen vor:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legen Sie ein Verzeichnis für die Legato Application 
+ Engine an und entpacken Sie das Archiv (LeAppEng-x.y.z.b.zip) in dieses 
+ Verzeichnis.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Kopieren Sie bitte unter Windows 32 Bit die Programme 
+ dosvc.sample.cmd, LeAppEng.exe und LeAppEngW.exe aus dem Unterverzeichnis 
+ &quot;win&quot;, unter Windows 64 Bit die Programme dosvc.sample.cmd, 
+ prunsrv.exe und prunmgr.exe aus dem Unterverzeichnis &quot;win64&quot; 
+ in Ihr AE-Verzeichnis.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Speichern Sie die Dateien ojdbc*.jar und orai18n*.jar 
+ (* = aktuelle Version) in das Verzeichnis LegatoAppEng\lib. Sie können 
+ von der Oracle Homepage heruntergeladen werden. Die verwendete Version 
+ muss mindestens ojdbc6.jar (für Java 1.7) oder höher sein.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Bei einer Neu-Installation benennen Sie bitte 
+ die folgenden Dateien um:</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">appengine.sample.properties 
+ zu appengine.properties</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">log4j2.sample.xml 
+ zu log4j2.xml</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Bearbeiten Sie die Datei <span class="ListingChar"><span 
+	 style="font-size: 9.0pt;">dosvc.cmd</span></span> in einem Text-Editor 
+ und nehmen Sie folgende Einstellungen vor:</p><?rh-list_end ?>
+<p class="TextkörperfettAufzähl"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperListHinweis">Alle Pfadangaben müssen mit einem Backslash 
+ (\) enden.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Bei einer 1-DB Installation, löschen Sie die Angaben 
+ für &quot;dbarch&quot;.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Bearbeiten Sie die Zeile, in welcher die Umgebungsvariable 
+ JAVA_HOME gesetzt wird so, dass JAVA_HOME auf das Verzeichnis der Java-Umgebung 
+ des betreffenden Rechners verweist. Beispiel: set JAVA_HOME= C:\Programme\Java\j2re1.7.2_08\</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Falls Sie den Namen des installierten Dienstes 
+ ändern wollen, ändern Sie die Variable SVCNAME. (Falls Sie mehrere Instanzen 
+ der Application Engine am gleichen Rechner betreiben wollen, müssen Sie 
+ jeder Instanz einen eigenen Namen geben).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Falls Sie dosvc.cmd in ein anderes Verzeichnis 
+ verschieben wollen (sodass dosvc.cmd und LeAppEngBoot.jar sich nicht im 
+ gleichen Verzeichnis befinden), setzen Sie die Variable HOMEDIR auf das 
+ Verzeichnis der Application Engine.</p><?rh-list_end ?>
+<p class="TextkörperfettAufzähl"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperListHinweis">Enthält der Verzeichnis-Pfad der Application 
+ Engine Leerzeichen, so führt dies zu einem Fehler. In diesem Fall muss 
+ man entweder:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">das %HOMEDIR% bei SVCEXE und bei MONEXE löschen 
+ (set SVCEXE=prunsrv; set MONEXE=prunmgr)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">oder man definiert im obersten Teil der dosvc.cmd 
+ zwei neue Variablen 'set SLASH=\' und 'set PLACEHOLDER=&quot;' und gibt 
+ diese immer bei Angabe des HOMEDIR mit an (z.B. set SVCEXE=%PLACEHOLDER%HOMEDIR%%SLASH%LeAppEng%PLACEHOLDER%; 
+ set MONEXE=%PLACEHOLDER%%HOMEDIR%%SLASH%LeAppEngW%PLACEHOLDER%; set SVCOPTS=--JvmOptions=-Xrs 
+ ++JvmOptions=-Dappeng.home=%PLACEHOLDER%%HOMEDIR%%PLACEHOLDER% ++JvmOptions=-Dappeng.config=%PLACEHOLDER%%CFGDIR%%PLACEHOLDER% 
+ ++JvmOptions=-Dappeng.scripts=%PLACEHOLDER%%SCRDIR%%PLACEHOLDER%)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Falls Sie die Konfigurationsdateien 
+ der Application Engine nicht im Programmverzeichnis ablegen wollen, geben 
+ Sie das Verzeichnis der Konfigurationsdateien in der Variablen CFGDIR 
+ an.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Falls Sie die JavaScript-Skripten in 
+ ein Verzeichnis außerhalb des Programmverzeichnisses legen wollen, geben 
+ sie dieses in der Variablen SCRDIR an.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Setzen Sie den Pfad für die Logdateien 
+ des Dienste-Wrapper in der Variablen LOGDIR (wirkt sich nicht auf das 
+ Logging der eigentlichen Application Engine aus; dies wird in log4j2.xml 
+ konfiguriert).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Setzen Sie die Ausführlichkeit der Logdateien 
+ des Dienste-Wrapper in der Variablen PR_LOGLEVEL (erlaubte Werte sind 
+ debug, info, warn oder error. &quot;Debug&quot; enthält alle Logmeldungen, 
+ also auch &quot;info&quot;, &quot;warn&quot; und &quot;error&quot;; &quot;info&quot; 
+ enthält alle Logmeldungen außer &quot;debug&quot; usw.)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Setzen Sie Namen und Pfad der Dateien 
+ mit den umgeleiteten Standard- und Fehler-Ausgaben der Application Engine 
+ in den Variablen PR_STDOUTPUT und PR_STDERROR.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Setzen der Zeitzone. Ergänzen Sie in 
+ der Datei dosvc.cmd die Umgebungs-Variable JAVA_OPTS um die Angabe &quot;-Duser.timezone=CET&quot; 
+ (CET muss ggf. durch die korrekte Zeitzone ersetzt werden). Diese Angabe 
+ ist nötig, wenn die Java-VM keine oder eine falsche Konfiguration der 
+ Zeitzone hat und dies nicht in der Java-VM selbst korrigiert werden kann. 
+ Ob überhaupt eine Zeitzonen-Einstellung vorliegt, kann über Putty mit 
+ &quot;echo $LANG&quot; geprüft werden.</p><?rh-list_end ?>
+<p class="TextkörperfettAufzähl"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperListHinweis">Wenn die Java-VM keine oder eine falsche 
+ Konfiguration der Zeitzone hat, werden keine Verfügbarkeits-Abschnitte 
+ online berechnet. Verfügbarkeitsrelevante Störungen werden dann für KPI-Berechnungen 
+ nicht berücksichtigt.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Konfigurieren Sie die Application Engine (für 
+ die genauen Schritte siehe Kapitel <a href="Configuration.htm">Konfiguration 
+ der Legato Application Engine</a>).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Installieren Sie den Dienst, indem Sie eine Eingabeaufforderung 
+ öffnen, in das Programmverzeichnis wechseln und darin den Befehl &quot;dosvc 
+ inst&quot; eingeben.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Erstellen Sie eine Verknüpfung zur Monitor-Applikation 
+ im Startmenü (eventuell auch im &quot;Autostart-Ordner&quot; von &quot;Alle 
+ Benutzer&quot;). Geben Sie als &quot;Ziel&quot; den Befehl &quot;dosvc 
+ monitor&quot; (unter Windows 64 Bit &quot;C:\Windows\System32\cmd.exe&#160;/C&#160;&lt;Programmverzeichnis&gt;dosvc 
+ monitor&quot;) und als Arbeitsverzeichnis das Programmverzeichnis ein.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Führen Sie die Monitor-Applikation mittels der 
+ eben erstellten Verknüpfung aus. Deren Programmsymbol erscheint daraufhin 
+ im Systembereich (&quot;system tray&quot;) der Taskleiste. Durch Klicken 
+ mit der rechten Maustaste können Sie den Dienst starten oder dessen Konfiguration 
+ bearbeiten.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Der Dienst-Eintrag der Legato Application Engine wird 
+ zunächst mit der Start-Einstellung &quot;manuell&quot; eingetragen, das 
+ heißt, der Dienst wird nicht automatisch beim Hochfahren des Systems gestartet. 
+ Wir empfehlen, dass Sie sie erst dann auf &quot;automatisch&quot; stellen, 
+ wenn Sie die Application Engine vollständig konfiguriert und die Konfiguration 
+ getestet haben.</p>
+<h3><a name="Aufruf_als_Applikation" id="Aufruf_als_Applikation"></a>Aufruf 
+ als Applikation</h3>
+<p class="BodyText">Falls Sie die Application Engine als normales Programm 
+ ausführen, gehen Sie bitte folgendermaßen vor:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legen Sie ein Verzeichnis für die Legato Application 
+ Engine an und entpacken Sie das Archiv (LeAppEng-x.y.z.b.zip) in dieses 
+ Verzeichnis (falls Sie ein JDK installiert haben, können Sie das z.B. 
+ mittels des JAR-Tools durchführen).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Kopieren Sie bitte unter Windows 32 Bit die Datei 
+ dosvc.sample.cmd aus dem Unterverzeichnis &quot;win&quot;, unter Windows 
+ 64 Bit die Datei dosvc.sample.cmd aus dem Unterverzeichnis &quot;win64&quot; 
+ in Ihr Verzeichnis.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Bei einer Neu-Installation benennen Sie bitte 
+ die folgenden Dateien um:</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">appengine.sample.properties 
+ zu appengine.properties</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">log4j2.sample.xml 
+ zu log4j2.xml</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Um die Application Engine zu starten, gehen Sie bitte 
+ wie folgt vor:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Setzen Sie die Umgebungsvariable JAVA_HOME auf 
+ das Basis-Verzeichnis Ihrer Java Laufzeitumgebung.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Rufen Sie die Application Engine auf: java -jar 
+ LeAppEngBoot.jar</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Die Application Engine läuft nun als normale Konsolen-Applikation. 
+ Um sie zu beenden, drücken Sie <span style="font-size: 9.0pt;">Strg+C</span>. 
+ Wenn Sie die Application Engine unter Unix oder Linux als Hintergrundprozess 
+ gestartet haben, können Sie sie durch das Signal SIGINT beenden (üblicherweise 
+ mit dem Befehl <span style="font-size: 9.0pt;">kill</span>&#160;<span 
+	 style="font-size: 9.0pt;">&lt;process-id&gt;</span>). In beiden Fällen 
+ wird die Application Engine geordnet heruntergefahren, das heißt, sie 
+ beendet sich erst nach Freigabe aller Jobs.</p>
+<p class="BodyText">Sie können beim Aufruf folgende Optionen angeben (vor 
+ der Angabe &quot;-jar&quot;):</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">-Dappeng.home=&lt;Verzeichnis&gt; - Installationsverzeichnis 
+ der Application Engine. Dies ist nötig, wenn Sie die Application Engine 
+ aus einem anderen Verzeichnis heraus starten wollen (Sie müssen dann den 
+ Pfad zu LeAppEngBoot.jar auch in der Kommandozeile angeben).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">-Dappeng.config=&lt;Verzeichnis&gt; - Verzeichnis 
+ der Konfigurationsdateien, falls diese sich nicht im Installationsverzeichnis 
+ befinden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">-Dappeng.scripts=&lt;Verzeichnis&gt; - Verzeichnis 
+ der JavaScript-Skripten für die Application Engine. Nützlich, falls Sie 
+ die Skripten in einem Verzeichnis ablegen wollen, auf das auch über das 
+ Netzwerk zugegriffen werden kann und Sie nicht das Verzeichnis scripts 
+ im Programmverzeichnis freigeben wollen.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">-Dappeng.properties=&lt;Datei&gt; - Abweichender 
+ Name der Konfigurationsdatei. Nützlich, falls Sie mehrere Instanzen der 
+ Application Engine auf dem gleichen Rechner starten wollen und dafür das 
+ gleiche Konfigurationsverzeichnis benutzen wollen (um z.B. die Datenbankverbindungen 
+ gemeinsam für mehrere Instanzen festzulegen).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">-Dlog4j.configurationFile=&lt;Datei&gt; - Falls 
+ Sie Log4J2 für die Log-Ausgaben der Application Engine nicht über die 
+ log4j2.xml im Konfigurations- oder Installationsverzeichnis konfigurieren 
+ wollen, sondern z.B. über eine andere XML-Datei.</p><?rh-list_end ?>
+<p class="TextkörperfettAufzähl"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Diese Angabe muss als URL erfolgen, nicht 
+ als Dateiname (also in der Regel im Format file://&lt;pfad&gt;/&lt;</p>
+<p class="TextkörperHinweis">datei&gt;, mit Protokoll-Angabe file:// am 
+ Anfang und auch unter Windows mit Schrägstrich statt Backslash).</p>
+<h3><a name="Einbinden_in_den_Startprozess" id="Einbinden_in_den_Startprozess"></a>Einbinden 
+ in den Startprozess von Linux oder Unix</h3>
+<p class="BodyText">Um die Legato Application Engine in den Startprozess 
+ des Betriebssystems einzubinden, benötigen Sie ein Shell-Skript, das dann 
+ über symbolische Links in den entsprechenden Verzeichnissen (unter Linux 
+ üblicherweise <span class="ListingChar"><span style="font-size: 9.0pt;">/etc/rc.d/rc*.d</span></span>) 
+ referenziert wird. Unter Linux wird die Application Engine üblicherweise 
+ in den Runlevels 3 und 5 gestartet.</p>
+<p class="BodyText">Der Aufbau der Startskripten und –Verzeichnisse ist 
+ leider stark plattformabhängig. Mit der Application Engine kann folglich 
+ nur ein Beispiel-Script (<span class="ListingChar"><span style="font-size: 9.0pt;">leappeng.sample.sh</span></span>) 
+ mitgeliefert werden, das Sie als Basis für eigene Skripten benutzen können. 
+ Die meisten Linux-Distributionen und Unix-Varianten enthalten zusätzliche 
+ Hilfsmittel, mit denen die entsprechenden Skripten stark vereinfacht werden 
+ können (z.B. <span class="ListingChar"><span style="font-size: 9.0pt;">startproc/checkproc/killproc</span></span> 
+ in SuSE Linux, <span class="ListingChar"><span style="font-size: 9.0pt;">start-stop-daemon</span></span> 
+ in Debian GNU/Linux, <span class="ListingChar"><span style="font-size: 9.0pt;">daemon/killproc</span></span> 
+ in Mandrake Linux u.v.m.).</p>
+<p class="BodyText">Unter Unix-Servern ist im Allgemeinen der Headless 
+ Mode von Java zu nutzen, d.h. im Aufruf der JVM sollte jeweils ein Eintrag 
+ <span class="ListingChar"><span style="font-size: 9.0pt;">-Djava.awt.headless=true</span></span> 
+ vorhanden sein.</p>
+<p class="BodyText">Im Folgenden wird als Beispiel erläutert, wie die Legato 
+ Application Engine mittels des mitgelieferten Shell-Skripts unter SuSE 
+ Linux in den Startprozess installiert wird:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Optional: Legen Sie einen Benutzer an, unter dessen 
+ Benutzerkonto die Application Engine ablaufen soll (sie soll das schließlich 
+ nicht als root tun).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Kopieren Sie leappeng.sample.sh nach /etc/rc.d/leappeng 
+ (ohne Endungen &quot;.sample.sh&quot;) und machen Sie /etc/rc.d/leappeng 
+ ausführbar (chmod a+x /etc/rc.d/leappeng).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Bearbeiten Sie die Datei /etc/rc.d/leappeng mit 
+ einem Text-Editor. Die anzupassenden Zeilen sind im Skript als Konfigurations-Abschnitt 
+ gekennzeichnet, die anzupassenden Optionen entsprechen denen, die in den 
+ vorhergehenden Abschnitten bereits erläutert wurden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legen Sie eine Verknüpfung namens rcleappeng irgendwo 
+ im PATH an, z.B. /usr/sbin/rcleappeng. Testen Sie, ob Sie die Application 
+ Engine nun mittels &quot;rcleappeng start&quot; starten und &quot;rcleappeng 
+ stop&quot; beenden können. Sie sollten dazu die Application Engine bereits 
+ soweit konfiguriert haben (siehe unten), dass sie sich nicht sofort beendet. 
+ Es empfiehlt sich aber, in der appengine.properties die Instanz (AeInstance) 
+ auf eine in der Datenbank nicht vorhandene ID zu setzen, damit beim Test 
+ keine Aufträge bearbeitet werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Legen Sie unter /etc/rc.d/rc3.d und /etc/rc.d/rc5.d 
+ je zwei Verknüpfungen auf /etc/rc.d/leappeng an, z.B. S30leappeng für 
+ den Start und K02leappeng für das Beenden. ('S' bedeutet Start, 'K' bedeutet 
+ Kill, die Nummern geben die Reihenfolge an: ziemlich spät starten und 
+ früh beenden).</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Bitte beachten Sie immer, dass <span style="font-size: 9.0pt;">leappeng.sh</span> 
+ und die obigen Erläuterungen nur als Beispiel gedacht sind und keine Referenz-Implementierung 
+ für das Einbinden in den Startprozess Ihres Systems darstellen. Auch unter 
+ SuSE Linux würde man nicht unbedingt die im Skript enthaltenen Methoden 
+ für das Starten und Beenden verwenden, sondern sein Skript den dort bereits 
+ vorhandenen rc-Skripten nachempfinden, welche meist die Befehle <span 
+	 style="font-size: 9.0pt;">startproc</span>, <span style="font-size: 9.0pt;">checkproc</span> 
+ und <span style="font-size: 9.0pt;">killproc</span> benutzen.</p>
+</body>
+</html>

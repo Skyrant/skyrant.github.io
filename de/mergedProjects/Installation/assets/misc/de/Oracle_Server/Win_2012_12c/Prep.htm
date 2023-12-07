@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_Windows_2012R2_Oracle_Server_12c_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Vorbereitung zur Installation</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h1>Vorbereitung zur Installation</h1>
+<h2><a name="Systemvoraussetzung" id="Systemvoraussetzung"></a>Systemvoraussetzung</h2>
+<p class="BodyText">Als erste Voraussetzung muss das Windows Server System 
+ ordnungsgemäß installiert sein. Die folgenden Windows Server Systeme sind 
+ von Gefasoft freigegeben, jeweils in der 64-Bit Version:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Windows Server 2008</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Windows Server 2008 R2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Windows Server 2012</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Windows Server 2012R2</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Außerdem müssen die Netzwerkeinstellungen richtig konfiguriert 
+ sein.</p>
+<p class="BodyText">Die Installation muss mit einem Benutzer erfolgen, 
+ der Administrationsrechte auf dem Server hat.</p>
+<p class="BodyText">Weitere Hinweise zum benötigten Festplattenplatz und 
+ den Hardware- und Software-Voraussetzungen können der Oracle-Installationsdokumentation 
+ entnommen werden.</p>
+<h2><a name="Version_downloaden" id="Version_downloaden"></a>Version downloaden</h2>
+<p class="BodyText">Unterstützt wird aktuell die Oracle-Version 12cR1.</p>
+<p class="BodyText">In dieser Dokumentation wird vom Einsatz der Enterprise 
+ Edition ausgegangen. Diese Version ist für den Betrieb von Legato empfohlen 
+ und kann kostenpflichtig bei Oracle erworben werden.</p>
+<p class="BodyText">Prinzipiell ist es jedoch auch möglich, Legato mit 
+ einer Standard-Oracle-Version zu betreiben. Hier sind allerdings einige 
+ empfohlene Features nicht verfügbar.</p>
+<p class="BodyText">Die benötigte Oracle-Version kann heruntergeladen werden 
+ unter:</p>
+<p class="BodyText"><a href="http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html">http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html</a></p>
+<p class="BodyText">Im Oracle Metalink können Service Requests gestellt 
+ werden, neueste Software-Updates geholt werden oder auch nach Hilfen gesucht 
+ werden. Der Metalink ist jedoch nur für Oracle-Partner zugänglich und 
+ grundsätzlich kostenpflichtig. Wir empfehlen den Zugang zum Metalink, 
+ um stets die aktuellsten Versionen verfügbar zu haben. Für diese Anleitung 
+ wird ebenfalls von einem Zugang zum Metalink ausgegangen.</p>
+<p class="BodyText">Der Oracle Metalink ist zu erreichen unter <a href="http://support.oracle.com/">http://support.oracle.com</a></p>
+<h2><a name="Installationspakete_lokal_entpacken" id="Installationspakete_lokal_entpacken"></a>Installationspakete 
+ lokal entpacken</h2>
+<p class="BodyText">Alle Software-Installationspakete von Oracle sollten 
+ lokal auf einer internen Festplatte gespeichert und entpackt werden. Dabei 
+ ist es auch wichtig, dass alle Pakete in einem Verzeichnis entpackt werden, 
+ sollten mehrere Pakete zu einem Produkt vorhanden sein.</p>
+<p class="BodyText">Es ist wichtig, dass der Verzeichnisname auch keine 
+ Sonderzeichen oder Leerzeichen enthält. Im gezeigten Beispiel ist dies 
+ das Verzeichnis &quot;C:\INSTALL\Oracle&quot;.</p>
+<p class="BodyText"><img src="../../../Images/Oracle_Server/Win_2012_12c/image007.png" 
+						 alt="" border="0" /></p>
+<p class="BodyText">In diesem Fall werden die Pakete 1 und 2 benötigt, 
+ die sowohl Installations- als auch Deinstallationsprogramme für den Server 
+ enthalten. Beide Zip-Dateien werden in dasselbe Unterverzeichnis &quot;database&quot; 
+ (z. B. unterhalb von C:\temp) entpackt.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Windows Scheduler Jobs sollten alle deaktiviert 
+ sein, da diese während der Installation stören können.</p>
+</body>
+</html>

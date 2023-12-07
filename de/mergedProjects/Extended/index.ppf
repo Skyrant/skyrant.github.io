@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="Extended" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\General\SysDoc.htm">
+    
+    <topic>
+      de\Datasource_Concept\Datasource_Concept.htm
+    </topic>
+    
+    <topic>
+      de\Datasource_Concept\Example.htm
+    </topic>
+    
+    <topic>
+      de\Datasource_Concept\Explanations.htm
+    </topic>
+    
+    <topic>
+      de\Datasource_Concept\Boardlet_Datasources.htm
+    </topic>
+    
+    <topic>
+      de\Datasource_Concept\Table_Settings.htm
+    </topic>
+    
+    <topic>
+      de\Datasource_Concept\Examples\Create_Dashboard.htm
+    </topic>
+    
+    <topic>
+      de\Datasource_Concept\Examples\New_Boardlet.htm
+    </topic>
+    
+    <topic>
+      de\Andon\Einrichten_eines_Andon-Projekts.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Visualisierungszeichnungen_und_Designer.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Designer.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Erstellen_einer_Visualisierung.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Zeichnung.htm
+    </topic>
+    
+    <topic>
+      de\LGD\JSON.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Verwendung_von_Bindings_zum_Erstellen_dynamischer_und_interaktiver_Zeichnungen.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Bindings_bearbeiten.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Debugging.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Bindings__Elementstile_und_-eigenschaften.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Zahlenformate.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Formeln.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Berechnungen.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Standardwerte.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Bindings_für_Dokumente,_Ebenen,_Gruppen_und_Elemente.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Vererbung_von_Datenobjekten.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Bibliotheken.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Bibliotheksymbole_erstellen.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Attribute_zur_Erstellung_wiederverwendbarer_Symbole.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Zeichnungen_im_Dashboard_anzeigen.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Spezielle_Zeichnung_anzeigen.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Graphic_Production_View.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Bindings.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Spezielle_Binding-Targets.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Event_Bindings.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Empfehlungen_für_Schriftgrößen.htm
+    </topic>
+    
+    <topic>
+      de\LGD\Farben_für_best_möglichsten_Kontrast.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\LC2\Concept.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\LC2\01_Recipients.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\LC2\02_Al_Classes.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\LC2\01_Nodes.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\LC2\Paging.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\LC2\01_Alarm_Defs.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-50.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-51.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-52.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-53.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-54.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-55.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-56.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-57.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SysParams\SysParam-58.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\DB\Paging_Concept_DB.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\DB\Important_Tables.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SE\Configuration.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SE\Interface_Script.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\SE\RECEIVE_PAGING_EVENT.htm
+    </topic>
+    
+    <topic>
+      de\Paging_Interface\Query.htm
+    </topic>
+    
+    <topic>
+      de\Inkscape\Introduction\About.htm
+    </topic>
+    
+    <topic>
+      de\Inkscape\Introduction\General.htm
+    </topic>
+    
+    <topic>
+      de\Inkscape\Introduction\Sys_Requ.htm
+    </topic>
+    
+    <topic>
+      de\Inkscape\Create_Layout\Import_SVG.htm
+    </topic>
+    
+    <topic>
+      de\Inkscape\Create_Layout\Edit.htm
+    </topic>
+    
+    <topic>
+      de\Inkscape\Create_Layout\Import_to_Sapient.htm
+    </topic>
+    
+    <topic>
+      de\General\SysDoc.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

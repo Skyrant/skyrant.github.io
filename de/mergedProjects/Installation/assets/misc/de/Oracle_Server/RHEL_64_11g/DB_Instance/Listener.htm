@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Eintragen der neuen Instanz in den Listener</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2><span class="Überschrift1Zchn"><span style="font-family: Tahoma, sans-serif;">Eintragen 
+ der neuen Instanz in den Listener</span></span></h2>
+<p class="BodyText">Damit der Listener ordnungsgemäß arbeitet, sollte man 
+ diesem nun die neue Instanz bekanntgeben. Es gibt zwar auch die Möglichkeit, 
+ dass sich die Instanz automatisch beim Listener anmeldet, aber es ist 
+ trotzdem sicherer die Instanz in der Listener-Konfiguration manuell einzutragen.</p>
+<p class="TextCode"># su oracle</p>
+<p class="TextCode">$ cd /u01/app/oracle/product/11.2.0/dbhome_1/bin</p>
+<p class="TextCode">$ ./netmgr</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Es öffnet sich der Oracle Net Manager.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image101.png" 
+						 alt="" width="700" height="591" border="0" /></p>
+<p class="BodyText">Klicken Sie auf &quot;Listener&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image103.png" 
+						 alt="" width="700" height="591" border="0" /></p>
+<p class="BodyText">Wählen Sie in der Drop-Down-Liste &quot;Datenbank-Services&quot; 
+ aus und klicken Sie auf &quot;Datenbank hinzufügen&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image105.png" 
+						 alt="" width="700" height="591" border="0" /></p>
+<p class="BodyText">Geben Sie beim &quot;Globalen Datenbanknamen&quot; 
+ und bei der SID den vorher gewählten Datenbanknamen ein; im Beispiel &quot;LEGATO&quot;. 
+ Zur Speicherung muss man unter dem Menüpunkt &quot;Datei&quot; die Netzwerkkonfiguration 
+ sichern. Das Oracle-Standardverzeichnis ist ORACLE_HOME (unter Linux üblicherweise 
+ "/u01/app/oracle/product/11.2.0/dbhome_1").</p>
+<p class="BodyText">Nun kann der Net Manager geschlossen werden.</p>
+</body>
+</html>

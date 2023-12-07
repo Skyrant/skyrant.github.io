@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Favoriten (oben)"]],"1":[["Favorit"]],"2":[["\n"],["\n","In dieser Leiste werden die als Favoriten gespeicherten \n Tabellen für den Schnellzugriff angezeigt.","\n\n\n"]],"3":[["Favoriten (oben)"]],"id":"20"})

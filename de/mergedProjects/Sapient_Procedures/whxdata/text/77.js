@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Anmeldung eines Import-Skripts"]],"1":[["\n"],["\n","Jedes Skript muss zwingend eine Zeile mit folgendem \n Inhalt haben, um als Import-Skript und somit zur Ausführung identifiziert \n werden zu können:","\n","importTasks.add(\"Name der Skript-Datei.js\", \n new MeldungsImport());","\n"," ","\n\n\n"]],"3":[["Anmeldung eines Import-Skripts"]],"id":"77"})

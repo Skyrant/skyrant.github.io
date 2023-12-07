@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.9.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">TPM Wartungsaufträge</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TPM Wartungsaufträge">
+        <span>TPM Wartungsaufträge</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">TPM Wartungsaufträge</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" id="TopicWidth" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">TPM 
+ Wartungsaufträge</span> zeigt alle offenen Wartungsaufträge zum selektierten 
+ Knoten an. Es werden verschiedene Informationen angeboten, beispielsweise 
+ die geplante Fälligkeit, der Auslöser und der aktuelle Status.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/TPM_Orders_de.png" alt="" style="border: none;" border="0"/></p>
+<div data-conref="../../../assets/snippets/Boardlets/de_Sort_Column.hts" data-condition="Others:Deutsch">
+<p class="BodyText" style="max-width: 1000px;">Mittels Drag &amp; Drop 
+ lassen sich die Breite oder Position der Spalten einfach verändern. Durch 
+ Klick auf eine Zeilenüberschrift wird nach dieser Spalte sortiert. <br/>
+Nach welcher Spalte sortiert ist, und ob auf- oder absteigend sortiert 
+ ist, wird durch die dreieckigen Symbole angezeigt: </p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Nach Spalten, die mehr als einen Eintrag enthalten 
+ können, kann nicht sortiert werden, z.B. Auslöser oder Instandhaltungs-Gruppe 
+ (IH-Gruppe).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Symbole in der ersten Spalte zeigen an, wodurch 
+ der Wartungsauftrag angefordert wurde:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col id="IconColWidth"/>
+	<col width="247"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/calendar-today_black_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">durch Wartungsplan angefordert</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/account-circle_black_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">durch Benutzer angefordert</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Symbole auf der Boardlet-Menüleiste</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col id="IconColWidth"/>
+	<col width="855"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/add_black_2_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Neuer Wartungsauftrag.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/refresh_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Aktualisieren. Lädt die Liste der Wartungsaufträge 
+		 erneut.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/menu_dots.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Menü <span class="Bold">Quick-Edit</span>. 
+		 Dieses Menü enthält die Funktionen, die in <a href="../../Settings/Boardlet_Menu_Bar.htm#Quick_Edit">Quick 
+		 Edit</a> beschrieben sind, plus die Funktionen, die in dieser 
+		 Tabelle aufgeführt sind.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td colspan="2"><p class="TblBodyText">Wenn ein Wartungsauftrag 
+		 in der Liste ausgewählt ist, dann erscheinen zusätzliche Symbole 
+		 auf der Boardlet-Menüleiste und im Menü <span class="Bold">Quick-Edit</span>.</p></td>
+		
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/edit_black_2_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Wartungsauftrag bearbeiten.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/close_black_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Ablehnen. Setzt den Wartungsauftrag 
+		 in den Status <span class="Bold">abgelehnt</span>.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/account-plus.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Order zuordnen. Weist den Wartungsauftrag 
+		 dem Verantwortlichen zu.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/status_work_on_order.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Arbeiten Sie auf Bestellung. Der Verantwortliche 
+		 (= zugewiesener Benutzer) arbeitet am Wartungsauftrag.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/check_black_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Order beenden. Der Verantwortliche hat 
+		 den Wartungsauftrag abgeschlossen und den Status auf </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/list_add_black_18dp.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Tätigkeitsverwaltung. Öffnet den Dialog 
+		 zur Verwaltung der Tätigkeiten im Rahmen dieses Wartungsauftrags. 
+		 Siehe <a href="#Tätigkeitsverwaltung">Tätigkeitsverwaltung</a>.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icons/paper_clip.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">Datei anhängen.</p></td>
+	</tr>
+</tbody></table>
+<p class="NoteText" data-condition="Others:Deutsch"> </p>
+<div data-conref="../../../assets/snippets/Boardlets/de_mandatory_fields_sidebars.hts" data-condition="Others:Deutsch">
+<p class="Note">INFO: </p>
+<p class="NoteText">Pflichtfelder in den Seitenleisten sind mit einem Ausrufezeichen 
+ <img src="../../../Bilder/Icons/mandatory_exclamation.png" alt="" style="border: none;" border="0"/> gekennzeichnet.</p>
+
+
+</div>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Status_ändern"></a><a id="NodeA"></a>Status 
+ ändern </h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td colspan="3"><p class="BodyText" id="TopicWidth">Der aktuelle 
+		 Status des Wartungsauftrags wird in der Spalte <span class="Bold">State</span> 
+		 des Boardlets <span class="Bold">TPM Wartungsaufträge </span>angezeigt. 
+		 Durch Klick auf die jeweiligen Symbole in der Boardlet-Menüleiste 
+		 wird der ausgewählte Wartungsauftrag in den nächsten Status gesetzt.</p>
+		<p class="BodyText">Es gibt folgende Statusarten:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1"><a href="#status_zu_planen">zu 
+			 planen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#status_geplant">geplant</a></p></li>
+			<li><p class="ListBulletL1"><a href="#status_übernommen">übernommen</a></p></li>
+			<li><p class="ListBulletL1"><a href="#status_erledigt">erledigt</a></p></li>
+			<li><p class="ListBulletL1"><a href="#status_abgelehnt">abgelehnt</a></p></li>
+		</ul></td>
+		
+	</tr>
+	<tr>
+		<td><p class="GUIControl"><a id="status_zu_planen"></a>zu planen: 
+		 <a href="#NodeA" title="Zurück zu XXXXX"><img src="../../../assets/images/back.png" alt="" style="border: none;" border="0"/></a></p>
+		<p class="GUIControlDescr"><img src="../../../Bilder/status_to_assign_de.png" alt="" style="border: none;" border="0"/><br/>
+		Der Auftrag muss einem Benutzer zugewiesen werden, der ihn ausführen 
+		 soll. Durch Klick auf das Symbol <img src="../../../Bilder/Icons/account-plus.png" alt="" style="border: none;" border="0"/> in der Boardlet-Menüleiste 
+		 öffnet sich der Dialog <span class="Bold">Order zuordnen</span> 
+		 in der Seitenleiste: ------&gt;&gt;</p>
+		<p class="GUIControlDescr">Nachdem Sie die Felder bearbeitet und 
+		 auf <span class="Bold">Bestätigen</span> geklickt haben, zeigt 
+		 die Zelle in der Spalte <span class="Bold">State</span> den nächsten 
+		 Status an: <span class="Bold">geplant</span>.</p>
+		<p class="GUIControlDescr">Sie können auch mehrere Wartungsaufträge 
+		 im Boardlet auswählen und einem Verantwortlichen zuweisen, wenn 
+		 folgende Bedingungen erfüllt sind:</p>
+		<ul style="list-style: disc;">
+			<li><p class="ListBulletL1"><span style="font-weight: bold;">Bedingung 
+			 1</span>: Nur der jüngste Wartungsauftrag eines Wartungsplans 
+			 ist ausgewählt. <br/>
+			<span class="Bold">Beispiel</span>: Wenn Plan A die Aufträge 
+			 <span style="color: #0000ff; font-weight: bold;">X</span> 
+			 (10.05.2020), <span style="color: #0000ff; font-weight: bold;">Y</span> 
+			 (30.05.2020) und <span style="color: #0000ff; font-weight: bold;">Z</span> 
+			 (21.06.2020) hat, dann ist die Zuweisung nur für Auftrag <span style="color: #0000ff; font-weight: bold;">Z</span> möglich.</p></li>
+			<li><p class="ListBulletL1"><span class="Bold">Bedingung 2</span>: 
+			 Die markierten Aufträge haben dieselbe IH-Gruppe.</p></li>
+		</ul>
+		<p class="GUIControlDescr">Eine Fehlermeldung erscheint, wenn die 
+		 Mehrfachauswahl die Bedingungen für die Zuweisung an einen Verantwortlichen 
+		 nicht erfüllt.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="GUIControl"> </p>
+		<p class="GUIControl"><img src="../../../Bilder/assign_order_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+	<tr>
+		<td colspan="3"><p class="BodyText"></p><details><summary><span class="Bold">Beispiel 
+		 zur Veranschaulichung von Bedingung 1 und 2</span>:</summary> 
+		 <p></p>
+		<p class="BodyText" style="margin-top: -10pt;"><img src="../../../Bilder/tpm_orders_example_multiselection2_de.png" alt="" style="border: none;" border="0"/></p>
+		<table class="CalloutTab" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1">
+			<colgroup><col id="CalloutLetterWidth"/>
+			<col width="773"/>
+			</colgroup><tbody><tr>
+				<td><p class="CalloutLetter">A</p></td>
+				<td><p class="CalloutText">Jede Reihe steht für einen Wartungsauftrag.</p></td>
+			</tr>
+			<tr>
+				<td><p class="CalloutLetter">B</p></td>
+				<td><p class="CalloutText">Diese Spalte zeigt die Namen 
+				 der Wartungspläne, zu denen die Wartungsaufträge gehören.</p></td>
+			</tr>
+			<tr>
+				<td><p class="CalloutLetter">C</p></td>
+				<td><p class="CalloutText">Zwei Wartungsaufträge für denselben 
+				 Plan &quot;Ölwechsel&quot;, aber nur der jüngste Auftrag 
+				 ist ausgewählt.</p></td>
+			</tr>
+			<tr>
+				<td><p class="CalloutLetter">D</p></td>
+				<td><p class="CalloutText">Alle ausgewählten Wartungsaufträge 
+				 gehören zur selben IH-Gruppe &quot;IHGruppe1&quot;.</p></td>
+			</tr>
+			<tr>
+				<td><p class="CalloutLetter"> </p></td>
+				<td><p class="CalloutText">Ergebnis von B, C und D: Sie 
+				 können mit der Zuweisung <img src="../../../Bilder/Icons/account-plus.png" alt="" style="border: none;" border="0"/> fortfahren.</p></td>
+			</tr>
+		</tbody></table>
+		<p class="BodyText"></p></details><p></p></td>
+		
+	</tr>
+	<tr>
+		<td><p class="GUIControl"><a id="status_geplant"></a>geplant: 
+		 <a href="#NodeA" title="Zurück zu XXXXX"><img src="../../../assets/images/back.png" alt="" style="border: none;" border="0"/></a></p>
+		<p class="GUIControlDescr"><img src="../../../Bilder/status_assigned_de.png" alt="" style="border: none;" border="0"/><br/>
+		Der Auftrag wurde einem Benutzer zugewiesen und wartet auf Erledigung. 
+		 Der Name des <span style="text-decoration: underline; ">zugewiesenen 
+		 Benutzers</span> wird in der Spalte <span class="Bold">Responsible</span> 
+		 angezeigt.<br/>
+		Nachdem der <span style="text-decoration: underline; ">zugewiesene 
+		 Benutzer</span> das Symbol <img src="../../../Bilder/status_work_on_order.png" alt="" style="border: none;" border="0"/> 
+		 in der Boardlet-Menüleiste geklickt hat, zeigt die Zelle in der 
+		 Spalte <span class="Bold">State</span> den nächsten Status: <span class="Bold">übernommen</span>.</p>
+		<table class="TabelleBlank" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1">
+			<colgroup><col width="24"/>
+			<col/>
+			</colgroup><tbody><tr>
+				<td> </td>
+				<td><p class="Note">INFO:</p>
+				<p class="NoteText">Das Symbol <img src="../../../Bilder/status_work_on_order.png" alt="" style="border: none;" border="0"/> ist 
+				 für alle anderen Benutzer ausgeblendet, die diesen speziellen 
+				 Wartungsauftrag anklicken.</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="GUIControl"><a id="status_übernommen"></a>übernommen: 
+		 <a href="#NodeA" title="Zurück zu XXXXX"><img src="../../../assets/images/back.png" alt="" style="border: none;" border="0"/></a></p>
+		<p class="GUIControlDescr"><img src="../../../Bilder/status_work_on_de.png" alt="" style="border: none;" border="0"/><br/>
+		Der <span style="text-decoration: underline; ">zugewiesene Benutzer</span> 
+		 hat den Wartungsauftrag angenommen und arbeitet daran. </p>
+		<p class="GUIControlDescr">Durch Klick auf das Symbol <img src="../../../Bilder/Icons/check_black_18dp.png" alt="" style="border: none;" border="0"/> in der Boardlet-Menüleiste 
+		 öffnet sich der Dialog <span class="Bold">Order beenden</span> 
+		 in der Seitenleiste: ------&gt;&gt;</p>
+		<p class="GUIControlDescr">Nachdem Sie eine Beschreibung eingegeben 
+		 und auf <span class="Bold">Bestätigen</span> geklickt haben, zeigt 
+		 die Zelle in der Spalte <span class="Bold">State</span> den Status 
+		 an: <span class="Bold">erledigt</span>.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="GUIControl"> </p>
+		<p class="GUIControl"><img src="../../../Bilder/finish_order_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+	<tr>
+		<td><p class="GUIControl"><a id="status_erledigt"></a>erledigt: 
+		 <a href="#NodeA" title="Zurück zu XXXXX"><img src="../../../assets/images/back.png" alt="" style="border: none;" border="0"/></a></p>
+		<p class="GUIControlDescr"><img src="../../../Bilder/status_done_de.png" alt="" style="border: none;" border="0"/><br/>
+		Der Wartungsauftrag wurde vom <span style="text-decoration: underline; ">zugewiesenen 
+		 Benutzer</span> durchgeführt.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="GUIControl"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="GUIControl"><a id="status_abgelehnt"></a>abgelehnt: 
+		 <a href="#NodeA" title="Zurück zu XXXXX"><img src="../../../assets/images/back.png" alt="" style="border: none;" border="0"/></a></p>
+		<p class="GUIControlDescr"><img src="../../../Bilder/status_refused_de.png" alt="" style="border: none;" border="0"/><br/>
+		Solange der Wartungsauftrag im Status <span class="Bold">zu planen</span>, 
+		 <span class="Bold">geplant</span> oder <span class="Bold">übernommen</span> 
+		 vorliegt, kann der Wartungsauftrag vom Benutzer abgelehnt werden. 
+		 </p>
+		<p class="GUIControlDescr">Durch Klick auf das Symbol <img src="../../../Bilder/Icons/close_black_18dp.png" alt="" style="border: none;" border="0"/> in der Boardlet-Menüleiste 
+		 öffnet sich der Dialog <span class="Bold">Refuse Order</span> 
+		 in der Seitenleiste: ------&gt;&gt;</p>
+		<p class="GUIControlDescr">Nachdem Sie eine Beschreibung eingegeben 
+		 und auf <span class="Bold">Bestätigen</span> geklickt haben, zeigt 
+		 die Zelle in der Spalte <span class="Bold">State</span> den Status 
+		 an: <span class="Bold">abgelehnt</span>.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="GUIControl"> </p>
+		<p class="GUIControl"><img src="../../../Bilder/refuse_order_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 class="BodyText" data-condition="Others:Deutsch"><a id="Create_New_Maintenance_Order"></a><a id="Neuen_Wartungsauftrag_anlegen"></a>Neuen 
+ Wartungsauftrag anlegen</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/add_black_2_18dp.png" alt="" style="border: none;" border="0"/> in der 
+		 Menüleiste des Boardlet <span class="Bold">TPM Wartungsaufträge 
+		 </span>kann ein neuer Wartungsauftrag angelegt werden. Es erscheint 
+		 der Dialog <span class="Bold">Neuer Wartungsauftrag </span>in 
+		 der Seitenleiste: --&gt;&gt;</p>
+		<table class="ProcedureTab" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col/>
+			</colgroup><tbody><tr>
+				<td colspan="2"><p class="ph-ProcedureHeading">So liegen 
+				 Sie einen neuen Wartungsauftrag an:</p></td>
+				
+			</tr>
+			<tr>
+				<td id="StepNumSpacer"><p class="psn-ProcedureStepNum">1</p></td>
+				<td><p class="ps-ProcedureStep">Wählen Sie den Knoten, 
+				 für den der Auftrag angelegt wird.</p></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">2</p></td>
+				<td><p class="ps-ProcedureStep">Führen Sie einen der beiden 
+				 Schritte aus:</p>
+				<ul style="list-style: disc;">
+					<li><p class="ListBulletL1">Wenn es sich bei dem Auftrag 
+					 um einen einmaligen Wartungsauftrag handelt, dann 
+					 geben Sie einen <span class="Bold">Namen</span> für 
+					 den Auftrag ein. Das Ausrufezeichen <img src="../../../Bilder/Icons/mandatory_exclamation.png" alt="" style="border: none;" border="0"/> kennzeichnet 
+					 das Feld <span class="Bold">Name</span> als Pflichtfeld. 
+					 Ignorieren Sie für einmalige Wartungsaufträge die 
+					 Dropdown-Liste <span class="Bold">Wartungsplan</span>.</p></li>
+					<li><p class="ListBulletL1">Wenn Sie den Auftrag einem 
+					 Wartungsplan zuweisen wollen, dann wählen Sie den 
+					 gewünschten Plan aus der Dropdown-Liste <span class="Bold">Wartungsplan</span>. 
+					 Daraufhin wird das Feld <span class="Bold">Name</span> 
+					 ausgeblendet und ist kein Pflichtfeld mehr.<br/>
+					 </p></li>
+				</ul></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">3</p></td>
+				<td><p class="ps-ProcedureStep">Restliche Schritte:</p>
+				<ul style="list-style: disc;">
+					<li><p class="ListBulletL1">Legen Sie <span class="Bold">Plandatum</span> 
+					 und Uhrzeit fest.</p></li>
+					<li><p class="ListBulletL1">Wählen Sie eine oder mehrere 
+					 <span class="Bold">IH-Gruppen</span>. Die Namensliste 
+					 in der Dropdown-Liste <span class="Bold">Verwantwortlich</span> 
+					 passen sich automatisch an. Sie können jedoch nur 
+					 einen Verantwortlichen für den Wartungsauftrag auswählen.</p></li>
+					<li><p class="ListBulletL1">Legen Sie die Priorität 
+					 das Wartungsauftrags fest: hoch, mittel, niedrig.<br/>
+					 </p></li>
+				</ul></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">4</p></td>
+				<td><p class="ps-ProcedureStep">Wenn Sie fertig sind, klicken 
+				 Sie <span class="Bold">Bestätigen</span>.</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/TPM_OrderAdd_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="EditMaintenanceOrder"></a>Wartungsauftrag bearbeiten</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsauftrag im Boadlet <span class="Bold">TPM Wartungsaufträge</span> markiert, erscheinen 
+		 in der Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/edit_black_2_18dp.png" alt="" style="border: none;" border="0"/> können Sie 
+		 sich den Wartungsauftrag anzeigen lassen und bearbeiten. Es erscheint 
+		 der Dialog <span class="Bold">Wartungsauftrag bearbeiten</span> 
+		 in der Seitenleiste: ------&gt;&gt;</p>
+		<p class="BodyText">Siehe <a href="#Create_New_Maintenance_Order">Neuen 
+		 Wartungsauftrag anlegen</a>.</p></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/edit_maintenance_order_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Tätigkeitsverwaltung"></a>Tätigkeitsverwaltung: Tätigkeit 
+ hinzufügen/entfernen</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsauftrag im Boadlet <span class="Bold">TPM Wartungsaufträge</span> markiert, erscheinen 
+		 in der Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/list_add_black_18dp.png" alt="" style="border: none;" border="0"/> haben Sie 
+		 Zugriff auf die Tätigkeitsverwaltung des Wartungsauftrags. Der 
+		 Dialog <span class="Bold">Aktivitätsmanagement</span> erscheint 
+		 in der Seitenleiste, siehe Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span>: -------&gt;&gt;</p>
+		<p class="BodyText">Wenn der Wartungsauftrag auf einem Wartungsplan 
+		 beruht, für den die Tätigkeiten bereits festgelegt sind, dann 
+		 werden diese Tätigkeiten hier angezeigt.</p>
+		<p class="BodyText">Wenn Sie die Tätigkeitsverwaltung für einen 
+		 neu angelegten Wartungsauftrag geöffnet haben, dann ist noch keine 
+		 Checkbox ausgewählt.</p>
+		<p class="BodyText">Auf Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span> können 
+		 Sie die folgenden Aktionen ausführen:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText">Hinzufügen von Tätigkeiten zum Wartungsauftrag, 
+			 indem Sie die Checkboxen neben den erforderlichen Tätigkeiten 
+			 aktivieren.</p></li>
+			<li><p class="ListBulletL1">Entfernen von Tätigkeiten aus dem 
+			 Wartungsauftrag, indem Sie die Checkboxen neben den erforderlichen 
+			 Tätigkeiten deaktivieren.</p></li>
+		</ul>
+		<p class="BodyText">Eine Beschreibung von Reiter <span style="color: #ff0000;">[</span><span class="Bold">B</span><span style="color: #ff0000;">]</span> finden 
+		 Sie in <a href="#Activity_ManagementAddEdit">Tätigkeitsverwaltung: 
+		 Tätigkeit hinzufügen/bearbeiten</a> below.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/add_remove_activity_via_tpm_orders_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Activity_ManagementAddEdit"></a>Tätigkeitsverwaltung: 
+ Tätigkeitsbeschreibung hinzufügen</h6>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsauftrag im Boardlet <span class="Bold">TPM Plans</span> markiert, erscheinen oben in der 
+		 Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Mit Klick auf <img src="../../../Bilder/Icons/list_add_black_18dp.png" alt="" style="border: none;" border="0"/> und auf 
+		 den zweiten Reiter <span style="color: #ff0000;">[</span><span class="Bold">B</span><span style="color: #ff0000;">]</span> können 
+		 Sie den Dialog <span class="Bold">Aktivitätsbeschreibung hinzufügen 
+		 </span>in der Seitenleiste öffnen. Dort können Sie neue Tätigkeitsbeschreibungen 
+		 anlegen.</p>
+		<p class="BodyText">Die neuen Tätigkeitsbeschreibungen stehen danach 
+		 auf dem Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span> zur Auswahl bereit.</p>
+		<table class="ProcedureTab" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1">
+			<colgroup><col/>
+			<col/>
+			</colgroup><tbody><tr>
+				<td colspan="2"><p class="ph-ProcedureHeading">So fügen 
+				 Sie eine neue Tätigkeitsbeschreibung zur Liste der Tätigkeiten 
+				 hinzu: </p></td>
+				
+			</tr>
+			<tr>
+				<td id="StepNumSpacer"><p class="psn-ProcedureStepNum">1</p></td>
+				<td><p class="ps-ProcedureStep">Geben Sie eine <span class="Bold">Beschreibung</span> 
+				 für die neue Tätigkeit ein.</p></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">2</p></td>
+				<td><p class="ps-ProcedureStep">Weisen Sie die neue Tätigkeitsbeschreibung 
+				 einer <span class="Bold">Kategorie</span> zu.</p></td>
+			</tr>
+			<tr>
+				<td><p class="psn-ProcedureStepNum">3</p></td>
+				<td><p class="ps-ProcedureStep">Wenn Sie fertig sind, klicken 
+				 Sie <span class="Bold">Bestätigen</span>.</p>
+				<p class="ps-ProcedureStep">Die neue Tätigkeit steht nun 
+				 auf dem Reiter <span style="color: #ff0000;">[</span><span class="Bold">A</span><span style="color: #ff0000;">]</span> 
+				 zur Auswahl bereit.</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/add_activity_description_via_tpm_orders_de.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+
+
+
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Dateien_anhängen"></a>Dateien anhängen</h6>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Ist ein Wartungsauftrag im Boadlet <span class="Bold">TPM Wartungsaufträge</span> markiert, erscheinen 
+		 in der Boardlet-Menüleiste weitere Symbole.</p>
+		<p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/paper_clip.png" alt="" style="border: none;" border="0"/> können Sie 
+		 *.pdf Dateien, z.B. Wartungsberichte, an den markierten Wartungsauftrag 
+		 anhängen. Der Dialog <span class="Bold">Angehängte Dokumente</span> 
+		 erscheint in der Seitenleiste: ------&gt;&gt;</p>
+		<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1">
+			<colgroup><col width="100"/>
+			<col width="400"/>
+			</colgroup><tbody><tr class="t1Row">
+				<td><p class="TblBodyText"><span class="Bold">Datei(en) 
+				 auswählen</span></p></td>
+				<td><p class="TblBodyText">Öffnet einen Browser-spezifischen 
+				 Dialog zur Dateiauswahl. Sie können nun die *.pdf Dateien 
+				 auswählen, die Sie an den Wartungsauftrag anhängen wollen. 
+				 <br/>
+				Klicken Sie <span class="Bold">Bestätigen</span>, um die 
+				 ausgewählten Dateien hochzuladen. </p></td>
+			</tr>
+			<tr class="t2Row">
+				<td><p class="TblBodyText"><img src="../../../Bilder/Icons/trash_can_on_sidbar.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TblBodyText">Markiert eine Datei zur Löschung. 
+				 <br/>
+				Klicken Sie <span class="Bold">Bestätigen</span>, um die 
+				 Datei zu löschen.</p></td>
+			</tr>
+			<tr class="t1Row">
+				<td><p class="TblBodyText"><img src="../../../Bilder/Icons/download_arrow.png" alt="" style="border: none;" border="0"/></p></td>
+				<td><p class="TblBodyText">Öffnet eine *.pdf Datei in einem 
+				 neuen Browser-Tab oder <br/>
+				-Fenster.</p></td>
+			</tr>
+		</tbody></table></td>
+		<td><p class="BodyText">  </p></td>
+		<td><p class="BodyText"><span><img src="../../../Bilder/attached_files_de.png" alt="" style="border: none;" border="0"/></span></p></td>
+	</tr>
+</tbody></table>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Filter &quot;Aktuelle Person&quot;</h6>
+<p data-condition="Others:Deutsch">Im Boardlet <span style="font-weight: bold;">TPM Wartungsaufträge</span> 
+ kann nach dem Benutzer, der gerade angemeldet ist (&quot;aktuelle Person&quot;) 
+ gefiltert werden. Der Filter zeigt dem die jeweiligen Benutzer zugeordneten 
+ TPM Wartungsaufträge. Wenn die TPM Wartungsaufträge mehreren Personen 
+ zugeordnet sind, kann jede Person, die zu dieser Personengruppe gehört, 
+ die TPM Wartungsaufträge sehen.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Beim Ad-hoc-Druck übergibt das <span style="font-weight: bold;">TPM</span> 
+ <span style="font-weight: bold;">Wartungsaufträge</span> Boardlet den 
+ aktuellen Benutzer (Auftraggeber) an den Print Task.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Der zugehörige Boardlet-Filter sieht wie folgt aus:</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/Boardlet_filter_TPM_curent_user.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch">Der zugehörige Filtername lautet &lt;Aktuelle Person&gt;</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Die zusätzliche Option zum Dropdown-Filter &quot;Verantwortliche Person 
+ für Wartungsaufträge&quot; ermöglicht es, den Filter für die aktuelle 
+ Person festzulegen.</p>
+<p data-condition="Others:Deutsch">Das Housekeeping Script zur Aktualisierung der bestehenden Dashboards 
+ lautet:</p>
+<p class="TextCode" data-condition="Others:Deutsch">jobs/housekeeping/tpm_orders_boardlets/update_responsible_person_filter</p>
+<p data-condition="Others:Deutsch">Parameter:</p>
+<p class="TextCode" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" data-condition="Others:Deutsch">   &quot;DASHBOARD_ID&quot;: &quot;resource_id&quot; 
+ -- optional</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Parameterdefinition:</p>
+<p class="TextCode" data-condition="Others:Deutsch">NumberArrayWithComputedValues</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Beispiel-Parameterdefinition mit der Verwendung von </p>
+<p class="TextCode" data-condition="Others:Deutsch">person-dropdown-multiselect-component </p>
+<p data-condition="Others:Deutsch">als Editor.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Konfigurations-Beispiel/Definition of TPM Order Boardlet Filter:</p>
+<p class="TextCode" data-condition="Others:Deutsch">&quot;Order Responsible&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;definition&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;displayKey&quot;: 
+ &quot;tpm.maint-jobs-boardlet.persons&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;context&quot;: 
+ 1,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;category&quot;: 
+ &quot;filters&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;parameterType&quot;: 
+ &quot;NumberArrayWithComputedValues&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;value&quot;: 
+ [],</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;editor&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;component&quot;: 
+ &quot;person-dropdown-multiselect-component&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;parameters&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;placeholder&quot;: 
+ &quot;tpm.maint-jobs-boardlet.persons&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;translatePlaceholder&quot;: 
+ true,</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;hasIcon&quot;: 
+ true,</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;displayProperty&quot;: 
+ &quot;full_name&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">          &quot;query&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &quot;resources&quot;: 
+ [</p>
+<p class="TextCode" data-condition="Others:Deutsch">              {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;resource&quot;: 
+ &quot;bas_persons_active&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;as&quot;: 
+ &quot;p&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">              },</p>
+<p class="TextCode" data-condition="Others:Deutsch">              {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;resource&quot;: 
+ &quot;tpm_group_person_rel&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;as&quot;: 
+ &quot;g&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">              }</p>
+<p class="TextCode" data-condition="Others:Deutsch">            ],</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &quot;relations&quot;: 
+ [</p>
+<p class="TextCode" data-condition="Others:Deutsch">              {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;src&quot;: 
+ &quot;p&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;dst&quot;: 
+ &quot;g&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;how&quot;: 
+ &quot;i&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;on&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                  &quot;left&quot;: 
+ &quot;p.id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                  &quot;op&quot;: 
+ &quot;EQ&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                  &quot;right&quot;: 
+ &quot;g.person_id&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                }</p>
+<p class="TextCode" data-condition="Others:Deutsch">              }</p>
+<p class="TextCode" data-condition="Others:Deutsch">            ],</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &quot;fields&quot;: 
+ [</p>
+<p class="TextCode" data-condition="Others:Deutsch">              &quot;p.id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">              &quot;p.full_name&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">            ],</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &quot;filter&quot;: 
+ [</p>
+<p class="TextCode" data-condition="Others:Deutsch">              {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;left&quot;: 
+ &quot;g.person_id&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &quot;op&quot;: 
+ &quot;NN&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">              }</p>
+<p class="TextCode" data-condition="Others:Deutsch">            ],</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &quot;sort&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">              &quot;field&quot;: 
+ &quot;p.full_name&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">            },</p>
+<p class="TextCode" data-condition="Others:Deutsch">            &quot;distinct&quot;: 
+ true</p>
+<p class="TextCode" data-condition="Others:Deutsch">          }</p>
+<p class="TextCode" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" data-condition="Others:Deutsch">      },</p>
+<p class="TextCode" data-condition="Others:Deutsch">      &quot;filter&quot;: 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;model&quot;: 
+ &quot;bas_persons&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">  },</p>
+<p data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Entfernen von verantwortlichen Personen aus den TPM 
+ Wartungstätigkeiten </h6>
+<p data-condition="Others:Deutsch">Wenn die verantwortliche Person aus dem Instandhaltungsauftrag gestrichen 
+ wird, wird diese Person auch aus jeder aktiven Instandhaltungstätigkeit 
+ (nicht abgelehnt und nicht abgeschlossen) gestrichen.  Der Status 
+ dieser TPM-Aktivitäten wird ebenfalls zurückgesetzt. Der Status der betroffenen 
+ Tätigkeiten wird auf &quot;zuzuordnen&quot; geändert.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/TPM_responsible person.png" alt="" style="border: none;" border="0"/></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Wie man die Dateien mit dem TPM-Boardlet verknüpft</h6>
+<p data-condition="Others:Deutsch">Das Boardlet <span style="font-weight: bold;">TPM-Pläne</span> (siehe 
+ <a href="TPM_Plans.htm">TPM Plans</a>) verfügt über die Funktion &quot;Dateien 
+ verknüpfen&quot;, mit der der Benutzer Dateien aus dem TPM-Verzeichnis 
+ mit den jeweiligen TPM-Plänen verknüpfen und auch wieder entknüpfen kann. 
+ Diese Funktion stellt somit eine Möglichkeit zur Auswahl von Dateien/Verzeichnissen 
+ aus einem speziellen tpm-Dokumentenverzeichnis dar.</p>
+<p data-condition="Others:Deutsch">Beim Klicken auf <span style="font-weight: bold; color: #ff0000;">(1)</span> 
+ öffnet sich die Seitenleiste &quot;Dateien verknüpfen&quot;. Hier kann 
+ der Benutzer im oberen Teil <span style="font-weight: bold; color: #ff0000;">(2)</span> 
+ durch die verfügbaren Dateien navigieren und die Dateien auswählen, die 
+ verknüpft/entknüpft werden sollen.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Im unteren Teil der Seitenleiste wird Folgendes angezeigt:</p>
+<p data-condition="Others:Deutsch"><span style="font-weight: bold; color: #ff0000;">(3) </span>Die verknüpften, 
+ aber im Dateisystem fehlenden Dateien (graue Schriftfarbe).</p>
+<p data-condition="Others:Deutsch"><span style="font-weight: bold; color: #ff0000;">(4) </span>Die zu <span style="font-weight: bold;">ent</span>knüpfenden Dateien (rote Schriftfarbe).</p>
+<p data-condition="Others:Deutsch"><span style="font-weight: bold; color: #ff0000;">(5) </span>Die Liste 
+ der bereits verknüpften Dateien (normale Schriftfarbe).</p>
+<p data-condition="Others:Deutsch"><span style="font-weight: bold; color: #ff0000;">(6) </span>Die Liste 
+ der zu verknüpfenden Dateien (grüne Schriftfarbe).</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/Dateien_TPM_verknüpfen_3.png" alt="" style="border: none;" border="0"/></p>
+<p data-condition="Others:Deutsch">Der Benutzer kann auch eine Datei in einer neuen Registerkarte öffnen 
+ und die Beschreibung für verknüpfte Dateien festlegen (die Beschreibung 
+ wird immer der TPM-Datei zugewiesen). Wenn der Benutzer eine Datei verknüpft, 
+ der bereits eine Beschreibung zugewiesen wurde, enthält die Datei diese 
+ Beschreibung im Beschreibungsfeld.</p>
+<p data-condition="Others:Deutsch">Nach dem Klicken auf die Schaltfläche &quot;Absenden&quot; werden alle 
+ Änderungen gespeichert.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"> </p>
+<h5 data-condition="Others:Deutsch">Beachten Sie außerdem</h5>
+<p data-condition="Others:Deutsch">Der Benutzer muss über die Berechtigung &quot;<span style="font-weight: bold;">edit</span>&quot; 
+ für die Datenquellen<span style="font-weight: bold;"> </span></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p><span style="font-weight: bold;">tpm_linked_files</span> und 
+	 </p></li>
+	<li><p><span style="font-weight: bold;">tpm_file_plan_rel</span> </p></li>
+</ul>
+<p data-condition="Others:Deutsch">verfügen, um Dateien verlinken oder die Verlinkung aufheben oder deren 
+ Beschreibung ändern zu können. Wenn &quot;<span style="font-weight: bold;">edit</span>&quot;-Rechte 
+ fehlen, der Benutzer aber &quot;<span style="font-weight: bold;">view</span>&quot;-Rechte 
+ auf<span style="font-weight: bold;"> tpm_linked_files</span>- und <span style="font-weight: bold;">tpm_file_plan_rel</span>-Datenquellen hat, 
+ kann er nur verknüpfte Dateien und Dateibeschreibungen ansehen und Dateien 
+ in einem neuen Tab öffnen.</p>
+<p data-condition="Others:Deutsch">In der Dateiliste in der Seitenleiste erscheint bei fehlenden Dateien 
+ ein Hinweis.</p>
+<p class="Ü3_Search" data-condition="Others:Deutsch"> </p>
+<h4 class="Ü3_Search" data-condition="Others:Deutsch">Notwendige Parametrierung</h4>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p><span>Das &quot;TPM-Verzeichnis&quot;, 
+	 in dem die TPM-Dateien gespeichert werden und auf das in der Webanwendung 
+	 zugegriffen werden kann, kann über die Eigenschaft </span><span style="font-weight: bold;">tpmrefsPath</span><span> 
+	 konfiguriert werden. </span></p></li>
+	<li style="font-family: &#39;Palatino Linotype&#39;, serif;"><p><span style="font-family: &#39;Palatino Linotype&#39;, serif;">Diese 
+	 sollte in der Konfigurationsdatei </span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+													 font-weight: bold;">sapieng.properties</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;"> angegeben werden. 
+	 Wenn diese Eigenschaft nicht angegeben wird, wird das Standardverzeichnis 
+	 &quot;</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+						 font-weight: bold;">tpmrefs</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;">&quot; 
+	 im Verzeichnis &quot;</span><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+										 font-weight: bold;">shared</span><span style="font-family: &#39;Palatino Linotype&#39;, serif;">&quot; erstellt.</span></p></li>
+</ul>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Abrufen von Plan-Dateien</h6>
+<p data-condition="Others:Deutsch">Es ist möglich, die verlinkten Dateien des entsprechenden Plans im <span style="font-weight: bold;">TPM</span> <span style="font-weight: bold;">Wartungsaufträge</span> 
+ Boardlet zu sehen. Dies gilt für TPM-Benutzer, die nur TPM Wartungsaufträge 
+ und TPM Aktivitäten verwenden.</p>
+<p data-condition="Others:Deutsch">Dateiverknüpfungen (verlinkte Dateien) in TPM-Plänen gehören zu jedem 
+ TPM Wartungsauftrag. Jedoch ist es nicht notwendig, die Dateien mit jedem 
+ Auftrag zu verknüpfen.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beachten Sie zusätzlich folgende Informationen:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p>Die verknüpften Dateien werden aufgelistet und können schreibgeschützt geöffnet 
+	 werden. Dies ist in der Seitenleiste möglich, die sich öffnet, wenn 
+	 angehängte Dateien angezeigt werden.</p></li>
+	<li><p>Es kann die Beschreibung einer Datei eingesehen werden (schreibgeschützt).</p></li>
+	<li><p>Es werden die gleichen Informationen angezeigt (schreibgeschützt 
+	 und im gleichen Stil) wie bei der Anzeige der verknüpften Dateien 
+	 für einen Plan.</p></li>
+	<li><p>Die Spalte im <span style="font-weight: bold;">TPM</span> <span style="font-weight: bold;">Wartungsaufträge</span> Boardlet heißt 
+	 &quot;Links/Anhänge&quot;.</p></li>
+	<li><p>In der entsprechenden Zelle des <span style="font-weight: bold;">TPM</span> 
+	 <span style="font-weight: bold;">Wartungsaufträge</span> Boardlets 
+	 steht z.B. &quot;3 Datei(en) angehängt, 2 Datei(en) verlinkt&quot;.</p></li>
+	<li><p>Die Spalte TPM-Pläne heißt &quot;Links&quot;.</p></li>
+	<li><p>Der entsprechende Zelleninhalt ist bei &quot;2 Datei(en) verlinkt&quot;.</p></li>
+</ul>
+<p data-condition="Others:Deutsch">Der Screenshot zeigt, dass der Zugriff auf die mit dem Plan verknüpften 
+ Dateien aus dem Auftrag heraus möglich ist.</p>
+<p data-condition="Others:Deutsch"><img src="../../../Bilder/TPM_abruf_plan_dateien.png" alt="" style="border: none;" border="0"/></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Deaktivieren des manuellen Änderns des Auftragsstatus</h6>
+<p data-condition="Others:Deutsch">Es ist nicht möglich, den Status eines TPM Wartungsauftrags direkt (manuell) 
+ über das TPM Wartungsaufträge Boardlet zu ändern. Falls der Auftrag abgelehnt 
+ wird, ist dies dennoch möglich. Der Status eines TPM Wartungsauftrags 
+ basiert auf dem Status der zugehörigen Instandhaltungsaktivitäten.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Außerdem wirkt sich das Ändern des Pools der verantwortlichen Personen 
+ eines Auftrags nicht auf den Status des Auftrags aus. Das TPM Wartungsaufträge 
+ Boardlet wird regelmäßig aktualisiert, damit neue Zustände angezeigt werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Priorität von TPM Status</h6>
+<p data-condition="Others:Deutsch">Der Status des TPM Wartungsauftrags basiert auf dem Status seiner TPM 
+ Maintenance Activities (Instandhaltungstätigkeiten). Wenn eine Aktivität 
+ eines Auftrages einen bestimmten Zustand hat, hat der Auftrag den gleichen 
+ Zustand (ein Auftrag hat mehrere Aktivitäten mit unterschiedlichen Zuständen). 
+ </p>
+<p data-condition="Others:Deutsch">Benutzer können Aktivitäten zugewiesen werden, ohne dass der Status 
+ der Aktivität auf &quot;<span style="font-weight: bold;">in</span> <span style="font-weight: bold;">Bearbeitung</span>&quot; wechselt.</p>
+<p data-condition="Others:Deutsch">Es gibt folgende Prioritäten von TPM Status:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="AufzählungList1">&quot;zu planen&quot; --&gt; &quot;zuzuordnen&quot;</p></li>
+	<li><p class="AufzählungList1">&quot;übernommen&quot; --&gt; &quot;in 
+	 Bearbeitung&quot;</p></li>
+	<li><p class="AufzählungList1">&quot;geplant&quot; --&gt; &quot;zugewiesen&quot;</p></li>
+	<li><p class="AufzählungList1">&quot;abgelehnt&quot; --&gt; &quot;abgelehnt&quot;</p></li>
+	<li><p class="AufzählungList1">&quot;erledigt&quot; --&gt; &quot;Erledigt&quot;</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Es gilt:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="AufzählungList1">Wenn mindestens eine Tätigkeit den Status 
+	 &quot;<span style="font-weight: bold;">zuzuordnen</span>&quot; hat, 
+	 hat der Auftrag auch den Status &quot;<span style="font-weight: bold;">zuzuordnen</span>&quot;.</p></li>
+	<li><p class="AufzählungList1">Wenn keine Tätigkeit den Status &quot;<span style="font-weight: bold;">zuzuordnen</span>&quot; hat und mindestens 
+	 eine Tätigkeit den Status &quot;<span style="font-weight: bold;">in</span> 
+	 <span style="font-weight: bold;">Bearbeitung</span>&quot; hat, hat 
+	 der Auftrag den Status &quot;<span style="font-weight: bold;">in</span> 
+	 <span style="font-weight: bold;">Bearbeitung</span>&quot;.</p></li>
+	<li><p class="AufzählungList1">Wenn jeder Vorgang den Status &quot;<span style="font-weight: bold;">zuordnen</span>&quot; hat, hat der Auftrag 
+	 den Status &quot;<span style="font-weight: bold;">zuzuordnen</span>&quot;.</p></li>
+	<li><p class="AufzählungList1">Wenn ein Vorgang eines Auftrags den 
+	 Status &quot;<span style="font-weight: bold;">abgelehnt</span>&quot; 
+	 hat und alle anderen haben den Status &quot;<span style="font-weight: bold;">erledigt</span>&quot;, 
+	 dann hat der Auftrag den Status&quot;<span style="font-weight: bold;">abgelehnt</span>&quot;.</p></li>
+	<li><p class="AufzählungList1">Wenn alle Tätigkeiten eines Auftrags 
+	 den Status &quot;<span style="font-weight: bold;">erledigt</span>&quot; 
+	 hat, hat der Auftrag ebenfalls den Status&quot;<span style="font-weight: bold;">erledigt</span>&quot;.</p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Wartungsaufträge</span> 
+ stehen folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Selektierte Knoten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier können Sie nach einer Knoten ID oder mehrerer 
+ Knoten IDs filtern. Geben Sie die Knoten IDs als Komma-separierte Liste 
+ ein.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Überfällig:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ nur Wartungsaufträge angezeigt werden sollen, die bereits überfällig sind 
+ oder alle.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Wartungsauftrag:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann auf den Namen eines Wartungsauftrags 
+ gefiltert werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zustand:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann ein Zustand ausgewählt 
+ werden, in dem sich die angezeigten Wartungsaufträge befinden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Priorität:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann die Priorität 
+ der angezeigten Wartungsaufträge ausgewählt werden. </p>
+<p class="GUIControl" data-condition="Others:Deutsch">Auslöser:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann ausgewählt werden, 
+ was den Wartungsauftrag ausgelöst hat.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Verantw. für Wartungsauftrag:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann ein Verantwortlicher 
+ für den Wartungsauftrag selektiert werden, auf den gefiltert wird.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Verantw. für Tätigkeiten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann ein Verantwortlicher 
+ für Tätigkeiten des Wartungsauftrags selektiert werden, auf den gefiltert 
+ wird.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Zugeordnete IH-Gruppe:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann eine IH-Gruppe 
+ selektiert werden, die dem Wartungsauftrag zugeordnet ist.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Plan-id:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann auf die ID eines Wartungsauftrags 
+ gefiltert werden.</p>
+
+
+
+
+
+
+
+
+
+
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Tätigkeiten werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Tätigkeiten</span> angelegt.</p></li>
+	<li><p class="ListBulletL1">Typische Begründungen werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Tätigkeiten</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Bez. 
+	 Tätigkeit</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Begründung</span> angelegt.</p></li>
+	<li><p class="ListBulletL1">Komponenten werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">Komponentenarten</span> angelegt und ein Knotenbezug 
+	 hergestellt.</p></li>
+	<li><p class="ListBulletL1">TPM-Gruppen werden im <span class="Bold">LC2</span> 
+	 unter <span class="Bold">Werksverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+	 <span class="Bold">TPM-Gruppen</span> angelegt. Hier können auch Personen 
+	 den Gruppen zugeordnet werden.</p></li>
+</ul>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">overdue</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeSelection</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">selectedMaintOrder</p></td>
+		<td><p class="TabellenInhalt">Number</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">selectedMaintPlan</p></td>
+		<td><p class="TabellenInhalt">Number</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">statesList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">prioritiesList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">triggersList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">personsList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">actPersonsList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">groupsList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

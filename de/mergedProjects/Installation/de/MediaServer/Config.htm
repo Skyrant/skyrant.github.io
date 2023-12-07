@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "9.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Software_Documentation_MediaServer_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Konfigurationsdateien</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Konfigurationsdateien">
+        <span>Konfigurationsdateien</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Konfigurationsdateien</h1>
+<h2 data-condition="Others:Deutsch"><a name="Serverkonfiguration__Server.cfg_" id="Serverkonfiguration__Server.cfg_"></a>Serverkonfiguration (Server.cfg)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Common]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Port=1122</p>
+<p class="TextCode" data-condition="Others:Deutsch">MediaClientsConfigPath=/home/ap/supvis/mediaserver/mediaclients</p>
+<p class="TextCode" data-condition="Others:Deutsch">WavFilesPath=C:\RL-BRASIL\WavFiles</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Database]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Connect=TLEGO</p>
+<p class="TextCode" data-condition="Others:Deutsch">User=legato_write</p>
+<p class="TextCode" data-condition="Others:Deutsch">Password=F01D2092E5071540C91D8FF6FB46B4A49C7847F391684A37BB74FB93</p>
+<p class="TextCode" data-condition="Others:Deutsch">ProjectId=10000</p>
+<p class="TextCode" data-condition="Others:Deutsch">SQLMsgStmt=&quot;select a.ID, a.TIME_START, a.AL_TYPE, m.NODE, m.SYMBOL_1 as SYMBOL, l.NAME_0 as NODENAME from AL_PENDING a, AL_MESSAGE_ARCHIVE m, L_NODES l where a.TIME_END is NULL and a.AL_TYPE in(11, 12) and m.ID = a.MESSAGE and l.ID = m.NODE order by a.TIME_START&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Konfigurationsdatei sind allgemeine Einstellungen (Abschnitt [Common]) und Datenbankeinstellungen (Abschnitt [Database]) enthalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [Common]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Port (Listenport des Servers für eingehende TCP Verbindungen der Clients)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">MediaClientsConfigPath (Konfigurationspfad der Clients)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">WavFilesPath (Pfad der WAV Dateien, in dem sich die WAV Dateien auf den Windows-Clients befinden)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [Database]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Connect (Name der Legato Datenbank)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">User (Datenbankbenutzer)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Password (verschlüsseltes Datenbankpasswort)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ProjectId (Kennung des Medienservers für den Aufruf von P_SYNC_SYSMODULE)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">SQLMsgStmt (SQL Statement zum Selektieren der Meldungen)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Konfiguration_der_Meldearten__AlTypes.cfg_" id="Konfiguration_der_Meldearten__AlTypes.cfg_"></a>Konfiguration der Meldearten (AlTypes.cfg)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Config]</p>
+<p class="TextCode" data-condition="Others:Deutsch">AlTypesCnt=2</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[AlType1]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Type=11</p>
+<p class="TextCode" data-condition="Others:Deutsch">BitNo=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">Melody=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">Expression=&quot;\D*\d+(.*)?&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[AlType2]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Type=12</p>
+<p class="TextCode" data-condition="Others:Deutsch">BitNo=0</p>
+<p class="TextCode" data-condition="Others:Deutsch">Melody=2</p>
+<p class="TextCode" data-condition="Others:Deutsch">Expression=&quot;\D*\d+(.*)?&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Konfigurationsdatei befindet sich die Konfiguration der Meldearten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [Config]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">AlTypesCnt (Anzahl der Meldearten)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitte [</b>AlType1, AlType2, …<b>]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Type (Meldeart)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">BitNo (BitNummer, die in der Statusvariablen gesetzt wird, die Zählung beginnt mit 0)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Expression (Regular Expression um die Taktnummer aus der Symbolik zu ermitteln)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Melody (0 = keine Melodie abspielen (default), 1 = langsame Melodie abspielen, 2 = schnelle Melodie abspielen)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Konfiguration_der_Montagelinien__Lines.cfg_" id="Konfiguration_der_Montagelinien__Lines.cfg_"></a>Konfiguration der Montagelinien (Lines.cfg)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Common]</p>
+<p class="TextCode" data-condition="Others:Deutsch">LinesCnt=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">Line1Name=Montagem</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Line1]</p>
+<p class="TextCode" data-condition="Others:Deutsch">StartScript=</p>
+<p class="TextCode" data-condition="Others:Deutsch">ShutdownScript=</p>
+<p class="TextCode" data-condition="Others:Deutsch">StatusVarsConnectionId=1303</p>
+<p class="TextCode" data-condition="Others:Deutsch">SectionsCnt=5</p>
+<p class="TextCode" data-condition="Others:Deutsch">Section1Name=Braco 1</p>
+<p class="TextCode" data-condition="Others:Deutsch">Section2Name=Braco 2</p>
+<p class="TextCode" data-condition="Others:Deutsch">Section3Name=Braco 3</p>
+<p class="TextCode" data-condition="Others:Deutsch">Section4Name=Braco 4</p>
+<p class="TextCode" data-condition="Others:Deutsch">Section5Name=Braco 5</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Konfigurationsdatei befindet sich die Konfiguration der Montagelinien.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [Common]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">LinesCnt (Anzahl der Montagelinien)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Line1Name, Line2Name … (Namen der Montagelinien)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitte [Line1, Line2, …]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">StartScript (Name des Scripts, das ausgeführt wird, wenn der Produktionsstatus der Montagelinie von 0 auf 1 wechselt.)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">ShutdownScript (Name des Scripts, das ausgeführt wird, wenn der Produktionsstatus der Montagelinie von 1 auf 0 wechselt.)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">StatusVarsConnectionId (VerbindungsId unter der das Konfigurationsprogramm MediaConfig die Statusvariablen anlegt)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">SectionsCnt (Anzahl der Bandabschnitte der Montagelinie)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Section1Name, Section2Name … (Namen der Bandabschnitte der Montagelinie)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Konfiguration_der_Bandabschnitte__Sections.cfg_" id="Konfiguration_der_Bandabschnitte__Sections.cfg_"></a>Konfiguration der Bandabschnitte (Sections.cfg)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Line1_Section1]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Node=2048</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Line1_Section2]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Node=2049</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Line1_Section3]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Node=2050</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Line1_Section4]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Node=2051</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Line1_Section5]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Node=2052</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Konfigurationsdatei befindet sich die Konfiguration der Bandabschnitte.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitte [</b>Line<b>X</b>_Section<b>Y]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Node (Id des Fertigungsknotens des Bandabschnitts)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Konfiguration_der_Melodien__WavFiles.ini_" id="Konfiguration_der_Melodien__WavFiles.ini_"></a>Konfiguration der Melodien (WavFiles.ini)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Config]</p>
+<p class="TextCode" data-condition="Others:Deutsch">FileCnt = 34</p>
+<p class="TextCode" data-condition="Others:Deutsch">1 = &#39;Melo 1&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">2 = &#39;Take 5&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">3 = &#39;Lolipop&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">4 = &#39;Pink Panther&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">5 = &#39;Entertainer&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">6 = &#39;Auld Lang Syne&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">7 = &#39;Bill Bailey&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">8 = &#39;Clementine&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">9 = &#39;Go tell it on the mountains&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">10 = &#39;Home on the Range&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">11 = &#39;John Browns Body&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">12 = &#39;Oh Susanna&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">13 = &#39;Yellow Rose of Texas&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">14 = &#39;Oh when the Saints&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">15 = &#39;Glory, glory Hallelujah&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">16 = &#39;Melodie 16&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">17 = &#39;Melodie 17&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">18 = &#39;Down by the Riverside&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">19 = &#39;Melodie 19&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">20 = &#39;Melodie 20&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">21 = &#39;Melodie 21&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">22 = &#39;Melodie 22&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">23 = &#39;Melodie 23&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">24 = &#39;Melodie 24&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">25 = &#39;Pause: Gong 1&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">26 = &#39;Pause: Gong 2&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">27 = &#39;Pause: Vierklang&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">28 = &#39;Pause: Jingle&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">29 = &#39;Pause: Ole, ole ...&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">30 = &#39;Bilder einer Ausstellung&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">31 = &#39;Menuett A-Dur&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">32 = &#39;An die Freude&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">33 = &#39;Auf in den Kampf&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch">34 = &#39;Wilhelm Tell&#39;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Konfigurationsdatei befindet sich die Konfiguration der Melodien.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [</b>Config<b>]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">FileCnt (Anzahl der Melodien (WAV-Files))</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">1 … N (Bezeichnung der Melodie)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Dateiname einer Wavdatei setzt sich folgendermaßen zusammen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">M&lt;NR&gt;&lt;1/2&gt;.wav</p>
+<p class="TextCode" data-condition="Others:Deutsch">|  |   |     |</p>
+<p class="TextCode" data-condition="Others:Deutsch">|  |   |     |-------- Extension (.wav)</p>
+<p class="TextCode" data-condition="Others:Deutsch">|  |   |</p>
+<p class="TextCode" data-condition="Others:Deutsch">|  |   +-------------- 1 für Melodie langsam, 2 für Melodie schnell</p>
+<p class="TextCode" data-condition="Others:Deutsch">|  |</p>
+<p class="TextCode" data-condition="Others:Deutsch">|  +------------------ dreistellige Nummer der Melodie rechtsbündig (ggf. links</p>
+<p class="TextCode" data-condition="Others:Deutsch">|                      mit Nullen aufgefüllt)</p>
+<p class="TextCode" data-condition="Others:Deutsch">+--------------------- fixes Prefix M</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Zuordnung_der_Melodien__WavFilesRel.ini_" id="Zuordnung_der_Melodien__WavFilesRel.ini_"></a>Zuordnung der Melodien (WavFilesRel.ini)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Config]</p>
+<p class="TextCode" data-condition="Others:Deutsch">1.111=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">1.112=2</p>
+<p class="TextCode" data-condition="Others:Deutsch">2.111=11</p>
+<p class="TextCode" data-condition="Others:Deutsch">2.112=12</p>
+<p class="TextCode" data-condition="Others:Deutsch">1.121=11</p>
+<p class="TextCode" data-condition="Others:Deutsch">1.113=18</p>
+<p class="TextCode" data-condition="Others:Deutsch">1.122=12</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In dieser Konfigurationsdatei befindet sich die Zuordnung der Melodien zu Gruppen der Montagelinien. Die Einträge in dieser Datei werden vom Konfigurationsprogramm MediaConfig generiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [</b>Config<b>]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">X.Y=Z (X = Montageline, Y = Gruppe, Z = Nummer der Melodie))</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a name="Konfiguration_Client___COMPUTERNAME_.cfg_" id="Konfiguration_Client___COMPUTERNAME_.cfg_"></a>Konfiguration Client (&lt;COMPUTERNAME&gt;.cfg)</h2>
+<p class="TextCode" data-condition="Others:Deutsch">[Config]</p>
+<p class="TextCode" data-condition="Others:Deutsch">GroupCnt=2</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">Line1=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">Group1=111</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">Line2=1</p>
+<p class="TextCode" data-condition="Others:Deutsch">Group2=112</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Verzeichnis MediaClients ist für jede Anzeige eine Konfigurationsdatei (Name = Computername der Anzeige) abgelegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Einträge haben folgende Bedeutung:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Abschnitt [</b>Config<b>]</b></p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">GroupCnt (Anzahl der Gruppen, für die Daten benötigt werden)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">LineN (Nummer der Montagelinie von GroupN)</p>
+
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">GroupN (Bezeichnung der Gruppe)</p>
+
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

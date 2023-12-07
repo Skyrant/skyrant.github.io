@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Configure Tomcat to Run as a Service</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Configure Tomcat to Run as a Service">
+        <span>Configure Tomcat to Run as a Service</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Configure Tomcat to Run as a Service</h1>
+<h2 data-condition="Others:Englisch"><a id="Create_Script"></a>Create Script</h2>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">We will now see how to run 
+ Tomcat as a service and create a simple Start/Stop/Restart script, as 
+ well as to start Tomcat at boot.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">Change to the /etc/init.d 
+ directory and create a script called &#39;tomcat&#39; as shown below.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share]# cd /etc/init.d  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost init.d]# vi tomcat</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">And here is the script we will use.</p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor">#!/bin/bash</span></p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor"># description: Tomcat Start Stop Restart</span></p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor"># processname: tomcat</span></p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="preprocessor"># chkconfig: 234 20 80</span></p>
+<p class="TextCode" data-condition="Others:Englisch">JAVA_HOME=/usr/java/jdk1.7.0_45</p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">export</span> JAVA_HOME</p>
+<p class="TextCode" data-condition="Others:Englisch">PATH=$JAVA_HOME/bin:$PATH</p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">export</span> PATH</p>
+<p class="TextCode" data-condition="Others:Englisch">CATALINA_HOME=/usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="TextCode" data-condition="Others:Englisch"><span class="keyword">case</span> $1 <span class="keyword">in</span></p>
+<p class="TextCode" data-condition="Others:Englisch">start)</p>
+<p class="TextCode" data-condition="Others:Englisch">sh $CATALINA_HOME/bin/startup.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">;;</p>
+<p class="TextCode" data-condition="Others:Englisch">stop)</p>
+<p class="TextCode" data-condition="Others:Englisch">sh $CATALINA_HOME/bin/shutdown.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">;;</p>
+<p class="TextCode" data-condition="Others:Englisch">restart)</p>
+<p class="TextCode" data-condition="Others:Englisch">sh $CATALINA_HOME/bin/shutdown.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">sh $CATALINA_HOME/bin/startup.sh</p>
+<p class="TextCode" data-condition="Others:Englisch">;;</p>
+<p class="TextCode" data-condition="Others:Englisch">esac</p>
+<p class="TextCode" data-condition="Others:Englisch">exit 0</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">The above script is simple 
+ and contains all of the basic elements you will need to get going.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">As you can see, we are simply 
+ calling the startup.sh and shutdown.sh scripts located in the Tomcat bin 
+ directory (/usr/share/apache-tomcat-7.0.42/bin).</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">You can adjust your script 
+ according to your needs. CATALINA_HOME is the Tomcat home directory (/usr/share/apache-tomcat-7.0.42)</p>
+<h2 data-condition="Others:Englisch"><a id="Set_Permissions"></a>Set Permissions</h2>
+<p class="BodyText" data-condition="Others:Englisch">Now, set the permissions for your script to make it 
+ executable:</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost init.d]# chmod 755 tomcat</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">We now use the chkconfig utility to have Tomcat start 
+ at boot time. In my script above, I am using chkconfig: 234 20 80. 2345 
+ are the run levels and 20 and 80 are the stop and start priorities respectively. 
+ You can adjust as needed.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost init.d]# chkconfig --add tomcat</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost init.d]# chkconfig --level 2345 tomcat on</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">Verify it:</p>
+<p class="TextCode" style="margin-right: 14.15pt;" data-condition="Others:Englisch">[root@localhost init.d]# chkconfig --list tomcat</p>
+<p class="TextCode" style="margin-right: 14.15pt;" data-condition="Others:Englisch">tomcat          0:off   1:off   2:on    3:on    4:on    5:off   6:off</p>
+<p class="TextCode" style="margin-right: 14.15pt;" data-condition="Others:Englisch"> </p>
+<h2 data-condition="Others:Englisch"><a id="Test_the_Script"></a>Test the Script</h2>
+<h3 data-condition="Others:Englisch"><a id="Start_Tomcat:"></a>Start Tomcat:</h3>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]# service tomcat start</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_BASE:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_HOME:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_TMPDIR: /usr/share/apache-tomcat-7.0.42/temp</p>
+<p class="TextCode" data-condition="Others:Englisch">Using JRE_HOME:        /usr/java/jdk1.7.0_45</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CLASSPATH:       /usr/share/apache-tomcat-7.0.42/bin/bootstrap.jar:/usr/share/apache-tomcat-7.0.42/bin/tomcat-juli.jar</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<h3 data-condition="Others:Englisch"><a id="Stop_Tomcat:"></a>Stop Tomcat:</h3>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]# service tomcat stop</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_BASE:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_HOME:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_TMPDIR: /usr/share/apache-tomcat-7.0.42/temp</p>
+<p class="TextCode" data-condition="Others:Englisch">Using JRE_HOME:        /usr/java/jdk1.7.0_45</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CLASSPATH:       /usr/share/apache-tomcat-7.0.42/bin/bootstrap.jar:/usr/share/apache-tomcat-7.0.42/bin/tomcat-juli.jar</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<h3 data-condition="Others:Englisch"><a id="Restarting_Tomcat__Must_be_started_first_:"></a>Restarting 
+ Tomcat (Must be started first):</h3>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]# service tomcat restart</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_BASE:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_HOME:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_TMPDIR: /usr/share/apache-tomcat-7.0.42/temp</p>
+<p class="TextCode" data-condition="Others:Englisch">Using JRE_HOME:        /usr/java/jdk1.7.0_45</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CLASSPATH:       /usr/share/apache-tomcat-7.0.42/bin/bootstrap.jar:/usr/share/apache-tomcat-7.0.42/bin/tomcat-juli.jar</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_BASE:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_HOME:   /usr/share/apache-tomcat-7.0.42</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CATALINA_TMPDIR: /usr/share/apache-tomcat-7.0.42/temp</p>
+<p class="TextCode" data-condition="Others:Englisch">Using JRE_HOME:        /usr/java/jdk1.7.0_45</p>
+<p class="TextCode" data-condition="Others:Englisch">Using CLASSPATH:       /usr/share/apache-tomcat-7.0.42/bin/bootstrap.jar:/usr/share/apache-tomcat-7.0.42/bin/tomcat-juli.jar</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">We should review the Catalina.out log located at /usr/share/apache-tomcat-7.0.29/logs/catalina.out 
+ and check for any errors.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost init.d]# more /usr/share/apache-tomcat-7.0.29/logs/catalina.out</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">We can now access the Tomcat Manager page at:</p>
+<p class="BodyText" data-condition="Others:Englisch">http://yourdomain.com:8080 or http://yourIPaddress:8080 
+ and we should see the Tomcat home page.</p>
+<p class="TextCode" data-condition="Others:Englisch"><img src="../../Images/Tomcat_RHEL/image008.jpg" alt="" width="700" height="332" border="0"/></p>
+
+
+</body></html>

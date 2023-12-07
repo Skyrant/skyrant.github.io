@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Über dieses Dokument","type":"item","tilePath":"","description":"","url":"de/Update/Overview.htm#Über_dieses_Dokument"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

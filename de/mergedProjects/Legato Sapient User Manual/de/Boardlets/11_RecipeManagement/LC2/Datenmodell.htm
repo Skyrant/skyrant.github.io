@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.11.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Datenmodell</title>
+<link rel="StyleSheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Datenmodell">
+        <span>Datenmodell</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Datenmodell</h1>
+<p data-condition="Others:Deutsch">Zum Datenmodell des Rezeptmanagements gehören einige Tabellen, bei denen 
+ das Präfix <span style="font-weight: bold;">RM_</span> für &quot;Rezeptmanagement&quot; 
+ steht:</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="75.199%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 14.345%;"/>
+	<col style="width: 39.854%;"/>
+	<col style="width: 45.801%;"/>
+	</colgroup><tbody><tr>
+		<td bgcolor="#C0C0C0"><p class="BodyText" style="font-size: 11pt;">Tabellenname</p></td>
+		<td bgcolor="#C0C0C0"> </td>
+		<td bgcolor="#C0C0C0"><p class="BodyText" style="font-size: 11pt;">Informationen/Handhabung 
+		 von Spalten</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">P_DATA_TYPES</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-size: 11pt;">Enthält 
+			 die SPS-Datentypen, die mit den Rezepturpositionen verknüpft 
+			 werden müssen.</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die Tabelle 
+			 ist Teil der Legato Sapient Stammdaten und wird mit dem gezeigten 
+			 vordefinierten Inhalt ausgeliefert. <br/>
+			Hierbei sollten eine systemrelevante Konfiguration und negative 
+			 IDs verwendet werden.</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Änderungen 
+			 können vom KeyUser über LC2 vorgenommen werden.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;">------------</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_RECIPES</p></td>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">In 
+		 Kombination mit RM_RECIPE_ITEMS:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-size: 11pt;">Enthält 
+			 eine Liste von Rezepten einschließlich der gesamten Struktur 
+			 von Rezepten und auch die Verknüpfungen zu anderen Objekten 
+			 (CONNECTIONS, NODES, VALUES usw.).</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die Tabelle 
+			 ist Teil der Konfiguration für die Rezepturverwaltung mittels 
+			 LC2.</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die grundlegenden 
+			 Informationen und die Struktur können mit Hilfe einer Rezepturvorlage 
+			 erstellt und ein &quot;Neues Rezept&quot; auf der Grundlage 
+			 einer ausgewählten Vorlage erstellen werden.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Informationen 
+		 zur Spalte NUMBER_BYTES:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Diese Spalte 
+			 kann in LC2 nicht bearbeitet werden und der Inhalt sollte 
+			 über einen Datenbanktrigger berechnet werden:</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">Trigger</span>: 
+			 Änderung von RM_REC_TEMPLATE_ITEMS. ANZAHL_BYTES_SUMME</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">Berechnung</span>: 
+			 Summe über alle ITEMS (Datensätze) für die Rezepturvorlage 
+			 (ID) der Spalte RM_REC_TEMPLATE_ITEMS. ANZAHL_BYTES_GESAMTZAHL</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_REC_TEMPLATE_ITEMS</p></td>
+		<td><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">In 
+		 Kombination mit RM_RECIPE_TEMPLATES:</span></p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Enthält eine 
+			 Anzahl von Items (als Baum strukturiert), die mit einem bestimmten 
+			 Rezept ohne eine Verbindung zu anderen Objekten (VALUES etc.) 
+			 verknüpft sind.</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die Tabelle 
+			 ist Teil der Konfiguration für die Rezepturverwaltung mittels 
+			 LC2.</p></li>
+		</ul>
+		<p class="BodyText" style="font-size: 11pt;"> </p>
+		<p class="BodyText" style="font-size: 11pt;"> </p>
+		<p class="BodyText" style="font-size: 11pt;"> </p></td>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Informationen 
+		 zur Spalte SORT_ID:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Definiert 
+			 die Reihenfolge der Items unterhalb eines bestimmten Parents. 
+			 Das bedeutet, dass die Reihenfolge der Items unabhängig für 
+			 jedes übergeordnete Element und auch für Items ohne ein übergeordnetes 
+			 Element (Ebene 0 oder flache Liste von Items) festgelegt werden 
+			 kann.</p></li>
+		</ul>
+		<p class="BodyText" style="font-size: 11pt;"> </p>
+		<p class="BodyText" style="font-size: 11pt; font-weight: bold;">Informationen 
+		 zur Spalte NUMBER_BYTES_VARIABLE:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Diese Spalte 
+			 kann in LC2 nur bearbeitet werden, wenn der DATA_TYPE &quot;STRING&quot; 
+			 ist. Ansonsten bleibt das Feld leer (oder &quot;0&quot;).<br/>
+			</p></li>
+		</ul>
+		<p class="BodyText" style="font-size: 11pt; font-weight: bold;">Handhabung 
+		 für die Spalte NUMBER_BYTES_TOTAL:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Diese Spalte 
+			 kann in LC2 nicht bearbeitet werden und der Inhalt wird mit 
+			 Hilfe eines Datenbanktriggers berechnet<span style="font-size: 11pt;">:</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">Trigger</span>: 
+			 Änderung von DATA_TYPE oder Änderung von NUMBER_BYTES_VARIABLE</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">Berechnung</span>: 
+			 P_DATA_TYPES.NUMBER_BYTES + P_DATA_TYPES.NUMBER_BYTES_ADD_PLC 
+			 + RM_REC_TEMPLATE_ITEMS. ANZAHL_BYTES_VARIABLE</p></li>
+		</ul>
+		<p class="BodyText" style="font-size: 11pt;"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_RECIPE_TEMPLATES</p></td>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">In 
+		 Kombination mit RM_REC_TEMPLATE_ITEMS:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Enthält eine 
+			 Liste von Rezepturvorlagen mit der gesamten Struktur von Rezepten, 
+			 aber ohne Verbindung zu anderen Objekten (CONNECTIONS, NODES, 
+			 VALUES usw.).</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-size: 11pt;">So 
+			 kann eine Rezepturvorlage für verschiedene PLS (NODES, CONNECTIONS) 
+			 verwendet werden.</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die Tabelle 
+			 ist Teil der Konfiguration für die Rezepturverwaltung mittels 
+			 LC2.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; font-weight: bold;">Informationen 
+		 zur Spalte NUMBER_BYTES:</p>
+		<ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;">Diese Spalte 
+			 kann in LC2 nicht bearbeitet und der Inhalt wird über einen 
+			 Datenbanktrigger berechnet.</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">Trigger</span>: 
+			 Änderung von RM_REC_TEMPLATE_ITEMS. ANZAHL_BYTES_SUMME</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-weight: bold;">Berechnung</span>: 
+			 <br/>
+			Summe über alle Items (Datensätze) für die Rezepturvorlage 
+			 (ID) der Spalte RM_REC_TEMPLATE_ITEMS. ANZAHL_BYTES_GESAMTZAHL.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_RECIPE_MODES</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-size: 11pt;">Look-Up-Tabelle, 
+			 die die verschiedenen Betriebsarten für Rezepte enthält.</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die Tabelle 
+			 ist Teil der Legato Sapient Stammdaten und sollte mit dem 
+			 gezeigten vordefinierten Inhalt ausgeliefert werden (systemrelevante 
+			 Konfiguration und negative IDs sollten verwendet werden).</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Änderungen 
+			 können vom KeyUser über LC2 vorgenommen werden.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;"><span><span><span style="font-size: 11pt;">------------</span></span></span></p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_UP_DOWNLOAD_RESULTS</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;"><span>Look-Up-Tabelle, 
+			 die die möglichen Ergebnisse für Up-/Download-Prozeduren für 
+			 Rezepte von/zu Shopfloor-SPSen enthält.</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Die Tabelle 
+			 ist Teil der Legato Sapient Stammdaten und sollte mit dem 
+			 gezeigten vordefinierten Inhalt ausgeliefert werden (systemrelevante 
+			 Konfiguration, negative IDs sollten verwendet werden).</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Änderungen 
+			 können vom KeyUser über LC2 vorgenommen werden.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;"><span style="font-size: 11pt;">------------</span></p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_ITEM_VALUES</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText" style="font-size: 11pt;"><span style="font-size: 11pt;">Enthält 
+			 den VALUE für ein verknüpftes Recipe Item in RM_RECIPE_ITEMS.</span></p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Neue Datensätze 
+			 müssen aufgrund von LC2 für jedes entsprechende Item in RM_RECIPE_ITEMS 
+			 automatisch angelegt werden.</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">Bei der Erstellung 
+			 eines neuen Rezepts kann ein Standardwert (VALUE) gesetzt 
+			 werden, in dem eine Rezepturvorlage verwendet wird und ein 
+			 &quot;Neues Rezept&quot; auf Basis dieser Vorlage erstellt 
+			 wird.</p></li>
+			<li><p class="BodyText" style="font-size: 11pt;">VALUES können 
+			 manuell über die Web-Applikation geändert werden. Der Änderungsvorgang 
+			 wird über RMRECIPE_ITEMS.CHANGE_CONTROL gesteuert.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;"><span><span style="font-size: 11pt;">------------</span></span></p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_RECIPE_DATA</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Enthält Rezeptpositionen mit Standarddaten.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;"><span><span><span style="font-size: 11pt;">------------</span></span></span></p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_CHANGE_COMMENTS</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Enthält Kommentare zu Elementänderungen.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;"><span><span><span style="font-size: 11pt;">------------</span></span></span></p>
+		<p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText" style="font-size: 11pt;">RM_RECIPE_RESULTS</p></td>
+		<td><ul style="list-style: disc;">
+			<li><p class="BodyText">Enthält Upload-Ergebnisse.</p></li>
+		</ul></td>
+		<td><p class="BodyText" style="font-size: 11pt; text-align: center;"><span><span style="font-size: 11pt;">------------</span></span></p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

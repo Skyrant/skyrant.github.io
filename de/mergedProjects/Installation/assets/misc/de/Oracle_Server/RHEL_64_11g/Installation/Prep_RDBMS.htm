@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Vorbereitung der grafischen Installation des RDBMS</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h2>Vorbereitung der grafischen Installation des RDBMS</h2>
+<h3><a name="Allgemein" id="Allgemein"></a>Allgemein</h3>
+<p class="BodyText">Für die grafische Installation müssen weitere Vorbereitungen getroffen werden, und zwar:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Anlegen der benötigten Installationsverzeichnisse, in denen der Oracle-Installer die Server-Software und die Daten ablegt - optional, wird aber gemäß OFA (s. u.) empfohlen</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Anlegen des OracleInstaller-Verzeichnisses, in dem die Oracle-Installer-Dateien liegen</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">Eintragen der Server-Umgebungsvariablen in der Datei /etc/hosts und Freigabe des X Window-Displays</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Anschließend wird die eigentliche Installation vorgenommen. Die Schritte werden nun detailliert erklärt.</p>
+<h3><a name="Anlegen_der_Installationsverzeichnisse" id="Anlegen_der_Installationsverzeichnisse"></a>Anlegen der Installationsverzeichnisse</h3>
+<p class="BodyText">Hierfür gibt es mehrere Möglichkeiten. Im Folgenden wird die von Gefasoft empfohlene "Optimal Flexible Architecture" (OFA) beschrieben:</p>
+<p class="BodyText">Zunächst werden die folgenden Verzeichnisse angelegt:</p>
+<p class="BodyText">&#160;</p>
+<table class="SimpleGridBlack" cellspacing="0" width="600">
+<tr class="t1Row">
+<td style="vertical-align: top;" width="282">
+<p class="TabellenInhalt">Oracle Base directory</p>
+</td>
+<td style="vertical-align: top;" width="318">
+<p class="TabellenInhalt">/u01/app/oracle</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="282">
+<p class="TabellenInhalt">Oracle Home directory for Oracle Database</p>
+</td>
+<td style="vertical-align: top;" width="318">
+<p class="TabellenInhalt">/u01/app/oracle/product/11.2.0/dbhome_1</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="282">
+<p class="TabellenInhalt">Oracle Data directory</p>
+</td>
+<td style="vertical-align: top;" width="318">
+<p class="TabellenInhalt">/u02/app/oracle/oradata</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="282">
+<p class="TabellenInhalt">Data files for db_name1 database</p>
+</td>
+<td style="vertical-align: top;" width="318">
+<p class="TabellenInhalt">/u02/app/oracle/oradata/db_name1</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;" width="282">
+<p class="TabellenInhalt">Sub-tree for Recovery files</p>
+</td>
+<td style="vertical-align: top;" width="318">
+<p class="TabellenInhalt">/u03/app/oracle/fast_recovery_area</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;" width="282">
+<p class="TabellenInhalt">Recovery files for db_name1 database</p>
+</td>
+<td style="vertical-align: top;" width="318">
+<p class="TabellenInhalt">/u03/app/oracle/fast_recovery_area/db_name1</p>
+</td>
+</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Der Name "dbhome_1" wird&#160;<i>as is</i>&#160;übernommen. Für "db_name1" wird die Oracle SID verwendet, also z. B. "legato". Mit der genannten OFA werden Oracle-Datenbanken so angelegt, dass sie mehrere Oracle-Home-Verzeichnisse beinhalten können.</p>
+<p class="BodyText">Wie weiter oben geschrieben, werden minimal etwa 4,5 GB für die Softwareinstallation selber und minimal 1,5 GB für Daten benötigt. Grundsätzlich können die Partitionen und Verzeichnisse nahezu beliebig (nur beschränkt durch Begrenzungen des Betriebssystems) angelegt werden. Solche Details werden hier nicht weiter betrachtet und einfach vorausgesetzt, dass die Directories /u01, /u02 und /u03 auf Partitionen mit ausreichend viel Speicherplatz angelegt werden.</p>
+<p class="TextCode"># mkdir -p /u01/app/oracle/product/11.2.0/dbhome_1</p>
+<p class="TextCode"># mkdir -p /u02/app/oracle/oradata</p>
+<p class="TextCode"># mkdir -p /u03/app/oracle/fast_recovery_area</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><span style="background: white;">Alle Verzeichnisse werden (rekursiv) dem Betriebssystem-User oracle zugewiesen und die</span> Zugriffsrechte <span style="background: white;">entsprechend modifiziert:</span></p>
+<p class="TextCode"># chown -R oracle:oinstall /u01/app/ /u02/app/ /u03/app/</p>
+<p class="TextCode"># chmod -R 775 /u01/app/ /u02/app/ /u03/app/</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Anlegen_des_Oracle-Installer_Verzeichnisses" id="Anlegen_des_Oracle-Installer_Verzeichnisses"></a>Anlegen des Oracle-Installer Verzeichnisses</h3>
+<p class="BodyText">Die Oracle-Installationsdateien können auf verschiedene Weisen installiert werden. Im Folgenden wird die Installation von der Festplatte beschrieben, aber natürlich sind auch Installationen von einer DVD oder anderweitig aus dem Netzwerk möglich.</p>
+<p class="BodyText">Für die Installation im Zusammenhang mit LEGATO werden die drei Zip-Installationsdateien</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">p10404530_112030_Linux-x86-64_1of7.zip</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">p10404530_112030_Linux-x86-64_2of7.zip</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">p10404530_112030_Linux-x86-64_7of7.zip</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">benötigt; das letztgenannte installiert dabei den Oracle-Deinstaller. Für die genannten Dateien wird ein geeignetes Verzeichnis (z. B. /tmp/OracleInstaller) angelegt und die Zip-Dateien hineinkopiert und dort (in dieselben Unterverzeichnisse hinein!) entpackt:</p>
+<p class="TextCode"># mkdir -p /tmp/OracleInstaller</p>
+<p class="TextCode"># cd /tmp/OracleInstaller</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># unzip p10404530_112030_Linux-x86-64_1of7.zip</p>
+<p class="TextCode"># unzip p10404530_112030_Linux-x86-64_2of7.zip</p>
+<p class="TextCode"># unzip p10404530_112030_Linux-x86-64_7of7.zip</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die ersten beiden Dateien p10404530_112030_Linux-x86-64_1of7.zip und p10404530_112030_Linux-x86-64_2of7.zip erzeugen ein Unterverzeichnis <i>database</i>, in welches sie hinein installiert werden. Die dritte Datei p10404530_112030_Linux-x86-64_7of7.zip erzeugt ein Unterverzeichnis <i>deinstall</i> und wird in dieses hinein installiert. Die beiden Unterverzeichnisse werden dem User <i>oracle</i> als neuem Eigentümer zugeordnet.</p>
+<p class="TextCode"># chown -R oracle:oinstall database deinstall</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Konfiguration_der_Host-Datei" id="Konfiguration_der_Host-Datei"></a>Konfiguration der Host-Datei</h3>
+<p class="BodyText">Außerdem muss noch die Host-Datei /etc/hosts konfiguriert werden. Dazu geht man wie folgt vor:</p>
+<p class="BodyText">Die eigene IP-Adresse wird ermittelt:</p>
+<p class="BodyText"><img src="../../../../02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Dieser Befehl ist je nach Spracheinstellung des Betriebssystems unterschiedlich.</p>
+<p class="BodyText">Für ein deutsches Betriebssystem lautet der Befehl:</p>
+<p class="TextCode"># ifconfig|grep 'inet Adresse'| grep -v 127.0.0.1|cut -d':' -f2|awk '{print $1}' | sed -ne '1p'</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Für ein englisches Betriebssystem lautet der Befehl:</p>
+<p class="TextCode"># ifconfig|grep 'inet addr'| grep -v 127.0.0.1|cut -d':' -f2|awk '{print $1}' | sed -ne '1p'</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dieser Befehl liefert zum Beispiel folgendes Ergebnis: 192.168.1.221</p>
+<p class="BodyText">Dann wird der Hostname ermittelt:</p>
+<p class="TextCode"># hostname</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dieser Befehl liefert zum Beispiel folgendes Ergebnis: LEGATO-Server</p>
+<p class="BodyText">Über den Befehl</p>
+<p class="TextCode"># vi /etc/hosts</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">werden die bereits bestehenden Hosts angezeigt. Bei einem neu aufgesetzten Betriebssystem sieht die Datei folgendermaßen aus:</p>
+<p class="TextCode">127.0.0.1&#160;&#160;&#160;localhost localhost.localdomain localhost4 localhost4.localdomain4</p>
+<p class="TextCode">::1&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;localhost localhost.localdomain localhost4 localhost4.localdomain4</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Hier muss nun eine dritte Zeile mit folgendem Inhalt ergänzt werden:</p>
+<p class="TextCode">[IP-Adresse] [mind. 1 Leerzeichen] [Hostname].[Domainname] [mind. 1 Leerzeichen] [Hostname]</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Mit den Beispielangaben von oben sieht das z.B. folgendermaßen aus:</p>
+<p class="TextCode">192.168.1.221&#160;&#160;&#160;&#160;LEGATO-Server.muc.gefasoft.office&#160;&#160;&#160;&#160;&#160;LEGATO-Server</p>
+<p class="TextCode">&#160;</p>
+<h3><a name="Weitere_Vorbereitung__speziell_für_Oracle_Linux_6_"></a>Weitere Vorbereitung (speziell für Oracle Linux 6)</h3>
+<p class="BodyText">Siehe auch: <a href="http://www.oracle-base.com/articles/11g/oracle-db-11gr2-installation-on-oracle-linux-6.php">http://www.oracle-base.com/articles/11g/oracle-db-11gr2-installation-on-oracle-linux-6.php</a></p>
+<p class="BodyText">Passen Sie die Datei "/etc/security/limits.d/90-nproc.conf" wie unten beschrieben an. Siehe hierzu auch die MOS Note [ID 1487773.1].</p>
+<p class="BodyText">(<a href="https://support.oracle.com/epmos/faces/DocContentDisplay?id=1487773.1">https://support.oracle.com/epmos/faces/DocContentDisplay?id=1487773.1</a>)</p>
+<p class="BodyText">Ändern Sie die Zeile:</p>
+<p class="TextCode">*&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;soft&#160;&#160;&#160;&#160;nproc&#160;&#160;&#160;&#160;1024</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">nach</p>
+<p class="TextCode">* - nproc 16384</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Editieren Sie die Datei "/etc/selinux/config" wie folgt:</p>
+<p class="TextCode">SELINUX=permissive</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dadurch werden die Sicherheitseinstellungen heruntergesetzt. Sobald diese Änderung vollständig ist, starten Sie bitte den Server neu.</p>
+<h3><a name="Deaktivieren_der_Firewall" id="Deaktivieren_der_Firewall"></a>Deaktivieren der Firewall</h3>
+<p class="BodyText"><img src="../../../../02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Auf Linux muss direkt vor der Installation die Firewall ausgeschaltet werden, da anderenfalls die Installation fehlschlägt.</p>
+<p class="BodyText">Öffnen Sie ein Terminal und geben Sie mit dem User root folgenden Befehl ein:</p>
+<p class="TextCode"># service iptables stop</p>
+<p class="TextCode">&#160;</p>
+</body>
+</html>

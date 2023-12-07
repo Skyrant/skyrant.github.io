@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "13.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">JOB_GEN_AL_SHIFTCAL_MAINTENENCE</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="JOB_GEN_AL_SHIFTCAL_MAINTENENCE">
+        <span>JOB_GEN_AL_SHIFTCAL_MAINTENENCE</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">JOB_GEN_AL_SHIFTCAL_MAINTENENCE</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job erstellt eine Meldung, wenn der Schichtkalender 
+ nicht für n Tage im Voraus gepflegt ist (definiert durch den Job-Parameter 
+ &quot;days&quot;; Default-Wert = 30). Die Meldung wird automatisch für 
+ jeden Knoten mit dem entsprechenden Zeitschema ausgelöst.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Sein Aufruf / Einsatz ist nur sinnvoll bei Verwendung 
+ des Sapient-Moduls Schichtkalender.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Log-Ausgaben dieses Jobs erfolgen in das Log-File der 
+ jeweiligen SE-Instanz unter dem Namen <span style="font-size: 11pt;">ShiftCalMaintAlarms</span>. 
+ Um die Ausführlichkeit der Log-Ausgaben getrennt von der anderer Jobs 
+ einzustellen, ist eine Zeile mit Inhalt &quot;<span style="font-size: 11pt;">logger.</span>de.gefasoft.sapient.sapieng.jobs.sysMessages.<span style="font-size: 11pt;">ShiftCalMaintAlarms</span> = &lt;loglevel&gt;&quot; 
+ in die Logging-Konfiguration einzutragen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Parametrierung</h6>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">JOB_GEN_AL_SHIFTCAL_MAINTENENCE</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Alarmgenerierung 
+		 zur Schichtkalenderpflege</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="BodyText">/de/gefasoft/sapient/sapieng/jobs/sysMessages/ShiftCalMaintAlarms/execute</p></td>
+	</tr>
+	<tr style="height: 53px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{&quot;days&quot;:30}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">0</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Trigger</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Trigger: zyklisch (-1)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Intervall: {&quot;Interval&quot;: &quot;5m&quot;}</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Parameter:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">{&quot;days&quot;:30}</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+
+
+</body></html>

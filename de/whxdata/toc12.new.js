@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Legato Sapient User Manual","type":"project","tilePath":"","url":"Legato Sapient User Manual","ref":"mergedProjects/Legato Sapient User Manual","key":"toc13"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Parameter</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="In,Local,Out,Parameter,InOut" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Parameter">
+        <span>Parameter</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Parameter</h2>
+<h3 data-condition="Others:Deutsch"><a name="Parameter-Typen" id="Parameter-Typen"></a>Parametertypen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Für die meisten Filterkriterien der Boardlets (z.B. 
+ Knoten-ID oder Variablenarten) kann definiert werden, wie diese als Parameter 
+ im Kontext mit anderen Boardlets behandelt werden sollen. Der Parametertyp 
+ kann durch Klick auf die Symbole rechts neben dem jeweiligen Wert umgeschaltet 
+ werden. Außerdem kann die Verwendung der Parameter auf Container- und 
+ Dashboard-Ebene festgelegt werden (im Menü des jeweiligen Elements im 
+ Reiter Parameter).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Folgende Parametertypen stehen zur Verfügung:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col id="IconColWidth"/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../Bilder/Param_InOut.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText"><span class="Bold">InOut</span>: Bedeutet, 
+		 dass dieser Wert sowohl vom selektieren Boardlet empfangen als 
+		 auch gesendet werden kann.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../Bilder/Param_Local.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText"><span class="Bold">Local</span>: Bedeutet, 
+		 dass dieser Wert weder empfangen noch gesendet wird, sondern der 
+		 eingegebene Wert immer gilt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../Bilder/Param_In.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText"><span class="Bold">In</span>: Bedeutet, 
+		 dass dieser Wert immer empfangen wird. Empfiehlt sich beispielsweise 
+		 für die Node ID beim Current Values-Boardlet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../Bilder/Param_Out.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText"><span class="Bold">Out</span>: Bedeutet, 
+		 dass dieser Wert nie empfangen wird, sondern nur gesendet.</p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a name="Anwendungsbeispiele" id="Anwendungsbeispiele"></a>Anwendungsbeispiele</h3>
+<h4 data-condition="Others:Deutsch"><a name="Boardlets" id="Boardlets"></a>Boardlets</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Folgende Beispiele sollen die Auswirkung der unterschiedlichen 
+ Parametertypen verdeutlichen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Dashboard mit folgenden Boardlets:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Layout, Aktuelle Werte, Tortendiagramm.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/Param_Dash_1.png" alt="" style="border: none;" border="0"/></p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiel 1</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es wurden folgende Einstellungen getroffen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Layout:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektierte Knoten: InOut (ID = 63 = Schweißen 
+ 2)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Aktuelle Werte:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: local (ID = 21 = Komponentenwerk)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (leer, d.h. alle Variablenarten 
+ werden angezeigt)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Tortendiagramm:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (2,40 = Iststückzähler, Ausschusszähler)</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Auswahl eines anderen Knotens im Layout hat keinen 
+ Einfluss auf das Aktuelle Werte Boardlet. Hier wird immer der Tickertext 
+ vom Komponentenwerk angezeigt (weil das die einzige Variable ist, die 
+ dem Knoten zugeordnet ist). Das Tortendiagramm hingegen aktualisiert sich 
+ und zeigt immer die Ist- und Ausschussstückzähler des im Layout selektierten 
+ Knotens an.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiel 2</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es wurden folgende Einstellungen getroffen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Layout:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektierte Knoten: InOut (ID = 63 = Schweißen 
+ 2)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Aktuelle Werte:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: In (ID = 63 = Schweißen )</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (leer, d.h. alle Variablenarten 
+ werden angezeigt)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Tortendiagramm:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (2,40 = Iststückzähler, Ausschusszähler)</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Auswahl eines anderen Knotens im Layout beeinflusst 
+ sowohl das Aktuelle Werte Boardlet als auch das Tortendiagramm. In den 
+ Aktuellen Werten werden jedoch alle Variablen angezeigt, die am selektierten 
+ Knoten verfügbar sind, im Tortendiagramm nur die Typen 2 und 40.</p>
+<h4 data-condition="Others:Deutsch"><a name="Container_und_Dashboard" id="Container_und_Dashboard"></a>Container 
+ und Dashboard</h4>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Beispiel 3</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../Bilder/Param_Dash_2.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Beispiel sollen die Container-übergreifenden 
+ Auswirkungen gezeigt werden. Es wird ein Dashboard mit 2 Containern verwendet. 
+ Container 1 enthält ein Layout-Boardlet, ein Aktuelle Werte Boardlet und 
+ ein Tortendiagramm. Container 2 enthält ein Layout-Boardlet und ein Aktuelle 
+ Werte Boardlet.</p>
+<h4 data-condition="Others:Deutsch">Container 1</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Es wurden die selben Einstellungen getroffen wie in 
+ Beispiel 1:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Layout:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektierte Knoten: InOut (ID = 63 = Schweißen 
+ 2)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Aktuelle Werte:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: local (ID = 21 = Komponentenwerk)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (leer, d.h. alle Variablenarten 
+ werden angezeigt)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Tortendiagramm:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (2,40 = Iststückzähler, Ausschusszähler)</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Container-Parameter wurden wie folgt eingestellt:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Node ID: InOut</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selected Nodes: Out</p>
+<h4 data-condition="Others:Deutsch">Container 2</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Es wurden folgende Einstellungen getroffen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Layout:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut (ID = 63 = Schweißen 2)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektierte Knoten: InOut (ID = 63 = Schweißen 
+ 2)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Aktuelle Werte:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: local (ID = 62 = Schweißen 1)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Variablenarten: local (leer, d.h. alle Variablenarten 
+ werden angezeigt)</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Container-Parameter wurden wie folgt eingestellt:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Knoten-ID: InOut</p>
+<p class="BodyText" data-condition="Others:Deutsch">Selektierte Knoten: Out</p>
+<h4 data-condition="Others:Deutsch">Ergebnis</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Wird in Container 1 im Layout ein anderer Knoten selektiert, 
+ so wird diese Auswahl auch auf das Layout von Container 2 übernommen. 
+ Außerdem wird die Anzeige des Tortendiagramms aktualisiert. Die Anzeige 
+ der Aktuelle Werte Boardlets ändert sich nicht. Diese zeigen weiterhin 
+ die Variablenwerte der fest hinterlegten Knoten-ID an.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird in Container 2 im Layout ein anderer Knoten selektiert, 
+ so wird diese Auswahl auch auf das Layout von Container 1 und das dortige 
+ Tortendiagramm übernommen. Die Anzeige der Aktuelle Werte Boardlets ändert 
+ sich nicht. Diese zeigen weiterhin die Variablenwerte der fest hinterlegten 
+ Knoten-ID an.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für Dashboards ist die Funktionsweise vergleichbar.</p>
+
+
+</body></html>

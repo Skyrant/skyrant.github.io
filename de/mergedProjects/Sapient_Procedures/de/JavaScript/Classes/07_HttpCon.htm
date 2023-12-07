@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">HttpCon</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="HttpCon">
+        <span>HttpCon</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">HttpCon</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dient zum Durchführen von Abfragen. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch">function sendFromDir(dir) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">   logger.info(&quot;Sending all files 
+ from directory &quot; + dir.absolutePath);</p>
+<p class="TextCode" data-condition="Others:Deutsch">   var files = dir.list();</p>
+<p class="TextCode" data-condition="Others:Deutsch">   if (files) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">         while 
+ (files.length) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">               var 
+ file = new File(dir, files.shift());</p>
+<p class="TextCode" data-condition="Others:Deutsch">               logger.info(&quot;Sending 
+ file &quot; + file.name);</p>
+<p class="TextCode" data-condition="Others:Deutsch">               var 
+ con = new HttpCon(&quot;http://localhost/WebApp/upload/service/bcs/tord.xml&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">               try 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.doInput 
+ = true;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.doOutput 
+ = true;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.useCaches 
+ = false;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                     con.instanceFollowRedirects 
+ = false;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.method 
+ = con.METHOD_POST;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.setHeader(con.HEADER_CHARSET, 
+ &#39;UTF-8&#39;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.setHeader(con.HEADER_CONTENTTYPE, 
+ &#39;text/xml; charset=utf-8&#39;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.setHeader(&#39;Accept&#39;, 
+ &#39;text/xml&#39;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.setBasicAuthHeader(&quot;dh&quot;, 
+ &quot;***&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    con.setProxyAuthHeader(&quot;dh&quot;, 
+ &quot;***&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    logger.debug(&#39;Authorization 
+ header: &#39; + con.getHeader(&#39;Authorization&#39;));</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    var 
+ out = con.getRequestPrinter();</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    try 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          out.print(&#39;&lt;?xml 
+ version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;\n&#39;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          var 
+ line;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          while 
+ ((line = file.readLine()) != null) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                out.println(line);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          }</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          out.flush();</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          var 
+ rdr = con.getResponseReader();</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          try 
+ {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                logger.debug(&quot;Response:&quot;)</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                var 
+ line;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                while 
+ ((line = rdr.readLine())) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                      logger.debug(&quot;    &quot; 
+ + line);</p>
+<p class="TextCode" data-condition="Others:Deutsch">                                }</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          } 
+ finally {</p>
+<p class="TextCode" data-condition="Others:Deutsch">//                              rdr.close();</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          }</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    } 
+ finally {</p>
+<p class="TextCode" data-condition="Others:Deutsch">                          out.close();</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">               } 
+ finally {</p>
+<p class="TextCode" data-condition="Others:Deutsch">//                  con.close();</p>
+<p class="TextCode" data-condition="Others:Deutsch">                    file.close();</p>
+<p class="TextCode" data-condition="Others:Deutsch">               }</p>
+<p class="TextCode" data-condition="Others:Deutsch">         }</p>
+<p class="TextCode" data-condition="Others:Deutsch">   }</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Anlegen eines Objekts mittels new HttpCon(Url) 
+ wird die URL direkt übergeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">HttpCon hat folgende statische Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Headers:</p>
+<p class="BodyText" data-condition="Others:Deutsch">HEADER_CHARSET</p>
+<p class="BodyText" data-condition="Others:Deutsch">HEADER_CONTENTTYPE</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Methods:</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_DELETE</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_GET</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_HEAD</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_OPTIONS</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_POST</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_PUT</p>
+<p class="BodyText" data-condition="Others:Deutsch">METHOD_TRACE</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Rückgabewerte:</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_OK</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_CREATED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_ACCEPTED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_NOT_AUTHORITATIVE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_NO_CONTENT</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_RESET</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_PARTIAL</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_MULT_CHOICE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_MOVED_PERM</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_MOVED_TEMP</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_SEE_OTHER</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_NOT_MODIFIED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_USE_PROXY</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_BAD_REQUEST</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_UNAUTHORIZED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_PAYMENT_REQUIRED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_FORBIDDEN</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_NOT_FOUND</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_BAD_METHOD</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_NOT_ACCEPTABLE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_PROXY_AUTH</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_CLIENT_TIMEOUT</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_CONFLICT</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_GONE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_LENGTH_REQUIRED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_PRECON_FAILED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_ENTITY_TOO_LARGE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_REQ_TOO_LONG</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_UNSUPPORTED_TYPE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_INTERNAL_ERROR</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_NOT_IMPLEMENTED</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_BAD_GATEWAY</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_UNAVAILABLE</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_GATEWAY_TIMEOUT</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP_VERSION</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte vom Typ HttpCon haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">doInput:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Boolean; gibt an, ob Daten im Telegramm zu senden sind 
+ (bei GET üblicherweise false, bei POST üblicherweise true).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">doOutput:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Boolean; gibt an, ob Daten im Telegramm zu empfangen 
+ sind (bei GET üblicherweise true, bei POST üblicherweise false).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">useCaches:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Boolean; gibt an, ob die HTTP-Daten gecached werden 
+ dürfen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">instanceFollowRedirects:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Boolean; gibt an, ob Redirect-Antworten des Servers 
+ automatisch ausgewertet werden sollen, z.B. wenn mehrere Server die Last 
+ aufteilen sollen oder um HTTP auf HTTPS umzuleiten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">method:</p>
+<p class="BodyText" data-condition="Others:Deutsch">HTTP-Methode. Wert einer der folgenden Eigenschaften 
+ von HttpCon:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_GET</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_POST</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_PUT</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_DELETE</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_HEAD</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_OPTIONS</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">METHOD_TRACE</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">charset:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Name des Zeichensatzes der empfangenen Daten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">contentType:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Art der empfangenen HTTP-Daten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">responseLength:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Länge des Rückgabewerts.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">responseText:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Text des Rückgabewerts.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">errorText:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet einen internen Reader zum Lesen des Rückgabewerts.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte vom Typ HttpCon haben folgende Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">setHeader(Name, Wert):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt den entsprechenden HTTP-Header der Anfrage. &quot;Name&quot; 
+ kann auch eine der Eigenschaften HEADER_CHARSET oder HEADER_CONTENTTYPE 
+ sein.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">setBasicAuthHeader(Name, Passwort):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Übergibt die Authentifizierungsdaten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">setProxyAuthHeader(Name, Passwort):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Übergibt Authentifizierungsdaten für Proxies.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getHeader(Name):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den HTTP-Header aus der Anfrage.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getResponseHeader(Name):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den HTTP-Header aus der Antwort.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getRequestPrinter():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert einen Printer zum Schreiben des Anfrage-Textkörpers.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getResponseReader():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert einen Reader zum Lesen des Antwort-Textkörpers.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">getResponseSaxInput():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert einen SaxInput, um den Antwort-Body von einem 
+ SaxReader verarbeiten zu lassen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">open(url):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird nur benötigt, wenn beim Anlegen des Objekts keine 
+ URL angegeben wurde.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">connect():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Baut die Verbindung auf. Die HTTP-Anfrage wird erst 
+ gesendet, wenn Anfragedaten fertig geschrieben sind und die erste Funktion 
+ benutzt wird, die die Antwort lesen will.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">disconnect():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Trennt die Verbindung.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">close():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließt die Verbindung.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">uploadFile():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ermöglicht das Hochladen einer Datei auf einen Webserver 
+ aus einem Skript in der SE.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch">/**</p>
+<p class="TextCode" data-condition="Others:Deutsch"> *</p>
+<p class="TextCode" data-condition="Others:Deutsch"> */</p>
+<p class="TextCode" data-condition="Others:Deutsch">loader.include(&#39;../common/jsutils.js&#39;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">function uploadFile(context, pars) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">context.logger.info(&#39;uploadFile raw params: &#39; + JSON.stringify(pars));</p>
+<p class="TextCode" data-condition="Others:Deutsch">var params = jsonRpcArgsHash(arguments, [&quot;url&quot;, 
+ &quot;file&quot;, &quot;password&quot;, &quot;user&quot;, &quot;fieldname&quot;, 
+ &quot;filename&quot;, &quot;contenttype&quot;, &quot;formfields&quot;, 
+ &quot;headers&quot;]);</p>
+<p class="TextCode" data-condition="Others:Deutsch">context.logger.info(&#39;uploadFile params: &#39; + JSON.stringify(params));</p>
+<p class="TextCode" data-condition="Others:Deutsch">var upurl = params.url || &#39;http://localhost:8080/app/file&#39;;</p>
+<p class="TextCode" data-condition="Others:Deutsch">var upfile = params.file || &#39;C:\\DevDat\\Git\\sapient-engine\\src\\dist\\scripts\\examples\\upload.js&#39;;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">var upars = {</p>
+<p class="TextCode" data-condition="Others:Deutsch">fieldname: &#39;file&#39;, // expected by Sapient upload service</p>
+<p class="TextCode" data-condition="Others:Deutsch">contenttype: &#39;text/javascript;charset=UTF-8&#39;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">filename: &#39;testupload.js&#39;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">};</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">var xhr = new HttpCon(upurl);</p>
+<p class="TextCode" data-condition="Others:Deutsch">// set HTTP user</p>
+<p class="TextCode" data-condition="Others:Deutsch">if (params.password) {</p>
+<p class="TextCode" data-condition="Others:Deutsch">var upusr = params.user || context.user.name;</p>
+<p class="TextCode" data-condition="Others:Deutsch">// context.logger.info(&#39;uploadFile setting auth to 
+ user &quot;&#39; + upusr + &#39;/&#39; + params.password + &#39;&quot;&#39;);</p>
+<p class="TextCode" data-condition="Others:Deutsch">xhr.setBasicAuthHeader(upusr, params.password);</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" data-condition="Others:Deutsch">var result = xhr.uploadFile(upfile, upars);</p>
+<p class="TextCode" data-condition="Others:Deutsch">context.logger.info(&#39;uploadFile result: &#39; + JSON.stringify(result));</p>
+<p class="TextCode" data-condition="Others:Deutsch">return true;</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+
+
+</body></html>

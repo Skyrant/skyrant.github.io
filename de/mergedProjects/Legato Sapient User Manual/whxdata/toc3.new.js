@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Allgemein","type":"item","tilePath":"","description":"","url":"de/Menus/DashboardMenu.htm#Allgemein"},{"name":"Parametrierung","type":"item","tilePath":"","description":"","url":"de/Menus/DashboardMenu.htm#Parametrierung"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

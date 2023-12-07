@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.6.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Spezifische Zeichnung anzeigen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Spezifische Zeichnung anzeigen">
+        <span>Spezifische Zeichnung anzeigen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Spezifische Zeichnung anzeigen</h1>
+<p class="MsoBodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Gehen Sie zum 
+ Boardlet und legen Sie den Ordnernamen der Zeichnung fest, der angezeigt 
+ werden soll. Der Pfad ist relativ zu dem Detail-Layout Verzeichnis in 
+ dem gemeinsamen Ordner. Das bedeutet, dass, wenn die Zeichnung direkt 
+ im Detail-Layout Verzeichnis (dem standardmäßigen Speicherort des Designers) 
+ gespeichert wird, muss kein Pfad festgelegt werden – geben Sie einfach 
+ den Ordnernamen einschließlich der Dateiendung xml ein. Falls Ordner im 
+ Detail-Layout Verzeichnis verwendet werden, muss der relative Pfad spezifiziert 
+ werden. Verwenden Sie einen Schrägstrich (keinen Gegenschrägstrich!) als 
+ Pfadtrenner, aber verwenden Sie keinen Schrägstrich am Pfadanfang. Stellen 
+ Sie sicher, dass <i>Load Node Layout</i> nicht aktiviert ist, z. B.:</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../Bilder/show_a_specific_drawing.png" alt="" style="border: none;" border="0"/></span></p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">S</span>pezifische 
+ Parameter für dieses Boardlet:</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">• Load node layout: Deaktivieren, um eine spezielle 
+ Zeichnung anzuzeigen (weitere Informationen im Kapitel „Knotenspezifische 
+ Zeichnungen anzeigen“)</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">• Enable compact view mode: Wird nur verwendet, 
+ wenn knotenspezifische Zeichnungen geladen werden</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">• Animate changes: Die Laufzeit versucht automatisch 
+ reibungslöse Übergänge durchzuführen, wenn sich ein Style wie Sichtbarkeit 
+ während der Laufzeit ändert. Deaktivieren Sie diesen Parameter, um dieses 
+ Verhalten auszuschalten. Da der Systemparameter -360 gesetzt ist, werden 
+ Animationen komplett deaktiviert – der Boardlet-Parameter wird in diesem 
+ Fall übergangen.</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">• Last update time from server: Zeigt die Zeit des 
+ letzten Werteupdates in der linken, oberen Ecke des Boardlets an.</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">• Debug mode: Ermöglicht es, die Debug-Seitenleiste 
+ für die Boardlet-Instanz anzuzeigen.</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Knotenspezifische_Zeichnungen_anzeigen"></a>Knotenspezifische 
+ Zeichnungen anzeigen</h3>
+<p class="MsoBodyText" style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Wenn der <i>Logical 
+ Structure Tree</i> mit LC2 erstellt wird, können jedem Knoten zwei Zeichnungen 
+ zugewiesen werden – der LGD <i>file path</i> und der LGD <i>compact view 
+ file path</i>:</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><img src="../../assets/images/image5.png" alt="" style="border: none;" border="0"/></p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Wenn der 
+ Boardlet-Parameter <i>Load node layout</i> aktiviert ist, lädt das Boardlet 
+ die Zeichnung, die dem momentan gewählten Knoten zugeordnet ist. Zuerst 
+ wird die Zeichnung, die im <i>LGD file path</i> Bereich spezifiziert ist, 
+ angezeigt. Wenn dem ausgewählten Knoten keine spezielle Zeichnung zugeordnet 
+ ist, sucht das Boardlet den Baum (alle Parents) ab und verwendet die Zeichnung, 
+ die dem nächsten Parent zugeordnet ist.</span></p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Wenn der 
+ Boardlet-Parameter <i style="mso-bidi-font-style: normal;">Enable compact 
+ view mode</i> aktiviert ist, wird der <i style="mso-bidi-font-style: normal;">compact 
+ view file path</i> verwendet. In diesem Fall – wenn hier keine Eingabe 
+ gemacht wird, wird der reguläre Dateipfad genutzt – wenn nichts Weiteres 
+ festgelegt ist, sucht das Boardlet den Baum erneut in Root-Richtung ab, 
+ um eine Zeichnung zu finden.</span></p>
+
+
+</body></html>

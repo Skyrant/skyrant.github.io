@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Herstellen der Datenbankverbindung","type":"book","tilePath":"","description":"","url":"de/Prep/DB-Connection2.htm","key":"toc3"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

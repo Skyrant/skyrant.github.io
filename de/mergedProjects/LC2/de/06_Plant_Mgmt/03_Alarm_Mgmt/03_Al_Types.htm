@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.2.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Meldearten</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Meldeart" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Meldearten">
+        <span>Meldearten</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Meldearten</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Werksverwaltung | Meldungsmanagement | Meldearten</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Zusätzlich zur Einteilung der Meldungen über Klassen 
+ besteht die Möglichkeit, Meldungen in verschiedene Arten einzuteilen. 
+ Damit wird ein zusätzliches Selektionskriterium für spätere Filterfunktionen 
+ geschaffen. Die Art dient auch als Basis für die Berechnung verschiedener 
+ Verfügbarkeitsbetrachtungen (z.B. nach technischer, systembedingter oder 
+ organisatorischer Verfügbarkeit).</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer 
+		 der Art.</p>
+		<p class="TabellenInhalt">Negative IDs sowie die IDs 1, 2 und 3  sind 
+		 für Systemmeldungen reserviert und dürfen nicht verändert werden.</p>
+		<p class="TabellenInhalt">ID = 0 ist für die Art unbekannte Meldung 
+		 reserviert und darf nicht verändert werden.</p>
+		<p class="TabellenInhalt">ID-Zuordnungen der System-Arten analog 
+		 Klassen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Name der Meldeart.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung der Meldeart.</p></td>
+	</tr>
+	
+	
+	
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt" data-condition="Others:Sapient_only">Verfügbarkeits-Typ</p></td>
+		<td><p class="TabellenInhalt" data-condition="Others:Sapient_only">Lookup-Liste 
+		 zur Auswahl eines Verfügbarkeits-Typs. Gibt an, wie Meldungen 
+		 dieser Art bei der KPI-Berechnung berücksichtigt werden. Wird 
+		 nur berücksichtigt, wenn zusätzlich bei der Meldeklasse &quot;KPI-relevant&quot; 
+		 = 1.</p>
+		<p class="TabellenInhalt" data-condition="Others:Sapient_only">Diese 
+		 Spalte wird nur angezeigt, wenn der Systemparameter -43 = 1 ist.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Reservierte System-Meldearten</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Meldearten mit negativer ID sind vom System reserviert 
+ und dürfen nicht verändert werden. Bei einer Standardinstallation werden 
+ auch die IDs 0, 1, 2 und 3 mit ausgeliefert, können aber auch projektspezifisch 
+ geändert werden. In diesem Fall ist bei Updates sicherzustellen, dass 
+ die projektspezifischen Änderungen nicht ungewollt durch den Standard 
+ überschrieben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die reservierten Arten sind:</p>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="49"/>
+	<col width="1109"/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Art-ID</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-13</p></td>
+		<td><p class="TabellenInhalt">Puffer-Laufzeitüberwachung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-12</p></td>
+		<td><p class="TabellenInhalt">Überwachung AppEngine</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-11</p></td>
+		<td><p class="TabellenInhalt">TPM Wartungsmeldung</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-10</p></td>
+		<td><p class="TabellenInhalt">Rezepte</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-9</p></td>
+		<td><p class="TabellenInhalt">Überwachung Daemon</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-8</p></td>
+		<td><p class="TabellenInhalt">Kalenderpflege</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-7</p></td>
+		<td><p class="TabellenInhalt">Zyklische Meldung: Ein Gateway meldet, 
+		 dass von einer Verbindung eine sehr hohe Anzahl Meldungen (quasi 
+		 zyklisch) auftritt und die Weiterleitung der Meldungen an die 
+		 Datenbank aus Performancegründen temporär unterdrückt wurde</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-6</p></td>
+		<td><p class="TabellenInhalt">Unterer Grenzwert (Alarmgrenze) einer 
+		 Variablen unterschritten</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-5</p></td>
+		<td><p class="TabellenInhalt">Untere Warngrenze einer Variablen 
+		 unterschritten</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-4</p></td>
+		<td><p class="TabellenInhalt">Obere Warngrenze einer Variablen 
+		 überschritten</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-3</p></td>
+		<td><p class="TabellenInhalt">Oberer Grenzwert (Alarmgrenze) einer 
+		 Variablen überschritten</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">-2</p></td>
+		<td><p class="TabellenInhalt">Verbindungsstörung, wird vom Gateway 
+		 gemeldet</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">-1</p></td>
+		<td><p class="TabellenInhalt">Modul-Verbindungsstörung: Time-Out-Überwachung 
+		 einer Datenquelle (Gateway) hat angesprochen</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">0</p></td>
+		<td><p class="TabellenInhalt">unbekannt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">1</p></td>
+		<td><p class="TabellenInhalt">technisch</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">2</p></td>
+		<td><p class="TabellenInhalt">systembedingt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">3</p></td>
+		<td><p class="TabellenInhalt">organisatorisch</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

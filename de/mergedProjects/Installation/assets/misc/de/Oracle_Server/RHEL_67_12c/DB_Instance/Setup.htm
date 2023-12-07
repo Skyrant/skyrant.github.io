@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Einrichten einer Datenbank-Instanz</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Einrichten einer Datenbank-Instanz</h2>
+<p class="BodyText">In diesem Schritt wird eine neue Datenbankinstanz eingerichtet.</p>
+<p class="BodyText">Mit dem User oracle kann im Terminal der Datenbank-Konfigurationsassistent 
+ aufgerufen werden:</p>
+<p class="TextCode"># su oracle</p>
+<p class="TextCode">$ cd /u01/app/oracle/product/12.1.0/dbhome_1/bin</p>
+<p class="TextCode">$ ./dbca</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image047.png" 
+						 alt="" width="700" height="502" border="0" /></p>
+<p class="BodyText">Klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image049.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Wählen Sie den Menüpunkt &quot;Datenbank erstellen&quot; 
+ und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image051.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Da für Legato einige besondere Einstellungen gewählt 
+ werden, wird hier der Radiobutton &quot;Advanced Mode&quot; geklickt.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image053.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Wählen Sie &quot;Benutzerdefinierte Datenbank&quot; 
+ aus und klicken Sie auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image055.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Geben Sie den globalen Datenbanknamen ein; im Beispiel 
+ &quot;LEGATO&quot;. Die SID wird automatisch befüllt. Klicken Sie dann 
+ auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image057.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Entfernen Sie den Haken in der Checkbox &quot;Configure 
+ Enterprise Manager (EM) Database Express&quot;.</p>
+<p class="BodyText">Klicken Sie dann auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image059.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Hier werden nun die wichtigsten Passwörter der Systembenutzer 
+ vergeben. Es gibt die Möglichkeit, für alle Systembenutzer unterschiedliche 
+ Passwörter zu verwenden oder das gleiche. Auf jeden Fall sollten die Passwörter 
+ sicher gewählt und auch sicher abgelegt werden. In unserem Beispiel wählen 
+ wir &quot;Dasselbe administrative Kennwort für alle Accounts verwenden&quot; 
+ und vergeben ein Passwort. Dieses kann auch nachträglich vom Administrator 
+ geändert werden. Wird ein Passwort gewählt, das nicht den Oracle-Richtlinien 
+ für sichere Passwörter entspricht, dann erscheint ein entsprechender Warnhinweis 
+ (s. o.).</p>
+<p class="BodyText">Mit &quot;Next&quot; geht es weiter zur Auswahl eines 
+ Listeners für die zu erstellende Datenbank.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image061.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Der schon laufende voreingestellte Listener kann verwendet 
+ werden; es muss kein neuer Listener angelegt werden. Weiter mit &quot;Next&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image063.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Nun kann man eine geeignete Lokation für die Datenbankdateien 
+ auswählen. Wenn möglich, sollte diese auf einer separaten Partition liegen, 
+ also nicht in der Systempartition. Als &quot;Speichertyp&quot; können 
+ Sie die Vorauswahl &quot;Dateisystem&quot; belassen. Wählen Sie &quot;Gemeinsamen 
+ Speicherort für alle Datenbankdateien verwenden&quot; aus und selektieren 
+ Sie das Laufwerk /u02/app/oracle/oradata.</p>
+<p class="BodyText">In dieser Maske werden auch Ort und Größe des Fast 
+ Recovery Bereichs bestimmt.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Wählen Sie eine ausreichende Größe, da bei 
+ Engpässen die Datenbank keine weiteren Transaktionen durchführen kann. 
+ Die Datenbank ist damit nicht mehr verfügbar!</p>
+<p class="BodyText">Welche Größe im Einzelfall für den Fast Recovery Bereich 
+ anzugeben ist, ist vom Datenbank-Administrator festzulegen.</p>
+<p class="BodyText">Mit der zweiten Auswahl in dieser Maske kann man bestimmen, 
+ ob überhaupt archivierte REDO-Logdateien angelegt werden oder nicht. Mit 
+ diesen Dateien ist auch innerhalb von Backups eine sehr gute Wiederherstellung 
+ gewährleistet. Dies sollte man jedoch nur für sensible Produktionsumgebungen 
+ wählen. Für reine Testumgebungen kann dies auch ausgeschaltet bleiben.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Bei der Installation und dem Import deaktivieren 
+ Sie das Archivieren. Sonst läuft der Speicher zu schnell voll. Aktivieren 
+ Sie für sensible Produktionsumgebungen das Archivieren, nachdem die Installation 
+ abgeschlossen ist (siehe Kapitel &quot;Archiving aktivieren&quot;).</p>
+<p class="BodyText">Im Beispiel setzen wir das Häkchen bei &quot;Fast Recovery 
+ Bereich angeben&quot;. Beim &quot;Fast Recovery Bereich&quot; geben wir 
+ Folgendes ein: /u03/app/oracle/fast_recovery_area. Die &quot;Größe des 
+ Fast Recovery Bereichs&quot; wird auf 50000 MB gesetzt. Nun klicken wir 
+ auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image065.png" 
+						 alt="" width="700" height="528" border="0" /></p>
+<p class="BodyText">Auf dieser Seite lassen sich nun die Komponenten auswählen: 
+ Wir lassen den Haken bei Oracle JVM, die übrigen können entfernt werden.</p>
+<p class="BodyText">Im Reiter &quot;Sample Schemas&quot; ist nichts zu 
+ tun (kein Beispiel-Schema anzulegen).</p>
+<p class="BodyText">Klicken Sie dann auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image067.png" 
+						 alt="" width="700" height="523" border="0" /></p>
+<p class="BodyText">Als nächstes wird die Größe des physikalischen Hauptspeichers 
+ bestimmt, die für diese Datenbank-Instanz reserviert werden soll. Hier 
+ muss man bedenken, dass dem Betriebssystem und anderen Applikationen bzw. 
+ auch anderen Datenbank-Instanzen genug Platz gelassen werden sollte (also 
+ hier zum Beispiel keine Werte einrichten, die mehr als 80% des gesamten 
+ Speichers bedeuten würde).</p>
+<p class="BodyText">Mit der Einstellung "Use automatic memory management" 
+ kümmert sich Oracle selbst darum, wie der Speicher dann intern in der 
+ Instanz aufgeteilt wird. Es wird empfohlen, diese Einstellung zu setzen.</p>
+<p class="BodyText">Wechseln Sie nun zum Reiter &quot;Skalierung&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image069.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Wählen Sie bitte die Standard-Blockgröße von 8192 Bytes 
+ und ca. 200 bis 300 Prozesse auf dieser Seite.</p>
+<p class="BodyText">Wählen Sie nun bitte den Reiter &quot;Zeichensätze&quot; 
+ aus.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image071.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Bitte wählen Sie hier den Zeichensatz UTF8 aus. Dazu 
+ muss man zunächst auf die manuelle Auswahl "Wählen Sie aus der Liste mit 
+ Zeichensätzen" klicken und dann noch die Option "Nur empfohlene Zeichensätze 
+ anzeigen" ausschalten, denn sonst findet man den UTF8-Zeichensatz nicht 
+ in der Liste.</p>
+<p class="BodyText">Im unteren Teil des Dialogs können die Voreinstellungen 
+ übernommen werden.</p>
+<p class="BodyText">Wechseln Sie nun in den Reiter &quot;Verbindungsmodus&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image073.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Hier kann die Default-Einstellung übernommen werden.</p>
+<p class="BodyText">Öffnen Sie anschließend den Dialog mit den INI-Parametern, 
+ indem Sie auf den Button "All Initialization Parameters" klicken. Aktivieren 
+ Sie außerdem die Anzeige aller Parameter durch Klick auf den Button &quot;Show 
+ Advanced Parameters&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image075.png" 
+						 alt="" width="698" height="503" border="0" /></p>
+<p class="BodyText">Ändern Sie nun direkt die Oracle Initialisierungs-Parameter, 
+ wie zum Beispiel den Parameter: nls_length_semantics auf CHAR.</p>
+<p class="BodyText">Bitte beachten Sie hierzu die aktuellen Hinweise in 
+ der Dokumentation Systeminstallation.</p>
+<p class="BodyText">Schließen Sie den Dialog über &quot;Schließen&quot; 
+ und klicken Sie dann auf &quot;Weiter&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image077.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Neben der Checkbox &quot;Create Database&quot; können 
+ die anderen beiden Checkboxen, &quot;Save as a Database Template&quot; 
+ (&quot;Als Vorlage speichern&quot;) und &quot;Generate Database Creation 
+ Scripts&quot; (&quot;Erzeugungsskript speichern&quot;), gecheckt werden. 
+ Dies wird von Gefasoft empfohlen. So hat man ein Template für spätere 
+ Verwendung und Skripte für Fehlerfälle. Somit kann man später gegebenenfalls 
+ fehlerhafte Installationen noch einmal stückweise nachkorrigieren</p>
+<p class="BodyText">Über den Button &quot;Customize Storage Locations…&quot; 
+ auf dieser Maske gelangt man zur Konfiguration des Speicherplatzes.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image079.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Nachfolgend werden die Angaben für die Tablespaces 
+ und Datenbankdateien vorgenommen.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image081.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Selektieren Sie links im Baum den Eintrag &quot;Kontrolldatei&quot;. 
+ Damit sind die Steuerdateien der Instanz gemeint.</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Diese Dateien sind sehr wichtig, denn wenn 
+ diese zerstört sind, kann die Instanz unter Umständen nicht mehr gestartet 
+ werden. Tragen Sie also mehrere Kopien der Kontrolldateien ein.</p>
+<p class="BodyText">Eine Kopie erzeugt man automatisch, indem man hier 
+ eine weitere Zeile hinzufügt. In diesem Beispiel sind es drei Kopien. 
+ Sicherheitshalber sollten diese sogar auf unterschiedlichen Festplatten 
+ oder RAID-Systemen liegen.</p>
+<p class="BodyText">Bitte ergänzen Sie auch den Namen der Instanz vor dem 
+ Dateinamen (also LEGATO). Wenn die Änderungen abgeschlossen sind, dann 
+ klicken Sie auf den Button &quot;Apply&quot;.</p>
+<p class="BodyText">Selektieren Sie links im Baum den Eintrag &quot;Tablespaces&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image083.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">In der Liste der Tablespaces sollten diese fünf Einträge 
+ erscheinen. Bitte klicken Sie auf "Erstellen" (&quot;Add&quot;), um einen 
+ weiteren Tablespace zu definieren. Für weitere Informationen zu den Tablespaces 
+ siehe bitte auch die Dokumentation Systeminstallation.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image085.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Danach erscheint eine neue Maske zum Anlegen des neuen 
+ Tablespaces. Bitte tragen Sie als Namen "LEGATO_DAT" und beim Filenamen 
+ "/u02/app/oracle/oradata/{DB_UNIQUE_NAME}/legato_dat.dbf" ein und ändern 
+ Sie die Anfangsgröße auf 1000 MB. Klicken Sie auf &quot;Apply&quot;, anschließend 
+ im Tablespaces-Baum auf LEGATO_DAT und im Fenster &quot;Datafiles&quot; 
+ auf den Dateinamen. Ein Klick auf das Stiftsymbol (&quot;Edit Tablespace&quot;) 
+ öffnet die nachfolgende Maske:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image087.png" 
+						 alt="" width="551" height="302" border="0" /></p>
+<p class="BodyText">Bitte wechseln Sie hier auf den Reiter "Options" und 
+ aktivieren Sie die Option "Automatically extend datafile when full (AUTOEXTEND)":</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image088.png" 
+						 alt="" width="560" height="310" border="0" /></p>
+<p class="BodyText">Damit wird ein automatisches Anwachsen des Tablespaces 
+ aktiviert. Wählen Sie als Erweiterung immer mindestens 64 Megabytes.</p>
+<p class="BodyText">Zusätzlich wird hier die Maximalgröße definiert, indem 
+ man einen &quot;Maximum Size Value&quot; einträgt. In diesem Beispiel 
+ sind dies 20.000 Megabytes.</p>
+<p class="BodyText">Das heißt, dieser Tablespace kann zwar wachsen, aber 
+ nur bis 20.000 Megabytes.</p>
+<p class="BodyText">Klicken Sie anschließend OK und auf der Maske &quot;Customize 
+ Storage&quot; sofort wieder &quot;Apply&quot;, um die Eingaben zu sichern. 
+ wiederholen Sie diese Schritte für den Tablespace LEGATO_IDX.</p>
+<p class="BodyText">Es sollten danach die folgenden sieben Tablespaces 
+ in der Liste erscheinen.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image089.png" 
+						 alt="" width="700" height="483" border="0" /></p>
+<p class="BodyText">Klicken Sie nun auf &quot;Datendateien&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image091.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Ergänzen Sie den Namen der Instanz (hier: &quot;legato&quot;) 
+ bei allen schon angelegten System-Tablespaces. Die anderen Einstellungen 
+ von den System-Tablespaces sollten nicht verändert werden.</p>
+<p class="BodyText">Selektieren Sie dann &quot;Redo Log-Gruppen&quot;.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image093.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Bitte erstellen Sie nun mindestens fünf Redo-Loggruppen 
+ mit jeweils zwei Mitgliedern. Ändern Sie die Dateinamen auf "legato_redo01a.rdo". 
+ Dies ist sicherer als diese bei ".log" zu belassen, da *.log Dateien gern 
+ gelöscht werden.</p>
+<p class="BodyText">Bitte beachten Sie, dass alle Log-Gruppen die gleiche 
+ Größe haben müssen!</p>
+<p class="BodyText">Außerdem wird empfohlen, die Kopie der Logdateien immer 
+ auf unterschiedlichen Laufwerken zu speichern.</p>
+<p class="BodyText">&quot;Ok&quot; führt zur Überprüfung der Voraussetzungen 
+ (Prerequisite Check).</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image095.png" 
+						 alt="" width="700" height="566" border="0" /></p>
+<p class="BodyText">Bei Fehlern muss nachkorrigiert werden; Warnungen können 
+ ggf. mit &quot;Ignore All&quot; übersprungen werden. Hier ist alles in 
+ Ordnung, und es geht mit &quot;Next&quot; zur Zusammenfassung.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image097.png" 
+						 alt="" width="700" height="566" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image099.png" 
+						 alt="" width="700" height="566" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image101.png" 
+						 alt="" width="700" height="566" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image103.png" 
+						 alt="" width="700" height="566" border="0" /></p>
+<p class="BodyText">Kontrollieren Sie anschließend noch einmal sehr sorgfältig 
+ die Zusammenfassung undklicken Sie dann bitte auf "Beenden". Anschließend 
+ beginnt die Einrichtung der Datenbank-Instanz.</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image105.png" 
+						 alt="" width="700" height="566" border="0" /></p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image107.png" 
+						 alt="" width="700" height="494" border="0" /></p>
+<p class="BodyText">Nachdem die Installation vollständig abgeschlossen 
+ ist, wird die Firewall wieder eingeschaltet mit</p>
+<p class="TextCode"># service iptables start</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Soll die Oracle-Datenbank von außen zugänglich sein, 
+ dann muss der Oracle-Port (hier: 1521) in der Firewall für eingehende 
+ und ausgehende Verbindungen geöffnet werden:</p>
+<p class="TextCode"># chkconfig iptables on</p>
+<p class="TextCode"># iptables -A INPUT -p tcp --dport 1521 -j ACCEPT</p>
+<p class="TextCode"># service iptables save</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><span style="font-size: 11.0pt; font-family: 'Palatino Linotype', serif;">Überprüfung 
+ mit</span><span courier="" style="font-family: ;">&#160;</span></p>
+<p class="TextCode"># service iptables status</p>
+<p class="TextCode">&#160;</p>
+</body>
+</html>

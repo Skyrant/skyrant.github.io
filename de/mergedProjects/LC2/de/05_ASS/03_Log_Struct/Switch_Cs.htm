@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "6.3.3_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Schaltbefehle</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Schaltbefehl" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Schaltbefehle">
+        <span>Schaltbefehle</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch;Others:Sapient_only">Schaltbefehle</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">Anwendungsstruktur | Fertigungsstruktur | Fertigungsknoten 
+ | Schaltbefehle</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Über Schaltbefehle können zeitabhängig beliebige Variablen 
+ auf einen definierten Wert gesetzt (gesteuert) werden. Die Schaltzeit 
+ wird dabei immer in Bezug auf ein definiertes Ereignis, z.B. Schichtbeginn 
+ festgelegt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Dafür muss bei der Variablen die Checkbox 
+ &quot;Weitergabe an GW&quot; = 1 sein. </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Das Zeitmodell ist Voraussetzung für den Betrieb dieses 
+ Moduls. Aus dem Zeitmodell, der Verknüpfung von Zeitschema mit der Fertigungsstruktur 
+ und der Parametrierung des Schichtkalenders werden entsprechende schichtabhängige 
+ Ereignisse (Beginn, Ende etc.) generiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Soll ein Schaltbefehl sofort ausgeführt werden, so 
+ kann einfach der Wert der entsprechenden Variable gesetzt werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Knoten</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Knotens 
+		 aus der Fertigungsstruktur, für den dieser Schaltbefehl gelten 
+		 soll. Wird automatisch befüllt und kann geändert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Variable</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Variablen. 
+		 Je nach Variablentyp wird mit dem Schaltbefehl die Variable auf 
+		 den Wert (num/str/Bool) der nachfolgenden Felder gesetzt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Frei wählbarer Name für den Schaltbefehl.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung des Schaltbefehls.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Offset (optional)</p></td>
+		<td><p class="TabellenInhalt">Offset. Kann auch negativ sein, um 
+		 eine Vorlaufzeit anzugeben.</p>
+		<p class="TabellenInhalt">Leerzeichen getrennte Liste von Dauern 
+		 angegeben. Dauern können auch mit einem Minus-Zeichen davor als 
+		 negativ gekennzeichnet werden. Sie können entweder</p>
+		<ul style="list-style: disc;">
+			<li style="margin-left: -20px;"><p class="TabellenInhalt">im 
+			 Uhrzeit-Format hh:mm:ss.SSS oder</p></li>
+			<li style="margin-left: -20px;"><p class="TabellenInhalt">als 
+			 Wert-und-Einheit angegeben werden. Folgende Einheiten sind 
+			 möglich:</p></li>
+			<li><p class="TabellenInhalt"><span style="word-spacing: normal; 
+												 font: 6pt &#39;Times New Roman&#39;;"> </span>y 
+			 für Jahre</p></li>
+			<li><p class="TabellenInhalt">M für Monate</p></li>
+			<li><p class="TabellenInhalt">w für Wochen</p></li>
+			<li><p class="TabellenInhalt">d für Tage</p></li>
+			<li><p class="TabellenInhalt">h für Stunden</p></li>
+			<li><p class="TabellenInhalt">m für Minuten</p></li>
+			<li><p class="TabellenInhalt">s für Sekunden</p></li>
+			<li><p class="TabellenInhalt">ms für Millisekunden</p></li>
+		</ul>
+		<p class="TabellenInhalt"> </p>
+		<p class="TabellenInhalt">Z.B. der Wert &quot;5 1/2 Minuten vorher&quot; 
+		 kann u.a. als &quot;-00:05:30&quot;, &quot;-5m -30s&quot;, &quot;-330s&quot; 
+		 oder &quot;-6m 30s&quot; angegeben werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Ereignis-Typ</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Ereignisses, 
+		 mit dem der Schaltbefehl ausgeführt werden soll.<br/>
+		Zu den einzelnen Ereignissen siehe Liste unten.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Min. Lücke</p>
+		<p class="TabellenInhalt">(Bool)</p></td>
+		<td><p class="TabellenInhalt">Mindestdauer ohne Produktion/&quot;Ereignis 
+		 Produktions-Beginn/Ende: Mindest-Dauer ohne Produktion davor/danach&quot;:<br/>
+		<br/>
+		Schichtfreie Zeitspanne vor Produktionsbeginn-Ereignissen [in min] 
+		 (SysParam: -5).</p>
+		<p class="TabellenInhalt">Schichtfreie Zeitspanne nach Produktionsende-Ereignissen 
+		 [in min] (SysParam:-6).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Sortiernummer (optional)</p></td>
+		<td><p class="TabellenInhalt">Mehrere Variable können mit Angabe 
+		 einer Sortiernummer aufsteigend sortiert werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Wert (Bool / num / str)<br/>
+		</p></td>
+		<td><p class="TabellenInhalt">Vorgabe des Variablenwerts, den die 
+		 in der Spalte &quot;Variable&quot; definierte Variable mit dem 
+		 Schaltbefehl annehmen soll. Der Wert ist entsprechend dem Typ 
+		 der Variablen in dessen Wertfeld einzutragen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Schichttyp (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Schichttyps. 
+		 Schaltbefehle können mit einem Schichttyp verknüpft werden, um 
+		 ihn nur bei einem Ereignis dieser Schicht zu aktivieren.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pausentyp (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Pausentyps. 
+		 Schaltbefehle können mit einem Pausentyp verknüpft werden, um 
+		 ihn nur bei einem Ereignis dieses Pausentyps zu aktivieren.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Ohne Feiertage</p></td>
+		<td><p class="TabellenInhalt">Checkbox. 1 = Feiertage (Einträge 
+		 in der Tabelle &quot;Feiertage&quot;) werden ausgeschlossen (d.h., 
+		 Schaltbefehle werden an Feiertagen nicht ausgeführt).</p>
+		<p class="TabellenInhalt">0 = Schaltbefehle werden jeden Tag ausgeführt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Wochentage</p></td>
+		<td><p class="TabellenInhalt">Wochentage, an denen dieser Schaltbefehl 
+		 ausgeführt werden soll.</p>
+		<p class="TabellenInhalt">Durch Komma getrennte Liste von Wochentagen 
+		 oder Bereichen davon.</p>
+		<p class="TabellenInhalt">Einzelne Wochentage können als Zahl (1 
+		 für Montag bis 0 oder 7 für Sonntag) oder als Abkürzung des englischen 
+		 Namens (Sun, Mon, Tue, Wed, Thu, Fri, Sat) angegeben werden.</p>
+		<p class="TabellenInhalt">Bereiche werden durch ein Minus-Zeichen 
+		 (-) gekennzeichnet und enthalten beide Grenzen, also steht &#39;mon 
+		 - 3&#39; für Montag, Dienstag und Mittwoch.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Aktueller Wert</p></td>
+		<td><p class="TabellenInhalt">Hier wird der aktuelle Wert der Variablen 
+		 angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Letztes Update</p></td>
+		<td><p class="TabellenInhalt">Hier wird der Zeitstempel der letzten 
+		 Wertänderung der Variablen angezeigt. Nur zur Information; schreibgeschützt.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Verwendung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Eine typische Anwendung dieser Funktion ist z.B. das 
+ Einschalten von Hilfsaggregaten vor Schichtbeginn, Starten und Stoppen 
+ von Montagebändern mit Schichtbeginn /-ende und Pausenende /-beginn.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Ereignisse</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Diese Ereignisse können in der Spalte &quot;Event type&quot; 
+ ausgewählt werden, um den Schaltbefehl zu triggern.</p>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<colgroup><col/>
+	<col/>
+	</colgroup><tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Ereignis</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Schichtbeginn</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Zeitpunkt des Schichtanfangs 
+		 aus dem Zeitmodell.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Schichtende</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Zeitpunkt des Schichtendes 
+		 aus dem Zeitmodell.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Pausenbeginn</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Zeitpunkt eines Pausenanfangs 
+		 aus dem Zeitmodell.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Pausenende</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Zeitpunkt eines Pausenendes 
+		 aus dem Zeitmodell.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Produktionsbeginn</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Beginn der ersten Schicht 
+		 nach einer produktionsfreien Zeit.</p>
+		<p class="TabellenInhalt">Die Zeit wird mit dem Systemparameter 
+		 -5 definiert.</p>
+		<p class="TabellenInhalt">Mindestlänge der produktionsfreien Zeit 
+		 bevor ein Produktionsbeginn ausgelöst wird (Systemparameter -5). 
+		 Wenn kein Schaltbefehl angegeben wird, wird der Wert vom Systemparameter 
+		 verwendet.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Produktionsende</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Ende der letzten Schicht 
+		 vor Beginn einer produktionsfreien Zeit.</p>
+		<p class="TabellenInhalt">Die Zeit wird mit dem Systemparameter 
+		 -6 definiert.</p>
+		<p class="TabellenInhalt">Mindestlänge der produktionsfreien Zeit 
+		 bevor ein Produktionsende ausgelöst wird (Systemparameter -6). 
+		 Werte in dieser Spalte überschreiben festgelegte Systemparameterwert. 
+		 Wenn kein Wert für den Schaltbefehl angegeben wird, wird der Wert 
+		 vom Systemparameter verwendet.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Tagesbeginn</p></td>
+		<td><p class="TabellenInhalt">Ereignis um 00:00:00 Uhr.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Beginn erste Schicht</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Zeitpunkt des ersten 
+		 Schichtbeginns eines Tages.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Ende letzte Schicht</p></td>
+		<td><p class="TabellenInhalt">Ereignis zum Zeitpunkt des Schichtendes 
+		 der letzten Schicht eines Tages.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Tagesbeginn ohne Produktion</p></td>
+		<td><p class="TabellenInhalt">Ereignis um 00:00:00 Uhr, wenn für 
+		 den beginnenden Tag keine Produktion geplant ist.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Tagesbeginn mit Produktion</p></td>
+		<td><p class="TabellenInhalt">Ereignis um 00:00:00 Uhr, wenn für 
+		 den beginnenden Tag mindestens eine Produktionsschicht geplant 
+		 ist.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">manuell</p></td>
+		<td><p class="TabellenInhalt">Ereignis wird nicht automatisch eingetragen 
+		 (Eintrag wird in der  WebApp Ansicht Schaltbefehle vom 
+		 Benutzer manuell ausgelöst).</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" style="font-weight: bold;" data-condition="Others:Deutsch;Others:Sapient_only">Informationen zur 
+ produktionsfreien Zeit:</p>
+<p class="TextkörperHinweis" style="font-weight: normal;" data-condition="Others:Deutsch;Others:Sapient_only">Die Definition 
+ der produktionsfreie Zeit wird mit den Parametern -5 und -6 eingestellt.</p>
+<p data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">30 Minuten vor Beginn der Produktion sollen Hilfsaggregate 
+ eingeschaltet werden, und zum Produktionsbeginn das Montageband anlaufen. 
+ Während der Pausen soll das Band angehalten werden, zum jeweiligen Schichtende 
+ die Stückzähler in den Steuerungen genullt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Schaltbefehle werden mit den Ereignissen verknüpft 
+ und für die Schaltungen boolesche Variable gesetzt bzw. zurückgesetzt. 
+ Eine Variable Iststückzahl wird mit dem Ereignis Schichtende auf den Wert 
+ &lt;0&gt; gesetzt. In Gateway und OPC-Server-Konfiguration muss diese 
+ Variable als READWRITE konfiguriert sein, damit der Wert auch in den SPS 
+ genullt werden kann.</p>
+
+
+</body></html>

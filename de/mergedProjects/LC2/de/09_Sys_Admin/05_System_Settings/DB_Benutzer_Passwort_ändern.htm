@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.4.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">DB Benutzer Passwort ändern</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DB Benutzer Passwort ändern">
+        <span>DB Benutzer Passwort ändern</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">DB Benutzer Passwort ändern</h1>
+<h2 data-condition="Others:Deutsch"><a id="Änderungen_im_LC2"></a>Änderungen im LC2</h2>
+<p data-condition="Others:Deutsch">Der LC2 verwendet zwei unabhängige DB-Benutzer:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="BodyText"><span style="font-weight: bold;">LC2-Login-User</span> 
+	 (niedrig privilegierter Benutzer)<br/>
+	Dieser wird gemeinsam mit den Verbindungseinstellungen auf jedem Rechner 
+	 lokal gespeichert und wird demnach von jedem LC2-Anwender selbst verwaltet.</p></li>
+	<li><p class="BodyText"><span style="font-weight: bold;">Intern für 
+	 Schreibzugriffe verwendeter Benutzer</span> (höher privilegierter 
+	 Benutzer)<br/>
+	Dieser wird systemweit zentral in einem Systemparameter gespeichert 
+	 und in der Regel von einem Key User/Administrator festgelegt. Die 
+	 Anpassung dieses Passwortes sollte unmittelbar nach der Passwortänderung 
+	 durchgeführt werden.  </p></li>
+</ul>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Änderung_des_Passworts_als_LC2-Login-User__niedrig_privilegierter_Benutzer_"></a>Änderung 
+ des Passworts als LC2-Login-User (niedrig privilegierter Benutzer)</h2>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Wählen Sie nach dem Starten des LC2 im <span style="font-weight: bold;">Database Connections</span>-Dialog (Verbindungsdialog) 
+	 die gewünschte Datenbank aus.<br/>
+	</p></li>
+	<li><p class="BodyText">Klicken Sie auf die <span style="font-weight: bold;">Edit</span>-Schaltfläche.<br/>
+	<br/>
+	<img src="../../../assets/images/DB_change_password_1.png" alt="" style="border: none;" border="0"/></p></li>
+	<li><p class="BodyText">Bearbeiten Sie im <span style="font-weight: bold;">Properties</span>-Dialog 
+	 anschließend die DB-Verbindung unter <span style="font-weight: bold;">Connection 
+	 &gt; Legato Connection String [...]</span>.<br/>
+	<br/>
+	<img src="../../../assets/images/DB_change_password_2.png" alt="" style="border: none;" border="0"/></p></li>
+	<li><p class="BodyText">Ändern Sie im <span style="font-weight: bold;">Connection 
+	 Properties-</span>Dialog anschließend das Passwort. <br/>
+	<br/>
+	<img src="../../../assets/images/DB_change_password_3.png" alt="" style="border: none;" border="0"/></p></li>
+	<li><p class="BodyText">Klicken Sie abschließend auf die <span style="font-weight: bold;">Test 
+	 Connection</span>-Schaltfläche, um die Verbindung zu testen.</p></li>
+</ol>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Das Passwort für den Login-User wird verschlüsselt 
+ lokal auf dem Rechner in der Datei global.config gespeichert.</p>
+<p data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Änderung_des_Passwortes_als_höher_privilegierter_Benutzer"></a>Änderung 
+ des Passwortes als höher privilegierter Benutzer</h2>
+<p data-condition="Others:Deutsch">Der LC2 verwendet intern den höher privilegierten Benutzer, um Konfigurationsänderungen 
+ in die Datenbank speichern zu können. Die Änderung des Passwortes dieses 
+ Benutzers erfolgt über den LC2.</p>
+<p data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p>Verbinden Sie sich mit der gewünschten Datenbank.</p></li>
+</ol>
+<ol start="2" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p>Nach der Anmeldung mit dem Legato-Benutzer erscheint der <span style="font-weight: bold;">Database Read/Write User</span>-Dialog. 
+	 Geben Sie hier <span style="font-weight: bold;">nicht</span> den gewöhnlichen 
+	 Sapient-Anmeldename an. An dieser Stelle muss der höher privilegierte 
+	 Benutzer eingegeben werden.<br/>
+	<br/>
+	<img src="../../../assets/images/DB_change_password_5.png" alt="" style="border: none;" border="0"/></p></li>
+</ol>
+<p data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Dieser eingegebene Benutzer wird mit verschlüsseltem 
+ Passwort in den Systemparametern -202 und -203 hinterlegt.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h2 data-condition="Others:Deutsch"><a id="Änderungen_in_Sapient"></a>Änderungen in Sapient</h2>
+<p class="BodyText" data-condition="Others:Deutsch">In regelmäßigen Abständen müssen die Benutzerpasswörter 
+ für die Datenbank geändert werden. </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Einige Teile dieser Beschreibung sind 
+ kundenspezifisch. Klären Sie mit Ihrem Gefasoft-Ansprechpartner die genaue 
+ Vorgehensweise ab.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Gehen Sie wie folgt vor, um diese DB-Änderungen für 
+ Benutzer durchzuführen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Stoppen Sie alle Dienste, die sowohl direkt, 
+	 als auch indirekt auf die DB zugreifen.<br/>
+	• SapientEngine(s)<br/>
+	• SCC(s)<br/>
+	• Applikation(en) zu Drittsystemen, welche Zugriff auf die Datenbank 
+	 haben.<br/>
+	</p></li>
+</ol>
+<ol start="2" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Ändern Sie die Passwörter der relevanten DB-Benutzer. 
+	 Diese sind z.B.<br/>
+	• SAPIENT_CLIENT<br/>
+	• SAPIENT_OWNER<br/>
+	• SAPIENT_SERVER<br/>
+	• SAPIENT_READ (hat nur Leserechte)</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol start="3" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Passen Sie die Properties-Datei <span style="font-weight: bold;">„sapieng.properties</span>“ 
+	 für alle SapientEngine(s) an.</p></li>
+	<li><p class="BodyText">Tragen Sie mit dem SQL-Developer/SQL-Workbench 
+	 in der Tabelle “<span style="font-weight: bold;">GP_R_CONNECTION</span>S” 
+	 unter <span style="font-weight: bold;">PROPERTIES</span> das neue 
+	 Passwort ein. Dies gilt für die Datenbankverbindungen (<span style="font-weight: bold;">object_names</span> 
+	 in der Tabelle &quot;<span style="font-weight: bold;">GP_R_CONNECTIONS</span>&quot;):<br/>
+	<br/>
+	• REPOSITORY (Zugriff auf die GP_R-Tabellen)<br/>
+	• LEGATO (Zugriff auf alle anderen Tabellen)</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol start="5" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Starten Sie die SapientEngine(s).</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol start="6" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Starten Sie den LC2 und passen Sie die Verbindungsparameter 
+	 an. Testen Sie anschließend die Verbindung.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol start="7" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Melden Sie sich am LC2 mit dem eigenen User 
+	 an. Die Anwendung erkennt die Änderungen und fragt nach neuem DB User. 
+	 Verwenden Sie den User „<span style="font-weight: bold;">SAPIENT_OWNER</span>“ 
+	 und tragen Sie das neue Passwort ein.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<ol start="8" style="list-style: decimal;" data-condition="Others:Deutsch">
+	<li><p class="BodyText">Starten Sie alle anderen Programme (SCCs, Koppelung 
+	 zu Drittsysteme) und kontrollieren Sie die Fehlerausgabe.</p></li>
+</ol>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="TextkörperHinweis">Die Passwörter müssen an allen Stellen 
+	 geändert werden, an denen Benutzer existieren (z.B. beim Starten der 
+	 Sapient Engine).</p></li>
+	<li><p class="TextkörperHinweis">Es gibt für die Sapient Engine eine 
+	 Properties-Datei (sapieng.properties), die einen Link zur Datenbank 
+	 enthält. Dieser Link wird benötigt, damit sich die Sapient Engine 
+	 mit der Datenbank verbinden kann. </p></li>
+	<li><p class="TextkörperHinweis">In der Properties-Datei sind die Passwörter 
+	 abrufbar. Die Passwörter sind obfuscated (verschleiert/nicht im Klartext 
+	 angezeigt, jedoch auch nicht verschlüsselt).</p></li>
+	<li><p class="TextkörperHinweis">Die Sapient Engine kann so gestartet 
+	 werden, dass das Passwort nicht verschleiert dargestellt wird. </p></li>
+	<li><p class="TextkörperHinweis">Für alle Sapient Engines müssen die 
+	 Passwörter in den Properties-Dateien geändert werden.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="font-weight: bold;" data-condition="Others:Deutsch">Verschleierte/obfuscated 
+ Passwörter:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im SQL Workbench ist in der Tabelle <span style="font-weight: bold;">gp_r_connections</span> 
+ (Liste der Verbindungen im <span style="font-weight: bold;">Repository</span>) 
+ unter <span style="font-weight: bold;">Data</span> und <span style="font-weight: bold;">Properties</span> 
+ das Passwort abrufbar (<span style="font-weight: bold;">entweder</span> 
+ obfuscated <span style="font-weight: bold;">oder</span> auch im Klartext).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="color: #ff0000; font-weight: bold;">(1)</span> 
+ Passwort im Klartext</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span style="font-weight: bold; color: #ff0000;">(2)</span> 
+ Verschleiertes (obfuscated) Passwort</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperListHinweis" data-condition="Others:Deutsch">Das unten stehende Beispiel zeigt zu Anschauungszwecken 
+ sowohl das <span style="font-weight: bold;">Passwort im Klartext </span><span style="font-weight: bold; color: #ff0000;">(1)</span>, als auch das 
+ <span style="font-weight: bold;">verschleierte (obfuscated) Passwort </span><span style="font-weight: bold; color: #ff0000;">(2)</span> gezeigt. Im 
+ Realfall ist entweder das Passwort im Klartext oder das verschleierte 
+ (obfuscated) Passwort ersichtlich.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/DB_Passwort_ändern.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

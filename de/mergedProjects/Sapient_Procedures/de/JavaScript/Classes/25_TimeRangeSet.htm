@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_19";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">TimeRangeSet</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="TimeRangeSet">
+        <span>TimeRangeSet</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">TimeRangeSet</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Objekt-Typ dient dazu, eine aufsteigend sortierte 
+ Menge von überlappungsfreien Zeit-Intervallen zu verwalten. Die Intervalle 
+ werden als JavaScript-Objekte mit den Eigenschaften &quot;lo&quot; und 
+ &quot;hi&quot; dargestellt, wobei es sich im mathematischen Sinne um &quot;oben 
+ offene Intervalle&quot; handelt, d.h. die untere Grenze (lo) ist im Intervall 
+ enthalten, die Obere (hi) nicht. Beim Lesen aus TimeRangeSet werden Zeitpunkte 
+ immer als JavaScript Date-Objekt geliefert, beim Schreiben werden auch 
+ numerische Angaben (Millisekunden-Zeitstempel wie von Date.getTime() geliefert) 
+ akzeptiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Hinzufügen von Intervallen zu einem TimeRangeSet 
+ werden gegebenenfalls überlappende oder aneinander angrenzende Intervalle 
+ zusammengefasst, beim Löschen werden nötigenfalls enthaltene Intervalle 
+ aufgeteilt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Damit die Intervalle in einem TimeRangeSet-Objekt in 
+ Schleifen durchlaufen werden können, bietet das Objekt die Eigenschaften 
+ &quot;first&quot; und &quot;last&quot;, sowie die Methoden &quot;next()&quot; 
+ und &quot;prev()&quot; an. Die Liste kann dadurch in aufsteigender Reihenfolge 
+ z.B. so durchlaufen werden:</p>
+<p class="TextCode" data-condition="Others:Deutsch">for (var range = set.first; range; range = set.next()) 
+ {…}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">in absteigender Reihenfolge z.B. so:</p>
+<p class="TextCode" data-condition="Others:Deutsch">for (var range = set.last; range; range = set.prev()) 
+ {…}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">TimeRangeSet-Objekte haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">empty (Boolean, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, wenn die Liste leer ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">length (Zahl, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Anzahl der nicht überlappenden Zeit-Intervalle in der 
+ Liste.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">millis (Zahl, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gesamtdauer aller enthaltenen Zeit-Intervalle der Liste.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">min (Date, read/write):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Frühester in der Liste enthaltener Zeitpunkt. Beim 
+ Schreiben auf diese Eigenschaft wird die Liste so gekürzt, dass sie keine 
+ Zeitpunkte mehr enthält, die vor dem geschriebenen Wert liegen. Die Liste 
+ bleibt unverändert, wenn auf &quot;min&quot; ein Wert geschrieben wird, 
+ der kleiner als der aktuelle Wert ist. Beim Schreiben kann der Wert als 
+ Date-Objekt oder als Zahl (Millisekunden, wie von Date.getTime() geliefert) 
+ angegeben werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">max (Date, read/write):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Spätester gerade nicht mehr in der Liste enthaltener 
+ Zeitpunkt. Beim Schreiben auf diese Eigenschaft wird der Inhalt der Liste 
+ so gekürzt, dass sie nur noch Zeitpunkte enthält, die vor dem geschriebenen 
+ Wert liegen. Die Liste bleibt unverändert, wenn ein Wert geschrieben werden 
+ soll, der größer als der aktuelle Wert ist. Zum Schreiben kann entweder 
+ ein Date-Objekt oder ein Millisekunden-Wert benutzt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">range (Object, read/write):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das alle Werte der Liste umfassende Intervall. Enthält 
+ beim Lesen ein Objekt mit den beiden Eigenschaften &quot;lo&quot; und 
+ &quot;hi&quot;, beide vom Typ Date. &quot;lo&quot; enthält den frühesten 
+ in der Liste enthaltenen Zeitpunkt, &quot;hi&quot; den Zeitpunkt eine 
+ Millisekunde nach dem spätesten in der Liste enthaltenen Zeitpunkt. Beim 
+ Schreiben wird der Inhalt der Liste so gekürzt, dass alle in der Liste 
+ enthaltenen Werte im übergebenen Intervall liegen. Beim Schreiben können 
+ die Zeitpunkte außer als Date-Objekte auch als Millisekunden-Werte übergeben 
+ werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">first (Object, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Erstes (frühestes) in der Liste enthaltenes Intervall. 
+ Objekt mit zwei Eigenschaften vom Typ Date namens &quot;lo&quot; und &quot;hi&quot;.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">last (Object, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Letztes (spätestes) in der Liste enthaltenes Intervall. 
+ Objekt mit zwei Eigenschaften vom Typ Date namens &quot;lo&quot; und &quot;hi&quot;.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">current (Object, readonly):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aktuelles Intervall beim Durchlaufen der Liste mittels 
+ &quot;next()&quot; und &quot;prev()&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem bieten TimeRangeSet-Objekte noch folgende 
+ Methoden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">add(...):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Fügt ein Intervall zum TimeRangeSet hinzu. Kann mit 
+ einem oder zwei Parametern auf verschiedene Arten aufgerufen werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">add(timestamp): Mit einem einzelnen Parameter 
+ vom Typ Date oder Zahl (Zeitpunkt als Millisekunden) aufgerufen, fügt 
+ den angegebenen einzelnen Zeitpunkt (Intervall ab &quot;timestamp&quot; 
+ bis &quot;timestamp&quot; + 1) der Liste hinzu.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">add(range): Wird &quot;add&quot; mit einem einzigen 
+ Parameter aufgerufen, der ein Objekt darstellt, welches Eigenschaften 
+ &quot;lo&quot; und &quot;hi&quot; hat, fügt dies das Intervall von &quot;lo&quot; 
+ bis &quot;hi&quot; dem TimeRangeSet hinzu.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">add(set): Ist der einzige angegebene Parameter 
+ ein anderes TimeRangeSet, so werden alle in jenem enthaltenen Zeit-Intervalle 
+ dieser Liste hinzugefügt.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">add(lo, hi): Beim Aufruf mit zwei Parametern werden 
+ diese als Unter- und Obergrenze eines Zeit-Intervalls betrachtet und dieses 
+ der Liste hinzugefügt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">remove(...):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Entfernt alle angegebenen Zeitpunkte aus der Liste. 
+ Kann mit folgenden Parametern aufgerufen werden:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">remove(timestamp): Entfernt den einzelnen angegebenen 
+ Zeitpunkt (Intervall ab &quot;timestamp&quot; bis &quot;timestamp + 1&quot;) 
+ aus dem TimeRangeSet. Der Parameter kann als Date-Objekt oder als Millisekunden-Wert 
+ angegeben werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">remove(range): Entfernt alle Zeitpunkte aus dem 
+ angegebenen Intervall aus der Liste. Das übergebene Objekt muss Eigenschaften 
+ &quot;lo&quot; und &quot;hi&quot; haben, die Start- und Ende-Zeitpunkt 
+ als Date-Objekt oder Millisekunden-Wert angeben.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">remove(set): Bei Aufruf mit einem anderen TimeRangeSet 
+ als einzigem Parameter werden alle im übergebenen TimeRangeSet enthaltenen 
+ Zeitpunkte aus dieser Liste entfernt.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">remove(hi, lo): Unter- und Obergrenze eines zu 
+ entfernenden Intervalls können auch als getrennte Parameter angegeben 
+ werden, wie üblich als Date- oder Millisekunden-Wert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">removeFirst():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Entfernt das erste (früheste) Intervall aus der Liste 
+ und liefert es als Objekt mit den Eigenschaften &quot;lo&quot; und &quot;hi&quot; 
+ (beide vom Type Date) als Ergebnis.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">removeLast():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Entfernt das letzte (späteste) Intervall aus der Liste 
+ und gibt es als Ergebnis zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">clear():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Leert die Liste (entfernt alle enthaltenen Intervalle 
+ daraus).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">contains(…):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ergibt true, falls alle übergebenen Zeitpunkte im TimeRangeSet 
+ enthalten sind, ansonsten false. Die zu prüfenden Zeitpunkte können wie 
+ bei add(...) oder remove(...) auf verschiedene Arten angegeben werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">overlaps(...):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ergibt true, falls mindestens einer der übergebenen 
+ Zeitpunkte im TimeRangeSet enthalten ist. Kann die gleichen Parameter 
+ verarbeiten wie add(...) oder remove(...).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">commonMillis(...):</p>
+<p class="BodyText" data-condition="Others:Deutsch">Berechnet die Anzahl Millisekunden, die sowohl im übergebenen 
+ Intervall oder TimeRangeSet als auch in dieser Liste enthalten sind (summierte 
+ Dauer aller Überlappungen). Kann auf die gleiche Art und Weise aufgerufen 
+ werden wie auch add(...) und remove(...).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">next():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schaltet zum nächsten Intervall in dem TimeRangeSet 
+ weiter und liefert dieses zurück als Objekt mit den Eigenschaften &quot;lo&quot; 
+ und &quot;hi&quot; (jeweils vom Typ Date), Am Ende der Liste ist das Ergebnis 
+ null. Wird beim Iterieren über die Liste verwendet (siehe einleitende 
+ Beschreibung oben).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">prev():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schaltet zum nächst-niedrigeren (früheren) Intervall 
+ in der Liste und liefert dieses Intervall als Objekt mit den beiden Eigenschaften 
+ &quot;lo&quot; und &quot;hi&quot; (Date) als Ergebnis. Am Anfang der Liste 
+ ist das Ergebnis null. Wird beim Iterieren der Liste in absteigender Richtung 
+ benutzt (s.o.).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">toArray():</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert alle Intervalle aus dem TimeRangeSet als Array 
+ von Objekten, deren jedes die Grenzen eines Intervalls als Date-Eigenschaften 
+ &quot;lo&quot; und &quot;hi&quot; angibt. Die Intervalle im Array sind 
+ aufsteigend sortiert.</p>
+
+
+</body></html>

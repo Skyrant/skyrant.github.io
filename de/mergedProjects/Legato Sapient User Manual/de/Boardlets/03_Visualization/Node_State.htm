@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Monitoring - Knotenstatus</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Monitoring - Knotenstatus">
+        <span>Monitoring - Knotenstatus</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Monitoring - Knotenstatus</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Knotenstatus</span> 
+ zeigt zu einem selektierten Knoten den Status an. Der Status wird über 
+ die Bits eines vom Gateway gesendeten Werts auf ein Symbol gemappt. Das 
+ entsprechende Symbol für das erste gefundene Bit wird dann angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/State.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die zur Verfügung stehenden Symbole sind im jeweiligen 
+ Theme definiert und in der API-Doku beschrieben. Momentan sind folgende 
+ Symbole parametriert:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="42.694%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col id="IconColWidth"/>
+	<col style="width: 81.442%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icon_Check.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">icon-check (default)</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icon_Stop_Hand.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">icon-stop-hand</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icon_Robot.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">icon-robot</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icon_Driller.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">icon-driller</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText"><img src="../../../Bilder/Icon_Tool.png" alt="" style="border: none;" border="0"/></p></td>
+		<td><p class="TblBodyText">icon-tool</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch"><span style="font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; 
+											 color: #000000; font-style: normal; 
+											 font-variant-ligatures: normal; 
+											 font-variant-caps: normal; 
+											 font-weight: normal; letter-spacing: normal; 
+											 orphans: 2; text-transform: none; 
+											 white-space: normal; widows: 2; 
+											 word-spacing: 0px; -webkit-text-stroke-width: 0px;">Alle 
+ verfügbaren Symbole (Icons) sind hier zu finden:</span></p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch">[Adresse der Sapient Engine]/app/assets/icons/demo.html</p>
+<p class="BodyText" style="margin: 0cm 0cm 5.95pt; text-align: justify; 
+	 font-size: 11pt; font-family: &#39;Palatino Linotype&#39;, serif; color: #000000; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px;" data-condition="Others:Deutsch"> </p>
+<div data-conref="../../../assets/snippets/de_Detail-Info.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Es kann als eigenständiges Boardlet angezeigt werden 
+ oder als Detail-Info ins Layout-Boardlet eingebettet werden.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Knotenstatus</span> 
+ stehen außerdem folgende Einstellungen zur Verfügung. </p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Layout"></a>Reiter Layout</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Knotenname anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird festgelegt, ob 
+ der Knotenname neben dem Symbol angezeigt werden soll oder nicht.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Dargestellter Text:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann ein beliebiger Text eingegeben werden, 
+ der neben dem Symbol und ggf. neben dem Knotennamen angezeigt wird.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Verwendete Icons:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Komma-separierte Liste der verwendeten Symbole. 
+ Diese müssen im Theme definiert sein. Welches Symbol angezeigt wird, hängt 
+ davon ab, welches Bit vom Gateway gesetzt wird. </p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch"><span class="Bold">Beispiele</span>: </p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Ist das 1. Bit gesetzt (z.B. 01000001 - 
+	 Bits werden von rechts nach links gelesen), wird das 1. Symbol angezeigt 
+	 (im Beispiel also icon-stop-hand).</p></li>
+	<li><p class="ListBulletL1">Ist das 2. Bit gesetzt (z.B. 01000010), 
+	 wird das 2. Symbol angezeigt usw. </p></li>
+</ul>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ausschlaggebend ist das erste gefundene Bit.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Standard-Symbol:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Symbol, das angezeigt wird, wenn kein Bit gesetzt 
+ ist.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Alarmierungsmodus:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl des Alarm-Modus. 
+ Legt fest, ob für Warnungen und / oder Alarme nur der Rahmen eingefärbt 
+ wird (border) oder der gesamte Hintergrund (background). Die jeweiligen 
+ Farben für Warn-Grenzen, Alarm-Grenzen und IO-Zustand werden im Theme 
+ definiert. Im Beispiel ist IO-Status grün, Warnung lila, Alarm rot.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Alarmierungsebenen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl der Alarmstufen (d.h., 
+ wann ein Farbumschlag erfolgen soll). Zur Auswahl stehen:</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1"><span class="Bold">Warning and alert</span>: 
+	 Ist das Alarm-Bit gesetzt, wird der Farbumschlag für die Alarmgrenze 
+	 angezeigt, ist das Warn-Bit gesetzt, der Farbumschlag für die Warngrenze.</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">Warning</span>: Ist 
+	 das Warn-Bit gesetzt, wird der Farbumschlag für die Warngrenze angezeigt.</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">Alert</span>: Ist das 
+	 Alarm-Bit gesetzt, wird der Farbumschlag für die Alarmgrenze angezeigt.</p></li>
+	<li><p class="ListBulletL1"><span class="Bold">None</span>: Es wird 
+	 nie ein Farbumschlag angezeigt.</p></li>
+</ul>
+<p class="GUIControl" data-condition="Others:Deutsch">Bitmuster Alarm:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Angabe einer Zahl, welches Bit / welche Bits 
+ als Alarmgrenze angesehen werden sollen. Beispiel: 0 = keine Alarmgrenze; 
+ 1 = erstes Bit; 2 = zweites Bit; 11 = erstes, zweites und viertes Bit 
+ etc.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Bitmuster Warnung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Angabe einer Zahl, welches Bit / welche Bits 
+ als Warngrenze angesehen werden sollen. 0 = keine Warngrenze; 1 = erstes 
+ Bit; 2 = zweites Bit; 11 = erstes, zweites und viertes Bit etc.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<div data-conref="../../../assets/snippets/Filter/de_Value_Types.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Variablenarten:</p>
+<p class="GUIControlDescr">Filter auf Variablenarten. Für alle Variablen 
+ der hier definierten Variablenarten, die dem oben selektierten Knoten 
+ zugeordnet sind, werden die Werte im Diagramm angezeigt. Die Variablenarten 
+ können aus einer Dropdown-Liste ausgewählt werden. Leer = kein Filter, 
+ alle Variablenarten werden angezeigt.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_types.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablenarten werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Grundkonfiguration</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Allgemeine Anwendungen</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Variablenarten</span> parametriert.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Diese IDs sind im Filter des Boardlets anzugeben, z.B. 
+ 2 = Iststückzahl, 3 = Sollstückzahl.</p>
+<div data-conref="../../../assets/snippets/LC2/de_p_values_config.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablen werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Anwendungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Datenaustausch</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Modul] 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ [Verbindung] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Variablen</span> 
+ gepflegt. Hier wird auch die Einheit festgelegt.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_relations.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Knoten] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Variablenzuordnungen</span> werden die Variablen dem 
+ Knoten zugeordnet, für den sie angezeigt werden sollen. Hier muss das 
+ Flag &quot;Anzeigen&quot; auf 1 gesetzt sein, damit die Variable angezeigt 
+ wird. Die Sortiernummer legt fest, in welcher Reihenfolge die Variablen 
+ angezeigt werden.</p>
+
+
+</div>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">showNode</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">displayText</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">iconArray</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">defaultIcon</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">alertMode</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">alertLevels</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">alertBits</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">warningBits</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

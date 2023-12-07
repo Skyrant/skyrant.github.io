@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.2.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">CopyNumVal</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="CopyNumVal">
+        <span>CopyNumVal</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Sapient_only">CopyNumVal</h3>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die Funktion kopiert einen numerischen Wert von einer 
+ Quelle (Variable oder Konstante) auf ein Ziel (Variable).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel: Weitergabe einer Sollstückzahl an verschiedene 
+ Steuerungen. Die Quell-Stückzahlvariable ist intern vorhanden und wird 
+ auf Variablen der Datenquelle Gateway PLC kopiert und von dort per Weitergabe 
+ an Gateway an die SPS übertragen.</p>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">Parameterliste</h4>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">ParamNo 0 – DESTINATION</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Typ: Variable, Datentyp Numerisch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">InOut: Out</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Multi: 0</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung: Zielvariable</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">ParamNo 
+ 1 – SOURCE</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Typ: Variable oder Konstante, Datentyp Numerisch</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">InOut: In</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Multi: 0</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beschreibung: zu kopierender Wert</p>
+
+
+</body></html>

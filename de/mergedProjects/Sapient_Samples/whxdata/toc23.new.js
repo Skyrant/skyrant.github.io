@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Allgemein","type":"item","tilePath":"","description":"","url":"de/Prod_Structure/Inkscape/Introduction/General.htm"},{"name":"Systemvoraussetzungen","type":"item","tilePath":"","description":"","url":"de/Prod_Structure/Inkscape/Introduction/Sys_Requ.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

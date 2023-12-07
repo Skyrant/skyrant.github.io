@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">JSON</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="JSON">
+        <span>JSON</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">JSON</h1>
+<h3 data-condition="Others:Deutsch"><a id="Java_Script_Object_Notation"></a>Java Script Object Notation</h3>
+<p class="MsoBodyText" data-condition="Others:Deutsch">JSON ist ein standardmäßiges Ordnerformat zur Beschreibung 
+ von Datenobjekten. Im Kontext von Sapient Visualisierungszeichnungen, 
+ wird JSON für mehrere Fälle verwendet, wie Binding Definitionen eines 
+ Visualisierungsobjekts oder HMI Projektordnern.</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">Weitere Hintergrundinformationen können z. B. auf 
+ Wikipedia <span lang="EN-US" xml:lang="EN-US" style="font-family: Wingdings; 
+				 mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma; 
+				 mso-ansi-language: EN-US; mso-char-type: symbol; mso-symbol-font-family: Wingdings;">à</span> 
+ <a href="https://de.wikipedia.org/wiki/JSON">JSON - Wikipedia</a> gefunden 
+ werden. Im Folgenden wird lediglich eine kurze Einführung gegeben (teilweise 
+ von Wikipedia kopiert).</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">JSON wird verwendet um Schlüssel-Wert-Paare und 
+ Wertereihen zu definieren. Jeder Wert kann einer der folgenden Typen sein:</p>
+<p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="font-family: Symbol; mso-fareast-font-family: Symbol; 
+										 mso-bidi-font-family: Symbol;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">        </span></span></span> Number: 
+ ganzzahliger oder gleitender Wert</p>
+<p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="font-family: Symbol; mso-fareast-font-family: Symbol; 
+										 mso-bidi-font-family: Symbol;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">        </span></span></span> String: 
+ Sequenz von Unicode-Zeichen, in doppelte Anführungszeichen eingefasst. 
+ Doppelte Anführungszeichen innerhalb eines Strings können mit einem Backslash 
+ ausgeklammert werden.</p>
+<p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="font-family: Symbol; mso-fareast-font-family: Symbol; 
+										 mso-bidi-font-family: Symbol;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">        </span></span></span> Boolean: 
+ die Werte <i style="mso-bidi-font-style: normal;">true</i> oder <i style="mso-bidi-font-style: normal;">false</i></p>
+<p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="font-family: Symbol; mso-fareast-font-family: Symbol; 
+										 mso-bidi-font-family: Symbol;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">        </span></span></span> Array: 
+ eine Liste von null oder mehreren Elementen, jedes Element kann jeglicher 
+ Typ sein</p>
+<p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span style="font-family: Symbol; mso-fareast-font-family: Symbol; 
+										 mso-bidi-font-family: Symbol;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">        </span></span></span> Object: 
+ eine Sammlung von Namen-Wert-Paaren (alle Namen sind Strings!)</p>
+<p class="MsoBodyText" style="margin-left: 36.0pt; text-indent: -18.0pt; 
+	 mso-list: l0 level1 lfo1;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="font-family: Symbol; 
+										 mso-fareast-font-family: Symbol; 
+										 mso-bidi-font-family: Symbol; 
+										 mso-ansi-language: EN-US;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">        </span></span></span> <span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">Null: 
+ leerer Wert</span></p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"> </p>
+<p class="MsoBodyText" data-condition="Others:Deutsch">Der Projektordner hmi.prj ist ein gutes Beispiel 
+ für die Verwendung unterschiedlicher Typen, da er z. B. ein Objekt mit 
+ zwei String-Werten für den Standard-Login, einen Boolean-Wert zum An-/Ausschalten 
+ des Debug-Modus oder ein Array für Menüpunkte enthalten.</p>
+<p class="MsoBodyText" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"><span style="color: #008000;">{</span></p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;defaultLogin&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;userName&quot;: 
+ &quot;andon_default&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;password&quot;: 
+ &quot;andon_default&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;parameters&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;debugMode&quot;: 
+ true</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;theme&quot;: 
+ &quot;sapient-dark&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;header&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;hide&quot;: 
+ false</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;footer&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;fileName&quot;: 
+ &quot;hmi/machine-terminal/footer.xml&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;height&quot;: 
+ &quot;250px&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;navigation&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;items&quot;: 
+ [</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  {...},</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  {...}</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">]</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  ...</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  ...</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Es ist nicht verpflichtend, aber wird dringend empfohlen, mit Einrückungen 
+ zu arbeiten, um die Struktur eines solchen Dokumentes übersichtlicher 
+ zu gestalten.</p>
+<p data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" style="font-weight: bold;" data-condition="Others:Deutsch">Schlagwörter unterscheiden 
+ zwischen Groß- und Kleinschreibung!</p>
+<h3 data-condition="Others:Deutsch"><a id="Tools"></a>Tools</h3>
+<p data-condition="Others:Deutsch">Das Schreiben von XML-Strukturen könnte sich mit einem Rohtext-Editor 
+ schwierig gestalten. Um mindestens eine zu benennen  <a href="https://jsoneditoronline.org">https://jsoneditoronline.org</a> 
+ – besonders hilfreich bei der Formatierung eines JSON-Dokuments und der 
+ Fehlerbehebung im Fall von jeglichen syntaktischen Problemen.</p>
+
+
+</body></html>

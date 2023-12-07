@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.2.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">AE</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AE">
+        <span>AE</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Installation der Legato Application Engine</h2>
+<h3 data-condition="Others:Deutsch"><a id="Legato_Application_Engine_entpacken"></a>Legato Application 
+ Engine entpacken</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Kopieren Sie die Datei LeAppEng-x.y.z.b.zip in das 
+ Verzeichnis &quot;opt&quot; und entpacken Sie die .zip-Datei.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn der Befehl zum Entpacken nicht bereits auf Ihrem 
+ System installiert ist, führen Sie Folgendes aus:</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo apt install unzip</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ändern Sie das Verzeichnis nach &quot;opt&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">cd /opt</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Entpacken Sie die .zip-Datei in das Verzeichnis LeAppEng-x.y.z.b</p>
+<p class="TextCode" data-condition="Others:Deutsch">unzip LeAppEng-x.y.z.b.zip –d LeAppEng-x.y.z.b</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Symbolischen_Link_erstellen"></a>Symbolischen Link erstellen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Erstellen Sie einen symbolischen Link zum Progammverzeichnis 
+ der entpackten Legato Application Engine</p>
+<p class="TextCode" data-condition="Others:Deutsch">sudo ln -s /opt/LeAppEng-x.y.z.b/ /opt/leappeng </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Config-Dateien_kopieren_und_umbenennen"></a>Config-Dateien 
+ kopieren und umbenennen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ändern Sie das Verzeichnis nach &quot;etc&quot; und 
+ erstellen Sie ein neues Verzeichnis &quot;leappeng&quot; innerhalb des 
+ &quot;etc&quot;-Verzeichnisses.</p>
+<p class="TextCode" data-condition="Others:Deutsch">cd /etc</p>
+<p class="TextCode" data-condition="Others:Deutsch">mkdir leappeng</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopieren Sie die Datei appengine.sample.propertiesfile 
+ vom Verzeichnis /opt/LeAppEng-x.y.z.b/ in das Verzeichnis /etc/leappeng 
+ und ändern Sie den Dateinamen in  appengine_LEGATO.properties</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopieren Sie die Datei log4j2.sample.xml vom Verzeichnis 
+ /opt/LeAppEng-x.y.z.b/ in das Verzeichnis /etc/leappeng und ändern Sie 
+ den Dateinamen in log4j2_LEGATO.xml</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Zur Konfiguration der Dateien appengine.properties 
+ und log4j2.xml wird auf die folgenden Dokumente verwiesen: <span lang="EN-US" xml:lang="EN-US">Legato System Installation and Legato Installation 
+ Tomcat RHEL.</span></p>
+<h3 data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><a id="Application_Engine_Einheiten-Dateien_erstellen"></a>Application 
+ Engine Einheiten-Dateien erstellen</span></h3>
+<p class="BodyText" data-condition="Others:Deutsch">Erstellen Sie eine Einheiten-Datei im Verzeichnis /etc/systemd/system/ 
+ und stellen Sie sicher, dass die Datei die richtigen Berechtigungen hat. 
+ Führen Sie Folgendes als Root aus:</p>
+<p class="TextCode" data-condition="Others:Deutsch">touch /etc/systemd/system/Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch">chmod 664 /etc/systemd/system/Leappeng_LEGATO.service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Verzeichnis_für_Log-Dateien_erstellen"></a>Verzeichnis für 
+ Log-Dateien erstellen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Erstellen Sie ein neues Verzeichnis innerhalb des Verzeichnisses 
+ &quot;var/log&quot;, um die Log-Dateien zu speichern.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ändern Sie das Verzeichnis in &quot;var/log&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">cd /var/log</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Erstellen Sie ein neues Verzeichnis &quot;leappeng&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">mkdir leappeng</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Jetzt werden die Log-Dateien der Application Engine 
+ in das Verzeichnis /var/log/leappeng hinein erstellt, wenn die Application 
+ Engine gestartet wird.</p>
+<h3 data-condition="Others:Deutsch"><a id="Konfigurations-Optionen_für_den_Dienst_hinzufügen"></a>Konfigurations-Optionen 
+ für den Dienst hinzufügen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnen Sie die Datei Leappeng_LEGATO.service, die im 
+ vorigen Schritt erstellt wurde, in einem VI Editor. Fügen Sie die folgenden 
+ Konfigurations-Optionen für den Dienst hinzu und speichern Sie die Datei.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Der Eintrag, der mit &quot;ExecStart&quot; 
+ beginnt, muss als ein String eingetragen werden, ohne Zeilenumbrüche.</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Unit]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Description=Legato Application Engine service</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Service]</p>
+<p class="TextCode" data-condition="Others:Deutsch">Environment=&quot;JAVA_HOME=[absoluter Pfad zu Java 
+ Binary]&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">Environment=&quot;TMP_DIR=/var/tmp&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">Environment=&quot;LOG_DIR=/var/log/leappeng&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch">Environment=&quot;APPENG_HOME=/opt/leappeng&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">ExecStart=/bin/sh -c &quot;exec ${JAVA_HOME} -Dappeng.home=${APPENG_HOME} -jar ${APPENG_HOME}/LeAppEngBoot.jar \</p>
+<p class="TextCode" data-condition="Others:Deutsch">-Djava.io.tmpdir=${TMP_DIR} -Dappeng.properties=appengine_LEGATO.properties \</p>
+<p class="TextCode" data-condition="Others:Deutsch">-Djava.awt.headless=true -Xmx256m -Dlog4j.configurationFile=/etc/leappeng/log4j2_LEGATO.xml&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">Type=simple</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">User=[User, der den Service ausführt]</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">[Install]</p>
+<p class="TextCode" data-condition="Others:Deutsch"><span>WantedBy=multi-user.target</span></p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">&quot;Legato Application Engine service&quot; ist eine 
+ informative Beschreibung, die in Journal-Logdateien und im Befehl systemctl 
+ status ausgegeben wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Umgebungsvariablen können mit der Option &quot;Environment&quot; 
+ spezifiziert werden. In der obigen Datei Leappeng_LEGATO.service wurden 
+ beispielsweise die folgenden Umgebungsvariablen mittels der Option &quot;Environment&quot; 
+ spezifiziert: JAVA_HOME,  TMP_DIR, LOG_DIR, APPENG_HOME, APPENG_OPTS.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Der JAVA_HOME Pfad muss vor Verwendung entsprechend 
+ angepasst werden.</p>
+
+
+</body></html>

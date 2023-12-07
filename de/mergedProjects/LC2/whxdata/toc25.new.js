@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Konfiguration von Sollwerten","type":"item","tilePath":"","description":"","url":"de/05_ASS/03_Log_Struct/03_Alloc_Vars.htm#Konfiguration_von_Sollwerten"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

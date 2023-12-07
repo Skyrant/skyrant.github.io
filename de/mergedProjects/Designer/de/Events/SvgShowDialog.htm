@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "6.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GefasoftDesignerG.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SvgShowDialog</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="SvgShowDialog" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SvgShowDialog">
+        <span>SvgShowDialog</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SvgShowDialog</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet einen Dojo-Dialog über dem SVG-Bild und zeigt 
+ darin den per URL referenzierten oder im Aufruf direkt angegebenen HTML-Inhalt 
+ an. Es kann immer nur ein Dialog angezeigt werden. Wird diese Funktion 
+ aufgerufen, während bereits ein Dialog sichtbar ist, wird dieser durch 
+ den neuen Dialog ersetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Angaben zu Breite und Höhe sind optional. Fehlen 
+ sie, wird der Dialog so groß dargestellt, wie sein Inhalt es erfordert. 
+ Ist die Größe des Inhalts unbekannt, sollten beide Parameter angegeben 
+ werden, damit der Dialog nicht zu groß und somit unbedienbar wird. Dann 
+ gibt es gegebenenfalls im Dialog Bildlaufleisten für den dargestellten 
+ Inhalt (zwar nicht unbedingt schön, aber immerhin bedienbar). Größenangaben 
+ in Prozent beziehen sich auf die Größe der Visu-Ansicht (Browserfenster 
+ minus Baum links und Menü oben).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Externe Seiten können hier nur aufgerufen werden, wenn 
+ die Systemeinstellungen (z.B. X-Frame Options) dies erlauben!</p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim jeweiligen Event wird beispielsweise Folgendes 
+ eingetragen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">SvgShowDialog(&quot;URL&quot;,&quot;Title&quot;,&quot;iframe&quot;,&quot;width&quot;,&quot;height&quot;)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alternativ kann der Code auch in die SVG Source eingetragen 
+ werden. Hierbei kann beispielsweise auch ein Array für den Titel eingegeben 
+ werden, um je Systemsprache einen anderen Text anzuzeigen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">&lt;a&gt;&lt;?gefasoft</p>
+<p class="TextCode" data-condition="Others:Deutsch">&lt;attrrepl attr = &quot;xlink:href&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &lt;jsfncall 
+ name = &quot;SvgShowDialog&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &lt;jsexpr 
+ quotes = &quot;1&quot;&gt;/help/de/CntHelp.htm&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &lt;jsnewarr 
+ nelems = &quot;2&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                        &lt;jsexpr 
+ quotes = &quot;1&quot;&gt;Titel&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                        &lt;jsexpr 
+ quotes = &quot;1&quot;&gt;Title&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &lt;/jsnewarr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &lt;jsexpr 
+ quotes = &quot;0&quot;&gt;true&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &lt;jsexpr 
+ quotes = &quot;0&quot;&gt;320&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">                &lt;jsexpr 
+ quotes = &quot;0&quot;&gt;240&lt;/jsexpr&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &lt;/jsfncall&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch">&lt;/attrrepl&gt;?&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Parameter haben folgende Bedeutung:</p>
+<table class="TabelleBlankHeaderGrey" cellspacing="0" width="456" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td style="vertical-align: top;" width="101"><p class="TabellenÜberschrift">Parameter</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">url</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">String. 
+		 Gibt an, was angezeigt werden soll.</p>
+		<p class="TabellenInhalt">1. Falls sie mit http:!!!!!!!// oder 
+		 https:!!!!!!!// beginnt, wird sie als absolute URL (z.B. für externe 
+		 Inhalte) angesehen. Beachten Sie hier die Sicherheitseinstellungen 
+		 Ihres Systems. Ggf. verwenden Sie für externe Seiten die Funktion 
+		 &quot;SvgOpenWindow&quot;.</p>
+		<p class="TabellenInhalt">2. Falls sie mit einem Schrägstrich (/) 
+		 beginnt wird sie als relative URL bezüglich der Legato-Web-Applikation 
+		 ausgewertet.</p>
+		<p class="TabellenInhalt">3. Falls sie mit einem oder zwei Punkten 
+		 und einem Schrägstrich beginnt (./ oder ../), wird sie als relative 
+		 URL bezogen auf die Visu-Ansicht ausgewertet.</p>
+		<p class="TabellenInhalt">4. Falls sie mit einem Kleiner-Zeichen 
+		 (&lt;) beginnt, wird angenommen, dass es keine URL, sondern der 
+		 fertige HTML-Code ist, der im Dialog angezeigt werden soll.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">title</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">String. 
+		 Titel des Dialogs. In zweisprachigen Installationen sollte statt 
+		 eines Titels besser ein Array angegeben werden, das den Titel 
+		 in beiden Sprachen enthält.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">iframe</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Boolean. 
+		 Ob der im Dialog anzuzeigende Inhalt eine komplette HTML-Seite 
+		 ist (true), oder nur ein HTML-Fragment (false). Ein Fragment hat 
+		 weder ein &lt;html&gt; noch ein &lt;body&gt; Tag.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">width</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Any, 
+		 optional. Gewünschte Breite des Dialogs. Ist dies nur eine Zahl, 
+		 wird automatisch px als Maßeinheit angenommen. Es kann auch die 
+		 gewünschte Einheit mit übergeben werden.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="101"><p class="TabellenInhalt">height</p></td>
+		<td style="vertical-align: top;" width="355"><p class="TabellenInhalt">Any, 
+		 optional. Gewünschte Höhe des Dialogs. Ist dies nur eine Zahl, 
+		 wird automatisch px als Maßeinheit angenommen. Es kann auch die 
+		 gewünschte Einheit mit übergeben werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Weitere Beispiele zu JavaScript-Funktionen und deren 
+ Verwendung finden Sie auch ein der Workshop-Dokumentation GefasoftDesigner.</p>
+
+
+</body></html>

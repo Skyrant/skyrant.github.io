@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.7.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Spezielle Binding-Targets</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Spezielle Binding-Targets">
+        <span>Spezielle Binding-Targets</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Spezielle Binding-Targets</h1>
+<p data-condition="Others:Deutsch">Die meisten Binding-Targets können einheitlich verwendet werden – ihnen 
+ wird einfach über die Werteigenschaft ein Wert zugeordnet. Die meisten 
+ Targets können leicht festgelegt werden, indem der Stil manuell über die 
+ Stil-Seitenleiste geändert wird (oder über den Designer, z. B. rotieren) 
+ und indem der jeweilige Zugang über den Edit Style Dialog gefunden wird. 
+ All diese Stile können 1:1 als Binding-Targets verwendet werden. Einige 
+ Eigenschaften (z. B. Text, Tooltip) sind nicht darin enthalten. Die folgende 
+ Referenz listet diese speziellen Bindings, aber nicht die standardmäßigen 
+ Stil-Bindings.</p>
+<p data-condition="Others:Deutsch">Es gibt einige besondere Bindings mit individuellen Eigenschaften, wie 
+ Binding-Targets zum Festlegen der x-/y-Position, die es ermöglichen, einen 
+ Eingabebereich einem Positionsbereich zuzuordnen.</p>
+<p data-condition="Others:Deutsch"> </p>
+<h5 data-condition="Others:Deutsch">Text</h5>
+<p data-condition="Others:Deutsch">Die meisten Elemente können einen Text anzeigen – entweder statisch 
+ gesetzt über den Designer oder gebunden an Daten, indem die Texteigenschaft 
+ als Binding-Target verwendet wird:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;varId&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;var&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;id&quot;: 
+ 7537</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;<span style="font-weight: bold;">text</span>&quot;: {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;ref&quot;: 
+ &quot;varId&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;format&quot;: 
+ &quot;d0.####&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch">Das Werteobjekt ist normalerweise ein Datenobjekt, wie ein dataref, 
+ das ein anderes Datenobjekt referenziert.</p>
+<p data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"><img src="../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Verwenden Sie datarefs Formateigenschaft, 
+ um ein Displayformat zu spezifizieren, z. B. Definieren eines Maximums 
+ an Dezimalstellen beim Anzeigen eines Fließkommawertes. </p>
+<p data-condition="Others:Deutsch"> </p>
+<h5 data-condition="Others:Deutsch">Tooltip</h5>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Mithilfe des Tooltip-Bindings kann 
+ definiert werden, welcher Text angezeigt wird, wenn mit der Maus über 
+ ein Element bewegt wird.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;tooltip&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ &quot;I&#39;m the tooltip!&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><img src="../../Bilder/Element_Tooltip_1.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Der 
+ statische Wert dieses Beispiels kann durch ein Datenobjekt ersetzt werden, 
+ z. B. eine Datenreferenz, Formel, Berechnung oder ein Attribut.</span></p>
+<h5 data-condition="Others:Deutsch">Position</h5>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Die Binding-Targets x und y werden 
+ verwendet, um die Positionen von Elementen festzulegen – entweder absolut 
+ oder relativ zur ursprünglichen Position in der Zeichnung. Die Eigenschaften 
+ <span style="font-weight: bold;">min</span>/<span style="font-weight: bold;">max</span> 
+ und <span style="font-weight: bold;">minPos</span>/<span style="font-weight: bold;">maxPos</span> 
+ ermöglichen es, einen Eingabebereich einem Positionsbereich zuzuordnen. 
+ Die <span style="font-weight: bold;">minPos</span> und <span style="font-weight: bold;">maxPos</span> 
+ warden nie überschritten.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">Beispiel:</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;datasources&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;posx&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;localvar&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;posx&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;posy&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;source&quot;: 
+ &quot;localvar&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;sym&quot;: 
+ &quot;posy&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;x&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;min&quot;: 
+ 0,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;max&quot;: 
+ 100,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;minPos&quot;: 
+ 0,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;maxPos&quot;: 
+ 200,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;input&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: 
+ &quot;posx&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;defaultValue&quot;: 
+ 0</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;absolute&quot;: 
+ false</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;y&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;min&quot;: 
+ 0,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;max&quot;: 
+ 100,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;minPos&quot;: 
+ 0,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;maxPos&quot;: 
+ 200,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;input&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                        &quot;ref&quot;: 
+ &quot;posy&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                    &quot;defaultValue&quot;: 
+ 0</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                },</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">                &quot;absolute&quot;: 
+ false</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">}</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+<h5 data-condition="Others:Deutsch">Weite/Höhe</h5>
+<p class="MsoBodyText" data-condition="Others:Deutsch">Mithilfe der Weite- und Höhe-Bindings kann die Größe 
+ eines Elements geändert werden. Der Bereich, der von min und max spezifiziert 
+ wird, wird einem 0…100% Bereich der Originalgröße zugeordnet.</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;width&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;min&quot;: 
+ 0,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;max&quot;: 
+ 50,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;input&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;ref&quot;: 
+ &quot;someVar&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  &quot;bindings&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    &quot;height&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      &quot;value&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;min&quot;: 
+ 0,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;max&quot;: 
+ 50,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        &quot;input&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          &quot;source&quot;: 
+ &quot;dataref&quot;,</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          &quot;params&quot;: 
+ {</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">            &quot;ref&quot;: 
+ &quot;someVar&quot;</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">          }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">        }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">      }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" style="color: #008000;" data-condition="Others:Deutsch">  }</p>
+
+
+</body></html>

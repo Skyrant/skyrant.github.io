@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Beschreibung","type":"item","tilePath":"","description":"","url":"de/Zuli/01_ZuliImport.htm#Beschreibung"},{"name":"Parametrierung","type":"item","tilePath":"","description":"","url":"de/Zuli/01_ZuliImport.htm#Parametrierung"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

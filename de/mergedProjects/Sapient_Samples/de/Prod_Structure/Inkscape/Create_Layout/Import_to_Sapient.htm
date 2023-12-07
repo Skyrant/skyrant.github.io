@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "3.3.2.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Inkscape.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SVG in Sapient importieren</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: #954F72;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SVG in Sapient importieren">
+        <span>SVG in Sapient importieren</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SVG in Sapient importieren</h2>
+<h3 data-condition="Others:Deutsch"><a id="Positionierung"></a>Positionierung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Bevor der Pfad der neuen SVG in Sapient eingefügt werden 
+ kann, muss das Objekt positioniert werden. Die obere linke Ecke der SVG 
+ sollte ungefähr an der oberen linken Ecke der Vorlage beginnen, da es 
+ sonst Probleme mit dem Detailbereich in Sapient gibt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Import/Inkscape-Dateien/image020.png" alt="" width="604" height="541" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Transformationsattribut_entfernen"></a>Transformationsattribut 
+ entfernen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Kombinieren von Objekten wird oftmals ein &quot;transform&quot;-Attribut 
+ generiert. Dieses muss gelöscht werden, da nur der Pfad in Sapient verwendet 
+ wird.  Wenn Informationen zur Größe und Position im Transformationsattribut 
+ enthalten sind, werden diese in Sapient nicht berücksichtigt. Das Attribut 
+ kann im XML-Editor gelöscht werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Import/Inkscape-Dateien/image022.png" alt="" width="605" height="529" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Pfad_in_Sapient_einfügen"></a>Pfad in Sapient einfügen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Wie beim Importieren kann nun in Sapient der neue Pfad 
+ mithilfe des Boardlets &quot;Einstellungen zum Knotenlayout&quot; eingefügt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Import/Inkscape-Dateien/image023.png" alt="" width="604" height="213" border="0"/></p>
+
+
+</body></html>

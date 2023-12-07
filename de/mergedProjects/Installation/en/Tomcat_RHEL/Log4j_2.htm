@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Configuring Apache Log4j 2 for Tomcat Internal Logging</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Configuring Apache Log4j 2 for Tomcat Internal Logging">
+        <span>Configuring Apache Log4j 2 for Tomcat Internal Logging</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Configuring Apache Log4j 2 for Tomcat Internal Logging</h1>
+<h2 data-condition="Others:Englisch"><a id="General"></a>General</h2>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" style="border: none;" alt="" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch"><span class="msoIns"><ins cite="mailto:Comparison" datetime="2018-09-27T13:10">Configuration 
+ of Apache Log4j 2 is necessary only for Tomcat version until 8. From Tomcat 
+ version 9, no additional code is required for switching Tomcat&#39;s internal 
+ logging to Log4j 2. Skip this section and move directly to <a href="Log4j_2.htm#Creating_Log4j2_XML">Creating_Log4j_2_XML</a> 
+ if you are planning for a Tomcat 9 installation.</ins></span> </p>
+<p class="BodyText" data-condition="Others:Englisch">Apache Log4j 2 is an upgrade to Log4j that provides 
+ significant improvements over its predecessor, Log4j 1.x, and provides 
+ many of the improvements available in Logback while fixing some inherent 
+ problems in Logback&#39;s architecture. The following sections explains how 
+ to configure Tomcat to use log4j2 rather than java.util.logging for all 
+ Tomcat’s internal logging.</p>
+<h2 data-condition="Others:Englisch"><a id="Benefits_of_Log4j_2"></a>Benefits of Log4j 2</h2>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">The new and improved API which is simple and powerful</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Powerful Configuration</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Size of a single log file is smaller</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Log analysis is easy</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Old log files can be archived or deleted</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Significant improvement in performance</p>
+<h2 data-condition="Others:Englisch"><a id="Which_Library_to_Choose_"></a>Which Library to Choose?</h2>
+<p class="BodyText" data-condition="Others:Englisch">Log4j provides a lot of functionality that java.util.logging 
+ lacks and one must keep the following points in mind before opting logj4 
+ 2 for java.util.logging.</p>
+<p class="BodyText" data-condition="Others:Englisch">A fair decision can be made very easily by examining 
+ the answers to three simple questions.</p>
+<p class="BodyText" data-condition="Others:Englisch">Question One</p>
+<p class="BodyText" data-condition="Others:Englisch">Do you anticipate a need for any of the clever handlers 
+ that Log4j has that JUL does not have, such as the SMTPHandler, NTEventLogHandler, 
+ or any of the very convenient FileHandlers?</p>
+<p class="BodyText" data-condition="Others:Englisch">Question Two</p>
+<p class="BodyText" data-condition="Others:Englisch">Do you see yourself wanting to frequently switch the 
+ format of your logging output? Will you need an easy, flexible way to 
+ do so? In other words, do you need Log4j&#39;s PatternLayout?</p>
+<p class="BodyText" data-condition="Others:Englisch">Question Three</p>
+<p class="BodyText" data-condition="Others:Englisch">Do you anticipate a definite need for the ability to 
+ change complex logging configurations in your applications, after they 
+ are compiled and deployed in a production environment? Does your configuration 
+ sound something like, &quot;Severe messages from this class get sent via 
+ e-mail to the support guy; severe messages from a subset of classes get 
+ logged to a syslog deamon on our server; warning messages from another 
+ subset of classes get logged to a file on network drive A; and then all 
+ messages from everywhere get logged to a file on network drive B&quot;? 
+ And do you see yourself tweaking it every couple of days?</p>
+<p class="BodyText" data-condition="Others:Englisch">If you can answer yes to any of the above questions, 
+ go with Log4j. If you answer a definite no to all of them, JUL will be 
+ more than adequate and it&#39;s conveniently already included in the SDK.</p>
+<h2 data-condition="Others:Englisch"><a id="Requirements"></a>Requirements</h2>
+<p class="BodyText" data-condition="Others:Englisch">Log4j 2 requires Java 6.</p>
+<h2 data-condition="Others:Englisch"><a id="Deactivate_Tomcat_Internal_Default_Logging"></a>Deactivate 
+ Tomcat Internal Default Logging</h2>
+<p class="BodyText" data-condition="Others:Englisch">The first step before installing log4j 2 is to deactivate 
+ Tomcat internal default logging. The following steps will deactivate Tomcat 
+ internal default logging<span style="text-indent: -18.0pt;">.</span></p>
+<p class="BodyText" data-condition="Others:Englisch">1) Delete existing JULI library tomcat-juli.jar from 
+ CATALINA_HOME/bin and the existing Tomcat Java Logging configuration file 
+ logging.properties from CATALINA_BASE/conf.</p>
+<p class="BodyText" data-condition="Others:Englisch">2) Comment out the following lines in the server.xml 
+ file.</p>
+<p class="TextCode" data-condition="Others:Englisch">&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; 
+ directory=&quot;logs&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s 
+ %b&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">Replace the following lines in the $CATALINA_HOME/catalina.sh 
+ file as follows.</p>
+<p class="TextCode" data-condition="Others:Englisch">if [ -z &quot;$LOGGING_CONFIG&quot; ]; then if [ -r 
+ &quot;$CATALINA_BASE&quot;/conf/logging.properties ]; then LOGGING_CONFIG=&quot;-Djava.util.logging.config.file=$CATALINA_BASE/conf/logging.properties&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">with</p>
+<p class="TextCode" data-condition="Others:Englisch">if [ -z &quot;$LOGGING_CONFIG&quot; ]; then if [ -r 
+ &quot;$CATALINA_BASE&quot;/conf/log4j2.xml ]; then LOGGING_CONFIG=&quot;- 
+ Dlog4j.configurationFile==$CATALINA_BASE/conf/log4j2.xml&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">Instructions assume CATALINA_HOME and CATALINA_BASE 
+ are separate and has the following path for e.g. CATALINA_HOME - /usr/share/tomcat7/ 
+ and CATALINA_BASE - /var/lib/tomcat7/</p>
+<h2 data-condition="Others:Englisch"><a id="Setting_up_Apache_Log4j_2"></a>Setting up Apache Log4j 2</h2>
+<h3 data-condition="Others:Englisch">Download Log4j 2</h3>
+<p class="BodyText" data-condition="Others:Englisch">Download Apache Log4j 2 from the <a href="http://logging.apache.org/log4j/2.x/download.html">http://logging.apache.org/log4j/2.x/download.html</a> 
+ website.</p>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">This installation guide uses the Apache Log4j 
+ 2 Version 2.1.</p>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_RHEL/image010.png" alt="" width="622" height="326" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch">Open the Zip file with your favorite unzipper and extract 
+ the files into a folder.</p>
+<h3 data-condition="Others:Englisch">Copy log4j2 jar Files to Tomcat</h3>
+<p class="BodyText" data-condition="Others:Englisch">From the unzipped folder, copy the following .jar files 
+ to Tomcat &#39;lib&#39; folder (CATALINA_HOME/lib/).</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">log4j-core-2.1.jar</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">log4j-api-2.1.jar</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">log4j-jcl-2.1.jar</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">log4j-jul-2.1.jar</p>
+<h3 data-condition="Others:Englisch">Download Extra Component for Tomcat</h3>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_RHEL/image011.png" alt="" width="676" height="467" border="0"/></p>
+<p class="BodyText" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">Download tomcat-juli.jar and tomcat-juli-adapters.jar 
+ that are available as an &quot;extras&quot; component for Tomcat from 
+ the Tomcat download site. This <code><span style="font-size: 10.0pt;">tomcat-juli.jar</span></code> 
+ differs from the default one. It contains the full Apache Commons Logging 
+ implementation and thus is able to discover the presence of log4j and 
+ configure itself.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Put tomcat-juli.jar &amp; tomcat-juli-adapters.jar 
+ into $CATALINA_HOME/lib.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">Copy  $CATALINA_HOME/lib/tomcat-juli.jar 
+ to $CATALINA_HOME/bin.</p>
+<h3 data-condition="Others:Englisch"><a id="Creating_Log4j2_XML"></a>Creating Log4j2 XML</h3>
+<p class="BodyText" data-condition="Others:Englisch">Create a configuration XML file called log4j2.xml and 
+ append the following sample configuration to the file. Save the file into 
+ CATALINA_BASE/webapps/Legato/WEB-INF/classes directory.</p>
+<p class="TextCode" data-condition="Others:Englisch">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">&lt;Configuration monitorInterval=&quot;30&quot; status=&quot;INFO&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">        &lt;Filters&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;RegexFilter 
+ regex=&quot;(?is).*ORA-01013:.*&quot; useRawMsg=&quot;false&quot; onMatch=&quot;DENY&quot; 
+ onMismatch=&quot;NEUTRAL&quot;/&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;exceptions&quot;     onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;init&quot;           onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;SQL&quot;            onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;Query&quot;          onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;VisuPolling&quot;    onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;AlarmPolling&quot;   onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;VisuRefresh&quot;    onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;AlarmRefresh&quot;   onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;VisuCompiler&quot;   onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;LegatoState&quot;    onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;DbCache&quot;        onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;WebServiceCall&quot; onMatch=&quot;NEUTRAL&quot; onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;MesTermMsg&quot;     onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;MesTermErr&quot;     onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;Other&quot;          onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;MarkerFilter 
+ marker=&quot;Paging&quot;         onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">        &lt;/Filters&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">      &lt;Appenders&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">&lt;!--</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;Servlet 
+ name=&quot;server&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;PatternLayout 
+ charset=&quot;UTF-8&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   &lt;Pattern&gt;[%marker] 
+ %-5level %logger{1} - %message%throwable&lt;/Pattern&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;/PatternLayout&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;/Servlet&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">--&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;RollingRandomAccessFile 
+ name=&quot;logfile&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   fileName=&quot;/var/log/tomcat7/webapp.log&quot; 
+ filePattern=&quot;/var/log/tomcat7/webapp.%d.log&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   immediateFlush=&quot;false&quot; 
+ append=&quot;true&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;Policies&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   &lt;OnStartupTriggeringPolicy 
+ /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   &lt;SizeBasedTriggeringPolicy 
+ size=&quot;10 MB&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;/Policies&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;DefaultRolloverStrategy 
+ min=&quot;1&quot; max=&quot;9&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;PatternLayout 
+ charset=&quot;UTF-8&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   &lt;Pattern&gt;%date{DEFAULT} 
+ [%marker] %-5level %logger{1} - %message%n%throwable&lt;/Pattern&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;/PatternLayout&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;/RollingRandomAccessFile&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;RollingRandomAccessFile 
+ name=&quot;errfile&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   fileName=&quot;/var/log/tomcat7/webapperr.log&quot; 
+ filePattern=&quot;/var/log/tomcat7/webapp.err.%d.log&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   immediateFlush=&quot;false&quot; 
+ append=&quot;true&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;ThresholdFilter 
+ level=&quot;WARN&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; 
+ /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;Policies&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   &lt;SizeBasedTriggeringPolicy 
+ size=&quot;10 MB&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;/Policies&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;DefaultRolloverStrategy 
+ min=&quot;1&quot; max=&quot;9&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;PatternLayout 
+ charset=&quot;UTF-8&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                                   &lt;Pattern&gt;%date{DEFAULT} 
+ [%marker] %-5level %logger{1} - %message%n%throwable&lt;/Pattern&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;/PatternLayout&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;/RollingRandomAccessFile&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">      &lt;/Appenders&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">      &lt;Loggers&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;AsyncRoot 
+ level=&quot;trace&quot; includeLocation=&quot;false&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">&lt;!--</p>
+<p class="TextCode" data-condition="Others:Englisch">                        &lt;AppenderRef 
+ ref=&quot;server&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">--&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                        &lt;AppenderRef 
+ ref=&quot;logfile&quot; /&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                         &lt;AppenderRef 
+ ref=&quot;errfile&quot; level=&quot;WARN&quot;/&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;/AsyncRoot&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">                &lt;AsyncLogger 
+ name=&quot;de.gefasoft.legato.webapp.util.db.QueryWaitWatcher&quot; level=&quot;warn&quot;/&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">      &lt;/Loggers&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch">&lt;/Configuration&gt;</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="Textkörperfett" style="font-weight: normal;" data-condition="Others:Englisch"><strong><span style="font-weight: normal;"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</span></strong></p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch"><strong><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+											 font-weight: normal;">The 
+ above log4j 2 xml configuration is just a simple configuration using Rolling 
+ File Appender which creates a log file when the size of the file reaches 
+ 10 MB using the SizeBasedTriggeringPolicy.</span></strong> For more complex 
+ configuration please read the Apache Log4j 2 Documentation (<a href="http://logging.apache.org/log4j/2.x/log4j-users-guide.pdf">PDF</a>) 
+ – Section <strong><span style="font-family: &#39;Palatino Linotype&#39;, serif; 
+						 font-weight: normal;">&quot;</span></strong>Appenders<strong><span style="font-family: &#39;Palatino Linotype&#39;, serif; font-weight: normal;">&quot;.</span></strong></p>
+<p class="BodyText" data-condition="Others:Englisch">In the above example log4j2.xml, the Parameters filename, 
+ filePattern, layout, name, policy were used.</p>
+<p class="BodyText" data-condition="Others:Englisch">1. name=&quot;logfile&quot; - used to specify 
+ a name to the Appender</p>
+<p class="BodyText" data-condition="Others:Englisch">2. fileName=&quot;/var/log/tomcat7/webapp.log&quot; 
+ - used to specify the path to the log file. In the example, the log file 
+ is named as tomcat.log.</p>
+<p class="BodyText" data-condition="Others:Englisch">3. filePattern=&quot;webapp.%d.log&quot;&gt; - 
+ used to append a date/time pattern, in our case a date pattern (%d) to 
+ the end of the archived file.</p>
+<p class="BodyText" data-condition="Others:Englisch">4. &lt;PatternLayout&gt;&lt;pattern&gt; [%-5level] 
+ %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n&lt;/pattern&gt;&lt;/PatternLayout&gt; 
+ - used to specify the format of the LogEvent.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">[%-5level] - Shows messages classified as DEBUG, 
+ INFO, WARNING, ERROR, and FATAL</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">%d {yyyy-MM-dd HH:mm:ss.SSS} - Outputs the date 
+ of the logging event. The date conversion specifier may be followed by 
+ a set of braces containing a date and time pattern string per <a href="http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>. 
+ For eg. 2014-11-04 08:24:00.423.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">[%t] - Outputs the name of the thread that generated 
+ the logging event.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">%c {1} - Outputs the name of the logger that published 
+ the logging event. The logger conversion specifier can be optionally followed 
+ byprecision specifier, which consists of a decimal integer, or a pattern 
+ starting with a decimal integer.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">%msg - Outputs the application supplied message 
+ associated with the logging event.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Englisch">%n - Outputs the platform dependent line separator 
+ character or characters.</p>
+<p class="BodyText" data-condition="Others:Englisch">5.      &lt;SizeBasedTriggeringPolicy 
+ size=&quot;10 MB&quot; /&gt; - The SizeBasedTriggeringPolicy causes a 
+ rollover once the file has reached the specified size. The size can be 
+ specified in bytes, with the suffix KB, MB or GB, for example 10MB.</p>
+<p class="BodyText" data-condition="Others:Englisch">6. &lt;Root level=&quot;trace&quot;&gt; - Sets Root 
+ logger level to &quot;trace&quot;. Alternatively the level may be configured 
+ with one of TRACE, DEBUG, INFO, WARN, ERROR, ALL or OFF. If no level is 
+ specified it will default to ERROR.</p>
+<h3 data-condition="Others:Englisch">Restart Tomcat</h3>
+<p class="BodyText" data-condition="Others:Englisch">Restart Tomcat for the changes to take effect.</p>
+<p class="BodyText" data-condition="Others:Englisch">Here is the output of above configuration.</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:22,713 [VisuCompiler] INFO  VisuDatabase 
+ - VisuDbURL: &quot;jdbc:hsqldb:res:de/gefasoft/legato/webapp/monitoring/svg/visudb&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:22,720 [VisuCompiler] INFO  VisuDatabase 
+ - HSQLDB Driver loaded</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:23,426 [VisuCompiler] INFO  VisuDatabase 
+ - HSQLDB Connection allocated</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:23,426 [VisuCompiler] INFO  VisuDatabase 
+ - HSQLDB set up</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:23,426 [VisuCompiler] INFO  VisuDatabase 
+ - Visu path set to &quot;/home/shares/V4DEV2DB/visu&quot;</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:23,883 [VisuCompiler] DEBUG VisuDatabase 
+ - successfully loaded Visu data object class BufferInfo</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:23,957 [VisuCompiler] DEBUG VisuDatabase 
+ - successfully loaded Visu data object class ChartInitData</p>
+<p class="TextCode" data-condition="Others:Englisch">2015-01-12 17:54:24,080 [VisuCompiler] DEBUG VisuDatabase 
+ - successfully loaded Visu data object class EMChartsData</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+
+
+</body></html>

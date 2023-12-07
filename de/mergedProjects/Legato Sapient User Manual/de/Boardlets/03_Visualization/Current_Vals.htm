@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Monitoring - Aktuelle Werte</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Grenzwertüberwachung,Grenzwert" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Monitoring - Aktuelle Werte">
+        <span>Monitoring - Aktuelle Werte</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Monitoring - Aktuelle Werte</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a name="Allgemein" id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Aktuelle Werte</span> 
+ zeigt zu einem oder mehreren selektierten Knoten alle aktuellen Werte 
+ von Variablen, die mit &quot;Anzeigen&quot; = 1 parametriert sind und 
+ die keine Teilwerte sind (Parent = NULL). Die Anzeige der Teilwerte kann 
+ über den Filter umgeschaltet werden. Die Anzeige kann nach Variablenart 
+ gefiltert werden. Wurde für die Variable eine Einheit parametriert, so 
+ wird diese hinter dem Namen der Variablen in eckigen Klammern angezeigt. 
+ Wurden mehrere Knoten selektiert, so wird der Knotenname vor dem Variablennamen 
+ angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Node-Values.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Klick auf einen Wert öffnet eine Detailansicht mit 
+ weiteren Informationen zu dieser Variablen, z.B. die hinterlegten Warn- 
+ und Alarmgrenzen, den hinterlegten Sollwert, die letzte Änderung.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Farben können angepasst werden, indem im LC2 pro 
+ Variablenart oder pro Variable eine CSS-Farbe zugewiesen wird und im Boardlet 
+ Layout der Schieberegler &quot;Konfigurierte Farben der Variablen benutzen&quot; 
+ aktiviert ist. Außerdem kann im Boardlet Layout auch ein direktes Mapping 
+ von Variablenart zu CSS-Farbe vorgenommen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+
+
+
+<p class="BodyText" data-condition="Others:Deutsch">Ist eine Zeile selektiert, wird im Menü <span class="Bold">Quick-Edit</span> 
+ [<img src="../../../Bilder/Icons/menu_dots.png" alt="" style="border: none;" border="0"/>] ein Drilldown auf die Teilwerte dieses Werts angeboten. 
+ Dies ist nur für eine einzelne ausgewählte Zeile möglich; Multi-Select 
+ wird nicht unterstützt.</p>
+<h3 data-condition="Others:Deutsch"><a id="Grenzwert" data-indexterm="Grenzwert"></a><a id="Grenzwertüberwachung"></a>Grenzwertüberwachung</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Ist die Grenzwertüberwachung aktiv, so werden Werte 
+ mit Grenzwert-Abweichungen folgendermaßen dargestellt:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Normal:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Node-Values3.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Groß:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Node-Values4.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>: Für 3 Variablen 
+ sind Grenzwerte festgelegt.</p>
+<ul style="list-style: disc;" data-condition="Others:Deutsch">
+	<li><p class="ListBulletL1">Die Variable &quot;Ist 1&quot; hat als 
+	 Warngrenzen 4 und 65, als Alarmgrenzen 1 und 70. Der aktuelle Wert 
+	 von 50 ist also innerhalb aller parametrierten Grenzwerte. Daher wird 
+	 die Zeile grün eingefärbt, wenn keine konfigurierten Farbwerte verwendet 
+	 werden. Werden die konfigurierten Farben für die Variablen verwendet, 
+	 entfällt eine Markierung.</p></li>
+	<li><p class="ListBulletL1">Die Variable &quot;Ist 2&quot; hat als 
+	 Warngrenzen 7 und 85, als Alarmgrenzen 5 und 95. Der aktuelle Wert 
+	 von 3 ist also unterhalb der Alarmgrenze. Deshalb wird die Zeile rot 
+	 eingefärbt, wenn keine konfigurierten Farbwerte verwendet werden. 
+	 Werden die konfigurierten Farben für die Variablen verwendet, dann 
+	 wird nur das Symbol für die Unterschreitung ergänzt.</p></li>
+	<li><p class="ListBulletL1">Die Variable &quot;Gateway Test Num&quot; 
+	 hat als obere Warngrenze den Wert 8. Der aktuelle Wert von 100 ist 
+	 also über dem Grenzwert. Deshalb ist die Zeile gelb eingefärbt, wenn 
+	 keine Farbwerte verwendet werden. Werden die konfigurierten Farben 
+	 für die Variablen verwendet, dann wird nur das Symbol für die Überschreitung 
+	 ergänzt.</p></li>
+</ul>
+<p class="BodyText" data-condition="Others:Deutsch">Die Grenzwerte können im LC2 für jede Variable festgelegt 
+ werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Werte_ändern"></a>Werte ändern</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Wenn für eine Variable im LC2 die Einstellung &quot;Änderbar&quot; 
+ auf 1 gesetzt ist, so kann ihr Wert online geändert werden. Dazu muss 
+ diese Funktion in den Layout-Settings des Boardlets aktiviert werden und 
+ der angemeldete Benutzer braucht das entsprechende Recht. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Dann wird vor der Variable ein Stift-Symbol angezeigt. 
+ Klick auf das Stift-Symbol öffnet einen Dialog, in dem der Wert geändert 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Node-Values2e.png" alt="" style="border: none;" border="0"/></p>
+<p class="Note" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="NoteText" data-condition="Others:Deutsch">Bei Kommazahlen ist das Dezimaltrennzeichen der gewählten 
+ Sprache zu verwenden, also z.B. bei DE das Komma, bei EN der Punkt.</p>
+<h3 data-condition="Others:Deutsch"><a id="Variable_hinzufügen___Variablendefinition_ändern"></a>Variable 
+ hinzufügen / Variablendefinition ändern</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Es ist auch möglich, eine neue Variable 
+		 anzulegen oder die Variablendefinition zu ändern. </p>
+		<p class="BodyText">Zum Anlegen, in der Menüleiste des Boardlets 
+		 <img src="../../../Bilder/Icons/add_circle_black_18dp.png" alt="" style="border: none;" border="0"/> klicken, zum Ändern 
+		 die gewünschte Variable in der Ansicht selektieren und <img src="../../../Bilder/Icons/edit_black_18dp.png" alt="" style="border: none;" border="0"/> klicken. </p>
+		<p class="BodyText">Es öffnet sich folgender Dialog: ---&gt;&gt;</p>
+		<p class="Note"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+		<p class="NoteText">Name und Beschreibung werden immer in alle 
+		 Sprachfelder gespeichert.</p>
+		<p class="BodyText">Die Auswahl eines Intervalls ist nur für das 
+		 <a href="../02_Basis/Flexi_Val.htm">periodenbezogene Wertbuchen</a> 
+		 relevant.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/Node-Values_add.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h3 data-condition="Others:Deutsch"><a id="Variable_löschen"></a>Variable löschen</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/remove_circle_black_18dp.png" alt="" style="border: none;" border="0"/> können 
+		 Variablen gelöscht werden. </p>
+		<p class="BodyText">Es öffnet sich folgender Dialog in der Seitenleiste, 
+		 über den die zu löschenden Variablen selektiert werden können: 
+		 ---&gt;&gt;</p>
+		<p class="BodyText">Durch Klick auf <span class="Bold">Anwenden</span> 
+		 (bzw. <span class="Bold">Submit</span>) werden die rot markierten 
+		 Variablen gelöscht.</p></td>
+		<td><p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/Node-Values_remove.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a name="Einstellungen" id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Aktuelle Werte</span> 
+ stehen außerdem folgende Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a name="Reiter_Layout" id="Reiter_Layout"></a>Reiter Layout</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Link zur Historie anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiviert, wird bei 
+ archivierten Werten (Variablen mit Archiv = 1) ein Button<img src="../../../Bilder/Icons/Chart.png" alt="" style="border: none;" border="0"/> angezeigt. Durch Klick 
+ auf diesen Button kann die Historie des Wertes in einem <a href="Barchart.htm">Balkendiagramm</a> 
+ angezeigt werden. Dazu muss zum einen ein Zeitraum selektiert werden und 
+ zum anderen beim Balkendiagramm das Filterkriterium &quot;Variablen ID&quot; 
+ auf den Parametertyp &quot;In&quot; gesetzt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Link zur Statistik anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiviert, wird bei 
+ archivierten Werten (Variablen mit Archiv = 1) ein Button<img src="../../../Bilder/Icons/Statistics.png" alt="" style="border: none;" border="0"/> angezeigt. Durch Klick 
+ auf diesen Button kann die Historie des Wertes in einem <a href="../08_BCT/Histogram.htm">Histogramm</a> 
+ angezeigt werden. Dazu muss zum einen ein Zeitraum selektiert werden und 
+ zum anderen beim Balkendiagramm das Filterkriterium &quot;Variablen ID&quot; 
+ auf den Parametertyp &quot;In&quot; gesetzt werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Historie in Seitenleiste öffnen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Alternativ kann die Historie oder die Statistik 
+ des Wertes in der Seitenleiste angezeigt werden, wenn dieser Schieberegler 
+ zusätzlich aktiviert ist.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Grenzwertüberwachung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Drop-Downliste zur Auswahl der Darstellung der 
+ Grenzwerte. Deaktiviert, Normal oder Groß.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Messwerte änderbar:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiviert, so kann 
+ der Wert von Messwerten geändert werden, wenn bei der Konfiguration das 
+ Flag Änderbar = 1 gesetzt wurde und der angemeldete Benutzer das entsprechende 
+ Recht hat. Dazu wird ein Stiftsymbol vor der Variable angezeigt.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Konfigurierte Farben der Variablen benutzen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Ist dieser Schieberegler aktiviert, werden die 
+ pro Variable im LC2 definierten Farben verwendet. Wurde keine Farbe für 
+ eine Variable definiert, wird die Farbe der Variablenart verwendet. Ist 
+ der Schieberegler nicht aktiv, werden keine Farben angezeigt.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Variablenbezeichnung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über eine Dropdown-Liste kann ausgewählt werden, 
+ ob der Name der Variablen angezeigt werden sollen oder deren Beschreibung.</p>
+<h4 data-condition="Others:Deutsch"><a name="Reiter_Filter" id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Variablen-ID:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">ID der Variable, deren Historie angezeigt wird. 
+ Default ist -1 = keine Auswahl. Der Parametertyp muss auf &quot;Out&quot; 
+ oder &quot;InOut&quot; stehen, um den Wert an ein Balkendiagramm Boardlet 
+ oder die Seitenleiste weiterzugeben.</p>
+<div data-conref="../../../assets/snippets/Filter/de_Value_Types.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Variablenarten:</p>
+<p class="GUIControlDescr">Filter auf Variablenarten. Für alle Variablen 
+ der hier definierten Variablenarten, die dem oben selektierten Knoten 
+ zugeordnet sind, werden die Werte im Diagramm angezeigt. Die Variablenarten 
+ können aus einer Dropdown-Liste ausgewählt werden. Leer = kein Filter, 
+ alle Variablenarten werden angezeigt.</p>
+
+
+</div>
+<p class="GUIControl" data-condition="Others:Deutsch">Teilwerte:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ Parent-Werte oder Teilwerte visualisiert werden sollen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_types.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablenarten werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Grundkonfiguration</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Allgemeine Anwendungen</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/>
+ <span class="Bold">Variablenarten</span> parametriert.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/LC2/de_p_values_config.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablen werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Anwendungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Datenaustausch</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Modul] 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ [Verbindung] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Variablen</span> 
+ gepflegt. Hier wird auch die Einheit festgelegt.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Damit für Variablen die Historie aufgerufen kann, muss 
+ die Spalte &quot;Archiv&quot; auf 1 gesetzt sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Soll die konfigurierte Variablenfarbe verwendet werden, 
+ muss in der Spalte &quot;Farbklasse&quot; ein Eintrag vorhanden sein.</p>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_relations.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Knoten] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Variablenzuordnungen</span> werden die Variablen dem 
+ Knoten zugeordnet, für den sie angezeigt werden sollen. Hier muss das 
+ Flag &quot;Anzeigen&quot; auf 1 gesetzt sein, damit die Variable angezeigt 
+ wird. Die Sortiernummer legt fest, in welcher Reihenfolge die Variablen 
+ angezeigt werden.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Damit Variablen änderbar sind, muss die Spalte &quot;Änderbar&quot; 
+ auf 1 gesetzt sein.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">showHistoryButton</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">showStatisticsButton</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">openHistoryInSidebar</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">displayMode</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">editValues</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">viewMode</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">typeColors</p></td>
+		<td><p class="TabellenInhalt">Object</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">configuredVariableColors</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">variableNameFormat</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">valueId</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">showSubValues</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.24";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen des Performancemonitors</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Performancemonitor" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen des Performancemonitors">
+        <span>Funktionen des Performancemonitors</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen des Performancemonitors</h2>
+<h3 data-condition="Others:Deutsch"><a name="GetPerfVals" id="GetPerfVals"></a>GetPerfVals</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string getperfvals(string Name, string 
+ Format, bool Kommentar)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert die Werte einer Zeile aus der 
+ Performancetabelle. Die Zeile wird über den <b>Namen</b> adressiert. Eine 
+ Zeile enthält auch Zeitstempel. Das <b>Format</b> für die Ausgabe eines 
+ Zeitstempels wird als Parameter angegeben. Ist <b>Format</b> ein Leerstring, 
+ werden keine Zeitstempel ausgegeben. Die Werte werden als String geliefert, 
+ jeweils getrennt durch ein Semikolon. Die Ausgabe erfolgt auf Wunsch mit 
+ <b>Kommentar</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Reihenfolge entspricht den Spalten der Tabelle. 
+ Timerwerte werden im ms mit 5 Nachkommastellen ausgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetPerfVals(&#39;Script&#39;, &#39;DD.MM.YYYY HH:mm:ss:ttt&#39;, 
+ false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">// liefert die Werte mit Zeitstempel</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetPerfVals(&#39;Script&#39;, &#39;&#39;, false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">// liefert die Werte ohne Zeitstempel</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetPerfVals(&#39;Script&#39;, &#39;DD.MM.YYYY HH:mm:ss:ttt&#39;, 
+ true)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">// liefert die Werte mit Zeitstempel und mit Kommentar</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := GetPerfVals(&#39;Script&#39;, &#39;&#39;, false)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">// liefert die Werte ohne Zeitstempel und ohne 
+ Kommentar</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="ResetAllPerf" id="ResetAllPerf"></a>ResetAllPerf</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: resetallperf</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Zeilen in der Performancetabelle werden auf den 
+ Nullzustand zurückgesetzt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ResetAllPerf</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="ResetOnePerf" id="ResetOnePerf"></a>ResetOnePerf</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: resetoneperf(string Name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine Zeile in der Performancetabelle wird auf den Nullzustand 
+ zurückgesetzt. Die Zeile wird über den <b>Namen</b> adressiert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ResetOnePerf(&#39;Script&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

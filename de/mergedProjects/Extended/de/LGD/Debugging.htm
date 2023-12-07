@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.4.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Debugging</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Debugging">
+        <span>Debugging</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Debugging</h1>
+<h3 data-condition="Others:Deutsch"><a id="Prüfen_von_Binding-Informationen_während_der_Laufzeit_mit_der_Debug-Seitenleiste"></a>Prüfen 
+ von Binding-Informationen während der Laufzeit mit der Debug-Seitenleiste</h3>
+<p data-condition="Others:Deutsch">Die Debug-Seitenleiste ist ein nützliches Tool um Binding-Ausdrücke 
+ während der Laufzeit zu prüfen. Die Nutzung der Debug-Seitenleiste muss 
+ über den jeweiligen Boardlet Parameter genehmigt werden oder – in der 
+ HMI Anwendung – über den Projektordner.</p>
+<p data-condition="Others:Deutsch">Durch gleichzeitiges Drücken der STRG-Taste und Rechtsklick auf ein 
+ Element wird die Debug-Seitenleiste angezeigt. Die Seitenleiste zeigt 
+ direkt das Binding für dieses Element an und ermöglicht direkten Zugang 
+ zum Designer. Gerade bei Elementgruppen ist es möglich, die Elterngruppe 
+ eines Elements über den Button Go to parent zu erreichen. Anschließend 
+ werden die enthaltene Ebene und das Dokument ausgewählt.</p>
+<p data-condition="Others:Deutsch">Der Button Open Currently Used Data Items ermöglicht es, eine Liste 
+ für jeden Variablen-, Knoten- und Alarmstatus zu öffnen, die in der Zeichnung 
+ aktuell verwendet werden.</p>
+<p data-condition="Others:Deutsch">In den einzelnen Tabs können unterschiedliche Debug-Informationen angezeigt 
+ werden.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../Bilder/Debugging_Datarefs.png" alt="" style="border: none;" border="0"/></span></p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;"><span lang="EN-US" xml:lang="EN-US">•</span> Bearbeitete Bindings: Bindings 
+ als Ergebnis der Vorbereitung für eine optimierte Ausführung während der 
+ Laufzeit.</span></p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Metadaten: Name, Kommentar und Bibliothek-/Symbolinformationen 
+ im Fall von Bibliothekelementes.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Datarefs: Der vermutlich bekannteste 
+ Debug Tab ist der Tab datarefs, der alle Datenobjekte anzeigt, die im 
+ Bindings des Elements referenziert sind. Die Liste enthält den aktuellen 
+ Wert und im Fall von Variablen den Zeitpunkt des letzten Wertewechsels. 
+ Im Falle von kalkulierten Datenobjekten (Formeln), werden hier auch die 
+ Rechenergebnisse angezeigt.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Stile: Zeigt die aktuellen Stilwerte 
+ des Elements an.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Leistung: Einige Leistungskennzahlen 
+ der Zeichnung.</p>
+<h3 data-condition="Others:Deutsch"><a id="Browser_Protokoll"></a>Browser Protokoll</h3>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">Falls 
+ Binding-Ausdrücke gravierende Fehler wie eine ungültige JSON-Syntax (z. 
+ B. fehlende Klammern) enthalten, ist es sinnvoll das Browser-Protokoll 
+ zu prüfen, um detaillierte Fehlerinformationen zu erhalten.</span></p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Drücken Sie F12 um zu den Debug 
+ Tools des Browsers zu gelangen.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Wechseln Sie zur Konsole – sie enthält 
+ möglicherweise Fehler wie …</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><img src="../../Bilder/Debugging_browser_log.png" alt="" style="border: none;" border="0"/></p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"><span style="mso-fareast-language: DE;">• 
+ Die Nachricht zeigt deutlich, dass das Element mit der angezeigten ID 
+ einen Syntaxfehler enthält.</span></p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Um dieses Element in der Zeichnung 
+ zu lokalisieren, kopieren Sie die ID des Elements.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">• Wählen Sie Sapient|Find Element 
+ by ID… im Designer im Menü aus und fügen Sie die ID ein.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch">--&gt; Das Element wird in der Zeichnung 
+ markiert.</p>
+<p style="mso-fareast-language: DE;" data-condition="Others:Deutsch"> </p>
+<p data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

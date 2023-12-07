@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Installation of JDK 1.7</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Installation of JDK 1.7">
+        <span>Installation of JDK 1.7</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Installation of JDK 1.7</h1>
+<h2 data-condition="Others:Englisch"><a id="Create_a_New_Directory__usr_java"></a>Create a New Directory 
+ /usr/java</h2>
+<p class="BodyText" data-condition="Others:Englisch">Open the Linux Terminal and login as root using the 
+ command &quot;su -&quot;, if you are not already logged-in as root and 
+ then create a new directory called &quot;java&quot; under the directory 
+ &quot;usr&quot;.</p>
+<p class="TextCode" data-condition="Others:Englisch">[gefasoft@localhost ~]$ su -</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]# mkdir /usr/java</p>
+<p class="TextCode" data-condition="Others:Englisch">  </p>
+<h2 data-condition="Others:Englisch"><a id="Download_and_Unpack_JDK"></a>Download and Unpack JDK</h2>
+<p class="BodyText" data-condition="Others:Englisch">Change to the /usr/java directory we created.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]#  cd /usr/java</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost java ]#</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch"><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank"><span style="color: windowtext; 
+												 text-underline: none; 
+												 text-decoration: none; ">Download</span></a> 
+ the appropriate JDK and save it to /usr/java directory we created above.</p>
+<p class="BodyText" data-condition="Others:Englisch">Unpack jdk-7u5-linux-x64.tar.gz in the /usr/java directory 
+ using tar -xzf:</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost java]# tar -xzf jdk-7u45-linux-x64.tar.gz</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">This will create the directory /usr/java/jdk1.7.0_45.</p>
+
+
+</body></html>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.13.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Werterfassung periodenbezogen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Werterfassung periodenbezogen">
+        <span>Werterfassung periodenbezogen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Werterfassung periodenbezogen</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Werterfassung periodenbezogen</span> 
+ (<span style="font-weight: bold;">Value Booking Period-Related</span>) 
+ zeigt entsprechend parametrierte Variablen des selektierten Knotens in 
+ dem Intervall an, in dem Werte gebucht werden müssen (über Filter einstellbar: 
+ jede Stunde, jede Schicht, jeden Tag). Es werden immer die Intervalle 
+ für einen ganzen Tag bzw. eine ganze Woche angezeigt; der Zeitraum kann 
+ über den Zeitfilter selektiert werden. Durch Kombination aus Variablenart 
+ und ausgewähltem Knoten werden die entsprechenden und richtigen Werte 
+ im Boardlet angezeigt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Bordlet Werteerfassung periodenbezogen wird ergänzt 
+ durch das eSFM Boardlet <a href="Werteerfassung_eSFM_v2.htm">Werteerfassung</a> 
+ (interval count) boardlet. </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Nur für manuell gebuchte Variablen innerhalb 
+ von eSFM verwendbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Werteerfassung_periodenbezogen_1.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Menüleiste des Boardlets aktualisiert ein Klick 
+ auf <img src="../../../Bilder/Icons/refresh_18dp.png" alt="" style="border: none;" border="0"/> die Ansicht, um z.B. Wertänderungen zu visualisieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" style="font-weight: bold;" data-condition="Others:Deutsch">Sidebar:</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="41.346%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.132%;"/>
+	<col style="width: 61.884%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Timespan</p></td>
+		<td><p class="BodyText">Zeitraum/-periode des selektierten Zeitfilters</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Variable</p></td>
+		<td><p>Bspw. Schichten</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Attendance Setpoint Line 2</p></td>
+		<td><p class="BodyText">Präsenz-Sollwertlinie Fertigungslinie 2</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Scrap Early Shift Line 2</p></td>
+		<td><p class="BodyText">Ausschuss in der Frühschicht der Fertigungslinie 
+		 2</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Scrap Late Shift Line 2</p></td>
+		<td><p class="BodyText">Ausschuss in der Frühschicht der Fertigungslinie 
+		 2</p></td>
+	</tr>
+	<tr>
+		<td><p class="BodyText">Scrap Night Shift Line 2</p></td>
+		<td><p class="BodyText">Ausschuss in der Frühschicht der Fertigungslinie 
+		 2</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Meldung_hinzufügen"></a>Meldung hinzufügen</h6>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Durch Klick auf <img src="../../../Bilder/Icons/notifications_18dp.png" alt="" style="border: none;" border="0"/> kann 
+		 eine neue Meldung hinzugefügt werden, um Stückzahlverlust zu erfassen. 
+		 Der Dialog wird weiter unten beschrieben.</p>
+		<p class="BodyText">Die Intervalle (bei Tagen für die gesamte Woche, 
+		 bei Stunden für den selektierten Tag) werden nebeneinander angezeigt. 
+		 Bereits gebuchte Werte und ggf. die zugeordneten Sollwerte werden 
+		 angezeigt. Durch Klick auf das Stift-Symbol können die gebuchten 
+		 Werte geändert werden oder neue Werte gebucht werden. Dabei wird 
+		 der Sollwert immer mit dem zuletzt gültigen Sollwert vorbelegt.</p></td>
+		<td><h3> </h3>
+		<p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/Werteerfassung_periodenbezogen_9.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Wert_buchen_und_Meldung_erfassen"></a>Wert buchen und Meldung 
+ erfassen</h3>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText">Durch Klick auf das Stift-Symbol wird der 
+		 Dialog zum Buchen von Werten und Erfassen von Meldungen geöffnet.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText">Die Zeit oben zeigt das aktuelle Intervall 
+		 an, für das die Werte erfasst werden. Diese Angabe kann nicht 
+		 geändert werden.</p>
+		<p class="BodyText">Darunter werden alle Variablen aufgelistet, 
+		 die für diesen Knoten in diesem Intervall bebucht werden sollen. 
+		 Wurde zu einer Variable ein Sollwert festgelegt (Spalte Zielwert 
+		 in &quot;Variablen&quot;), so wird diese Variable ebenfalls zum 
+		 Ändern angeboten, auch wenn kein Intervall für sie eingetragen 
+		 wurde. Sofern vorhanden, wird der aktuelle Wert der Variablen 
+		 angezeigt. Nun können die Werte für das Intervall erfasst werden.</p>
+		<p class="BodyText">Darunter öffnet sich durch Klick auf &quot;Meldung 
+		 hinzufügen&quot; eine Eingabemaske zum Erfassen von Stückzahlverlusten. 
+		 Wurde zum Beispiel der Sollwert in einer Schicht nicht erreicht, 
+		 kann eine Meldung erfasst werden, in der die Differenz begründet 
+		 werden kann. Darunter kann die Uhrzeit eingegeben werden, in der 
+		 die Meldung gültig war (kommend / gehend). Außerdem kann der Meldung 
+		 eine Meldeart und eine Meldeklasse zugewiesen werden. Die Meldung 
+		 wird dann unter der Verbindung &quot;Stückzahlverlust&quot; (ID 
+		 -105) angelegt und dem auslösenden Knoten zugeordnet. Im Boardlet 
+		 &quot;<a href="../15_SFM/Al_Units_Lost.htm">Meldungen Stückzahlverlust</a>&quot; 
+		 werden diese Meldungen dann angezeigt.</p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p></td>
+		<td><h3> </h3>
+		<p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/Werteerfassung_periodenbezogen_2.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das <span class="Bold">Werterfassung periodenbezogen</span> 
+ stehen folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Einheiten anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ zu den Werten die Einheiten eingeblendet werden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Differenz zum Zielwert anzeigen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ die Differenz zum Zielwert mit angezeigt werden soll. Dies kann prozentual 
+ oder absolut sein.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<div data-conref="../../../assets/snippets/Filter/de_Node_ID.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Knoten-ID:</p>
+<p class="GUIControlDescr">ID des Knotens, für den Werte angezeigt werden. 
+ Kann entweder hier geändert werden oder durch Auswahl eines anderen Knotens 
+ im Boardlet <span class="Bold">Knotenlayout</span> oder im Boardlet <span class="Bold">Knotenbaum</span> (außerhalb des <a href="../../Edit_Mode/General.htm">Bearbeitungsmodus</a>).</p>
+
+
+</div>
+<p class="GUIControl" data-condition="Others:Deutsch">Variablenarten:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl der angezeigten Variablenarten.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Intervall:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Listen zur Auswahl des angezeigten 
+ Intervalls.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<div data-conref="../../../assets/snippets/LC2/de_p_values_config.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die Variablen werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Anwendungsstruktur</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Datenaustausch</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Modul] 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ [Verbindung] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Variablen</span> 
+ gepflegt. Hier wird auch die Einheit festgelegt.</p>
+
+
+</div>
+<div data-conref="../../../assets/snippets/LC2/de_p_value_relations.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Unter <span class="Bold">Anwendungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> <span class="Bold">Fertigungsstruktur</span> 
+ <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> [Knoten] <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Variablenzuordnungen</span> werden die Variablen dem 
+ Knoten zugeordnet, für den sie angezeigt werden sollen. Hier muss das 
+ Flag &quot;Anzeigen&quot; auf 1 gesetzt sein, damit die Variable angezeigt 
+ wird. Die Sortiernummer legt fest, in welcher Reihenfolge die Variablen 
+ angezeigt werden.</p>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem muss das Flag &quot;Änderbar&quot; auf 1 gesetzt 
+ sein, damit die Variable im Client bebucht werden darf.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Boardlet-Einstellungen"></a>Boardlet-Einstellungen</h6>
+<p class="BodyText" data-condition="Others:Deutsch">In den Boardlet-Einstellungen wird die Ist-Variable 
+ ausgewählt (Variablenart mit Ist-Werten). Dem Istwert wird ein Sollwert 
+ zugewiesen. Und im LC2 wird dieser Variablenart ein Sollwert zugewiesen. 
+ D.h. es gibt 2 Variablenarten (Soll- und Ist), und mit Ist-Variable wird 
+ dem zugehörigen Sollwert zugewiesen im LC2. </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">In der WebApp kann in den Boardlet Settings folgendes 
+ eingestellt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<table class="TabelleBlank" valign="top" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col width="500"/>
+	<col width="40"/>
+	<col/>
+	</colgroup><tbody><tr>
+		<td><p class="BodyText" style="font-weight: bold;">Sidebar:</p>
+		<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="92.067%" border="1">
+			<colgroup><col style="width: 53.224%;"/>
+			<col style="width: 46.776%;"/>
+			</colgroup><tbody><tr>
+				<td><p class="BodyText">Show title</p></td>
+				<td><p class="BodyText">Gewünschter Titel des Boardlets 
+				 kann eingegeben werden.</p></td>
+			</tr>
+			<tr>
+				<td><p class="BodyText">Show title bar</p></td>
+				<td><p class="BodyText">Titel anzeigen</p></td>
+			</tr>
+			<tr>
+				<td><p class="BodyText">Show buttons in title bar</p></td>
+				<td><p class="BodyText">Schaltflächen in der Titelleiste 
+				 anzeigen</p></td>
+			</tr>
+			<tr>
+				<td><p class="BodyText">Print</p></td>
+				<td><p class="BodyText">Drucken</p></td>
+			</tr>
+			<tr>
+				<td><p class="BodyText">Show time frame in title bar when 
+				 printing</p></td>
+				<td><p class="BodyText">Zeitrahmen in Titelleiste beim 
+				 Drucken anzeigen</p></td>
+			</tr>
+			<tr>
+				<td><p class="BodyText">Show units</p></td>
+				<td><p class="BodyText">Einheiten anzeigen</p></td>
+			</tr>
+			<tr>
+				<td><p class="BodyText">Display difference to target value</p></td>
+				<td><p class="BodyText">Differenz zum Zielwert anzeigen</p>
+				<p class="BodyText"> </p>
+				<p class="BodyText">Hier kann zwischen der Anzeige prozentualer 
+				 und absoluter Differenz unterschieden werden.</p></td>
+			</tr>
+		</tbody></table>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p>
+		<p class="BodyText"> </p></td>
+		<td><h3> </h3>
+		<p class="BodyText"> </p></td>
+		<td><p class="BodyText"><img src="../../../Bilder/Werteerfassung_periodenbezogen_8.png" alt="" style="border: none;" border="0"/></p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">useTableLayout</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">showUnits</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueTypes</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">interval</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valueTypeDiff</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "5.4.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">HANDLE_EVENTS (Ereignisse bearbeiten)</title>
+<link rel="stylesheet" href="../../../en/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="HANDLE_EVENTS (Ereignisse bearbeiten)">
+        <span>HANDLE_EVENTS (Ereignisse bearbeiten)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">HANDLE_EVENTS (Ereignisse bearbeiten)</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job dient zum Abarbeiten von Ereignissen wie 
+ Buchen von Schichtendwerten, internen Sollwerten<span data-condition="Others:Not_implemented">, 
+ Reset von Zählern, etc</span>.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job behandelt auch die Arbarbeitung interner 
+ Sollwerte. Dazu wurde der Job erweitert, um Out-Werte beim Ereignis SHIFT_START 
+ auf übertragen zu setzen. Dadurch werden alle internen Sollwerte (ohne 
+ PROJECT_NO und COMMAND_ID) in P_VALUES_CURRENT geschrieben und aus P_OUT_VALUES 
+ gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Sein Aufruf / Einsatz ist unabhängig vom Einsatz eines 
+ bestimmten Sapient-Moduls.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Log-Ausgaben dieses Jobs erfolgen in das Log-File der 
+ jeweiligen SE-Instanz unter dem Namen &#39;HANDLE_EVENTS&#39;. Um die Ausführlichkeit 
+ der Log-Ausgaben getrennt von der anderer Jobs einzustellen, ist eine 
+ Zeile mit Inhalt &quot;<span style="font-size: 11pt;">logger.</span>de.gefasoft.sapient.db.shift.HandleEvents 
+ = &lt;loglevel&gt;&quot; in die Logging-Konfiguration einzutragen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dieser Job kann zu einem Zeitpunkt nur einmal ausgeführt 
+ werden. Um sicherzustellen, dass es zu keinen Problemen kommt, wird der 
+ Parameter &quot;parallel_exec&quot; abgefragt. Liefert dieser &quot;true&quot; 
+ zurück, wird eine entsprechende Meldung geloggt und der Job nicht erneut 
+ angestoßen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">ArgsMap args = ArgsMap.getInstance(params, DEF_SHIFT_END);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">Object isParallel = args.getMapEntry(&quot;job_params&quot;, 
+ &quot;parallel_exec&quot;);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">if (isParallel != null &amp;&amp; &quot;true&quot;.equalsIgnoreCase( 
+ isParallel.toString() )) {</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">String msg = &quot;The procedure HandleEvents/execute 
+ is executed already by another process. Please check your configuration. 
+ &quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">+ &quot;Current Trigger symbol: &quot; + String.valueOf(args.get(&quot;trigger_symbol&quot;));</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">logger.error(msg);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">throw new ConcurrentModificationException(msg);</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job">}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Um fehlerhafte Einträge in die Datenbank am Tag vor 
+ / nach dem Produktionsdatum der Umstellung auf Sommerzeit wird als ein 
+ erster Schritt das Produktionsdatum um Mitternacht erstellt. Danach werden 
+ die Stunden und Minuten hinzugefügt. Um mehrfache Einträge derselben Schichten 
+ / Pausen (&#39;verschobene&#39; Schichten / Pausen am Produktionsdatum der Zeitumstellung) 
+ zu vermeiden, wird geprüft, dass dieser Eintrag noch nicht existiert.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Parametrierung</h6>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">HANDLE_EVENTS</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Ereignisse 
+		 bearbeiten</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="BodyText">/de/gefasoft/sapient/db/shift/HandleEvents/execute/</p></td>
+	</tr>
+	<tr style="height: 53px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{</p>
+		<p class="TextkörperTable">}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">0</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Bedeutung der Parameter</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standardmäßig benötigt der Job keine Parameter. Es 
+ kann jedoch optional folgender Parameter eingetragen werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">batch_size</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Integer, gibt die Anzahl Zeilen an, nach denen ein 
+ Batch-Update erfolgen soll. 1 = jeder Datensatz wird ausgeführt (empfohlen 
+ für&#39;s Debuggen), Default: 1000 (empfohlen für produktive Anwendung).</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Trigger</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Trigger: zyklisch (-1)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Intervall: {&quot;Interval&quot;: &quot;1m&quot;}</p>
+
+
+</body></html>

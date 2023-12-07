@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Konfiguration der Legato Application Engine</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Konfiguration der Legato Application Engine</h2>
+<h3><a name="Grundkonfiguration" id="Grundkonfiguration"></a>Grundkonfiguration</h3>
+<p class="BodyText">Die Grundkonfiguration der Application Engine wird 
+ in der Datei <span class="ListingChar"><span style="font-size: 9.0pt;">appengine.properties</span></span> 
+ im Programmverzeichnis festgelegt. Beispiel für eine 2-DB Installation 
+ (die Einträge mit &quot;dbarch&quot; sind für eine 1-DB Installation zu 
+ entfernen):</p>
+<p class="TextCode"># Main configuration file for Legato Application Engine</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># ID of this Application Engine in LegatoDB AE_CYC_JOBS.AE_INST</p>
+<p class="TextCode">AeInstance=1</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># Number of seconds to wait on startup before initializing 
+ DB connection(s)</p>
+<p class="TextCode">DelayAtStart=0</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># Thread Pools</p>
+<p class="TextCode">InitExecutors=main, highprio</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># configure Executor &quot;main&quot;</p>
+<p class="TextCode">main.scheduling=true</p>
+<p class="TextCode">main.threads=10</p>
+<p class="TextCode">main.dbpools=dboper, dbarch</p>
+<p class="TextCode">main.dboper.initActive=4</p>
+<p class="TextCode">main.dboper.maxActive=10</p>
+<p class="TextCode">main.dboper.propfile=dboper.properties</p>
+<p class="TextCode">main.dboper.defaults=dboper.</p>
+<p class="TextCode">main.dbarch.initActive=3</p>
+<p class="TextCode">main.dbarch.maxActive=10</p>
+<p class="TextCode">main.dbarch.propfile=dbarch.properties</p>
+<p class="TextCode">main.dbarch.defaults=dbarch.</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># configure Executor &quot;highprio&quot;</p>
+<p class="TextCode">highprio.scheduling=true</p>
+<p class="TextCode">highprio.threads=5</p>
+<p class="TextCode">highprio.dbpools=dboper, dbarch</p>
+<p class="TextCode">highprio.dboper.initActive=3</p>
+<p class="TextCode">highprio.dboper.maxActive=5</p>
+<p class="TextCode">highprio.dboper.propfile=dboper.properties</p>
+<p class="TextCode">highprio.dboper.defaults=dboper.</p>
+<p class="TextCode">highprio.dbarch.initActive=0</p>
+<p class="TextCode">highprio.dbarch.maxActive=5</p>
+<p class="TextCode">highprio.dbarch.propfile=dbarch.properties</p>
+<p class="TextCode">highprio.dbarch.defaults=dbarch.</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># configure general DB access</p>
+<p class="TextCode">dbpool.driver=oracle.jdbc.OracleDriver</p>
+<p class="TextCode">dbpool.testquery=SELECT 1 FROM DUAL</p>
+<p class="TextCode">dbpool.testOnBorrow=true</p>
+<p class="TextCode">dbpool.testOnReturn=false</p>
+<p class="TextCode">dbpool.testOnIdle=false</p>
+<p class="TextCode">dbpool.maxIdle=-1</p>
+<p class="TextCode">dbpool.maxWait=-1</p>
+<p class="TextCode">dbpool.examEvery=-1</p>
+<p class="TextCode">dbpool.idleTimeout=-1</p>
+<p class="TextCode">dbpool.TestsPerRun=-4</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># Initial jobs</p>
+<p class="TextCode">InitJobs=pollsysjobs</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># define Job &quot;pollsysjobs&quot;</p>
+<p class="TextCode">pollsysjobs.jobclass=de.gefasoft.legato.appeng.job.AeJobPoller</p>
+<p class="TextCode">pollsysjobs.schedulerclass=de.gefasoft.legato.appeng.scheduler.OnTimeScheduler</p>
+<p class="TextCode">pollsysjobs.props.executor=main</p>
+<p class="TextCode">pollsysjobs.props.period=60000&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# 
+ once every minute</p>
+<p class="TextCode">pollsysjobs.props.basetime=2005-01-01 00:00:00,000&#160;&#160;&#160;&#160;# 
+ at full minute</p>
+<p class="TextCode">pollsysjobs.props.initialrun=true</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># configure XML parsers</p>
+<p class="TextCode">XMLReaders=org.apache.xerces.parsers.SAXParser, oracle.xml.parser.v2.SAXParser</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die Datenbank-Verbindungen werden in externen Konfigurationsdateien 
+ definiert, damit sie von mehreren Instanzen der Application Engine gemeinsam 
+ benutzt werden können. In obigem Beispiel würde die Verbindung zur Operativ-Datenbank 
+ von Legato in der Datei <span class="ListingChar"><span style="font-size: 9.0pt;">dboper.properties</span></span> 
+ z.B. folgendermaßen definiert:</p>
+<p class="TextCode"># configure access to operative db</p>
+<p class="TextCode">url=jdbc:oracle:thin:@localhost:1521:LEGATO_OP</p>
+<p class="TextCode">user=legato_write</p>
+<p class="TextCode">pwd=0C6718832977C59B615F31B6824BB6F5</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die Konfiguration der Verbindung zu Archiv-Datenbank 
+ würde analog in der Datei <span class="ListingChar"><span style="font-size: 9.0pt;">dbarch.properties</span></span> 
+ erfolgen.</p>
+<p class="Textkörperfett">Definieren der Instanz-Kennung</p>
+<p class="BodyText">Es können mehrere Instanzen der Application Engine 
+ gestartet werden. Jede dieser Instanzen führt nur diejenigen Jobs aus 
+ der Datenbank aus, die eine bestimmte Kennung aufweisen. Diese Kennung 
+ muss in <span class="ListingChar"><span style="font-size: 9.0pt;">AeInstance</span></span> 
+ angegeben werden (bei nur einer Instanz z.B. 1).</p>
+<p class="Textkörperfett">Wartezeit beim Start</p>
+<p class="BodyText">Falls Application Engine und Datenbank am gleichen 
+ Rechner installiert werden und beide beim Hochfahren des Rechners gestartet 
+ werden, versucht die Application Engine u.U. bereits, Verbindungen zur 
+ Datenbank aufzubauen, bevor diese bereit ist. Um die betreffenden Fehlermeldungen 
+ in den Logs der Application Engine zu vermeiden, kann über <span class="ListingChar"><span 
+	 style="font-size: 9.0pt;">DelayAtStart</span></span> die Anzahl Sekunden 
+ angegeben werden, die die Application Engine beim Start verstreichen lassen 
+ soll, bevor sie beginnt, die Datenbankverbindungen zu initialisieren.</p>
+<p class="Textkörperfett">Anlegen von Start-Jobs</p>
+<p class="BodyText">Beim Start der Application Engine muss mindestens ein 
+ Job angelegt werden. In der Regel wird dies ein Job sein, der zyklisch 
+ die Tabelle <span class="ListingChar"><span style="font-size: 9.0pt;">AE_CYC_JOBS</span></span> 
+ der Legato-Datenbank auswertet, um daraus weitere Jobs zu lesen.</p>
+<p class="BodyText">Die Namen der beim Start anzulegenden Jobs stehen, 
+ wie üblich durch Kommata getrennt, im Eintrag <span class="ListingChar"><span 
+	 style="font-size: 9.0pt;">InitJobs</span></span> der Konfigurationsdatei. 
+ Für jeden Job werden noch weitere Einstellungen benötigt:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;jobname&gt;.jobclass gibt den Namen der Java-Klasse 
+ an, die den betreffenden Job implementiert. Zum Auswerten der oben erwähnten 
+ Tabelle AE_CYC_JOBS ist dies de.gefasoft.legato.appeng.job.AeJobPoller. 
+ Für JavaScript-Skripten wäre de.gefasoft.legato.appeng.job.JsJob zuständig, 
+ der Name des betreffenden Skripts wird in der Einstellung &lt;jobname&gt;.props.script 
+ angegeben.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;jobname&gt;.schedulerclass gibt den Namen 
+ der Java-Klasse an, welche die Zeitplanung für die Ausführung des Jobs 
+ übernimmt. Die möglichen Klassen sind auch in der Tabelle AE_SCHEDULE_TYPE 
+ der Legato-Datenbank aufgeführt.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Weitere Einstellungen zum Job befinden sich in 
+ Einträgen der Form &lt;jobname&gt;.props.&lt;einstellung&gt;. Nach diesem 
+ Schema können auch Job-spezifische Einstellungen angegeben werden. Die 
+ Folgenden werden jedoch allgemein benötigt:</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">&lt;jobname&gt;.props.executor 
+ gibt den Namen des Thread-Pools an, in dem der betreffende Job ausgeführt 
+ werden soll, z.B. main.</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">&lt;jobname&gt;.props.period 
+ gibt bei zyklisch auszuführenden Jobs das Ausführungsintervall in Millisekunden 
+ an.</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">&lt;jobname&gt;.props.basetime 
+ gibt bei Jobs, die zu bestimmten Zeitpunkten laufen sollen, die Basis 
+ der Berechnung an. Soll ein Job z.B. alle zwei Tage um 4 Uhr morgens laufen, 
+ geben Sie hier das Datum eines Tages in der Vergangenheit und die Uhrzeit 
+ 4 Uhr an.</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">&lt;jobname&gt;.props.initialrun 
+ gibt an, ob der Job beim Start der Application Engine einmal sofort ausgeführt 
+ werden soll (true) oder erst, wenn die Zeitplanung ihn freigibt.</p><?rh-list_end ?>
+<h3><a name="Anlegen_von_ThreadPools" id="Anlegen_von_ThreadPools"></a>Anlegen 
+ von Thread-Pools</h3>
+<p class="BodyText">Threads sind Ausführungs-Pfade in einem Programm. Auf 
+ Maschinen mit mehreren Prozessoren können Threads parallel auf verschiedenen 
+ Prozessoren ausgeführt werden, aber auch auf Systemen mit nur einem einzigen 
+ Prozessor haben Programme mit mehreren Threads Vorteile: Wenn ein Thread 
+ auf irgendwelche externe Ereignisse warten muss (z.B. das Bearbeiten einer 
+ Datenbank-Abfrage), kann der Prozessor in der Zwischenzeit einen anderen 
+ Thread ausführen.</p>
+<p class="BodyText">In der Legato Application Engine werden Thread-Pools 
+ dazu benutzt, Aufgaben (<i>Jobs</i>) für bestimmte Zeitpunkte zu planen 
+ und um mehrere Aufgaben parallel auszuführen. Beim Start der Application 
+ Engine muss mindestens ein Thread-Pool namens <span class="ListingChar"><span 
+	 style="font-size: 9.0pt;">main</span></span> angelegt werden, damit 
+ die Initialisierungs-Jobs überhaupt ausgeführt werden können und sich 
+ die Application Engine nicht sofort wieder beendet.</p>
+<p class="BodyText">Der Eintrag InitExecutors in der Konfigurationsdatei 
+ enthält, durch Kommata getrennt, die Namen aller beim Start anzulegenden 
+ Thread-Pools. Jeder Thread-Pool benötigt zwei Angaben für seine Konfiguration:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;poolname&gt;.threads gibt die Anzahl der parallel 
+ ausführbaren Jobs in diesem Pool an</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;poolname&gt;.scheduling gibt an, ob dieser 
+ Thread-Pool das Planen von Jobs für bestimmte Zeitpunkte unterstützen 
+ soll:</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">true bedeutet, dass Zeitplanung unterstützt wird. 
+ Der Haupt-Thread-Pool main benötigt Zeitplanung.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">false bedeutet dass keine Zeitplanung benötigt 
+ wird.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;poolname&gt;.dbpools enthält eine Komma-getrennte 
+ Liste der Datenbankverbindungs-Pools, die in dem betreffenden Thread-Pool 
+ benutzt werden sollen. Für den Haupt-Thread-Pool main ist diese Angabe 
+ verpflichtend. Andere Thread-Pools benutzen die Datenbankverbindungs-Pools 
+ von main mit, falls für sie keine eigenen konfiguriert wurden. Die hier 
+ angegebenen Pool-Namen beziehen sich auf den jeweiligen Thread-Pool, die 
+ weiteren Einstellungen der Verbindungs-Pools müssen also in der Form &lt;threadpoolname&gt;.&lt;dbpoolname&gt; 
+ erfolgen.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Es ist in der Regel sinnvoll, jedem Thread-Pool einen 
+ eigenen Satz an Datenbank-Verbindungen zuzuweisen, damit sich Threads 
+ der unterschiedlichen Pools nicht beim Zugriff auf Datenbankverbindungen 
+ gegenseitig sperren.</p>
+<h3><a name="Anlegen_von_DB-Verbindungs-Pools" id="Anlegen_von_DB-Verbindungs-Pools"></a>Anlegen 
+ von Datenbankverbindungs-Pools</h3>
+<p class="BodyText">Datenbank-Verbindungen werden in der Application Engine 
+ immer in Verbindungs-Pools verwaltet. Ein solcher Pool enthält jeweils 
+ eine bestimmte Anzahl Verbindungen zu einer bestimmten Datenbank. Wird 
+ eine solche benötigt, &quot;leiht&quot; sich die betreffende Funktion 
+ eine Verbindung aus dem Pool aus, führt damit ihre Datenbank-Abfragen 
+ durch und gibt die Verbindung wieder an den Pool zurück. Das steigert 
+ die Performance (Anlegen und Aufbauen einer Datenbank-Verbindung kann 
+ lange dauern) und begrenzt auch den Ressourcen-Verbrauch (es können nie 
+ mehr Verbindungen gleichzeitig benutzt werden, als der Pool groß ist).</p>
+<p class="BodyText">Datenbankverbindungs-Pools werden pro Thread-Pool definiert. 
+ Zwei Datenbankverbindungs-Pools haben eine besondere Bedeutung in der 
+ Application Engine:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">dboper gibt den Pool mit Verbindungen zur Legato 
+ Produktiv-Datenbank an und</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">dbarch den Pool mit Verbindungen zur Archiv-Datenbank 
+ von Legato.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">In einer Konfiguration ohne getrennte Datenbanken (nur 
+ eine Legato-Datenbank), geben Sie bitte nur einen der beiden Pools an.</p>
+<p class="BodyText">Die Konfigurationen der einzelnen Datenbankverbindungs-Pools 
+ weisen einige gleiche Teile auf, die entsprechend auch gemeinsam konfiguriert 
+ werden können. Es bietet sich also an, die Konfiguration in die folgenden 
+ Arten von Angaben aufzuteilen:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Angaben, die pro Pool unterschiedlich sind, z.B. 
+ Größe (Anzahl der darin enthaltenen Datenbankverbindungen). Diese Angaben 
+ werden in der Regel durch direkte Einträge der Form &lt;threadpoolname&gt;.&lt;dbpoolname&gt;.&lt;parameter&gt;=&lt;wert&gt; 
+ vorgenommen.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Angaben, die pro Legato-Datenbank (Operativ / 
+ Archiv) unterschiedlich sind (z.B. URL zur Datenbank, Benutzer und Kennwort). 
+ Diese Angaben werden gerne in eigene Konfigurationsdateien ausgelagert, 
+ um sie durch mehrere Instanzen der Application Engine gemeinsam benutzen 
+ zu können. Auf diese Dateien wird dann mittels der Angabe propfile in 
+ der jeweiligen Pool-Konfiguration verwiesen (z.B. main.dboper.propfile=dboper.properties).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Angaben, die für alle Pools gleich sind (z.B. 
+ Name der Treiberklasse, Verbindungstest-Abfrage etc.). Diese werden meist 
+ in einem eigenen Abschnitt der appengine.properties aufgeführt, auf den 
+ mittels der Angabe defaults verwiesen wird (z.B. main.dboper.defaults=dbpool. 
+ (Punkt am Ende beachten).</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Konfiguration Pool-spezifischer Eigenschaften</p>
+<p class="BodyText">Diese Angaben werden üblicherweise direkt zur Definition 
+ des betreffenden Thread-Pools hinzugefügt. Üblicherweise werden an dieser 
+ Stelle nur die Angaben zur Größe des Pools (Anzahl der darin zu verwaltenden 
+ Datenbankverbindungen) gemacht:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;threadpoolname&gt;.&lt;dbpoolname&gt;.maxActive 
+ gibt an, wie viele Verbindungen maximal hergestellt werden dürfen.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;threadpoolname&gt;.&lt;dbpoolname&gt;.initActive 
+ stellt ein, wie viele Verbindungen schon beim Anlegen des Pools aufgebaut 
+ werden sollen.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Auf alle weiteren Einstellungen wird an dieser Stelle 
+ nur verwiesen:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;threadpoolname&gt;.&lt;dbpoolname&gt;.propfile 
+ verweist auf die Angaben zur Legato-Datenbank, die in einer externen Datei 
+ enthalten sind.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&lt;threadpoolname&gt;.&lt;dbpoolname&gt;.defaults 
+ verweist auf den Abschnitt in der Konfigurationsdatei, der die allgemeinen 
+ Einstellungen für alle Pools enthält. Bitte beachten: Angaben hier überschreiben 
+ solche aus externen Konfigurationsdateien.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Angaben zur Datenbank-Verbindungen</p>
+<p class="BodyText">Diese Angaben betreffen den Aufbau der Verbindungen 
+ zu der oder den Legato-Datenbank(en). Es handelt sich dabei um:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">url gibt, wie bei JDBC üblich, den Treiber, Server, 
+ Port und die Instanz der Datenbank an.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">user gibt den Namen des Datenbank-Benutzers an, 
+ mit dem sich die Application Engine bei der Datenbank anmelden soll.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">pwd enthält das zugehörige Kennwort in verschlüsselter 
+ Form. Diese Angabe können Sie aus den <a href="../../../../SystemParameters/de/02_Admin-LC2/02_Login_User-Adm/20_SysParam1103.htm">Systemparametern 
+ &quot;ProdDbPassword&quot;</a> bzw. &quot;<a href="../../../../SystemParameters/de/02_Admin-LC2/02_Login_User-Adm/03_SysParam1106.htm">ArvDBPassword</a>&quot; 
+ entnehmen (Tabelle SYS_PARAMS in der Legato Operativ-DB, IDs <a href="../../../../SystemParameters/de/02_Admin-LC2/02_Login_User-Adm/20_SysParam1103.htm">1103</a> 
+ bzw. <a href="../../../../SystemParameters/de/02_Admin-LC2/02_Login_User-Adm/03_SysParam1106.htm">1106</a>). 
+ Alternativ können Sie statt pwd einen Eintrag pass anlegen und darin das 
+ Kennwort als Klartext eintragen.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Den Eintrag schema sollten Sie nur angeben, falls 
+ ein anderes Datenbankschema als das Standardschema des Benutzers verwendet 
+ werden soll (siehe auch user).</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Gemeinsame Angaben für alle Datenbankverbindungen</p>
+<p class="BodyText">Üblicherweise werden Angaben, die für alle Datenbankverbindungen 
+ der Application Engine gelten sollen, in einem eigenen Abschnitt der Konfigurationsdatei 
+ zusammengefasst und aus den Pool-Konfigurationen darauf verwiesen. Es 
+ handelt sich dabei um folgende Punkte:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">class gibt an, welche Pool-Implementierung benutzt 
+ werden soll. Es gibt 3 Möglichkeiten:</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Apache 
+ DBCP: de.gefasoft.legato.util.DbConPoolDBCP</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Oracle 
+ UCP: de.gefasoft.legato.util.DbConPoolUCP</p><?rh-list_end ?>
+<?rh-list_start class="Liste3" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung3" style="text-indent: -24px; margin-left: 70px;">Oracle 
+ Implicit Connection Cache: de.gefasoft.legato.util.DbConPoolOracle</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">connectionFactory: wird nur benötigt, wenn als 
+ class UCP benutzt wird. Um Verbindung zu anderen Datenbanken herzustellen, 
+ muss hier eine entsprechende Klasse des betreffenden Treibers angegeben 
+ werden, die zum Anlegen von Verbindungen benutzt werden kann. Standard: 
+ oracle.jdbc.pool.OracleDataSource.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">driver gibt den Namen des Datenbanktreibers an 
+ (z.B. für Oracle auf oracle.jdbc.OracleDriver zu setzen).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">testquery gibt eine SQL-Anweisung an, die zum 
+ Prüfen der Verbindungen benutzt wird. Standard-Wert ist &quot;select 1 
+ from dual&quot; (Anmerkung: Das noch schnellere &quot;select 1&quot; funktioniert 
+ nicht, weil der Treiber diese Anweisung gar nicht erst zum Server sendet, 
+ die Verbindung dahin folglich auch nicht geprüft wird).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">testOnBorrow gibt an, ob Verbindungen vor dem 
+ Ausleihen aus dem Pool getestet werden sollen, also bevor sie einer Funktion 
+ der Application Engine zur Benutzung übergeben werden. Mit dem Standardwert 
+ true wird dies eingeschaltet.</p><?rh-list_end ?>
+<p class="TextkörperfettAufzähl"><img src="../../../Images/Sys_Inst/image014.jpg" 
+										 alt="" width="71" height="19" 
+										 border="0" />:</p>
+<p class="TextkörperListHinweis">Wir raten dringend davon ab, diesen Test 
+ auszuschalten, da ohne ihn einmal abgebrochene Datenbank-Verbindungen 
+ nicht wieder aufgebaut, sondern immer wieder (erfolglos) benutzt werden. 
+ Der Pool ist dann nicht mehr &quot;reconnect&quot;-fähig und die Application 
+ Engine muss nach jedem solchen Fehler neu gestartet werden.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">testOnReturn gibt an, ob Verbindungen bei der 
+ Rückgabe an den Pool getestet werden sollen, also wenn die ausleihende 
+ Funktion der Application Engine die Verbindung wieder in den Pool zurücklegt. 
+ Standardmäßig ausgeschaltet, weil der Test beim Ausleihen ausreicht.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">maxWait Die maximale Dauer in Millisekunden, die 
+ ein Thread auf eine Verbindung warten darf, bevor der Pool einen Fehler 
+ meldet, indem er eine Ausnahme auslöst. Der Standardwert -1 bedeutet &quot;ewig&quot;, 
+ d.h. der Thread wartet so lange, bis eine Verbindung verfügbar wird.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">testOnIdle gibt an, ob im Pool befindliche Verbindungen 
+ in einem Hintergrund-Thread periodisch getestet werden sollen. Dieser 
+ Test kann nur ausgeführt werden, wenn freie Verbindungen überhaupt überwacht 
+ werden (siehe maxIdle, idleTimeout und examEvery). Standardmäßig ausgeschaltet.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">maxIdle Maximale Anzahl unbenutzter Verbindungen, 
+ die im Pool verbleiben dürfen (überzählige Verbindungen werden wieder 
+ freigegeben). Der Standardwert -1 bewirkt, dass einmal aufgebaute Verbindungen 
+ nicht freigegeben, sondern für spätere Wiederverwendung aufgehoben werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">idleTimeout Minimale Dauer in Millisekunden, die 
+ eine unbenutzte Verbindung im Pool verbleibt, bevor sie freigegeben werden 
+ kann. Nur wirksam, falls maxIdle größer 0 ist. Der Standardwert -1 bewirkt, 
+ dass Verbindungen &quot;ewig&quot; behalten werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">examEvery Intervall in Millisekunden, in dem unbenutzte 
+ Verbindungen gesucht und freigegeben werden sollen. Der Standardwert -1 
+ schaltet den dafür sonst nötigen Thread aus, es wird also nicht nach unbenutzten 
+ Verbindungen gesucht (siehe auch maxIdle).</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">TestsPerRun Anzahl der pro Lauf des Prüf-Threads 
+ zu untersuchenden Verbindungen. Werte kleiner 0 schalten die Überprüfung 
+ ab. Standardmäßig ausgeschaltet.</p><?rh-list_end ?>
+<h3><a name="Konfiguration_von_Logmeldungen" id="Konfiguration_von_Logmeldungen"></a>Konfiguration 
+ von Logmeldungen</h3>
+<p class="BodyText">Die Legato Application Engine benutzt die Bibliothek 
+ Log4J2 der Apache Foundation für die Ausgabe von Logmeldungen.</p>
+<p class="BodyText"><i>Anmerkung</i>: Der plattformspezifische Wrapper 
+ für Windows (procrun) generiert ebenfalls Logmeldungen. Ob und wohin diese 
+ aufgezeichnet werden, stellen Sie bitte wie im Kapitel &quot;Installation&quot; 
+ angegeben in den Start-Skripten ein.</p>
+<p class="BodyText">Die Ausgabe von Logmeldungen wird über die Datei <span 
+	 class="ListingChar"><span style="font-size: 9.0pt;">log4j2.xml</span></span> 
+ gesteuert. Die mitgelieferte Beispieldatei sieht so aus:</p>
+<p class="TextCode">&lt;Configuration&#160;monitorInterval=&quot;30&quot;&#160;status=&quot;WARN&quot;&gt;</p>
+<p class="TextCode">&lt;Appenders&gt;</p>
+<p class="TextCode">&lt;Console&#160;name=&quot;Console&quot;&#160;target=&quot;SYSTEM_OUT&quot;&gt;</p>
+<p class="TextCode">&lt;PatternLayout&gt;</p>
+<p class="TextCode">&lt;Pattern&gt;</p>
+<p class="TextCode">%d{ABSOLUTE} [%thread] %-5level %logger{1} - %message%n%throwable</p>
+<p class="TextCode">&lt;/Pattern&gt;</p>
+<p class="TextCode">&lt;/PatternLayout&gt;</p>
+<p class="TextCode">&lt;/Console&gt;</p>
+<p class="TextCode">&lt;RollingRandomAccessFile&#160;name=&quot;logfile&quot;&#160;fileName=&quot;leappeng.log&quot;&#160;filePattern=&quot;leappeng.%i.log&quot;&#160;immediateFlush=&quot;false&quot;&#160;append=&quot;true&quot;&gt;</p>
+<p class="TextCode">&lt;Policies&gt;</p>
+<p class="TextCode">&lt;OnStartupTriggeringPolicy/&gt;</p>
+<p class="TextCode">&lt;SizeBasedTriggeringPolicy&#160;size=&quot;10 MB&quot;/&gt;</p>
+<p class="TextCode">&lt;/Policies&gt;</p>
+<p class="TextCode">&lt;DefaultRolloverStrategy&#160;min=&quot;1&quot;&#160;max=&quot;9&quot;/&gt;</p>
+<p class="TextCode">&lt;PatternLayout&#160;charset=&quot;UTF-8&quot;&gt;</p>
+<p class="TextCode">&lt;Pattern&gt;</p>
+<p class="TextCode">%date{DEFAULT} [%thread] %-5level %logger{1} - %message%n%throwable</p>
+<p class="TextCode">&lt;/Pattern&gt;</p>
+<p class="TextCode">&lt;/PatternLayout&gt;</p>
+<p class="TextCode">&lt;/RollingRandomAccessFile&gt;</p>
+<p class="TextCode">&lt;RollingRandomAccessFile&#160;name=&quot;errfile&quot;&#160;fileName=&quot;leapperr.log&quot;&#160;filePattern=&quot;leapperr.%i.log&quot;&#160;immediateFlush=&quot;false&quot;&#160;append=&quot;true&quot;&gt;</p>
+<p class="TextCode">&lt;ThresholdFilter&#160;level=&quot;WARN&quot;&#160;onMatch=&quot;ACCEPT&quot;&#160;onMismatch=&quot;DENY&quot;/&gt;</p>
+<p class="TextCode">&lt;Policies&gt;</p>
+<p class="TextCode">&lt;OnStartupTriggeringPolicy/&gt;</p>
+<p class="TextCode">&lt;SizeBasedTriggeringPolicy&#160;size=&quot;10 MB&quot;/&gt;</p>
+<p class="TextCode">&lt;/Policies&gt;</p>
+<p class="TextCode">&lt;DefaultRolloverStrategy&#160;min=&quot;1&quot;&#160;max=&quot;9&quot;/&gt;</p>
+<p class="TextCode">&lt;PatternLayout&#160;charset=&quot;UTF-8&quot;&gt;</p>
+<p class="TextCode">&lt;Pattern&gt;</p>
+<p class="TextCode">%date{DEFAULT} [%thread] %-5level %logger{1} - %message%n%throwable</p>
+<p class="TextCode">&lt;/Pattern&gt;</p>
+<p class="TextCode">&lt;/PatternLayout&gt;</p>
+<p class="TextCode">&lt;/RollingRandomAccessFile&gt;</p>
+<p class="TextCode">&lt;/Appenders&gt;</p>
+<p class="TextCode">&lt;Loggers&gt;</p>
+<p class="TextCode">&lt;AsyncRoot&#160;level=&quot;info&quot;&#160;includeLocation=&quot;false&quot;&gt;</p>
+<p class="TextCode">&lt;AppenderRef&#160;ref=&quot;Console&quot;/&gt;</p>
+<p class="TextCode">&lt;AppenderRef&#160;ref=&quot;logfile&quot;/&gt;</p>
+<p class="TextCode">&lt;AppenderRef&#160;ref=&quot;errfile&quot;/&gt;</p>
+<p class="TextCode">&lt;/AsyncRoot&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;httpclient.wire&quot;&#160;level=&quot;error&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;oracle.ucp&quot;&#160;level=&quot;error&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;org.apache.commons.httpclient&quot;&#160;level=&quot;error&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;javax.management&quot;&#160;level=&quot;error&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;de.gefasoft.legato.appeng.job.AeJobPoller&quot;&#160;level=&quot;trace&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;JsJob-KPI_abhaengigkeits-gesteuert&quot;&#160;level=&quot;trace&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;OnlineKPI&quot;&#160;level=&quot;trace&quot;/&gt;</p>
+<p class="TextCode">&lt;AsyncLogger&#160;name=&quot;de.gefasoft.legato.appeng.timeslice.AggregatorJob&quot;&#160;level=&quot;trace&quot;/&gt;</p>
+<p class="TextCode">&lt;/Loggers&gt;</p>
+<p class="TextCode">&lt;/Configuration&gt;</p>
+<p class="TextCode">&#160;</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">In der ersten Zeile wird das &quot;MonitorInterval&quot; 
+ definiert. Dieses legt fest, alle wieviel Sekunden soll Log4j nachschauen, 
+ ob die Logdatei geändert wurde. Zum Abschalten dieser Überprüfung kann 
+ man den Wert auf 0 setzen; alternativ kann auch ein höherer Wert eingetragen 
+ werden. Für die Inbetriebnahme werden 30 Sekunden empfohlen.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Unter &quot;RollingRandomAccessFile&quot; (der 
+ Parameter existiert 2 Mal) wird oben der Pfad für das Log-File und unten 
+ der Pfad für das Error-File angegeben. Der Pfad wird dabei sowohl bei 
+ &quot;fileName&quot; als auch bei &quot;filePattern&quot; eingegeben, 
+ z.B. fileName=&quot;/var/log/leappeng/leappeng_DEV11DB.log&quot; filePattern=&quot;/var/log/leappeng/leappeng_DEV11DB.%i.log&quot;</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&quot;OnStartupTriggeringPolicy&quot; legt fest, 
+ dass bei jedem Start der AE neues Logfile begonnen wird; wenn dies nicht 
+ gewünscht ist, kann der Parameter gelöscht werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&quot;DefaultRolloverStrategy&quot; legt fest, 
+ wie viele Files erstellt werden, ehe das älteste überschrieben wird.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&quot;AsyncRoot&quot; definiert das Standardlevel 
+ für das Erfassen von Meldungen.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">&quot;AsyncLoggers&quot; definiert Ausnahmen zum 
+ &quot;AsyncRoot&quot;. Damit wird für einzelne Logger (Jobs) angegeben, 
+ dass sie anders loggen sollen als die anderen. Die oben angegebene Werte 
+ sind nur Beispiele; mindestens die letzten 4 sollten entfernt werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Wenn die AE als Dienst betrieben wird, sollte 
+ der &quot;ConsoleAppender&quot; (&lt;AppenderRef&#160;ref=&quot;Console&quot;/&gt;) 
+ gelöscht werden.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">In der Beispiel-Datei werden Meldungen der Level TRACE 
+ und DEBUG gar nicht erfasst, weil bei AsyncRoot &quot;Info&quot; eingestellt 
+ ist. Ausnahmen dazu sind über den AsyncLogger definiert, z.B. das Level 
+ Trace für die KPI-Jobs.</p>
+<p class="BodyText">Alle Meldungen ab Level INFO werden ins Log-File geschrieben 
+ (hier ist kein eigener Filter definiert <span style="font-family: Wingdings;">à</span> 
+ alle erfassten Meldungen (= AsyncRoot-Level) werden gespeichert). Alle 
+ Meldungen ab Level WARN werden zusätzlich ins Error-File geschrieben.</p>
+<p class="BodyText">Die Application Engine benutzt folgende Kategorien:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">FATAL für schwere Fehler, die eine weitere Ausführung 
+ des Programms verhindern.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">ERROR für Fehler, die mindestens die Ausführung 
+ eines Jobs, z.B. KPI-Berechnung, gesamt stören.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">WARN für Warnungen und Fehler, die wahrscheinlich 
+ nur lokale Wirkung haben, z.B. die KPI-Berechnung nur für einen bestimmten 
+ Knoten verhindern.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">INFO für Initialisierung und globalen Ablauf, 
+ z.B. Anlegen, Start und Stopp von Jobs.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">DEBUG für Aktivitäten innerhalb Jobs, z.B. Start/Stopp 
+ der KPI-Berechnung für eine bestimmte Schicht.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">TRACE für Meldungen zur Fehlersuche, z.B. SQL-Anweisungen.</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Die vielen weiteren Möglichkeiten von Log4J2 würden 
+ den Rahmen dieser Beschreibung sprengen, Sie können sie bei Bedarf unter 
+ <a href="http://logging.apache.org/log4j/2.x/">http://logging.apache.org/log4j/2.x/</a> 
+ nachlesen. Für weiterführende Konfigurationen hier die von der Application 
+ Engine benutzten Logger:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">de.gefasoft.legato.appeng.main.AppEngine - Initialisierung, 
+ Start, Stopp des Programms</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">JsJob-&lt;Jobname&gt; - Meldungen des betreffenden 
+ Scripts (z.B. JsJob-KPI_abhaengigkeits-gesteuert)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">de.gefasoft.legato.util.DbConPool - Datenbankverbindungs-Pools 
+ anlegen/löschen</p><?rh-list_end ?>
+</body>
+</html>

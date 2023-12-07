@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx"/>
+<meta http-equiv="Content-Language" content="de-DE"/>
+<meta name="condition-tags" content="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Systemvoraussetzungen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css"/>
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Datenbank"/></head>
+
+<body>
+<h2>Systemvoraussetzungen</h2>
+<p class="BodyText">Zum Betrieb von Legato ist eine Datenbankmanagementsoftware 
+ (DBMS) von Oracle nötig. </p>
+<p class="BodyText">Ab Legato Version 4.7.3:</p>
+<p class="BodyText">Voraussetzung ist Oracle Version 12.2 (alias 18) oder 
+ 12.1 (ohne Kompatibilitätsmodus).</p>
+<p class="BodyText">Bis Legato Version 4.7.2:</p>
+<p class="BodyText">Voraussetzung ist Oracle Version 11gR2. Für Legato 
+ zulässig sind die Versionen Oracle Standard Edition One (Oracle SEO), 
+ Oracle Standard Edition (Oracle SE) und Oracle Enterprise Edition (Oracle 
+ EE). Außerdem ist Oracle 12c (mit Parametern COMPATIBLE=&#39;11.2.0&#39; und OPTIMIZER_FEATURES_ENABLE=&#39;11.2.0.1&#39;) freigegeben.</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Es ist nicht möglich, den Parameter COMPATIBLE 
+ später auf einen niedrigeren Wert zu setzen. Daher ist für die Nutzung 
+ von Legato nur ein Upgrade auf Oracle 12c möglich. Eine direkte Installation 
+ einer 12c-Instanz wird nicht unterstützt (da dann der Parameterwert automatisch 
+ auf 12.1.0 gesetzt ist).</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Mit Legato kann kein User-basiertes Oracle-Lizenzmodell 
+ eingesetzt werden. Es wird eine CPU-basierende Lizenz benötigt!</p>
+<p class="BodyText">Es wird empfohlen, die Oracle Enterprise Edition zu 
+ installieren, da diese unter anderem die folgenden vorteilhaften Features 
+ bietet:</p>
+<p class="Aufzählung1 Liste1neu">Online Table and Index Rebuild</p>
+<p class="Aufzählung1 Liste1neu">Partitionierung von Tabellen (optional)</p>
+<p class="Aufzählung1 Liste1neu">Automatic Workload Repository (AWR) (optional)</p>
+<p class="BodyText"> </p>
+<p class="BodyText">Einen detaillierten Vergleich der Oracle Versionen 
+ findet man auf der Oracle Homepage (<a href="../../Sys_Inst">http://docs.oracle.com/cd/E11882_01/license.112/e47877/editions.htm#DBLIC116</a>).</p>
+<p class="BodyText">Legato ist auch auf Oracle ASM freigegeben. ASM steht 
+ für Automatic Storage Management, eine in den Oracle Kernel integrierte 
+ Clustersoftware, die die Funktionalität eines Volume Manager und File-System 
+ kombiniert und dem DBA die Verwaltung der Datenbankdateien erleichtert. 
+ ASM bildet die Schicht zwischen den (physikalischen oder abstrahierten) 
+ Festplatten und dem DBMS. Dabei legt Oracle die Datendateien auf nicht 
+ formatierten Bereichen unter Umgehung des Betriebssystems ab. Sobald das 
+ Oracle-DBMS und die Legato-Instanz (leer, ohne Tabellen, Stored Procedures 
+ usw.) installiert sind, verhält sich das System für die Legato-Installation 
+ &quot;transparent&quot; genauso wie ein Nicht-ASM-System.</p>
+<p class="BodyText">Soll ein Upgrade von Oracle 11gR2 auf Oracle 12cR1 
+ erfolgen, so muss Oracle zunächst mindestens auf Version 11.2.0.2 gepatcht 
+ werden. Mit niedrigeren Oracle-Versionen ist kein direktes Upgrade auf 
+ Oracle 12c möglich.</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Die Installation von Legato auf Oracle Real 
+ Application Cluster (Oracle RAC) wird nicht unterstützt!</p>
+<p class="Textkörperfett"><img src="../../../assets/images/02_Hinweis_de.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis">Bei der Installation von Oracle Server und 
+ OraClient (der z.B. für die Verwendung des LC2 benötigt wird) auf demselben 
+ Rechner unter Windows kommt es zu Problemen mit den Pfadangaben in den 
+ Umgebungsvariablen. Dort werden der Client- und der Serverpfad in der 
+ falschen Reihenfolge eingetragen, weshalb die benötigten Dateien zur Ausführung 
+ der Datenbank nicht gefunden werden. Gehen Sie folgendermaßen vor, um 
+ die Reihenfolge zu korrigieren: Unter Systemeigenschaften - System - Erweiterte 
+ Systemeinstellungen - Umgebungsvariablen - Path mit Doppelklick den Eintrag 
+ öffnen. Hier sind alle Pfadangaben als kommaseparierte Liste eingetragen. 
+ Am besten kopieren Sie den kompletten Eintrag in einen Editor. Dort kopieren 
+ Sie den Pfad des Oracle Servers von hinter dem Client-Pfad VOR den Clientpfad. 
+ Meist finden sich die beiden Pfadangaben ganz am Anfang, weil die zugehörigen 
+ Programme als letztes installiert wurden. Kopieren Sie nun den geänderten 
+ Eintrag wieder in die Umgebungsvariable und speichern Sie die Änderung.</p>
+<p class="BodyText">Eine genaue Beschreibung der Installation des DBMS 
+ entnehmen Sie bitte je nach Betriebssystem den separaten Dokumenten &quot;Installation_Oracle_Server_de&quot; 
+ bzw. &quot;Installation_RHEL_Oracle_Server_de&quot;.</p>
+
+
+</body></html>

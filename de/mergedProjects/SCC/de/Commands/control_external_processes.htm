@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.19";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="In Bearbeitung" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Steuerung von externen Prozessen</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Steuerung von externen Prozessen">
+        <span>Steuerung von externen Prozessen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch"><a id="ControlExternalProcesses"></a>Steuerung von externen Prozessen</h1>
+<p class="BodyText" data-condition="Others:Deutsch">Mit diesen Funktionen können externe Prozesse wie z.B. 
+ Notepad, Browser etc. gesteuert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Funktionen kann in einem Script eine Variable 
+ vom Typ <span class="ListingChar">process</span> deklariert werden. Alle 
+ weiteren Funktionen werden dann mit dem Namen der Variablen, einem Punkt 
+ und dem Namen der Funktion gemeinsam angesprochen. </p>
+<h3 data-condition="Others:Deutsch"><a id="Close"></a>Close</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool process.close(int terminationtype)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion versucht, den Prozess zu schließen, und 
+ liefert true bei Erfolg. Durch terminationtype wird festgelegt, auf welche 
+ Art versucht wird, den Prozess zu schließen:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col id="IconColWidth"/>
+	<col/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TblBodyTextBold">0</p></td>
+		<td><p class="TblBodyText">Es wird versucht, nur den ursprünglich 
+		 gestarteten Prozess zu schließen. Manche Programme starten aber 
+		 einen neuen Prozess und der Startprozess wird sofort geschlossen. 
+		 Dann funktioniert diese Variante nicht.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyTextBold">1</p></td>
+		<td><p class="TblBodyText">Es wird versucht, den ursprünglich gestarteten 
+		 Prozess sowie alle von diesem abhängigen Prozesse zu schließen. 
+		 </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">static process pro</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">static bool created</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string cmdline</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">cmdline := &#39;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            https://github.com&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if not created then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  created := pro.create(cmdline)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  created := not pro.close(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Closebyname"></a>Closebyname</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool process.closebyname(string programname)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion versucht, den Prozess zu schließen, und 
+ liefert true bei Erfolg. Es werden alle Prozesse geschlossen, die programname 
+ entsprechen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<table class="CodeTab" cellspacing="0" width="100%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 100%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextCode">static process pro</p>
+		<p class="TextCode">static bool created</p>
+		<p class="TextCode">string cmdline</p>
+		<p class="TextCode">cmdline := &#39;C:\\Program Files (x86)\\Mozilla 
+		 Firefox\\firefox.exe</p>
+		<p class="TextCode">            https://github.com&#39;</p>
+		<p class="TextCode">if not created then</p>
+		<p class="TextCode">  created := pro.create(cmdline)</p>
+		<p class="TextCode">else</p>
+		<p class="TextCode">  created := not pro.closebyname(&#39;firefox.exe&#39;)</p>
+		<p class="TextCode">endif</p></td>
+	</tr>
+</tbody></table>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="Create"></a>Create</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool process.create(string cmdline)</p>
+<p class="BodyText" data-condition="Others:Deutsch">In cmdline wird der Pfad zur ausführbaren Datei inklusive 
+ der optionalen Parameter übergeben. Die Funktion versucht, den Prozess 
+ zu erzeugen, und liefert true bei Erfolg.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">static process pro</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">static bool created</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string cmdline</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">cmdline := &#39;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">            https://github.com&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if not created then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  created := pro.create(cmdline)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  created := not pro.close(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

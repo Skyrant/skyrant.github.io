@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Einrichten des Listeners</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h2>Einrichten des Listeners</h2>
+<p class="BodyText">Nun muss der Listener eingerichtet werden. Dies wird mit dem User oracle vorgenommen.</p>
+<p class="TextCode"># su oracle</p>
+<p class="TextCode">$ ORACLE_HOME=/u01/app/oracle/product/11.2.0/dbhome_1</p>
+<p class="TextCode">$ export ORACLE_HOME</p>
+<p class="TextCode">$ cd $ORACLE_HOME/bin</p>
+<p class="TextCode">$ ./netca</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">&#160;Der Oracle Net-Konfigurationsassistent öffnet sich.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image041.png" alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Selektieren Sie "Listener-Konfiguration" und klicken Sie auf "Weiter".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image042.png" alt="" width="599" height="399" border="0" /></p>
+<p class="BodyText">Wählen Sie "Hinzufügen" und klicken Sie auf "Weiter".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image043.png" alt="" width="601" height="402" border="0" /></p>
+<p class="BodyText">Übernehmen Sie den vorbelegten Namen "LISTENER" und klicken Sie auf "Weiter".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image044.png" alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Belassen Sie die Vorauswahl des gewählten Protokolls auf "TCP" und klicken Sie "Weiter".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image045.png" alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Ganz wichtig ist nun die Vergabe eines sinnvollen Ports für die Kommunikation. Dieser Port muss auch hinterher in Firewall freigeschaltet sein. Der Standard-Port ist hier die 1521, er kann jedoch hier geändert werden. In dieser Beispielinstallation belassen wir diesen Wert jedoch und klicken auf "Next". Danach ist der Listener konfiguriert und es erfolgt folgende Frage:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image046.png" alt="" width="600" height="402" border="0" /></p>
+<p class="BodyText">Wählen Sie bei der Abfrage "Nein" und klicken Sie auf "Weiter".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image047.png" alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Die erfolgreiche Konfiguration wird bestätigt. Ein Klick auf "Weiter" führt wieder zum Hauptmenü des Assistenten.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image048.png" alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Als nächstes müssen wir die Methoden benennen, mit denen man sich an den Instanzen anmelden kann. Dazu wählen wir den Punkt "Konfiguration der Benennungsmethoden" und klicken Sie auf "Weiter".</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image049.png" alt="" width="599" height="400" border="0" /></p>
+<p class="BodyText">Wählen Sie die Benennungsmethoden "Lokale Benennung" für TNSNAMES und "Easy-Connect Benennung" und klicken Sie auf "Weiter".</p>
+<p class="BodyText">Die erfolgreiche Konfiguration wird bestätigt und ein Klick auf "Weiter" führt zurück zum Startdialog.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image048.png" alt="" width="600" height="400" border="0" /></p>
+<p class="BodyText">Klicken Sie nun auf "Beenden", um den Konfigurationsassistenten zu beenden.</p>
+<p class="BodyText">Damit ist die Installation des Oracle-RDBMS und des Listeners beendet. Weiter geht es im nächsten Kapitel mit der Einrichtung einer Datenbank-Instanz.</p>
+</body>
+</html>

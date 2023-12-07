@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Beschreibung","type":"item","tilePath":"","description":"","url":"de/Basics/SE_Jobs/Task_dbtimesync.htm#Beschreibung"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

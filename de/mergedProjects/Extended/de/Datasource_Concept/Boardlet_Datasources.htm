@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "1.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Boardlet Datasources</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation3.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Boardlet Datasources">
+        <span>Boardlet Datasources</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Boardlet Datasources</h2>
+<p class="BodyText" data-condition="Others:Deutsch">In der WebApp wird das Datasource-Konzept mithilfe 
+ des Boardlets &quot;Super-Generic-Table&quot; umgesetzt. Für dieses Boardlet 
+ steht ein zusätzlicher Reiter im Bearbeiten-Modus zur Verfügung.</p>
+<h3 data-condition="Others:Deutsch"><a id="Reiter_Datasources"></a>Reiter Datasources</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/Tab_Datasource.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Reiter ist in mehrere Abschnitte gegliedert:</p>
+<h4 data-condition="Others:Deutsch">Allgemein</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Ganz oben kann aus einer Drop-down-Liste das Datasource 
+ Model selektiert werden, das verwendet werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über den Schieberegler &quot;Aktualisieren&quot; kann 
+ festgelegt werden, ob das Boardlet in einem regelmäßigen Intervall aktualisiert 
+ werden soll oder nicht. Dies ist z.B. bei anstehenden Meldungen sinnvoll, 
+ um immer die aktuellsten Daten anzuzeigen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über &quot;Sortieren&quot; wird festgelegt, nach welcher 
+ Spalte die angezeigten Daten defaultmäßig sortiert werden.</p>
+<h4 data-condition="Others:Deutsch">Standardfilter</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Hier werden die Standardfilter des Boardlets angezeigt. 
+ Diese sind im Code des Datasource Models unter &quot;filter&quot; zu finden. 
+ Jeder dieser Standardfilter muss mit einem Parameter verknüpft werden, 
+ über den schließlich ein zu filternder Wert gesetzt wird.</p>
+<h4 data-condition="Others:Deutsch">Felder</h4>
+<p data-condition="Others:Deutsch"><img src="../../Bilder/Fields.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier werden alle Felder angezeigt, die von der Datenquelle 
+ abgefragt werden können. Die im Code der Datasource als &quot;Required&quot; 
+ festgelegten Einträge sind entsprechend markiert. Diese können nicht deaktiviert 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für alle anderen Felder kann über den Schieberegler 
+ rechts festgelegt werden, ob die Daten von der DB abgefragt werden sollen 
+ oder nicht.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">INFO:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Dies hat KEINEN Einfluss darauf, ob das Feld 
+ im Boardlet angezeigt wird. Es geht lediglich darum, ob die Daten abgefragt 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf das + in einer Zeile wird der Eintrag 
+ aufgeklappt und bietet nun die Möglichkeit, dieses Feld mit einem zuvor 
+ angelegten Parameter zu verknüpfen. Links werden die möglichen Operatoren 
+ in einer Drop-Down-Liste angezeigt (abhängig davon, ob der Schieberegler 
+ &quot;Array&quot; an oder aus ist, unterscheiden sich die Einträge). Rechts 
+ werden dann abhängig vom gewählten Operator die zur Verfügung stehenden 
+ Boardlet-Parameter angezeigt. Zum genauen Vorgehen beim Anlegen eines 
+ neuen Parameters, siehe bitte <a href="Boardlet_Datasources.htm#Reiter_Filter___Parameter">Reiter 
+ Filter / Parameter</a>.</p>
+<h4 data-condition="Others:Deutsch">Aktionen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Hier können im Datasource-Model definierte Aktionen 
+ für den Endanwender an- bzw. abgewählt werden. Üblicherweise werden die 
+ Aktionen dann nach Doppelklick auf einen Eintrag in der Seitenleiste angeboten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über die Aktion &quot;Output&quot; können Detail-Ansichten 
+ definiert werden, die per Klick dann den Wert als Parameter erhalten. 
+ Hier stehen alle Felder zur Verfügung, die von der DB geholt werden. Hierzu 
+ muss im Reiter Filter / Parameter der entsprechende Eintrag beim Startboardlet 
+ auf &quot;out&quot; und beim Zielboardlet auf &quot;in&quot; gesetzt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Anwendungsbeispiel: Master – Detail Dashboard: Selektion 
+ einer Zeile in der Master-Tabelle setzt automatisch einen Filter in einer 
+ Detailtabelle, um zugehörige Datensätze anzuzeigen.</p>
+<h3 data-condition="Others:Deutsch"><a id="Reiter_Filter___Parameter"></a>Reiter Filter / Parameter</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Hier werden zum einen die im Datasource-Model definierten 
+ Filter angezeigt (üblicherweise mindestens Knoten und Zeit).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf &quot;Parameter hinzufügen&quot; können 
+ weitere Parameter oder Filter für dieses Boardlet festgelegt werden. Über 
+ den Reiter Datasources – Fields kann der neue Parameter dann mit einem 
+ bestimmten Datenbankfeld verknüpft werden. Alternativ ist es natürlich 
+ auch möglich, einfach einen bestimmten Wert an ein anderes Boardlet im 
+ Dashboard zu übergeben, das einen Parameter mit dem gleichen Namen enthält, 
+ ohne eine Referenz auf die Datenbank.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/AddParam.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier kann ein frei wählbarer Name für den Parameter 
+ vergeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aus der Dropdown-Liste muss nun die Art des Parameters 
+ gewählt werden. Zur Verfügung stehen alle im Datasource-Model definierten 
+ Filter sowie: </p>
+<table class="SimpleGridBlack" style="border-collapse: collapse; border: none; 
+		 mso-border-alt: solid windowtext .5pt; mso-yfti-tbllook: 1184; 
+		 mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;" cellspacing="0" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+		<td style="vertical-align: top; border: solid #000000 1.0pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="113"><p class="TextkörperTable">NumberArray</p></td>
+		<td style="vertical-align: top; border: solid #000000 1.0pt; border-left: none; 
+			 mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="491"><p class="TextkörperTable">Ermöglicht 
+		 die Eingabe mehrerer Zahlen kommagetrennt als Array. Kann z.B. 
+		 mit der ID-Spalte einer Tabelle verknüpft werden.</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 1;">
+		<td style="vertical-align: top; border: solid #000000 1.0pt; border-top: none; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="113"><p class="TextkörperTable">StringArray</p></td>
+		<td style="vertical-align: top; border-top: none; border-left: none; 
+			 border-bottom: solid #000000 1.0pt; border-right: solid #000000 1.0pt; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="491"><p class="TextkörperTable">Ermöglicht die Eingabe 
+		 mehrerer Strings kommagetrennt als Array. Kann z.B. mit einer 
+		 Text-Spalte einer Tabelle verknüpft werden.</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 2;">
+		<td style="vertical-align: top; border: solid #000000 1.0pt; border-top: none; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="113"><p class="TextkörperTable">LookupTable</p></td>
+		<td style="vertical-align: top; border-top: none; border-left: none; 
+			 border-bottom: solid #000000 1.0pt; border-right: solid #000000 1.0pt; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="491"><p class="TextkörperTable">Ermöglicht eine Mehrfachauswahl 
+		 aus einer Tabelle. Dazu muss in einem dritten Feld der Name der 
+		 Tabelle und die zu holenden Spaltennamen angegeben werden, z.B. 
+		 al_classes, id, name.</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 3;">
+		<td style="vertical-align: top; border: solid #000000 1.0pt; border-top: none; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="113"><p class="TextkörperTable">Number</p></td>
+		<td style="vertical-align: top; border-top: none; border-left: none; 
+			 border-bottom: solid #000000 1.0pt; border-right: solid #000000 1.0pt; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="491"><p class="TextkörperTable">Ermöglicht die Eingabe 
+		 einer Zahl. Kann z.B. mit der ID-Spalte einer Tabelle verknüpft 
+		 werden.</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 4;">
+		<td style="vertical-align: top; border: solid #000000 1.0pt; border-top: none; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="113"><p class="TextkörperTable">String</p></td>
+		<td style="vertical-align: top; border-top: none; border-left: none; 
+			 border-bottom: solid #000000 1.0pt; border-right: solid #000000 1.0pt; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="491"><p class="TextkörperTable">Ermöglicht die Eingabe 
+		 eines Strings. Kann z.B. mit einer Text-Spalte einer Tabelle verknüpft 
+		 werden.</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 5; mso-yfti-lastrow: yes;">
+		<td style="vertical-align: top; border: solid #000000 1.0pt; border-top: none; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="113"><p class="TextkörperTable">Boolean</p></td>
+		<td style="vertical-align: top; border-top: none; border-left: none; 
+			 border-bottom: solid #000000 1.0pt; border-right: solid #000000 1.0pt; 
+			 mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; 
+			 mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" width="491"><p class="TextkörperTable">Ermöglicht das Umschalten 
+		 eines Schiebereglers zwischen true und false.</p>
+		<p class="Textkörperfett">INFO:</p>
+		<p class="TextkörperHinweis">Für Datenbank-Einträge wird Boolean 
+		 aktuell nicht unterstützt. Hier muss immer Number verwendet werden 
+		 (für 1 oder 0).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die neuen Parameter können auf den gewünschten Parametertyp 
+ (local, in, out, in/out) gesetzt oder gelöscht werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">INFO:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch">Vergessen Sie nicht, den neuen Parameter mit 
+ einem Feld zu verknüpfen!</p>
+<h3 data-condition="Others:Deutsch">Reiter Tabelleneinstellungen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In diesem Reiter können für alle Spalten, die von der 
+ Datenbank geholt werden, Einstellungen hinsichtlich ihres Verhaltens getroffen 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../Bilder/Columns2.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Zunächst wird die entsprechende Spalte selektiert. 
+ Darunter kann ein individueller Name eingegeben werden, der als Spaltenüberschrift 
+ verwendet werden soll.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Schieberegler bestimmen das Verhalten 
+ der Spalte in der Tabelle. Sie kann sortierbar, größenveränderbar, verschiebbar 
+ und sichtbar sein. Außerdem kann eine bestimmte Breite der Spalte festgelegt 
+ werden. Ist der Schieberegler Komponente aktiv, kann die Art der Spalte 
+ selektiert werden, z.B. Zeitangabe. Darunter kann die gewünschte Formatierung 
+ als JSON-String eingegeben werden. Grüne Häkchen am Ende der Zeilen zeigen 
+ an, ob der Inhalt sinnvoll ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für weitere Details, siehe bitte <a href="Table_Settings.htm">Tabellen-Einstellungen</a>.</p>
+
+
+</body></html>

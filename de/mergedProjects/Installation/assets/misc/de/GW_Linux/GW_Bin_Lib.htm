@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Gateway Binary und Bibliotheken</title>
+<link rel="StyleSheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+</head>
+<body>
+<h1>Gateway Binary und Bibliotheken</h1>
+<p class="BodyText">Nach dem Compilieren/Linken muss in dem vom Kunden vorgegebenen Verzeichnis (dieses wird im Folgenden als &lt;APP_DIR&gt; bezeichnet) das Unterverzeichnis bin erstellt werden.</p>
+<p class="Textkörperfett">Gateway 32 Bit</p>
+<p class="BodyText">In das Verzeichnis &lt;APP_DIR&gt;/bin müssen nun folgende Dateien kopiert werden:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">&lt;BASE_DIR&gt;/GatewayIx/gateway</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">$ACE_ROOT/ace/libACE.so.6.2.0</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX/lib/librfccm.so</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett"><b style="mso-bidi-font-weight: normal;"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">Gateway 64 Bit</ins></span></b></p>
+<p class="BodyText"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">In das Verzeichnis &lt;APP_DIR&gt;/bin müssen nun folgende Dateien kopiert werden:</ins></span></p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">&lt;BASE_DIR&gt;/GatewayIx/gateway_64</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">$ACE_ROOT/ace/libACE.so.6.3.0</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">&lt;BASE_DIR&gt;/3rdParty/SAP/RfcSdk.720.LINUX_64/lib/librfccm.so</p>
+<?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Der Pfad &lt;APP_DIR&gt;/bin muss in die Umgebungsvariable LD_LIBRARY_PATH aufgenommen werden.</p>
+<p class="BodyText">Abhängig von der Kundenanforderung und des/der verwendeten Gatewayprojekts/Gatewayprojekte müssen weitere Verzeichnisse für Logdateien, Skripten, Gatewayprojekte… angelegt werden. Da dies z. T. sehr unterschiedlich ist, ist dies Teil des jeweiligen Projekts und nicht dieser Dokumentation.</p>
+<p class="BodyText">Entsprechend der jeweiligen Projektanforderung können folgende Gatewayrechner als Beispiel dienen:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">audibxug0010.bx.audi.prod.vwg (Audi Brüssel Montage)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">audibxug0015.bx.audi.prod.vwg (Audi Brüssel KB)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">vwsmmovmo305 (VW Zwickau KB)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1">vwskbaubav24 (VW Bratislava)</p>
+<?rh-list_end ?><?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?>
+<p class="Aufzählung1"><span class="msoIns"><ins cite="mailto:Jörg%20Kral" datetime="2016-02-10T14:05">vwlegato001 (VWGTO Silao)</ins></span></p>
+<?rh-list_end ?>
+</body>
+</html>

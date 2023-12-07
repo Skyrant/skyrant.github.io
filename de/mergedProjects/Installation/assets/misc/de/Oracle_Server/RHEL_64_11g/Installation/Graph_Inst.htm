@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Installation mit dem grafischen Installer</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Installation mit dem grafischen Installer</h2>
+<p class="BodyText"><span style="background: white;">Dann wird (vorübergehend) 
+ der X Window-Zugang für alle Hosts geöffnet:</span></p>
+<p class="TextCode"># xhost +</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText"><span style="background: white;">Für die eigentliche 
+ Installation wird zum User oracle gewechselt. Dieser wurde durch das Pre-Install 
+ Script angelegt. Der User oracle setzt die Variable DISPLAY und startet 
+ runInstaller:</span></p>
+<p class="TextCode"># su oracle</p>
+<p class="TextCode">$ export DISPLAY=:0.0</p>
+<p class="TextCode">$ cd /tmp/OracleInstaller/database/</p>
+<p class="TextCode">$ ./runInstaller</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die Installation startet mit der Anzeige des Oracle-Installer-Startdialogs 
+ und dort mit der Nachfrage nach der Installation von Sicherheitsupdates:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image010.png" 
+						 alt="" width="700" height="526" border="0" /></p>
+<p class="BodyText">Die Checkbox vor "Ich möchte Sicherheitsupdates über 
+ My Oracle Support erhalten" wird weggeklickt und auch die Nachfrage mit 
+ "Ja" bestätigt:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image012.png" 
+						 alt="" width="514" height="188" border="0" /></p>
+<p class="BodyText">Auch in der nachfolgenden Dialogmaske wird das Herunterladen 
+ von Softwareupdates an dieser Stelle der Installation abgelehnt:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image013.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Damit entfällt auch der Installationspunkt "Softwareupdates 
+ einspielen". Als Installationsoption wird "Nur Datenbanksoftware installieren" 
+ ausgewählt:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image015.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Bei den "Grid-Installationsoptionen" wird der Unterpunkt 
+ "Datenbankinstallation mit nur einer Instanz" gewählt:</p>
+<p class="Textkörperfett"><img src="../../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Installation von Legato auf Oracle Real 
+ Application Clusters (RAC) wird nicht unterstützt!</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image017.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Die "Produktsprachen" Deutsch und Englisch werden beibehalten 
+ wie voreingestellt:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image019.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Auf der nächsten Maske wird als Datenbank-Edition die 
+ "Enterprise Edition" eingestellt:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image021.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Als Oracle Base- und Oracle Home-Verzeichnisse werden 
+ die wie oben beschriebenen, gemäß OFA erstellten Verzeichnisse ausgewählt. 
+ Das Softwareverzeichnis muss /dbhome_1 sein:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image023.png" 
+						 alt="" width="700" height="523" border="0" /></p>
+<p class="BodyText">Das so genannte Bestandsverzeichnis (oraInventory) 
+ wird direkt unterhalb der Oracle Base eingerichtet:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image025.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Als "Berechtigte Betriebssystemgruppe" wird auf der 
+ nächsten Maske nur "dba" als Datenbankadministrator-Gruppe eingetragen 
+ (vorausgewählt). Das Feld in der Drop-Down-Box in der Zeile darunter (Datenbankoperator-Gruppe, 
+ optional) bleibt leer.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image027.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Auf der nächsten Maske werden direkt vor der eigentlichen 
+ Installation die Voraussetzungen überprüft:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image029.png" 
+						 alt="" width="700" height="524" border="0" /></p>
+<p class="BodyText">Die als "fehlend" angezeigten Packages sind (als Ergebnis 
+ der vorhergehenden Installationen) sehr wohl auf dem Rechner vorhanden; 
+ die Warnungen sind das Ergebnis eines Bugs im Installer-Programm (Oracle-Versionsstand 
+ 11.2.0.3). Durch Anklicken des Kästchens "Alles ignorieren" kann die Installation 
+ fortgesetzt werden. Die folgende Sicherheitsabfrage ist mit &quot;Ja&quot; 
+ zu bestätigen:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image031.png" 
+						 alt="" width="516" height="161" border="0" /></p>
+<p class="BodyText">Es folgt der "Überblick" über die auszuführenden Aktionen:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image032.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Ein Klick auf &quot;Installieren&quot; startet die 
+ Installation.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image034.png" 
+						 alt="" width="700" height="527" border="0" /></p>
+<p class="BodyText">Kurz vor dem Abschluss der Installation erscheint ein 
+ Pop-up Dialog mit der Aufforderung, zwei Skripte (in der angegebenen Reihenfolge) 
+ mit root-Rechten auszuführen:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image036.png" 
+						 alt="" width="551" height="389" border="0" /></p>
+<p class="BodyText">Folgen Sie dazu der Anleitung im Dialog.</p>
+<p class="BodyText">Beim zweiten Skript wird ein Pfad abgefragt; überprüfen 
+ Sie diesen und bestätigen oder ändern Sie die Vorauswahl.</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image037.png" 
+						 alt="" width="700" height="395" border="0" /></p>
+<p class="BodyText">Sobald die Skripte durchgelaufen sind, klickt man auf 
+ "OK", und das Ende der Installation wird angezeigt:</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/RHEL_64_11g/image039.png" 
+						 alt="" width="700" height="525" border="0" /></p>
+<p class="BodyText">Ein Klick auf &quot;Schließen&quot; beendet den Installations-Dialog.</p>
+</body>
+</html>

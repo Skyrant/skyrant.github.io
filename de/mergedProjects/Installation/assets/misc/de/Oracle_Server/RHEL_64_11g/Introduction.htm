@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta name="build tags" content="Deutsch" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Einleitung</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h1>Einleitung</h1>
+<h2><a name="Über_dieses_Dokument"></a>Über dieses Dokument</h2>
+<p class="BodyText">In dieser Dokumentation wird in kurzen Texterläuterungen 
+ und anhand von Screenshots beschrieben, wie man einen Oracle Server auf 
+ Red Hat Enterprise Linux (im Folgenden kurz RHEL) 6.4 installiert. Im 
+ Großen und Ganzen ist diese Installation identisch mit der auf RHEL 6.3 
+ sowie auf Oracle Linux 6.3 und 6.4. Für Oracle Linux gibt es kleine Unterschiede, 
+ die im entsprechenden Kapitel (3.3.4.1) vermerkt sind.</p>
+<p class="BodyText">Die Beschreibung richtet sich an Datenbank-Administratoren. 
+ Grundlegende Kenntnisse im Umgang mit Datenbank-Servern sowie Kenntnis 
+ der Systemumgebung wird vorausgesetzt.</p>
+<p class="BodyText">Im Dokument werden folgende Symbole verwendet:</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Stellt einen Sicherheitshinweis dar. Die folgenden 
+ Informationen warnen vor möglichem Sachschaden, z.B. Datenverlust oder 
+ mangelnder Funktionalität bei unsachgemäßer Handhabung. Beachten Sie diese 
+ Hinweise unbedingt!</p>
+<p class="Textkörperfett">TIPP:</p>
+<p class="TextkörperHinweis">Hier finden Sie hilfreiche Tipps zur Anwendung.</p>
+<h2><a name="Allgemeiner_Überblick"></a>Allgemeiner Überblick</h2>
+<p class="BodyText">Die nachfolgend beschriebenen Systembestandteile werden 
+ in diesen aufeinander aufbauenden Schritten installiert:</p>
+<p class="BodyText">1.<span style="font: 7.0pt 'Times New Roman';">&#160;</span>Installation 
+ des Betriebssystems (RHEL 6.3/6.4) inklusive aller aktuellen Patches.</p>
+<p class="BodyText">2. Installation des RDBMS (Oracle 11gR2) inklusive 
+ Vorinstallation und Installation eines Listeners.</p>
+<p class="BodyText">3. Installation einer (leeren) LEGATO-Instanz.</p>
+<p class="BodyText">Grundvoraussetzung für die Installation ist eine ausreichend 
+ dimensionierte Hardware, in etwa wie folgt:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">x86_64-Bit-Serverprozessor mit mindestens 2 GHz 
+ Taktfrequenz und mindestens zwei Cores (oder einem Core mit Hyperthreading)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">4 GB RAM</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">25 GB Festplattenplatz</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Ethernet-Netzwerkkarte</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Jedem Installationsschritt ist ein eigenes Kapitel 
+ gewidmet.</p>
+<p class="BodyText">Als Oracle DBMS-Version wird eine Enterprise Edition 
+ der Oracle Server verwendet, die für den Betrieb von Legato empfohlen 
+ wird. Zu den genauen Systemvoraussetzungen siehe bitte das Dokument &quot;Legato_System_Installation&quot; 
+ im Kapitel &quot;Datenbank&quot;.</p>
+<p class="BodyText">Als Betriebssystem dient ein RHEL 6.4.</p>
+</body>
+</html>

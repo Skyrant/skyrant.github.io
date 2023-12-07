@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Produktionseinheitenübersicht","type":"item","tilePath":"","description":"","url":"de/Boardlets/10_TT/Produktionseinheitenübersicht.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

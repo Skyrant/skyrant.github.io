@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Überblick"]],"1":[["\n"],["\n","Die Sapient Engine stellt jedem JavaScript-Job einige \n vordefinierte globale Objekte zur Verfügung, über die das Script auf seine \n Ablaufumgebung zugreifen kann. Diese werden im Folgenden beschrieben.","\n\n\n"]],"6":[["Überblick"]],"id":"28"})

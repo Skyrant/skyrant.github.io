@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Logging von Tabellenänderungen","type":"book","tilePath":"","description":"","url":"de/DB_Logging/Logging.htm","key":"toc32"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

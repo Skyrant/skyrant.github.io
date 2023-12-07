@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stopwords>
+
+  <wd name="und" />
+
+  <wd name="ist" />
+
+  <wd name="sind" />
+
+  <wd name="die" />
+
+  <wd name="das" />
+
+  <wd name="der" />
+
+  <wd name="dem" />
+
+  <wd name="den" />
+
+  <wd name="diese" />
+
+  <wd name="diesem" />
+
+  <wd name="diesen" />
+
+  <wd name="dieser" />
+
+  <wd name="dieses" />
+
+  <wd name="eine" />
+
+  <wd name="ein" />
+
+  <wd name="einer" />
+
+  <wd name="einem" />
+
+  <wd name="kein" />
+
+  <wd name="keine" />
+
+  <wd name="sie" />
+
+  <wd name="als" />
+
+  <wd name="an" />
+
+  <wd name="wie" />
+
+  <wd name="brauchen" />
+
+  <wd name="aber" />
+
+  <wd name="auch" />
+
+  <wd name="auf" />
+
+  <wd name="denen" />
+
+  <wd name="deren" />
+
+  <wd name="wenn" />
+
+  <wd name="so" />
+
+  <wd name="alle" />
+
+  <wd name="allen" />
+
+  <wd name="anschließend" />
+
+  <wd name="dann" />
+
+  <wd name="benötigen" />
+
+  <wd name="wonach" />
+
+  <wd name="wofür" />
+
+  <wd name="außerdem" />
+
+  <wd name="wird" />
+
+  <wd name="wo" />
+
+  <wd name="allem" />
+
+  <wd name="alles" />
+
+  <wd name="aller" />
+
+  <wd name="da" />
+
+  <wd name="werden" />
+
+  <wd name="dadurch" />
+
+  <wd name="dafür" />
+
+  <wd name="darf" />
+
+  <wd name="wir" />
+
+  <wd name="gleiche" />
+
+  <wd name="dürfen" />
+
+  <wd name="einigen" />
+
+  <wd name="weise" />
+
+  <wd name="benutzt" />
+
+  <wd name="hatte" />
+
+  <wd name="es" />
+
+  <wd name="folgende" />
+
+  <wd name="folgender" />
+
+  <wd name="folgendermaßen" />
+
+  <wd name="folgendem" />
+
+  <wd name="folgenden" />
+
+  <wd name="für" />
+
+  <wd name="unter" />
+
+  <wd name="können" />
+
+  <wd name="nicht" />
+
+  <wd name="gebrauchen" />
+
+  <wd name="gebraucht" />
+
+  <wd name="gehabt" />
+
+  <wd name="gemacht" />
+
+  <wd name="getan" />
+
+  <wd name="haben" />
+
+  <wd name="ihm" />
+
+  <wd name="ihn" />
+
+  <wd name="ihnen" />
+
+  <wd name="sei" />
+
+  <wd name="denn" />
+
+  <wd name="fall" />
+
+  <wd name="ihr" />
+
+  <wd name="ihre" />
+
+  <wd name="im" />
+
+  <wd name="in" />
+
+  <wd name="bezug" />
+
+  <wd name="jede" />
+
+  <wd name="jedem" />
+
+  <wd name="jeder" />
+
+  <wd name="jedes" />
+
+  <wd name="könnte" />
+
+  <wd name="keinem" />
+
+  <wd name="keiner" />
+
+  <wd name="keins" />
+
+  <wd name="möchten" />
+
+  <wd name="müssen" />
+
+  <wd name="muss" />
+
+  <wd name="nach" />
+
+  <wd name="noch" />
+
+  <wd name="ob" />
+
+  <wd name="oder" />
+
+  <wd name="ohne" />
+
+  <wd name="ok" />
+
+  <wd name="schon" />
+
+  <wd name="weiterer" />
+
+  <wd name="weitere" />
+
+  <wd name="weiteren" />
+
+  <wd name="stattdessen" />
+
+  <wd name="einfach" />
+
+  <wd name="seid" />
+
+  <wd name="siehe" />
+
+  <wd name="sobald" />
+
+  <wd name="sonstige" />
+
+  <wd name="sonstiges" />
+
+  <wd name="tun" />
+
+  <wd name="ausser" />
+
+  <wd name="außer" />
+
+  <wd name="verwenden" />
+
+  <wd name="vielleicht" />
+
+  <wd name="von" />
+
+  <wd name="zwischen" />
+
+  <wd name="dein" />
+
+  <wd name="deine" />
+
+  <wd name="du" />
+
+  <wd name="bin" />
+
+  <wd name="bist" />
+
+  <wd name="braucht" />
+
+  <wd name="wann" />
+
+  <wd name="war" />
+
+  <wd name="wäre" />
+
+  <wd name="waren" />
+
+  <wd name="wären" />
+
+  <wd name="warum" />
+
+  <wd name="was" />
+
+  <wd name="weg" />
+
+  <wd name="weil" />
+
+  <wd name="welche" />
+
+  <wd name="welcher" />
+
+  <wd name="welches" />
+
+  <wd name="weswegen" />
+
+  <wd name="mögen" />
+
+  <wd name="beliebige" />
+
+  <wd name="beliebiger" />
+
+  <wd name="beliebiges" />
+
+  <wd name="beliebigen" />
+
+  <wd name="beliebigem" />
+
+  <wd name="ja" />
+
+  <wd name="benötigt" />
+
+  <wd name="benutzen" />
+
+  <wd name="besser" />
+
+  <wd name="einige" />
+
+  <wd name="einiges" />
+
+  <wd name="entlang" />
+
+  <wd name="fertig" />
+
+  <wd name="hat" />
+
+  <wd name="hier" />
+
+  <wd name="holen" />
+
+  <wd name="innerhalb" />
+
+  <wd name="kann" />
+
+  <wd name="lieber" />
+
+  <wd name="mehr" />
+
+  <wd name="mit" />
+
+  <wd name="okay" />
+
+  <wd name="verwendet" />
+
+  <wd name="ab" />
+
+  <wd name="am" />
+
+  <wd name="ausserdem" />
+
+  <wd name="beide" />
+
+  <wd name="beider" />
+
+  <wd name="beiden" />
+
+  <wd name="beides" />
+
+  <wd name="darauf" />
+
+  <wd name="darüber" />
+
+  <wd name="darunter" />
+
+  <wd name="dahinter" />
+
+  <wd name="daneben" />
+
+  <wd name="damit" />
+
+  <wd name="dahin" />
+
+  <wd name="davon" />
+
+  <wd name="daher" />
+
+  <wd name="derer" />
+
+  <wd name="dessen" />
+
+  <wd name="des" />
+
+  <wd name="dir" />
+
+  <wd name="deinem" />
+
+  <wd name="deinen" />
+
+  <wd name="dort" />
+
+  <wd name="dran" />
+
+  <wd name="einen" />
+
+  <wd name="eines" />
+
+  <wd name="einiger" />
+
+  <wd name="er" />
+
+  <wd name="falls" />
+
+  <wd name="früher" />
+
+  <wd name="geht" />
+
+  <wd name="genau" />
+
+  <wd name="gross" />
+
+  <wd name="habe" />
+
+  <wd name="hast" />
+
+  <wd name="hatten" />
+
+  <wd name="hierher" />
+
+  <wd name="hinab" />
+
+  <wd name="hinter" />
+
+  <wd name="immer" />
+
+  <wd name="ihren" />
+
+  <wd name="ihrer" />
+
+  <wd name="ihrem" />
+
+  <wd name="jeden" />
+
+  <wd name="klein" />
+
+  <wd name="mir" />
+
+  <wd name="mein" />
+
+  <wd name="meine" />
+
+  <wd name="meiner" />
+
+  <wd name="meines" />
+
+  <wd name="meinen" />
+
+  <wd name="meinem" />
+
+  <wd name="neben" />
+
+  <wd name="normal" />
+
+  <wd name="oben" />
+
+  <wd name="per" />
+
+  <wd name="pro" />
+
+  <wd name="seine" />
+
+  <wd name="seinen" />
+
+  <wd name="seinem" />
+
+  <wd name="seit" />
+
+  <wd name="sich" />
+
+  <wd name="stets" />
+
+  <wd name="unser" />
+
+  <wd name="unsere" />
+
+  <wd name="unseres" />
+
+  <wd name="unseren" />
+
+  <wd name="unserem" />
+
+  <wd name="viel" />
+
+  <wd name="viele" />
+
+  <wd name="vieles" />
+
+  <wd name="vielen" />
+
+  <wd name="vieler" />
+
+  <wd name="vom" />
+
+  <wd name="vor" />
+
+  <wd name="voraus" />
+
+  <wd name="voran" />
+
+  <wd name="weiter" />
+
+  <wd name="woher" />
+
+  <wd name="woraus" />
+
+  <wd name="woran" />
+
+  <wd name="wovon" />
+
+  <wd name="wieso" />
+
+  <wd name="weshalb" />
+
+  <wd name="1" />
+
+  <wd name="2" />
+
+  <wd name="3" />
+
+  <wd name="4" />
+
+  <wd name="5" />
+
+  <wd name="6" />
+
+  <wd name="7" />
+
+  <wd name="8" />
+
+  <wd name="9" />
+
+  <wd name="0" />
+
+</stopwords>

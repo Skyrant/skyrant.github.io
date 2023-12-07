@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_RHEL_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>User "oracle" einrichten</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h2>User "oracle" einrichten</h2>
+<p class="BodyText">Für den Produktivbetrieb der Datenbank editieren Sie bitte die Login-Skripte .bash_profile und .bashrc des Betriebssystem-Users oracle und hängen Sie unten die folgenden Zeilen an:</p>
+<p class="TextCode">&#160;</p>
+<p class="TextCode"># Oracle-Umgebungsvariablen setzen:</p>
+<p class="TextCode">ORACLE_SID="LEGATO"; export ORACLE_SID</p>
+<p class="TextCode"># Abfrage unterdrücken:</p>
+<p class="TextCode">ORAENV_ASK="NO"; export ORAENV_ASK</p>
+<p class="TextCode">. /usr/local/bin/oraenv</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Die Zeile</p>
+<p class="TextCode">. /usr/local/bin/oraenv</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">ist gültig für die KornShell, Bourne Shell und Bash (Bourne-again Shell). Wenn Sie die C-Shell verwenden, dann schreiben Sie stattdessen</p>
+<p class="TextCode">. /usr/local/bin/coraenv</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Dadurch erhält der Betriebssystem-User oracle bei jedem Einloggen automatisch die richtigen Umgebungsvariablen für den Betrieb der Datenbank zugewiesen.</p>
+</body>
+</html>

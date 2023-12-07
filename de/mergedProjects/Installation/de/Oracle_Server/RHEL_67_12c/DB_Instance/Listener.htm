@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "6.4.4.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Installation_RHEL_6.7_Oracle_Server_12c_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Eintragen der neuen Instanz in den Listener</title>
+<link rel="stylesheet" href="../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Eintragen der neuen Instanz in den Listener">
+        <span>Eintragen der neuen Instanz in den Listener</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch"><span class="Überschrift1Zchn"><span style="font-family: Tahoma, sans-serif;">Eintragen 
+ der neuen Instanz in den Listener</span></span></h2>
+<p class="BodyText" data-condition="Others:Deutsch">Damit der Listener ordnungsgemäß arbeitet, sollte man 
+ diesem nun die neue Instanz bekanntgeben. Es gibt zwar auch die Möglichkeit, 
+ dass sich die Instanz automatisch beim Listener anmeldet, aber es ist 
+ trotzdem sicherer die Instanz in der Listener-Konfiguration manuell einzutragen.</p>
+<p class="TextCode" data-condition="Others:Deutsch"># su oracle</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ cd /u01/app/oracle/product/12.1.0/dbhome_1/bin</p>
+<p class="TextCode" data-condition="Others:Deutsch">$ ./netmgr</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Es öffnet sich der Oracle Net Manager.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image109.png" alt="" width="700" height="588" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Klicken Sie auf &quot;Listener&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image111.png" alt="" width="700" height="591" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Wählen Sie in der Drop-Down-Liste &quot;Datenbank-Services&quot; 
+ aus und klicken Sie auf &quot;Datenbank hinzufügen&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../Images/Oracle_Server/RHEL_67_12c/image113.png" alt="" width="700" height="590" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie beim &quot;Globalen Datenbanknamen&quot; 
+ und bei der SID den vorher gewählten Datenbanknamen ein; im Beispiel &quot;LEGATO&quot;. 
+ Zur Speicherung muss man unter dem Menüpunkt &quot;Datei&quot; die Netzwerkkonfiguration 
+ sichern. Das Oracle-Standardverzeichnis ist ORACLE_HOME (unter Linux üblicherweise 
+ &quot;/u01/app/oracle/product/12.1.0/dbhome_1&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nun kann der Net Manager geschlossen werden.</p>
+
+
+</body></html>

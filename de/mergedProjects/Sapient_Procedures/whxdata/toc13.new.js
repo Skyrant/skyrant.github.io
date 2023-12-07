@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Überblick","type":"book","tilePath":"","key":"toc14"},{"name":"Objects","type":"book","tilePath":"","key":"toc15"},{"name":"Classes","type":"book","tilePath":"","key":"toc16"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

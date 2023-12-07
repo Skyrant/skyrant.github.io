@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "9.2.2.1.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Beispiele Details</title>
+<link rel="StyleSheet" href="../../../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Beispiele Details">
+        <span>Beispiele Details</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">Beispiele zur Parametrierung von Detail-Boardlets</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Wie bereits beschrieben, können für das Knotenlayout 
+ Detail-Boardlets eingeblendet werden, die pro Knoten bestimmte Informationen 
+ wie beispielsweise die aktuellen Stückzähler oder überfällige Wartungsaufträge 
+ visualisieren. Im Folgenden werden einige Fälle beispielhaft parametriert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zu beachten ist, dass die Eingaben bzgl. Knotenstatus 
+ und die Eingaben bzgl. Detail-Boardlets voneinander unabhängig sind. Somit 
+ können sie auch parallel verwendet werden.</p>
+<h4 data-condition="Others:Deutsch"><a id="Anzeige_von_Knotenstatus_basierend_auf_Meldungen"></a>Anzeige 
+ von Knotenstatus basierend auf Meldungen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Das folgende Beispiel zeigt den Knotenstatus basierend 
+ auf Meldungen als Umrandung an. Dabei wird der Knoten in der Farbe der 
+ höchsten anstehenden Meldung umrandet (z.B. rot = Störung, gelb = Meldung).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../../Bilder/Layout_Sample1.png" alt="" style="border: none;" width="500" height="380" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Einstellungen müssen vorgenommen werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bearbeiten - Boardlet Layout:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Anzeige Knotenstatus: </p>
+<p class="BodyText" data-condition="Others:Deutsch">Auswahl &quot;Border&quot;</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Server-Datenquelle zur Statusermittlung:</p>
+<p class="BodyText" data-condition="Others:Deutsch">al-node-states</p>
+<h4 data-condition="Others:Deutsch"><a id="Anzeige_von_Aktuellstückzahl_auf_Level_1"></a>Anzeige von 
+ Aktuellstückzahl auf Level 1</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Das folgende Beispiel zeigt die nötigen Eingaben, um 
+ die Aktuellstückzahl der einzelnen Knoten auf Level 1 einzublenden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../../Bilder/Layout_Sample2.png" alt="" style="border: none;" width="500" height="380" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Einstellungen müssen vorgenommen werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bearbeiten - Boardlet Layout:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detaillevel:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet:</p>
+<p class="BodyText" data-condition="Others:Deutsch">node-values-boardlet</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet-Parameter:</p>
+<p class="BodyText" data-condition="Others:Deutsch">{&quot;valueTypes&quot;:[2]}</p>
+<h4 data-condition="Others:Deutsch"><a id="Anzeige_von_Ist-_und_Sollstückzahl_für_Knoten_vom_Typ_2"></a>Anzeige 
+ von Ist- und Sollstückzahl für Knoten vom Typ 2</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist möglich, Parameter einzugeben, um abhängig vom 
+ Knotentyp andere Informationen im Details-Bereich einzublenden. Im Beispiel 
+ werden nur für Knoten des Knotentyps 2 Details angezeigt, und zwar das 
+ Node-Info Boardlet mit Variablen der Arten 2 und 3.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../../Bilder/Layout_Sample5.png" alt="" style="border: none;" width="500" height="380" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Dazu ist Folgendes einzutragen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bearbeiten - Boardlet Layout:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Knotenstatus anzeigen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aus</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Knotentyp-Details:</p>
+<p class="BodyText" data-condition="Others:Deutsch">[{&quot;nodeType&quot;:2,&quot;detailBoardlet&quot;:&quot;node-info-boardlet&quot;,&quot;detailBoardletParameters&quot;:{&quot;valueTypes&quot;:[2,3,40]}}]</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detaillevel:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1</p>
+<h4 data-condition="Others:Deutsch"><a id="Tortendiagramm_für_einzelne_Variablenarten_mit_festen_Farben"></a>Tortendiagramm 
+ für einzelne Variablenarten mit festen Farben</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist auch möglich, das Aktuelle Werte Boardlet als 
+ Tortendiagramm mit fest vergebenen Farben je Variablenart anzuzeigen, 
+ um beispielsweise einen Status abzubilden. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../../Bilder/Layout_Sample4.png" alt="" style="border: none;" width="500" height="380" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Dazu ist Folgendes einzutragen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bearbeiten - Boardlet Layout:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detaillevel:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet:</p>
+<p class="BodyText" data-condition="Others:Deutsch">node-values-boardlet</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet-Parameter:</p>
+<p class="BodyText" data-condition="Others:Deutsch">{&quot;viewMode&quot;:&quot;piechart&quot;, &quot;typeColors&quot;:{&quot;2&quot;:&quot;success&quot;,&quot;40&quot;:&quot;error&quot;}}</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Es wird also der Variablentyp 2 mit der im Theme definierten 
+ &quot;Success&quot;-Farbe dargestellt, der Variablentyp 40 mit der Farbe 
+ &quot;Error&quot;. Für die weiteren Variablenarten werden die Standardfarben 
+ des Themes verwendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Parameter können vom Knoteninfo Boardlet und vom 
+ Knotenstatus Boardlet nicht interpretiert werden, dort sind sie fest vorgegeben.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet-Breite:</p>
+<p class="BodyText" data-condition="Others:Deutsch">100</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet-Höhe:</p>
+<p class="BodyText" data-condition="Others:Deutsch">100</p>
+<h4 data-condition="Others:Deutsch"><a id="Anzeige_von_überfälligen_Wartungsaufträgen"></a>Anzeige von 
+ überfälligen Wartungsaufträgen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Das folgende Beispiel zeigt ein Icon an für Knoten, 
+ an denen an einem Wartungsauftrag gearbeitet wird (für jeden Auftrag mit 
+ Status &quot;work on&quot; ein Icon). Zusätzlich kann der Hintergrund 
+ der betroffenen Knoten für überfällige Wartungsaufträge rot eingefärbt 
+ werden (es gibt mindestens einen Auftrag, der überfällig ist und niemandem 
+ zugeordnet ist).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../../../Bilder/Layout_Sample3.png" alt="" style="border: none;" width="500" height="378" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Einstellungen müssen vorgenommen werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bearbeiten - Boardlet Layout:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Anzeige Knotenstatus: </p>
+<p class="BodyText" data-condition="Others:Deutsch">Auswahl &quot;Background&quot; (wenn rote Einfärbung 
+ gewünscht ist)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Server-Datenquelle zur Statusermittlung:</p>
+<p class="BodyText" data-condition="Others:Deutsch">tpm_maint_order_overdue</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detaillevel:</p>
+<p class="BodyText" data-condition="Others:Deutsch">1</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Detail-Boardlet:</p>
+<p class="BodyText" data-condition="Others:Deutsch">maint-orders-status-boardlet</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um eine zentrierte Darstellung zu ermöglichen, muss 
+ außerdem beim das Detail-Bereich auf die Maße des Knotens gesetzt werden 
+ (Layout editieren, Details Breite &amp; Höhe auf die entsprechenden Werte 
+ setzen).</p>
+<h4 data-condition="Others:Deutsch"><a id="Verfügbare_Detail-Boardlets"></a>Verfügbare Detail-Boardlets</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Folgende Boardlets können aktuell als Detail-Boardlets 
+ eingebunden werden:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="78.014%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 14.943%;"/>
+	<col style="width: 48.858%;"/>
+	<col style="width: 36.198%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="ColHeader_L">Detail-Boardlet</p></td>
+		<td><p class="ColHeader_L">Inhalt</p></td>
+		<td><p class="ColHeader_L">Beispiel-Parameter</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText">node-values-boardlet</p></td>
+		<td><p class="TblBodyText">Anzeige des Boardlets <a href="../../../03_Visualization/Current_Vals.htm">Monitoring 
+		 - Aktuelle Werte</a>. Einschränkbar auf Variablenarten.</p>
+		<p class="TblBodyText">Einschränkbar auf Anzeige als Tortendiagramm 
+		 mit festen Farben.</p></td>
+		<td><p class="TblBodyText">{&quot;valueTypes&quot;:[2]}</p>
+		<p class="TblBodyText">{&quot;viewMode&quot;:&quot;piechart&quot;, 
+		 &quot;typeColors&quot;:{&quot;2&quot;:&quot;success&quot;,&quot;40&quot;:&quot;error&quot;}}</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText">maint-orders-status-boardlet</p></td>
+		<td><p class="TblBodyText">Anzeige von überfälligen Wartungsaufträgen</p></td>
+		<td><p class="TblBodyText"> </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText">state-boardlet</p></td>
+		<td><p class="TblBodyText">Anzeige des Boardlets <a href="../../../03_Visualization/Node_State.htm">Monitoring 
+		 - Knotenstatus</a>.</p></td>
+		<td><p class="TblBodyText"> </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TblBodyText">node-info-boardlet</p></td>
+		<td><p class="TblBodyText">Anzeige des Boardlets <a href="../../../03_Visualization/Node_Info.htm">Monitoring 
+		 - Knoteninfo</a>.</p></td>
+		<td><p class="TblBodyText"> </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TblBodyText">barchart-boardlet</p></td>
+		<td><p class="TblBodyText">Anzeige des Boardlets <a href="../../../03_Visualization/Barchart.htm">Chart 
+		 - Balken-/Liniendiagramm</a>.</p></td>
+		<td><p class="TblBodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

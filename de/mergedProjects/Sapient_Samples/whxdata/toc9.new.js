@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Priorität von Meldeklassen","type":"item","tilePath":"","description":"","url":"de/Basics/AL_Classes/Al_Classes.htm"},{"name":"Meldeklassen","type":"item","tilePath":"","description":"","url":"de/Basics/AL_Classes/02_Al_Classes.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

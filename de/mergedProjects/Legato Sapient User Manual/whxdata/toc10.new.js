@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Zeitauswahl Boardlet","type":"item","tilePath":"","description":"","url":"de/Menus/Custom_Bar.htm#Zeitauswahl_Boardlet"},{"name":"Knotenbaum Boardlet","type":"item","tilePath":"","description":"","url":"de/Menus/Custom_Bar.htm#Knotenbaum_Boardlet"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

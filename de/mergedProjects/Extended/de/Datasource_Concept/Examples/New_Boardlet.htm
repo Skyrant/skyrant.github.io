@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Neues Boardlet basierend auf Datasource-Model</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Neues Boardlet basierend auf Datasource-Model">
+        <span>Neues Boardlet basierend auf Datasource-Model</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Neues Boardlet basierend auf Datasource-Model</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist möglich, ein neues Boardlet basierend auf einem 
+ Datasource-Model zu erstellen. Dies kann folgendermaßen geschehen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Im Client:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">neues 
+ Dashboard anlegen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">Boardlet 
+ &quot;Generische Tabelle&quot; reinziehen</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">das 
+ gewünschte Datasource-Model auswählen, das als Basis dienen soll</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch">die 
+ anzuzeigenden Spalten und Parameter konfigurieren</p>
+<p class="Liste_1" data-condition="Others:Deutsch">In der Datenbank:</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">neuen 
+ Eintrag in gp_r_boardlets erstellen (Flags published = 1 und allow_system_update 
+ = 0 setzen)</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">aus 
+ u_dashboards das neue Dashboard auswählen und den Eintrag in der Spalte 
+ &quot;configuration&quot; herauskopieren</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">die 
+ Zwischenablage in einem Texteditor öffnen</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">alles 
+ bis zum Eintrag &quot;tableColumns&quot;:{&quot;value&quot;:{            &quot;datasourceModel&quot;:&quot; 
+ (ohne diesen Teil) löschen</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">vorne 
+ &quot;{&quot; ergänzen</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">den 
+ Text in die Spalte gp_r_boardlets.params einfügen</p>
+<p class="Liste_1" data-condition="Others:Deutsch">Nun steht das neue Boardlet in der WebApp zur Verfügung.</p>
+
+
+</body></html>

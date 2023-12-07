@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Overview</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Overview">
+        <span>Overview</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Overview</h1>
+<h2 data-condition="Others:Englisch"><a id="Introduction"></a>Introduction</h2>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">This tutorial will cover 
+ installing and basic configuration of Tomcat 7 version 7.0.42 on Red Hat 
+ Enterprise Linux Server Version 6.4 64 bit Operating System.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">In this tutorial, we will 
+ install Tomcat 7, the new JDK 7, configure Tomcat as a service, create 
+ a start/stop script, and configure Tomcat to run under a non-root user.</p>
+<h2 data-condition="Others:Englisch"><a id="Prerequisites"></a>Prerequisites</h2>
+<p class="BodyText" data-condition="Others:Englisch">The released versions for use of Legato can be found 
+ in the system documentation &quot;Legato_System_Installation_en.pdf&quot;.</p>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">Apache Tomcat 7.0 requires a Java Standard 
+ Edition version 6 or later. In this tutorial we recommend to install version 
+ 7 which is essential for Legato installation.</p>
+<p class="BodyText" data-condition="Others:Englisch">Download and install Java SE version 7 from:</p>
+<p class="BodyText" data-condition="Others:Englisch"><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.</p>
+<p class="Textkörperfett" data-condition="Others:Englisch"><img src="../../assets/images/02_Notice_en.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Englisch">If you are running a 32-bit version of RHEL, 
+ you MUST use a 32-bit distribution of Apache Tomcat, as well as a 32-bit 
+ JDK. So you will need jdk-7u45-linux-i586.tar.gz for a 32-bit version 
+ of RHEL. If you are using a 64-bit system, you can technically run either 
+ a 32- or 64-bit distribution, as long as the bit architecture of the JDK 
+ you have installed matches your Tomcat distribution. So you will need 
+ the jdk-7u5-linux-x64.tar.gz for a 64-bit version of RHEL.</p>
+<p class="BodyText" data-condition="Others:Englisch"><img src="../../Images/Tomcat_RHEL/image004.jpg" alt="" width="700" height="428" border="0"/> </p>
+<p class="BodyText" data-condition="Others:Englisch">Click &quot;Download&quot; and proceed with downloading 
+ the appropriate version from the list.</p>
+
+
+</body></html>

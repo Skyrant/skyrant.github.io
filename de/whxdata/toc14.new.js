@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Extended","type":"project","tilePath":"","url":"Extended","ref":"mergedProjects/Extended","key":"toc15"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

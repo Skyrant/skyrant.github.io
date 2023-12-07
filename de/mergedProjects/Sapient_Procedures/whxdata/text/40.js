@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Process"]],"1":[["\n"],["\n","Objekte dieses Typs dienen zum Starten von Programmen \n (Prozessen).","\n\n\n"]],"3":[["Process"]],"id":"40"})

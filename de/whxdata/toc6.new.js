@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"LC2","type":"project","tilePath":"","url":"LC2","ref":"mergedProjects/LC2","key":"toc7"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

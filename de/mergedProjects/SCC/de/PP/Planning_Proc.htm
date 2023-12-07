@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Vorgehensweise zur Projektierung</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Vorgehensweise zur Projektierung">
+        <span>Vorgehensweise zur Projektierung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Vorgehensweise zur Projektierung</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Die Projektierung der Cloud Connector Funktionen ist 
+ stark von den Anforderungen des Projektes abhängig. An dieser Stelle soll 
+ deshalb nur ein grober Überblick über die wichtigsten Schritte vermittelt 
+ werden. Prinzipiell sind folgende Schritte für die Erstellung eines Cloud 
+ Connector Projektes erforderlich:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Neues Projekt anlegen (über das Menü &quot;Projekt 
+ | Neu&quot;)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Sapient Verbindung einrichten.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">OPC- oder OPC_UA-Verbindung einrichten und Items 
+ anlegen bzw. vom Server importieren. Auf die im Projekt vorhandenen Items 
+ kann aus den Scripten zugegriffen werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Scripten für die Datenvorverarbeitung und Cloud 
+ Connector Funktion erstellen und über Ereignisse triggern. Ein neuer Variablenwert 
+ eines Items ist ein Ereignis für die Auslösung (Trigger) eines Scripts. 
+ Die Mehrzahl der Scripten wird in einer typischen Applikation über Items 
+ getriggert.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Datenbankverbindung bzw. Sapient Engine-Verbindung 
+ einrichten und bei Bedarf Tabellen und Prozeduren anlegen bzw. importieren. 
+ Auf die im Projekt verknüpften Tabellen und Prozeduren kann aus den Scripten 
+ zugegriffen werden.</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch">Festlegung der Systemeinstellungen für Projektstart, 
+ etc.</p>
+
+
+</body></html>

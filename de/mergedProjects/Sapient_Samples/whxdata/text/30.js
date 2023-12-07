@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Parameter"]],"1":[["\n"],["\n","Zur Parametrierung der Fertigungsstruktur müssen keine \n speziellen Parameter gesetzt werden.","\n\n\n"]],"2":[["Parameter"]],"id":"30"})

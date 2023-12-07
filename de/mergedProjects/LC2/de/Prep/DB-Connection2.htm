@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "2.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Herstellen der Datenbankverbindung</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation4.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Herstellen der Datenbankverbindung">
+        <span>Herstellen der Datenbankverbindung</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Herstellen der Datenbankverbindung zu PostgreSQL</h2>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Verbindung_konfigurieren" id="Verbindung_konfigurieren"></a>Verbindung 
+ konfigurieren</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nach Start des LC2 erscheint ein Dialog zum Einrichten 
+ beliebig vieler Datenbankverbindungen / Repositories. Die Verbindungsherstellung 
+ erfolgt in zwei Schritten.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zunächst wird ein neues Repository angelegt (Create 
+ New …).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/LC2_1.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Es öffnet sich der folgende Dialog:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/LC2_2.png" alt="" border="0"/> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Name</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der Name kann frei gewählt werden, muss jedoch eindeutig 
+ sein.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Sortiernummer</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der Sortiernummer kann frei gewählt werden, muss jedoch 
+ eindeutig sein.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Provider</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Datenbank-Provider, z.B. Npgsql. Wird nach Eingabe 
+ des Legato Connection Strings automatisch befüllt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Connection String</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Das Feld &quot;Provider&quot; wird automatisch nach 
+ Definition der Datenbankverbindung befüllt. Klicken Sie dazu auf die drei 
+ Punkte (…) neben &quot;Legato Verbindungs-String&quot;. Es erscheint ein 
+ Dialog zur Eingabe der Verbindungseinstellungen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/LC2_3.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zunächst kann hier die Datenquelle oder der gewünschte 
+ Treiber (Provider) durch Klick auf &quot;Ändern...&quot; selektiert werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/LC2_provider2.png" alt="" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Bei Auswahl des &quot;Managed Data Providers&quot; 
+ muss kein ODAC mehr installiert werden. Der Eintrag &quot;Unmanaged Data 
+ Provider&quot; wird ohnehin nur angeboten, wenn ODAC auf dem PC installiert 
+ ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nach Übernehmen der Auswahl kann der Servername sowie 
+ ein Datenbankbenutzer eingegeben werden. Die notwendigen Einstellungen 
+ sind abhängig von Datenbanksystem und –version. In der Regel besteht ein 
+ Servername aus der IP-Adresse, einem Port und dem Namen der Datenbank 
+ (z.B. 172.21.6.36, Port: 5432, Datenbank: SAPIENT).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Bei der Verbindungskonfiguration muss der Benutzername 
+ und Kennwort angegeben werden. Dabei ist ein Datenbankbenutzer zu wählen, 
+ der vom Systemadministrator der Datenbank angelegt wurde. Dieser Benutzer 
+ kann mit minimalen Rechten auf Datenbankseite ausgestattet sein. Die eigentliche 
+ Benutzeranmeldung an Sapient erfolgt dann einmalig mit dem im LC2 angelegten 
+ Benutzernamen und Kennwort. Die Rechte dieses spezifischen Legato-Benutzers 
+ sind in der Benutzerverwaltung des LC2 festgelegt. Nach der Einrichtung 
+ der Verbindung kann die Verbindung getestet werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Developer Mode</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Wird diese Checkbox aktiviert, so wird der LC2 im Entwicklermodus 
+ geöffnet. Hier stehen dem Anwender weitere Entwickler-Tools und Customizing-Optionen 
+ zur Verfügung. Hat der Benutzer nicht das benötigte Recht, wird der LC2 
+ mit dieser Verbindung nicht gestartet und es wird eine entsprechende Fehlermeldung 
+ ausgegeben. Die Checkbox muss auch zum Verwenden des System Developer 
+ Modes gesetzt werden. Die Checkbox kann auch beim späteren Editieren von 
+ Verbindungen gesetzt werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Lokales Repository erzwingen</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Die Checkbox &quot;Force Local Repository&quot; 
+ darf für Sapient nicht aktiviert sein! Diese Funktion verwendet immer 
+ das aktuelle Legato Classic Repository, das für Sapient nicht geeignet 
+ ist.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Verbindung_zur_Sapient_Engine_eintragen"></a>Verbindung zur 
+ Sapient Engine eintragen</h3>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">HTTP</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der LC2 benötigt zusätzlich die Verbindungsdaten zur 
+ Sapient Engine. Diese müssen in der Datei &quot;Global.config&quot; beim 
+ Repository eingetragen werden. Die Datei liegt unter %AppData% - Roaming\Gefasoft\GraphPic10.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Darin sind alle angelegten Repositories eingetragen. 
+ Suchen Sie den Eintrag für Sapient und ergänzen Sie in der letzten Zeile 
+ die URL der Sapient Engine, z.B.:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">sapientEngineUrl=&quot;http://localhost:8080/&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der gesamte Repository-Eintrag könnte also folgendermaßen 
+ aussehen:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">&lt;add name=&quot;Sapient_PostgreSQL&quot; sortId=&quot;22&quot; 
+ provider=&quot;Npgsql&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  connectionStringEncrypted=<br/>
+&quot;0C1AF0C604CEF73F34EEE3BA9757DC0012B29942DDFF11FA611CDD07<br/>
+C31873659B579BAF0F9B995C84F44C1C5CE985DDC1FE11B4CCD354597<br/>
+637B1CF5AEE833BB2FC1785B57A9A6A42A79D8185E7635511E0187B82<br/>
+C5BC78B0C0D501C0418649&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  authenticationType=&quot;GetTypeFromSysParams&quot; 
+ sapientEngineUrl=&quot;http://localhost:8080/&quot;/&gt;</p>
+<p class="TextCode" style="font-weight: bold;" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Alternativ kann die URL der Sapient Engine auch über 
+ den Systemparameter -260 WebApp URL geholt werden.</p>
+<h4 data-condition="Others:Deutsch;Others:Sapient_only">HTTPS</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Es ist auch möglich, die Verbindung zur Sapient Engine 
+ über HTTPS herzustellen. In diesem Fall werden standardmäßig nur sichere 
+ Verbindungen akzeptiert. Dazu ist der Systemparameter 261 Web-App login 
+ secure auf 1 zu setzen. Bei Zertifikatsfehlern ist eine Verbindung dann 
+ nicht möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Sollen, z.B. für Testzwecke, selbst erstelle Zertifikate 
+ verwendet werden, kann im der global.config-Datei eingestellt werden, 
+ dass Zertifikatsfehler ignoriert werden sollen (ignoreCertificateErrors=&quot;true&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Der gesamte Repository-Eintrag könnte also folgendermaßen 
+ aussehen:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">&lt;add name=&quot;Sapient_PostgreSQL&quot; sortId=&quot;22&quot; 
+ provider=&quot;Npgsql&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  connectionStringEncrypted=<br/>
+&quot;0C1AF0C604CEF73F34EEE3BA9757DC0012B29942DDFF11FA611CDD07<br/>
+C31873659B579BAF0F9B995C84F44C1C5CE985DDC1FE11B4CCD354597<br/>
+637B1CF5AEE833BB2FC1785B57A9A6A42A79D8185E7635511E0187B82<br/>
+C5BC78B0C0D501C0418649&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">  authenticationType=&quot;GetTypeFromSysParams&quot; 
+ sapientEngineUrl=&quot;https://LegatoSapient:8080/&quot;<br/>
+ignoreCertificateErrors=&quot;true&quot;/&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="System_Developer_Mode"></a>System Developer Mode</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In manchen Fällen ist es nötig, den LC2 mit stark erweiterten 
+ Rechten zu starten. Dazu dient der System Developer Mode. Einige Tabellen 
+ und Funktionen stehen nur in diesem Modus zur Verfügung.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zum Einrichten des System Developer Modes müssen folgende 
+ Schritte durchgeführt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">1. Gegebenenfalls eine neue Verbindung im Repositories-Dialog 
+ anlegen und die Checkbox &quot;Developer Mode&quot; aktivieren. Die Checkbox 
+ kann auch für eine bereits bestehende Verbindung aktiviert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">2. Öffnen Sie die Datei &quot;Global.config&quot;. 
+ Die Datei liegt unter %AppData% - Roaming\Gefasoft\GraphPic10. Darin sind 
+ alle angelegten Repositories eingetragen. Suchen Sie den Eintrag für die 
+ gewünschte Verbindung und ergänzen Sie den Eintrag sysDeveloperMode=&quot;true&quot;, 
+ z.B.: </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">&lt;add name=&quot;Legato&quot; sortId=&quot;17&quot; 
+ provider=&quot;Oracle.DataAccess.Client&quot; connectionString=&quot;...&quot;, 
+ password=&quot;...&quot; authenticationType=&quot;GetTypeFromSysParams&quot;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">developerMode=&quot;true&quot; sysDeveloperMode=&quot;true&quot; 
+ /&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">3. Der Benutzer muss die Modul-Berechtigung System 
+ Developer Mode haben. Hat der Benutzer nicht das benötigte Recht, wird 
+ der LC2 mit dieser Verbindung nicht gestartet und es wird eine entsprechende 
+ Fehlermeldung ausgegeben.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a id="Emergency_Access"></a>Emergency Access</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In vielen Fällen erfolgt die Benutzerprüfung im LC2 
+ über einen externen Authentifizierungs-Service (LDAP, Authentifizierung 
+ via Webapp, Authentifizierung via SapientEngine). Für den Fall, dass der 
+ verwendete Authentifizierungs-Service nicht erreichbar ist, wird ein Notfall-Login 
+ auf Datenbankebene ermöglicht. Dabei erfolgt die Anmeldung nicht mit einer 
+ spezifischen Benutzerkennung, sondern mit einem geeigneten Datenbankbenutzer.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zum Einrichten des Emergency-Access müssen folgende 
+ Schritte durchgeführt werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">1. Gegebenenfalls eine neue Verbindung im Repositories-Dialog 
+ anlegen. Dieser Schritt kann entfallen; der Emergency-Access kann auch 
+ für eine bestehende Verbindung erstellt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">2. Öffnen Sie die Datei &quot;Global.config&quot;. 
+ Die Datei liegt unter %AppData% - Roaming\Gefasoft\GraphPic10. Darin sind 
+ alle angelegten Repositories eingetragen. Suchen Sie den Eintrag für die 
+ gewünschte Verbindung und ändern Sie den Eintrag bei &quot;Authentication 
+ Type&quot; von &quot;getTypeFromSysParams&quot; in &quot;EmergencyAccess&quot;, 
+ z.B.: </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">&lt;add name=&quot;Legato&quot; sortId=&quot;17&quot; 
+ provider=&quot;Oracle.DataAccess.Client&quot; connectionString=&quot;...&quot;, 
+ password=&quot;...&quot; authenticationType=&quot;EmergencyAccess&quot; 
+ /&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">3. Starten Sie den LC2. Bei Auswahl der geänderten 
+ Verbindung wird nun nicht mehr der gewohnte Dialog zum Anmelden angezeigt. 
+ Stattdessen muss die Anmeldung mit einem entsprechend privilegierten Datenbank-Benutzer 
+ (z.B. OWNER) erfolgen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Normalerweise erfolgt im LC2 nach erfolgreicher 
+ Benutzerprüfung intern ein Upgrade des DB-Benutzers auf einen Benutzer 
+ mit unbeschränkten Datenbank-Schreibrechten. Dieses Berechtigungsupgrade 
+ wird bei dem &quot;Emergency Login&quot; nicht ausgeführt! Damit wird 
+ erreicht, dass insbesondere Konfigurationsänderungen nur möglich sind, 
+ sofern der Login mit einem Datenbankbenutzer mit ausreichend hohen Datenbankberechtigungen 
+ erfolgt.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Festlegen_der_DB-Verbindung_als_Startparameter" id="Festlegen_der_DB-Verbindung_als_Startparameter"></a>Festlegen 
+ der DB-Verbindung als Startparameter</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Nachdem die benötigten Datenbankverbindungen einmalig 
+ angelegt wurden, können diese auch direkt als Startparameter der LC2-Verknüpfung 
+ übergeben werden. Dazu geht man folgendermaßen vor:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">benötigte Anzahl Verknüpfungen der LC2.exe (Gefasoft.Legato.LegatoConfigurationCenter.exe) 
+ auf dem Desktop ablegen (pro Verbindung wird eine Verknüpfung benötigt)</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Rechtsklick auf die Verknüpfung – Eigenschaften</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only">Im Reiter &quot;Verknüpfung&quot; in der Zeile 
+ &quot;Ziel&quot; am Ende des dort eingetragenen Pfads folgende Eingabe 
+ machen: Leerzeichen/repository=&quot;Name der Datenbankverbindung&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">So könnte der Eintrag unter &quot;Ziel&quot; jetzt 
+ aussehen:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">&quot;C:\Program Files (x86)\Gefasoft\LC2\Gefasoft.Legato.LegatoConfigurationCenter.exe&quot; 
+ /repository=&quot;Sapient_PostgreSQL&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Jetzt wird diese Datenbankverbindung automatisch geladen, 
+ wenn das LC2 über die Verknüpfung geöffnet wird.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only"><a name="Ablage_der_Verbindungseinstellungen_auf_Netzlaufwerk" id="Ablage_der_Verbindungseinstellungen_auf_Netzlaufwerk"></a>Ablage 
+ der Verbindungseinstellungen auf Netzlaufwerk</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Die im Netzwerk liegende Config wird als Fallback für 
+ die lokale Config verwendet. Somit sind die dort abgelegten Verbindungen 
+ beim Start sichtbar. Wenn diese jedoch geändert oder gelöscht werden, 
+ wirkt sich das nicht auf die im Netzwerk liegende Config aus, sondern 
+ wird nur lokal persistiert.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">Die Konfiguration dieses Features erfordert 
+ fortgeschrittene Kenntnisse und darf daher nur von Administratoren oder 
+ Power Usern durchgeführt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Zuerst muss in das gewünschte Netzwerkverzeichnis eine 
+ Config mit Verbindungseinstellungen abgelegt werden. Als Vorlage hierfür 
+ eignet sich die lokale Config, die unter</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">%APPDATA%\Gefasoft\GraphPic10\Global.config</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">liegt. Diese kann zuerst über den Repository-Dialog 
+ des LC2 entsprechend gepflegt werden (siehe Kapitel &quot;Verbindung konfigurieren&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Dann muss auf diese neue Netzwerk-Config verwiesen 
+ werden. Das kann entweder für den aktuellen User erfolgen</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">%APPDATA%\Gefasoft\GraphPic10\Global.config</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">oder für den lokalen Rechner</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">%ProgramFiles(x86)%\Gefasoft\LC2\Gefasoft.Legato.LegatoConfigurationCenter.exe.config</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">In dieser Datei muss das XML-Element &quot;graphPic&quot; 
+ um das Attribute &quot;sharedConfigFilePath&quot; erweitert werden, dessen 
+ Wert den Pfad zur Netzwerk-Config beinhaltet.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only">&lt;graphPic sharedConfigFilePath=&quot;\\ar-datastore\try\LC2\Shared.config&quot;&gt;</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only"><img src="../../assets/images/02_Hinweis_de2.jpg" alt="" style="border: none;" border="0"/>:</p>
+<p class="TextkörperHinweis" data-condition="Others:Deutsch;Others:Sapient_only">In der Netzwerk-Config dürfen sich nur Verbindungen 
+ zu zentralen Repositories befinden, die in der Legato Datenbank abgelegt 
+ sind. Verbindungen zu SQL Compact Repositories (.sdf-Datei) werden nicht  unterstützt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Wenn ein Benutzer eine Verbindung, die aus einer Netzwerk-Config 
+ stammt, abändert, so wird er von diesem Zeitpunkt an eine lokale Kopie 
+ dieser Verbindung sehen.</p>
+
+
+</body></html>

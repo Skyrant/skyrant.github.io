@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "11.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Englisch"/>
+<meta name="OriginalFile" content="Legato_Installation_Tomcat_RHEL_en.docx" data-condition="Others:Englisch"/>
+<meta name="condition-tags" content="Others:Englisch" data-condition="Others:Englisch"/>
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Englisch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Englisch"/>
+<title data-condition="Others:Englisch">Download and Unpack Tomcat 7</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Englisch"/>
+<style type="text/css" data-condition="Others:Englisch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Download and Unpack Tomcat 7">
+        <span>Download and Unpack Tomcat 7</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Englisch">Download and Unpack Tomcat 7</h1>
+<h2 data-condition="Others:Englisch"><a id="Download_Tomcat_7"></a>Download Tomcat 7</h2>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">We will install Tomcat 7 
+ under /usr/share.</p>
+<p class="BodyText" style="text-align: left;" data-condition="Others:Englisch">Switch to the /usr/share 
+ directory:</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost ~]# cd /usr/share  </p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share ]#</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch"><b><img src="../../Images/Tomcat_RHEL/image006.jpg" alt="" width="700" height="305" border="0"/></b></p>
+<p class="BodyText" data-condition="Others:Englisch">Browse <a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a> 
+ in your internet browser. Click on Tomcat 7.0 from the left sidebar to 
+ locate the download version of Apache Tomcat 7.0.</p>
+<p class="BodyText" data-condition="Others:Englisch"> Download the latest release of Apache Tomcat 
+ that is found reliable and stable. In this tutorial we will be using the 
+ Tomcat version 7.0.42. Download apache-tomcat-7.0.42.tar.gz from the link 
+ above and save it to /usr/share.</p>
+<h2 data-condition="Others:Englisch"><a id="Verify_MD5_Checksum"></a>Verify MD5 Checksum</h2>
+<p class="BodyText" data-condition="Others:Englisch">Once downloaded, you should verify the MD5 Checksum 
+ for your Tomcat download using the md5sum command.</p>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share ]# md5sum apache-tomcat-7.0.42.tar.gz </p>
+<p class="TextCode" data-condition="Others:Englisch">1dd9abf3ae5154677e55a5d4e1fae5ed *apache-tomcat-7.0.42.tar.gz</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">Compare the output above to the MD5 Checksum provided 
+ next to <a href="http://tomcat.apache.org/download-70.cgi" target="_blank">the 
+ download link</a> and you used above and check that it matches.</p>
+<h2 data-condition="Others:Englisch"><a id="Unpack_tar_file"></a>Unpack tar file</h2>
+<p class="TextCode" data-condition="Others:Englisch">[root@localhost share ]# tar -xzf apache-tomcat-7.0.42.tar.gz</p>
+<p class="TextCode" data-condition="Others:Englisch"> </p>
+<p class="BodyText" data-condition="Others:Englisch">This will create the directory /usr/share/apache-tomcat-7.0.42</p>
+
+
+</body></html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="System_Update_Legato_de.docx" />
+<meta name="build tags" content="Deutsch" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Voraussetzungen</title>
+<link rel="stylesheet" href="../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1>Voraussetzungen</h1>
+<h2><a name="ApplicationEngine" id="ApplicationEngine"></a>ApplicationEngine</h2>
+<h3>JDK Version</h3>
+<p class="BodyText">Die ApplicationEngine benötigt mindestens JDK 1.7.</p>
+<p class="BodyText">Überprüfung der Java Version:</p>
+<p class="TextCode">echo $JAVA_HOME</p>
+<p class="TextCode">&#160;</p>
+<h3>Zeitzone der Java-VM</h3>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Ist die Zeitzone der Java-VM nicht korrekt gesetzt, kommt es zu Fehlern.</p>
+<p class="BodyText">Überprüfung der Zeitzone:</p>
+<p class="TextCode">echo $LANG</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Falls keine oder falsche Zeitzone eingetragen ist, ergänzen der&#160;&#160;Umgebungs-Variablen JAVA_OPTS in dosvc.cmd (Windows) bzw. leaggeng.sh (Linux/Unix) um die Angabe "-Duser.timezone=CET" (ggf. muss CET ersetzt werden durch korrekte Zeitzone).</p>
+<h2><a name="WebApp" id="WebApp"></a>WebApp</h2>
+<p class="BodyText">Die WebApplication benötigt mindestens JDK 1.7.</p>
+</body>
+</html>

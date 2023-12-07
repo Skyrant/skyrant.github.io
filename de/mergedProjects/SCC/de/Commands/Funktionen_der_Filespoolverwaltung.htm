@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.30.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen der Filespoolverwaltung</title>
+<link rel="StyleSheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen der Filespoolverwaltung">
+        <span>Funktionen der Filespoolverwaltung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Funktionen der Filespoolverwaltung</h1>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><a id="FileSpoolInit"></a>F</span><span lang="EN-US" xml:lang="EN-US" style="font-size: 11.0pt; line-height: 107%; 
+	 mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+	 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+	 mso-bidi-font-family: &#39;Times New Roman&#39;; mso-bidi-theme-font: minor-bidi; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">ileSpoolInit</span></h3>
+<p style="color: #000000; font-family: &#39;Times New Roman&#39;; font-size: medium; 
+	 font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial;" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: 
+ int FileSpoolInit(string node, long id, bool spool_in, bool spool_out)<br/>
+<br/>
+</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Öffnet einen Spool für den Knoten <b>node</b>, 
+ sofern dieser die Spoolfunktionalität unterstützt. Die <b>id</b> kann 
+ frei vergeben werden und dient der Zuordnung für die folgenden Funktionen. 
+ Die Spools können verwendet werden um Aufgaben zwischen zwei ITC&#39;s zu 
+ verteilen. Die Richtung wird über die Parameter <b>spool_in</b> (Einbuchen 
+ in den Spool) und <b>spool_out</b> (Ausbuchen aus dem Spool) 
+ festgelegt. Wird der Spool von einem einzelnen ITC verwendet, sind beide 
+ Parameter auf <b>true</b> zu setzen.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Die Funktion liefert folgende Rückgabewerte:</p>
+<p class="MsoListParagraphCxSpFirst" style="color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; margin-left: 35.3pt; text-indent: -35.3pt; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">0<span style="font: 7pt &#39;Times New Roman&#39;;">                </span> kein 
+ Fehler, Spool wurde angelegt</p>
+<p class="MsoListParagraphCxSpLast" style="color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; margin-left: 35.3pt; text-indent: -35.3pt; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">1<span style="font: 7pt &#39;Times New Roman&#39;;">                </span> Spool 
+ mit der <b>id</b> ist bereits vorhanden</p>
+<p class="MsoNormal" style="color: #000000; font-size: medium; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span style="font-size: 11pt;">-1        Fehler, 
+ Spool kann nicht angelegt werden</span>           </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-weight: bold; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">int rv</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">rv := FileSpoolInit(&#39;PubSub.Mosquitto&#39;, 
+ 2, true, true)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="FileSpoolExit"></a>FileSpoolExit</h3>
+<p class="MsoNormal" style="color: #000000; font-size: medium; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Deklaration: int FileSpoolExit(string node, long 
+ id)<br/>
+</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Der Spool mit der <b>id</b> des Knotens <b>node</b> wird 
+ geschlossen. Es erfolgt keine Abarbeitung des Spools mehr und es ist auch 
+ nicht mehr möglich etwas einzubuchen.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><br/>
+Die Funktion liefert folgende Rückgabewerte:</p>
+<p class="MsoListParagraph" style="color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; margin-left: 35.3pt; text-indent: -35.3pt; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">0<span style="font: 7pt &#39;Times New Roman&#39;;">                </span> kein 
+ Fehler, Spool wurde geschlossen</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">-1        Spool 
+ oder Knoten nicht vorhanden       </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-weight: bold; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">Beispiel:</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">int rv</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">rv := FileSpoolExit(&#39;PubSub.Mosquitto&#39;, 2)</p>
+<p class="MsoNormal" style="color: #000000; font-size: medium; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="FileSpoolPut"></a>FileSpoolPut</h3>
+<p class="MsoNormal" style="color: #000000; font-size: medium; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: 
+ int FileSpoolPut(string node, long id, string data, long hold)<br/>
+<br/>
+</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Bucht einen Datensatz <b>data</b> in den 
+ Spool mit der <b>id</b> des Knotens <b>node</b>. Der Spool 
+ wird nicht angelegt oder geöffnet, dies muss zuvor einmalig mit FileSpoolInit 
+ gemacht worden sein.<br/>
+Über den Parameter <b>hold</b> kann festgelegt werden, wie lange 
+ der Datensatz verarbeitet werden darf. Ist der Datensatz älter als <b>hold</b>, 
+ wird er beim Ausbuchen verworfen. Die Angabe erfolgt in ms. Soll der Datensatz 
+ in jedem Fall verarbeitet werden, ist -1 anzugeben.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Die Funktion liefert folgende Rückgabewerte:</p>
+<p class="MsoListParagraph" style="color: #000000; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; margin-left: 35.3pt; text-indent: -35.3pt; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch">0<span style="font: 7pt &#39;Times New Roman&#39;;">                </span> kein 
+ Fehler, Buchung erfolgt</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">-1        </span>Spool 
+ oder Knoten nicht vorhanden</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-weight: bold; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">long rv<br/>
+string stmt, js</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Value.Index 
+ := Value.Index + 1<br/>
+js := &#39;{\&quot;value\&quot;:&#39;+ltostr(Value.Index,10)+&#39;}&#39;</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">stmt := publishfromstr(&#39;value/json&#39;, 
+ js, 0, false, false)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">rv := filespoolput(&#39;PubSub.Mosquitto&#39;, 
+ 2, stmt, -1)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="FileSpoolSize"></a>FileSpoolSize</h3>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></span><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: 
+ int FileSpoolSize(string node, long id)<br/>
+<br/>
+</span>Liefert die Anzahl der Datensätze, die im Spool mit der <b>id</b> des 
+ Knotens <b>node</b> vorhanden sind.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Die Funktion liefert folgende Rückgabewerte:</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">-1           Spool 
+ oder Knoten nicht vorhanden</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">&gt;=0        Anzahl 
+ der Datensätze</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-weight: bold; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">int size</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">size := FileSpoolSize(&#39;PubSub.Mosquitto&#39;, 
+ 2)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="PublishFromStr"></a>PublishFromStr</h3>
+<p class="MsoNormal" style="color: #000000; font-size: medium; font-style: normal; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; 
+	 letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; 
+	 text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; 
+	 -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></span><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: 
+ string PublishFromStr(string topic, string message, int qos, bool dup, 
+ bool retain)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">Erzeugt einen spoolfähigen String aus den übergebenen 
+ Publish-Angaben. <b>message</b> ist die Nachricht zum Thema <b>topic</b>. <b>qos</b> definiert 
+ die Qualität des Services.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">qos:</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">0 höchstens einmal</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">1 mindestens einmal</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">2 genau einmal</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><b>dup</b> gibt an, ob es sich um eine Wiederholung 
+ der Nachricht handelt (<b>dup</b> = true). Bei <b>qos</b> = 
+ 0 muss <b>dup</b> false sein!</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><b>retain</b> = true veranlasst den Server, 
+ die Nachricht zu speichern, um den Wert auch zukünftigen Clients senden 
+ zu können.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-weight: bold; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">long rv<br/>
+string stmt, js</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Value.Index 
+ := Value.Index + 1</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">js := &#39;{\&quot;value\&quot;:&#39;+ltostr(Value.Index,10)+&#39;}&#39;</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">stmt := PublishFromStr(&#39;value/json&#39;, 
+ js, 0, false, false)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="PublishFromBlk"></a>PublishFromBlk</h3>
+<p style="color: #000000; font-size: medium; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></span><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Deklaration: 
+ string PublishFromBlk(string topic, block message, int qos, bool dup, 
+ bool retain)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">E</span>rzeugt 
+ einen spoolfähigen String aus den übergebenen Publish-Angaben. <b>message</b> ist 
+ die Nachricht zum Thema <b>topic</b>. <b>qos</b> definiert 
+ die Qualität des Services.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">qos:</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">0 höchstens einmal</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">1 mindestens einmal</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch">2 genau einmal</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><b>dup</b> gibt an, ob es sich um eine Wiederholung 
+ der Nachricht handelt (<b>dup</b> = true). Bei <b>qos</b> = 
+ 0 muss <b>dup</b> false sein!</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><b>retain</b> = true veranlasst den Server, 
+ die Nachricht zu speichern, um den Wert auch zukünftigen Clients senden 
+ zu können.</p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; 
+	 text-indent: 0px; text-transform: none; white-space: normal; widows: 2; 
+	 word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; font-weight: bold; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Beispiel:</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">long rv</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">string stmt</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">block b</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">int i, j</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">j := Value.Index 
+ + 2</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Value.Index 
+ := Value.Index + 1</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">b := newblock(j)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">while i &lt; 
+ j do</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-transform: none; white-space: normal; 
+	 widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; 
+	 text-decoration-style: initial; text-decoration-color: initial; text-indent: 35.4pt; 
+	 font-family: &#39;Palatino Linotype&#39;, serif; font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">setblocknum(b, i, 1, false, i)</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">               i 
+ := i + 1</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">enddo</span></p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"> </p>
+<p class="MsoNormal" style="color: #000000; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-thickness: initial; text-decoration-style: initial; 
+	 text-decoration-color: initial; font-family: &#39;Palatino Linotype&#39;, serif; 
+	 font-size: 11pt;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">stmt := publishfromblk(&#39;value/datablock&#39;, 
+ b, 0, false, false)</span></p>
+
+
+</body></html>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "9.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">SHIFT_KPI</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="KPI" data-condition="Others:Deutsch;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SHIFT_KPI">
+        <span>SHIFT_KPI</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Job">SHIFT_KPI</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Beschreibung</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Führt die Berechnung der Standard-KPIs für abgeschlossene 
+ Schichten durch. Der Job wird nur benötigt, falls solche KPIs gewünscht 
+ sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Log-Ausgaben dieses Jobs erfolgen in das Log-File der 
+ jeweiligen SE-Instanz unter dem Namen &#39;SeJob-SHIFT_KPI&#39;. Um die Ausführlichkeit 
+ der Log-Ausgaben getrennt von der anderer Jobs einzustellen, ist eine 
+ Zeile mit Inhalt &quot;logger.de.gefasoft.legato.sapieng.jobs.kpi.CalcShiftKPI 
+ = &lt;loglevel&gt;&quot; in die Logging-Konfiguration einzutragen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Parametrierung</h6>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="198"/>
+	<col width="406"/>
+	</colgroup><tbody><tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Symbol:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">SHIFT_KPI</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Name:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">ShiftKPI</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Modul:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">SE-Instanz:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">Nummer 
+		 der Sapient Engine Instanz. </p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Scheduler:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">main</p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Funktions-Pfad:</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">jobs/kpi/CalcShiftKPI/execute</p></td>
+	</tr>
+	<tr style="height: 53px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Parameter 
+		 (JSON):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">{</p>
+		<p class="TextkörperTable">&quot;threads&quot;: 1,</p>
+		<p class="TextkörperTable">&quot;queue&quot;: 10,</p>
+		<p class="TextkörperTable">&quot;ShiftsPartition&quot;: &quot;&quot;,</p>
+		<p class="TextkörperTable">&quot;SortShiftsByNodeLevel&quot;: false</p>
+		<p class="TextkörperTable">}</p></td>
+	</tr>
+	<tr style="height: 23px;">
+		<td style="vertical-align: top;"><p class="TextkörperTable">Timeout 
+		 (s) (optional):</p></td>
+		<td style="vertical-align: top;"><p class="TextkörperTable">n/a</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Bedeutung der Parameter</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Die Parameter werden an die Haupt-Task des Scripts 
+ weitergegeben und beeinflussen deren Arbeitsweise.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">threads</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Definiert die Anzahl der parallel zu berechnenden Schichten. 
+ Es werden Threads von der ausführenden SE-Task (&quot;Jobs&quot;) verwendet. 
+ Daher ist darauf zu achten, dass der Task ausreichend Threads und Datenbankverbindungen 
+ zur Verfügung stehen.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">queue</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Definiert die maximale Anzahl der noch unbearbeiteten 
+ Schichten, die in den Hauptspeicher eingelesen werden soll. Dadurch wird 
+ der RAM-Bedarf des Jobs beschränkt. Wird diese Grenze erreicht, wird die 
+ Bearbeitung der noch nicht eingelesenen Schichten auf den nächsten Lauf 
+ des KPI-Jobs zurückgestellt. Sinnvoll dürften etwa 1000 bis 10000 Einträge 
+ pro Thread sein.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">ShiftsPartition</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es können mehrere Instanzen des Sapient Engine-Jobs 
+ für die KPI-Berechnung parallel gestartet werden. Jeder Job bearbeitet 
+ dabei nur Schichten mit bestimmten IDs. In den Konfigurationsdaten (SE_JOBS.PARAMS) 
+ wird dafür im Parameter ShiftsPartition angegeben, welche Schichten der 
+ jeweilige Job bearbeiten soll. Der Wert dieses Parameters hat die Form 
+ &quot;m of n&quot;, wobei n die gesamte Anzahl der KPI-Jobs angibt und 
+ m die Nummer dieses speziellen Jobs. Beispiel: Sollen zwei Jobs KPIs berechnen, 
+ bearbeitet einer Schichten mit gerader und einer solche mit ungerader 
+ ID. Einer der Jobs muss dazu mit &quot;&lt;paramname=&quot;&lt;ShiftsPartition&quot;&gt;1 
+ of 2&lt;/param&gt;&quot;, der andere mit &quot;&lt;paramname=&quot;ShiftsPartition&quot;&gt;2 
+ of 2&lt;/param&gt;&quot; konfiguriert werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Job">SortShiftsByNodeLevel</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Definiert, ob Schichten pro Hierarchie-Ebene der Fertigungsknoten sortiert berechnet werden 
+ sollen (so, dass die KPIs übergeordneter Knoten erst berechnet werden, 
+ wenn die aller ihrer untergeordneten Knoten fertig berechnet sind). Der 
+ Parameter sollte genau dann eingeschaltet werden (Wert = true), wenn KPIs 
+ verwendet werden, die diese Reihenfolge voraussetzen. Im Standard ist 
+ dies nur der KPI AVJS (&quot;Verfügbarkeit verketteter Systeme). Ist der 
+ Parameter eingeschaltet (Wert = 1), werden in jedem Lauf des KPI-Jobs 
+ nur Schichten von Knoten einer Hierarchie-Ebene berechnet. Die komplette 
+ Berechnung einer Schicht benötigt entsprechend mehr Durchläufe des Jobs 
+ und dauert folglich länger.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Job">Trigger</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Trigger: zyklisch (-1)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Standard-Intervall: {&quot;Interval&quot;: &quot;2m&quot;}</p>
+
+
+</body></html>

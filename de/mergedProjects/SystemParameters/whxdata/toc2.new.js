@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Allgemeine Einstellungen","type":"book","tilePath":"","key":"toc3"},{"name":"Anmeldung und Benutzerverwaltung","type":"book","tilePath":"","key":"toc4"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

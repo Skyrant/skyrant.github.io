@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.27";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funktionen der Kommandoschnittstelle</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funktionen der Kommandoschnittstelle">
+        <span>Funktionen der Kommandoschnittstelle</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Funktionen der Kommandoschnittstelle</h2>
+<h3 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Basisknoten kann eine oder mehrere Kommandoschnittstellen 
+ erhalten. Über diese kann die externe In-Memory Datenbank angesprochen 
+ werden. Die Schnittstelle kann je nach Parametrierung Befehle absetzen 
+ oder als Publish- bzw. Listenschnittstelle Nachrichten verarbeiten.</p>
+<h3 data-condition="Others:Deutsch"><a id="AddCommand"></a>AddCommand</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long AddCommand(…)  </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Kommando wird an den internen Kommandospeicher 
+ angehängt. Weitere Informationen unter <a href="Funct_Command.htm#Command">Command</a>.</p>
+<h3 data-condition="Others:Deutsch"><a id="Command"></a>Command</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long Command(…) </p>
+<p class="bodytext" data-condition="Others:Deutsch">Das übergebene Kommando wird ausgeführt. Wurde das 
+ Kommando fehlerfrei ausgeführt, wird 0 als Ergebnis geliefert. Eine vollständige 
+ Dokumentation der möglichen Befehle und Parameter kann auf der Redis Homepage 
+ nachgeschlagen werden. Ein eventueller Rückgabewert kann mit <b style="mso-bidi-font-weight: normal;">Result</b> 
+ abgefragt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Zur Verbesserung der Performance können Kommandos auch 
+ gestapelt und dann in einer Aktion ausgeführt werden. Zu diesem Zweck 
+ werden die Kommandos mit <span style="font-weight: bold;">AddCommand</span> 
+ angefügt und zur Durchführung mit <span style="font-weight: bold;">EndCommand</span> 
+ gesendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string command</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">command := &#39;PING&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rv := Sapient.Command.command(command)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if (rv=0) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   result := Sapient.Command.result</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(result)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;Error &#39;+ltostr(rv,10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif  </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="EndCommand"></a>EndCommand</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long EndCommand(…)  </p>
+<p class="BodyText" data-condition="Others:Deutsch">Der interne Kommandospeicher wird gesendet. Weitere 
+ Informationen unter <a href="Funct_Command.htm#Command">Command</a>.</p>
+<h3 data-condition="Others:Deutsch"><a id="Result"></a>Result</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string Result </p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert das Ergebnis eines Kommandos.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string command</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">command := &#39;PING&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rv := Sapient.Command.command(command)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if (rv=0) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">   result := Sapient.Command.result</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(result)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;Error &#39;+ltostr(rv,10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

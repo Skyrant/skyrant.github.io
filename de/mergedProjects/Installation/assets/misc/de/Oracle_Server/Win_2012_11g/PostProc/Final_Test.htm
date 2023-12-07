@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Installation_Oracle_Server_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Abschließende Tests nach der Einrichtung der DB-Instanz</title>
+<link rel="stylesheet" href="../../../../Legato_Systemdokumentation.css" 
+ type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Abschließende Tests nach der Einrichtung der DB-Instanz</h2>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image116.png" 
+						 alt="" width="700" height="513" border="0" /></p>
+<p class="BodyText">Nach der Installation der DB-Instanz sollten wir unter 
+ den Diensten nun auch einen neuen Oracle-Dienst finden können, der wie 
+ folgt heißt: OracleServiceLEGATO</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image118.png" 
+						 alt="" width="678" height="476" border="0" /></p>
+<p class="BodyText">Damit kann die Instanz gestartet oder beendet werden.</p>
+<p class="BodyText">Öffnen Sie nun eine DOS-KONSOLE und verbinden sich 
+ als Systemadministrator mit der neuen Datenbank-Instanz. In unserem Fall 
+ lautet der Befehl hierfür: sqlplus <a href="mailto:sys/system@LEGATO">sys/system@LEGATO</a> 
+ as sysdba</p>
+<p class="BodyText"><img src="../../../../Images/Oracle_Server/Win_2012_11g/image120.png" 
+						 alt="" width="678" height="475" border="0" /></p>
+<p class="BodyText">Anschließend kann man sehen, ob die Instanz hochgefahren 
+ wurde. Mit select * from dual; kann man auch einen Test ausführen.</p>
+<p class="BodyText">Nun können die Oracle-Initparameter überprüft werden, 
+ zum Beispiel mit dem Aufruf: show parameter nls_length_semantics. Bitte 
+ richten Sie sich immer nach den aktuellen Hinweisen hierzu in unserer 
+ Legato-Systeminstallation.</p>
+<p class="BodyText">An dieser Stelle können wir nun auch den versteckten 
+ Parameter b_tree_bitmap_plans setzen. Wichtig hierbei ist, dass bei versteckten 
+ Parametern immer die doppelten Anführungszeichen benutzt werden müssen. 
+ Der komplette Befehl lautet dann:</p>
+<p class="BodyText">alter system set "_b_tree_bitmap_plans" = false scope 
+ = both;</p>
+</body>
+</html>

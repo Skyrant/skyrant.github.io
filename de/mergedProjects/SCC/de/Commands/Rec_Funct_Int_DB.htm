@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.21";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Recordfunktionen für die interne Datenbank</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Recordfunktionen für die interne Datenbank">
+        <span>Recordfunktionen für die interne Datenbank</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Recordfunktionen für die interne Datenbank</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Recordfunktionen kann in einem Script eine 
+ Variable vom Typ &#39;DBREC&#39; deklariert werden. Alle Recordfunktionen werden 
+ dann mit dem Namen der Variablen, einem Punkt und dem Namen der Funktion 
+ gemeinsam angesprochen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="ASCII" id="ASCII"></a>ASCII</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string dbrec.Ascii(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt oder schreibt das Feld <b>field</b> aus dem Recordpuffer 
+ bzw. in den Recordpuffer. Unabhängig vom Feldtyp wird das Feld in ASCII 
+ bearbeitet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.ascii(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.ascii(1) := &#39;123&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Alpha" id="Alpha"></a>Alpha</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string dbrec.Alpha(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt oder schreibt das Feld <b>field</b> aus dem Recordpuffer 
+ bzw. in den Recordpuffer. Das Feld muss den Typ &#39;C&#39; (Character, alphanumerisch) 
+ haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s     </p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.alpha(1)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.alpha(1) := &#39;writing&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Bool" id="Bool"></a>Bool</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool dbrec.Bool(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt oder schreibt das Feld <b>field</b> aus dem Recordpuffer 
+ bzw. in den Recordpuffer. Das Feld muss den Typ &#39;L&#39; (Logical) haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := rec.bool(2)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.bool(2) := true</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Close" id="Close"></a>Close</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: dbrec.Close</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließt den Recordpuffer und gibt den belegten Speicher 
+ frei.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.ascii(3)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Date" id="Date"></a>Date</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string dbrec.Date(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt oder schreibt das Feld <b>field</b> aus dem Recordpuffer 
+ bzw. in den Recordpuffer. Das Feld muss den Typ &#39;D&#39; (Date) haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.date(3)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.date(3) := &#39;13.04.1961&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Empty" id="Empty"></a>Empty</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: dbrec.Empty</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht den Inhalt des Recordpuffers.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.empty</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.append(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Long" id="Long"></a>Long</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long dbrec.Long(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt oder schreibt das Feld <b>field</b> aus dem Recordpuffer 
+ bzw. in den Recordpuffer. Das Feld muss den Typ &#39;N&#39; (Numeric) ohne Komastellen 
+ haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">l := rec.long(4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.long(4) := 455</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="PutBlank" id="PutBlank"></a>PutBlank</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: dbrec.PutBlank(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt in das Feld <b>field</b> im Recordpuffer einen 
+ leeren Wert.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := rec.date(3)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.putblank(3)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Real" id="Real"></a>Real</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double dbrec.Real(long field)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Holt oder schreibt das Feld <b>field</b> aus dem Recordpuffer 
+ bzw. in den Recordpuffer. Das Feld muss den Typ &#39;N&#39; (Numeric) haben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbtbl    tbl</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">dbrec    rec</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.open(&#39;c:\\files\\data.dbf&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.bufopen(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.get(rec)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := rec.real(5)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.real(5) := 123.45</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">rec.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">tbl.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

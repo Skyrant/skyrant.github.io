@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Dateifunktionen (Binär- und Textdateien)</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Dateifunktion" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dateifunktionen (Binär- und Textdateien)">
+        <span>Dateifunktionen (Binär- und Textdateien)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Dateifunktionen (Binär- und Textdateien)</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Mit diesen Funktionen können einfache Schreib- und 
+ Leseoperationen mit Dateien durchgeführt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Dateifunktionen kann in einem Script eine Variable 
+ vom Typ FILE deklariert werden. Alle weiteren Funktionen werden dann mit 
+ dem Namen der Variablen, einem Punkt und dem Namen der Funktion gemeinsam 
+ angesprochen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.txt&#39;, 2)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Close" id="Close"></a>Close</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: file.close</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datei <b>f</b> wird geschlossen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.txt&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.writeln(&#39;New Line&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Eof" id="Eof"></a>Eof</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool file.eof</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert &quot;true&quot;, wenn beim Lesen 
+ das Ende der Datei erreicht wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.txt&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while not f.eof do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(f.readln)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Open" id="Open"></a>Open</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool file.open(string datei, long mode)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Öffnet die <b>datei</b>. <b>Mode</b> gibt an, wie beim 
+ Öffnen verfahren werden soll:</p>
+<table class="SimpleGridBlack" cellspacing="0" width="591" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenÜberschrift">Mode</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenÜberschrift">Verwenbar 
+		 bei</p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenInhalt">Eine 
+		 neue Datei wird erzeugt. Ist die Datei bereits vorhanden, liefert 
+		 die Funktion false.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenInhalt">Eine 
+		 neue Datei wird erzeugt. Ist die Datei bereits vorhanden, wird 
+		 sie gelöscht und neu erzeugt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenInhalt">3</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenInhalt">Eine 
+		 bestehende Datei wird geöffnet. Ist die Datei nicht vorhanden, 
+		 liefert die Funktion false.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenInhalt">Eine 
+		 bestehende Datei wird geöffnet. Ist die Datei nicht vorhanden, 
+		 wird sie neu erzeugt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenInhalt">5</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenInhalt">Eine 
+		 bestehende Datei wird geöffnet und gelöscht. Ist die Datei nicht 
+		 vorhanden, liefert die Funktion false.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="42"><p class="TabellenInhalt">6</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p></td>
+		<td style="vertical-align: top;" width="454"><p class="TabellenInhalt">Eine 
+		 bestehende Datei wird im Read-Only-Modus geöffnet. Ist die Datei 
+		 nicht vorhanden, liefert die Funktion false.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert außerdem &quot;false&quot;, wenn 
+ ein ungültiger Pfad übergeben wurde.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.txt&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while not f.eof do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(f.readln)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Read" id="Read"></a>Read</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool file.read(pointer addr, long len)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest aus der zuvor mit &quot;Open&quot; geöffneten 
+ Datei <b>len</b> Bytes und schreibt die gelesenen Daten in den Variablenbereich 
+ des Scripts, der mit der Adresse <b>addr</b> beginnt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">char     a[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.dmp&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.read(&amp;a, 128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Readln" id="Readln"></a>Readln</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string file.readln</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest eine Zeile aus der zuvor mit &quot;Open&quot; 
+ geöffneten Textdatei.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.txt&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := f.readln</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Seek" id="Seek"></a>Seek</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool file.seek(long pos)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt den Dateizeiger auf die Position <b>pos</b>. 
+ Die Funktion liefert &quot;true&quot;, wenn <b>pos</b> innerhalb der Dateigröße 
+ liegt.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     l</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.dmp&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if f.seek(128) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  f.write(&amp;l, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Size" id="Size"></a>Size</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long file.size</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Funktion liefert die Größe der Datei in Bytes. 
+ Die Datei muss zuvor mit &quot;Open&quot; geöffnet werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.dmp&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">debug(LToStr(f.size, 10))</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Trunc" id="Trunc"></a>Trunc</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool file.trunc</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die zuvor mit &quot;Open&quot; geöffnete Datei wird 
+ an der Position des Dateizeigers abgeschnitten.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.dmp&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if f.seek(64) then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  f.trunc</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Write" id="Write"></a>Write</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool file.write(pointer addr, long 
+ len)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest <b>len</b> Bytes aus dem Variablenbereich des 
+ Scripts, der mit der Adresse <b>addr</b> beginnt und schreibt diese in 
+ die zuvor mit &quot;Open&quot; geöffnete Datei.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">char     a[128]</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.open(&#39;c:\\files\\file1.dmp&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.write(&amp;a, 128)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">f.close</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Writeln" id="Writeln"></a>Writeln</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: file.writeln(string zeile)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt die <b>Zeile</b> in die zuvor mit &quot;Open&quot; 
+ geöffnete Textdatei.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     i</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">file     f</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">i := 0</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">while i &lt; 100 do</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  i := i + 1</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  f.open(&#39;c:\\files\\file1.txt&#39;, 4)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  f.seek(f.size)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  f.writeln(&#39;Line &#39; + LToStr(i, 10) + 
+ &#39;: Text...&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  f.close</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">enddo</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.13.16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Aufgabenverwaltung</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Aufgabenverwaltung">
+        <span>Aufgabenverwaltung</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Aufgabenverwaltung</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Ziel der &quot;Aufgabenverwaltung&quot; ist es, 
+ eine Möglichkeit zu bieten, Aufgaben zu verwalten, die im Rahmen der täglichen 
+ Arbeitsroutine auftreten. Eine Aufgabe kann über eine &quot;Aufgabe hinzufügen&quot;-Funktion 
+ bei dem Boardlet, bei dem der Bedarf entdeckt wurde, manuell erstellt 
+ werden. Dabei kann es sich um ein beliebiges Boardlet handeln, die Funktion 
+ ist nicht auf SFM-Boardlets eingeschränkt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Um präzise und einfach auswert- und durchsuchbar zu 
+ sein, sollte eine Aufgabe mindestens die folgenden Arten von Datenattributen 
+ enthalten: Titel, Beschreibung, verantwortliche Person, Fälligkeitsdatum, 
+ Priorität, URL. Wenn eine Aufgabe angelegt wird, müssen wichtige Referenzen 
+ mit der Aufgabe zusammen gespeichert werden. Diese sind: Beziehung zu 
+ einem Knoten, Verweis auf ein SFM-Ereignis (wenn verfügbar), Erstellungsdatum 
+ und -zeit, Ersteller.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Außerdem ist es möglich, Aufgaben mit Tags zu versehen. 
+ Verfügbare Tags werden in einer Dropdown-Liste angeboten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Arbeitsfortschritt einer Aufgabe wird durch das 
+ Attribut &quot;Zustand&quot; angegeben. Die verschiedenen Zustände können 
+ im LC2 parametriert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Task_Mgmt.png" alt="" style="border: none;" width="700" height="239" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Aufgaben werden als Liste im Boardlet angezeigt. Üblicherweise 
+ werden pro Boardlet alle Aufgaben angezeigt. Über den Filter kann aber 
+ auch eingeschränkt werden, für welche Zustände Aufgaben angezeigt werden 
+ sollen. </p>
+<p class="BodyText" data-condition="Others:Deutsch">Beim Bearbeiten des Boardlets im Bearbeitungsmodus 
+ kann definiert werden, welche Attribute in der zusammengeklappten Ansicht 
+ einer Aufgabe angezeigt werden (Fälligkeit, Beschreibung, Tags, Externe 
+ Tool-Links oder Anhänge). Hier ist eine Mehrfach-Auswahl möglich.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist möglich, die Aufgaben nach allen Attributen 
+ zu filtern, z.B. &quot;fällig in den nächsten xyz Tagen&quot; oder &quot;Aufgaben, 
+ die mir zugeordnet sind&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ausrufezeichen am Anfang einer Zeile geben Aufschluss 
+ über die Priorität der Aufgabe (keine, ! = niedrig, !! = mittel, !!! = 
+ hoch). </p>
+<p class="BodyText" data-condition="Others:Deutsch">Es ist möglich, Aufgaben in Listen zu gruppieren, die 
+ frei in der WebApp konfiguriert werden können. Eine farbige Markierung 
+ zeigt an, zu welcher Liste die Aufgabe gehört.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf v kann die Aufgabe aufgeklappt werden, 
+ um mehr Informationen anzuzeigen. Sofern das Fälligkeitsdatum nicht ohnehin 
+ im zusammengeklappten Modus angezeigt wird, wird es nun in der Kopfzeile 
+ eingeblendet.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Task_Mgmt1.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">In der Detailansicht wird der Verantwortliche für die 
+ Aufgabe angezeigt, der Status, das Fälligkeitsdatum, die Beschreibung, 
+ Kommentare, Tags, Anhänge und Links zu externen Tools.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Über die Dropdown-Liste kann der Status der Aufgabe 
+ verändert werden, wodurch diese in das entsprechende Boardlet verschoben 
+ wird. Außerdem kann durch Klick auf <img src="../../../Bilder/Icons/comment_18dp.png" alt="" style="border: none;" border="0"/> ein Kommentar 
+ erfasst werden. Weitere Bearbeitungsmöglichkeiten öffnen sich durch Klick 
+ auf das Stift-Symbol in der Seitenleiste. Durch Klick auf <img src="../../../Bilder/Icons/trash_black_18dp.png" alt="" style="border: none;" border="0"/> kann die Aufgabe gelöscht 
+ werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Edit-Modus"></a>Edit-Modus</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf das Stift-Icon bei einer Aufgabe kann 
+ diese bearbeitet werden. Es öffnet sich folgender Dialog:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Task_Edit.png" alt="" style="border: none;" width="700" height="745" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Daten können erfasst bzw. geändert werden: 
+ Name der Aufgabe, zugeordnete Liste (Auswahl aus bestehenden Listen), 
+ Verantwortlicher, Fälligkeitsdatum, Priorität, Knotenzuordnung (sofern 
+ gewünscht) Beschreibung, Tags, Anhänge, Links zu externen Tools.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei den Tags kann aus einer Dropdown-Liste ein bereits 
+ existierender Tag selektiert werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Neue_Liste_anlegen"></a>Neue Liste anlegen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Anlegen einer neuen Liste muss man im Edit-Modus 
+ in den Reiter &quot;Liste&quot; wechseln (<img src="../../../Bilder/Icons/menu_black_18dp.png" alt="" style="border: none;" border="0"/>). </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Task_Lists.png" alt="" style="border: none;" width="700" height="539" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Es müssen eine Farbe selektiert werden sowie ein Name 
+ und eine Beschreibung vergeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Für bereits existierende Listen kann die Farbe geändert 
+ werden und sie können gelöscht werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Neue_Aufgabe_anlegen"></a>Neue Aufgabe anlegen</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf + in der Kopfzeile des Boardlets kann 
+ eine neue Aufgabe mit dem für das Boardlet definierten Status angelegt 
+ werden. Werden im Boardlet mehrere Zustände angezeigt, erhält die neue 
+ Aufgabe den, der als erstes dem Filter hinzugefügt wurde. Am Anfang der 
+ Liste öffnet sich folgende Eingabemaske:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Task_new.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Es muss ein Name eingegeben werden. Sonst kann die 
+ Aufgabe nicht angelegt werden. Verantwortlicher und Fälligkeit können 
+ direkt hier eingegeben werden oder später beim Bearbeiten in der Seitenleiste 
+ zugewiesen werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Aufgabenverwaltung Boardlet stehen folgende 
+ weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Fälligkeitsdatum:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann definiert werden, 
+ ob im eingeklappten Modus einer Aufgabe zusätzlich das Fälligkeitsdatum 
+ angezeigt werden soll.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Beschreibung:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann definiert werden, 
+ ob im eingeklappten Modus einer Aufgabe zusätzlich die Beschreibung angezeigt 
+ werden soll.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Tags:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann definiert werden, 
+ ob im eingeklappten Modus einer Aufgabe zusätzlich die Tags angezeigt 
+ werden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Anhänge:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann definiert werden, 
+ ob im eingeklappten Modus einer Aufgabe zusätzlich die Anhänge angezeigt 
+ werden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Links zu externen Tools:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann definiert werden, 
+ ob im eingeklappten Modus einer Aufgabe zusätzlich die Links zu externen 
+ Tools angezeigt werden sollen.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<div data-conref="../../../assets/snippets/Filter/de_Node_ID.hts" data-condition="Others:Deutsch">
+<p class="GUIControl">Knoten-ID:</p>
+<p class="GUIControlDescr">ID des Knotens, für den Werte angezeigt werden. 
+ Kann entweder hier geändert werden oder durch Auswahl eines anderen Knotens 
+ im Boardlet <span class="Bold">Knotenlayout</span> oder im Boardlet <span class="Bold">Knotenbaum</span> (außerhalb des <a href="../../Edit_Mode/General.htm">Bearbeitungsmodus</a>).</p>
+
+
+</div>
+<p class="GUIControl" data-condition="Others:Deutsch">Nach Zeit filtern:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler kann definiert werden, 
+ ob ein Zeitfilter auf das Fälligkeitsdatum angewendet werden soll oder 
+ nicht.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Fälligkeitsdatum:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Hier kann ein Zeitraum eingegeben werden, in 
+ dem sich das Fälligkeitsdatum befinden soll.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Name des Verantwortlichen:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl des Verantwortlichen, 
+ für den Aufgaben angezeigt werden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Liste:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl der Liste, der die 
+ angezeigten Aufgaben zugeordnet sein sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Tags:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl eines oder mehrerer 
+ Tags, die den angezeigten Aufgaben zugewiesen sein müssen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Priorität:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl der Priorität, die 
+ den angezeigten Aufgaben zugewiesen sein muss.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Fälligkeit erreicht:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diesen Schieberegler wird definiert, ob 
+ nur Aufgaben angezeigt werden sollen, deren Fälligkeitsdatum bereits erreicht 
+ ist oder alle.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">Sortieren nach:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl des Felds, nach 
+ dem die Aufgaben sortiert werden sollen.</p>
+<p class="GUIControl" data-condition="Others:Deutsch"><span>Aufgaben-Z</span>ustand:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über die Dropdown-Liste kann der Zustand gewählt 
+ werden, der die angezeigten Aufgaben zugeordnet sein soll. Mehrfachauswahl 
+ ist möglich.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Aufgabenzustände werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Produktionsmanagement</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">SFM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Aufgabenzustände</span> parametriert.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 38.045%;"/>
+	<col style="width: 61.955%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">node</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">takeTime</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">parentId</p></td>
+		<td><p class="TabellenInhalt">Integer</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">showDueDate</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">collapseShowDescription</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">collapseShowTags</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">collapseShowAttachments</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">collapseShowLinks</p></td>
+		<td><p class="TabellenInhalt">Boolean</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">filterUser</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">filterByGroup</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">filterByTags</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">filterByPriority</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">filterByDueDateReached</p></td>
+		<td><p class="TabellenInhalt">Booelan</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">sortBy</p></td>
+		<td><p class="TabellenInhalt">Enum</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">taskState</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only">Ausführungs-Trigger</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Trigger" data-condition="Others:Deutsch;Others:Sapient_only"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Ausführungs-Trigger">
+        <span>Ausführungs-Trigger</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only">Ausführungs-Trigger</h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch;Others:Sapient_only">System Administration | Berechnete Werte | Berechnungs-Ordner 
+ | Berechnungen | Ausführungs-Trigger</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Um eine Berechnung zu aktivieren, muss hier mindestens 
+ ein Eintrag vorhanden sein. Außerdem können zusätzliche Trigger zur Ausführung 
+ der Berechnung ausgewählt werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Trigger sind Ereignisse, die die Ausführung einer Funktion 
+ anstoßen (triggern). Generell stehen zwei Typen von Triggern zur Verfügung: 
+ Zeitgesteuerte Trigger und Ereignisgesteuerte Trigger (Ereignisse). Gültige 
+ Triggerparameter sind vom Typ Variable oder Knoten und In. Der Trigger 
+ kann auch von mehreren Variablen erfolgen. Mischen von Zeit- und Eventtriggern 
+ ist möglich. Es ist darauf zu achten, dass die Ein- und Ausgabeparameter 
+ die richtigen Typen haben (String, Num.).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Wenn möglich, sollten Funktionsaufrufe eventgesteuert 
+ ausgeführt werden, um unnötige zyklische Berechnungen zu vermeiden, die 
+ kein neues Ergebnis zeitigen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Manueller Trigger</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Zeitgesteuerte Trigger</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">zyklisch (5 sec. / 30 sec. / 60 sec. / 120 sec.)</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Die Berechnung wird im angegebenen Zeitraster 
+ angestoßen und ausgeführt. Diese Trigger werden verwendet, wenn kein Ereignis 
+ wie Wertänderung zur Verfügung steht, mit dem eine Neuberechnung durchgeführt 
+ werden muss.</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Beispiel: Berechnung von Soll aktuell im Zeitraster 
+ von 60 sec.</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Deutsch;Others:Sapient_only">Pausenbeginn /-Ende, Schichtbeginn /-Ende, Tagesbeginn 
+ mit/ohne Produktion, Beginn erste Schicht, Ende letzte Schicht, Tagesbeginn, 
+ Produktionsbeginn /-Ende</p>
+<p class="TextkörperAufzähl" data-condition="Others:Deutsch;Others:Sapient_only">Einmalige Berechnungen mit Auftreten des genannten 
+ Ereignisses relativ zum Schicht- Pausenmodell bzw. Kalenderparametrierung. 
+ Bezieht sich entweder auf den Knoten, der bei der Berechnung als Trigger 
+ markiert wurde oder auf den, der hier eingetragen ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only">Eventgesteuerte Trigger</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Bei Angabe eventgesteuert muss immer auch der Parameter, 
+ dessen Wertänderung die Berechnung anstoßen soll, markiert werden. Dazu 
+ wird die Checkbox &quot;Trigger&quot; in der Parameterliste aktiviert. 
+ Alternativ kann ein weiterer Wert festgelegt werden, indem das Feld &quot;Variable&quot; 
+ hier befüllt wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only">Für Knoten ist ein eventgesteuerter Trigger nicht möglich.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch;Others:Sapient_only">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Sapient_only">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Vom System vergebene, eindeutige 
+		 ID. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Berechnung</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Berechnung, 
+		 auf die sich der Trigger bezieht. Wird automatisch befüllt und 
+		 kann geändert werden.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Trigger</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Triggers, 
+		 der die Berechnung anstoßen soll. </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Variable</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl einer Variablen, 
+		 deren Wertänderung als Auslöser für eventgesteuerte Trigger verwendet 
+		 werden soll. Kann als zusätzlicher Auslöser definiert werden oder 
+		 wird vom Berechnungsparameter übernommen.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Knoten</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl eines Knotens, 
+		 dessen Schichtereignisse als Trigger verwendet 
+		 werden sollen. Kann als zusätzlicher Auslöser definiert werden 
+		 oder wird vom Berechnungsparameter übernommen.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch;Others:Sapient_only"> </p>
+
+
+</body></html>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Änderungshistorie","type":"item","tilePath":"","description":"","url":"de/OP_Sys/Change_History.htm"},{"name":"Freigegebene Betriebssysteme","type":"item","tilePath":"","description":"","url":"de/OP_Sys/OP_Sys.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

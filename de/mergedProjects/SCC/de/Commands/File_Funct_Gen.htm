@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Dateifunktionen (allgemein)</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Dateifunktion" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dateifunktionen (allgemein)">
+        <span>Dateifunktionen (allgemein)</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Dateifunktionen (allgemein)</h2>
+<h3 data-condition="Others:Deutsch"><a name="CopyFile" id="CopyFile"></a>CopyFile</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool CopyFile(string source, string 
+ dest)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert die Datei <b>source</b> nach <b>dest</b>. Die 
+ Funktion liefert &quot;true&quot;, wenn der Kopiervorgang ausgeführt werden 
+ konnte. Dabei ist zu beachten, dass im String vor &#39;\&#39;-Zeichen (z.B. bei 
+ Pfadangaben) das Escape-Zeichen &#39;\&#39; gesetzt werden muss.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := CopyFile(&#39;c:\\files\\file1.txt&#39;, &#39;c:\\files\\file2.txt&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="CreateDir"></a>CreateDir</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: bool CreateDir(string path)</p>
+<p data-condition="Others:Deutsch">Erzeugt das durch <span style="font-weight: bold;">path</span> festgelegte 
+ Verzeichnis. Konnte das Verzeichnis angelegt werden oder war es vor dem 
+ Aufruf von CreateDir betreits vorhanden, wird <span style="font-weight: bold;">true</span> 
+ zurückgegeben.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">bool ok</p>
+<p data-condition="Others:Deutsch">string path</p>
+<p data-condition="Others:Deutsch">path := &#39;c:\\projects&#39;</p>
+<p data-condition="Others:Deutsch">ok := CreateDir(path)</p>
+<p data-condition="Others:Deutsch">if ok then</p>
+<p data-condition="Others:Deutsch">  debug(&#39;Directory &#39;+path+&#39; created&#39;)</p>
+<p data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="DeleteFile" id="DeleteFile"></a>DeleteFile</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool DeleteFile(string datei)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die <b>datei</b> wird gelöscht. Die Funktion liefert 
+ &quot;true&quot;, wenn der Löschvorgang ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := DeleteFile(&#39;c:\\files\\file1.txt&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="DirExist"></a>DirExist</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: bool DirExist(string path)</p>
+<p data-condition="Others:Deutsch">Prüft, ob das durch path festgelegte Verzeichnis vorhanden ist.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">bool ok</p>
+<p data-condition="Others:Deutsch">string path</p>
+<p data-condition="Others:Deutsch">path := &#39;c:\\projects&#39;</p>
+<p data-condition="Others:Deutsch">ok := DirExist(path)</p>
+<p data-condition="Others:Deutsch">if ok then</p>
+<p data-condition="Others:Deutsch">  debug(&#39;Directory &#39;+path+&#39; exists&#39;)</p>
+<p data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="FileExist"></a>FileExist</h3>
+<p data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p data-condition="Others:Deutsch">Deklaration: bool FileExist(string path)</p>
+<p data-condition="Others:Deutsch">Prüft, ob die durch path festgelegte Datei vorhanden ist.</p>
+<p style="font-weight: bold;" data-condition="Others:Deutsch">Beispiel:</p>
+<p data-condition="Others:Deutsch">bool ok</p>
+<p data-condition="Others:Deutsch">string path</p>
+<p data-condition="Others:Deutsch">path := &#39;c:\\projects\\recipe.txt&#39;</p>
+<p data-condition="Others:Deutsch">ok := FileExist(path)</p>
+<p data-condition="Others:Deutsch">if ok then</p>
+<p data-condition="Others:Deutsch">  debug(&#39;File &#39;+path+&#39; exists&#39;)</p>
+<p data-condition="Others:Deutsch">endif</p>
+<p class="ph-ProcedureHeading" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="MoveFile" id="MoveFile"></a>MoveFile</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool MoveFile(string source, string 
+ dest)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Datei <b>source</b> wird in <b>dest</b> umbenannt. 
+ <b>dest</b> darf zuvor nicht vorhanden sein. Die Funktion liefert &quot;true&quot;, 
+ wenn der Vorgang ausgeführt werden konnte.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool    ok</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">ok := MoveFile(&#39;c:\\files\\file1.txt&#39;, &#39;c:\\files\\file2.txt&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

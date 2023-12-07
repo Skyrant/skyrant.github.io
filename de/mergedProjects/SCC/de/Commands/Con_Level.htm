@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">SQL-Funktionen auf Verbindungsebene</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SQL-Funktionen auf Verbindungsebene">
+        <span>SQL-Funktionen auf Verbindungsebene</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">SQL-Funktionen auf Verbindungsebene</h2>
+<h3 data-condition="Others:Deutsch"><a name="Break" id="Break"></a>Break</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Break</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Verbindung wird beendet, weitere SQL-Statements 
+ werden gepuffert. Die Verbindung wird nicht, wie bei Fehlern (z.B. Netzwerkfehler 
+ etc.), zyklisch neu aufgebaut, sondern bleibt deaktiviert, bis sie durch 
+ den Befehl &quot;Connect&quot; wieder angestoßen wird.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Legato.Connect</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  Database.Legato.Break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Connect" id="Connect"></a>Connect</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Connect</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wurde die Datenbankverbindung durch Aufruf von &quot;Break&quot; 
+ deaktiviert, muss sie durch den Befehl <b>Connect</b> wieder neu angestoßen 
+ werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Legato.Connect</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="CreatePool" id="CreatePool"></a>CreatePool</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long CreatePool(long n)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Legt bei der Verbindung einen Pool mit der angegebenen 
+ Anzahl <b>n</b> Threads an.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Returnwert 
+		 = 0</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Funktion 
+		 wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.CreatePool(5)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="CreatePoolEx"></a>CreatePoolEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long CreatePool(long n, string stmt)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Legt bei der Verbindung einen Pool mit der angegebenen 
+ Anzahl <b>n</b> Threads an. Das übergebene SQL-Statement <span style="font-weight: bold;">stmt</span> 
+ wird bei Verbindungsaufbau bzw. Verbindungswiederkehr ausgeführt.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Returnwert 
+		 = 0</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Funktion 
+		 wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.CreatePoolEx(<span lang="EN-US">5, 
+ &#39;ALTER SESSION SET CURSOR_SHARING=SIMILAR SESSION_CACHED_CURSORS=200&#39;</span>)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Execute" id="Execute"></a>Execute</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: Execute(string sqlstr)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ausführen eines SQL-Statements.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.Execute(&#39;select * from table1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="InitSpool" id="InitSpool"></a>InitSpool</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long InitSpool(long num)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Legt bei der Verbindung einen Spool mit der angegebenen 
+ Nummer <b>num</b> an. Die Spooldateien werden im Unterverzeichnis &quot;dbspool&quot; 
+ des Projekts angelegt. Der Name der Spooldateien wird aus Verbindungsname 
+ + _ + Spoolnummer + _ + fortlaufende Nummer im Hexadezimalformat gebildet. 
+ Die Länge des Dateinamens von Spooldateien ist auf 256 Zeichen beschränkt.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Returnwert 
+		 = 0</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Funktion 
+		 wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.InitSpool(3)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="InitSpoolEx"></a>InitSpoolEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long InitSpoolEx(long num, string stmt)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Legt bei der Verbindung einen Spool mit der angegebenen 
+ Nummer <b>num</b> an. Die Spooldateien werden im Unterverzeichnis &quot;dbspool&quot; 
+ des Projekts angelegt. Der Name der Spooldateien wird aus Verbindungsname 
+ + _ + Spoolnummer + _ + fortlaufende Nummer im Hexadezimalformat gebildet. 
+ Die Länge des Dateinamens von Spooldateien ist auf 256 Zeichen beschränkt. 
+ Das übergebene SQL-Statement <span style="font-weight: bold;">stmt</span> 
+ wird bei Verbindungsaufbau bzw. Verbindungswiederkehr ausgeführt.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Returnwert 
+		 = 0</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Funktion 
+		 wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.InitSpoolEx(<span lang="EN-US">3, 
+ &#39;ALTER SESSION SET CURSOR_SHARING=SIMILAR SESSION_CACHED_CURSORS=200&#39;</span>)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SelectAsynch" id="SelectAsynch"></a>SelectAsynch</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long SelectAsynch(long prio,<br/>
+                               string 
+ sqlstr,<br/>
+                               block 
+ userdata,<br/>
+                               string 
+ resultvarname)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ausführung des angegebenen SQL-Statements <b>sqlstr</b> 
+ mit der angegebenen Priorität <b>prio</b> (1 = höchste Priorität, je größer 
+ der Wert von prio ist, umso geringere Priorität) als asynchroner Select.</p>
+<p class="BodyText" data-condition="Others:Deutsch">In <b>UserData</b> wird der Funktion ein Datenblock 
+ mit benutzerspezifischen Daten mitgegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><b>Resultvarname</b> ist der Name einer Datenblock-Variablen, 
+ die das Ergebnis des asynchronen Selects und des benutzerspezifischen 
+ Datenblocks erhält.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Pool muss vorher durch die Funktion &quot;CreatePool&quot; 
+ angelegt worden sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Returnwert = 0 <span style="font-family: Wingdings;">è</span> 
+ Funktion wurde fehlerfrei ausgeführt.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Nach der Ausführung des asynchronen Selects wird das 
+ Ergebnis in die angegebene Datenblock-Variable mit folgendem Format geschrieben:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenÜberschrift">Position</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenÜberschrift">Länge</p></td>
+		<td style="vertical-align: top;" width="348"><p class="TabellenÜberschrift">Bedeutung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">0</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="348"><p class="TabellenInhalt">Datenbankreturncode 
+		 (0 = ok, ansonsten Nummer des Datenbankfehlers)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="348"><p class="TabellenInhalt">Länge 
+		 der benutzerspezifischen Daten</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">8</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">n</p></td>
+		<td style="vertical-align: top;" width="348"><p class="TabellenInhalt">Benutzerspezifische 
+		 Daten</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="90"><p class="TabellenInhalt">8 
+		 + n</p></td>
+		<td style="vertical-align: top;" width="95"><p class="TabellenInhalt">x</p></td>
+		<td style="vertical-align: top;" width="348"><p class="TabellenInhalt">Ergebnismenge 
+		 des Selects im CSV Format</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    UserData</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     prio</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   sqlstr</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">prio := 10</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">UserData := newblock(19)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblocknum(UserData,  0,  4, 
+ true, 1234)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">setblockstr(UserData,  4, 15, &#39;Select 
+ SYS_JOBS&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">sqlstr := &#39;select * from SYS_JOBS&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.SelectAsynch(prio, sqlstr, UserData,</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                             &#39;Value.BlkVarXYZ&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Spool" id="Spool"></a>Spool</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long Spool(long num, string sqlstr)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eintrag eines SQL-Statements <b>sqlstr</b> in den Spool 
+ mit der angegebenen Nummer <b>num</b> der Verbindung. Die Funktion kehrt 
+ sofort zurück. Der Spool muss vorher durch die Funktion &quot;InitSpool&quot; 
+ angelegt worden sein.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Returnwert 
+		 = 0</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Funktion 
+		 wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.Spool(3, &#39;call p_sync_sys_module(1)&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SpoolEx" id="SpoolEx"></a>SpoolEx</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long SpoolEx(long num, string sqlstr, 
+ long max time)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eintrag eines SQL-Statements <b>sqlstr</b> in den Spool 
+ mit der angegebenen Nummer <b>num</b> der Verbindung. Ist das SQL-Statement 
+ länger im Spool als <b>max time</b> in Millisekunden, so wird es nicht 
+ mehr ausgeführt, sondern verworfen. Die Funktion kehrt sofort zurück. 
+ Der Spool muss vorher durch die Funktion &quot;InitSpool&quot; angelegt 
+ worden sein.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="151"><p class="BodyText">Returnwert 
+		 = 0</p></td>
+		<td style="vertical-align: top;" width="453"><p class="BodyText">Funktion 
+		 wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Database.Server.SpoolEx(3, &#39;call p_sync_sys_module(1)&#39;, 
+ 1000)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

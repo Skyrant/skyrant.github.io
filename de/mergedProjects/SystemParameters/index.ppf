@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="SystemParameters" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\01_General\SysDoc.htm">
+    
+    <topic>
+      de\01_General\SysDoc.htm
+    </topic>
+    
+    <topic>
+      de\01_General\02_General.htm
+    </topic>
+    
+    <topic>
+      de\01_General\03_About.htm
+    </topic>
+    
+    <topic>
+      de\01_General\04_General.htm
+    </topic>
+    
+    <topic>
+      de\01_General\05_Param_Info.htm
+    </topic>
+    
+    <topic>
+      de\01_General\06_Structure.htm
+    </topic>
+    
+    <topic>
+      de\02_Admin-LC2\01_General-Settings\03_SysParam-200.htm
+    </topic>
+    
+    <topic>
+      de\02_Admin-LC2\02_Login_User-Adm\20_SysParam-203.htm
+    </topic>
+    
+    <topic>
+      de\02_Admin-LC2\02_Login_User-Adm\21_SysParam-201.htm
+    </topic>
+    
+    <topic>
+      de\02_Admin-LC2\02_Login_User-Adm\22_SysParam-202.htm
+    </topic>
+    
+    <topic>
+      de\02_Admin-LC2\02_Login_User-Adm\24_SysParam-261.htm
+    </topic>
+    
+    <topic>
+      de\02_Admin-LC2\02_Login_User-Adm\25_SysParam-260.htm
+    </topic>
+    
+    <topic>
+      de\03_GW\01_SysParam-6.htm
+    </topic>
+    
+    <topic>
+      de\03_GW\02_SysParam-5.htm
+    </topic>
+    
+    <topic>
+      de\03_GW\03_SysParam-7.htm
+    </topic>
+    
+    <topic>
+      de\04_AE\02_KPI\01_SysParam-40.htm
+    </topic>
+    
+    <topic>
+      de\04_AE\02_KPI\02_SysParam-41.htm
+    </topic>
+    
+    <topic>
+      de\04_AE\02_KPI\03_SysParam-42.htm
+    </topic>
+    
+    <topic>
+      de\04_AE\03_Al_System\02_SysParam-1.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\06_SysParam-110.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\13_SysParam-100.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\14_SysParam-101.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\18_SysParam-109.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\20_SysParam-13.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\22_SysParam-12.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\01_Gen\23_SysParam-102.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\02_Conf\03_SysParam-9.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\02_Conf\06_SysParam-4.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\02_Conf\07_SysParam-3.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\02_Conf\09_SysParam-10.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\02_Conf\10_SysParam-11.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\04_Al_System\SysParam-43.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\04_Al_System\04_SysParam-22.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\06_Text_Defaults\06_SysParam-20.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-56.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-55.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-50.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-57.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-52.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-51.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-54.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-53.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\07_Paging\SysParam-58.htm
+    </topic>
+    
+    <topic>
+      de\05_DB\08_Anonym\Tage_bis_zur_Anonymisierung.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\11_Al_System\13_SysParam-21.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\MM3\SysParam-170.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\19_Shift_Cal\SysParam-30.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\19_Shift_Cal\SysParam-31.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\Print\SysParam-70.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\Print\SysParam-71.htm
+    </topic>
+    
+    <topic>
+      de\06_WA\28_Layout_Option\SysParam__-300.htm
+    </topic>
+    
+    <topic>
+      de\08_MES\04_PZE\04_SysParam5040.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

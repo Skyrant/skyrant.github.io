@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">file</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="file">
+        <span>file</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">file</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Der Objekt-Typ File ermöglicht es JavaScript-Jobs, 
+ auf Dateien zuzugreifen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Objekte vom Typ File können auf die folgenden Arten 
+ und Weisen erzeugt werden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">new File()</p>
+<p class="BodyText" data-condition="Others:Deutsch">legt ein Objekt an, das auf keine Datei verweist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">new File(path)</p>
+<p class="BodyText" data-condition="Others:Deutsch">legt ein Objekt an, das auf die angegebene Datei oder 
+ das angegebene Verzeichnis verweist. Als path kann entweder ein anderes 
+ File-Objekt oder ein String angegeben werden.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">new File(path, name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">legt ein Objekt an, das auf die Datei oder das Unterverzeichnis 
+ mit dem angegebenen Namen im angegebenen Verzeichnis verweist. Das Verzeichnis 
+ kann als File- oder String-Objekt übergeben werden, der Name muss ein 
+ String sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Files haben folgende Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">name (String, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Name der Datei oder des Unterverzeichnisses</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">exists (Boolean, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob die Datei bzw. das Unterverzeichnis existiert</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">isfile (Boolean, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob es sich um eine Datei handelt</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">isdir (Boolean, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob es sich um ein Verzeichnis handelt</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readable (Boolean, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob die Datei gelesen werden kann (bzw. darf)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">writeable (Boolean, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob die Datei geschrieben werden kann (bzw. darf)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">parentdir (File, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein File-Objekt, das auf das Verzeichnis der Datei 
+ bzw. auf das übergeordnete Verzeichnis des Verzeichnisses verweist</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">absolutePath (String, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der absolute Pfad der Datei bzw. des Verzeichnisses</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">canonicalPath (String, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der kanonische (eindeutige) Pfad der Datei bzw. des 
+ Verzeichnisses</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">lastmodified (Date, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das Datum der letzten Änderung der Datei bzw. des Verzeichnisses</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">filelength (Zahl, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Länge der Datei (falls es keine ist, 0 oder -1)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">charset (String, readwrite)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Name des Zeichensatzes, der beim Lesen oder Schreiben 
+ verwendet werden soll (z.B. &quot;UTF-8&quot;, &quot;ISO-8859-1&quot; 
+ o.ä.)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">lineNumber (Zahl, readonly)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Nummer der aktuellen Zeile beim Lesen</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">useLocking (Boolean, readwrite)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob die Datei beim Lesen und Schreiben für andere Prozesse 
+ gesperrt werden soll (beim Lesen wird anderen Prozessen erlaubt, die Datei 
+ ebenfalls zu lesen, beim Schreiben wird die Datei exklusiv gesperrt). 
+ Eine eventuelle Sperre wird beim Aufruf der Funktion close() freigegeben.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">append (Boolean, readwrite)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ob beim Schreiben an die Datei angehängt (true) oder 
+ ihr Inhalt überschrieben werden soll (false). Soll die Datei nicht überschrieben 
+ werden, muss diese Eigenschaft unbedingt vor dem ersten Schreiben auf 
+ true gesetzt werden, ansonsten würde beim ersten Schreiben bereits die 
+ Länge der Datei auf 0 gesetzt. Nachträgliches Setzen von &quot;append&quot; 
+ wäre dann sinnlos.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Files haben folgende Funktionen:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">mkdir()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versucht, das durch dieses File-Objekt angegebene Verzeichnis 
+ zu erstellen. Gibt zurück, ob dies gelungen ist (Boolean).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">mkdirs()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versucht, das durch dieses File-Objekt angegebene Verzeichnis 
+ und alle eventuell noch nicht existierenden übergeordnete Verzeichnisse 
+ anzulegen und gibt zurück, ob dies gelungen ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">mkparents()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Versucht, alle eventuell noch nicht existierenden übergeordneten 
+ Verzeichnisse dieses Verzeichnisses oder dieser Datei anzulegen und gibt 
+ zurück, ob dies gelungen ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">remove()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht die Datei bzw. das Verzeichnis dieses File-Objekts 
+ und gibt zurück, ob dies gelungen ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">renameTo(dest)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Benennt die Datei bzw. das Verzeichnis dieses File-Objekts 
+ in den angegebenen Namen (String oder File-Objekt) um und gibt zurück, 
+ ob dies gelungen ist.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">copyTo(dest)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Kopiert die Datei dieses File-Objekts in das angegebene 
+ Ziel (String oder File-Objekt) und gibt die Anzahl der kopierten Bytes 
+ zurück. Im Fehlerfall ist das Ergebnis -1. Die Datei wird binär kopiert, 
+ diese Funktion ist also nicht auf Textdateien beschränkt.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">list(filter)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liefert ein Array mit den Namen aller Dateien und Unterverzeichnissen 
+ des durch dieses File-Objekt angegebenen Verzeichnisses. Optional kann 
+ die Liste der Dateinamen durch einen Filter eingeschränkt werden. Als 
+ Filter kann folgendes angegeben werden:</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein String mit Wildcards (? für ein beliebiges Zeichen 
+ außer Punkt und Schrägstrich, * für beliebig viele solcher Zeichen, ** 
+ für beliebig viele Zeichen inklusive Punkten oder Schrägstrichen).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein Date-Objekt. Es werden nur Dateien und Verzeichnisse 
+ in die Liste aufgenommen, die neuer als das angegebene Datum sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Eine Funktion mit den zwei Parametern &quot;path&quot; 
+ und &quot;name&quot;, die für jede Datei und jedes Unterverzeichnis aufgerufen 
+ wird. Nur, wenn diese Funktion &quot;true&quot; zurückliefert, wird der 
+ Name in die Liste aufgenommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein beliebiges JavaScript-Objekt, das eine Funktion 
+ namens &quot;filter&quot; hat, die dann wie oben aufgerufen wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readXmlEncoding()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Spezialfunktion für XML-Dateien: Liest die erste Zeile, 
+ interpretiert sie als XML-Deklaration, extrahiert daraus die Angabe des 
+ Zeichensatzes und schließt die Datei wieder. Wird in der Regel so benutzt:</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="TextCode" data-condition="Others:Deutsch">file.charset = file.readXmlEncoding();</p>
+<p class="TextCode" data-condition="Others:Deutsch">var xml = new Xml(file.read());</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">read()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den gesamten Inhalt der Datei ab der aktuellen 
+ Position und liefert ihn als String zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readChar()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest ein Zeichen aus der Datei und liefert es als 
+ String zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readLine()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest eine Zeile aus der Datei und liefert sie als 
+ String zurück (null bei Datei-Ende).</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readLines()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest alle verbleibenden Zeilen aus der Datei und liefert 
+ sie als Array von Strings zurück.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">readCSV(separator, quote)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest einen Datensatz (Zeile) aus der CSV-Datei und 
+ liefert ein Array mit den gelesenen Feld-Werten. Parameter:</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">separator 
+ (optional): das Feldtrenner-Zeichen, Standardwert Strichpunkt (;)</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">quote 
+ (optional): das Anführungs-Zeichen, Standardwert doppeltes Anführungszeichen (&quot;)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">write(text)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt den angegebenen String in die Datei.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">writeln(line)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt die optional angegebene Zeile (String) und 
+ ein Zeilenende in die Datei.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">writeCSV(values, separator, quote, eol)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schreibt einen Datensatz (Zeile) in die CSV-Datei. 
+ Parameter:</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">values: 
+ ein Array mit den zu schreibenden Feld-Werten</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">separator 
+ (optional): das Feldtrenner-Zeichen, Standardwert Strichpunkt (;)</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">quote 
+ (optional): das Anführungs-Zeichen, Standardwert doppeltes Anführungszeichen 
+ (&quot;)</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">eol 
+ (optional): die Zeilenende-Sequenz. Standardwert ist abhängig vom Betriebssystem</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">close()</p>
+<p class="BodyText" data-condition="Others:Deutsch">Schließt die Datei, falls sie gelesen oder geschrieben 
+ worden ist. Die nächste Lese- oder Schreib-Operation beginnt wieder am 
+ Anfang der Datei.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Zum Dekodieren und Formatieren von CSV-formatierten 
+ Strings erhält das File-Objekt noch zwei &quot;statische&quot; Funktionen 
+ (statische Funktionen können ohne ein spezifisches File-Objekt über den 
+ Typ-Namen aufgerufen werden, z.B. &quot;s = File.formatCSV(values)&quot;):</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">parseCSV(data, separator, quote)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Liest den ersten Datensatz (Zeile) aus dem CSV-formatierten 
+ übergebenen String und liefert ein Array der gelesenen Feld-Werte. Parameter:</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">data: 
+ die zu lesenden Daten</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">separator 
+ (optional): das Feldtrenner-Zeichen, Standardwert Strichpunkt (;)</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">quote 
+ (optional): das Anführungs-Zeichen, Standardwert doppeltes Anführungszeichen 
+ (&quot;)</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">formatCSV(values, separator, quote)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Formatiert einen Datensatz (Zeile) im CSV-Format und 
+ liefert sie als String. Parameter:</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">values: ein 
+ Array mit den zu formatierenden Feld-Werten</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">separator 
+ (optional): das Feldtrenner-Zeichen, Standardwert Strichpunkt (;)</p>
+<p class="Liste_1 Liste_Level1" style="margin-left: 30px; text-indent: -30px;" data-condition="Others:Deutsch">quote 
+ (optional): das Anführungs-Zeichen, Standardwert doppeltes Anführungszeichen 
+ (&quot;)</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Ein File-Objekt kann nicht gleichzeitig zum Lesen und 
+ zum Schreiben benutzt werden. Jedes Lesen setzt die Schreibposition und 
+ jedes Schreiben die Leseposition zurück.</p>
+
+
+</body></html>

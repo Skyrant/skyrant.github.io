@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.2.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Voraussetzungen</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Voraussetzungen">
+        <span>Voraussetzungen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Voraussetzung</h2>
+<h3 data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Für die Installation der Legato Application Engine 
+ wird mindestens Java 1.7 Standard Edition benötigt. In dieser Anleitung 
+ empfehlen wir die Verwendung von Java 1.8 Standard Edition, die Voraussetzung 
+ für die Legato Installation ist.</p>
+<h3 data-condition="Others:Deutsch"><a id="Installation_von_JDK_1.8"></a>Installation von JDK 1.8</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Die folgenden Schritte zeigen, wie Java JDK 1.8 in 
+ Ubuntu installiert wird.</p>
+<h4 data-condition="Others:Deutsch">Schritt 1 - Terminal öffnen</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Das Terminal kann im Dashboard oder im Zubehör-Ordner 
+ gefunden werden. Es kann auch durch Klicken von Strg+Alt+T geöffnet werden.</p>
+<h3 data-condition="Others:Deutsch"><img src="../../../Images/AE_systemd/image3.gif" alt="" style="border: none;" width="605" height="364" border="0"/></h3>
+<h4 data-condition="Others:Deutsch">Schritt 2 - Quellen aktualisieren</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie &quot;sudo apt-get update&quot; ein und drücken 
+ Sie Enter. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/AE_systemd/image4.gif" alt="" style="border: none;" border="0"/></p>
+<h4 data-condition="Others:Deutsch">Schritt 3 - Prüfen, ob Java bereits installiert ist</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie &quot;java –version&quot; ein und drücken 
+ Sie Enter. Wenn kein Java oder Java 8 läuft, fahren Sie fort, Java 8 zu 
+ installieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/AE_systemd/image5.gif" alt="" style="border: none;" border="0"/></p>
+<h4 data-condition="Others:Deutsch">Schritt 4 - Java JDK 1.8 installieren</h4>
+<p class="BodyText" data-condition="Others:Deutsch">Geben Sie &quot;sudo apt-get install openjdk-8-jre&quot; ein 
+ und drücken Sie Enter. OpenJDK 8 wird installiert. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Images/AE_systemd/image6.gif" alt="" style="border: none;" border="0"/></p>
+<h4 data-condition="Others:Deutsch">Schritt 5 - Zu verwendende Java Version wählen</h4>
+<p class="BodyText" style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US">Wenn 
+ mehrere Versionen von Java installiert sind, wählen Sie die gewünschte 
+ Java Version aus, indem Sie &quot;sudo update-alternatives - -config java&quot; 
+ eingeben und Enter drücken. Eine Liste aller installierter Java Versionen 
+ wird angezeigt. Verwenden Sie die Nummerntasten, um die gewünschte Version 
+ zu wählen. Klicken Sie Enter, um mit der gewählten Version fortzufahren.</span></p>
+<p class="BodyText" style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"><img src="../../../Images/AE_systemd/image7.gif" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" style="mso-ansi-language: EN-US;" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Oracle</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Oracle</h2>
+<h3><a name="Installation_der_DB-Software" id="Installation_der_DB-Software"></a>Installation 
+ der Datenbanksoftware</h3>
+<p class="BodyText">Der Installationsvorgang der Datenbank kann wie im 
+ Oracle-Installationshandbuch beschrieben durchgeführt werden. Siehe hierzu 
+ auch die separaten Dokumente &quot;Installation_Oracle_Server_de&quot; 
+ bzw. &quot;Installation_RHEL_Oracle_Server_de&quot;.</p>
+<h3><a name="Voraussetzungen" id="Voraussetzungen"></a>Voraussetzungen 
+ zur Installation der Legato Datenbank-Instanz(en)</h3>
+<h4><a name="Überblick"></a>Überblick</h4>
+<p class="BodyText">Legato kann wahlweise mit einer Instanz (Operativdaten 
+ und Archivdaten gemeinsam) oder zwei Instanzen (Operativdaten und Archivdaten 
+ getrennt) installiert werden.</p>
+<h4><a name="Tablespaces" id="Tablespaces"></a>Tablespaces</h4>
+<p class="BodyText">Zum Anlegen der Tablespaces siehe Dokumentation Oracle 
+ Server Installation.</p>
+<p class="BodyText">Bei der Erstellung der Tablespaces wird die Verwendung 
+ der automatischen Erweiterung empfohlen (Extentsize).</p>
+<p class="BodyText">Soll nur ein Tablespace je Instanz verwendet werden, 
+ schlagen wir folgende Default-Namen vor:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LEGATO_DATA (für alle Tabellendaten, Extentsize 
+ = 8 KB)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LEGATO_INDX (für alle Indexdaten, Extentsize = 
+ 16 KB)</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">In dieser Variante (nur ein Tablespace je Instanz) 
+ empfehlen wir gleichzeitig eine dynamische Speicheranpassung für die Tablespaces 
+ (Option &quot;extent management local&quot; = &quot;autoallocate&quot;). 
+ Ist das aus administrativen Gründen nicht erwünscht (Option &quot;extent 
+ management local&quot; = &quot;uniform&quot;), sollten die Tabellen auf 
+ drei Tablespaces je Instanz wie folgt aufgeteilt werden:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LEGATO_SMALL_DATA (Extentsize = 8 KB)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LEGATO_MID_DATA (Extentsize = 8 KB)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">LEGATO_LARGE_DATA (Extentsize = 8 KB)</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Die beschriebene Vorgehensweise gilt analog auch für 
+ die Index-Tablespaces.</p>
+<p class="BodyText">Die Größe der Tablespaces richtet sich stark nach dem 
+ zu erwartenden Datenaufkommen (Anzahl Störtelegramme, Anzahl und Aufzeichnungsraster 
+ von Messwerten, Aufbewahrungszeitraum, etc.) der Applikation. Als grober 
+ Richtwert kann folgende Abschätzung herangezogen werden:</p>
+<p class="BodyText">LEGATO_DATA =&#160;&#160;1 GB Grundvolumen + 1 GB * 
+ (angeschlossene Steuerungen/100)</p>
+<p class="BodyText">LEGATO_INDX = LEGATO_DATA</p>
+<p class="BodyText">Neben der empfohlenen Verwendung von Tablespaces mit 
+ automatischer Erweiterung ist es möglich, &quot;unlimited&quot; Tablespaces 
+ zu erstellen. In diesem Fall muss dem User &quot;Legato_Owner&quot; zusätzlich 
+ das Recht &quot;Grant unlimited tablespace&quot; zugewiesen werden.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Es wird empfohlen, ausschließlich Tablespaces 
+ mit automatischer Erweiterung zu verwenden! In diesem Fall wird das Recht 
+ &quot;Unlimited Tablespace&quot; nicht benötigt.</p>
+<h4><a name="Benötigte_User"></a>Benötigte User</h4>
+<p class="BodyText">Es werden die unten aufgeführten User mit den angegebenen 
+ Rechten benötigt.</p>
+<p class="BodyText">Die benötigten USER und ROLLEN können auch über den 
+ Datenbank-Installer (siehe Abschnitt &quot;Installation des Legato Datenmodells&quot;) 
+ angelegt werden. In diesem Fall ist hier nichts zu tun. Sofern dies nicht 
+ gewünscht ist, müssen die USER und ROLLEN direkt angelegt werden. Dazu 
+ geht man wie folgt vor:</p>
+<p class="BodyText">Zunächst müssen die Benutzer LEGATO_OWNER, LEGATO_READ, 
+ LEGATO_WRITE LEGATO_LC2, LEGATO_GW, LEGATO_AE und LEGATO_WA angelegt werden. 
+ Hierfür werden SYSDBA-Rechte vorausgesetzt.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Legato-Benutzer LEGATO_OWNER, LEGATO_READ, 
+ LEGATO_WRITE, LEGATO_LC2, LEGATO_GW, LEGATO_AE und LEGATO_WA dürfen nicht 
+ &quot;Legato&quot; genannt werden. Andernfalls kommt es zu Fehlern, da 
+ &quot;Legato&quot; auch der Name eines DB-Packages ist. Auch die Namen 
+ anderer DB-Packages dürfen nicht für DB-Benutzer verwendet werden.</p>
+<p class="BodyText">Es wird empfohlen, das Passwort aller Benutzer auf 
+ &quot;unlimited&quot; zu setzen. Andernfalls läuft es nach 180 Tagen ab 
+ und muss dementsprechend regelmäßig geändert werden. Damit das Passwort 
+ nie abläuft, führen Sie folgenden Befehl mit SYSDBA-Rechten aus:</p>
+<p class="TextCode"><b>alter</b> profile <b>DEFAULT</b> <b>LIMIT</b> PASSWORD_LIFE_TIME 
+ UNLIMITED;</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Wenn in der Spalte EXPIRY_DATE immer noch ein Datum 
+ steht muss ggf. das Passwort nochmal geändert werden. Fahren Sie mit folgendem 
+ Befehl fort (Beispiel für LEGATO_OWNER):</p>
+<p class="TextCode"><b>alter</b> <b>user</b> LEGATO_OWNER identified <b>by</b> 
+ LEGATO_OWNER;</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Nun müssen den Benutzern die benötigten Rechte zugewiesen 
+ werden. Für die Rechtezuweisung werden SYSDBA-Rechte vorausgesetzt:</p>
+<table class="TabelleBlank" cellspacing="0" width="83.144%">
+	<col style="width: 39.522%;" />
+	<col style="width: 60.478%;" />
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable"><b>LEGATO_OWNER</b> 
+		 mit folgenden Rechten:</p></td>
+		<td><p class="TextkörperTable">CREATE ROLE</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE TYPE</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE VIEW</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">ALTER SESSION</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE SESSION</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE SEQUENCE</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE PROCEDURE</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">FORCE TRANSACTION</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE DATABASE LINK</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable"><span style="color: red;">CREATE</span> 
+		 <span style="color: red;">TABLE (siehe Hinweis)</span></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE CLUSTER</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE TRIGGER</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">CREATE_MATERIALIZED_VIEW (bis 4.6: 
+		 CREATE SNAPSHOT)</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">ab 
+		 V4 zusätzlich</p></td>
+		<td><p class="TextkörperTable">ADMINISTER DATABASE TRIGGER (für 
+		 Install/Update kurzzeitig benötigt)</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">für 
+		 &quot;unlimited Tablespace&quot;</p></td>
+		<td><p class="TextkörperTable">UNLIMITED TABLESPACE</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Folgendermaßen sieht das SQL-Statement zur Zuweisung 
+ der Rechte für LEGATO_OWNER aus (das Recht für &quot;unlimited Tablespace&quot; 
+ ist auskommentiert):</p>
+<p class="BodyText">&#160;</p>
+<p class="TextCode">grant ALTER SESSION to %LEGATO_OWNER%; grant&#160;&#160;CREATE 
+ CLUSTER to %LEGATO_OWNER%; grant CREATE DATABASE LINK to %LEGATO_OWNER%; 
+ grant CREATE PROCEDURE to %LEGATO_OWNER%; grant CREATE ROLE to %LEGATO_OWNER%; 
+ grant CREATE SEQUENCE to %LEGATO_OWNER%; grant CREATE SESSION to %LEGATO_OWNER%; 
+ grant CREATE MATERIALIZED VIEW to %LEGATO_OWNER%; grant CREATE TABLE to 
+ %LEGATO_OWNER%; grant CREATE TRIGGER to %LEGATO_OWNER%; grant CREATE TYPE 
+ to %LEGATO_OWNER%; grant CREATE VIEW to %LEGATO_OWNER%; grant FORCE TRANSACTION 
+ to %LEGATO_OWNER%; grant ADMINISTER DATABASE TRIGGER to %LEGATO_OWNER%;</p>
+<p class="TextCode">-- grant UNLIMITED TABLESPACE to %LEGATO_OWNER%; -- 
+ nur falls trotz Empfehlung eins der Tablespaces als unlimited angelegt 
+ wurde</p>
+<p class="TextCode">&#160;</p>
+<table class="TabelleBlank" cellspacing="0" width="83.523%">
+	<col style="width: 39.343%;" />
+	<col style="width: 60.657%;" />
+	<tr>
+		<td><p class="TextkörperTable"><b>LEGATO_READ</b> mit folgenden 
+		 Rechten:</p></td>
+		<td><p class="TextkörperTable">CREATE ROLE</p></td>
+	</tr>
+	<tr>
+		<td><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable" style="color: red;">CREATE SYNONYM 
+		 (siehe Hinweis)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable">weitere objektbezogene Rechte auf 
+		 LEGATO-Datenbankobjekte werden bei der Installation zugewiesen</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Folgendermaßen sieht das SQL-Statement zur Zuweisung 
+ der Rechte für LEGATO_READ aus:</p>
+<p class="TextCode">grant CREATE SESSION to %LEGATO_READ%; grant CREATE 
+ SYNONYM to%LEGATO_READ%;</p>
+<p class="TextCode">&#160;</p>
+<table class="TabelleBlank" cellspacing="0" width="83.523%">
+	<col style="width: 39.343%;" />
+	<col style="width: 60.657%;" />
+	<tr>
+		<td><p class="TextkörperTable"><b>LEGATO_WRITE, LEGATO_LC2, LEGATO_GW, 
+		 LEGATO_AE, LEGATO_WA</b> mit folgenden Rechten:</p></td>
+		<td><p class="TextkörperTable">CREATE SESSION</p></td>
+	</tr>
+	<tr>
+		<td><p class="TextkörperTable">&#160;</p></td>
+		<td><p class="TextkörperTable" style="color: red;">CREATE SYNONYM 
+		 (siehe Hinweis)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TextkörperTable">für &quot;unlimited Tablespace&quot;</p></td>
+		<td><p class="TextkörperTable">UNLIMITED TABLESPACE</p></td>
+	</tr>
+	<tr>
+		<td>&#160;</td>
+		<td><p class="TextkörperTable">weitere objektbezogene Rechte auf 
+		 LEGATO-Datenbankobjekte werden bei der Installation zugewiesen</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Folgendermaßen sieht das SQL-Statement zur Zuweisung 
+ der Rechte für die Benutzer (am Beispiel LEGATO_WRITE) aus (das Recht 
+ für &quot;unlimited Tablespace&quot; ist auskommentiert):</p>
+<p class="TextCode">grant CREATE SESSION to %LEGATO_WRITE%; grant CREATE 
+ SYNONYM to%LEGATO_ WRITE%;</p>
+<p class="TextCode">-- grant UNLIMITED TABLESPACE to %LEGATO_WRITE%; -- 
+ nur falls trotz Empfehlung eins der Tablespaces als unlimited angelegt 
+ wurde.</p>
+<p class="Listing">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Die Rechte &quot;CREATE TABLE&quot; und &quot;CREATE 
+ SYNONYM&quot; müssen dem Datenbankbenutzer direkt zugeordnet werden und 
+ nicht über eine Rolle.</p>
+<h3><a name="Anlegen_der_DB_Instanzen" id="Anlegen_der_DB_Instanzen"></a>Anlegen 
+ der Legato Datenbank-Instanz(en)</h3>
+<p class="BodyText">Dieser Vorgang muss einmal (Standardinstallation) oder 
+ zweimal (Installation mit getrennter Archivdatenbank) durchgeführt werden. 
+ Die detaillierte Installationsanleitung finden Sie in der Dokumentation 
+ Oracle Server Installation.</p>
+<p class="BodyText">In den Legato-Datenbankinstanzen müssen die folgenden 
+ ORACLE-Packages auf jeden Fall installiert sein:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">OWA</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">OWA_UTIL</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Die folgenden Oracle-Initparameter müssen wie folgt 
+ gesetzt sein:</p>
+<table class="TabelleBlank" cellspacing="0">
+	<col width="580" />
+	<col width="791" />
+	<tr>
+		<td><p class="TextkörperTable">JOB_QUEUE_PROCESSES</p></td>
+		<td><p class="TextkörperTable">= 10 (mindestens)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TextkörperTable">_B_TREE_BITMAP_PLANS</p></td>
+		<td><p class="TextkörperTable">= FALSE (ab Oracle 9.2.)</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">NLS_LENGTH_SEMANTICS</p></td>
+		<td><p class="TextkörperTable">= CHAR</p>
+		<p class="TextkörperTable"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+		<p class="TextkörperTableEinrück">Wird der Parameter NLS_LENGTH_SEMANTICS 
+		 nicht auf CHAR umgestellt, kommt es zu massiven Problemen beim 
+		 Erstellen der Einträge in der Datenbank. Ggf. können die Einträge 
+		 gar nicht erstellt werden.</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Zusätzlich bei 2-Datenbank-Installationen in beiden 
+ Instanzen:</p>
+<table class="TabelleBlank" cellspacing="0">
+	<col width="578" />
+	<col width="793" />
+	<tr>
+		<td><p class="TextkörperTable">REMOTE_DEPENDENCIES_MODE</p></td>
+		<td><p class="TextkörperTable">= SIGNATURE</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">GLOBAL_NAMES</p></td>
+		<td><p class="TextkörperTable">= FALSE (nur bis einschließlich 
+		 Legato V3.5, danach ist auch TRUE möglich; Achtung: hier müssen 
+		 dann die internen Datenbanklinks dem Global-Name der Instanz entsprechen, 
+		 ein Wechsel kann bei einem Update von V3.5 auf V3.6 erfolgen)</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Zusätzlich für Oracle 12c:</p>
+<table class="TabelleBlank" cellspacing="0">
+	<col width="578" />
+	<col width="793" />
+	<tr>
+		<td><p class="TextkörperTable">COMPATIBLE</p></td>
+		<td><p class="TextkörperTable">= 11.2.0</p>
+		<p class="TextkörperTable"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+		<p class="TextkörperTableEinrück">Wird der Parameter nicht auf 
+		 11.2.0 gesetzt, kommt es zu Performance-Einbußen.</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;"><p class="TextkörperTable">OPTIMIZER_FEATURES_ENABLE</p></td>
+		<td><p class="TextkörperTable">= 11.2.0.1</p>
+		<p class="TextkörperTable"><img src="../../../02_Hinweis_de.jpg" 
+										 alt="" style="border: none;" border="0" />:</p>
+		<p class="TextkörperTableEinrück">Wird der Parameter nicht auf 
+		 11.2.0.1 gesetzt, kommt es zu Performance-Einbußen.</p></td>
+	</tr>
+</table>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />: Hinweis 
+ für Oracle11g Installationen:</p>
+<p class="TextkörperHinweis">Ab dieser Version setzt Oracle den Initparameter 
+ AUDIT_TRAIL nun auf DB (vorher auf NONE), womit automatisch ein Audit 
+ eingeschaltet ist. Die Daten werden in die Tabelle sys.aud$ geschrieben 
+ und diese liegt im Systemtablespace. Der Administrator muss dafür Sorge 
+ tragen, dass diese Tabelle nicht überlauft (zum Beispiel zeitlich abschneiden) 
+ oder den Parameter wieder auf NONE umstellen.</p>
+</body>
+</html>

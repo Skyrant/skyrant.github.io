@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1.5.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Rückgabewerte des SELECTs</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="SELECT" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rückgabewerte des SELECTs">
+        <span>Rückgabewerte des SELECTs</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Rückgabewert des SELECTs</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Der zurückgegebene Wert ist ein JSON-Objekt mit den 
+ folgenden zwei Eigenschaften:</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">queryTime</span> (String Zeitstempel) - 
+ Der Zeitpunkt, zu dem die Abfrage ausgeführt wurde.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">data</span> (JSON-Array von JSON-Objekten) 
+ - Die Datensätze. Jedes Zeilen-Objekt enthält eine JSON-Eigenschaft mit 
+ dem Namen und Wert von jedem abgefragten Feld.</p>
+<p class="Liste_1 Liste_Level1" style="text-indent: -30px; margin-left: 30px;" data-condition="Others:Deutsch"><span style="font-weight: bold;">more</span> (Boolean) - Nur präsent, wenn 
+ die Abfrage einen Grenzwert für die Anzahl zurückgelieferter Zeilen definiert 
+ hat. In diesem Fall gibt der Wert an, ob es mehr Zeilen gegeben hätte 
+ (true) oder nicht (false).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Das vollständige JSON-RPC Rückgabeobjekt könnte folgendermaßen 
+ aussehen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">{</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;jsonrpc&quot;: &quot;2.0&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;id&quot;: 4,</p>
+<p class="TextCode" data-condition="Others:Deutsch">    &quot;result&quot;: {</p>
+<p class="TextCode" data-condition="Others:Deutsch">        &quot;queryTime&quot;: 
+ &quot;2018-07-10T18:41:12.308Z&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">       &quot;data&quot;: 
+ [</p>
+<p class="TextCode" data-condition="Others:Deutsch">          {</p>
+<p class="TextCode" data-condition="Others:Deutsch">             &quot;id&quot;: 
+ 17,</p>
+<p class="TextCode" data-condition="Others:Deutsch">             &quot;name&quot;: 
+ &quot;Halle 2&quot;,</p>
+<p class="TextCode" data-condition="Others:Deutsch">             &quot;parent&quot;: 
+ 4</p>
+<p class="TextCode" data-condition="Others:Deutsch">          }</p>
+<p class="TextCode" data-condition="Others:Deutsch">       ]</p>
+<p class="TextCode" data-condition="Others:Deutsch">    }</p>
+<p class="TextCode" data-condition="Others:Deutsch">}</p>
+<p class="Aufzählung1" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

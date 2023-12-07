@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">logger</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="logger" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="logger">
+        <span>logger</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch">logger</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dient zur Ausgabe von Meldungen in das Log der Sapient 
+ Engine. Jeder Script-Job erhält einen Logger mit Namen &quot;JsJob-&lt;Job-Name&gt;. 
+ Dieser bietet folgende Methoden:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">trace(text, exception)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt eine Meldung der Ebene &quot;trace&quot; aus. 
+ Wird für detaillierte Ablauf-Verfolgung benutzt und üblicherweise nicht 
+ in Logdateien erfasst. Die Angabe eines Ausnahme-Objekts ist optional, 
+ bei solchen Meldungen aber unüblich.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">debug(text, exception)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt eine Meldung der Ebene &quot;debug&quot; aus. 
+ Wird für allgemeine Ablauf-Verfolgung benutzt. Die Angabe eines Ausnahme-Objekts 
+ ist optional, bei solchen Meldungen aber unüblich.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">info(text, exception)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt eine Meldung der Ebene &quot;info&quot; aus. Wird 
+ im Allgemeinen für Informationen über die Durchführung des Jobs genutzt. 
+ Die meisten Jobs geben eine Info-Meldung beim Start und eine am Ende des 
+ Job-Durchlaufs aus. Die Angabe eines Ausnahme-Objekts ist optional, bei 
+ solchen Meldungen aber unüblich.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">warn(text, exception)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt eine Meldung der Ebene &quot;warn&quot; aus. Wird 
+ für Fehlermeldungen benutzt, bei denen zwar eine bestimmte Aktion des 
+ Jobs misslungen ist, der Job aber weiter ablaufen kann. Die Angabe eines 
+ Ausnahme-Objekts ist optional.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">error(text, exception)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt eine Meldung der Ebene &quot;error&quot; aus. 
+ Wird für Fehlermeldungen benutzt, bei denen der Ablauf des Jobs abgebrochen 
+ wird. Die Angabe eines Ausnahme-Objekts ist optional, bei dieser Funktion 
+ aber durchaus üblich.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">fatal(text, exception)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Gibt eine Meldung der Ebene &quot;fatal&quot; aus. 
+ Sollte in Skript-Jobs nicht benutzt werden, da Meldungen dieser Ebene 
+ nur ausgegeben werden sollten, wenn die Funktion der gesamten Instanz 
+ der Application Engine gestört ist. Auch hier kann zusätzlich ein Ausnahme-Objekt 
+ angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Logger hat die folgenden Eigenschaften:</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">traceEnabled(Boolean)</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, falls dieses Level geloggt wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">debugEnabled(Boolean)</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, falls dieses Level geloggt wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">infoEnabled(Boolean)</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, falls dieses Level geloggt wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">warnEnabled(Boolean)</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, falls dieses Level geloggt wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">errorEnabled(Boolean)</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, falls dieses Level geloggt wird.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">fatalEnabled(Boolean)</p>
+<p class="BodyText" data-condition="Others:Deutsch">True, falls dieses Level geloggt wird.</p>
+
+
+</body></html>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Zugriff auf Element-Variablen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Element-Variable" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Zugriff auf Element-Variablen">
+        <span>Zugriff auf Element-Variablen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Zugriff auf Element-Variablen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">In Scripten kann auf Elemente des Projekts, die einen 
+ Wert darstellen, direkt über den Namen zugegriffen werden:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">Value.Temp1      // 
+ Variable Temp1 aus der Gruppe Value</p>
+<p class="BodyText" data-condition="Others:Deutsch">Enthalten Elementnamen Leerzeichen oder Sonderzeichen, 
+ muss der Name in doppelte Hochkommata gestellt werden:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span style="font-family: Symbol;">²</span>Value.act 
+ temp 2<span style="font-family: Symbol;">²</span>   // 
+ Variable act temp 2 aus der Gruppe Value</p>
+<p class="BodyText" data-condition="Others:Deutsch">Sollen Variable indirekt angesprochen werden, kann 
+ auch mit speziellen Scriptfunktionen auf diese zugegriffen werden.</p>
+<h3 data-condition="Others:Deutsch"><a name="BitVar" id="BitVar"></a>BitVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool BitVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen oder Setzen der Bool-Variablen mit dem Namen 
+ <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := bitvar(&#39;Value.Flag_1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bitvar(&#39;Value.Flag_1&#39;) := b</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="BlkVar" id="BlkVar"></a>BlkVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: block BlkVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen oder Setzen der Block-Variablen mit dem Namen 
+ <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := blkvar(&#39;Value.Datablock&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">blkvar(&#39;Value.Datablock&#39;) := b</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="FltVar" id="FltVar"></a>FltVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double FltVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen oder Setzen der Double-Variablen mit dem Namen 
+ <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := fltvar(&#39;Value.Temperature&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">fltvar(&#39;Value.Temperature&#39;) := d</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="IntVar" id="IntVar"></a>IntVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long IntVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen oder Setzen der Integer-Variablen mit dem 
+ Namen <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     i</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">i := intvar(&#39;Value.Counter_1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">intvar(&#39;Value.Counter_1&#39;) := i</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="IsVar" id="IsVar"></a>IsVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool IsVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfrage, ob eine Variable mit dem Namen <b>name</b> 
+ vorhanden ist. Ist die Variable nicht vorhanden, liefert die Abfrage &quot;false&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   varbasename</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">varbasename := &#39;OPC.GOPS.PLC1&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := isvar(varbasename + &#39;.StartOn&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(varbasename + &#39;: Variable &quot;StartOn&quot; 
+ exists&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="NilVar" id="NilVar"></a>NilVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool NilVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen der Variablen mit dem Namen <b>name</b> auf 
+ Gültigkeit ihres Wertes. Ist der Wert der Variablen nicht gültig (z.B. 
+ bei Verbindungsfehlern oder vor dem ersten Setzen) liefert die Abfrage 
+ &quot;false&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   varbasename</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">varbasename := &#39;OPC.GOPS.PLC1&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := nilvar(varbasename + &#39;.StartOn&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if not b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(varbasename + &#39;: Variable &quot;StartOn&quot;: 
+ NO VALUE&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 class="TextCode" data-condition="Others:Deutsch"><a id="OldBitVar"></a>OldBitVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool OldBitVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen des alten Zustandes der Bool-Variablen mit 
+ dem Namen <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := oldbitvar(&#39;Value.Flag_1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="OldBlkVar"></a>OldBlkVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: block OldBlkVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen des alten Zustandes der Block-Variablen mit 
+ dem Namen <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">block    b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">b := blkvar(&#39;Value.Datablock&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="OldFltVar"></a>OldFltVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: double OldFltVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen des alten Zustandes der Double-Variablen mit 
+ dem Namen <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">double   d</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">d := fltvar(&#39;Value.Temperature&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="OldIntVar"></a>OldIntVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long OldIntVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen des alten Zustandes der Integer-Variablen 
+ mit dem Namen <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     i</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">i := intvar(&#39;Value.Counter_1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="OldStrVar"></a>OldStrVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string OldStrVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen des alten Zustandes der String-Variablen mit 
+ dem Namen <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := strvar(&#39;Value.Text1&#39;)</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="StrVar" id="StrVar"></a>StrVar</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: string StrVar(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Abfragen oder Setzen der String-Variablen mit dem Namen 
+ <b>name</b>.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string   s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">s := strvar(&#39;Value.Text1&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">strvar(&#39;Value.Text1&#39;) := s</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

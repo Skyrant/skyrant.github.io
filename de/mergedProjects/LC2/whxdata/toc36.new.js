@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Tracking & Tracing","type":"book","tilePath":"","key":"toc37"},{"name":"Produktionsplanung","type":"book","tilePath":"","key":"toc39"},{"name":"SFM","type":"book","tilePath":"","key":"toc40"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Funkruf-Konzept DB","type":"item","tilePath":"","description":"","url":"de/Paging_Interface/DB/Paging_Concept_DB.htm"},{"name":"Wichtige Tabellen","type":"item","tilePath":"","description":"","url":"de/Paging_Interface/DB/Important_Tables.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

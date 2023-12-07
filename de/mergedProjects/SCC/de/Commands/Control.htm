@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "8.12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="GW_de_form.docx" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Steuern von Elementen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+}
+A:link {
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Steuern von Elementen">
+        <span>Steuern von Elementen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Steuern von Elementen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">In Scripten können auch Steuerfunktionen von Elementen 
+ ausgeführt werden.</p>
+<h3 data-condition="Others:Deutsch"><a name="Connect" id="Connect"></a>Connect</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool connect(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Variable mit dem Namen <b>name</b> wird verbunden.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b, c</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  c := connect(&#39;OPC.PLC1.Alarmblock&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  c := disconnect (&#39;OPC.PLC1.Alarmblock&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="CreateNode"></a>CreateNode</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool CreateNode(string name, string 
+ params) </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Variable mit dem Namen <b>name</b> wird im Baum 
+ gesucht und ein neuer Unterknoten angelegt. Der neue Knoten wird durch 
+ <span style="font-weight: bold;">params</span> beschrieben. <span style="font-weight: bold;">params</span> 
+ muss im XML-Format übergeben werden und richtig formatiert werden. Die 
+ Anwendung dieser Funktion erfordert genaue Kenntnisse über den Aufbau 
+ der Projektdatei!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if <span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">not 
+ IsVar(Path+&#39;.&#39;+Name) then</span></p>
+<p class="TextCodeGray" style="margin-left: 0px;" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">   rv 
+ := CreateNode(Path, &#39;&lt;memitm name=&quot;&#39;+Name+&#39;&quot; fmt=&quot;Block&quot; 
+ init=&quot;00 00 00 00 &quot; mul=&quot;&#39;+ltostr(Size,10)+&#39;&quot; always=&quot;true&quot;/&gt;&#39;)</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="CreateNodeTemp"></a>CreateNodeTemp</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool CreateNodeTemp(string name, string 
+ params) </p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Variable mit dem Namen <b>name</b> wird im Baum 
+ gesucht und ein neuer Unterknoten angelegt. Der neue Knoten wird durch 
+ <span style="font-weight: bold;">params</span> beschrieben. <span style="font-weight: bold;">params</span> 
+ muss im XML-Format übergeben werden und richtig formatiert werden. Die 
+ erstellten Knoten werden mit &quot;nicht mit Projekt speichern&quot; markiert. 
+ Die Anwendung dieser Funktion erfordert genaue Kenntnisse über den Aufbau 
+ der Projektdatei!</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if <span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">not 
+ IsVar(Path+&#39;.&#39;+Name) then</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">   rv 
+ := CreateNode(Path, &#39;&lt;memitm name=&quot;&#39;+Name+&#39;&quot; fmt=&quot;Block&quot; 
+ init=&quot;00 00 00 00 &quot; mul=&quot;&#39;+ltostr(Size,10)+&#39;&quot; always=&quot;true&quot;/&gt;&#39;)</span></p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="DeleteNode"></a>DeleteNode</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long DeleteNode(string name)  </p>
+<p class="BodyText" data-condition="Others:Deutsch">Löscht den durch <b>name</b> angegebenen Knoten. </p>
+<table class="TabelleBlank" style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 26.688%;"/>
+	<col style="width: 73.312%;"/>
+	</colgroup><tbody><tr>
+		<td><p class="TextkörperTable">Returnwert = 0 </p></td>
+		<td><p class="TextkörperTable">Funktion wurde fehlerfrei ausgeführt.</p></td>
+	</tr>
+	<tr>
+		<td><p class="TextkörperTable">Returnwert = 1</p></td>
+		<td><p class="TextkörperTable">Knoten nicht vorhanden.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">rv 
+ :=</span> DeleteNode(&#39;SendRecv.TCP.ServerX&#39;) </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a id="ExtNodeFunc"></a>ExtNodeFunc</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool ExtNodeFunc(string name, string 
+ func)   </p>
+<p class="bodytext" data-condition="Others:Deutsch">Führt bei dem durch <b>name</b> angegebenen Knoten 
+ die Funktion <b style="mso-bidi-font-weight: normal;">func</b> durch. 
+ Konnte die Funktion durchgeführt werden, wird true zurückgegeben.</p>
+<p class="bodytext" data-condition="Others:Deutsch">Mögliche Werte für <b style="mso-bidi-font-weight: normal;">func</b>:</p>
+<p class="bodytext" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">&#39;connect&#39;, 
+ &#39;disconnect&#39;, &#39;read&#39;, &#39;write&#39;, &#39;subscribe&#39;, unsubscribe&#39;</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     rv</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">rv 
+ :=</span> ExtNodeFunc(&#39;OPC_UA.PLC1.Heater.Temperature&#39;, &#39;read&#39;) </p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="Disconnect" id="Disconnect"></a>Disconnect</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: bool disconnect(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Variable mit dem Namen <b>name</b> wird aus dem 
+ Ablauf genommen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b, c</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  c := connect(&#39;OPC.PLC1.Alarmblock&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">else</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  c := disconnect (&#39;OPC.PLC1.Alarmblock&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetNodeFlag" id="GetNodeFlag"></a>GetNodeFlag</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: long GetNodeFlag(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Flags der Variable mit dem Namen <b>name</b> werden 
+ ausgelesen.</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenÜberschrift">Bit</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenÜberschrift">Bedeutung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">0</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Element 
+		 gültig</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Umbenennen 
+		 und Löschen erlaubt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Element 
+		 wird verwendet</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">3</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Hat 
+		 Referenzen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">4</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Kann 
+		 in Script verwendet werden</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">5</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Wird 
+		 nicht mit Projekt gestartet</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">6</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Lesezugriff</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">7</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Schreibzugriff</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">8</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Logmeldungen 
+		 Ein</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">9</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Beobachten</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">10</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Ruft 
+		 bei Wertänderung Script auf</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">11</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Rangiert 
+		 bei Wertänderung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">12</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Verbunden</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">13</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Unterbrochen</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">14</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Ordner</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">15</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">long     flags</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">flags := GetNodeFlag(&#39;OPC.GOPS.PLC1.Alarmblock&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if (flags and 0x100) &lt;&gt; 0  then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  debug(&#39;&quot;Logentries&quot; is active&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="GetNodeType" id="GetNodeType"></a>GetNodeType</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: int GetNodeType(string name)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Typ der Variable mit dem Namen <b>name</b> wird 
+ ausgelesen.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">int i</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">string s</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">i := getnodetype(&#39;OPC.SPS1.STATUS&#39;)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">switch i</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      case 0:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                s 
+ := &#39;NIL&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      case 1:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                s 
+ := &#39;BOOL&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      case 2:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                s 
+ := &#39;LONG&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      case 3:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">               s 
+ := &#39;DOUBLE&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      case 4:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                s 
+ := &#39;STRING&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">      case 5:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                s 
+ := &#39;BLOCK&#39;</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">                break</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">end</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetCyclEvent" id="SetCyclEvent"></a>SetCyclEvent</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetCyclEvent(string name, long wert, 
+ long modus)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Event-Variable mit dem Namen <b>name</b> wird mit 
+ neuen Triggerwerten versorgt. Die Event-Variable muss den Typ &quot;zyklisch&quot; 
+ haben. <b>wert</b> gibt das neue Intervall in ms an. <b>Modus</b> spezifiziert 
+ den neuen Triggerpunkt:</p>
+<table class="SimpleGridBlack" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenÜberschrift"> Modus</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenÜberschrift">Bedeutung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">0</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Der 
+		 Event wird mit dem Aufruf des Befehls ausgelöst und danach zyklisch 
+		 in neuem Abstand.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">1</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Der 
+		 Event wird ausgelöst, wenn der alte Zeitwert überschritten wird.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td style="vertical-align: top;" width="84"><p class="TabellenInhalt">2</p></td>
+		<td style="vertical-align: top;" width="450"><p class="TabellenInhalt">Der 
+		 Event wird ausgelöst, wenn der neue Zeitwert überschritten wird 
+		 oder bereits überschritten wurde.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  SetCyclEvent(&#39;Event.Timer&#39;, 1000, 0)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<h3 data-condition="Others:Deutsch"><a name="SetTimeEvent" id="SetTimeEvent"></a>SetTimeEvent</h3>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../SCC_Dateien/Windows.jpg" alt="Win" width="52" height="38" border="0"/><img src="../../SCC_Dateien/Linux.jpg" alt="linux" width="40" height="38" border="0"/></p>
+<p class="Declaration" data-condition="Others:Deutsch">Deklaration: SetTimeEvent(string name, string zeit, 
+ long maske)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Event-Variable mit dem Namen <b>name</b> wird mit 
+ neuen Triggerwerten versorgt. Die Event-Variable muss vom Typ &quot;Zeittrigger&quot; 
+ oder &quot;Zeitpunkt&quot; sein. <b>zeit</b> gibt den neuen Triggerpunkt 
+ im Format &quot;HH:mm:ss&quot; (Zeittrigger) bzw. &quot;DD.MM.YY HH:mm:ss&quot; 
+ (Zeitpunkt) an. <b>maske</b> ist nur bei Zeittriggern von Bedeutung und 
+ maskiert die Wochentage für das Event, wobei Bit 0 dem Sonntag entspricht, 
+ Bit 1 dem Montag usw.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="Bold">Beispiel</span>:</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">bool     b</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">if b then</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">  SetTimeEvent(&#39;Event.Timer&#39;, &#39;01:00:00&#39;, 
+ 0)</p>
+<p class="TextCodeGray" data-condition="Others:Deutsch">endif</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

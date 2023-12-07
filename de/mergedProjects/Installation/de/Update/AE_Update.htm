@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "2.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Azure_Blue_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="System_Update_Legato_de.docx" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Update ApplicationEngine</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">
+/*<![CDATA[*/
+body {
+        background-color: #ffffff;
+}
+A:visited {
+        
+}
+A:link {
+        
+}
+/*]]>*/
+</style>
+<meta name="rh-index-keywords" content="Update,Application Engine,AE" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Update ApplicationEngine">
+        <span>Update ApplicationEngine</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1 data-condition="Others:Deutsch">Update ApplicationEngine</h1>
+<h2 data-condition="Others:Deutsch"><a name="Vorbereitungen" id="Vorbereitungen"></a>Vorbereitungen</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Dienst ApplicationEngine stoppen.</p>
+<h2 data-condition="Others:Deutsch"><a name="Update" id="Update"></a>Update</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Löschen aller Log-Dateien (.log) im Pfad &quot;C:\LegatoAppData\logs\appengine\&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch">Den Ordner der bestehende AE-Version umbenennen (z.B. Ordner &quot;LegatoAppEng&quot; unter &quot;C:\Program Files (x86)\Gefasoft\&quot; umbenennen in &quot;old_LegatoAppEngVxxx&quot;) und als Sicherung in ein temporäres Verzeichnis verschieben.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Neue Version der Legato-Application-Engine (z.B. LeAppEng-xxx.zip) in temporären Ordner entpacken.</p>
+<p class="TextCode" data-condition="Others:Deutsch">$JAVA_HOME/bin/jar xvf LeAppEng-xxx.zip</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Den entpackten Ordner in den regulären Pfad für die AE kopieren (z.B. unter &quot;C:\Program Files (x86)\Gefasoft\&quot;) und den Verzeichnisnamen der neuen AE-Version in den offiziellen Verzeichnisnamen der Vorgängerversion umbenennen (z.B. &quot;LegatoAppEng&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Ordnerinhalte der neuen AE-Version (jetzt z.B. &quot;LegatoAppEng&quot;) anpassen. Je nach Betriebssystem, auf dem die AE läuft, die Inhalte aus dem zutreffenden Ordner direkt eine Ebene höher in das Hauptverzeichnis kopieren (ix: Unix/Linux; win: Windows 32-bit; win64: Windows 64-bit).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aus dem gesicherten und umbenannten AE-Verzeichnis der Vorgängerversion (z.B. Ordner &quot;old_LegatoAppEngVxxx&quot; unter &quot;C:\Program Files (x86)\Gefasoft\&quot;) alle applikationsspezifischen Dateien im Hauptverzeichnis in das jetzt aktuelle Hauptverzeichnis der AE (jetzt z.B. &quot;LegatoAppEng&quot;) kopieren. Dazu gehören z.B. &quot;appengine.properties&quot;. Prinzipiell können alle Dateien vom alten Ordner in den neuen AE-Ordner kopiert werden, die namentlich noch nicht enthalten sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Evtl. nachträglich projektspezifischen Erweiterungen (z.B. zusätzliche Skripte) aus dem Sicherungsverzeichnis der alten AE-Version (z.B. &quot;old_LegatoAppEngVxxx&quot;) in das entsprechende Verzeichnis der neuen AE-Version kopieren.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Verweis auf Import-Skripte wiederherstellen (&lt;path_to_LegatoAppData_from_webapp&gt; muss durch korrekten Wert ersetzt werden):</p>
+<p class="TextCode" data-condition="Others:Deutsch">ln –s &lt;path_to_LegatoAppData_from_webapp&gt;/importfiles/importscripts ~/legato/bin/LeAppEng/scripts/zuli/importscripts</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Add paths for report output in &quot;~/legato/cfg/appengine.properties&quot; if not already in place:</p>
+<p class="TextCode" data-condition="Others:Deutsch">userreport.designbasedir=&lt;path_to_LegatoAppData_from_webapp&gt;/reports</p>
+<p class="TextCode" data-condition="Others:Deutsch">userreport.outbasedir=&lt;path_to_LegatoAppData_from_webapp&gt;/reportoutput</p>
+<p class="TextCode" data-condition="Others:Deutsch">userreport.tmpdir=tmp</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls noch nicht gesetzt, folgenden Parameter in dbarch.properties und dboper.properties einfügen:</p>
+<p class="TextCode" data-condition="Others:Deutsch">maxUseCount=999</p>
+<p class="TextCode" data-condition="Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Deutsch">Falls im Zuge des gesamten Updates auch ein Update des JDK mit neuer Java-Version durchgeführt wurde, ist noch eine zusätzliche Anpassung notwendig. Die Datei &quot;dosvc.cmd&quot; im jetzt aktuellen AE-Ordner muss bearbeitet werden. Alle Angaben zu Java müssen korrigiert werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Prüfung, ob die bestehenden Pfadangaben (z.B. zu einer .dll) auch in der aktuellen Java-Version vorhanden sind.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Alle Pfadangaben auf den Pfad der aktuellen Java-Version anpassen.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Aktualisierung der JDBC-Treiber für Oracle. Die Treiber &quot;ojdbc*.jar&quot; und &quot;orai18n.jar&quot; aus dem lib-Verzeichnis der aktualisierten AE-Version (z.B. &quot;C:\Program Files (x86)\Gefasoft\LegatoAppEng\lib\&quot;) kopieren und in das lib-Verzeichnis des Applikationsservers (z.B. &quot;C:\Program Files\Apache Software Foundation\Tomcat 7.0\lib&quot;) einfügen. Die älteren Versionen dieser Treiber im lib-Verzeichnis des Applikationsservers löschen.</p>
+<h2 data-condition="Others:Deutsch"><a name="Nacharbeiten" id="Nacharbeiten"></a>Nacharbeiten</h2>
+<p class="BodyText" data-condition="Others:Deutsch">Dienst Legato ApplicationEngine starten.</p>
+
+
+</body></html>

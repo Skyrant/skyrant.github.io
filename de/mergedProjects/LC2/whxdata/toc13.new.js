@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Überblick","type":"item","tilePath":"","description":"","url":"de/03_Basic_Settings/04_Prod_Mgmt/01_Overview.htm"},{"name":"Auftrags-Priorität","type":"item","tilePath":"","description":"","url":"de/03_Basic_Settings/04_Prod_Mgmt/03_Order_Prios.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

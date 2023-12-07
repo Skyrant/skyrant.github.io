@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Konfiguration von Löschjobs"]],"1":[["\n"],["\n","Zum Löschen von Altdaten müssen im LC2 Löschjobs konfiguriert \n werden. Zum Vorgehen, siehe bitte ","Lösch-Jobs",".","\n\n\n"]],"3":[["Konfiguration von Löschjobs"]],"id":"25"})

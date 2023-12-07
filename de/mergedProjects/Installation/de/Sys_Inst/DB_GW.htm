@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Datenbank-Gateway (bis Version 4.7.2.4)</title>
+<link rel="StyleSheet" href="..\Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h1>Datenbank-Gateway (bis Version 4.7.2.4)</h1>
+<h2><a name="Installation_auf_einem_Windows_PC" id="Installation_auf_einem_Windows_PC"></a>Installation 
+ auf einem Windows PC</h2>
+<h3><a name="Systemvoraussetzungen" id="Systemvoraussetzungen"></a>Systemvoraussetzungen</h3>
+<p class="BodyText">Das Gateway ist eine 32 Bit Applikation.</p>
+<?rh-placeholder type="snippet" ref="GW_Win_de" ?>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" 
+								 border="0" />:</p>
+<p class="TextkörperHinweis">Für den Betrieb unter Windows gilt die Einschränkung, 
+ dass aus Performancegründen und zur Gewährleistung eines stabilen Betriebsverhaltens, 
+ nicht mehr als 50 Verbindungen je Gateway-PC angelegt werden sollen. Das 
+ ist bei der Projektierung des Gesamtsystems und Festlegung der erforderlichen 
+ Gateway-PCs zu berücksichtigen. Für den Betrieb des Datenbankgateways 
+ auf UNIX-Plattformen gelten keine Einschränkungen.</p>
+<p class="Textkörperfett">Zusätzlich</p>
+<p class="BodyText">Oracle Client und Provider for OLE DB ab Version 11.2.0.1.0. 
+ 32-bit.</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" 
+								 border="0" />:</p>
+<p class="TextkörperHinweis">Beim Oracle Client 11.2.0.3 kommt es gelegentlich 
+ zu Problemen, da der OLE DB Provider nicht korrekt installiert wird. Daher 
+ wird die Version 11.2.0.1 empfohlen.</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" 
+								 border="0" />:</p>
+<p class="TextkörperHinweis">Bei Gateways mit hohen Datendurchsatz wird 
+ empfohlen, die Datei sqlnet.ora vom Oracle Treiber zu suchen und dort 
+ den Parameter</p>
+<p class="TextkörperHinweis">Sqlnet.outbound_connect_timeout=5</p>
+<p class="TextkörperHinweis">zu setzen, damit auch im Fehlerfall der Ablauf 
+ gewährleistet bleibt.</p>
+<h3><a name="Installation_Datenbankgateway" id="Installation_Datenbankgateway"></a>Installation 
+ Datenbank-Gateway</h3>
+<p class="BodyText">Die Installation des Datenbankgateways erfolgt über 
+ das Installationsprogramm <b>GatewaySetup.exe</b>. Nach dem Start der 
+ Exe kann die Sprache der Installation gewählt werden.</p>
+<h3><a name="Installation_OPC-Server_GOPS" id="Installation_OPC-Server_GOPS"></a>Installation 
+ OPC-Server GOPS</h3>
+<p class="BodyText">Wird die Gateway-Installation zur Laufzeit (online) 
+ als Win32-Gateway betrieben, sind ggf. der OPC-Server GOPS und die zugehörigen 
+ Treiber ebenfalls am Gateway-PC zu installieren. Dies erfolgt über die 
+ Datei <b>GopsSetup.exe</b>. Es empfiehlt sich, die Installation von Gateway 
+ und GOPS gegebenenfalls in einem Schritt durchzuführen.</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" 
+								 border="0" />:</p>
+<p class="TextkörperHinweis">Wird im Projekt eine Kopplung über OPC gefordert, 
+ kann ausschließlich die Windows-Variante des Gateways eingesetzt werden. 
+ OPC wird von UNIX nicht unterstützt.</p>
+<h2 class="TextkörperHinweis"><a name="Installation_für_UNIX"></a>Installation 
+ für UNIX</h2>
+<h3><a name="Systemvoraussetzungen1" id="Systemvoraussetzungen1"></a>Systemvoraussetzungen</h3>
+<h4>Betriebssysteme</h4>
+<p class="BodyText">Das Gateway ist als 32 Bit und 64 Bit Applikation verfügbar.</p>
+<?rh-placeholder type="snippet" ref="GW_Unix_de" ?>
+<p class="BodyText">&#160;</p>
+<h4>Datenbanken</h4>
+<p class="BodyText">Vom UNIX-Gateway unterstützte Datenbanken:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">ORACLE11</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Das Gateway muss auf der Zielmaschine kompiliert und 
+ gelinkt werden (eine entsprechende Entwicklungsumgebung mit GNU C++ Compiler 
+ ist erforderlich).</p>
+<h3><a name="Bibliotheken_Libraries" id="Bibliotheken_Libraries"></a>Bibliotheken 
+ / Libraries</h3>
+<p class="BodyText">Das Gateway verwendet folgende Bibliotheken:</p>
+<h4>&#160;AIX 32 Bit</h4>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libxti.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libdl.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libclntsh.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libguti.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libpthreads.a(shr_xpg5.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libACE.5.7.6.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libc.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/librtl.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libc.a(pse.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libodm.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libperfstat.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/unix</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libpthreads.a(shr_comm.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcrypt.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcfg.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/liblvm.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcorcfg.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libsrc.a(shr.o)</p><?rh-list_end ?>
+<h4>AIX 64 Bit</h4>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libxti.a(shr_64.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libclntsh.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libguti_64.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libpthreads.a(shr_xpg5_64.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libACE_64.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libstdc++.a(libstdc++.so.6)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libgcc_s.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libc.a(shr_64.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libc.a(pse_64.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libpthreads.a(shr_xpg5.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libc.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libdl.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libodm.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libperfstat.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/unix</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libdl.a(shr_64.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcrypt.a(shr_64.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libpthreads.a(shr_comm.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcrypt.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcfg.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/liblvm.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libcorcfg.a(shr.o)</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/usr/lib/libsrc.a(shr.o)</p><?rh-list_end ?>
+<h4>Linux 32 Bit</h4>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">linux-gate.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libclntsh.so.11.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">librfccm.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libACE.so.6.3.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libstdc++.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libm.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libgcc_s.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libpthread.so.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libc.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libnnz11.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libons.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libdl.so.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libnsl.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/lib/ld-linux.so.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libaio.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libclntshcore.so.11.2</p><?rh-list_end ?>
+<h4>Linux 64 Bit</h4>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">linux-vdso.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libclntsh.so.11.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">librfccm.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libACE.so.6.3.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libstdc++.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libm.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libgcc_s.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libpthread.so.0</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libc.so.6</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libmql1.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libipc1.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libnnz11.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libons.so</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libdl.so.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libnsl.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">librt.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">/lib64/ld-linux-x86-64.so.2</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libaio.so.1</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">libclntshcore.so.11.2</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Zur Installation des Gateways müssen die Bibliotheken, 
+ die nicht auf dem System ohnehin schon vorhanden sind, inkl. dem Gateway 
+ Binary, in ein eigenes Verzeichnis kopiert werden (z.B. legato/bin) und 
+ die Ausführungsrechte gesetzt werden.</p>
+<p class="BodyText">Der Bibliothekspfad muss das o. g. Installationsverzeichnis 
+ enthalten und der Oracle Client muss installiert sein.</p>
+<h2><a name="Registrierung" id="Registrierung"></a>Registrierung</h2>
+<p class="BodyText">Die Registrierung (und damit Freischaltung) des Gateways 
+ (und des OPC-Servers mit den verwendeten Treibern) erfolgt über den Menüpunkt 
+ &quot;Legato|Lizenzinfo&quot;<i>.</i> Dort kann ein Dialog mit den aktuell 
+ vorhandenen Lizenzen aufgerufen werden. Mit dem Button &quot;Registrierung&quot; 
+ wird ein neuer Dialog für die Registrierung geöffnet:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Seriennummer</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Eingabe der Seriennummer für das Produkt aus 
+ dem Original-Lieferschein.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Registrierungsschlüssel</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Eingabe des Registrierungs-Schlüssels für 
+ das Produkt aus dem Original-Lieferschein.</p>
+<p class="BodyText">&#160;</p>
+<p class="Textkörperfett"><img src="../../02_Hinweis_de.jpg" alt="" style="border: none;" 
+								 border="0" />:</p>
+<p class="TextkörperHinweis">Für die Registrierung des Gateways, des OPC-Servers 
+ und der Treiber sind unter Umständen mehrere Schlüssel erforderlich. Der 
+ Registrierungsvorgang muss auf jeden Fall für jeden übermittelten Schlüssel 
+ durchgeführt werden.</p>
+</body>
+</html>

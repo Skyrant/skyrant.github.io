@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="Sapient_Samples" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="de\General\Change_History.htm">
+    
+    <topic>
+      de\General\ANSI.htm
+    </topic>
+    
+    <topic>
+      de\General\Change_History.htm
+    </topic>
+    
+    <topic>
+      de\General\Basic-Perms.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Overview.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Params\Params.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Params\25_SysParam-260.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Params\21_SysParam-201.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Params\22_SysParam-202.htm
+    </topic>
+    
+    <topic>
+      de\Basics\Params\20_SysParam-203.htm
+    </topic>
+    
+    <topic>
+      de\Basics\User\Rights.htm
+    </topic>
+    
+    <topic>
+      de\Basics\User\User_Mgmt.htm
+    </topic>
+    
+    <topic>
+      de\Basics\User\User_Adm.htm
+    </topic>
+    
+    <topic>
+      de\Basics\User\Ass_Perms.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\AppStructure.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\02_Node_Levels.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\01_Nodes.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\Permissions.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\02_Modules.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\03_Connections.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AppStructure\Permissions2.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AL_Classes\Al_Classes.htm
+    </topic>
+    
+    <topic>
+      de\Basics\AL_Classes\02_Al_Classes.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\SE_Jobs_check.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\SE_Jobs.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\Job_Triggers.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\Delete_Jobs_conf.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\Del_Jobs.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\JOB_POLLER.htm
+    </topic>
+    
+    <topic>
+      de\Basics\SE_Jobs\Task_dbtimesync.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Overview.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Rights.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Params.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Config.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Boardlets\Layout2.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Boardlets\Edit2.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Boardlets\Layout_Settings2.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Boardlets\Settings2.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Boardlets\Samples_Details.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Inkscape\Introduction\General.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Inkscape\Introduction\Sys_Requ.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Inkscape\Create_Layout\Import_SVG.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Inkscape\Create_Layout\Edit.htm
+    </topic>
+    
+    <topic>
+      de\Prod_Structure\Inkscape\Create_Layout\Import_to_Sapient.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Overview.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Rights.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\Params.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\07_SysParam-3.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\06_SysParam-4.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\03_SysParam-9.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\13_SysParam-21.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\04_SysParam-22.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Params\SysParam-170.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Config\Al_Mgmt.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Config\AL_Formats.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Config\03_Al_Types.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Config\01_Alarm_Defs.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Config\02_Wild_Cards.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Config\04_Alloc_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\SE_Jobs\SE_Jobs.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Boardlets\Current_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Boardlets\Archived_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Boardlets\Alarm_Timeline.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Boardlets\Top_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Boardlets\Count_Alarms.htm
+    </topic>
+    
+    <topic>
+      de\AL_Mgmt\Boardlets\Al_Units_Lost.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Overview.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Rights.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Params\Params.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Params\SysParam-30.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Params\SysParam-31.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Params\03_SysParam-7.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Params\02_SysParam-5.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Params\01_SysParam-6.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\Time_Model.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\01_Shift_Types.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\02_Break_Types.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\Holidays.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\01_Time_Schemes.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\Time_Zones.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\02_Shift_Models.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\03_Shifts.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\04_Breaks.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\10_Shift_Groups.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Config\11_Prod_Groups.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\SE_Jobs\HANDLE_EVENTS.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\SE_Jobs\REFRESH_EVENT_LIST.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Boardlets\Shift_Calendar.htm
+    </topic>
+    
+    <topic>
+      de\Shift_Cal\Boardlets\Shift_Exceptions.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        de_DE
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>

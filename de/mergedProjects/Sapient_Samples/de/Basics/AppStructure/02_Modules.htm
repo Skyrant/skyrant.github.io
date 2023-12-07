@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "2.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Datenaustausch-Module</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Datenaustausch-Module">
+        <span>Datenaustausch-Module</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Datenaustausch-Module</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Anwendungsstruktur | Datenaustausch | Datenaustausch-Module</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Hier werden die Module / Gateways angelegt. </p>
+<p class="BodyText" data-condition="Others:Sapient_only;Others:Deutsch">Für jede 
+ Sapient Engine (SE) Instanz muss hier ein Modul angelegt werden. <span style="font-size: 14.6667px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+	 float: none;">Dabei ist der Modul-Typ auf &quot;Sapient Engine&quot; 
+ zu setzen. Die Modul-ID entspricht der Instanznummer der SE.</span></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Wird vom System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Modultyp</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur  Auswahl 
+		 eines der Modultypen &lt;intern &gt;, &lt;Gateway&gt;<span data-condition="Others:Sapient_only"> 
+		 oder <sapient engine=""></sapient></span>.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Frei wählbarer Name des Moduls.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung des Moduls.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Timeout (s) (optional)</p></td>
+		<td><p class="TabellenInhalt">Time-Out-Zeit zur Überwachung der 
+		 Gateway-Verbindung. Nach Ablauf dieser Zeit wird eine Systemmeldung 
+		 zum angegebenen Standardknoten generiert. Nur relevant für Modultyp 
+		 &lt;Gateway&gt;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">PC Name (optional)</p></td>
+		<td><p class="TabellenInhalt">Hostname des Rechners, auf dem das 
+		 Gateway läuft. Nur relevant für Modultyp &lt;Gateway&gt;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">GW-Projekt (lpr/lpx-Datei) (optional)</p></td>
+		<td><p class="TabellenInhalt">Gateway-Konfigurations-File (mit 
+		 vollständigem Pfad). Bei Angabe der Datei können z.B. die vorhandenen 
+		 Variablen des Gateways importiert werden. Siehe auch <a href="04_Vars\02_GW_Vars.htm">Beschreibung 
+		 bei Variablen</a>.</p>
+		<p class="TabellenInhalt">Das angegebene Verzeichnis muss für den 
+		 Lese-Zugriff  freigegeben sein. </p>
+		<p class="TabellenInhalt">Nur relevant für Modultyp &lt;Gateway&gt;.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Projekt-ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige numerische ID zur Identifizierung 
+		 des Gateways in der Datenbank. Die Buchungs-Vorgänge des Gateways 
+		 in die Datenbank erfolgen immer mit Angabe der ProjektID auf Gateway-Seite. Nur 
+		 relevant für Modultyp &lt;Gateway&gt;.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Standardknoten</p></td>
+		<td><p class="TabellenInhalt">Standardknoten des Moduls. Lookup-Liste 
+		 zur Auswahl eines Knotens der Fertigungsstruktur, dem System-Meldungen 
+		 des Moduls zugeordnet werden.</p>
+		<p class="TabellenInhalt">Ist bei der Grundparametrierung noch 
+		 keine Fertigungsstruktur vorhanden, kann hier zunächst nur der 
+		 Root-Knoten angegeben werden. Nach Parametrierung der Fertigungsstruktur 
+		 sollte die Zuordnung der Standardknoten in jedem Fall überprüft 
+		 werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Verbindungsstatus</p></td>
+		<td><p class="TabellenInhalt">Anzeige des aktuellen Verbindungsstatus 
+		 als numerischer Wert, standardmäßig mit der Zuordnung</p>
+		<p class="TabellenInhalt">0:             Verbindung 
+		 OK</p>
+		<p class="TabellenInhalt">-1:           Verbindungsfehler, 
+		 TimeOut überschritten</p>
+		<p class="TabellenInhalt">Dieses Feld dient nur der Information 
+		 und ist schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Letzte Rückmeldung</p></td>
+		<td><p class="TabellenInhalt">Anzeige der letzten Rückmeldung des 
+		 Moduls als Zeitstempel. Dieses Feld dient nur der Information 
+		 uns ist schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Fehlermeldung</p></td>
+		<td><p class="TabellenInhalt">Anzeige des Textes des zuletzt gemeldeten 
+		 Systemfehlers. Dieses Feld dient nur der Information uns ist schreibgeschützt.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Aktualisierung der Anzeige</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die Tabellenansichten werden nicht dynamisch aktualisiert, 
+ wenn sich z.B. der Wert einer Variable oder eines Feldes wie &quot;Letzte 
+ Ausführung&quot; ändert.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Aktualisierung kann manuell erfolgen, indem man 
+ den &quot;Aktualisieren-Button&quot; in der Bedienleiste unterhalb der 
+ Tabelle klickt.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Kontextmenü</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Im Kontextmenü der Module (rechte Maustaste auf das 
+ Modul im Navigationsbaum) wird folgende Option angeboten.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch">Alle Meldungen zurücksetzen (auch Unterverbindungen)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Setzt alle anstehenden Meldungen für alle Verbindungen 
+ des selektierten Gateways/Moduls  (inklusive aller untergeordneter 
+ Verbindungen) auf &quot;Gehend&quot;.</p>
+
+
+</body></html>

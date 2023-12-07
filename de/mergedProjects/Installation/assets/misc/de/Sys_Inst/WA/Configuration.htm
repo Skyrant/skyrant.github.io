@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="Legato_System_Installation_de.docx" />
+<meta http-equiv="Content-Language" content="de-DE" />
+<meta name="build tags" content="Deutsch" />
+<meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Konfiguration der Legato Webapplikation</title>
+<link rel="stylesheet" href="../../../Legato_Systemdokumentation.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Konfiguration der Legato Webapplikation</h2>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Aufgrund der komplexen Parametrierung einer 
+ J2EE-Webanwendung und dem steigenden Variationsreichtum der Legato-Anwendung 
+ darf eine manuelle Konfiguration nur mit entsprechenden Kenntnissen der 
+ J2EE-Architektur und Legato erfolgen.&#160;</p>
+<h3><a name="Vorbereitung" id="Vorbereitung"></a>Vorbereitung</h3>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Um die gelieferte War-Datei zu konfigurieren, 
+ muss sie entpackt werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Zum Entpacken kann sie z.B. in eine ZIP-Datei 
+ umbenannt werden.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Beim Entpacken ist darauf zu achten, dass die 
+ Ordnerstruktur erhalten bleibt.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Die entpackten Ordner sind dann in das WebApps-Verzeichnis 
+ des Applikationsservers zu speichern (tomcat*\webapps).</p><?rh-list_end ?>
+<h3><a name="Konfiguration_der_WA" id="Konfiguration_der_WA"></a>Konfiguration 
+ der Legato Webapplikation</h3>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Wenn Dateien manuell bearbeitet werden, ist darauf 
+ zu achten, dass deren Format nicht verändert wird.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Die Parametrierung der Webanwendung erfolgt über 
+ die Datei /WEB-INF/web.xml.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Die Funktion der Parameter ist in dem Dokument 
+ Legato_System_Parameters beschrieben.</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Im Folgenden wird nur vorgestellt, wie eine DB-Verbindung 
+ und elementare Pfade eingestellt werden. Eine tiefgreifende Parametrierung 
+ erfolgt im Rahmen der Projektierungsarbeit.</p><?rh-list_end ?>
+<h3><a name="Konfiguration_der_DB-Verbindung" id="Konfiguration_der_DB-Verbindung"></a>Konfiguration 
+ der Datenbankverbindung</h3>
+<p class="BodyText">Es wird empfohlen, einen Datenbank-Pool über den Web-Application-Server 
+ zur Verfügung zu stellen. Für Legato müssen in der web.xml dafür folgende 
+ Parameter angepasst werden.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Context- Parameter DbType</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Datenbanktyp MSSQL oder ORACLE</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Folgende Parameter definieren die Verlinkung der Datenbank-Ressource 
+ auf die in Legato verwendeten Zugriffe. Der Name von res-ref-name wird 
+ mit dem entsprechenden Pool verlinkt (z.B. mit JNDI (Container)=jdbc/LegatoDB 
+ (zu suchender DB-Name)). Eine genauere Beschreibung findet sich auch im 
+ Dokument Legato_System_Parameters.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Context-Parameter DbOper</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Setzen der Datenbankverbindung zur operativen 
+ DB, z.B.: JNDI=jdbc/LegatoAct&#160;</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">Context-Parameter DbArch</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Setzen der Datenbankverbindung zur Archiv-DB, 
+ z.B.: JNDI=jdbc/LegatoArc</p>
+<p class="TextkörperAufzähl">für 1-DB Systeme sollte der Parameter folgendermaßen 
+ gesetzt werden:</p>
+<p class="TextkörperAufzähl">CfgRef=DbOper (d.h.: &quot;siehe Konfiguration 
+ von&quot;=&quot;zu suchender Name&quot; à in diesem Fall wird also für 
+ die Archiv-DB die Konfiguration der operativen DB verwendet)</p>
+<h4><a name="Datenbankverbindung_als_kontextabhängiger_Parameter"></a>Datenbankverbindung 
+ als kontextabhängiger Parameter</h4>
+<p class="BodyText">Es empfiehlt sich, die Datenbank-Verbindung über einen 
+ kontextabhängigen Parameter einzustellen. Der Vorteil ist, dass die web.xml 
+ nicht mehr jedes Mal angepasst werden muss, sondern die umgebungsabhängigen 
+ Parameter aus der Konfigurationsdatei {WEB_CONTEXT}.xml (meist Legato.xml) 
+ gezogen werden.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">In Tomcat 6.0.30 - 6.0.32, 7.0.0-7.0.9 funktioniert 
+ dies nicht!</p>
+<p class="BodyText">Wenn die Datenbank-Verbindung über einen kontext-abhängigen 
+ Parameter erfolgen soll, dann muss in der web.xml eine Referenz wie folgt 
+ angegeben werden:</p>
+<p class="TextCode">&#160;&lt;resource-ref id=&quot; LegatoAct_ResourceRef 
+ &quot;&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;description&gt;Database 
+ connection for Legato online database&lt;/description&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;res-ref-name&gt;jdbc/LegatoAct&lt;/res-ref-name&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;res-auth&gt;Container&lt;/res-auth&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&lt;/resource-ref&gt;</p>
+<p class="TextCode">&lt;resource-ref id=&quot; LegatoArc_ResourceRef &quot;&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;description&gt;Database 
+ connection for Legato offline database&lt;/description&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;res-ref-name&gt;jdbc/LegatoArc&lt;/res-ref-name&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&lt;res-auth&gt;Container&lt;/res-auth&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&lt;/resource-ref&gt;</p>
+<p class="TextCode">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">Handelt es sich um eine 1-DB Installation, 
+ muss der zweite Eintrag (für die Archiv-DB) weggelassen werden. Andernfalls 
+ kann die WebApp nicht gestartet werden.</p>
+<p class="BodyText">Die entsprechende Konfiguration in der {WEB_CONTEXT}.xml 
+ ist wie folgt (wichtig ist dabei, dass der Name mit dem res-ref-name aus 
+ der web.xml übereinstimmt):</p>
+<p class="Textkörperfett">INFO:</p>
+<p class="TextkörperHinweis">Dieses Beispiel ist eine xml-Datei mit Tomcat 
+ 7. Mit Tomcat 8 haben sich einige Parameter geändert, so dass die Datei 
+ dann anders aussieht. Ein Beispiel dafür finden Sie weiter unten.</p>
+<p class="TextCode">&lt;Context&gt;</p>
+<p class="TextCode">&lt;Resource</p>
+<p class="TextCode" style="margin-left: 66px;">name=&quot;jdbc/LegatoAct&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">auth=&quot;Container&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">type=&quot;javax.sql.DataSource&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">driverClassName=&quot;oracle.jdbc.driver.OracleDriver&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">&#160;</p>
+<p class="TextCode" style="margin-left: 66px;">username=&quot;legato_read&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">password=&quot;legato_read&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">url=&quot;jdbc:oracle:thin:@localhost:1521:LEGATO 
+ online database&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">maxWait=&quot;5000&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">removeAbandoned=&quot;true&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">maxActive=&quot;4&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">maxIdle=&quot;2&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">removeAbandonedTimeout=&quot;60&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">logAbandoned=&quot;true&quot; 
+ /&gt;</p>
+<p class="TextCode">&lt;Resource</p>
+<p class="TextCode" style="margin-left: 66px;">name=&quot;jdbc/LegatoArc&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">auth=&quot;Container&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">type=&quot;javax.sql.DataSource&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">driverClassName=&quot;oracle.jdbc.driver.OracleDriver&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">username=&quot;legato_read&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">password=&quot;legato_read&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">url=&quot;jdbc:oracle:thin:@localhost:1521:LEGATO 
+ offline database&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">maxWait=&quot;5000&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">removeAbandoned=&quot;true&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">maxActive=&quot;4&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">maxIdle=&quot;2&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">removeAbandonedTimeout=&quot;60&quot;</p>
+<p class="TextCode" style="margin-left: 66px;">logAbandoned=&quot;true&quot; 
+ /&gt;</p>
+<p class="TextCode">&lt;/Context&gt;</p>
+<p class="TextCode">&#160;</p>
+<p class="Textkörperfett">TIPP:</p>
+<p class="TextkörperHinweis">Handelt es sich um eine 1-DB Installation 
+ empfiehlt es sich, in die context.xml folgende Parameter mit aufzunehmen, 
+ sodass keine Änderungen an der web.xml nötig sind:</p>
+<p class="TextkörperHinweis">&lt;Parameter name=&quot;dboper&quot; value=&quot;JNDI=jdbc/LegatoAct&quot;&#160;&#160;override=&quot;false&quot;/&gt;</p>
+<p class="TextkörperHinweis">&lt;Parameter name=&quot;dbarch&quot; value=&quot;JNDI=jdbc/LegatoAct&quot;&#160;&#160;override=&quot;false&quot;/&gt;</p>
+<p class="BodyText">In diesem Fall ist nur die Ressource der Operativ-Datenbank 
+ zu definieren, der zweite Eintrag kann entfallen.</p>
+<p class="BodyText">Sofern im Verzeichnis ${TOMCAT_HOME}\webapps\Legato\META-INF 
+ die Datei {WEB_CONTEXT}.xml vorhanden ist, kopiert Tomcat sie automatisch 
+ in das Verzeichnis ${TOMCAT_HOME}\conf\Catalina\localhost. Sofern Änderungen 
+ an der Datei vorgenommen werden, sollte die WebApp neu deployed werden, 
+ da sonst die Änderungen nicht übernommen werden.</p>
+<h3><a name="Kontextabhängige_Parameter_Tomcat_8"></a>Kontextabhängige 
+ Parameter Tomcat 8</h3>
+<p class="BodyText">Ab Version 8 benutzt Tomcat eine neue Version des Datenbank-Pools. 
+ Dadurch haben sich einige Parameter geändert. Ein Beispiel für die neuen 
+ Parameter sieht so aus:</p>
+<p class="TextCode">&lt;Resource</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;name=&quot;jdbc/legato&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;auth=&quot;Container&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type=&quot;javax.sql.DataSource&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;driverClassName=&quot;oracle.jdbc.driver.OracleDriver&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;url=&quot;jdbc:oracle:thin:@172.21.5.0:1521:DEV11DBO&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;username=&quot;LEGATO_WRITE&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;password=&quot;LEGATO_WRITE&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;connectionProperties=&quot;v$session.program=Legato 
+ Webapp;&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;connectionInitSqls=&quot;alter 
+ session set current_schema = LEGATO_OWNER&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;defaultCatalog=&quot;&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;defaultAutoCommit=&quot;true&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;defaultReadOnly=&quot;false&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;defaultTransactionIsolation=&quot;READ_COMMITTED&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;initialSize=&quot;2&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;maxTotal=&quot;10&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;maxIdle=&quot;5&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;minIdle=&quot;0&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;maxWaitMillis=&quot;15000&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;validationQuery=&quot;SELECT 
+ 1 FROM DUAL&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;validationQueryTimeout=&quot;1500&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;testOnCreate=&quot;false&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;testOnBorrow=&quot;true&quot; 
+ </p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;testOnReturn=&quot;false&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;testWhileIdle=&quot;false&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;timeBetweenEvictionRunsMillis=&quot;-1&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;numTestsPerEvictionRun=&quot;3&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;minEvictableIdleTimeMillis=&quot;1800000&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeAbandonedOnBorrow=&quot;true&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeAbandonedOnMaintenance=&quot;false&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeAbandonedTimeout=&quot;900&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;logAbandoned=&quot;true&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;poolPreparedStatements=&quot;false&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;maxOpenPreparedStatements=&quot;-1&quot;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;accessToUnderlyingConnectionAllowed=&quot;false&quot; 
+ </p>
+<p class="TextCode">/&gt;</p>
+<p class="TextCode">&#160;</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" style="border: none;" 
+								 alt="" border="0" />:</p>
+<p class="TextkörperHinweis">Unbedingt zu beachten ist, dass der Parameter 
+ maxActive, der die Größe der Pools angibt, nun zu maxTotal umbenannt wurde. 
+ Ansonsten sind alle Pools 8 Verbindungen groß.</p>
+<h3><a name="Grundlegende_Pfad-Einstellungen" id="Grundlegende_Pfad-Einstellungen"></a>Grundlegende 
+ (Pfad-)Einstellungen</h3>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">context-param-Parameter DefaultView</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Setzen der Standardansicht (Beispiel Visu: 
+ Visu/fs/Start.svg)</p>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Es empfiehlt sich, die Reports und Visualisierungen 
+ an einem anderen Ort zu speichern, um eventuelle Anpassungen daran nicht 
+ bei jedem Update der WebApp zu überschreiben. Die korrekten Verzeichnispfade 
+ müssen in den folgenden Parametern angegeben werden.</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">context-param-Parameter ReportOutputPath</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Pfadangabe, unter der die AppEngine die generierten 
+ Berichte speichert</p>
+<p class="TextkörperAufzähl">…\&lt;Server&gt;\Legato\uploads\reports</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">context-param-Parameter Uploadpath</p><?rh-list_end ?>
+<p class="TextkörperAufzähl">Pfadangabe, unter der hochgeladene Dateien, 
+ wie Visu- und Report-Dateien gespeichert werden</p>
+<p class="TextkörperAufzähl">…\&lt;Server&gt;\Legato\uploads\</p>
+<h3><a name="Logging" id="Logging"></a>Logging</h3>
+<p class="BodyText">Für das Logging von Meldungen aus der WebApp wird Log4j2 
+ verwendet. Es wird eine vorkonfigurierte Datei log4j2.xml unter WEB-INF/classes 
+ mit ausgeliefert. Diese Datei kann beispielsweise so aussehen:</p>
+<p class="TextCode">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+<p class="TextCode">&lt;Configuration monitorInterval=&quot;30&quot; status=&quot;WARN&quot;&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Filters&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RegexFilter 
+ regex=&quot;(?is).*ORA-01013:.*&quot; useRawMsg=&quot;false&quot; onMatch=&quot;DENY&quot; 
+ onMismatch=&quot;NEUTRAL&quot;/&gt;</p>
+<p class="TextCode"><span style="color: #A6A6A6;">&lt;!-- Markers used 
+ in Legato web application as reference for using them to filter log messages</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;exceptions&quot;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;init&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;SQL&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;Query&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;VisuPolling&quot;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;AlarmPolling&quot;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;VisuRefresh&quot;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;AlarmRefresh&quot;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;VisuCompiler&quot;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;LegatoState&quot;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;DbCache&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;WebServiceCall&quot; onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;MesTermMsg&quot;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;MesTermErr&quot;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;NEUTRAL&quot; 
+ onMismatch=&quot;NEUTRAL&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;Other&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;MarkerFilter 
+ marker=&quot;Paging&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;onMatch=&quot;DENY&quot;&#160;&#160;&#160;&#160;onMismatch=&quot;NEUTRAL&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">--&gt;</span></p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Filters&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Appenders&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Servlet 
+ name=&quot;server&quot;&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;PatternLayout 
+ charset=&quot;UTF-8&quot;&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Pattern&gt;[%marker] 
+ %-5level %logger{1} - %message%throwable&lt;/Pattern&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/PatternLayout&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Servlet&gt;</p>
+<p class="TextCode"><span style="color: #A6A6A6;">&lt;!-- Example for logging 
+ directly to files, instead of through the servlet engine</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RollingRandomAccessFile 
+ name=&quot;logfile&quot;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fileName=&quot;webapp.log&quot; 
+ filePattern=&quot;webapp.%i.log&quot;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;immediateFlush=&quot;false&quot; 
+ append=&quot;true&quot;&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Policies&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;OnStartupTriggeringPolicy 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;SizeBasedTriggeringPolicy 
+ size=&quot;10 MB&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Policies&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;DefaultRolloverStrategy 
+ min=&quot;1&quot; max=&quot;9&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;PatternLayout 
+ charset=&quot;UTF-8&quot;&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Pattern&gt;%date{DEFAULT} 
+ [%marker] %-5level %logger{1} - %message%n%throwable&lt;/Pattern&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/PatternLayout&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/RollingRandomAccessFile&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RollingRandomAccessFile 
+ name=&quot;errfile&quot;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="color: #A6A6A6;">fileName=&quot;webapperr.log&quot; filePattern=&quot;webapperr.%i.log&quot;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="color: #A6A6A6;">immediateFlush=&quot;false&quot; append=&quot;true&quot;&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;ThresholdFilter 
+ level=&quot;WARN&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; 
+ /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Policies&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;SizeBasedTriggeringPolicy 
+ size=&quot;10 MB&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Policies&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;DefaultRolloverStrategy 
+ min=&quot;1&quot; max=&quot;9&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;PatternLayout 
+ charset=&quot;UTF-8&quot;&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Pattern&gt;%date{DEFAULT} 
+ [%marker] %-5level %logger{1} - %message%n%throwable&lt;/Pattern&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/PatternLayout&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/RollingRandomAccessFile&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;--&gt;</span></p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Appenders&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Loggers&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;AsyncRoot 
+ level=&quot;trace&quot; includeLocation=&quot;false&quot;&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;AppenderRef 
+ ref=&quot;server&quot; /&gt;</p>
+<p class="TextCode"><span style="color: #A6A6A6;">&lt;!--</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;AppenderRef 
+ ref=&quot;logfile&quot; /&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;AppenderRef 
+ ref=&quot;errfile&quot; level=&quot;WARN&quot;/&gt;</span></p>
+<p class="TextCode"><span style="color: #A6A6A6;">&#160;--&gt;</span></p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/AsyncRoot&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;AsyncLogger 
+ name=&quot;de.gefasoft.legato.webapp.util.db.QueryWaitWatcher&quot; level=&quot;warn&quot;/&gt;</p>
+<p class="TextCode">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/Loggers&gt;</p>
+<p class="TextCode">&lt;/Configuration&gt;</p>
+<p class="TextCode">&#160;</p>
+<p class="BodyText">Standardmäßig wird der Appender &quot;Servlet&quot; 
+ benutzt. Dieser gibt die Logmeldungen weiter an die Servlet Engine, wo 
+ sie verarbeitet werden.</p>
+<p class="BodyText">Unter &quot;Filters&quot; sollte auf jeden Fall der 
+ Eintrag &quot;RegexFilter&quot; beibehalten werden. Dieser filtert die 
+ Oracle-Fehlermeldungen raus, wenn der Benutzer eine Aktion abgebrochen 
+ hat (z.B. das Laden einer Seite).</p>
+<p class="BodyText">Unter &quot;Marker&quot; sind die Logging-Kategorien 
+ aufgeführt, die vor Legato Version 4.6 in der WebApp unter dem Menüpunkt 
+ WebStatus einstellbar waren. Folgende Einstellungen sind möglich:</p>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">NEUTRAL = andere Einstellung (z.B. von &quot;AsyncRoot&quot;) 
+ nicht überschreiben</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">DENY = nichts loggen</p><?rh-list_end ?>
+<?rh-list_start class="Liste1neu" style="list-style: rh-list; list-style: rh-list;" ?><p 
+	 class="Aufzählung1">ACCEPT = immer loggen</p><?rh-list_end ?>
+<p class="BodyText">&#160;</p>
+<p class="BodyText">Mit Log4j2 ist es nun auch möglich, die Log-Meldungen 
+ mittels &quot;RandomAccessFile&quot; in Dateien zu schreiben.</p>
+<p class="Textkörperfett"><img src="../../../02_Hinweis_de.jpg" alt="" 
+								 style="border: none;" border="0" />:</p>
+<p class="TextkörperHinweis">GEFASOFT rät von diesem Vorgehen ab!</p>
+<p class="BodyText">Der entsprechende Teil ist in der Beispieldatei auskommentiert.</p>
+<h3><a name="Installation" id="Installation"></a>Installation</h3>
+<p class="BodyText">Die Installation erfolgt entsprechend dem jeweiligen 
+ Web-Application-Server unterschiedlich. Die entpackten Dateien können 
+ über das Jar-Tool von Java wieder zu einer War-Datei gepackt werden.</p>
+</body>
+</html>

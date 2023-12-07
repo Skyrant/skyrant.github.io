@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.13.9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Logistikreport</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Logistikreport">
+        <span>Logistikreport</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Logistikbericht</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das <span class="Bold">Logistikbericht</span> Boardlet 
+ dient dazu, Logistikinformationen zu erfassen. Der selektierte Monat wird 
+ für den selektierten Knoten und alle Unterknoten dargestellt und jeder 
+ Tag gemäß Vorgabe eingefärbt (die Bedeutung der Farben kann im LC2 definiert 
+ werden, der Status mit der Sortiernummer 0 wird als Default vorbefüllt). 
+ Dabei hat der Eintrag mit der höchsten Priorität Vorrang. Es wird immer 
+ ein kompletter Monat angezeigt, unabhängig vom gewählten Zeitraum. Wird 
+ ein Zeitraum &gt; 1 Monat selektiert, so wird der letzte Monat im Zeitraum 
+ angezeigt (bei 2016 also z.B. Dezember, beim aktuellen Jahr der aktuelle 
+ Monat).</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Logistic_Rep.png" alt="" style="border: none;" border="0"/></p>
+<h3 data-condition="Others:Deutsch"><a id="Erfassungs-Dialog"></a>Erfassungs-Dialog</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Standardmäßig befindet sich das Boardlet im Edit-Modus, 
+ d.h., es können durch Klick auf einen Tag neue Vorkommnisse erfasst werden. 
+ Nach Auswahl einer Farbe öffnet sich in der rechten Seitenleiste ein neuer 
+ Dialog:</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/SFM_Task.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier kann direkt eine Aufgabe für das Ereignis erfasst 
+ werden. Der Tag &quot;Logistik&quot; ist dabei automatisch befüllt. Siehe 
+ auch <a href="Task_Management.htm">Aufgabenverwaltung</a>.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf das Stiftsymbol oben wechselt der Dialog 
+ zur Erfassung des eigentlichen Ereignisses.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/LR_Add.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier kann die Logistikinformation beschrieben werden.</p>
+<h3 data-condition="Others:Deutsch"><a id="Analyse-Modus"></a>Analyse-Modus</h3>
+<p class="BodyText" data-condition="Others:Deutsch">In der Menüleiste des Boardlets kann durch Klick auf 
+ <img src="../../../Bilder/Icons/chart-line_black_18dp.png" alt="" style="border: none;" border="0"/> in den Analyse-Modus geschaltet werden. </p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Logistic_Analyse.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Hier sieht man für die einzelnen Tage, welche Logistikinformationen 
+ in welcher Anzahl erfasst wurden. Beispielsweise wurden am 5.1. eine Premiumfracht 
+ und zwei Verspätungen  erfasst.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Durch Klick auf <img src="../../../Bilder/Icons/edit_black_18dp.png" alt="" style="border: none;" border="0"/> 
+ kann wieder in den Edit-Modus geschaltet werden.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das <span class="Bold">Logistikbericht </span>Boardlet 
+ stehen folgende weitere Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Einstellungen"></a>Reiter Einstellungen</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Ansichts-Modus:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Über diese Dropdown-Liste kann der Standard-Ansichts-Modus 
+ des Boardlets festgelegt werden: Analyse-Modus oder Edit-Modus.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die Logistik-Zustände werden im <span class="Bold">LC2</span> 
+ unter <span class="Bold">Produktionsverwaltung</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">SFM</span> <img src="../../../Bilder/Icons/pmt_arrow.png" alt="" style="border: none;" border="0"/> 
+ <span class="Bold">Logistikzustände</span> gepflegt.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<p class="BodyText" data-condition="Others:Deutsch">keine</p>
+
+
+</body></html>

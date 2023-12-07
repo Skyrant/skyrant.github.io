@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"TABLE_DELETE","type":"item","tilePath":"","description":"","url":"de/Housekeeping/TABLE_DELETE.htm"},{"name":"Lösch-Jobs","type":"book","tilePath":"","description":"","url":"de/Housekeeping/Del_Jobs.htm","key":"toc21"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

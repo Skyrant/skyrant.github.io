@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.3.10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Rüstzeitmatrix</title>
+<link rel="StyleSheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rüstzeitmatrix">
+        <span>Rüstzeitmatrix</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Rüstzeitmatrix</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Das Boardlet <span class="Bold">Rüstzeitmatrix</span> 
+ zeigt eine Übersicht über alle Rüstzeiten mit Bezug zu Produktwechseln 
+ (Rüstzeit = die Zeit, die benötigt wird, um die Maschine für die Produktion 
+ eines neuen Produkttyps vorzubereiten). Es werden die durchschnittlichen 
+ Rüstzeiten (Wechsel von einem Produkttyp zu einem anderen) für einen selektierten 
+ Zeitraum angezeigt. Die Rüstzeit wird dabei über Meldungen der Meldeklasse 
+ -14 erfasst; die Produkte werden über erweiterte Eigenschaften angegeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch"><img src="../../../Bilder/Prod_Change_Matrix.png" alt="" style="border: none;" border="0"/></p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Matrix hat folgende Achsen:</p>
+<p class="BodyText" data-condition="Others:Deutsch">x-Achse: Ausgangsprodukt (von Produkt)</p>
+<p class="BodyText" data-condition="Others:Deutsch">y-Achse: Zielprodukt (zum Produkt)</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die einzelnen Kacheln zeigen die durchschnittliche 
+ Rüstzeit von Produkt x zum Produkt y in Sekunden im gewählten Zeitraum. 
+ Ein Tooltip gibt außerdem an, wieviele Produktwechsel per &quot;Box&quot; 
+ durchgeführt wurden.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Wird eine Kachel angeklickt, werden die Produkte als 
+ Filter für die <a href="Prod_Change_Table.htm">Rüstzeittabelle</a> übernommen.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Einstellungen"></a>Einstellungen</h6>
+<div data-conref="../../../assets/snippets/de_Settings_gen.hts" data-condition="Others:Deutsch">
+<p class="BodyText">Die häufigsten Einstellungen auf den Reitern <span class="Bold">Einstellungen</span>, <span class="Bold">Layout</span> 
+ und <span class="Bold">Filter</span> sind unter <a href="../../Settings/Boardlet_Settings.htm">Boardlet-Einstellungen</a> 
+ beschrieben:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Einstellungen">Reiter 
+	 Einstellungen</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Layout">Reiter 
+	 Layout</a></p></li>
+	<li><p class="ListBulletL1"><a href="../../Settings/Boardlet_Settings.htm#Filter">Reiter 
+	 Filter</a></p></li>
+</ul>
+
+
+</div>
+<p class="BodyText" data-condition="Others:Deutsch">Für das Boardlet <span class="Bold">Rüstzeitmatrix</span> 
+ stehen außerdem folgende Einstellungen zur Verfügung.</p>
+<h4 data-condition="Others:Deutsch"><a id="Reiter_Filter"></a>Reiter Filter</h4>
+<p class="GUIControl" data-condition="Others:Deutsch">Meldeklasse:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl der Meldeklasse. 
+ Standardmäßig auf -14  Rüstzeit gesetzt, kann bei Bedarf aber geändert 
+ werden.</p>
+<p class="GUIControl" data-condition="Others:Deutsch">von Produkt:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl des Produkts, von 
+ dem gewechselt wurde (x-Achse).</p>
+<p class="GUIControl" data-condition="Others:Deutsch">nach Produkt:</p>
+<p class="GUIControlDescr" data-condition="Others:Deutsch">Dropdown-Liste zur Auswahl des Produkts, zu 
+ dem gewechselt wurde (y-Achse).</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Benötigte_Parametrierung_im_LC2"></a>Benötigte 
+ Parametrierung im LC2</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Es müssen Meldungen der jeweiligen Klasse für den selektierten 
+ Knoten vorhanden sein. Außerdem müssen für diese Meldungen die erweiterten 
+ Eigenschaften &quot;von Produkt&quot; und &quot;zum Produkt&quot; gebucht 
+ worden sein.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Verfügbare_Boardlet-Parameter"></a>Verfügbare 
+ Boardlet-Parameter</h6>
+<table class="SimpleGridBlack" cellspacing="0" width="56.662%" style="border-collapse:collapse;" cellpadding="1" data-condition="Others:Deutsch">
+	<colgroup><col style="width: 46.575%;"/>
+	<col style="width: 53.425%;"/>
+	</colgroup><tbody><tr class="t1Row">
+		<td><p class="TabellenÜberschrift">Parameter</p></td>
+		<td><p class="TabellenÜberschrift">Parametertyp</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">datasource</p></td>
+		<td><p class="TabellenInhalt">DatasourceObj</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">genericConfig</p></td>
+		<td><p class="TabellenInhalt">String</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">nodeList</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">timeFrame</p></td>
+		<td><p class="TabellenInhalt">TimeFrame</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">alarmClasses</p></td>
+		<td><p class="TabellenInhalt">NumberArray</p></td>
+	</tr>
+</tbody></table>
+
+
+</body></html>

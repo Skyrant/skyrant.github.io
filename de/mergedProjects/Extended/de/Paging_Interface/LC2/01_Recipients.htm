@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "4.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Zum Review gesendet" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Funkruf-Empfänger</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+	color: purple;
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Funkruf-Empfänger">
+        <span>Funkruf-Empfänger</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h6 class="Ü2_Search" data-condition="Others:Deutsch">Funkruf-Empfänger</h6>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Werksverwaltung | Meldungsmanagement | Funkruf-Empfänger</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><span class="TextChar">Funktion</span></h6>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextChar">Meldungen können automatisch 
+ an ein Funkrufsystem (z.B. PageControl der Fa. informel) weitergegeben 
+ werden. Legato verfügt über eine offene Schnittstelle, über die ein beliebiges 
+ System zur Meldungsweitergabe versorgt werden kann. Nachdem die Parametrierung 
+ von Empfängern stark vom verwendeten Rufsystem und dem Übertragungsmedium 
+ abhängt, wird in Legato lediglich eine Liste von Weiterleitungszielen 
+ (Empfängern) gehalten, die eigentliche Parametrierung der Empfänger erfolgt 
+ im Rufsystem. Dort werden Empfängereinstellungen und Funktionen wie Gruppenbildung, 
+ Folgerufe oder Eskalation parametriert.</span></p>
+<p class="BodyText" data-condition="Others:Deutsch"><span class="TextChar">Die Anbindung eines Funkrufservers 
+ erfolgt in der Regel im Rahmen der Projekterstellung bzw. des Customizings. 
+ Detaillierte Informationen zur Verwendung der allgemeinen Legato-Funkrufschnittstelle 
+ erhalten Sie von unserem Legato-Service.</span></p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><span class="TextChar">Feldbeschreibung</span></h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer. 
+		 Kann frei vergeben werden, muss aber eindeutig sein.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Code (Nummer)</p></td>
+		<td><p class="TabellenInhalt">Code: Symbolische Empfängerbezeichnung 
+		 (z.B. Empfänger- oder Gruppenname bei PageControl), bei anderen 
+		 Servern kann hier beispielsweise auch direkt die Rufnummer hinterlegt 
+		 sein.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Empfängername</p></td>
+		<td><p class="TabellenInhalt">Empfängername: Klartextbezeichnung 
+		 für den Empfänger.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Anzeige in Liste (man. FR)</p></td>
+		<td><p class="TabellenInhalt">Checkbox. Wenn aktiv, erscheint dieser 
+		 Empfänger in der Ansicht &quot;Manueller Funkruf&quot; der WebApp 
+		 zur Auswahl.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Funkruf-Server (optional)</p></td>
+		<td><p class="TabellenInhalt">Angabe des Funkrufservers, über den 
+		 die Meldung weitergegeben wird. Die Verteilung auf unterschiedliche 
+		 Rufserver muss im Funkruf-Gateway berücksichtigt werden.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Sprache (optional)</p></td>
+		<td><p class="TabellenInhalt">Lookup-Liste zur Auswahl der Systemsprache, 
+		 in der die Meldetexte an diesen Funkrufempfänger gesendet werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+
+
+</body></html>

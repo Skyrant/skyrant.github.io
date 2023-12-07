@@ -1,0 +1,1736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  
+    <url>
+      <loc>de/01_General/03_About.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/01_General/04_General.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Prep/DB-Connection2.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/01_Ribbons/00_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/01_Ribbons/01_Ribbon_Start.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/01_Ribbons/02_Ribbon_Views.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/01_Ribbons/03_Ribbon_Tools.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/01_Ribbons/04_Ribbon_Help.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/02_Menues/01_SQL.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/02_Menues/02_Settings.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/01_Views.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/02_Navig_Tree/01_Navig_Tree.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/02_Navig_Tree/02_Navigation.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/02_Navig_Tree/03_Operation.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/02_Navig_Tree/04_Data_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/02_Navig_Tree/05_Context_Menu.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/02_Navig_Tree/06_Search.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/03_Documents.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/04_Details.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/05_Description.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/06_Favorites.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/07_Auto_Fill.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/08_Data_History.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/09_Plugins.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/10_Screens.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/11_Log.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/12_Integrity_Check.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/03_Views/13_Edit_Favorites.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/01_Field_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/02_Op_Keyboard.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/03_Op_Mouse.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/04_Table_Settings.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/05_Column_Settings.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/06_Filter.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/07_Value_Ranges.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/08_Lookups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/09_Hierarchical_Tables.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/10_Auto-Fill.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/12_Export.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/13_Import.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/14_Copy_Paste.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/15_RegEx.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/02_Handling/04_Operating/16_Analyze_Refs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/00_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/Locales.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/03_Var_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/Var_Types_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/Var_Types-Group_Rels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/08_Countries.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/09_Country_Curr_Rels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/10_Currencies.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/01_App_Common/11_Exchange_Rates.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/03_App_Struct/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/03_App_Struct/02_Node_Levels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/03_App_Struct/03_Node_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/03_App_Struct/04_Device_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/04_Prod_Mgmt/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/04_Prod_Mgmt/03_Order_Prios.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/05_Measurements/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/05_Measurements/04_Units.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/03_Basic_Settings/08_Timeslice_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/00_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/Persons.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/ID_Formats_Products.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/02_Prod_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/04_Op_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/Operation_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/05_Products.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/06_Prod_Var_Sets.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/07_Var_Prop_Rels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/09_Prod_Image.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/10_Prod_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/04_Master_Data/04_Products/Pool_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/00_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/01_Plants_ProdSects/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/01_Plants_ProdSects/02_Plants.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/02_Modules.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/03_Connections.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/04_Vars/01_Vars.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/04_Vars/02_GW_Vars.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/04_Vars/03_Display_Formats.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/04_Vars/Aggreg.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/04_Vars/05_Calcs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/04_Vars/TV-Inheritance.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/05_Alarm_Defs/01_Alarm_Defs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/05_Alarm_Defs/02_Wild_Cards.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/P_OUT_VALUES_2.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/02_Data_Exchange/Permissions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/02_Nodes/01_Nodes.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/02_Nodes/03_VDI_3581.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/02_Nodes/04_Delete.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/02_Nodes/04_01_Special_Delete.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/02_Nodes/05_Example.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/03_Alloc_Vars.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/04_Alloc_Alarms.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/Paging.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPI_Settings.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/00_Description.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/01_Online_KPIs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/02_PREAL.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/03_PTARG.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/04_CTARG.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/05_WTB.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/06_BTP.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/07_BTA.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/08_BTTPM.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/09_WTN.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/10_FTCON.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/11_FTTOT.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/12_FTTEC.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/13_FTORG.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/14_FTSYS.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/15_FCTOT.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/16_FCTEC.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/17_FCORG.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/18_FCSYS.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/19_MTTR.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/20_MTBF.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/21_AVTEC.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/22_AVORG.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/23_AVSYS.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/24_AVTOT.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/25_AVP.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/26_OEE.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/27_AVJS.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/28_TAT.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/29_TRT.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/30_AATVF.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/31_ARTVF.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/32_PSCRAP.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/33_FCART.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/34_PTREND.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/35_PTREND_DELTA.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/36_AVSE.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/37_PERR.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/38_PNA.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/39_TNA.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/40_PTFT.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/49_QR.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/66_CATPU.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/06_KPI_Settings/01_KPIs/67_MATPU.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/Switch_Cs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/Schaltbefehl_Produktionsstart_und_-ende.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/Identpoints.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/10_Calcs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/05_ASS/03_Log_Struct/Permissions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/02_Basic_Settings/01_Shift_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/02_Basic_Settings/02_Break_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/02_Basic_Settings/Holidays.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/01_Time_Schemes.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/Time_Zones.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/02_Shift_Models.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/03_Shifts.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/04_Breaks.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/07_TV_Patterns.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/TVs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/Sollwerte-Benutzerrechte.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/10_Shift_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/11_Prod_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/02_WTS/03_Time_Schemes/Permissions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/02_Al_Classes.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/AL_Formats.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/03_Al_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/Al_Reasons.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/12_Paging/Concept.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/12_Paging/01_Recipients.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/03_Alarm_Mgmt/13_Mess_Inh_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Priorities.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Act_Cats.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Activities.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Activity_Rels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Default_Reasons.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Comp_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Act_Comp_Rels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Comps.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/TPM_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Persons.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Reasons.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/TPM_Plans.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Plan_Acts.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/06_Plant_Mgmt/04_TPM/Alloc_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/ID_Formats_PUs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/02_PU_Defs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/03_PU_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/04_PU_Q-States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/05_Attr_Data_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/06_PU_Attr_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/07_PU_Attr_Descs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/08_Carrier_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/09_Carrier_Pack_Defs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/10_Carrier_Pack_Prod_Rels.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/11_Carriers_Pack.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/12_Carrier_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/02_TT/13_Carrier_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/PP/Op_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/PP/Jobs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/PP/BOPs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/PP/Ops.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Action_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Measure_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Safety_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Quality_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Attendance_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Logistics_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Task_States.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/07_Prod_Mgmt/SFM/Task-Tags.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Conf_Templ/Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Conf_Templ/Script_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Conf_Templ/Conf_Templ.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Conf_Templ/Templ_Inst.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Conf_Templ/Instance_Proxy.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Conf_Templ/Executions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Calc_Folders.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Calcs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Calc_Params.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Exec_Triggers.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Functions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Funct_Params.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/Div.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/Mult.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/Sum.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/CopyNumVal.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/CurrPartsDay.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/CurrTargetPartsShift.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Calc_Vals/Standard/ShortTermTrends.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/User_Adm.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Perm_Mgmt.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Ass_Perms.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/U_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Ass_Users_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Users.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Bookmarks.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Perm_Groups.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Module_Function.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Permissions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Basic_View.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Node_Layout.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/MM.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/04_Users/Shift_Cal.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/05_System_Settings/01_Sys_Params.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/05_System_Settings/02_DB_User.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/05_System_Settings/DB_Benutzer_Passwort_ändern.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/05_System_Settings/Custom_Fields.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/05_System_Settings/Neue_Funktion_zum_Kopieren_von_Rechten_im_LC2.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/Trigger_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/Desc_Trigger_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/Task_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/Tasks.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/DbPools.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/DbPools_Default.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/SE_Jobs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/Job_Triggers.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/SE/SE_Executions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Del_Jobs.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Del_Jobs_Sample.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/05_Module_Subtypes.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/08_Mimetypes.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/13_KPI_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/Users_S/Actions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/Users_S/Targets.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/Aggr_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/09_System_Tables/Bookmark_Types.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/10_System_Info/01_Overview.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/10_System_Info/03_Module_Versions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/10_System_Info/Dashboard_Activity.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/10_System_Info/Change_Log.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/10_System_Info/Client_Error_Log.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/12_Cons/Connections.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/12_Cons/Datasources.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/12_Cons/Permissons.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/09_Sys_Admin/Datasource_Models.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/10_Frontend/Dashboards.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/10_Frontend/Permissions.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/10_Frontend/Folders.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/10_Frontend/Boardlets.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/10_Frontend/News.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+    <url>
+      <loc>de/Ext_Props.htm</loc>
+      <lastmod>2023-09-28</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  
+
+</urlset>

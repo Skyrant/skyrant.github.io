@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "16.1_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">Verfügbare Variablen</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Verfügbare Variablen">
+        <span>Verfügbare Variablen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Job">Verfügbare Variablen</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Da der Job komplett in JavaScript implementiert wurde, 
+ sind einige Variablen, welche als globale Variablen ausgeführt sind, direkt 
+ abfragbar.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Diese sind, um von Import-Skript-Variablen zu unterscheiden, 
+ mit dem Kürzel &#39;impVar_&#39; versehen. Diese Variablen dürfen NUR in Ausnahmefällen 
+ verändert werden. Um eine Übersicht zu behalten, sollten Import-Skript-Variablen 
+ auch NICHT mit diesem Präfix (Kürzel) versehen werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Variablen und ihre Bedeutung:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<colgroup><col width="217"/>
+	<col width="387"/>
+	</colgroup><tbody><tr>
+		<td><p class="TabellenInhalt">impVar_context</p></td>
+		<td><p class="TabellenInhalt"> context des SE-Job</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_params</p></td>
+		<td><p class="TabellenInhalt"> parameter des SE-Job</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_bDelOldItems_opts</p></td>
+		<td><p class="TabellenInhalt"> Lösche alte Zuordnungen (Eintrag 
+		 aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_bUpdOdlItems_opts</p></td>
+		<td><p class="TabellenInhalt"> Aktualisiere alte Zuordnungen 
+		 (Eintrag aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sCharset_opts</p></td>
+		<td><p class="TabellenInhalt"> Name des Characterset (Eintrag 
+		 aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sFileName_opts</p></td>
+		<td><p class="TabellenInhalt"> Pfad und Dateiname (Eintrag 
+		 aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lFileType_opts</p></td>
+		<td><p class="TabellenInhalt"> Dateityp der Importdatei (Eintrag 
+		 aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lDefAlClass_opts</p></td>
+		<td><p class="TabellenInhalt"> ID der Default-Meldeklasse 
+		 (Eintrag aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lDefAlType_opts</p></td>
+		<td><p class="TabellenInhalt"> ID der Default-Meldeart (Eintrag 
+		 aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sImpFilterOpType_opts</p></td>
+		<td><p class="TabellenInhalt"> Import-Filter Operations-Typ 
+		 (Eintrag aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lImpFilterFirstType_opts</p></td>
+		<td><p class="TabellenInhalt"> Import-Filter von erstem Byte 
+		 (Eintrag aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lImpFilterLastByte_opts</p></td>
+		<td><p class="TabellenInhalt"> Import-Filter von letztem Byte 
+		 (Eintrag aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sExtScriptName_opts</p></td>
+		<td><p class="TabellenInhalt"> Name des externen Scripts (Eintrag 
+		 aus Import-Optionen der Verbindung)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lFiledate</p></td>
+		<td><p class="TabellenInhalt"> Dateidatum der Importdatei</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_fImportFile</p></td>
+		<td><p class="TabellenInhalt"> File-Object der Importdatei 
+		 (sh. auch JsFile)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lConID_con</p></td>
+		<td><p class="TabellenInhalt"> Feld &#39;id&#39; der Verbindung aus 
+		 Tabelle &#39;p_connections&#39;</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sConSym_con</p></td>
+		<td><p class="TabellenInhalt"> Feld &#39;connection_symbol&#39; der 
+		 Verbindung aus Tabelle &#39;p_connections&#39;</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_LDefNodeID_con</p></td>
+		<td><p class="TabellenInhalt"> Feld &#39;default_id&#39; der Verbindung 
+		 aus Tabelle &#39;p_connections&#39;</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lID_sll</p></td>
+		<td><p class="TabellenInhalt"> Feld &#39;id&#39; aus Tabelle &#39;sys_lookup_lists&#39;</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sShortName_sll</p></td>
+		<td><p class="TabellenInhalt"> Feld &#39;short_name&#39; aus Tabelle 
+		 &#39;sys_lookup_lists&#39;</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_alClasses</p></td>
+		<td><p class="TabellenInhalt"> Objekt mit allen Melde-Klassen</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_alTypes</p></td>
+		<td><p class="TabellenInhalt"> Objekt mit allen Melde-Arten</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_oldItems</p></td>
+		<td><p class="TabellenInhalt"> Objekt mit allen Zuordnungen 
+		 einer Verbindung</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_lookupLists</p></td>
+		<td><p class="TabellenInhalt"> Objekt mit allen Zuordnungen 
+		 einer Nachschlageliste</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_headLine</p></td>
+		<td><p class="TabellenInhalt"> Array mit den Feldnamen</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_importFile_Lines</p></td>
+		<td><p class="TabellenInhalt"> Array mit zu importierenden 
+		 Zeilen</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_noLines</p></td>
+		<td><p class="TabellenInhalt"> Anzahl der zu importierenden 
+		 Zeilen</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sErrText</p></td>
+		<td><p class="TabellenInhalt"> Fehler-Text (Eintrag in Feld 
+		 &#39;last_import_error&#39; entweder in Tabelle &#39;p_connections&#39; oder in 
+		 Tabelle &#39;sys_lookup_lists&#39;)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_bErr</p></td>
+		<td><p class="TabellenInhalt"> Fehlerbit</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sScriptErrTxt</p></td>
+		<td><p class="TabellenInhalt"> Fehler-Text aus Skript (Eintrag 
+		 in Feld &#39;last_import_error&#39; entweder in Tabelle &#39;p_connections&#39; 
+		 oder in Tabelle &#39;sys_lookup_lists&#39;)</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_bErrLow</p></td>
+		<td><p class="TabellenInhalt"> Fehlerbit aus Skript</p></td>
+	</tr>
+	<tr>
+		<td><p class="TabellenInhalt">impVar_sCRLF</p></td>
+		<td><p class="TabellenInhalt"> Zeilenumbruch</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+
+
+</body></html>

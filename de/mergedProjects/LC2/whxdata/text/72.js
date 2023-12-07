@@ -1,0 +1,1 @@
+rh._.exports({"0":[["Überblick"]],"2":[["\n"],["\n","Hier werden die grundlegenden Einstellungen zur Benutzung \n von Legato getroffen. Zunächst kann man hier die Werke und Produktionsbereiche \n definieren. Zudem finden sich der Datenaustausch sowie die Fertigungsstruktur.","\n\n\n"]],"3":[["Überblick"]],"id":"72"})

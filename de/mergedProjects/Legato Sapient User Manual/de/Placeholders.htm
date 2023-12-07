@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+ <meta name="topic-status" content="Abgeschlossen" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Platzhalter</title>
+<link rel="StyleSheet" href="../assets/css/Legato_Systemdokumentation.css" type="text/css" data-condition="Others:Deutsch"/>
+<meta name="rh-index-keywords" content="Platzhalter" data-condition="Others:Deutsch"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Platzhalter">
+        <span>Platzhalter</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Platzhalter</h2>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch"><a id="Allgemein"></a>Allgemein</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Die Parameter &quot;Knoten&quot;, &quot;Detail-Info&quot;, 
+ &quot;Startzeit&quot; und &quot;Endzeit&quot; können als Platzhalter in 
+ Filterstrings und URLs verwendet werden. Dann werden diese Platzhalter 
+ durch änderbare Werte aus anderen Boardlets befüllt. Grundsätzlich gilt 
+ hierfür die Beschreibung der <a href="Parameters.htm">Parametertypen</a>.</p>
+<h3 data-condition="Others:Deutsch"><a id="$node$" data-indexterm="$node$"></a><a id="_node__Knoten"></a>$node$ Knoten</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieser Platzhalter wird immer entweder aus dem <a href="Boardlets/02_Basis/Navigation/Layout/Layout.htm">Layout 
+ Boardlet</a> oder aus dem <a href="Boardlets/02_Basis/Navigation/Node_Tree.htm">Knotenbaum 
+ Boardlet</a> befüllt. Er kann in diversen anderen Boardlets als Filter 
+ eingesetzt werden, um beispielsweise abhängig vom gewählten Knoten andere 
+ Daten zu erhalten.</p>
+<p class="BodyText" data-condition="Others:Deutsch">Bei vielen Boardlets wird dieser Platzhalter automatisch 
+ verwendet, z.B. werden üblicherweise Meldungen oder KPIs immer mit Knotenbezug 
+ angezeigt. Dies erfolgt natürlich nur, wenn die Knoten-ID auf &quot;In&quot; 
+ oder &quot;InOut&quot; gesetzt ist (siehe hierzu &quot;<a href="Parameters.htm">Parameter</a>&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch">Die Knoten-ID kann aber als Variable in den Filterstring 
+ oder die URL eingesetzt werden, z.B. beim <a href="Boardlets/03_Visualization/iFrame.htm">iFrame 
+ Boardlet</a> oder beim <a href="Boardlets/03_Visualization/Graphic.htm">Bild 
+ Boardlet</a>. Dadurch kann dann abhängig von der Knoten-ID ein anderes 
+ Bild aus Legato Classic geladen werden. Die URL könnte dann beispielsweise 
+ so aussehen: <a href="http://legato.classic.de/Legato/index.html?nodeId=$node$&amp;viewId=1001">http://legato.classic.de/Legato/index.html?nodeId=$node$&amp;viewId=1001</a></p>
+<p class="BodyText" data-condition="Others:Deutsch">Der Platzhalter $node$ wird dann jeweils bei Klick 
+ im Knotenbaum Boardlet mit dem entsprechenden Wert befüllt und anschließend 
+ die Ansicht aus Legato Classic für diesen Knoten geladen.</p>
+<h3 data-condition="Others:Deutsch"><a id="$detailinfo$" data-indexterm="$detailinfo$"></a><a id="_detailinfo__Detail-Info"></a>$detailinfo$ Detail-Info</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Dieses Feld wird überall automatisch mit den Informationen 
+ aus der Generischen Tabelle befüllt. Gibt es mehrere Generische Tabellen 
+ in einem Dashboard, so werden die Werte der aktuell selektierten Generischen 
+ Tabelle eingetragen oder die derjenigen, bei der dieser Parameter auf 
+ den Parametertyp &quot;Out&quot; oder &quot;InOut&quot; gesetzt ist.</p>
+<h3 data-condition="Others:Deutsch"><a id="$timeend$" data-indexterm="$timeend$"></a><a id="$timestart$" data-indexterm="$timestart$"></a><a id="_timeStart__und__timeEnd__Start-Datum_und_End-Datum"></a>$timeStart$ 
+ und $timeEnd$ Start-Datum und End-Datum</h3>
+<p class="BodyText" data-condition="Others:Deutsch">Diese Platzhalter werden mit dem jeweiligen Datum aus 
+ dem Zeitfilter des sendenden Boardlets befüllt.</p>
+
+
+</body></html>

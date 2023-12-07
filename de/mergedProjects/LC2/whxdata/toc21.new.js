@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Berechnungs-Grundlagen","type":"item","tilePath":"","description":"","url":"de/05_ASS/02_Data_Exchange/04_Vars/TV-Inheritance.htm#Berechnungs-Grundlagen"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

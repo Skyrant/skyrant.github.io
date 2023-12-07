@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"SCC","type":"project","tilePath":"","url":"SCC","ref":"mergedProjects/SCC","key":"toc9"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

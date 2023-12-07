@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "2.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch"/>
+<meta name="condition-tags" content="Others:Deutsch" data-condition="Others:Deutsch"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch"/>
+<title data-condition="Others:Deutsch">Hierarchiestufen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch"/>
+<style type="text/css" data-condition="Others:Deutsch">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Hierarchiestufen">
+        <span>Hierarchiestufen</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um die Seite im Kontext zu sehen">
+        <span>Hier klicken, um die Seite im Kontext zu sehen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch">Hierarchiestufen</h2>
+<p class="BodyText_Italic" data-condition="Others:Deutsch">Grundkonfiguration | Anwendungsstruktur | Hierarchiestufen</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Funktion</h6>
+<p class="BodyText" data-condition="Others:Deutsch">Als Basis für die Definition einer Fertigungsstruktur 
+ die möglichen Hierarchiestufen benötigt. Die Hierarchiestufen legen die 
+ Bezeichnungen der logischen Struktur des Fertigungsprozesses oder der 
+ in der Fertigungsstruktur abgebildeten organisatorischen Struktur fest. 
+ Außerdem werden die Hierarchiestufen bei der Vererbung von Meldungen berücksichtigt.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Als Grundparameter 
+ für das Meldungsmanagement wird die Hierarchiestufe mit Erstwerterkennung 
+ hier parametriert.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Unter Erstwertmeldung 
+ ist die 1. Meldung einer Folge von Meldungen, die sich auch überlappen 
+ können, zu verstehen. Diese Folge-Meldungen können ausgeblendet werden, 
+ werden aber in die Datenbank geschrieben.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Die Erstwerterkennung 
+ ist für Auswertungen und Filterfunktionen interessant.</p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch">Beispiel:</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Erstwertmeldung: Gruppensicherung F10 löst aus</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Folge-Meldungen: Störung Sicherung F1-F9 (Tech.) 
+ / Schrankstörung (Tech.) / Kommunikation steht (Verb.) / Störung Anlage 
+ A (Tech.) / usw.</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Die Erstwertmeldungen 
+ können auch nach Art (technisch, systembedingt, organisatorisch, usw.) 
+ (siehe <a href="..\..\AL_Mgmt\Config\03_Al_Types.htm" data-condition="Others:Classic_only">Werksverwaltung 
+ | Meldungsmanagement | Meldearten</a>) oder nach Klassen 
+ mit zusätzlichem Prioritäteneintrag (Klassenpriorität) gefiltert werden 
+ (siehe <a href="..\AL_Classes\02_Al_Classes.htm" data-condition="Others:Classic_only">Werksverwaltung 
+ | Meldungsmanagement | Meldeklassen</a>, Spalte Name und 
+ Priorität).</p>
+<p class="Textkörperfett" data-condition="Others:Classic_only;Others:Deutsch">Beispiele:</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"><span class="TextCharCharCharCharCharChar">Erstwertmeldung 
+ je Art: (obiges Bsp.)</span></p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"><span class="TextCharCharCharCharCharChar">(technisch, 
+ systembedingt, organisatorisch,…..)</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Erstwertmeldung technisch: Gruppensicherung F10</p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Erstwertmeldung Verbindungsstörung: Kommunikation 
+ steht</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"><span class="TextCharCharCharCharCharChar">Erstwertmeldung 
+ je Klassenpriorität:</span></p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"><span class="TextCharCharCharCharCharChar">(Warngrenzen, 
+ Grenzwerte, Verbindungsstörung und Projektspezifische)</span></p>
+<p class="Aufzählung1 Liste1" data-condition="Others:Classic_only;Others:Classic_only;Others:Deutsch">Erstwertmeldung Verbindungsstörung: Kommunikation 
+ steht</p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"> </p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch"><span class="TextCharCharCharCharCharChar">Erstwertmeldung 
+ mit Priorität &#39;3&#39; überschreibt Erstwertmeldung mit Priorität &#39;7&#39;.</span></p>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Dabei ist 
+ darauf zu achten, eine Ebene auszuwählen, ab der eine Erstwerterkennung 
+ sinnvoll ist (z.B. Anlagenebene, Startgruppe). Nicht sinnvoll ist eine 
+ Erstwerterkennung z.B. auf Hallenebene, wenn eine Störung an Anlage A 
+ keinen direkten Einfluss auf die Funktionsfähigkeit der Anlage B hat.</p>
+<h6 class="Ü3_Search" data-condition="Others:Deutsch">Feldbeschreibung</h6>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<table class="AlternateGreyBlackHeaderRow" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch">
+	<tbody><tr class="t1st">
+		<td><p class="TabellenÜberschrift">Feld</p></td>
+		<td><p class="TabellenÜberschrift">Beschreibung</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">ID</p></td>
+		<td><p class="TabellenInhalt">Eindeutige Identifikationsnummer 
+		 zur Darstellung der hierarchischen Ordnung. Wird automatisch vom 
+		 System vergeben. Schreibgeschützt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">Name</p></td>
+		<td><p class="TabellenInhalt">Frei wählbarer Name der Hierarchiestufe.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">Beschreibung (optional)</p></td>
+		<td><p class="TabellenInhalt">Zusätzliche Beschreibung der Hierarchiestufe.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Art der Erstwertbildung (optional)</p></td>
+		<td data-condition="Others:Classic_only"><p class="TabellenInhalt">Drop-down-Liste 
+		 für die Art der Erstwerterkennung. Die Erstwerterkennung erfolgt 
+		 für die Hierarchiestufe, bei der dieser Wert gesetzt wird. In 
+		 dieser Spalte kann nur für eine Hierarchiestufe eine Eingabe erfolgen. 
+		 Wird für eine weitere Hierarchiestufe ein Wert gesetzt, wird die 
+		 vorherige Eingabe auf NULL gesetzt.</p>
+		<p class="TabellenInhalt">Folgende Erstwerterkennungsarten stehen 
+		 zur Verfügung:</p>
+		<p class="TabellenInhalt">- keine Erstwerterkennung</p>
+		<p class="TabellenInhalt">- Erstwerterkennung (generell)</p>
+		<p class="TabellenInhalt" data-condition="Others:Classic_only">- 
+		 Erstwerterkennung je Art (siehe <a href="..\..\AL_Mgmt\Config\03_Al_Types.htm" data-condition="Others:Classic_only">Meldungsmanagement 
+		 | Meldearten</a>)</p>
+		<p class="TabellenInhalt" data-condition="Others:Classic_only">- 
+		 Erstwerterkennung je Klassenpriorität (siehe <a href="..\AL_Classes\02_Al_Classes.htm" data-condition="Others:Classic_only">Meldungsmanagement 
+		 | Meldeklassen</a>)</p></td>
+	</tr>
+</tbody></table>
+<p class="Listing" data-condition="Others:Deutsch"> </p>
+<h6 class="Ü3_Search" data-condition="Others:Classic_only;Others:Deutsch">Beispiel</h6>
+<p class="BodyText" data-condition="Others:Classic_only;Others:Deutsch">Eine typische 
+ Fertigungsstruktur beinhaltet z.B. die Hierarchiestufen Bereich, Linie, 
+ Anlage und Funktionsgruppe. Für die Hierarchiestufe Anlage wird eine Erstwerterkennung 
+ je Art parametriert. Damit werden Störungen verschiedener Arten getrennt 
+ nach Erstwert ausgewertet und angezeigt. Tritt eine Störung der Art technisch 
+ auf, während bereits eine Störung der Art organisatorisch aktiv ist, wird 
+ die technische Erstwertstörung parallel zur organisatorischen Störung 
+ angezeigt.</p>
+
+
+</body></html>

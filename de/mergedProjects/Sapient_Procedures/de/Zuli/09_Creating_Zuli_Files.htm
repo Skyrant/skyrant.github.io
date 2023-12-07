@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "16.1_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey_adj/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="OriginalFile" content="Legato_ApplicationEngine_de.docx" data-condition="Others:Deutsch;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Job" data-condition="Others:Deutsch;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Job">Beispiele zur Erstellung von Zuordnungslisten-Imports</title>
+<link rel="stylesheet" href="../../assets/css/Legato_Systemdokumentation2.css" type="text/css" data-condition="Others:Deutsch;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Job">/*<![CDATA[*/
+body {
+	background-color: #ffffff;
+}
+A:visited {
+	
+}
+A:link {
+	
+}
+/*]]>*/</style>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Beispiele zur Erstellung von Zuordnungslisten-Imports">
+        <span>Beispiele zur Erstellung von Zuordnungslisten-Imports</span>
+      </div>
+      <div class="gotohome" title="Hier klicken, um diese Seite im Zusammenhang anzuzeigen">
+        <span>Hier klicken, um diese Seite im Zusammenhang anzuzeigen</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h3 data-condition="Others:Deutsch;Others:Job">Beispiele zur Erstellung von Zuordnungslisten-Imports</h3>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 1 - S5-SEQ-Datei (*.seq)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat keinen 
+ Header, d.h. das Auslesen beginnt bei Zeile 0.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (Trennzeichen, Feldbedeutung):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Tabulator Operand Tabulator Symbolik Tabulator Text</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.0 E 08.0 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.1 E 08.1 Zentralgeraet Luefter in Ordnung</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.2 E 08.2 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.3 E 08.3 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.4 E 08.4 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.5 E 08.5 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.6 E 08.6 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">E 8.7 E 08.7 Reserve</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es existiert folgende (feste) Zuordnung zwischen den 
+ Datei-Feldern und den im Script abfragbaren Feldnamen:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;ext_code&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;def_node&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_class&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_type&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 2 – S7-SEQ-Datei (*.seq)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Da sich weder der Aufbau einer Zeile oder einer Datei 
+ noch die Verarbeitungslogik dieses Zuordnungslisten-Typs von einer S5-SEQ-Datei 
+ unterscheiden, siehe dort.</p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 3 – S5-GraphPic-Importdatei (*.txt)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat einen Header, 
+ d.h. das Auslesen beginnt bei Zeile 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, Feldbedeutung):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operand (8 Zeichen) <b>Tab</b> Symbolik <b>Tab</b> 
+ Text <b>Tab</b> Klasse <b>Tab</b> Art</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operand Symbolik Text Klasse Art</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">1 =02/E7.6 Schaltschrank Abluftventilatoren 1-3 Sicherungsüberwachung 
+ 230V 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">2 =02/E7.7 Schaltschrank Abluftventilatoren 1-3 Sicherungsüberwachung 
+ 24V 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">3 =02-50A3/E4.0 Störung Sanftanlasser Abluftventilatoren 
+ 1+2 02/A0101+A0102 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">4 =02-51F8.1/E4.3 Störung Motorschutz Abluftventilator 
+ 1 02/A0101 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">5 =02-51A12/E4.4 Störung Kaltleiter Abluftventilator 
+ 1 02/A0101 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">6 =02-52S4.5/E4.5 Störung Druckfühler Abluftventilator 
+ 1 02/P0101 1 3</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">7 =02-53F8.1/E5.0 Störung Motorschutz Abluftventilator 
+ 2 02/A0102 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">8 =02-53A12/E5.1 Störung Kaltleiter Abluftventilator 
+ 2 02/A0102 1 1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Die im Script abfragbaren Felder tragen die Namen, 
+ welche in Zeile 0 der Datei &#39;definiert&#39; sind.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Operand&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik0&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik1&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik2&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik3&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik4&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Sub_Sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 4 – S7-GraphPic-Importdatei (*.txt)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Da sich weder der Aufbau einer Zeile oder einer Datei 
+ noch die Verarbeitungslogik dieses Zuordnungslisten-Typs von einer S5-GraphPic-Importdatei 
+ unterscheiden, siehe dort.</p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 5 – S5-GraphPic-Importdatei (*.csv)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat einen Header, 
+ d.h. das Auslesen beginnt bei Zeile 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, <i>Feldbedeutung</i>):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operand (8 Zeichen) <b>Tab</b> Symbolik <b>Tab</b> 
+ Text <b>Tab</b> Klasse <b>Tab</b> Art</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operand Symbolik Text Klasse Art</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;Operand&quot;,&quot;Symbolik&quot;,&quot;Text&quot;,&quot;Klasse&quot;,&quot;Art&quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;M 3840.0&quot;,&quot;M_Funkruf&quot;,&quot;Strassenführer 
+ wird an Anlage benötigt&quot;,2,1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;M 3840.2&quot;,&quot;M_SiFa500&quot;,&quot;Sicherungsfall 
+ F500-F508 $&quot;,1,1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;M 3840.4&quot;,&quot;M_SiFa800&quot;,&quot;Sicherungsfall 
+ m-Potential F800-F808 $&quot;,1,1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;M 3840.5&quot;,&quot;M_SiFa809&quot;,&quot;Sicherungsfall 
+ m-Potential F809-F813 $&quot;,1,1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;M 3840.6&quot;,&quot;M_QW1&quot;,&quot;Antriebeschalter 
+ ausgeschaltet $&quot;,1,1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Die im Script abfragbaren Felder tragen die Namen, 
+ welche in Zeile 0 der Datei &#39;definiert&#39; sind.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Operand&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik0&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik1&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik2&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik3&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Symbolik4&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;Text4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"> </td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;Sub_Sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 6 – S7-GraphPic-Importdatei (*.csv)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Da sich weder der Aufbau einer Zeile oder einer Datei 
+ noch die Verarbeitungslogik dieses Zuordnungslisten-Typs von einer S5-GraphPic-Importdatei 
+ (*.csv) unterscheiden, siehe dort.</p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 7 – S7-SDF-Datei (*.sdf)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat keinen 
+ Header, d.h. das Auslesen beginnt bei Zeile 0.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, <i>Feldbedeutung</i>):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Symbolik , Operand , (ignoriert) , Text</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;4/6_M429.0 &quot;,&quot;M 429.0 &quot;,&quot;BOOL 
+ &quot;,&quot;Lagekontrolle links 1 im WKZ auf 1 ist fehlerhaft &quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;4/6_M429.1 &quot;,&quot;M 429.1 &quot;,&quot;BOOL 
+ &quot;,&quot;Lagekontrolle links 2 im WKZ auf 1 ist fehlerhaft &quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;4/6_M429.2 &quot;,&quot;M 429.2 &quot;,&quot;BOOL 
+ &quot;,&quot;Lagekontrolle rechts 1 im WKZ auf 1 ist fehlerhaft &quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;4/6_M429.3 &quot;,&quot;M 429.3 &quot;,&quot;BOOL 
+ &quot;,&quot;Lagekontrolle rechts 2 im WKZ auf 1 ist fehlerhaft &quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;4/6_M429.4 &quot;,&quot;M 429.4 &quot;,&quot;BOOL 
+ &quot;,&quot;Kontrolle Werkzeugheber 1 auf 0 ist fehlerhaft &quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&quot;4/6_M429.5 &quot;,&quot;M 429.5 &quot;,&quot;BOOL 
+ &quot;,&quot;Kontrolle Werkzeugheber 2 auf 0 ist fehlerhaft &quot;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es existiert folgende (feste) Zuordnung zwischen den 
+ Datei-Feldern und den im Script abfragbaren Feldnamen:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;ext_code&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;def_node&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_class&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_type&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 8 – P-Diag-Datei (*.csv)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat 14 Zeilen 
+ Header, wobei Zeile 14 eine Leerzeile ist.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Zu Beginn des Imports wird nach Zeilen mit &#39;Operandenüberwachung&#39; 
+ bzw. &#39;Address Monitoring&#39; (für englisch-sprachige Dateien) gesucht, alle 
+ anderen Zeilen werden gelöscht.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, Feldbedeutung):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">C:Operandenüberwachung;Name;Autor;Erstellt Datum;Erstellt 
+ Zeit;Geändert Datum;Geändert Zeit;Kommentar;Meldenummer;Priorität;Quittung;Meldetext;Deo(abs);Deo(sym);Bst-Name;Fehlererkennung;Erstwerterfassung;Kriterienanalyse;Ereignis;Zeit;Begleitwert(abs);Begleitwert(sym);</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei (nach Löschen der restlichen 
+ Zeilen):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">C:Operandenüberwachung;Name;Autor;Erstellt Datum;Erstellt 
+ Zeit;Geändert Datum;Geändert Zeit;Kommentar;Meldenummer;Priorität;Quittung;Meldetext;Deo(abs);Deo(sym);Bst-Name;Fehlererkennung;Erstwerterfassung;Kriterienanalyse;Ereignis;Zeit;Begleitwert(abs);Begleitwert(sym);</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operandenüberwachung;M200.2:Operandenüberwachung;;28.01.2002;17:16:11;01.02.2002;10:38:04;;1;1;Ja 
+ (1);Text mit dezimalem Wert @1X%6d@;M200.2;M200.2;FC9;Ja (1);Ja (1);Negativ 
+ (0);S7-PDIAG Überwachung auf Pegel 1 (1);;MD210;MD210;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operandenüberwachung;M200.6:Operandenüberwachung;;01.02.2002;10:37:29;01.02.2002;10:38:04;;2;1;Ja 
+ (1);Meldung 2;M200.6;M200.6;FC9;Ja (1);Ja (1);Negativ (0);S7-PDIAG Überwachung 
+ auf Pegel 1 (1);;;;</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;ext_code&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;def_node&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_class&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_type&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 9 – Einfache Textliste (*.txt)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat keinen 
+ Header, d.h. das Auslesen beginnt bei Zeile 0.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, <i>Feldbedeutung</i>):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operand <b>(Blanks)</b> Text</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">1 Meldung1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">2 Meldung2</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">3 Meldung3</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">4 Meldung4</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">5 Meldung5</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">6 Meldung6</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">7 Meldung7</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">8 Meldung8</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es existiert folgende (feste) Zuordnung zwischen den 
+ Datei-Feldern und den im Script abfragbaren Feldnamen:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;ext_code&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;def_node&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_class&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_type&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 10 – P-Diag-XML-Datei (*.xml)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat keine Zeilenorientierung.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Zu Beginn des Imports wird nach Zeilen mit &lt;Fdef&gt; 
+ innerhalb von &#39;Unit Blocks&#39; gesucht. Im Anschluss werden der Operand und 
+ der Text ermittelt.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;Fdef&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;1001&quot;&gt;&quot;M_FG12-BA_Einr&quot;:Betriebsmeldung&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;1003&quot;&gt;20.09.2006 11:27:45&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;1004&quot;&gt;20.10.2006 02:17:02&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;6107A&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61010&quot;&gt;1&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;6100C&quot;&gt;M1755.0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61014&quot;&gt;1&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61016&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61018&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;6102E&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;610A3&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61004&quot;&gt;1&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61105&quot;&gt;FG12 Einrichtbetrieb 
+ M_FG12-BA_Einr (M1755.0)&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61104&quot;&gt;1610612832&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61107&quot;&gt;2&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61029&quot;&gt;1&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61066&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;At id=&quot;61067&quot;&gt;0&lt;/At&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">&lt;/Fdef&gt;</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es existiert folgende (feste) Zuordnung zwischen den 
+ Datei-Feldern und den im Script abfragbaren Feldnamen:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;ext_code&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;def_node&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_class&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_type&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Im Rahmen des Imports einer Zuordnungsliste dieses 
+ Typs kann es zum Import von sogenannten &#39;LookUp-Lists&#39; (Nachschlagelisten) 
+ kommen, welche aus dem Text der Meldung (Dateiname der LookUp-List) hervorgehen. 
+ Diese LookUp-Lists müssen im gleichen Verzeichnis angelegt sein.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">(Automatischer) Import von LookUp-Lists</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Dateien dieses Typs haben keinen Header, d.h. das Auslesen 
+ beginnt bei Zeile 0.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Typs hat folgenden Aufbau (<b>Trennzeichen</b>, 
+ <i>Feldbedeutung</i>):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Nummer Tab Text</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">401 Abschaltung zweifacher MST – Ausfall</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">402 Abschaltung zweifacher MDT – Ausfall</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">403 Abschaltung ungültige Kommunikationsphase</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">404 Fehler bei Phasenhochschaltung</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">405 Fehler bei Phasenrückschaltung</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">406 Phasenumschaltung ohne Bereitmeldung</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">407 Fehler bei Initialisierung der Führungskommunikation</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">408 Fataler Fehler der Schnittstellenkarte</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es existiert folgende (feste) Zuordnung zwischen den 
+ Datei-Feldern und den im Script abfragbaren Feldnamen:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;number&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Nummer</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 11 – Tab-Textdatei (*.*)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat einen Header, 
+ d.h. das Auslesen beginnt bei Zeile 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, <i>Feldbedeutung</i>):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Text <b>Tab</b> Al_Class <b>Tab</b> Ext_Code <b>Tab</b> 
+ Operand <b>Tab</b> Symbol</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">TEXT AL_CLASS EXT_CODE OPERAND SYMBOL</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.1 1 1 D 0.1 D 0.1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.2 1 2 D 0.2 D 0.2</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.3 1 3 D 0.3 D 0.3</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.4 1 4 D 0.4 D 0.4</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.5 1 5 D 0.5 D 0.5</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.6 1 6 D 0.6 D 0.6</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.7 1 7 D 0.7 D 0.7</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">STOERUNG Palettierer 1 0.8 1 8 D 0.8 D 0.8</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Die im Script abfragbaren Felder tragen die Namen, 
+ welche in Zeile 0 der Datei &#39;definiert&#39; sind.</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<h4 data-condition="Others:Deutsch;Others:Job">Typ 12 – Phoenix-CSV-Datei (*.csv)</h4>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Datei dieses Zuordnungslisten-Typs hat keinen 
+ Header, in Zeile 0 der Datei wird jedoch der Dateiname eingetragen, d.h. 
+ das Auslesen beginnt bei Zeile 1.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Eine Zeile dieses Zuordnungslisten-Typs hat folgenden 
+ Aufbau (<b>Trennzeichen</b>, Feldbedeutung):</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Operand <b>Tabulator</b> Text <b>Tabulator</b> <i>Prio_File</i></p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Auszug aus einer Beispiel-Datei:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">dateiname.csv</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">1 Meld_Verw: Mehr als 2000 Fehlermeldungen! ST0</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">3 Meld_Verw: ZAÜ nicht aktuell, bitte reinitialisieren! 
+ ST1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">5 Steuerung: IBS Qualitätsbit oder MAU Warnung MT1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">6 Steuerung: IBS Warnzeit überschritten STE</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">7 Steuerung: IBS Peripheriefehler MT1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">8 Steuerung: Fehler KG0-Schütz STE</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">9 Steuerung: Uhrzeit Synchronisationsfehler MT1</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job">Es existiert folgende (feste) Zuordnung zwischen den 
+ Datei-Feldern und den im Script abfragbaren Feldnamen:</p>
+<table class="TabelleBlank" cellspacing="0" style="border-collapse:collapse;" width="100%" cellpadding="1" data-condition="Others:Deutsch;Others:Job">
+	<tbody><tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;ext_code&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;def_node&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_class&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;al_type&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;operand&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Operand</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_0&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_1&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_2&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_3&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;sym_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Symbolik</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"> </td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[<span style="color: #5E11A6;">&quot;text_4&quot;</span>]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText">Text</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;" width="47"><p class="BodyText"> </p></td>
+		<td style="vertical-align: top;" width="180"><p class="BodyText">line[&quot;sub_sym&quot;]</p></td>
+		<td style="vertical-align: top;" width="377"><p class="BodyText"> </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+
+<p class="BodyText" data-condition="Others:Deutsch;Others:Job"> </p>
+
+
+</body></html>

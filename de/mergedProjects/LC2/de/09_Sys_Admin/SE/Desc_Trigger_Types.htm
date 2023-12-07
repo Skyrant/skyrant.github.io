@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.5.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<base target="_self" href="" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta name="OriginalFile" content="Legato_LC2_DE_Format.doc" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta name="condition-tags" content="Others:Deutsch;Others:Sapient_only;Others:Job" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta http-equiv="Content-Language" content="de-DE" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<meta name="generator" content="Adobe RoboHelp 2020" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<title data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Beschreibung der Trigger-Typen</title>
+<link rel="stylesheet" href="../../../assets/css/Legato_Systemdokumentation23.css" type="text/css" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/>
+<style type="text/css" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">/*<![CDATA[*/
+A:visited {
+}
+A:link {
+	color: blue;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="Trigger" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Beschreibung der Trigger-Typen">
+        <span>Beschreibung der Trigger-Typen</span>
+      </div>
+      <div class="gotohome" title="Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.">
+        <span>Klicken Sie hier, um diese Seite mit vollem Kontext anzuzeigen.</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Beschreibung der Trigger-Typen</h2>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><span class="TextkörperZchnTextkörperCharCharCharZchnTextkörperCharCharCharCharZchnTextkörperCharCharZchn"><a id="Alle_Trigger-Typen"></a>Alle Trigger-Typen</span></h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><span class="TextkörperZchnTextkörperCharCharCharZchnTextkörperCharCharCharCharZchnTextkörperCharCharZchn">Folgende 
+ Parameter werden von allen Trigger-Typen unterstützt:</span></p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="631"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">valid_from</p></td>
+		<td><p class="TabellenInhalt">gültig ab ...</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">valid_till</p></td>
+		<td><p class="TabellenInhalt">gültig bis ...</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">inactive_from</p></td>
+		<td><p class="TabellenInhalt">inaktiv ab ...</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">inactive_till</p></td>
+		<td><p class="TabellenInhalt">inaktiv bis ...</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">exclude_holidays</p></td>
+		<td><p class="TabellenInhalt">Boole&#39;sche Angabe, ob Feiertage (Einträge 
+		 in der Tabelle &quot;Feiertage&quot;) ausgeschlossen werden sollen 
+		 (1) oder nicht (0).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">weekdays</p></td>
+		<td><p class="TabellenInhalt">Durch Komma getrennte Liste von Wochentagen 
+		 oder Bereichen davon. Der Trigger wird dann nur an den hier aufgezählten 
+		 Wochentagen feuern.</p>
+		<ul>
+			<li><p class="TabellenInhalt">einzelne Wochentage können als 
+			 Zahl (1 für Montag bis 0 oder 7 für Sonntag) oder als Abkürzung 
+			 des englischen Namens (Sun, Mon, Tue, Wed, Thu, Fri, Sat) 
+			 angegeben werden.</p></li>
+			<li><p class="TabellenInhalt">Bereiche werden durch ein Minus-Zeichen 
+			 (-) gekennzeichnet und enthalten beide Grenzen, also steht 
+			 &#39;mon - 3&#39; für Montag, Dienstag und Mittwoch</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">timezone</p></td>
+		<td><p class="TabellenInhalt">Zeitzone für diesen Trigger. Es wird 
+		 empfohlen, die genauen Angaben aus https://www.iana.org/time-zones 
+		 zu verwenden, z.B. also &quot;Europe/Berlin&quot; statt &quot;MEZ&quot;. 
+		 Die gültigen Namen der Zeitzonen können von jeder Sapient Engine 
+		 über den Aufruf der Prozedur /de/gefasoft/sapient/sapieng/websrv/jsonapi/AvailableTimeZones 
+		 abgefragt werden.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die einzelnen Trigger unterstützen zum Teil noch weitere 
+ Parameter, die im Folgenden aufgeführt werden. Für alle gilt übergreifend:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Zeitintervalle oder Offsets werden als durch Leerzeichen 
+ getrennte Liste von Dauern angegeben. Dauern können auch mit einem Minus-Zeichen 
+ davor als negativ gekennzeichnet werden. Sie können entweder</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">im Uhrzeit-Format hh:mm:ss.SSS oder</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">als Wert-und-Einheit angegeben werden. Folgende 
+ Einheiten sind möglich:</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">y 
+ für Jahre</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">M 
+ für Monate</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">w 
+ für Wochen</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">d 
+ für Tage</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">h 
+ für Stunden</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">m 
+ für Minuten</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">s 
+ für Sekunden</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">ms 
+ für Millisekunden</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">So könnte z.B. der Wert &quot;5 1/2 Minuten vorher&quot; 
+ unter anderem als &quot;-00:05:30&quot;, &quot;-5m -30s&quot;, &quot;-330s&quot; 
+ oder &quot;-6m 30s&quot; angegeben werden.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><span class="TextkörperZchnTextkörperCharCharCharZchnTextkörperCharCharCharCharZchnTextkörperCharCharZchn"><a id="zyklisch"></a>zyklisch</span></h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts in einem regelmäßigen Zeit-Intervall 
+ ein. </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st" style="height: 28px;">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row" style="height: 120px;">
+		<td><p class="TabellenInhalt">interval</p></td>
+		<td><p class="TabellenInhalt">Intervall der Ausführung, Angabe 
+		 in Stunden (h), Minuten (m), Sekunden (s) oder Millisekunden (ms), 
+		 z.B. 30s. Die genaue Syntax ist oben beschrieben. </p>
+		<p class="TabellenInhalt"> Der Job wird zu jedem Vielfachen 
+		 dieses Intervalls ab dem Startzeitpunkt (valid_from) gestartet. 
+		 Ist kein Startzeitpunkt angegeben, wird der Beginn des Tages benutzt, 
+		 an dem die Sapient Engine gestartet wurde. Es dürfen nur Intervalle 
+		 angegeben werden, die genau in Millisekunden umgerechnet werden 
+		 können (also z.B. nicht Monate mit ihren unterschiedlichen Längen 
+		 etc.) Umstellung von Sommer-/Winterzeit wird nicht berücksichtigt.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="tägliches_Intervall"></a>tägliches Intervall</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts in einem regelmäßigen Intervall ein, 
+ aber nur zwischen bestimmten Uhrzeiten an bestimmten Tagen. Damit lassen 
+ sich recht einfach Trigger der Art &quot;Alle Viertelstunde werktags zwischen 
+ 8 und 18 Uhr&quot; einrichten.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="659"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">interval</p></td>
+		<td><p class="TabellenInhalt">Intervall der Ausführung, Angabe 
+		 in Stunden (h), Minuten (m), Sekunden (s) oder Millisekunden (ms), 
+		 z.B. 30s. Die genaue Syntax ist oben beschrieben. </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">dailystarttime</p></td>
+		<td><p class="TabellenInhalt">(optional) Tägliche Start-Zeit, ab 
+		 der der Trigger beginnen soll im Uhrzeit-Format, z.B. 05:31:17.5. 
+		 Falls nicht angegeben, beginnt er um 0 Uhr.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">dailyendtime</p></td>
+		<td><p class="TabellenInhalt">(optional) Tägliche Ende-Zeit, ab 
+		 der der Trigger nicht mehr feuern soll im Uhrzeit-Format. Falls 
+		 nicht angegeben, stellt er das Feuern um 24:00 Uhr ein. </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Kalender-Intervall"></a>Kalender-Intervall</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts nach bestimmten Kalender-Intervallen 
+ ein. Damit können Zeitpläne erstellt werden wie &quot;alle 5 Monate&quot;, 
+ die weder mit einem zyklischen Trigger (weil Monate nicht gleich lang 
+ sind), noch mit einem cron-Trigger (weil 5 kein Teiler von 12 ist) möglich 
+ wären.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Andererseits ist auch Vorsicht angesagt bezüglich des 
+ Zusammenspiels von Startzeit und Intervall: Bei einem Intervall in Monaten 
+ und einem Startzeitpunkt nahe dem Monats-Ende, kann sich der Tag des Auslösens 
+ ändern, nachdem einmal ein kürzerer Monat getroffen wurde, z.B. würde 
+ ein monatlicher Trigger ab dem 30.11. im nächsten Februar auf den 28. 
+ vor verschoben und würde ab da immer am 28. jeden Monats feuern. Für solche 
+ Zeitpläne ist dann ein cron-Trigger meist die bessere Wahl.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen 
+ Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">interval</p></td>
+		<td><p class="TabellenInhalt">Intervall der Ausführung, Angabe 
+		 in Jahren (y), Monaten (M), Wochen (w), Tagen (d), Stunden (h), 
+		 Minuten (m) oder Sekunden (s), z.B. 2w. Die genaue Syntax 
+		 ist oben beschrieben. </p>
+		<p class="TabellenInhalt"> Der Job wird zu jedem Vielfachen 
+		 dieses Intervalls ab dem Startzeitpunkt (valid_from) gestartet. 
+		 Ist kein Startzeitpunkt angegeben, kann der Trigger nicht angelegt 
+		 werden. Es dürfen nur Intervalle angegeben werden, die genau in 
+		 Millisekunden umgerechnet werden können (also z.B. nicht Monate 
+		 mit ihren unterschiedlichen Längen etc.) Umstellung von Sommer-/Winterzeit 
+		 wird nicht berücksichtigt.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">daylightsaving</p></td>
+		<td><p class="TabellenInhalt">(optional, true oder false) 
+		 Ob die Uhrzeit über die Umstellung auf Sommerzeit und zurück beibehalten 
+		 werden soll (also z.B. immer um 09:00, egal ob Sommerzeit oder 
+		 nicht). Standardeinstellung: false. </p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">skipsavinghours</p></td>
+		<td><p class="TabellenInhalt">(optional, true oder false). 
+		 Falls true, wird die Ausführung des Jobs übersprungen, falls sie 
+		 in der ersten der &quot;doppelten&quot; Stunden bei der Umstellung 
+		 von Sommer- auf Winterzeit fallen würde. Wird ignoriert, wenn 
+		 daylightsaving false ist. </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="cron"></a>cron</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts so ein, wie das der Unix/Linux-Dienst <span style="font-weight: bold;">cron</span> tut.</p>
+<p class="Textkörperfett" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">cron-Ausdrücke</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">siehe auch <a href="http://www.quartz-scheduler.org/api/2.2.1/org/quartz/CronExpression.html">​Dokumentation 
+ der Quartz-Bibliothek</a> (englisch). Die in Quartz-Bibliothek verwendeten 
+ Ausdrücke sind <a href="https://de.wikipedia.org/wiki/Cron">​Standard-Cron-Ausdrücke</a> mit 
+ geringen Abweichungen:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">in Quartz 
+ gibt es ein zusätzliches Feld für Sekunden</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">in Quartz 
+ verwendet eine abweichende Nummerierung der Wochentage (1 für SUN bis 
+ 7 für SAT). Um Verwirrungen zu vermeiden, sollten deshalb in Legato Sapient 
+ Wochentage als Abkürzung (SUN, MON, TUE, WED, THU, FRI, SAT) angegeben 
+ werden</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Ausdrücke bestehen aus 6 bis 7 Unter-Ausdrücken, die 
+ in einer Zeile durch Leerzeichen oder Tabs getrennt angegeben werden. 
+ Die Unter-Ausdrücke gelten jeweils für:</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">1. Sekunden</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">2. Minuten</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">3. Stunden</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">4. Tag (des Monats)</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">5. Monat</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">6. Wochentag</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">7. (optional) Jahr</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Der Ausdruck &quot;0 0 12 ? * WED&quot; würde z.B. 
+ bedeuten &quot;jeden Mittwoch um 12&quot;.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Unter-Ausdrücke können Bereiche oder Aufzählungen enthalten, 
+ also könnte eine Wochentags-Angabe z.B. auch &quot;MON-FRI&quot;, &quot;MON,WED,SAT&quot; 
+ oder auch &quot;MON-WED,FRI&quot; lauten. Bitte beachten: keine Leerzeichen!</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Ein * als Unter-Ausdruck bedeutet &quot;jeder 
+ mögliche Wert dieses Feldes&quot;, in obigem Beispiel also (* im 
+ Monats-Feld) &quot;jeden Monat&quot;. Die gültigen Werte für jedes Feld 
+ sind in den meisten Fällen recht offensichtlich: 0 mit 59 für Sekunden 
+ und Minuten, 0 mit 23 für Stunden usw. Für Wochentage sind die Werte 1 
+ (Sonntag) mit 7 (Samstag) oder alternativ die Abkürzungen SUN, MON, TUE, 
+ WED, THU, FRI, SAT erlaubt. Monate können als Werte 1 (Januar) mit 12 
+ (Dezember) oder als Abkürzungen JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, 
+ SEP, OCT, NOV und DEC angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Von den beiden Feldern &quot;Tag des Monats&quot; und 
+ &quot;Wochentag&quot; sollte nur jeweils eines pro cron-Ausdruck angegeben 
+ werden. Für das jeweils nicht benutzte muss dann ein Fragezeichen (?) 
+ angegeben werden.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mit einem Schrägstrich (/) können Inkrementalwerte 
+ angegeben werden. Der Wert &quot;3/15&quot; im &quot;Minuten&quot;-Feld 
+ würde bedeuten &quot;alle 15 Minuten ab 3 Minuten nach&quot;, wäre also 
+ gleichbedeutend mit &quot;3,18,33,48&quot;. Die Zählung beginnt immer 
+ ab Beginn des nächstgrößeren Intervalls, also &quot;volle Minute&quot; 
+ für Sekunden-, &quot;volle Stunde&quot; für Minuten-Angaben etc. Die Angabe 
+ &quot;0/35&quot; bedeutet also &quot;0,35&quot;, nicht &quot;jede 35. 
+ Minute&quot; (&quot;0,35,10,45....&quot;).</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Ein L in den Feldern für Tag des Monats oder 
+ Wochentag bedeutet &quot;der letzte&quot;. L als Tag des Monats 
+ würde z.B. den 31. Januar, 28. Februar (außer in Schaltjahren) usw. bedeuten. 
+ Dabei kann auch ein Offset zum letzten Tag des Monats angegeben werden, 
+ z.B. würde &quot;L-3&quot; &quot;3 Tage vor dem Letzten&quot; bedeuten. 
+ Im Wochentags-Feld bedeutet L nach einem Wert &quot;der letzte 
+ x-Tag im Monat&quot;, also würden &quot;6L&quot; oder &quot;FRIL&quot; 
+ beide den letzten Freitag des Monats bezeichnen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Durch Anhängen eines W an den Tag des Monats 
+ kann der zum angegebenen Datum näheste Werktag (MON-FRI) bestimmt werden, 
+ also z.B. &quot;15W&quot; für den nähesten Werktag zum 15. des Monats.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Im Wochentags-Feld kann mittels # der &quot;n-te 
+ x-Tag des Monats&quot; angegeben werden, also würden &quot;6#3&quot; oder 
+ &quot;FRI#3&quot; beide den 3. Freitag im Monat angeben.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen 
+ Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">cron</p></td>
+		<td><p class="TabellenInhalt">crontab-Ausdruck der festlegt, wann 
+		 dieser Trigger feuern soll.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">crontype</p></td>
+		<td><p class="TabellenInhalt">Art der cron-Syntax. Einer der Werte 
+		 &quot;quartz&quot; (default), &quot;unix&quot; oder &quot;cron4j&quot;.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><span class="TextkörperZchnTextkörperCharCharCharZchnTextkörperCharCharCharCharZchnTextkörperCharCharZchn"><a id="Schicht"></a>Schicht</span></h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts eine einstellbare Zeit vor oder nach 
+ Schichtereignissen eines Knotens der Fertigungsstruktur ein. </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">event_type</p></td>
+		<td><p class="TabellenInhalt">Art des Schicht-Ereignisses. Kann 
+		 folgende Werte haben:</p>
+		<ul>
+			<li><p class="TabellenInhalt">shift_start oder -1 für Schichtbeginn</p></li>
+			<li><p class="TabellenInhalt">shift_end oder -2 für Schichtende</p></li>
+			<li><p class="TabellenInhalt">break_start oder -3 für Pausenbeginn</p></li>
+			<li><p class="TabellenInhalt">break_end oder -4 für Pausenende</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">offset</p></td>
+		<td><p class="TabellenInhalt">Zeit vor (negativer Offset) oder 
+		 nach (positiver Offset) dem Schichtereignis, zu dem der Job ausgeführt 
+		 werden soll.</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">node</p></td>
+		<td><p class="TabellenInhalt">ID des Knotens der Fertigungsstruktur, 
+		 dessen Schichtereignisse ausgewertet werden sollen.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">check_interval</p></td>
+		<td><p class="TabellenInhalt">Zeit-Intervall, in dem auf Änderungen 
+		 der Schichtplanung des Knotens geprüft werden soll. Standardwert 
+		 1 Stunde, muss üblicherweise nicht verkürzt werden, da die Planung 
+		 bei Änderung des Schicht-Caches automatisch angepasst wird.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die Größe der erlaubten &quot;Offsets&quot; vor- oder 
+ nach Schicht-Ereignissen hängen von der Parametrierung des Task &quot;shiftcache&quot; 
+ der Sapient Engine ab:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Negative Angaben (also Ausführung vor dem Schicht-Ereignis) 
+ dürfen maximal so groß sein, wie der Parameter futureInterval der Task</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Positive Angaben (also Ausführung nach dem Schicht-Ereignis) 
+ dürfen maximal so groß sein, wie der Parameter historyInterval der Task</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Grund ist, dass Schicht-Trigger den Cache der Task 
+ benutzen, um den Ausführungs-Zeitpunkt des Jobs zu bestimmen und folglich 
+ nur den davon abgedeckten Zeitraum auswerten können.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Wert"></a>Wert</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts abhängig von einer Variablenänderung 
+ ein.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">vars</p></td>
+		<td><p class="TabellenInhalt">Eine Variablen-ID oder ein Array 
+		 von Variablen-IDs aus P_VALUES_CONFIG.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">evcheck_func</p></td>
+		<td><p class="TabellenInhalt">Einen &quot;function path&quot; (Angabe 
+		 einer Script- oder Java-Funktion).</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Bei Änderung einer Variablen, deren ID in &quot;vars&quot; 
+ angegeben ist, wird &quot;evcheck_func&quot; nicht ausgewertet, sondern 
+ gleich der Job getriggert.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Die &quot;evcheck_func&quot; hat 2 Parameter:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">event: Angaben über das zu prüfende Ereignis:</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">timestamp: 
+ Zeitstempel der Änderung</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">id: 
+ ID der Variablen</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">val: 
+ Neuer Wert der Variablen</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">old: 
+ Vorheriger Wert der Variablen</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">value_config: Konfiguration der Variablen, d.h. 
+ kompletter Datensatz aus P_VALUES_CONFIG als JSON:</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">id: 
+ ID der Variablen</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">value_type: 
+ ID des P_VALUE_TYPES der Variablen</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">value_format: 
+ ID des Datentyps (numerisch, boole&#39;sch, String) der Variablen</p>
+<p class="Aufzählung3 Liste3" style="text-indent: -24px; margin-left: 70px;" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">... 
+ alle weiteren Felder des Datensatzes</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Gibt die &quot;evcheck_func&quot; den boole&#39;schen Wert 
+ &quot;true&quot; zurückgeben, wird der Job getriggert, sonst nicht.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Meldung"></a>Meldung</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts basierend auf Meldungs-Ereignissen 
+ ein. Damit lassen sich Trigger der Art &quot;Immer wenn eine Meldung der 
+ Meldungsdefinition xx auftritt&quot; erstellen.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">message_defs</p></td>
+		<td><p class="TabellenInhalt">ID der Meldungsdefinition al_messages.id, 
+		 die den Trigger auslöst.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">evcheck_func_path</p></td>
+		<td><p class="TabellenInhalt">Einen &quot;function path&quot; (Angabe 
+		 einer Script- oder Java-Funktion).</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">evcheck_func_params</p></td>
+		<td><p class="TabellenInhalt">JSON-Objekt mit den benötigten Parametern 
+		 der Funktion.</p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">{</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">&quot;evcheck_func_path&quot;:&quot;SetupTimeExceededAlLeaving/checkEvt&quot;, 
+ </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">&quot;evcheck_func_params&quot;:{&quot;al_class&quot;:-14}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">}</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Paging"></a>Paging</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts basierend auf Paging-Ereignissen ein.</p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"><a id="Konfig-Änderung"></a>Konfig-Änderung</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Plant Job-Starts basierend auf Änderungen an Konfig-Tabellen 
+ ein.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Mögliche Parameter (zusätzlich zu den allgemeinen Parametern):</p>
+<table class="AlternateGreyBlackHeaderRow" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" border="1" width="100%" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">
+	<colgroup><col width="72"/>
+	<col width="663"/>
+	</colgroup><tbody><tr class="t1st">
+		<td>Name</td>
+		<td>Bedeutung</td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="TabellenInhalt">tables</p></td>
+		<td><p class="TabellenInhalt">Name der Konfigurations-Tabelle(n), 
+		 die den Trigger auslöst. Kann auf folgende Arten angegeben werden:</p>
+		<ul>
+			<li><p class="TabellenInhalt">String mit dem Namen einer Konfigurations-Tabelle</p></li>
+			<li><p class="TabellenInhalt">String mit einer komma-separierten 
+			 Liste von Namen von Konfigurations-Tabellen</p></li>
+			<li><p class="TabellenInhalt">Array mit mehreren Strings mit 
+			 Namen oder Namenslisten von Konfigurations-Tabellen</p></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="TabellenInhalt">caches</p></td>
+		<td><p class="TabellenInhalt" style="margin: 0px; padding: 0px;">Name 
+		 des internen Konfigurations-Caches, der/die aktualisiert werden 
+		 müssen, um den Trigger auszulösen. Wenn angegeben, löst also nicht 
+		 jede Änderung einer Konfig-Tabelle den Trigger aus, sondern nur 
+		 ein Update des Caches.  Kann auf folgende Arten angegeben 
+		 werden:</p>
+		<ul>
+			<li><p class="TabellenInhalt">String mit dem Namen eines Konfigurations-Caches</p></li>
+			<li><p class="TabellenInhalt">String mit einer komma-separierten 
+			 Liste von Namen von Konfigurations-Caches</p></li>
+			<li><p class="TabellenInhalt">Array mit mehreren Strings mit 
+			 Namen oder Namenslisten von Konfigurations-Caches</p></li>
+		</ul>
+		<p class="TabellenInhalt">Aktuell werden folgende Cache-Namen unterstützt: 
+		 &quot;LNodesCache&quot;, &quot;HolidaysCache&quot; und &quot;TargetChainsCache 
+		 </p></td>
+	</tr>
+</tbody></table>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Wird ein Job durch diesen Trigger ausgelöst, erhält 
+ er als Trigger-Parameter ein oder mehrere Objekte, jedes mit folgenden 
+ Eigenschaften:</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">&quot;timestamp&quot; - der Zeitstempel der Tabellenänderung</p>
+<p class="Aufzählung1 Liste1neu" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">&quot;table&quot; - der Name der geänderten Tabelle</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<h3 data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Einmalige Ausführung</h3>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Neuer Triggertyp für die Planung der Einzelausführung.</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">Beispiel:</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">{</p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">&quot;time&quot;: &quot;time_of_execution&quot; </p>
+<p class="TextCode" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job">}</p>
+<p class="BodyText" data-condition="Others:Deutsch;Others:Sapient_only;Others:Job"> </p>
+
+
+</body></html>
